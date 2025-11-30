@@ -23,7 +23,6 @@ const translations: Record<Language, Record<string, string>> = {
     'login': 'Login',
     'orContinueWith': 'or continue with',
     'guest': 'Guest Mode',
-    
     // Home
     'firstYear': 'First Year',
     'petroleumEngineering': 'Petroleum Engineering',
@@ -32,7 +31,6 @@ const translations: Record<Language, Record<string, string>> = {
     'subjects': 'Subjects',
     'progress': 'Progress',
     'lessons': 'lessons',
-    
     // Subjects
     'intro': 'Introduction to Petroleum Engineering',
     'drilling': 'Basics of Drilling',
@@ -40,7 +38,6 @@ const translations: Record<Language, Record<string, string>> = {
     'rig': 'Drilling Rig Overview',
     'units': 'Units & Measurements',
     'terminology': 'Basic Drilling Terminology',
-    
     // Lesson
     'definition': 'Definition',
     'explanation': 'Explanation',
@@ -53,10 +50,35 @@ const translations: Record<Language, Record<string, string>> = {
     'finish': 'Finish Quiz',
     'score': 'Your Score',
     'correct': 'Correct',
+    'incorrect': 'Incorrect',
     'tryAgain': 'Try Again',
     'backToHome': 'Back to Home',
     'switchLanguage': 'العربية',
-    
+    // Weekly
+    'day': 'Day',
+    'project': 'Project',
+    'weekProgress': 'Week Progress',
+    'weekComplete': 'Week completed! Great job!',
+    'keepLearning': 'Keep learning to complete the week',
+    'keyTerms': 'Key Terms',
+    'practiceQuestion': 'Practice Question',
+    'completeDay': 'Complete Day',
+    'dayCompleted': 'Day Completed',
+    'weeklyQuiz': 'Weekly Quiz',
+    'quizComplete': 'Quiz Complete',
+    'greatJob': 'Great job!',
+    'keepPracticing': 'Keep practicing to improve',
+    'miniProject': 'Mini Project',
+    'instructions': 'Instructions',
+    'textSubmission': 'Text Submission',
+    'imageSubmission': 'Image Submission',
+    'writeYourAnswer': 'Write your answer here...',
+    'characters': 'characters',
+    'minimum': 'minimum',
+    'uploadImage': 'Click or drag to upload image',
+    'submitProject': 'Submit Project',
+    'projectSubmitted': 'Project Submitted!',
+    'projectSubmittedDesc': 'Your project has been saved successfully.',
     // Navigation
     'home': 'Home',
     'profile': 'Profile',
@@ -76,7 +98,6 @@ const translations: Record<Language, Record<string, string>> = {
     'login': 'دخول',
     'orContinueWith': 'أو تابع بـ',
     'guest': 'وضع الضيف',
-    
     // Home
     'firstYear': 'السنة الأولى',
     'petroleumEngineering': 'هندسة النفط',
@@ -85,7 +106,6 @@ const translations: Record<Language, Record<string, string>> = {
     'subjects': 'المواد',
     'progress': 'التقدم',
     'lessons': 'دروس',
-    
     // Subjects
     'intro': 'مقدمة في هندسة النفط',
     'drilling': 'أساسيات الحفر',
@@ -93,7 +113,6 @@ const translations: Record<Language, Record<string, string>> = {
     'rig': 'نظرة عامة على جهاز الحفر',
     'units': 'الوحدات والقياسات',
     'terminology': 'مصطلحات الحفر الأساسية',
-    
     // Lesson
     'definition': 'التعريف',
     'explanation': 'الشرح',
@@ -106,10 +125,35 @@ const translations: Record<Language, Record<string, string>> = {
     'finish': 'إنهاء الاختبار',
     'score': 'نتيجتك',
     'correct': 'صحيح',
+    'incorrect': 'خطأ',
     'tryAgain': 'حاول مرة أخرى',
     'backToHome': 'العودة للرئيسية',
     'switchLanguage': 'English',
-    
+    // Weekly
+    'day': 'اليوم',
+    'project': 'مشروع',
+    'weekProgress': 'تقدم الأسبوع',
+    'weekComplete': 'اكتمل الأسبوع! أحسنت!',
+    'keepLearning': 'استمر في التعلم لإكمال الأسبوع',
+    'keyTerms': 'المصطلحات الرئيسية',
+    'practiceQuestion': 'سؤال تدريبي',
+    'completeDay': 'إكمال اليوم',
+    'dayCompleted': 'اكتمل اليوم',
+    'weeklyQuiz': 'اختبار الأسبوع',
+    'quizComplete': 'اكتمل الاختبار',
+    'greatJob': 'أحسنت!',
+    'keepPracticing': 'استمر في التدرب للتحسن',
+    'miniProject': 'مشروع صغير',
+    'instructions': 'التعليمات',
+    'textSubmission': 'تقديم نصي',
+    'imageSubmission': 'تقديم صورة',
+    'writeYourAnswer': 'اكتب إجابتك هنا...',
+    'characters': 'حرف',
+    'minimum': 'الحد الأدنى',
+    'uploadImage': 'انقر أو اسحب لرفع صورة',
+    'submitProject': 'تقديم المشروع',
+    'projectSubmitted': 'تم تقديم المشروع!',
+    'projectSubmittedDesc': 'تم حفظ مشروعك بنجاح.',
     // Navigation
     'home': 'الرئيسية',
     'profile': 'الملف الشخصي',
