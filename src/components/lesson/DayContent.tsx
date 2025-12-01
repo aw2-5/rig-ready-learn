@@ -46,8 +46,10 @@ export function DayContent({ dayContent, onComplete, isComplete }: DayContentPro
       {/* Explanation */}
       <Card variant="default">
         <CardContent className="p-4">
-          <h4 className="text-sm font-semibold text-accent mb-2">{t('explanation')}</h4>
-          <p className="text-foreground leading-relaxed">{content.explanation}</p>
+          <div 
+            className="text-foreground leading-relaxed prose prose-sm max-w-none prose-headings:text-foreground prose-p:text-foreground prose-li:text-foreground prose-strong:text-foreground"
+            dangerouslySetInnerHTML={{ __html: content.explanation }}
+          />
         </CardContent>
       </Card>
 

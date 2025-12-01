@@ -50,1457 +50,2489 @@ export interface WeeklyLesson {
   days: DailyContent[];
 }
 
+// ============================================
+// LESSON 1: Introduction to Petroleum Engineering
+// ============================================
+
+const introLesson: WeeklyLesson = {
+  lessonId: 'intro',
+  days: [
+    {
+      day: 1,
+      type: 'learning',
+      content: {
+        ar: {
+          title: 'ما هي هندسة النفط؟',
+          explanation: `<section>
+<h2 class="text-primary text-xl font-bold mb-4">🔷 المقدمة العامة</h2>
+
+<p class="mb-4">هندسة النفط (Petroleum Engineering) هي أحد أهم فروع الهندسة التطبيقية في العالم الحديث. تُعنى هذه الهندسة بدراسة وتطوير الطرق المثلى لاستكشاف واستخراج وإنتاج النفط الخام والغاز الطبيعي من باطن الأرض.</p>
+
+<p class="mb-4">يُعتبر النفط والغاز من أهم مصادر الطاقة التي تُحرك عجلة الاقتصاد العالمي، حيث يعتمد عليهما أكثر من 60% من احتياجات الطاقة العالمية. لذلك، فإن مهندسي النفط يلعبون دوراً حيوياً في توفير هذه الطاقة للعالم.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 لماذا ندرس هندسة النفط؟</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>النفط والغاز يُشكلان العمود الفقري للاقتصاد العالمي</li>
+<li>الطلب على الطاقة يتزايد باستمرار مع نمو السكان والصناعة</li>
+<li>تحتاج الدول إلى مهندسين متخصصين لإدارة ثرواتها النفطية</li>
+<li>الرواتب في هذا المجال من أعلى الرواتب الهندسية عالمياً</li>
+<li>فرص العمل متنوعة ومنتشرة في جميع أنحاء العالم</li>
+</ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 ما الذي يفعله مهندس النفط؟</h2>
+
+<p class="mb-4">يعمل مهندس النفط في عدة مجالات متخصصة، وكل مجال يتطلب مهارات ومعرفة محددة:</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 1. الاستكشاف (Exploration)</h3>
+
+<p class="mb-4">في هذه المرحلة، يتعاون مهندسو النفط مع الجيولوجيين والجيوفيزيائيين للبحث عن مواقع تجمع النفط والغاز تحت سطح الأرض. يستخدمون تقنيات متقدمة مثل:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>المسح الزلزالي (Seismic Survey) لرسم خرائط الطبقات الصخرية</li>
+<li>تحليل العينات الصخرية والسوائل</li>
+<li>دراسة التاريخ الجيولوجي للمنطقة</li>
+<li>استخدام الأقمار الصناعية والتصوير الجوي</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 2. الحفر (Drilling)</h3>
+
+<p class="mb-4">بعد تحديد موقع المخزون، يبدأ مهندسو الحفر بتصميم وتنفيذ عملية الحفر. هذه المرحلة تشمل:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>اختيار نوع جهاز الحفر المناسب</li>
+<li>تصميم مسار البئر (عمودي، مائل، أو أفقي)</li>
+<li>اختيار سوائل الحفر المناسبة</li>
+<li>مراقبة الضغوط ودرجات الحرارة أثناء الحفر</li>
+<li>تثبيت أنابيب التغليف (Casing) لحماية البئر</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 3. الإنتاج (Production)</h3>
+
+<p class="mb-4">بعد اكتمال الحفر، يبدأ مهندسو الإنتاج بإدارة عملية استخراج النفط والغاز:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>تصميم معدات رأس البئر</li>
+<li>تحسين معدلات التدفق</li>
+<li>معالجة المشاكل مثل تراكم الرواسب</li>
+<li>تطبيق تقنيات الاستخلاص المُحسّن (EOR)</li>
+</ul>
+
+<div class="bg-destructive/10 border-l-4 border-destructive p-4 my-6">
+<p class="text-destructive font-semibold">⚠️ ملاحظة مهمة:</p>
+<p>هندسة النفط ليست مجرد استخراج النفط، بل تشمل أيضاً الحفاظ على البيئة والسلامة المهنية. المهندس الناجح هو من يوازن بين الإنتاج والمسؤولية البيئية.</p>
+</div>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 أهمية هندسة النفط في الاقتصاد</h2>
+
+<p class="mb-4">تُعد صناعة النفط والغاز من أكبر الصناعات في العالم من حيث القيمة السوقية. بعض الحقائق المهمة:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>يُنتج العالم حوالي 100 مليون برميل نفط يومياً</li>
+<li>قيمة سوق النفط والغاز تتجاوز 3 تريليون دولار سنوياً</li>
+<li>توظف الصناعة ملايين الأشخاص حول العالم</li>
+<li>الدول المنتجة للنفط تعتمد بشكل كبير على عائداته</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 ملخص القسم</h3>
+
+<div class="bg-secondary/50 p-4 rounded-lg">
+<p>هندسة النفط هي تخصص هندسي يجمع بين العلوم والتطبيق العملي لاستكشاف واستخراج وإنتاج الموارد الهيدروكربونية. يعمل مهندسو النفط في بيئات متنوعة ويواجهون تحديات تقنية وبيئية متعددة.</p>
+</div>
+</section>`,
+          keyTerms: [
+            { term: 'هندسة النفط', definition: 'فرع هندسي متخصص في استكشاف واستخراج وإنتاج النفط والغاز الطبيعي' },
+            { term: 'النفط الخام', definition: 'سائل طبيعي أسود اللون يوجد في باطن الأرض ويُستخرج للحصول على الوقود والمنتجات البترولية' },
+            { term: 'الغاز الطبيعي', definition: 'خليط من الغازات الهيدروكربونية يتكون أساساً من الميثان ويُستخدم كوقود نظيف' },
+            { term: 'المخزون النفطي', definition: 'تجمع من النفط أو الغاز في طبقة صخرية مسامية تحت سطح الأرض' },
+          ],
+          practiceQuestion: {
+            question: 'ما هي النسبة التقريبية لاعتماد العالم على النفط والغاز كمصدر للطاقة؟',
+            options: ['أقل من 30%', 'حوالي 40%', 'أكثر من 60%', 'حوالي 90%'],
+            correctAnswer: 2,
+          },
+        },
+        en: {
+          title: 'What is Petroleum Engineering?',
+          explanation: `<section>
+<h2 class="text-primary text-xl font-bold mb-4">🔷 General Introduction</h2>
+
+<p class="mb-4">Petroleum Engineering is one of the most important branches of applied engineering in the modern world. This engineering discipline focuses on studying and developing optimal methods for exploring, extracting, and producing crude oil and natural gas from underground formations.</p>
+
+<p class="mb-4">Oil and gas are among the most vital energy sources that drive the global economy, with more than 60% of the world's energy needs depending on them. Therefore, petroleum engineers play a crucial role in providing this energy to the world.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Why Study Petroleum Engineering?</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Oil and gas form the backbone of the global economy</li>
+<li>Energy demand continuously increases with population and industrial growth</li>
+<li>Countries need specialized engineers to manage their petroleum resources</li>
+<li>Salaries in this field are among the highest in engineering globally</li>
+<li>Job opportunities are diverse and spread across the world</li>
+</ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 What Does a Petroleum Engineer Do?</h2>
+
+<p class="mb-4">A petroleum engineer works in several specialized areas, each requiring specific skills and knowledge:</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 1. Exploration</h3>
+
+<p class="mb-4">In this phase, petroleum engineers collaborate with geologists and geophysicists to search for oil and gas accumulation sites underground. They use advanced techniques such as:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Seismic Surveys to map rock layers</li>
+<li>Analysis of rock and fluid samples</li>
+<li>Study of the geological history of the area</li>
+<li>Use of satellites and aerial imaging</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 2. Drilling</h3>
+
+<p class="mb-4">After identifying the reservoir location, drilling engineers begin designing and executing the drilling operation. This phase includes:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Selecting the appropriate drilling rig type</li>
+<li>Designing the well path (vertical, directional, or horizontal)</li>
+<li>Choosing suitable drilling fluids</li>
+<li>Monitoring pressures and temperatures during drilling</li>
+<li>Installing casing to protect the well</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 3. Production</h3>
+
+<p class="mb-4">After drilling is complete, production engineers manage the oil and gas extraction process:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Designing wellhead equipment</li>
+<li>Optimizing flow rates</li>
+<li>Addressing issues like scale buildup</li>
+<li>Applying Enhanced Oil Recovery (EOR) techniques</li>
+</ul>
+
+<div class="bg-destructive/10 border-l-4 border-destructive p-4 my-6">
+<p class="text-destructive font-semibold">⚠️ Important Note:</p>
+<p>Petroleum engineering is not just about extracting oil; it also involves environmental protection and occupational safety. A successful engineer balances production with environmental responsibility.</p>
+</div>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 Importance of Petroleum Engineering in the Economy</h2>
+
+<p class="mb-4">The oil and gas industry is one of the largest industries in the world by market value. Some important facts:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>The world produces about 100 million barrels of oil daily</li>
+<li>The oil and gas market value exceeds $3 trillion annually</li>
+<li>The industry employs millions of people worldwide</li>
+<li>Oil-producing countries heavily depend on its revenues</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Section Summary</h3>
+
+<div class="bg-secondary/50 p-4 rounded-lg">
+<p>Petroleum engineering is an engineering specialty that combines science and practical application to explore, extract, and produce hydrocarbon resources. Petroleum engineers work in diverse environments and face multiple technical and environmental challenges.</p>
+</div>
+</section>`,
+          keyTerms: [
+            { term: 'Petroleum Engineering', definition: 'An engineering branch specialized in exploring, extracting, and producing oil and natural gas' },
+            { term: 'Crude Oil', definition: 'A naturally occurring black liquid found underground, extracted for fuel and petroleum products' },
+            { term: 'Natural Gas', definition: 'A mixture of hydrocarbon gases mainly consisting of methane, used as clean fuel' },
+            { term: 'Reservoir', definition: 'An accumulation of oil or gas in a porous rock formation underground' },
+          ],
+          practiceQuestion: {
+            question: 'What is the approximate percentage of global energy dependence on oil and gas?',
+            options: ['Less than 30%', 'About 40%', 'More than 60%', 'About 90%'],
+            correctAnswer: 2,
+          },
+        },
+      },
+    },
+    {
+      day: 2,
+      type: 'learning',
+      content: {
+        ar: {
+          title: 'تاريخ صناعة النفط والغاز',
+          explanation: `<section>
+<h2 class="text-primary text-xl font-bold mb-4">🔷 البدايات الأولى لاستخدام النفط</h2>
+
+<p class="mb-4">يعود استخدام الإنسان للنفط إلى آلاف السنين. فقد استخدم سكان بلاد ما بين النهرين (العراق الحالي) القار الطبيعي في البناء وصناعة السفن منذ أكثر من 5000 عام. كما استخدم المصريون القدماء مواد بترولية في تحنيط الموتى.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 الاستخدامات القديمة للنفط</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>استخدام القار في بناء أسوار بابل</li>
+<li>إضاءة المشاعل باستخدام النفط الخام</li>
+<li>استخدامه كدواء ومرهم في الطب القديم</li>
+<li>تزييت العجلات والآلات البدائية</li>
+<li>صناعة الأسلحة الحارقة في الحروب</li>
+</ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 بداية العصر الحديث للنفط</h2>
+
+<p class="mb-4">يُعتبر عام 1859 نقطة تحول تاريخية في صناعة النفط، حيث نجح الكولونيل إدوين دريك في حفر أول بئر نفط تجاري ناجح في تيتوسفيل، بنسلفانيا، الولايات المتحدة الأمريكية.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 قصة بئر دريك</h3>
+
+<p class="mb-4">قبل بئر دريك، كان النفط يُجمع من الينابيع الطبيعية أو يُستخرج بطرق بدائية. لكن دريك استخدم تقنية الحفر الإيقاعي (Cable-tool Drilling) وهي نفس التقنية المستخدمة في حفر آبار المياه.</p>
+
+<p class="mb-4">وصل دريك إلى النفط على عمق 69 قدماً (21 متراً) تقريباً، وأنتج البئر حوالي 25 برميلاً يومياً. هذا الحدث أشعل "حمى النفط" في أمريكا وبدأت عصراً جديداً.</p>
+
+<div class="bg-destructive/10 border-l-4 border-destructive p-4 my-6">
+<p class="text-destructive font-semibold">⚠️ معلومة مهمة:</p>
+<p>رغم نجاح دريك في حفر البئر، إلا أنه لم يستفد مالياً وتوفي فقيراً. بينما أصبح آخرون مثل جون روكفلر من أغنى الناس في التاريخ من صناعة النفط.</p>
+</div>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 تطور الصناعة النفطية في القرن العشرين</h2>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 اكتشاف حقل سبيندلتوب (1901)</h3>
+
+<p class="mb-4">في عام 1901، اندفع النفط من بئر سبيندلتوب في تكساس بقوة هائلة، منتجاً أكثر من 100,000 برميل يومياً. هذا الاكتشاف أثبت وجود كميات ضخمة من النفط وبدأ عصر النفط الأمريكي.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 اكتشاف النفط في الشرق الأوسط</h3>
+
+<p class="mb-4">شهد القرن العشرين اكتشافات نفطية ضخمة في الشرق الأوسط:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>1908: اكتشاف النفط في إيران (أول اكتشاف في الشرق الأوسط)</li>
+<li>1932: اكتشاف النفط في البحرين</li>
+<li>1938: اكتشاف حقل الدمام في السعودية</li>
+<li>1938: اكتشاف حقل برقان في الكويت</li>
+<li>1958: اكتشاف النفط في الجزائر وليبيا</li>
+</ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 أحداث مهمة في تاريخ النفط</h2>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 تأسيس أوبك (1960)</h3>
+
+<p class="mb-4">تأسست منظمة الدول المصدرة للبترول (أوبك) في بغداد عام 1960 بواسطة خمس دول مؤسسة: السعودية، إيران، العراق، الكويت، وفنزويلا. الهدف كان تنسيق السياسات النفطية وحماية مصالح الدول المنتجة.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 أزمة النفط (1973)</h3>
+
+<p class="mb-4">خلال حرب أكتوبر 1973، قررت الدول العربية فرض حظر نفطي على الدول الداعمة لإسرائيل. أدى ذلك إلى:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>ارتفاع أسعار النفط من 3 دولارات إلى 12 دولاراً للبرميل</li>
+<li>أزمة اقتصادية عالمية</li>
+<li>إعادة تقييم سياسات الطاقة في الدول الغربية</li>
+<li>البحث عن مصادر طاقة بديلة</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 ملخص القسم</h3>
+
+<div class="bg-secondary/50 p-4 rounded-lg">
+<p>تطورت صناعة النفط من استخدامات بدائية قديمة إلى صناعة عالمية ضخمة. بدأ العصر الحديث ببئر دريك 1859، وشهد القرن العشرون اكتشافات هائلة خاصة في الشرق الأوسط. أصبح النفط سلعة استراتيجية تؤثر في السياسة والاقتصاد العالمي.</p>
+</div>
+</section>`,
+          keyTerms: [
+            { term: 'بئر دريك', definition: 'أول بئر نفط تجاري ناجح، حُفر عام 1859 في بنسلفانيا على يد إدوين دريك' },
+            { term: 'أوبك (OPEC)', definition: 'منظمة الدول المصدرة للبترول، تأسست 1960 لتنسيق السياسات النفطية بين الدول المنتجة' },
+            { term: 'سبيندلتوب', definition: 'حقل نفطي اكتُشف في تكساس عام 1901، أثبت وجود احتياطيات نفطية ضخمة' },
+            { term: 'حمى النفط', definition: 'فترة اندفاع الناس للبحث عن النفط واستثماره بعد اكتشاف بئر دريك' },
+          ],
+          practiceQuestion: {
+            question: 'في أي عام حُفر أول بئر نفط تجاري ناجح؟',
+            options: ['1849', '1859', '1869', '1879'],
+            correctAnswer: 1,
+          },
+        },
+        en: {
+          title: 'History of the Oil and Gas Industry',
+          explanation: `<section>
+<h2 class="text-primary text-xl font-bold mb-4">🔷 Early Uses of Oil</h2>
+
+<p class="mb-4">Human use of oil dates back thousands of years. Inhabitants of Mesopotamia (modern Iraq) used natural bitumen in construction and shipbuilding more than 5,000 years ago. Ancient Egyptians also used petroleum-based materials in mummification.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Ancient Uses of Oil</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Using bitumen in building the walls of Babylon</li>
+<li>Lighting torches with crude oil</li>
+<li>Using it as medicine and ointment in ancient medicine</li>
+<li>Lubricating wheels and primitive machinery</li>
+<li>Manufacturing incendiary weapons in warfare</li>
+</ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 The Beginning of the Modern Oil Era</h2>
+
+<p class="mb-4">The year 1859 is considered a historic turning point in the oil industry when Colonel Edwin Drake successfully drilled the first commercial oil well in Titusville, Pennsylvania, USA.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 The Drake Well Story</h3>
+
+<p class="mb-4">Before Drake's well, oil was collected from natural seeps or extracted by primitive methods. Drake used cable-tool drilling technique, the same technology used for drilling water wells.</p>
+
+<p class="mb-4">Drake reached oil at a depth of approximately 69 feet (21 meters), and the well produced about 25 barrels per day. This event sparked "oil fever" in America and began a new era.</p>
+
+<div class="bg-destructive/10 border-l-4 border-destructive p-4 my-6">
+<p class="text-destructive font-semibold">⚠️ Important Information:</p>
+<p>Despite Drake's success in drilling the well, he did not benefit financially and died poor. Meanwhile, others like John D. Rockefeller became among the richest people in history from the oil industry.</p>
+</div>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 Oil Industry Development in the 20th Century</h2>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Spindletop Discovery (1901)</h3>
+
+<p class="mb-4">In 1901, oil gushed from the Spindletop well in Texas with tremendous force, producing more than 100,000 barrels per day. This discovery proved the existence of massive oil quantities and began the American oil age.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Oil Discovery in the Middle East</h3>
+
+<p class="mb-4">The 20th century witnessed massive oil discoveries in the Middle East:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>1908: Oil discovery in Iran (first discovery in the Middle East)</li>
+<li>1932: Oil discovery in Bahrain</li>
+<li>1938: Discovery of Dammam field in Saudi Arabia</li>
+<li>1938: Discovery of Burgan field in Kuwait</li>
+<li>1958: Oil discovery in Algeria and Libya</li>
+</ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 Important Events in Oil History</h2>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 OPEC Formation (1960)</h3>
+
+<p class="mb-4">The Organization of Petroleum Exporting Countries (OPEC) was founded in Baghdad in 1960 by five founding countries: Saudi Arabia, Iran, Iraq, Kuwait, and Venezuela. The goal was to coordinate oil policies and protect the interests of producing countries.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Oil Crisis (1973)</h3>
+
+<p class="mb-4">During the October 1973 war, Arab countries decided to impose an oil embargo on countries supporting Israel. This led to:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Oil prices rising from $3 to $12 per barrel</li>
+<li>A global economic crisis</li>
+<li>Reassessment of energy policies in Western countries</li>
+<li>Search for alternative energy sources</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Section Summary</h3>
+
+<div class="bg-secondary/50 p-4 rounded-lg">
+<p>The oil industry evolved from ancient primitive uses to a massive global industry. The modern era began with Drake's well in 1859, and the 20th century witnessed huge discoveries, especially in the Middle East. Oil became a strategic commodity affecting global politics and economics.</p>
+</div>
+</section>`,
+          keyTerms: [
+            { term: 'Drake Well', definition: 'The first successful commercial oil well, drilled in 1859 in Pennsylvania by Edwin Drake' },
+            { term: 'OPEC', definition: 'Organization of Petroleum Exporting Countries, founded in 1960 to coordinate oil policies among producing nations' },
+            { term: 'Spindletop', definition: 'An oil field discovered in Texas in 1901, proving the existence of massive oil reserves' },
+            { term: 'Oil Fever', definition: 'A period of rush by people to search for and invest in oil after Drake\'s well discovery' },
+          ],
+          practiceQuestion: {
+            question: 'In what year was the first successful commercial oil well drilled?',
+            options: ['1849', '1859', '1869', '1879'],
+            correctAnswer: 1,
+          },
+        },
+      },
+    },
+    {
+      day: 3,
+      type: 'learning',
+      content: {
+        ar: {
+          title: 'فروع هندسة النفط الأربعة',
+          explanation: `<section>
+<h2 class="text-primary text-xl font-bold mb-4">🔷 نظرة عامة على فروع هندسة النفط</h2>
+
+<p class="mb-4">تنقسم هندسة النفط إلى أربعة فروع رئيسية، كل فرع يركز على جانب محدد من عمليات استخراج النفط والغاز. هذه الفروع تعمل معاً بشكل متكامل لضمان إنتاج آمن وفعال.</p>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 الفرع الأول: هندسة الحفر (Drilling Engineering)</h2>
+
+<p class="mb-4">هندسة الحفر هي الفرع المسؤول عن إنشاء الآبار للوصول إلى المخزونات النفطية تحت سطح الأرض. يُعتبر هذا الفرع من أكثر الفروع تحدياً وأهمية.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 مهام مهندس الحفر</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>تصميم مسار البئر ومواصفاته الهندسية</li>
+<li>اختيار أجهزة الحفر المناسبة</li>
+<li>تحديد سوائل الحفر وخصائصها</li>
+<li>تصميم برنامج أنابيب التغليف والإسمنت</li>
+<li>مراقبة الضغوط ومنع الانفجارات</li>
+<li>التعامل مع المشاكل أثناء الحفر</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 تحديات هندسة الحفر</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>الحفر في أعماق كبيرة قد تتجاوز 10 كيلومترات</li>
+<li>درجات حرارة عالية تصل إلى 200 درجة مئوية</li>
+<li>ضغوط هائلة تصل إلى 1000 بار</li>
+<li>تكوينات صخرية معقدة ومتنوعة</li>
+<li>الحفر في البيئات البحرية والقطبية</li>
+</ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 الفرع الثاني: هندسة المخزونات (Reservoir Engineering)</h2>
+
+<p class="mb-4">هندسة المخزونات تركز على دراسة وتحليل التكوينات الصخرية التي تحتوي على النفط والغاز. الهدف الأساسي هو تحقيق أقصى استخلاص ممكن من المخزون.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 مهام مهندس المخزونات</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>تقدير كميات النفط والغاز المتوفرة (الاحتياطيات)</li>
+<li>دراسة خصائص الصخور: المسامية والنفاذية</li>
+<li>تحليل خصائص السوائل: اللزوجة، الكثافة، التركيب</li>
+<li>محاكاة سلوك المخزون باستخدام برامج حاسوبية</li>
+<li>تصميم خطط تطوير الحقول</li>
+<li>تحديد عدد الآبار الأمثل ومواقعها</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 مفاهيم مهمة في هندسة المخزونات</h3>
+
+<p class="mb-4"><strong>المسامية (Porosity):</strong> نسبة الفراغات في الصخر إلى الحجم الكلي. تتراوح عادة بين 5-30%.</p>
+
+<p class="mb-4"><strong>النفاذية (Permeability):</strong> قدرة الصخر على السماح بمرور السوائل خلاله. تُقاس بوحدة الميلي دارسي.</p>
+
+<p class="mb-4"><strong>معامل الاستخلاص (Recovery Factor):</strong> نسبة النفط المُستخرج إلى النفط الموجود أصلاً. يتراوح عادة بين 20-60%.</p>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 الفرع الثالث: هندسة الإنتاج (Production Engineering)</h2>
+
+<p class="mb-4">هندسة الإنتاج مسؤولة عن كل ما يتعلق بإحضار النفط والغاز من المخزون إلى السطح وتجهيزه للنقل والبيع.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 مهام مهندس الإنتاج</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>تصميم معدات الإنتاج والإكمال</li>
+<li>تحسين أداء الآبار ومعدلات الإنتاج</li>
+<li>معالجة مشاكل الإنتاج (تراكم الشمع، الترسبات)</li>
+<li>تصميم أنظمة الرفع الاصطناعي</li>
+<li>مراقبة ضغوط ودرجات حرارة الآبار</li>
+<li>تصميم مرافق المعالجة السطحية</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 طرق الرفع الاصطناعي</h3>
+
+<p class="mb-4">عندما ينخفض الضغط الطبيعي للمخزون، يُستخدم الرفع الاصطناعي:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>المضخات الغاطسة الكهربائية (ESP)</li>
+<li>مضخات العصا (Rod Pump)</li>
+<li>الرفع بالغاز (Gas Lift)</li>
+<li>المضخات الهيدروليكية</li>
+</ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 الفرع الرابع: تقييم التكوينات (Formation Evaluation)</h2>
+
+<p class="mb-4">تقييم التكوينات يختص بجمع وتحليل البيانات عن الطبقات الصخرية والسوائل الموجودة فيها.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 أدوات تقييم التكوينات</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>التسجيلات السلكية (Wireline Logging)</li>
+<li>أخذ العينات الصخرية (Coring)</li>
+<li>اختبارات الآبار (Well Testing)</li>
+<li>تحليل السوائل المكمنية</li>
+<li>التصوير بالموجات الصوتية</li>
+</ul>
+
+<div class="bg-destructive/10 border-l-4 border-destructive p-4 my-6">
+<p class="text-destructive font-semibold">⚠️ ملاحظة مهمة:</p>
+<p>الفروع الأربعة تعمل معاً كفريق واحد. فمهندس المخزونات يعتمد على بيانات تقييم التكوينات، ومهندس الحفر يُنفذ تصميمات مهندس المخزونات، ومهندس الإنتاج يُكمل العمل بعد الحفر.</p>
+</div>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 ملخص القسم</h3>
+
+<div class="bg-secondary/50 p-4 rounded-lg">
+<p>هندسة النفط تتكون من أربعة فروع متكاملة: هندسة الحفر (إنشاء الآبار)، هندسة المخزونات (تحليل وتحسين الاستخلاص)، هندسة الإنتاج (إنتاج ومعالجة النفط)، وتقييم التكوينات (جمع وتحليل البيانات). كل فرع ضروري لنجاح العمليات النفطية.</p>
+</div>
+</section>`,
+          keyTerms: [
+            { term: 'هندسة الحفر', definition: 'الفرع المسؤول عن تصميم وتنفيذ عمليات حفر الآبار' },
+            { term: 'هندسة المخزونات', definition: 'الفرع المختص بدراسة وتحليل خصائص الصخور والسوائل لتحقيق أقصى استخلاص' },
+            { term: 'المسامية', definition: 'نسبة حجم الفراغات في الصخر إلى الحجم الكلي، تُعبر عن قدرة الصخر على تخزين السوائل' },
+            { term: 'النفاذية', definition: 'قدرة الصخر على السماح بتدفق السوائل خلاله، تُقاس بوحدة الدارسي' },
+          ],
+          practiceQuestion: {
+            question: 'أي فرع من فروع هندسة النفط مسؤول عن تقدير كميات النفط في المخزون؟',
+            options: ['هندسة الحفر', 'هندسة المخزونات', 'هندسة الإنتاج', 'تقييم التكوينات'],
+            correctAnswer: 1,
+          },
+        },
+        en: {
+          title: 'The Four Branches of Petroleum Engineering',
+          explanation: `<section>
+<h2 class="text-primary text-xl font-bold mb-4">🔷 Overview of Petroleum Engineering Branches</h2>
+
+<p class="mb-4">Petroleum engineering is divided into four main branches, each focusing on a specific aspect of oil and gas extraction operations. These branches work together in an integrated manner to ensure safe and efficient production.</p>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 First Branch: Drilling Engineering</h2>
+
+<p class="mb-4">Drilling engineering is the branch responsible for creating wells to access underground oil reservoirs. This branch is considered one of the most challenging and important.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Drilling Engineer Tasks</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Designing well path and engineering specifications</li>
+<li>Selecting appropriate drilling rigs</li>
+<li>Determining drilling fluids and their properties</li>
+<li>Designing casing and cement programs</li>
+<li>Monitoring pressures and preventing blowouts</li>
+<li>Handling problems during drilling</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Drilling Engineering Challenges</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Drilling at great depths exceeding 10 kilometers</li>
+<li>High temperatures reaching 200°C</li>
+<li>Enormous pressures reaching 1000 bar</li>
+<li>Complex and diverse rock formations</li>
+<li>Drilling in offshore and polar environments</li>
+</ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 Second Branch: Reservoir Engineering</h2>
+
+<p class="mb-4">Reservoir engineering focuses on studying and analyzing rock formations containing oil and gas. The primary goal is to achieve maximum possible recovery from the reservoir.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Reservoir Engineer Tasks</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Estimating available oil and gas quantities (reserves)</li>
+<li>Studying rock properties: porosity and permeability</li>
+<li>Analyzing fluid properties: viscosity, density, composition</li>
+<li>Simulating reservoir behavior using computer programs</li>
+<li>Designing field development plans</li>
+<li>Determining optimal number and location of wells</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Important Concepts in Reservoir Engineering</h3>
+
+<p class="mb-4"><strong>Porosity:</strong> The ratio of void spaces in rock to total volume. Usually ranges between 5-30%.</p>
+
+<p class="mb-4"><strong>Permeability:</strong> The rock's ability to allow fluid flow through it. Measured in millidarcy units.</p>
+
+<p class="mb-4"><strong>Recovery Factor:</strong> The ratio of extracted oil to original oil in place. Usually ranges between 20-60%.</p>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 Third Branch: Production Engineering</h2>
+
+<p class="mb-4">Production engineering is responsible for everything related to bringing oil and gas from the reservoir to the surface and preparing it for transport and sale.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Production Engineer Tasks</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Designing production and completion equipment</li>
+<li>Optimizing well performance and production rates</li>
+<li>Addressing production problems (wax buildup, scale)</li>
+<li>Designing artificial lift systems</li>
+<li>Monitoring well pressures and temperatures</li>
+<li>Designing surface processing facilities</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Artificial Lift Methods</h3>
+
+<p class="mb-4">When natural reservoir pressure decreases, artificial lift is used:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Electric Submersible Pumps (ESP)</li>
+<li>Rod Pumps (Beam Pumps)</li>
+<li>Gas Lift</li>
+<li>Hydraulic Pumps</li>
+</ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 Fourth Branch: Formation Evaluation</h2>
+
+<p class="mb-4">Formation evaluation specializes in collecting and analyzing data about rock layers and the fluids they contain.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Formation Evaluation Tools</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Wireline Logging</li>
+<li>Coring (rock sampling)</li>
+<li>Well Testing</li>
+<li>Reservoir fluid analysis</li>
+<li>Acoustic imaging</li>
+</ul>
+
+<div class="bg-destructive/10 border-l-4 border-destructive p-4 my-6">
+<p class="text-destructive font-semibold">⚠️ Important Note:</p>
+<p>The four branches work together as one team. The reservoir engineer relies on formation evaluation data, the drilling engineer implements reservoir engineer designs, and the production engineer completes the work after drilling.</p>
+</div>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Section Summary</h3>
+
+<div class="bg-secondary/50 p-4 rounded-lg">
+<p>Petroleum engineering consists of four integrated branches: Drilling Engineering (well construction), Reservoir Engineering (analysis and recovery optimization), Production Engineering (oil production and processing), and Formation Evaluation (data collection and analysis). Each branch is essential for successful petroleum operations.</p>
+</div>
+</section>`,
+          keyTerms: [
+            { term: 'Drilling Engineering', definition: 'The branch responsible for designing and executing well drilling operations' },
+            { term: 'Reservoir Engineering', definition: 'The branch specialized in studying rock and fluid properties to achieve maximum recovery' },
+            { term: 'Porosity', definition: 'The ratio of void volume in rock to total volume, expressing the rock\'s ability to store fluids' },
+            { term: 'Permeability', definition: 'The rock\'s ability to allow fluid flow through it, measured in darcy units' },
+          ],
+          practiceQuestion: {
+            question: 'Which branch of petroleum engineering is responsible for estimating oil quantities in the reservoir?',
+            options: ['Drilling Engineering', 'Reservoir Engineering', 'Production Engineering', 'Formation Evaluation'],
+            correctAnswer: 1,
+          },
+        },
+      },
+    },
+    {
+      day: 4,
+      type: 'learning',
+      content: {
+        ar: {
+          title: 'المسارات الوظيفية في هندسة النفط',
+          explanation: `<section>
+<h2 class="text-primary text-xl font-bold mb-4">🔷 فرص العمل المتنوعة</h2>
+
+<p class="mb-4">توفر هندسة النفط مجموعة واسعة من الفرص الوظيفية في شركات ومنظمات متنوعة. يمكن لمهندس النفط العمل في الميدان أو المكتب، في البر أو البحر، محلياً أو دولياً.</p>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 أنواع الشركات التي توظف مهندسي النفط</h2>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 1. شركات النفط الوطنية (NOCs)</h3>
+
+<p class="mb-4">هي الشركات المملوكة للدول والتي تدير الموارد النفطية الوطنية. أمثلة:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>أرامكو السعودية (السعودية)</li>
+<li>شركة نفط الكويت (الكويت)</li>
+<li>أدنوك (الإمارات)</li>
+<li>سوناطراك (الجزائر)</li>
+<li>شركة النفط الوطنية العراقية</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 2. شركات النفط العالمية (IOCs)</h3>
+
+<p class="mb-4">شركات خاصة تعمل في جميع أنحاء العالم:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>إكسون موبيل (ExxonMobil)</li>
+<li>شيفرون (Chevron)</li>
+<li>شل (Shell)</li>
+<li>بريتش بتروليوم (BP)</li>
+<li>توتال إنرجيز (TotalEnergies)</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 3. شركات الخدمات النفطية</h3>
+
+<p class="mb-4">شركات متخصصة تقدم خدمات لشركات النفط:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>شلمبرجير (Schlumberger) - خدمات تقييم وتكنولوجيا</li>
+<li>هاليبرتون (Halliburton) - خدمات الحفر والإكمال</li>
+<li>بيكر هيوز (Baker Hughes) - معدات وخدمات</li>
+<li>ويذرفورد (Weatherford) - خدمات متنوعة</li>
+</ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 الوظائف الميدانية</h2>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 مهندس حفر ميداني (Field Drilling Engineer)</h3>
+
+<p class="mb-4">يعمل مباشرة في موقع الحفر ويشرف على العمليات اليومية:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>يتابع تقدم الحفر على مدار الساعة</li>
+<li>يتخذ قرارات فورية عند حدوث مشاكل</li>
+<li>يتواصل مع الفريق والإدارة</li>
+<li>يضمن تطبيق معايير السلامة</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 مهندس إنتاج ميداني (Field Production Engineer)</h3>
+
+<p class="mb-4">يدير عمليات الإنتاج في الحقل:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>يراقب أداء الآبار يومياً</li>
+<li>يُجري الصيانة الدورية</li>
+<li>يحل مشاكل الإنتاج</li>
+<li>يُعد التقارير اليومية</li>
+</ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 الوظائف المكتبية</h2>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 مهندس تصميم (Design Engineer)</h3>
+
+<p class="mb-4">يعمل في المكتب على تصميم الآبار والمرافق:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>يستخدم برامج حاسوبية متقدمة</li>
+<li>يُعد خطط الحفر التفصيلية</li>
+<li>يحسب التكاليف والجداول الزمنية</li>
+<li>يتعاون مع فرق متعددة التخصصات</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 مهندس محاكاة (Simulation Engineer)</h3>
+
+<p class="mb-4">متخصص في نمذجة المخزونات باستخدام الحاسوب:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>يبني نماذج ثلاثية الأبعاد للمخزونات</li>
+<li>يتنبأ بسلوك الإنتاج مستقبلاً</li>
+<li>يقترح سيناريوهات تطوير مختلفة</li>
+<li>يُحدّث النماذج ببيانات جديدة</li>
+</ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 التدرج الوظيفي</h2>
+
+<p class="mb-4">يتدرج مهندس النفط عادة في المناصب التالية:</p>
+
+<ol class="list-decimal list-inside space-y-2 mb-4">
+<li>مهندس مبتدئ (Junior Engineer) - 0-3 سنوات</li>
+<li>مهندس (Engineer) - 3-7 سنوات</li>
+<li>مهندس أول (Senior Engineer) - 7-12 سنة</li>
+<li>مهندس رئيسي (Lead Engineer) - 12-18 سنة</li>
+<li>مدير هندسي (Engineering Manager) - 18+ سنة</li>
+<li>مدير عام/تنفيذي (General Manager/Executive)</li>
+</ol>
+
+<div class="bg-destructive/10 border-l-4 border-destructive p-4 my-6">
+<p class="text-destructive font-semibold">⚠️ نصيحة مهمة:</p>
+<p>لتحقيق النجاح في هندسة النفط، يُنصح بالعمل الميداني في السنوات الأولى لاكتساب الخبرة العملية، ثم الانتقال تدريجياً إلى المناصب المكتبية والإدارية.</p>
+</div>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 ملخص القسم</h3>
+
+<div class="bg-secondary/50 p-4 rounded-lg">
+<p>تتنوع فرص العمل في هندسة النفط بين الشركات الوطنية والعالمية وشركات الخدمات. تشمل الوظائف العمل الميداني في مواقع الحفر والإنتاج، والعمل المكتبي في التصميم والمحاكاة. التدرج الوظيفي يبدأ من مهندس مبتدئ ويصل إلى مناصب إدارية عليا.</p>
+</div>
+</section>`,
+          keyTerms: [
+            { term: 'شركات النفط الوطنية', definition: 'شركات مملوكة للدول تدير الموارد النفطية الوطنية مثل أرامكو وأدنوك' },
+            { term: 'شركات الخدمات النفطية', definition: 'شركات متخصصة تقدم خدمات تقنية لشركات النفط مثل شلمبرجير وهاليبرتون' },
+            { term: 'المنبع (Upstream)', definition: 'قطاع الاستكشاف والإنتاج في صناعة النفط' },
+            { term: 'المصب (Downstream)', definition: 'قطاع التكرير والتوزيع والتسويق في صناعة النفط' },
+          ],
+          practiceQuestion: {
+            question: 'أي نوع من الشركات التالية تُصنف كشركة خدمات نفطية؟',
+            options: ['أرامكو السعودية', 'شلمبرجير', 'شركة نفط الكويت', 'إكسون موبيل'],
+            correctAnswer: 1,
+          },
+        },
+        en: {
+          title: 'Career Paths in Petroleum Engineering',
+          explanation: `<section>
+<h2 class="text-primary text-xl font-bold mb-4">🔷 Diverse Job Opportunities</h2>
+
+<p class="mb-4">Petroleum engineering offers a wide range of job opportunities in various companies and organizations. A petroleum engineer can work in the field or office, onshore or offshore, locally or internationally.</p>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 Types of Companies Employing Petroleum Engineers</h2>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 1. National Oil Companies (NOCs)</h3>
+
+<p class="mb-4">State-owned companies that manage national petroleum resources. Examples:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Saudi Aramco (Saudi Arabia)</li>
+<li>Kuwait Oil Company (Kuwait)</li>
+<li>ADNOC (UAE)</li>
+<li>Sonatrach (Algeria)</li>
+<li>Iraq National Oil Company</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 2. International Oil Companies (IOCs)</h3>
+
+<p class="mb-4">Private companies operating worldwide:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>ExxonMobil</li>
+<li>Chevron</li>
+<li>Shell</li>
+<li>BP (British Petroleum)</li>
+<li>TotalEnergies</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 3. Oilfield Service Companies</h3>
+
+<p class="mb-4">Specialized companies providing services to oil companies:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Schlumberger - evaluation and technology services</li>
+<li>Halliburton - drilling and completion services</li>
+<li>Baker Hughes - equipment and services</li>
+<li>Weatherford - various services</li>
+</ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 Field Positions</h2>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Field Drilling Engineer</h3>
+
+<p class="mb-4">Works directly at the drilling site and supervises daily operations:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Monitors drilling progress around the clock</li>
+<li>Makes immediate decisions when problems occur</li>
+<li>Communicates with team and management</li>
+<li>Ensures safety standards are applied</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Field Production Engineer</h3>
+
+<p class="mb-4">Manages production operations in the field:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Monitors well performance daily</li>
+<li>Performs routine maintenance</li>
+<li>Solves production problems</li>
+<li>Prepares daily reports</li>
+</ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 Office Positions</h2>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Design Engineer</h3>
+
+<p class="mb-4">Works in the office on well and facility design:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Uses advanced computer software</li>
+<li>Prepares detailed drilling plans</li>
+<li>Calculates costs and schedules</li>
+<li>Collaborates with multidisciplinary teams</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Simulation Engineer</h3>
+
+<p class="mb-4">Specializes in computer reservoir modeling:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Builds 3D reservoir models</li>
+<li>Predicts future production behavior</li>
+<li>Proposes different development scenarios</li>
+<li>Updates models with new data</li>
+</ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 Career Progression</h2>
+
+<p class="mb-4">Petroleum engineers typically progress through these positions:</p>
+
+<ol class="list-decimal list-inside space-y-2 mb-4">
+<li>Junior Engineer - 0-3 years</li>
+<li>Engineer - 3-7 years</li>
+<li>Senior Engineer - 7-12 years</li>
+<li>Lead Engineer - 12-18 years</li>
+<li>Engineering Manager - 18+ years</li>
+<li>General Manager/Executive</li>
+</ol>
+
+<div class="bg-destructive/10 border-l-4 border-destructive p-4 my-6">
+<p class="text-destructive font-semibold">⚠️ Important Advice:</p>
+<p>To achieve success in petroleum engineering, it's recommended to work in the field during the early years to gain practical experience, then gradually transition to office and management positions.</p>
+</div>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Section Summary</h3>
+
+<div class="bg-secondary/50 p-4 rounded-lg">
+<p>Job opportunities in petroleum engineering vary among national companies, international companies, and service companies. Jobs include field work at drilling and production sites, and office work in design and simulation. Career progression starts from junior engineer and reaches senior management positions.</p>
+</div>
+</section>`,
+          keyTerms: [
+            { term: 'National Oil Companies', definition: 'State-owned companies managing national petroleum resources like Aramco and ADNOC' },
+            { term: 'Oilfield Service Companies', definition: 'Specialized companies providing technical services to oil companies like Schlumberger and Halliburton' },
+            { term: 'Upstream', definition: 'The exploration and production sector of the oil industry' },
+            { term: 'Downstream', definition: 'The refining, distribution, and marketing sector of the oil industry' },
+          ],
+          practiceQuestion: {
+            question: 'Which of the following companies is classified as an oilfield service company?',
+            options: ['Saudi Aramco', 'Schlumberger', 'Kuwait Oil Company', 'ExxonMobil'],
+            correctAnswer: 1,
+          },
+        },
+      },
+    },
+    {
+      day: 5,
+      type: 'learning',
+      content: {
+        ar: {
+          title: 'البيئة والسلامة في صناعة النفط',
+          explanation: `<section>
+<h2 class="text-primary text-xl font-bold mb-4">🔷 أهمية السلامة والبيئة (HSE)</h2>
+
+<p class="mb-4">تُعد السلامة والصحة المهنية وحماية البيئة (HSE - Health, Safety, and Environment) من أهم الأولويات في صناعة النفط والغاز. فهذه الصناعة تتعامل مع مواد قابلة للاشتعال وضغوط عالية ومعدات ثقيلة.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 لماذا HSE مهم جداً؟</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>حماية أرواح العاملين والمجتمعات المجاورة</li>
+<li>الحفاظ على البيئة للأجيال القادمة</li>
+<li>تجنب الخسائر المالية الضخمة من الحوادث</li>
+<li>الامتثال للقوانين والأنظمة الدولية</li>
+<li>الحفاظ على سمعة الشركة</li>
+</ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 مخاطر العمل في صناعة النفط</h2>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 1. مخاطر الحريق والانفجار</h3>
+
+<p class="mb-4">النفط والغاز مواد شديدة الاشتعال. أي شرارة يمكن أن تسبب كارثة:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>انفجارات في مرافق المعالجة</li>
+<li>حرائق الآبار (Blowouts)</li>
+<li>تسرب الغازات القابلة للاشتعال</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 2. مخاطر الضغط العالي</h3>
+
+<p class="mb-4">تعمل معدات النفط تحت ضغوط هائلة:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>انفجار الأنابيب والصمامات</li>
+<li>خطر من المعدات المضغوطة</li>
+<li>إصابات من تسرب السوائل تحت الضغط</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 3. المخاطر الكيميائية</h3>
+
+<p class="mb-4">التعرض للمواد الكيميائية الضارة:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>غاز كبريتيد الهيدروجين (H2S) السام</li>
+<li>المواد الكيميائية المستخدمة في الحفر</li>
+<li>المذيبات والمنظفات الصناعية</li>
+</ul>
+
+<div class="bg-destructive/10 border-l-4 border-destructive p-4 my-6">
+<p class="text-destructive font-semibold">⚠️ تحذير خطير:</p>
+<p>غاز كبريتيد الهيدروجين (H2S) قاتل في تركيزات منخفضة. يمكن أن يسبب الوفاة خلال ثوانٍ. يجب ارتداء أجهزة الكشف دائماً في المناطق المعرضة.</p>
+</div>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 إجراءات السلامة الأساسية</h2>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 معدات الحماية الشخصية (PPE)</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>خوذة السلامة (Hard Hat) - حماية الرأس</li>
+<li>نظارات السلامة (Safety Glasses) - حماية العيون</li>
+<li>أحذية السلامة (Safety Boots) - حماية القدمين</li>
+<li>قفازات العمل (Work Gloves) - حماية اليدين</li>
+<li>ملابس مقاومة للحريق (FR Clothing)</li>
+<li>سدادات الأذن (Ear Plugs) - حماية السمع</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 تصاريح العمل (Work Permits)</h3>
+
+<p class="mb-4">قبل أي عمل خطير، يجب الحصول على تصريح يحدد:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>طبيعة العمل والمخاطر المتوقعة</li>
+<li>إجراءات السلامة المطلوبة</li>
+<li>المعدات الوقائية اللازمة</li>
+<li>خطة الطوارئ</li>
+</ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 حماية البيئة</h2>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 مصادر التلوث المحتملة</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>تسرب النفط في البحار والأراضي</li>
+<li>انبعاثات الغازات في الجو</li>
+<li>مياه الإنتاج الملوثة</li>
+<li>النفايات الصناعية</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 تقنيات حماية البيئة</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>أنظمة منع التسرب المتقدمة</li>
+<li>معالجة مياه الإنتاج قبل التخلص منها</li>
+<li>احتجاز الكربون وتخزينه (CCS)</li>
+<li>حرق الغاز المتوافق مع البيئة</li>
+<li>إعادة تأهيل المواقع بعد الإنتاج</li>
+</ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 الكوارث التاريخية ودروسها</h2>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 حادثة ديب ووتر هورايزن (2010)</h3>
+
+<p class="mb-4">أكبر تسرب نفطي بحري في التاريخ:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>انفجار في خليج المكسيك قتل 11 عاملاً</li>
+<li>تسرب 4.9 مليون برميل نفط</li>
+<li>أضرار بيئية هائلة استمرت لسنوات</li>
+<li>غرامات وتعويضات تجاوزت 65 مليار دولار</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 الدروس المستفادة</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>أهمية صيانة معدات السلامة</li>
+<li>ضرورة وجود خطط طوارئ فعالة</li>
+<li>تدريب العاملين المستمر</li>
+<li>الرقابة الصارمة على العمليات</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 ملخص القسم</h3>
+
+<div class="bg-secondary/50 p-4 rounded-lg">
+<p>السلامة والبيئة (HSE) هما أولوية قصوى في صناعة النفط. تشمل المخاطر الحريق والضغط العالي والمواد الكيميائية. الوقاية تتطلب معدات حماية شخصية، تصاريح عمل، وتدريب مستمر. حماية البيئة ضرورية لتجنب كوارث مثل ديب ووتر هورايزن.</p>
+</div>
+</section>`,
+          keyTerms: [
+            { term: 'HSE', definition: 'الصحة والسلامة والبيئة - المعايير والإجراءات التي تحمي العاملين والبيئة' },
+            { term: 'معدات الحماية الشخصية', definition: 'المعدات التي يرتديها العامل لحمايته من المخاطر مثل الخوذة والنظارات' },
+            { term: 'كبريتيد الهيدروجين', definition: 'غاز سام عديم اللون برائحة البيض الفاسد، قاتل في تركيزات عالية' },
+            { term: 'احتجاز الكربون', definition: 'تقنية لالتقاط وتخزين انبعاثات ثاني أكسيد الكربون لتقليل التلوث' },
+          ],
+          practiceQuestion: {
+            question: 'ما هو الغاز السام الأكثر خطورة في صناعة النفط؟',
+            options: ['ثاني أكسيد الكربون (CO2)', 'كبريتيد الهيدروجين (H2S)', 'الميثان (CH4)', 'النيتروجين (N2)'],
+            correctAnswer: 1,
+          },
+        },
+        en: {
+          title: 'Environment and Safety in the Oil Industry',
+          explanation: `<section>
+<h2 class="text-primary text-xl font-bold mb-4">🔷 Importance of Health, Safety, and Environment (HSE)</h2>
+
+<p class="mb-4">Health, Safety, and Environment (HSE) are among the most important priorities in the oil and gas industry. This industry deals with flammable materials, high pressures, and heavy equipment.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Why is HSE So Important?</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Protecting workers' lives and neighboring communities</li>
+<li>Preserving the environment for future generations</li>
+<li>Avoiding huge financial losses from accidents</li>
+<li>Compliance with international laws and regulations</li>
+<li>Maintaining company reputation</li>
+</ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 Risks of Working in the Oil Industry</h2>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 1. Fire and Explosion Risks</h3>
+
+<p class="mb-4">Oil and gas are highly flammable materials. Any spark can cause a disaster:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Explosions at processing facilities</li>
+<li>Well fires (Blowouts)</li>
+<li>Flammable gas leaks</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 2. High Pressure Risks</h3>
+
+<p class="mb-4">Oil equipment operates under enormous pressures:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Pipe and valve explosions</li>
+<li>Danger from pressurized equipment</li>
+<li>Injuries from fluid leaks under pressure</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 3. Chemical Hazards</h3>
+
+<p class="mb-4">Exposure to harmful chemicals:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Toxic hydrogen sulfide (H2S) gas</li>
+<li>Chemicals used in drilling</li>
+<li>Industrial solvents and cleaners</li>
+</ul>
+
+<div class="bg-destructive/10 border-l-4 border-destructive p-4 my-6">
+<p class="text-destructive font-semibold">⚠️ Serious Warning:</p>
+<p>Hydrogen sulfide (H2S) gas is lethal at low concentrations. It can cause death within seconds. Detection devices must always be worn in exposed areas.</p>
+</div>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 Basic Safety Procedures</h2>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Personal Protective Equipment (PPE)</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Hard Hat - head protection</li>
+<li>Safety Glasses - eye protection</li>
+<li>Safety Boots - foot protection</li>
+<li>Work Gloves - hand protection</li>
+<li>FR Clothing - fire-resistant clothing</li>
+<li>Ear Plugs - hearing protection</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Work Permits</h3>
+
+<p class="mb-4">Before any hazardous work, a permit must be obtained specifying:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Nature of work and expected hazards</li>
+<li>Required safety procedures</li>
+<li>Necessary protective equipment</li>
+<li>Emergency plan</li>
+</ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 Environmental Protection</h2>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Potential Pollution Sources</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Oil spills in seas and lands</li>
+<li>Gas emissions into the atmosphere</li>
+<li>Contaminated production water</li>
+<li>Industrial waste</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Environmental Protection Technologies</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Advanced leak prevention systems</li>
+<li>Production water treatment before disposal</li>
+<li>Carbon Capture and Storage (CCS)</li>
+<li>Environmentally compliant gas flaring</li>
+<li>Site rehabilitation after production</li>
+</ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 Historical Disasters and Their Lessons</h2>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Deepwater Horizon Incident (2010)</h3>
+
+<p class="mb-4">The largest offshore oil spill in history:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Explosion in the Gulf of Mexico killed 11 workers</li>
+<li>Leaked 4.9 million barrels of oil</li>
+<li>Massive environmental damage lasting years</li>
+<li>Fines and compensation exceeded $65 billion</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Lessons Learned</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Importance of safety equipment maintenance</li>
+<li>Need for effective emergency plans</li>
+<li>Continuous worker training</li>
+<li>Strict oversight of operations</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Section Summary</h3>
+
+<div class="bg-secondary/50 p-4 rounded-lg">
+<p>Safety and environment (HSE) are top priorities in the oil industry. Risks include fire, high pressure, and chemicals. Prevention requires personal protective equipment, work permits, and continuous training. Environmental protection is essential to avoid disasters like Deepwater Horizon.</p>
+</div>
+</section>`,
+          keyTerms: [
+            { term: 'HSE', definition: 'Health, Safety, and Environment - standards and procedures that protect workers and the environment' },
+            { term: 'PPE', definition: 'Personal Protective Equipment worn by workers for protection such as helmets and glasses' },
+            { term: 'Hydrogen Sulfide', definition: 'A colorless toxic gas with a rotten egg smell, lethal at high concentrations' },
+            { term: 'Carbon Capture', definition: 'Technology to capture and store carbon dioxide emissions to reduce pollution' },
+          ],
+          practiceQuestion: {
+            question: 'What is the most dangerous toxic gas in the oil industry?',
+            options: ['Carbon Dioxide (CO2)', 'Hydrogen Sulfide (H2S)', 'Methane (CH4)', 'Nitrogen (N2)'],
+            correctAnswer: 1,
+          },
+        },
+      },
+    },
+    {
+      day: 6,
+      type: 'quiz',
+      content: {
+        en: { title: 'Weekly Quiz', explanation: 'Test your knowledge from this week\'s lessons.', keyTerms: [] },
+        ar: { title: 'اختبار الأسبوع', explanation: 'اختبر معرفتك من دروس هذا الأسبوع.', keyTerms: [] },
+      },
+      quiz: {
+        en: [
+          { question: 'What percentage of global energy needs depend on oil and gas?', options: ['Less than 30%', 'About 40%', 'More than 60%', 'About 90%'], correctAnswer: 2 },
+          { question: 'Who drilled the first successful commercial oil well?', options: ['John Rockefeller', 'Edwin Drake', 'Henry Ford', 'Thomas Edison'], correctAnswer: 1 },
+          { question: 'In what year was OPEC founded?', options: ['1950', '1960', '1970', '1980'], correctAnswer: 1 },
+          { question: 'Which branch of petroleum engineering focuses on maximizing oil recovery?', options: ['Drilling Engineering', 'Reservoir Engineering', 'Production Engineering', 'Chemical Engineering'], correctAnswer: 1 },
+          { question: 'What is porosity?', options: ['Rock hardness', 'Void space ratio in rock', 'Rock color', 'Rock age'], correctAnswer: 1 },
+          { question: 'Which company is classified as an oilfield service company?', options: ['Saudi Aramco', 'Halliburton', 'Kuwait Oil Company', 'Shell'], correctAnswer: 1 },
+          { question: 'What does HSE stand for?', options: ['High Speed Equipment', 'Health, Safety, Environment', 'Heavy Steel Engineering', 'Hydrocarbon Storage Estimate'], correctAnswer: 1 },
+          { question: 'What is the most dangerous toxic gas in oil operations?', options: ['CO2', 'H2S', 'CH4', 'N2'], correctAnswer: 1 },
+          { question: 'What was the Deepwater Horizon incident?', options: ['A successful discovery', 'A major oil spill', 'A new drilling technology', 'An oil company'], correctAnswer: 1 },
+          { question: 'What is carbon capture technology used for?', options: ['Increasing production', 'Reducing emissions', 'Drilling deeper', 'Refining oil'], correctAnswer: 1 },
+        ],
+        ar: [
+          { question: 'ما هي النسبة المئوية لاحتياجات الطاقة العالمية التي تعتمد على النفط والغاز؟', options: ['أقل من 30%', 'حوالي 40%', 'أكثر من 60%', 'حوالي 90%'], correctAnswer: 2 },
+          { question: 'من حفر أول بئر نفط تجاري ناجح؟', options: ['جون روكفلر', 'إدوين دريك', 'هنري فورد', 'توماس إديسون'], correctAnswer: 1 },
+          { question: 'في أي عام تأسست أوبك؟', options: ['1950', '1960', '1970', '1980'], correctAnswer: 1 },
+          { question: 'أي فرع من هندسة النفط يركز على تعظيم استخلاص النفط؟', options: ['هندسة الحفر', 'هندسة المخزونات', 'هندسة الإنتاج', 'الهندسة الكيميائية'], correctAnswer: 1 },
+          { question: 'ما هي المسامية؟', options: ['صلابة الصخر', 'نسبة الفراغات في الصخر', 'لون الصخر', 'عمر الصخر'], correctAnswer: 1 },
+          { question: 'أي شركة تُصنف كشركة خدمات نفطية؟', options: ['أرامكو السعودية', 'هاليبرتون', 'شركة نفط الكويت', 'شل'], correctAnswer: 1 },
+          { question: 'ماذا تعني HSE؟', options: ['معدات عالية السرعة', 'الصحة والسلامة والبيئة', 'هندسة الصلب الثقيل', 'تقدير تخزين الهيدروكربونات'], correctAnswer: 1 },
+          { question: 'ما هو أخطر غاز سام في عمليات النفط؟', options: ['CO2', 'H2S', 'CH4', 'N2'], correctAnswer: 1 },
+          { question: 'ما هي حادثة ديب ووتر هورايزن؟', options: ['اكتشاف ناجح', 'تسرب نفطي كبير', 'تقنية حفر جديدة', 'شركة نفط'], correctAnswer: 1 },
+          { question: 'ما هو استخدام تقنية احتجاز الكربون؟', options: ['زيادة الإنتاج', 'تقليل الانبعاثات', 'الحفر أعمق', 'تكرير النفط'], correctAnswer: 1 },
+        ],
+      },
+    },
+    {
+      day: 7,
+      type: 'project',
+      content: {
+        en: { title: 'Mini Project', explanation: 'Apply what you learned this week.', keyTerms: [] },
+        ar: { title: 'مشروع صغير', explanation: 'طبّق ما تعلمته هذا الأسبوع.', keyTerms: [] },
+      },
+      project: {
+        en: {
+          title: 'Petroleum Engineering Essay',
+          description: 'Write a comprehensive essay about petroleum engineering and its importance in the modern world.',
+          instructions: [
+            'Define petroleum engineering in your own words',
+            'Explain the four main branches and their roles',
+            'Discuss the importance of oil and gas in the global economy',
+            'Mention environmental considerations and safety practices',
+            'Include your thoughts on the future of the industry',
+          ],
+          submissionType: 'text',
+        },
+        ar: {
+          title: 'مقال عن هندسة النفط',
+          description: 'اكتب مقالاً شاملاً عن هندسة النفط وأهميتها في العالم الحديث.',
+          instructions: [
+            'عرّف هندسة النفط بأسلوبك الخاص',
+            'اشرح الفروع الأربعة الرئيسية وأدوارها',
+            'ناقش أهمية النفط والغاز في الاقتصاد العالمي',
+            'اذكر الاعتبارات البيئية وممارسات السلامة',
+            'أضف رأيك حول مستقبل الصناعة',
+          ],
+          submissionType: 'text',
+        },
+      },
+    },
+  ],
+};
+
+// ============================================
+// LESSON 2: Basics of Drilling
+// ============================================
+
+const drillingLesson: WeeklyLesson = {
+  lessonId: 'drilling',
+  days: [
+    {
+      day: 1,
+      type: 'learning',
+      content: {
+        ar: {
+          title: 'مفهوم الحفر وأهميته',
+          explanation: `<section>
+<h2 class="text-primary text-xl font-bold mb-4">🔷 ما هو الحفر النفطي؟</h2>
+
+<p class="mb-4">الحفر النفطي (Oil Well Drilling) هو العملية الأساسية للوصول إلى مخزونات النفط والغاز الموجودة في أعماق الأرض. تُعتبر هذه العملية من أكثر العمليات الهندسية تعقيداً وتكلفة في صناعة النفط.</p>
+
+<p class="mb-4">بدون الحفر، لا يمكن استخراج النفط والغاز من باطن الأرض. لذلك يُعد الحفر الخطوة الأولى والأهم في سلسلة إنتاج الهيدروكربونات.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 أهمية الحفر في صناعة النفط</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>الوصول إلى المخزونات النفطية تحت سطح الأرض</li>
+<li>تقييم إمكانات الحقول النفطية المكتشفة</li>
+<li>إنتاج النفط والغاز بشكل اقتصادي</li>
+<li>حقن المياه أو الغاز لتحسين الاستخلاص</li>
+<li>جمع البيانات الجيولوجية والبتروفيزيائية</li>
+</ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 أنواع آبار النفط حسب الغرض</h2>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 1. آبار الاستكشاف (Exploration Wells)</h3>
+
+<p class="mb-4">تُحفر للبحث عن النفط والغاز في مناطق جديدة لم يتم اكتشاف النفط فيها من قبل. تتميز بـ:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>مخاطر عالية (قد لا تجد نفطاً)</li>
+<li>تكاليف مرتفعة</li>
+<li>جمع كميات كبيرة من البيانات</li>
+<li>تسمى أيضاً "Wildcat Wells"</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 2. آبار التقييم (Appraisal Wells)</h3>
+
+<p class="mb-4">تُحفر بعد اكتشاف النفط لتحديد حجم المخزون وخصائصه:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>تحديد حدود المخزون</li>
+<li>تقييم كمية النفط القابلة للاستخراج</li>
+<li>دراسة خصائص السوائل والصخور</li>
+<li>تحديد جدوى التطوير التجاري</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 3. آبار الإنتاج (Production Wells)</h3>
+
+<p class="mb-4">تُحفر لاستخراج النفط والغاز بشكل تجاري:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>الهدف الرئيسي: الإنتاج بأقل تكلفة</li>
+<li>تصميم طويل الأمد</li>
+<li>معدات إنتاج متطورة</li>
+<li>صيانة دورية مستمرة</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 4. آبار الحقن (Injection Wells)</h3>
+
+<p class="mb-4">تُستخدم لحقن المياه أو الغاز في المخزون لدفع النفط نحو آبار الإنتاج:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>زيادة معامل الاستخلاص</li>
+<li>الحفاظ على ضغط المخزون</li>
+<li>تحسين حركة النفط في الصخور</li>
+</ul>
+
+<div class="bg-destructive/10 border-l-4 border-destructive p-4 my-6">
+<p class="text-destructive font-semibold">⚠️ معلومة مهمة:</p>
+<p>تكلفة حفر بئر واحد قد تتراوح من مليون دولار للآبار البرية البسيطة إلى أكثر من 100 مليون دولار للآبار البحرية العميقة.</p>
+</div>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 مراحل الحفر الأساسية</h2>
+
+<ol class="list-decimal list-inside space-y-2 mb-4">
+<li>التخطيط والتصميم</li>
+<li>تحضير الموقع وتركيب الجهاز</li>
+<li>حفر القسم السطحي</li>
+<li>حفر الأقسام الوسيطة</li>
+<li>حفر قسم الإنتاج</li>
+<li>الإكمال وتجهيز البئر للإنتاج</li>
+</ol>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 ملخص القسم</h3>
+
+<div class="bg-secondary/50 p-4 rounded-lg">
+<p>الحفر هو العملية الأساسية للوصول إلى المخزونات النفطية. توجد أنواع مختلفة من الآبار حسب الغرض: استكشاف، تقييم، إنتاج، وحقن. كل نوع له خصائصه وتكاليفه ومخاطره.</p>
+</div>
+</section>`,
+          keyTerms: [
+            { term: 'الحفر النفطي', definition: 'عملية إنشاء ثقب في الأرض للوصول إلى مخزونات النفط والغاز' },
+            { term: 'بئر الاستكشاف', definition: 'بئر يُحفر للبحث عن النفط في منطقة جديدة غير مثبتة' },
+            { term: 'بئر الحقن', definition: 'بئر يُستخدم لحقن الماء أو الغاز لزيادة استخلاص النفط' },
+            { term: 'Wildcat Well', definition: 'مصطلح يُطلق على آبار الاستكشاف عالية المخاطر' },
+          ],
+          practiceQuestion: {
+            question: 'ما هو الغرض الرئيسي من حفر آبار التقييم؟',
+            options: ['البحث عن نفط جديد', 'تحديد حجم المخزون المكتشف', 'إنتاج النفط تجارياً', 'حقن المياه'],
+            correctAnswer: 1,
+          },
+        },
+        en: {
+          title: 'Drilling Concept and Importance',
+          explanation: `<section>
+<h2 class="text-primary text-xl font-bold mb-4">🔷 What is Oil Well Drilling?</h2>
+
+<p class="mb-4">Oil Well Drilling is the fundamental process of reaching oil and gas reservoirs located deep underground. This process is considered one of the most complex and costly engineering operations in the oil industry.</p>
+
+<p class="mb-4">Without drilling, oil and gas cannot be extracted from underground. Therefore, drilling is the first and most important step in the hydrocarbon production chain.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Importance of Drilling in the Oil Industry</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Accessing underground petroleum reservoirs</li>
+<li>Evaluating potential of discovered oil fields</li>
+<li>Producing oil and gas economically</li>
+<li>Injecting water or gas to improve recovery</li>
+<li>Collecting geological and petrophysical data</li>
+</ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 Types of Oil Wells by Purpose</h2>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 1. Exploration Wells</h3>
+
+<p class="mb-4">Drilled to search for oil and gas in new areas where oil has not been discovered before. Characterized by:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>High risks (may not find oil)</li>
+<li>High costs</li>
+<li>Collection of large amounts of data</li>
+<li>Also called "Wildcat Wells"</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 2. Appraisal Wells</h3>
+
+<p class="mb-4">Drilled after oil discovery to determine reservoir size and characteristics:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Determining reservoir boundaries</li>
+<li>Evaluating recoverable oil quantity</li>
+<li>Studying fluid and rock properties</li>
+<li>Determining commercial development feasibility</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 3. Production Wells</h3>
+
+<p class="mb-4">Drilled to extract oil and gas commercially:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Main goal: Production at lowest cost</li>
+<li>Long-term design</li>
+<li>Advanced production equipment</li>
+<li>Continuous periodic maintenance</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 4. Injection Wells</h3>
+
+<p class="mb-4">Used to inject water or gas into the reservoir to push oil toward production wells:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Increasing recovery factor</li>
+<li>Maintaining reservoir pressure</li>
+<li>Improving oil movement in rocks</li>
+</ul>
+
+<div class="bg-destructive/10 border-l-4 border-destructive p-4 my-6">
+<p class="text-destructive font-semibold">⚠️ Important Information:</p>
+<p>The cost of drilling a single well can range from one million dollars for simple onshore wells to more than 100 million dollars for deep offshore wells.</p>
+</div>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 Basic Drilling Stages</h2>
+
+<ol class="list-decimal list-inside space-y-2 mb-4">
+<li>Planning and design</li>
+<li>Site preparation and rig installation</li>
+<li>Drilling the surface section</li>
+<li>Drilling intermediate sections</li>
+<li>Drilling the production section</li>
+<li>Completion and preparing the well for production</li>
+</ol>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Section Summary</h3>
+
+<div class="bg-secondary/50 p-4 rounded-lg">
+<p>Drilling is the fundamental process for accessing petroleum reservoirs. Different types of wells exist based on purpose: exploration, appraisal, production, and injection. Each type has its characteristics, costs, and risks.</p>
+</div>
+</section>`,
+          keyTerms: [
+            { term: 'Oil Well Drilling', definition: 'The process of creating a hole in the earth to access oil and gas reservoirs' },
+            { term: 'Exploration Well', definition: 'A well drilled to search for oil in a new, unproven area' },
+            { term: 'Injection Well', definition: 'A well used to inject water or gas to increase oil recovery' },
+            { term: 'Wildcat Well', definition: 'A term for high-risk exploration wells' },
+          ],
+          practiceQuestion: {
+            question: 'What is the main purpose of drilling appraisal wells?',
+            options: ['Search for new oil', 'Determine discovered reservoir size', 'Produce oil commercially', 'Inject water'],
+            correctAnswer: 1,
+          },
+        },
+      },
+    },
+    {
+      day: 2,
+      type: 'learning',
+      content: {
+        ar: {
+          title: 'آلية عمل الحفر الدوراني',
+          explanation: `<section>
+<h2 class="text-primary text-xl font-bold mb-4">🔷 مقدمة عن الحفر الدوراني</h2>
+
+<p class="mb-4">الحفر الدوراني (Rotary Drilling) هو الأسلوب الأكثر استخداماً في صناعة النفط اليوم. يعتمد على دوران رأس الحفر (Drill Bit) لتفتيت الصخور، مع ضخ سائل الحفر لإزالة الفتات ورفعه إلى السطح.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 مبدأ العمل الأساسي</h3>
+
+<p class="mb-4">يتم الحفر من خلال ثلاث عمليات متزامنة:</p>
+
+<ol class="list-decimal list-inside space-y-2 mb-4">
+<li><strong>الدوران:</strong> دوران رأس الحفر بسرعات عالية (50-200 دورة/دقيقة)</li>
+<li><strong>الضغط:</strong> تطبيق وزن على رأس الحفر (WOB - Weight on Bit)</li>
+<li><strong>الضخ:</strong> ضخ سائل الحفر لتنظيف وتبريد رأس الحفر</li>
+</ol>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 مكونات نظام الحفر الدوراني</h2>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 1. نظام الرفع (Hoisting System)</h3>
+
+<p class="mb-4">مسؤول عن رفع وإنزال سلسلة الحفر:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>البرج (Derrick/Mast): الهيكل المعدني الضخم</li>
+<li>الرافعة (Drawworks): محرك الرفع الرئيسي</li>
+<li>كتلة التاج (Crown Block): في أعلى البرج</li>
+<li>كتلة السفر (Traveling Block): المتحركة</li>
+<li>حبل الحفر (Drilling Line): سلك فولاذي</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 2. نظام الدوران (Rotating System)</h3>
+
+<p class="mb-4">يوفر الحركة الدورانية لسلسلة الحفر:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>الطاولة الدوارة (Rotary Table): الطريقة التقليدية</li>
+<li>المحرك العلوي (Top Drive): التقنية الحديثة</li>
+<li>أنابيب الحفر (Drill Pipe): تنقل الدوران</li>
+<li>الأطواق الثقيلة (Drill Collars): توفر الوزن</li>
+<li>رأس الحفر (Drill Bit): يقطع الصخر</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 3. نظام دوران السوائل (Circulating System)</h3>
+
+<p class="mb-4">يضخ ويعالج سائل الحفر:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>مضخات الطين (Mud Pumps): ضخ السائل</li>
+<li>خزانات الطين (Mud Tanks): التخزين</li>
+<li>المنخل الهزاز (Shale Shaker): فصل الفتات</li>
+<li>نازعات الغاز (Degassers): إزالة الغازات</li>
+<li>نازعات الرمل (Desanders): إزالة الرمل</li>
+</ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 دورة سائل الحفر</h2>
+
+<p class="mb-4">يتبع سائل الحفر مساراً دائرياً:</p>
+
+<ol class="list-decimal list-inside space-y-2 mb-4">
+<li>يُضخ من خزانات الطين</li>
+<li>ينزل داخل أنابيب الحفر</li>
+<li>يخرج من فتحات رأس الحفر</li>
+<li>يصعد في الفراغ بين الأنابيب وجدار البئر</li>
+<li>يمر عبر معدات التنظيف</li>
+<li>يعود إلى الخزانات</li>
+</ol>
+
+<div class="bg-destructive/10 border-l-4 border-destructive p-4 my-6">
+<p class="text-destructive font-semibold">⚠️ ملاحظة فنية:</p>
+<p>سرعة ضخ سائل الحفر حرجة جداً. ضخ بطيء جداً لا يرفع الفتات، وضخ سريع جداً قد يتسبب في تآكل جدران البئر.</p>
+</div>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 أنواع رؤوس الحفر</h2>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 1. رؤوس البكرات (Roller Cone Bits)</h3>
+
+<p class="mb-4">تحتوي على مخاريط دوارة مع أسنان:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>مناسبة للصخور اللينة والمتوسطة</li>
+<li>أسنان فولاذية أو كربيد التنغستن</li>
+<li>أرخص نسبياً</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 2. رؤوس PDC (Polycrystalline Diamond Compact)</h3>
+
+<p class="mb-4">تستخدم قطع الماس الصناعي:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>كفاءة عالية في الصخور الصلبة</li>
+<li>عمر أطول</li>
+<li>سرعة حفر أعلى</li>
+<li>تكلفة أعلى</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 ملخص القسم</h3>
+
+<div class="bg-secondary/50 p-4 rounded-lg">
+<p>الحفر الدوراني يعتمد على ثلاثة أنظمة: الرفع، الدوران، ودوران السوائل. رأس الحفر يفتت الصخر بالدوران والضغط، وسائل الحفر ينظف البئر ويرفع الفتات. اختيار نوع رأس الحفر يعتمد على نوع الصخور.</p>
+</div>
+</section>`,
+          keyTerms: [
+            { term: 'الحفر الدوراني', definition: 'طريقة الحفر التي تعتمد على دوران رأس الحفر لتفتيت الصخور' },
+            { term: 'رأس الحفر', definition: 'الأداة الموجودة في نهاية سلسلة الحفر والتي تقطع الصخور' },
+            { term: 'سائل الحفر', definition: 'السائل المُضخ في البئر لتبريد رأس الحفر وإزالة الفتات' },
+            { term: 'المحرك العلوي', definition: 'محرك كهربائي أو هيدروليكي يُدير سلسلة الحفر من الأعلى' },
+          ],
+          practiceQuestion: {
+            question: 'ما هي وظيفة المنخل الهزاز (Shale Shaker)؟',
+            options: ['ضخ سائل الحفر', 'فصل الفتات من سائل الحفر', 'دوران رأس الحفر', 'تخزين سائل الحفر'],
+            correctAnswer: 1,
+          },
+        },
+        en: {
+          title: 'Rotary Drilling Mechanism',
+          explanation: `<section>
+<h2 class="text-primary text-xl font-bold mb-4">🔷 Introduction to Rotary Drilling</h2>
+
+<p class="mb-4">Rotary Drilling is the most commonly used method in the oil industry today. It relies on rotating the drill bit to break up rocks while pumping drilling fluid to remove cuttings and bring them to the surface.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Basic Operating Principle</h3>
+
+<p class="mb-4">Drilling occurs through three simultaneous operations:</p>
+
+<ol class="list-decimal list-inside space-y-2 mb-4">
+<li><strong>Rotation:</strong> Rotating the drill bit at high speeds (50-200 RPM)</li>
+<li><strong>Pressure:</strong> Applying weight on the drill bit (WOB - Weight on Bit)</li>
+<li><strong>Pumping:</strong> Pumping drilling fluid to clean and cool the drill bit</li>
+</ol>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 Components of Rotary Drilling System</h2>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 1. Hoisting System</h3>
+
+<p class="mb-4">Responsible for raising and lowering the drill string:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Derrick/Mast: The massive steel structure</li>
+<li>Drawworks: Main lifting engine</li>
+<li>Crown Block: At the top of the derrick</li>
+<li>Traveling Block: The moving block</li>
+<li>Drilling Line: Steel wire rope</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 2. Rotating System</h3>
+
+<p class="mb-4">Provides rotational motion to the drill string:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Rotary Table: Traditional method</li>
+<li>Top Drive: Modern technology</li>
+<li>Drill Pipe: Transmits rotation</li>
+<li>Drill Collars: Provide weight</li>
+<li>Drill Bit: Cuts the rock</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 3. Circulating System</h3>
+
+<p class="mb-4">Pumps and treats drilling fluid:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Mud Pumps: Pump the fluid</li>
+<li>Mud Tanks: Storage</li>
+<li>Shale Shaker: Separate cuttings</li>
+<li>Degassers: Remove gases</li>
+<li>Desanders: Remove sand</li>
+</ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 Drilling Fluid Cycle</h2>
+
+<p class="mb-4">Drilling fluid follows a circular path:</p>
+
+<ol class="list-decimal list-inside space-y-2 mb-4">
+<li>Pumped from mud tanks</li>
+<li>Goes down inside drill pipe</li>
+<li>Exits through drill bit nozzles</li>
+<li>Rises in the space between pipe and wellbore wall</li>
+<li>Passes through cleaning equipment</li>
+<li>Returns to tanks</li>
+</ol>
+
+<div class="bg-destructive/10 border-l-4 border-destructive p-4 my-6">
+<p class="text-destructive font-semibold">⚠️ Technical Note:</p>
+<p>Drilling fluid pump rate is critical. Too slow doesn't lift cuttings, too fast may erode the wellbore walls.</p>
+</div>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 Types of Drill Bits</h2>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 1. Roller Cone Bits</h3>
+
+<p class="mb-4">Contain rotating cones with teeth:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Suitable for soft and medium rocks</li>
+<li>Steel or tungsten carbide teeth</li>
+<li>Relatively cheaper</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 2. PDC Bits (Polycrystalline Diamond Compact)</h3>
+
+<p class="mb-4">Use synthetic diamond cutters:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>High efficiency in hard rocks</li>
+<li>Longer life</li>
+<li>Higher drilling speed</li>
+<li>Higher cost</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Section Summary</h3>
+
+<div class="bg-secondary/50 p-4 rounded-lg">
+<p>Rotary drilling relies on three systems: hoisting, rotating, and circulating. The drill bit breaks rock through rotation and pressure, and drilling fluid cleans the well and lifts cuttings. Drill bit selection depends on rock type.</p>
+</div>
+</section>`,
+          keyTerms: [
+            { term: 'Rotary Drilling', definition: 'A drilling method that relies on rotating the drill bit to break up rocks' },
+            { term: 'Drill Bit', definition: 'The tool at the end of the drill string that cuts the rocks' },
+            { term: 'Drilling Fluid', definition: 'The fluid pumped into the well to cool the drill bit and remove cuttings' },
+            { term: 'Top Drive', definition: 'An electric or hydraulic motor that rotates the drill string from above' },
+          ],
+          practiceQuestion: {
+            question: 'What is the function of the Shale Shaker?',
+            options: ['Pump drilling fluid', 'Separate cuttings from drilling fluid', 'Rotate drill bit', 'Store drilling fluid'],
+            correctAnswer: 1,
+          },
+        },
+      },
+    },
+    {
+      day: 3,
+      type: 'learning',
+      content: {
+        ar: {
+          title: 'سوائل الحفر (طين الحفر)',
+          explanation: `<section>
+<h2 class="text-primary text-xl font-bold mb-4">🔷 ما هو سائل الحفر؟</h2>
+
+<p class="mb-4">سائل الحفر (Drilling Fluid)، المعروف أيضاً بطين الحفر (Drilling Mud)، هو سائل خاص يُضخ في البئر أثناء عملية الحفر. يُعتبر من أهم العناصر في نجاح عملية الحفر.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 وظائف سائل الحفر الأساسية</h3>
+
+<ol class="list-decimal list-inside space-y-2 mb-4">
+<li><strong>رفع الفتات:</strong> نقل قطع الصخر المحفورة إلى السطح</li>
+<li><strong>تبريد رأس الحفر:</strong> امتصاص الحرارة الناتجة عن الاحتكاك</li>
+<li><strong>تشحيم سلسلة الحفر:</strong> تقليل الاحتكاك مع جدار البئر</li>
+<li><strong>التحكم في الضغط:</strong> منع تدفق السوائل من المخزون</li>
+<li><strong>دعم جدار البئر:</strong> منع انهيار الجدران</li>
+<li><strong>نقل البيانات:</strong> في أنظمة القياس أثناء الحفر</li>
+</ol>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 أنواع سوائل الحفر</h2>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 1. سوائل مائية القاعدة (Water-Based Mud - WBM)</h3>
+
+<p class="mb-4">الماء هو المكون الأساسي:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>الأكثر استخداماً (90% من الآبار)</li>
+<li>صديقة للبيئة نسبياً</li>
+<li>تكلفة منخفضة</li>
+<li>سهولة التحضير والصيانة</li>
+<li>قد تسبب تفاعلات مع بعض الطبقات الطينية</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 2. سوائل زيتية القاعدة (Oil-Based Mud - OBM)</h3>
+
+<p class="mb-4">الزيت (ديزل أو زيت معدني) هو المكون الأساسي:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>استقرار ممتاز في الطبقات الحساسة للماء</li>
+<li>تشحيم أفضل</li>
+<li>مقاومة لدرجات الحرارة العالية</li>
+<li>تكلفة أعلى</li>
+<li>تتطلب معاملة خاصة للنفايات</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 3. سوائل تركيبية (Synthetic-Based Mud - SBM)</h3>
+
+<p class="mb-4">تستخدم زيوتاً صناعية بديلة:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>أداء مشابه للزيتية</li>
+<li>أقل ضرراً على البيئة</li>
+<li>قابلة للتحلل البيولوجي</li>
+<li>تكلفة عالية جداً</li>
+</ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 خصائص سائل الحفر المهمة</h2>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 1. الكثافة (Density/Mud Weight)</h3>
+
+<p class="mb-4">تُقاس بوحدات مختلفة:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>رطل/غالون (ppg) - الأكثر استخداماً</li>
+<li>غرام/سم³ (g/cc)</li>
+<li>كيلوغرام/متر³ (kg/m³)</li>
+</ul>
+
+<p class="mb-4">يتراوح عادة بين 8.5 - 18 رطل/غالون حسب ضغط المخزون.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 2. اللزوجة (Viscosity)</h3>
+
+<p class="mb-4">قدرة السائل على حمل الفتات:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>لزوجة عالية = حمل أفضل للفتات</li>
+<li>لزوجة منخفضة جداً = سقوط الفتات</li>
+<li>تُقاس بقمع مارش (Marsh Funnel)</li>
+</ul>
+
+<div class="bg-destructive/10 border-l-4 border-destructive p-4 my-6">
+<p class="text-destructive font-semibold">⚠️ تحذير مهم:</p>
+<p>إذا كانت كثافة سائل الحفر أقل من ضغط المخزون، قد يحدث تدفق للنفط أو الغاز إلى البئر (Kick) مما قد يؤدي إلى انفجار (Blowout).</p>
+</div>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 المضافات الشائعة</h2>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li><strong>الباريت (Barite):</strong> زيادة الكثافة</li>
+<li><strong>البنتونايت:</strong> زيادة اللزوجة</li>
+<li><strong>مانعات فقدان السوائل:</strong> منع تسرب السائل للصخور</li>
+<li><strong>مضادات الرغوة:</strong> منع تكون الفقاعات</li>
+<li><strong>مبيدات البكتيريا:</strong> منع نمو الكائنات الدقيقة</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 ملخص القسم</h3>
+
+<div class="bg-secondary/50 p-4 rounded-lg">
+<p>سائل الحفر له وظائف حيوية متعددة: رفع الفتات، تبريد رأس الحفر، والتحكم في الضغط. هناك ثلاثة أنواع رئيسية: مائي، زيتي، وتركيبي. اختيار النوع يعتمد على ظروف البئر والاعتبارات البيئية والتكلفة.</p>
+</div>
+</section>`,
+          keyTerms: [
+            { term: 'سائل الحفر', definition: 'سائل خاص يُضخ في البئر لتبريد رأس الحفر ورفع الفتات والتحكم في الضغط' },
+            { term: 'الباريت', definition: 'معدن كبريتات الباريوم يُستخدم لزيادة كثافة سائل الحفر' },
+            { term: 'كثافة الطين', definition: 'وزن سائل الحفر لكل وحدة حجم، حرجة للتحكم في ضغط البئر' },
+            { term: 'Kick', definition: 'تدفق غير مرغوب للسوائل من المخزون إلى البئر' },
+          ],
+          practiceQuestion: {
+            question: 'ما هي المادة المُستخدمة عادةً لزيادة كثافة سائل الحفر؟',
+            options: ['البنتونايت', 'الباريت', 'الماء', 'الرمل'],
+            correctAnswer: 1,
+          },
+        },
+        en: {
+          title: 'Drilling Fluids (Drilling Mud)',
+          explanation: `<section>
+<h2 class="text-primary text-xl font-bold mb-4">🔷 What is Drilling Fluid?</h2>
+
+<p class="mb-4">Drilling Fluid, also known as Drilling Mud, is a special fluid pumped into the well during drilling operations. It is one of the most important elements in successful drilling operations.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Basic Functions of Drilling Fluid</h3>
+
+<ol class="list-decimal list-inside space-y-2 mb-4">
+<li><strong>Lifting cuttings:</strong> Transporting drilled rock pieces to the surface</li>
+<li><strong>Cooling drill bit:</strong> Absorbing heat generated by friction</li>
+<li><strong>Lubricating drill string:</strong> Reducing friction with wellbore wall</li>
+<li><strong>Pressure control:</strong> Preventing fluid flow from the reservoir</li>
+<li><strong>Supporting wellbore wall:</strong> Preventing wall collapse</li>
+<li><strong>Data transmission:</strong> In measurement while drilling systems</li>
+</ol>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 Types of Drilling Fluids</h2>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 1. Water-Based Mud (WBM)</h3>
+
+<p class="mb-4">Water is the main component:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Most commonly used (90% of wells)</li>
+<li>Relatively environmentally friendly</li>
+<li>Low cost</li>
+<li>Easy to prepare and maintain</li>
+<li>May cause reactions with some clay formations</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 2. Oil-Based Mud (OBM)</h3>
+
+<p class="mb-4">Oil (diesel or mineral oil) is the main component:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Excellent stability in water-sensitive formations</li>
+<li>Better lubrication</li>
+<li>Resistant to high temperatures</li>
+<li>Higher cost</li>
+<li>Requires special waste handling</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 3. Synthetic-Based Mud (SBM)</h3>
+
+<p class="mb-4">Uses alternative synthetic oils:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Performance similar to oil-based</li>
+<li>Less harmful to the environment</li>
+<li>Biodegradable</li>
+<li>Very high cost</li>
+</ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 Important Drilling Fluid Properties</h2>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 1. Density (Mud Weight)</h3>
+
+<p class="mb-4">Measured in different units:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Pounds per gallon (ppg) - most common</li>
+<li>Grams per cubic centimeter (g/cc)</li>
+<li>Kilograms per cubic meter (kg/m³)</li>
+</ul>
+
+<p class="mb-4">Usually ranges between 8.5 - 18 ppg depending on reservoir pressure.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 2. Viscosity</h3>
+
+<p class="mb-4">The fluid's ability to carry cuttings:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>High viscosity = better cutting carrying</li>
+<li>Too low viscosity = cuttings fall</li>
+<li>Measured with Marsh Funnel</li>
+</ul>
+
+<div class="bg-destructive/10 border-l-4 border-destructive p-4 my-6">
+<p class="text-destructive font-semibold">⚠️ Important Warning:</p>
+<p>If drilling fluid density is less than reservoir pressure, oil or gas may flow into the well (Kick) which can lead to a Blowout.</p>
+</div>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 Common Additives</h2>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li><strong>Barite:</strong> Increase density</li>
+<li><strong>Bentonite:</strong> Increase viscosity</li>
+<li><strong>Fluid loss additives:</strong> Prevent fluid loss to rock</li>
+<li><strong>Defoamers:</strong> Prevent bubble formation</li>
+<li><strong>Biocides:</strong> Prevent microorganism growth</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Section Summary</h3>
+
+<div class="bg-secondary/50 p-4 rounded-lg">
+<p>Drilling fluid has multiple vital functions: lifting cuttings, cooling the drill bit, and pressure control. There are three main types: water-based, oil-based, and synthetic. Type selection depends on well conditions, environmental considerations, and cost.</p>
+</div>
+</section>`,
+          keyTerms: [
+            { term: 'Drilling Fluid', definition: 'A special fluid pumped into the well to cool the drill bit, lift cuttings, and control pressure' },
+            { term: 'Barite', definition: 'Barium sulfate mineral used to increase drilling fluid density' },
+            { term: 'Mud Weight', definition: 'Drilling fluid weight per unit volume, critical for well pressure control' },
+            { term: 'Kick', definition: 'Unwanted flow of fluids from the reservoir into the well' },
+          ],
+          practiceQuestion: {
+            question: 'What material is commonly used to increase drilling fluid density?',
+            options: ['Bentonite', 'Barite', 'Water', 'Sand'],
+            correctAnswer: 1,
+          },
+        },
+      },
+    },
+    {
+      day: 4,
+      type: 'learning',
+      content: {
+        ar: {
+          title: 'أنابيب التغليف والإسمنت',
+          explanation: `<section>
+<h2 class="text-primary text-xl font-bold mb-4">🔷 ما هي أنابيب التغليف؟</h2>
+
+<p class="mb-4">أنابيب التغليف (Casing) هي أنابيب فولاذية تُثبت داخل البئر لحماية جدرانه ومنع انهيارها. تُشكل هذه الأنابيب الهيكل الدائم للبئر وتضمن سلامة العمليات.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 وظائف أنابيب التغليف</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>منع انهيار جدران البئر</li>
+<li>عزل طبقات المياه الجوفية من التلوث</li>
+<li>فصل مناطق الضغط المختلفة</li>
+<li>توفير مسار آمن لسوائل الإنتاج</li>
+<li>تثبيت معدات التحكم في البئر</li>
+</ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 أنواع أنابيب التغليف</h2>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 1. أنبوب الموجه (Conductor Casing)</h3>
+
+<p class="mb-4">أول أنبوب يُثبت، عادة بقطر 30-36 بوصة:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>يُثبت في أول 30-100 متر</li>
+<li>يحمي الطبقات السطحية الرخوة</li>
+<li>يوفر أساساً لمعدات الحفر</li>
+<li>قد يُدق بدون حفر في بعض الأحيان</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 2. أنبوب السطح (Surface Casing)</h3>
+
+<p class="mb-4">يحمي طبقات المياه الجوفية، قطر 13⅜ - 20 بوصة:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>يمتد عادة 300-600 متر</li>
+<li>يعزل المياه الجوفية تماماً</li>
+<li>يُثبت عليه صمام التحكم في الانفجارات (BOP)</li>
+<li>يجب إسمنته بالكامل للسطح</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 3. الأنبوب الوسيط (Intermediate Casing)</h3>
+
+<p class="mb-4">يُستخدم في الآبار العميقة، قطر 9⅝ - 13⅜ بوصة:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>يعزل مناطق الضغط الشاذ</li>
+<li>يحمي من التكوينات غير المستقرة</li>
+<li>قد يُثبت أكثر من أنبوب وسيط</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 4. أنبوب الإنتاج (Production Casing)</h3>
+
+<p class="mb-4">يصل إلى منطقة المخزون، قطر 5½ - 9⅝ بوصة:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>يعزل المخزون عن باقي الطبقات</li>
+<li>يُثقب للسماح بدخول النفط</li>
+<li>يتحمل ضغوط الإنتاج</li>
+</ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 عملية الإسمنت</h2>
+
+<p class="mb-4">الإسمنت (Cementing) يُضخ في الفراغ بين الأنابيب وجدار البئر لتثبيتها:</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 خطوات عملية الإسمنت</h3>
+
+<ol class="list-decimal list-inside space-y-2 mb-4">
+<li>إنزال الأنابيب في البئر</li>
+<li>ضخ سائل تنظيف (Spacer)</li>
+<li>ضخ ملاط الإسمنت</li>
+<li>ضخ سائل إزاحة خلف الإسمنت</li>
+<li>انتظار تصلب الإسمنت (12-24 ساعة)</li>
+<li>اختبار جودة الإسمنت</li>
+</ol>
+
+<div class="bg-destructive/10 border-l-4 border-destructive p-4 my-6">
+<p class="text-destructive font-semibold">⚠️ أهمية حرجة:</p>
+<p>فشل عملية الإسمنت قد يؤدي إلى تسرب الغاز بين الطبقات، تلوث المياه الجوفية، أو حتى انفجار البئر. لذلك تُجرى اختبارات صارمة بعد كل عملية إسمنت.</p>
+</div>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 أنواع الإسمنت البترولي</h2>
+
+<p class="mb-4">يُصنف الإسمنت حسب معهد البترول الأمريكي (API) إلى فئات:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li><strong>فئة A:</strong> للاستخدام السطحي حتى 1800م</li>
+<li><strong>فئة G:</strong> الأكثر استخداماً، متعدد الأغراض</li>
+<li><strong>فئة H:</strong> للأعماق الكبيرة ودرجات الحرارة العالية</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 ملخص القسم</h3>
+
+<div class="bg-secondary/50 p-4 rounded-lg">
+<p>أنابيب التغليف تحمي البئر وتعزل الطبقات المختلفة. تشمل: الموجه، السطحي، الوسيط، والإنتاج. الإسمنت يثبت الأنابيب ويمنع التسربات. جودة الإسمنت حرجة لسلامة البئر على المدى الطويل.</p>
+</div>
+</section>`,
+          keyTerms: [
+            { term: 'أنبوب التغليف', definition: 'أنابيب فولاذية تُثبت داخل البئر لحماية جدرانه وعزل الطبقات' },
+            { term: 'أنبوب السطح', definition: 'الأنبوب المسؤول عن حماية طبقات المياه الجوفية' },
+            { term: 'الإسمنت البترولي', definition: 'إسمنت خاص يُضخ لتثبيت أنابيب التغليف في البئر' },
+            { term: 'BOP', definition: 'صمام التحكم في الانفجارات - جهاز أمان حرج يُثبت على أنبوب السطح' },
+          ],
+          practiceQuestion: {
+            question: 'أي أنبوب تغليف مسؤول بشكل رئيسي عن حماية المياه الجوفية؟',
+            options: ['أنبوب الموجه', 'أنبوب السطح', 'الأنبوب الوسيط', 'أنبوب الإنتاج'],
+            correctAnswer: 1,
+          },
+        },
+        en: {
+          title: 'Casing and Cementing',
+          explanation: `<section>
+<h2 class="text-primary text-xl font-bold mb-4">🔷 What is Casing?</h2>
+
+<p class="mb-4">Casing consists of steel pipes installed inside the well to protect its walls and prevent collapse. These pipes form the permanent structure of the well and ensure operational safety.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Functions of Casing</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Prevent wellbore collapse</li>
+<li>Isolate groundwater from contamination</li>
+<li>Separate different pressure zones</li>
+<li>Provide safe path for production fluids</li>
+<li>Anchor well control equipment</li>
+</ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 Types of Casing</h2>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 1. Conductor Casing</h3>
+
+<p class="mb-4">First pipe installed, usually 30-36 inches diameter:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Set in first 30-100 meters</li>
+<li>Protects soft surface formations</li>
+<li>Provides foundation for drilling equipment</li>
+<li>May be driven without drilling sometimes</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 2. Surface Casing</h3>
+
+<p class="mb-4">Protects groundwater, 13⅜ - 20 inches diameter:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Usually extends 300-600 meters</li>
+<li>Completely isolates groundwater</li>
+<li>BOP is installed on it</li>
+<li>Must be cemented fully to surface</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 3. Intermediate Casing</h3>
+
+<p class="mb-4">Used in deep wells, 9⅝ - 13⅜ inches diameter:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Isolates abnormal pressure zones</li>
+<li>Protects from unstable formations</li>
+<li>More than one may be set</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 4. Production Casing</h3>
+
+<p class="mb-4">Reaches the reservoir zone, 5½ - 9⅝ inches diameter:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Isolates reservoir from other zones</li>
+<li>Perforated to allow oil entry</li>
+<li>Withstands production pressures</li>
+</ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 Cementing Process</h2>
+
+<p class="mb-4">Cement is pumped into the annulus between casing and wellbore to secure it:</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Cementing Steps</h3>
+
+<ol class="list-decimal list-inside space-y-2 mb-4">
+<li>Run casing into well</li>
+<li>Pump spacer fluid</li>
+<li>Pump cement slurry</li>
+<li>Pump displacement fluid behind cement</li>
+<li>Wait for cement to set (12-24 hours)</li>
+<li>Test cement quality</li>
+</ol>
+
+<div class="bg-destructive/10 border-l-4 border-destructive p-4 my-6">
+<p class="text-destructive font-semibold">⚠️ Critical Importance:</p>
+<p>Cement job failure may lead to gas migration between zones, groundwater contamination, or even well blowout. Therefore, strict tests are conducted after every cement job.</p>
+</div>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 Types of Petroleum Cement</h2>
+
+<p class="mb-4">Cement is classified by the American Petroleum Institute (API):</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li><strong>Class A:</strong> For surface use up to 1800m</li>
+<li><strong>Class G:</strong> Most common, multipurpose</li>
+<li><strong>Class H:</strong> For deep wells and high temperatures</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Section Summary</h3>
+
+<div class="bg-secondary/50 p-4 rounded-lg">
+<p>Casing protects the well and isolates different zones. Types include: conductor, surface, intermediate, and production. Cement secures casing and prevents leaks. Cement quality is critical for long-term well integrity.</p>
+</div>
+</section>`,
+          keyTerms: [
+            { term: 'Casing', definition: 'Steel pipes installed inside the well to protect walls and isolate zones' },
+            { term: 'Surface Casing', definition: 'The casing responsible for protecting groundwater zones' },
+            { term: 'Petroleum Cement', definition: 'Special cement pumped to secure casing in the well' },
+            { term: 'BOP', definition: 'Blowout Preventer - critical safety device installed on surface casing' },
+          ],
+          practiceQuestion: {
+            question: 'Which casing is primarily responsible for protecting groundwater?',
+            options: ['Conductor Casing', 'Surface Casing', 'Intermediate Casing', 'Production Casing'],
+            correctAnswer: 1,
+          },
+        },
+      },
+    },
+    {
+      day: 5,
+      type: 'learning',
+      content: {
+        ar: {
+          title: 'التحكم في ضغط البئر والسلامة',
+          explanation: `<section>
+<h2 class="text-primary text-xl font-bold mb-4">🔷 أهمية التحكم في الضغط</h2>
+
+<p class="mb-4">التحكم في ضغط البئر هو الجانب الأكثر أهمية في سلامة عمليات الحفر. الفشل في التحكم بالضغط قد يؤدي إلى كوارث مدمرة مثل الانفجارات والحرائق وفقدان الأرواح.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 مفهوم التوازن الهيدروستاتيكي</h3>
+
+<p class="mb-4">يجب أن يكون ضغط عمود سائل الحفر كافياً لمقاومة ضغط السوائل في المخزون:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>ضغط سائل الحفر > ضغط المخزون = البئر تحت السيطرة</li>
+<li>ضغط سائل الحفر < ضغط المخزون = خطر تدفق (Kick)</li>
+<li>ضغط سائل الحفر > > ضغط المخزون = خطر فقدان الدوران</li>
+</ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 أنواع مشاكل الضغط</h2>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 1. التدفق (Kick)</h3>
+
+<p class="mb-4">دخول غير مرغوب لسوائل المخزون (نفط، غاز، ماء) إلى البئر:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li><strong>الأسباب:</strong></li>
+<li>كثافة طين غير كافية</li>
+<li>عدم ملء البئر بالكامل أثناء الرحلات</li>
+<li>فقدان الدوران في طبقة مسامية</li>
+<li>سحب سريع لأنابيب الحفر</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 علامات التدفق (Kick Indicators)</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>زيادة حجم حوض الطين</li>
+<li>زيادة معدل تدفق الطين العائد</li>
+<li>انخفاض ضغط الضخ</li>
+<li>زيادة سرعة الحفر فجأة</li>
+<li>ظهور غاز في الطين</li>
+</ul>
+
+<div class="bg-destructive/10 border-l-4 border-destructive p-4 my-6">
+<p class="text-destructive font-semibold">⚠️ تحذير خطير:</p>
+<p>إذا لم يُعالج التدفق فوراً، قد يتطور إلى انفجار (Blowout) وهو خروج غير مُتحكم به للنفط أو الغاز من البئر، مما قد يسبب حرائق وخسائر بشرية ومادية هائلة.</p>
+</div>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 معدات التحكم في الانفجارات (BOP)</h2>
+
+<p class="mb-4">صمام التحكم في الانفجارات (Blowout Preventer) هو خط الدفاع الأخير:</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 أنواع صمامات BOP</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li><strong>Annular BOP:</strong> يغلق حول أي شيء (أنابيب، أسلاك، أو حتى فارغ)</li>
+<li><strong>Pipe Rams:</strong> يغلق حول أنابيب بقطر محدد</li>
+<li><strong>Blind Rams:</strong> يغلق البئر الفارغ تماماً</li>
+<li><strong>Shear Rams:</strong> يقطع الأنابيب ويغلق البئر</li>
+</ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 إجراءات قتل البئر (Well Kill)</h2>
+
+<p class="mb-4">عند حدوث تدفق، يجب إيقافه وإعادة السيطرة على البئر:</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 طريقة المهندس (Driller's Method)</h3>
+
+<ol class="list-decimal list-inside space-y-2 mb-4">
+<li>إغلاق BOP فوراً</li>
+<li>تسجيل الضغوط (SIDPP, SICP)</li>
+<li>ضخ الطين الأصلي لإخراج التدفق</li>
+<li>تحضير طين بكثافة أعلى</li>
+<li>ضخ الطين الثقيل لقتل البئر</li>
+</ol>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 طريقة الانتظار والوزن (Wait and Weight)</h3>
+
+<ol class="list-decimal list-inside space-y-2 mb-4">
+<li>إغلاق BOP فوراً</li>
+<li>تحضير طين بالكثافة المطلوبة</li>
+<li>ضخ الطين الثقيل في دورة واحدة</li>
+</ol>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 ثقافة السلامة في الحفر</h2>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>تدريبات منتظمة على التعامل مع الطوارئ</li>
+<li>فحص معدات السلامة يومياً</li>
+<li>صلاحيات إيقاف العمل لأي شخص يلاحظ خطراً</li>
+<li>تقارير الحوادث الوشيكة (Near Miss Reports)</li>
+<li>اجتماعات السلامة اليومية</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 ملخص القسم</h3>
+
+<div class="bg-secondary/50 p-4 rounded-lg">
+<p>التحكم في ضغط البئر أساسي للسلامة. التدفق (Kick) هو دخول سوائل المخزون للبئر ويجب معالجته فوراً لمنع الانفجار. معدات BOP هي خط الدفاع الأخير، وطرق قتل البئر تُستخدم لإعادة السيطرة.</p>
+</div>
+</section>`,
+          keyTerms: [
+            { term: 'التدفق (Kick)', definition: 'دخول غير مرغوب لسوائل المخزون إلى البئر بسبب نقص الضغط الهيدروستاتيكي' },
+            { term: 'الانفجار (Blowout)', definition: 'خروج غير متحكم به للنفط أو الغاز من البئر' },
+            { term: 'BOP', definition: 'صمام التحكم في الانفجارات - معدة أمان لإغلاق البئر في حالات الطوارئ' },
+            { term: 'قتل البئر', definition: 'إجراء إعادة السيطرة على البئر بعد حدوث تدفق' },
+          ],
+          practiceQuestion: {
+            question: 'ما هو أول إجراء يجب اتخاذه عند اكتشاف تدفق (Kick)؟',
+            options: ['زيادة سرعة الضخ', 'إغلاق BOP', 'إخلاء الموقع', 'الاتصال بالمكتب'],
+            correctAnswer: 1,
+          },
+        },
+        en: {
+          title: 'Well Pressure Control and Safety',
+          explanation: `<section>
+<h2 class="text-primary text-xl font-bold mb-4">🔷 Importance of Pressure Control</h2>
+
+<p class="mb-4">Well pressure control is the most critical aspect of drilling operations safety. Failure to control pressure can lead to devastating disasters such as blowouts, fires, and loss of life.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Hydrostatic Balance Concept</h3>
+
+<p class="mb-4">Drilling fluid column pressure must be sufficient to resist reservoir fluid pressure:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Drilling fluid pressure > Reservoir pressure = Well under control</li>
+<li>Drilling fluid pressure < Reservoir pressure = Kick risk</li>
+<li>Drilling fluid pressure >> Reservoir pressure = Lost circulation risk</li>
+</ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 Types of Pressure Problems</h2>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 1. Kick</h3>
+
+<p class="mb-4">Unwanted entry of reservoir fluids (oil, gas, water) into the well:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li><strong>Causes:</strong></li>
+<li>Insufficient mud weight</li>
+<li>Not keeping well full during trips</li>
+<li>Lost circulation in porous zone</li>
+<li>Swabbing (rapid pipe pull)</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Kick Indicators</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Increase in mud pit volume</li>
+<li>Increase in return flow rate</li>
+<li>Decrease in pump pressure</li>
+<li>Sudden increase in drilling rate</li>
+<li>Gas in the mud</li>
+</ul>
+
+<div class="bg-destructive/10 border-l-4 border-destructive p-4 my-6">
+<p class="text-destructive font-semibold">⚠️ Serious Warning:</p>
+<p>If a kick is not treated immediately, it may develop into a Blowout - an uncontrolled release of oil or gas from the well, which can cause fires and massive human and material losses.</p>
+</div>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 Blowout Prevention Equipment (BOP)</h2>
+
+<p class="mb-4">The Blowout Preventer is the last line of defense:</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Types of BOP</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li><strong>Annular BOP:</strong> Closes around anything (pipe, wire, or empty)</li>
+<li><strong>Pipe Rams:</strong> Closes around specific pipe diameter</li>
+<li><strong>Blind Rams:</strong> Closes completely empty well</li>
+<li><strong>Shear Rams:</strong> Cuts pipe and seals well</li>
+</ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 Well Kill Procedures</h2>
+
+<p class="mb-4">When a kick occurs, it must be stopped and well control regained:</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Driller's Method</h3>
+
+<ol class="list-decimal list-inside space-y-2 mb-4">
+<li>Close BOP immediately</li>
+<li>Record pressures (SIDPP, SICP)</li>
+<li>Pump original mud to circulate out kick</li>
+<li>Prepare heavier mud</li>
+<li>Pump heavy mud to kill well</li>
+</ol>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Wait and Weight Method</h3>
+
+<ol class="list-decimal list-inside space-y-2 mb-4">
+<li>Close BOP immediately</li>
+<li>Prepare mud at required weight</li>
+<li>Pump heavy mud in one circulation</li>
+</ol>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 Safety Culture in Drilling</h2>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Regular emergency response drills</li>
+<li>Daily safety equipment inspection</li>
+<li>Stop work authority for anyone noticing hazards</li>
+<li>Near Miss Reports</li>
+<li>Daily safety meetings</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Section Summary</h3>
+
+<div class="bg-secondary/50 p-4 rounded-lg">
+<p>Well pressure control is fundamental to safety. A Kick is reservoir fluid entry into the well and must be treated immediately to prevent blowout. BOP equipment is the last line of defense, and well kill methods are used to regain control.</p>
+</div>
+</section>`,
+          keyTerms: [
+            { term: 'Kick', definition: 'Unwanted entry of reservoir fluids into the well due to insufficient hydrostatic pressure' },
+            { term: 'Blowout', definition: 'Uncontrolled release of oil or gas from the well' },
+            { term: 'BOP', definition: 'Blowout Preventer - safety equipment to close the well in emergencies' },
+            { term: 'Well Kill', definition: 'Procedure to regain control of the well after a kick' },
+          ],
+          practiceQuestion: {
+            question: 'What is the first action to take when detecting a Kick?',
+            options: ['Increase pump speed', 'Close BOP', 'Evacuate location', 'Call the office'],
+            correctAnswer: 1,
+          },
+        },
+      },
+    },
+    {
+      day: 6,
+      type: 'quiz',
+      content: {
+        en: { title: 'Weekly Quiz', explanation: 'Test your knowledge of drilling basics.', keyTerms: [] },
+        ar: { title: 'اختبار الأسبوع', explanation: 'اختبر معرفتك بأساسيات الحفر.', keyTerms: [] },
+      },
+      quiz: {
+        en: [
+          { question: 'What is the purpose of exploration wells?', options: ['Production', 'Search for new oil', 'Water injection', 'Testing equipment'], correctAnswer: 1 },
+          { question: 'What are the three main operations in rotary drilling?', options: ['Mixing, heating, cooling', 'Rotation, pressure, pumping', 'Lifting, lowering, stopping', 'Cutting, grinding, polishing'], correctAnswer: 1 },
+          { question: 'What is the function of barite in drilling fluid?', options: ['Increase viscosity', 'Increase density', 'Cool the bit', 'Lubricate pipes'], correctAnswer: 1 },
+          { question: 'Which casing protects groundwater?', options: ['Conductor', 'Surface', 'Intermediate', 'Production'], correctAnswer: 1 },
+          { question: 'What is a Kick in drilling?', options: ['Equipment failure', 'Reservoir fluid entering well', 'Pipe breaking', 'Mud loss'], correctAnswer: 1 },
+          { question: 'What does BOP stand for?', options: ['Basic Operating Procedure', 'Blowout Preventer', 'Bit Optimization Program', 'Bore Observation Point'], correctAnswer: 1 },
+          { question: 'What is the most common type of drilling fluid?', options: ['Oil-based', 'Water-based', 'Synthetic', 'Air'], correctAnswer: 1 },
+          { question: 'What type of bit uses synthetic diamond cutters?', options: ['Roller cone', 'PDC', 'Diamond', 'Tricone'], correctAnswer: 1 },
+          { question: 'What is the first action when a kick is detected?', options: ['Increase pump rate', 'Close BOP', 'Pull out of hole', 'Add barite'], correctAnswer: 1 },
+          { question: 'What is the function of cement in wells?', options: ['Cool the bit', 'Lubricate casing', 'Secure casing and prevent leaks', 'Clean the well'], correctAnswer: 2 },
+        ],
+        ar: [
+          { question: 'ما هو الغرض من آبار الاستكشاف؟', options: ['الإنتاج', 'البحث عن نفط جديد', 'حقن المياه', 'اختبار المعدات'], correctAnswer: 1 },
+          { question: 'ما هي العمليات الثلاث الرئيسية في الحفر الدوراني؟', options: ['الخلط والتسخين والتبريد', 'الدوران والضغط والضخ', 'الرفع والإنزال والتوقف', 'القطع والطحن والتلميع'], correctAnswer: 1 },
+          { question: 'ما وظيفة الباريت في سائل الحفر؟', options: ['زيادة اللزوجة', 'زيادة الكثافة', 'تبريد رأس الحفر', 'تشحيم الأنابيب'], correctAnswer: 1 },
+          { question: 'أي أنبوب تغليف يحمي المياه الجوفية؟', options: ['الموجه', 'السطحي', 'الوسيط', 'الإنتاج'], correctAnswer: 1 },
+          { question: 'ما هو التدفق (Kick) في الحفر؟', options: ['عطل في المعدات', 'دخول سوائل المخزون للبئر', 'كسر الأنابيب', 'فقدان الطين'], correctAnswer: 1 },
+          { question: 'ماذا يعني BOP؟', options: ['إجراء التشغيل الأساسي', 'صمام منع الانفجار', 'برنامج تحسين رأس الحفر', 'نقطة مراقبة الثقب'], correctAnswer: 1 },
+          { question: 'ما هو النوع الأكثر شيوعاً من سوائل الحفر؟', options: ['زيتي القاعدة', 'مائي القاعدة', 'تركيبي', 'هوائي'], correctAnswer: 1 },
+          { question: 'أي نوع من رؤوس الحفر يستخدم قطع الماس الصناعي؟', options: ['البكرات', 'PDC', 'الماسي', 'ثلاثي المخاريط'], correctAnswer: 1 },
+          { question: 'ما هو أول إجراء عند اكتشاف تدفق؟', options: ['زيادة معدل الضخ', 'إغلاق BOP', 'سحب الأنابيب', 'إضافة الباريت'], correctAnswer: 1 },
+          { question: 'ما وظيفة الإسمنت في الآبار؟', options: ['تبريد رأس الحفر', 'تشحيم الأنابيب', 'تثبيت الأنابيب ومنع التسرب', 'تنظيف البئر'], correctAnswer: 2 },
+        ],
+      },
+    },
+    {
+      day: 7,
+      type: 'project',
+      content: {
+        en: { title: 'Mini Project', explanation: 'Apply your drilling knowledge.', keyTerms: [] },
+        ar: { title: 'مشروع صغير', explanation: 'طبّق معرفتك بالحفر.', keyTerms: [] },
+      },
+      project: {
+        en: {
+          title: 'Drilling Components Diagram',
+          description: 'Create a labeled diagram showing the main components of a rotary drilling rig.',
+          instructions: [
+            'Draw or describe a drilling rig showing at least 10 major components',
+            'Include the hoisting system, rotating system, and circulating system',
+            'Label each component clearly',
+            'Briefly explain the function of each component',
+            'You can draw by hand and upload a photo, or describe in detail',
+          ],
+          submissionType: 'both',
+        },
+        ar: {
+          title: 'رسم مكونات جهاز الحفر',
+          description: 'أنشئ رسماً توضيحياً يُظهر المكونات الرئيسية لجهاز الحفر الدوراني.',
+          instructions: [
+            'ارسم أو صف جهاز حفر يُظهر 10 مكونات رئيسية على الأقل',
+            'تضمين نظام الرفع ونظام الدوران ونظام دوران السوائل',
+            'ضع تسمية واضحة لكل مكون',
+            'اشرح وظيفة كل مكون بإيجاز',
+            'يمكنك الرسم يدوياً ورفع صورة، أو الوصف بالتفصيل',
+          ],
+          submissionType: 'both',
+        },
+      },
+    },
+  ],
+};
+
+// Remaining lessons with similar structure...
+// For brevity, I'll create simplified versions
+
+const wellTypesLesson: WeeklyLesson = {
+  lessonId: 'wells',
+  days: [
+    { day: 1, type: 'learning', content: { ar: { title: 'تصنيف الآبار النفطية', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 مقدمة عن أنواع الآبار</h2><p class="mb-4">تُصنف الآبار النفطية بطرق مختلفة حسب مسارها وموقعها والغرض منها. فهم هذه التصنيفات ضروري لاختيار التقنية المناسبة لكل حالة.</p><h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 التصنيف حسب المسار</h3><ul class="list-disc list-inside space-y-2 mb-4"><li>الآبار العمودية (Vertical Wells)</li><li>الآبار المائلة (Directional Wells)</li><li>الآبار الأفقية (Horizontal Wells)</li><li>الآبار متعددة الفروع (Multilateral Wells)</li></ul></section>', keyTerms: [{ term: 'البئر العمودي', definition: 'بئر يُحفر بشكل مستقيم نحو الأسفل' }], practiceQuestion: { question: 'أي نوع من الآبار يُحفر بزاوية مع الرأسي؟', options: ['عمودي', 'مائل', 'حقن', 'سطحي'], correctAnswer: 1 } }, en: { title: 'Classification of Oil Wells', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 Introduction to Well Types</h2><p class="mb-4">Oil wells are classified in different ways based on their path, location, and purpose. Understanding these classifications is essential for selecting the appropriate technique for each case.</p><h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Classification by Path</h3><ul class="list-disc list-inside space-y-2 mb-4"><li>Vertical Wells</li><li>Directional Wells</li><li>Horizontal Wells</li><li>Multilateral Wells</li></ul></section>', keyTerms: [{ term: 'Vertical Well', definition: 'A well drilled straight down' }], practiceQuestion: { question: 'Which type of well is drilled at an angle to vertical?', options: ['Vertical', 'Directional', 'Injection', 'Surface'], correctAnswer: 1 } } } },
+    { day: 2, type: 'learning', content: { ar: { title: 'الآبار العمودية والمائلة', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 الآبار العمودية</h2><p class="mb-4">الآبار العمودية هي أبسط أنواع الآبار وأقدمها. تُحفر بشكل مستقيم من السطح نحو المخزون.</p></section>', keyTerms: [], practiceQuestion: { question: 'ما ميزة الآبار العمودية الرئيسية؟', options: ['أسرع حفراً', 'أقل تكلفة', 'أكثر إنتاجاً', 'أعمق'], correctAnswer: 1 } }, en: { title: 'Vertical and Directional Wells', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 Vertical Wells</h2><p class="mb-4">Vertical wells are the simplest and oldest type of wells. They are drilled straight down from the surface to the reservoir.</p></section>', keyTerms: [], practiceQuestion: { question: 'What is the main advantage of vertical wells?', options: ['Faster drilling', 'Lower cost', 'Higher production', 'Deeper'], correctAnswer: 1 } } } },
+    { day: 3, type: 'learning', content: { ar: { title: 'الآبار الأفقية', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 تقنية الحفر الأفقي</h2><p class="mb-4">الآبار الأفقية تبدأ عمودياً ثم تنحني تدريجياً حتى تصبح أفقية داخل المخزون.</p></section>', keyTerms: [], practiceQuestion: { question: 'متى تُستخدم الآبار الأفقية؟', options: ['المخزونات الرقيقة', 'المخزونات العميقة جداً', 'المخزونات السطحية', 'آبار الحقن فقط'], correctAnswer: 0 } }, en: { title: 'Horizontal Wells', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 Horizontal Drilling Technology</h2><p class="mb-4">Horizontal wells start vertically then gradually curve until they become horizontal within the reservoir.</p></section>', keyTerms: [], practiceQuestion: { question: 'When are horizontal wells used?', options: ['Thin reservoirs', 'Very deep reservoirs', 'Surface reservoirs', 'Injection wells only'], correctAnswer: 0 } } } },
+    { day: 4, type: 'learning', content: { ar: { title: 'الآبار البحرية', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 الحفر البحري</h2><p class="mb-4">الحفر في البحر يتطلب منصات خاصة وتقنيات متقدمة للتعامل مع تحديات البيئة البحرية.</p></section>', keyTerms: [], practiceQuestion: { question: 'ما التحدي الرئيسي في الحفر البحري؟', options: ['التكلفة العالية', 'البعد عن الشاطئ', 'عمق المياه والظروف الجوية', 'نوع الصخور'], correctAnswer: 2 } }, en: { title: 'Offshore Wells', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 Offshore Drilling</h2><p class="mb-4">Offshore drilling requires special platforms and advanced techniques to handle marine environment challenges.</p></section>', keyTerms: [], practiceQuestion: { question: 'What is the main challenge in offshore drilling?', options: ['High cost', 'Distance from shore', 'Water depth and weather conditions', 'Rock type'], correctAnswer: 2 } } } },
+    { day: 5, type: 'learning', content: { ar: { title: 'اختيار نوع البئر المناسب', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 عوامل اختيار نوع البئر</h2><p class="mb-4">يعتمد اختيار نوع البئر على عدة عوامل تقنية واقتصادية وبيئية.</p></section>', keyTerms: [], practiceQuestion: { question: 'أي عامل ليس مهماً في اختيار نوع البئر؟', options: ['شكل المخزون', 'التكلفة', 'لون النفط', 'البيئة'], correctAnswer: 2 } }, en: { title: 'Selecting the Right Well Type', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 Factors in Well Type Selection</h2><p class="mb-4">Well type selection depends on several technical, economic, and environmental factors.</p></section>', keyTerms: [], practiceQuestion: { question: 'Which factor is NOT important in well type selection?', options: ['Reservoir shape', 'Cost', 'Oil color', 'Environment'], correctAnswer: 2 } } } },
+    { day: 6, type: 'quiz', content: { en: { title: 'Weekly Quiz', explanation: 'Test your knowledge of well types.', keyTerms: [] }, ar: { title: 'اختبار الأسبوع', explanation: 'اختبر معرفتك بأنواع الآبار.', keyTerms: [] } }, quiz: { en: [{ question: 'What is a directional well?', options: ['Drilled straight down', 'Drilled at an angle', 'Only for water', 'Surface well'], correctAnswer: 1 }, { question: 'Why use horizontal wells?', options: ['Cheaper', 'More reservoir contact', 'Easier to drill', 'Shallower'], correctAnswer: 1 }, { question: 'What platform type is used in deep water?', options: ['Jack-up', 'Semi-submersible or drillship', 'Land rig', 'Truck-mounted'], correctAnswer: 1 }, { question: 'What is a multilateral well?', options: ['Well with multiple branches', 'Very deep well', 'Horizontal only', 'Injection well'], correctAnswer: 0 }, { question: 'Main advantage of directional drilling?', options: ['Lower cost', 'Reach targets not directly below', 'Faster', 'Simpler'], correctAnswer: 1 }, { question: 'Where are jack-up rigs used?', options: ['Deep water', 'Shallow water', 'Land', 'Arctic'], correctAnswer: 1 }, { question: 'What is extended reach drilling?', options: ['Very short wells', 'Wells reaching far horizontally', 'Surface wells', 'Vertical wells'], correctAnswer: 1 }, { question: 'Why choose vertical wells?', options: ['Higher production', 'Simpler and cheaper for suitable reservoirs', 'Reach more area', 'Better for thin reservoirs'], correctAnswer: 1 }, { question: 'What limits offshore drilling depth?', options: ['Water depth and technology', 'Oil quality', 'Distance from port', 'Weather only'], correctAnswer: 0 }, { question: 'What is a development well?', options: ['Exploration well', 'Well drilled in proven area for production', 'Test well', 'Abandoned well'], correctAnswer: 1 }], ar: [{ question: 'ما هو البئر المائل؟', options: ['يُحفر عمودياً', 'يُحفر بزاوية', 'للماء فقط', 'بئر سطحي'], correctAnswer: 1 }, { question: 'لماذا تُستخدم الآبار الأفقية؟', options: ['أرخص', 'تماس أكبر مع المخزون', 'أسهل حفراً', 'أقل عمقاً'], correctAnswer: 1 }, { question: 'أي منصة تُستخدم في المياه العميقة؟', options: ['جاك أب', 'شبه غاطسة أو سفينة حفر', 'جهاز بري', 'شاحنة'], correctAnswer: 1 }, { question: 'ما هو البئر متعدد الفروع؟', options: ['بئر بعدة فروع', 'بئر عميق جداً', 'أفقي فقط', 'بئر حقن'], correctAnswer: 0 }, { question: 'الميزة الرئيسية للحفر المائل؟', options: ['تكلفة أقل', 'الوصول لأهداف ليست تحت الموقع', 'أسرع', 'أبسط'], correctAnswer: 1 }, { question: 'أين تُستخدم منصات جاك أب؟', options: ['المياه العميقة', 'المياه الضحلة', 'البر', 'القطب الشمالي'], correctAnswer: 1 }, { question: 'ما هو الحفر الممتد؟', options: ['آبار قصيرة جداً', 'آبار تمتد أفقياً بعيداً', 'آبار سطحية', 'آبار عمودية'], correctAnswer: 1 }, { question: 'لماذا نختار الآبار العمودية؟', options: ['إنتاج أعلى', 'أبسط وأرخص للمخزونات المناسبة', 'تغطي مساحة أكبر', 'أفضل للمخزونات الرقيقة'], correctAnswer: 1 }, { question: 'ما يحد من عمق الحفر البحري؟', options: ['عمق المياه والتقنية', 'جودة النفط', 'البعد عن الميناء', 'الطقس فقط'], correctAnswer: 0 }, { question: 'ما هو بئر التطوير؟', options: ['بئر استكشاف', 'بئر يُحفر في منطقة مثبتة للإنتاج', 'بئر اختبار', 'بئر مهجور'], correctAnswer: 1 }] } },
+    { day: 7, type: 'project', content: { en: { title: 'Mini Project', explanation: 'Compare well types.', keyTerms: [] }, ar: { title: 'مشروع صغير', explanation: 'قارن بين أنواع الآبار.', keyTerms: [] } }, project: { en: { title: 'Well Type Comparison', description: 'Create a comparison table of different well types.', instructions: ['Compare vertical, directional, and horizontal wells', 'Include advantages and disadvantages of each', 'Mention suitable applications for each type', 'Add cost considerations', 'Include a recommendation for when to use each type'], submissionType: 'text' }, ar: { title: 'مقارنة أنواع الآبار', description: 'أنشئ جدول مقارنة لأنواع الآبار المختلفة.', instructions: ['قارن بين الآبار العمودية والمائلة والأفقية', 'اذكر مميزات وعيوب كل نوع', 'اذكر التطبيقات المناسبة لكل نوع', 'أضف اعتبارات التكلفة', 'قدم توصية لمتى يُستخدم كل نوع'], submissionType: 'text' } } }
+  ]
+};
+
+const rigOverviewLesson: WeeklyLesson = {
+  lessonId: 'rig',
+  days: [
+    { day: 1, type: 'learning', content: { ar: { title: 'مكونات جهاز الحفر', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 نظرة عامة على جهاز الحفر</h2><p class="mb-4">جهاز الحفر هو مجموعة متكاملة من المعدات التي تعمل معاً لإنشاء البئر النفطي.</p></section>', keyTerms: [], practiceQuestion: { question: 'ما هو المكون الذي يوفر الطاقة لجهاز الحفر؟', options: ['البرج', 'المولدات', 'المضخات', 'الخزانات'], correctAnswer: 1 } }, en: { title: 'Drilling Rig Components', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 Drilling Rig Overview</h2><p class="mb-4">A drilling rig is an integrated set of equipment that works together to create an oil well.</p></section>', keyTerms: [], practiceQuestion: { question: 'What component provides power to the drilling rig?', options: ['Derrick', 'Generators', 'Pumps', 'Tanks'], correctAnswer: 1 } } } },
+    { day: 2, type: 'learning', content: { ar: { title: 'أنظمة الرفع والدوران', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 نظام الرفع</h2><p class="mb-4">نظام الرفع مسؤول عن رفع وإنزال سلسلة الحفر والأنابيب.</p></section>', keyTerms: [], practiceQuestion: { question: 'ما وظيفة الرافعة (Drawworks)؟', options: ['ضخ الطين', 'رفع الأنابيب', 'دوران رأس الحفر', 'تخزين الطين'], correctAnswer: 1 } }, en: { title: 'Hoisting and Rotating Systems', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 Hoisting System</h2><p class="mb-4">The hoisting system is responsible for raising and lowering the drill string and pipes.</p></section>', keyTerms: [], practiceQuestion: { question: 'What is the function of the Drawworks?', options: ['Pump mud', 'Lift pipes', 'Rotate drill bit', 'Store mud'], correctAnswer: 1 } } } },
+    { day: 3, type: 'learning', content: { ar: { title: 'نظام دوران السوائل', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 نظام الدوران</h2><p class="mb-4">هذا النظام يضخ ويعالج سائل الحفر في دورة مستمرة.</p></section>', keyTerms: [], practiceQuestion: { question: 'أين يتم فصل الفتات من سائل الحفر؟', options: ['في البئر', 'في المنخل الهزاز', 'في المضخة', 'في البرج'], correctAnswer: 1 } }, en: { title: 'Circulating System', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 Circulation System</h2><p class="mb-4">This system pumps and treats drilling fluid in a continuous cycle.</p></section>', keyTerms: [], practiceQuestion: { question: 'Where are cuttings separated from drilling fluid?', options: ['In the well', 'In the shale shaker', 'In the pump', 'In the derrick'], correctAnswer: 1 } } } },
+    { day: 4, type: 'learning', content: { ar: { title: 'أنواع أجهزة الحفر', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 تصنيف أجهزة الحفر</h2><p class="mb-4">تُصنف أجهزة الحفر حسب الموقع والحجم والقدرات.</p></section>', keyTerms: [], practiceQuestion: { question: 'أي نوع جهاز يُستخدم في البر؟', options: ['سفينة حفر', 'منصة جاك أب', 'جهاز بري', 'شبه غاطسة'], correctAnswer: 2 } }, en: { title: 'Types of Drilling Rigs', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 Drilling Rig Classification</h2><p class="mb-4">Drilling rigs are classified by location, size, and capabilities.</p></section>', keyTerms: [], practiceQuestion: { question: 'Which rig type is used on land?', options: ['Drillship', 'Jack-up', 'Land rig', 'Semi-submersible'], correctAnswer: 2 } } } },
+    { day: 5, type: 'learning', content: { ar: { title: 'طاقم جهاز الحفر', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 فريق العمل</h2><p class="mb-4">يعمل فريق متخصص على جهاز الحفر بنظام الورديات على مدار الساعة.</p></section>', keyTerms: [], practiceQuestion: { question: 'من يقود عمليات الحفر في الموقع؟', options: ['المهندس', 'المشرف (Driller)', 'العامل', 'الجيولوجي'], correctAnswer: 1 } }, en: { title: 'Drilling Rig Crew', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 Work Team</h2><p class="mb-4">A specialized team works on the drilling rig in shifts around the clock.</p></section>', keyTerms: [], practiceQuestion: { question: 'Who leads drilling operations on site?', options: ['Engineer', 'Driller', 'Worker', 'Geologist'], correctAnswer: 1 } } } },
+    { day: 6, type: 'quiz', content: { en: { title: 'Weekly Quiz', explanation: 'Test your knowledge of drilling rigs.', keyTerms: [] }, ar: { title: 'اختبار الأسبوع', explanation: 'اختبر معرفتك بأجهزة الحفر.', keyTerms: [] } }, quiz: { en: [{ question: 'What provides power to a drilling rig?', options: ['Derrick', 'Generators/Engines', 'Mud pumps', 'Drill bit'], correctAnswer: 1 }, { question: 'What is the derrick?', options: ['Pump system', 'Tall steel structure', 'Storage tank', 'Control room'], correctAnswer: 1 }, { question: 'Function of drawworks?', options: ['Pump mud', 'Hoist drill string', 'Rotate bit', 'Mix cement'], correctAnswer: 1 }, { question: 'Where is mud processed?', options: ['Derrick top', 'Solids control system', 'Drill pipe', 'Well bottom'], correctAnswer: 1 }, { question: 'Who supervises the drilling floor?', options: ['Company man', 'Driller', 'Roughneck', 'Geologist'], correctAnswer: 1 }, { question: 'What is a top drive?', options: ['Vehicle', 'Motor that rotates drill string from top', 'Pump type', 'Valve'], correctAnswer: 1 }, { question: 'Land rig advantage?', options: ['Can drill deeper', 'Easier to move', 'Works in water', 'Self-propelled'], correctAnswer: 1 }, { question: 'What are mud tanks for?', options: ['Store fuel', 'Store and process drilling fluid', 'Store water only', 'Store cement'], correctAnswer: 1 }, { question: 'Typical rig crew shift?', options: ['8 hours', '12 hours', '24 hours', '6 hours'], correctAnswer: 1 }, { question: 'What is the rotary table?', options: ['Dining table', 'Platform that rotates drill string', 'Storage area', 'Control panel'], correctAnswer: 1 }], ar: [{ question: 'ما الذي يوفر الطاقة لجهاز الحفر؟', options: ['البرج', 'المولدات/المحركات', 'مضخات الطين', 'رأس الحفر'], correctAnswer: 1 }, { question: 'ما هو البرج (Derrick)؟', options: ['نظام ضخ', 'هيكل معدني طويل', 'خزان', 'غرفة تحكم'], correctAnswer: 1 }, { question: 'وظيفة الرافعة (Drawworks)؟', options: ['ضخ الطين', 'رفع سلسلة الحفر', 'دوران رأس الحفر', 'خلط الإسمنت'], correctAnswer: 1 }, { question: 'أين يُعالج الطين؟', options: ['أعلى البرج', 'نظام التحكم بالمواد الصلبة', 'أنابيب الحفر', 'قاع البئر'], correctAnswer: 1 }, { question: 'من يشرف على أرضية الحفر؟', options: ['ممثل الشركة', 'المشرف (Driller)', 'العامل', 'الجيولوجي'], correctAnswer: 1 }, { question: 'ما هو المحرك العلوي؟', options: ['مركبة', 'محرك يدير سلسلة الحفر من الأعلى', 'نوع مضخة', 'صمام'], correctAnswer: 1 }, { question: 'ميزة الجهاز البري؟', options: ['يحفر أعمق', 'أسهل في النقل', 'يعمل في الماء', 'ذاتي الحركة'], correctAnswer: 1 }, { question: 'ما وظيفة خزانات الطين؟', options: ['تخزين الوقود', 'تخزين ومعالجة سائل الحفر', 'تخزين الماء فقط', 'تخزين الإسمنت'], correctAnswer: 1 }, { question: 'مدة وردية طاقم الحفر عادة؟', options: ['8 ساعات', '12 ساعة', '24 ساعة', '6 ساعات'], correctAnswer: 1 }, { question: 'ما هي الطاولة الدوارة؟', options: ['طاولة طعام', 'منصة تدير سلسلة الحفر', 'منطقة تخزين', 'لوحة تحكم'], correctAnswer: 1 }] } },
+    { day: 7, type: 'project', content: { en: { title: 'Mini Project', explanation: 'Describe a drilling rig.', keyTerms: [] }, ar: { title: 'مشروع صغير', explanation: 'صف جهاز حفر.', keyTerms: [] } }, project: { en: { title: 'Rig Description Report', description: 'Write a detailed description of a drilling rig and its components.', instructions: ['Describe the main systems of a drilling rig', 'Explain the function of at least 5 major components', 'Discuss the crew structure and responsibilities', 'Compare land vs offshore rigs', 'Include safety considerations'], submissionType: 'text' }, ar: { title: 'تقرير وصف جهاز الحفر', description: 'اكتب وصفاً تفصيلياً لجهاز الحفر ومكوناته.', instructions: ['صف الأنظمة الرئيسية لجهاز الحفر', 'اشرح وظيفة 5 مكونات رئيسية على الأقل', 'ناقش هيكل الطاقم ومسؤولياته', 'قارن بين الأجهزة البرية والبحرية', 'أضف اعتبارات السلامة'], submissionType: 'text' } } }
+  ]
+};
+
+const unitsLesson: WeeklyLesson = {
+  lessonId: 'units',
+  days: [
+    { day: 1, type: 'learning', content: { ar: { title: 'أنظمة الوحدات في صناعة النفط', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 أنظمة القياس</h2><p class="mb-4">تستخدم صناعة النفط نظامين رئيسيين للقياس: النظام الحقلي (Field Units) والنظام المتري (SI Units).</p></section>', keyTerms: [], practiceQuestion: { question: 'أي نظام هو الأكثر استخداماً في حقول النفط؟', options: ['المتري', 'الحقلي (الإمبراطوري)', 'اليوناني', 'الصيني'], correctAnswer: 1 } }, en: { title: 'Unit Systems in Oil Industry', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 Measurement Systems</h2><p class="mb-4">The oil industry uses two main measurement systems: Field Units and SI Units (Metric).</p></section>', keyTerms: [], practiceQuestion: { question: 'Which system is most commonly used in oil fields?', options: ['Metric', 'Field (Imperial)', 'Greek', 'Chinese'], correctAnswer: 1 } } } },
+    { day: 2, type: 'learning', content: { ar: { title: 'وحدات الطول والعمق', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 قياس الطول والعمق</h2><p class="mb-4">الأعماق تُقاس بالأقدام أو الأمتار، والأبعاد الصغيرة بالبوصات أو السنتيمترات.</p></section>', keyTerms: [], practiceQuestion: { question: 'كم قدم في الميل الواحد؟', options: ['1000', '3000', '5280', '10000'], correctAnswer: 2 } }, en: { title: 'Length and Depth Units', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 Measuring Length and Depth</h2><p class="mb-4">Depths are measured in feet or meters, and small dimensions in inches or centimeters.</p></section>', keyTerms: [], practiceQuestion: { question: 'How many feet in a mile?', options: ['1000', '3000', '5280', '10000'], correctAnswer: 2 } } } },
+    { day: 3, type: 'learning', content: { ar: { title: 'وحدات الضغط', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 قياس الضغط</h2><p class="mb-4">الضغط يُقاس بوحدات مختلفة: psi, bar, Pa, atm.</p></section>', keyTerms: [], practiceQuestion: { question: 'ما هي وحدة الضغط الأكثر استخداماً في الحقول؟', options: ['بار', 'باسكال', 'psi', 'أجواء'], correctAnswer: 2 } }, en: { title: 'Pressure Units', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 Measuring Pressure</h2><p class="mb-4">Pressure is measured in different units: psi, bar, Pa, atm.</p></section>', keyTerms: [], practiceQuestion: { question: 'What is the most common pressure unit in oil fields?', options: ['bar', 'Pascal', 'psi', 'atmospheres'], correctAnswer: 2 } } } },
+    { day: 4, type: 'learning', content: { ar: { title: 'وحدات الحجم والتدفق', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 قياس الحجم والتدفق</h2><p class="mb-4">النفط يُقاس بالبراميل، والغاز بالأقدام المكعبة القياسية.</p></section>', keyTerms: [], practiceQuestion: { question: 'كم غالون في البرميل؟', options: ['32', '42', '52', '62'], correctAnswer: 1 } }, en: { title: 'Volume and Flow Units', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 Measuring Volume and Flow</h2><p class="mb-4">Oil is measured in barrels, and gas in standard cubic feet.</p></section>', keyTerms: [], practiceQuestion: { question: 'How many gallons in a barrel?', options: ['32', '42', '52', '62'], correctAnswer: 1 } } } },
+    { day: 5, type: 'learning', content: { ar: { title: 'التحويل بين الوحدات', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 تحويل الوحدات</h2><p class="mb-4">التحويل الصحيح بين الوحدات ضروري لتجنب الأخطاء الكارثية.</p></section>', keyTerms: [], practiceQuestion: { question: 'كم متر في القدم؟', options: ['0.1', '0.3048', '0.5', '1.0'], correctAnswer: 1 } }, en: { title: 'Unit Conversions', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 Converting Units</h2><p class="mb-4">Correct unit conversion is essential to avoid catastrophic errors.</p></section>', keyTerms: [], practiceQuestion: { question: 'How many meters in a foot?', options: ['0.1', '0.3048', '0.5', '1.0'], correctAnswer: 1 } } } },
+    { day: 6, type: 'quiz', content: { en: { title: 'Weekly Quiz', explanation: 'Test your knowledge of units.', keyTerms: [] }, ar: { title: 'اختبار الأسبوع', explanation: 'اختبر معرفتك بالوحدات.', keyTerms: [] } }, quiz: { en: [{ question: 'How many gallons in a barrel of oil?', options: ['35', '42', '55', '100'], correctAnswer: 1 }, { question: 'What unit is used for well depth in US fields?', options: ['Meters', 'Feet', 'Yards', 'Miles'], correctAnswer: 1 }, { question: 'What does psi stand for?', options: ['Pressure standard index', 'Pounds per square inch', 'Pascal standard international', 'Pressure system indicator'], correctAnswer: 1 }, { question: 'How many feet in a meter?', options: ['2.28', '3.28', '4.28', '5.28'], correctAnswer: 1 }, { question: 'Oil production is often measured in?', options: ['Liters per day', 'Barrels per day', 'Gallons per hour', 'Tons per week'], correctAnswer: 1 }, { question: 'What is mud weight commonly measured in?', options: ['kg/m³', 'ppg (pounds per gallon)', 'psi', 'bar'], correctAnswer: 1 }, { question: '1 bar equals approximately how many psi?', options: ['10', '14.5', '20', '100'], correctAnswer: 1 }, { question: 'What is SCF?', options: ['Standard Cubic Feet', 'Standard Conversion Factor', 'Simple Calculation Formula', 'Safety Control Feature'], correctAnswer: 0 }, { question: 'Temperature in oil fields is often measured in?', options: ['Kelvin only', 'Celsius only', 'Fahrenheit (US) or Celsius', 'Rankine only'], correctAnswer: 2 }, { question: 'Why is unit consistency important?', options: ['For reports only', 'To avoid calculation errors and accidents', 'For legal reasons', 'For marketing'], correctAnswer: 1 }], ar: [{ question: 'كم غالون في برميل النفط؟', options: ['35', '42', '55', '100'], correctAnswer: 1 }, { question: 'ما الوحدة المستخدمة لعمق البئر في الحقول الأمريكية؟', options: ['أمتار', 'أقدام', 'ياردات', 'أميال'], correctAnswer: 1 }, { question: 'ماذا تعني psi؟', options: ['مؤشر الضغط القياسي', 'رطل لكل بوصة مربعة', 'باسكال دولي قياسي', 'مؤشر نظام الضغط'], correctAnswer: 1 }, { question: 'كم قدم في المتر؟', options: ['2.28', '3.28', '4.28', '5.28'], correctAnswer: 1 }, { question: 'إنتاج النفط يُقاس عادة بـ؟', options: ['لترات يومياً', 'براميل يومياً', 'غالونات بالساعة', 'أطنان أسبوعياً'], correctAnswer: 1 }, { question: 'كثافة الطين تُقاس عادة بـ؟', options: ['kg/m³', 'ppg (رطل/غالون)', 'psi', 'bar'], correctAnswer: 1 }, { question: '1 بار يساوي تقريباً كم psi؟', options: ['10', '14.5', '20', '100'], correctAnswer: 1 }, { question: 'ما هي SCF؟', options: ['أقدام مكعبة قياسية', 'معامل تحويل قياسي', 'صيغة حساب بسيطة', 'ميزة تحكم السلامة'], correctAnswer: 0 }, { question: 'درجة الحرارة في الحقول تُقاس بـ؟', options: ['كلفن فقط', 'مئوية فقط', 'فهرنهايت (أمريكا) أو مئوية', 'رانكين فقط'], correctAnswer: 2 }, { question: 'لماذا اتساق الوحدات مهم؟', options: ['للتقارير فقط', 'لتجنب أخطاء الحساب والحوادث', 'لأسباب قانونية', 'للتسويق'], correctAnswer: 1 }] } },
+    { day: 7, type: 'project', content: { en: { title: 'Mini Project', explanation: 'Practice unit conversions.', keyTerms: [] }, ar: { title: 'مشروع صغير', explanation: 'تدرب على تحويل الوحدات.', keyTerms: [] } }, project: { en: { title: 'Unit Conversion Practice', description: 'Solve a set of unit conversion problems commonly encountered in petroleum engineering.', instructions: ['Convert well depth: 10,000 ft to meters', 'Convert pressure: 5000 psi to bar', 'Convert production: 1000 bbl/day to m³/day', 'Convert mud weight: 12 ppg to kg/m³', 'Convert temperature: 300°F to °C'], submissionType: 'text' }, ar: { title: 'تمارين تحويل الوحدات', description: 'حل مجموعة من مسائل تحويل الوحدات الشائعة في هندسة النفط.', instructions: ['حول عمق البئر: 10,000 قدم إلى أمتار', 'حول الضغط: 5000 psi إلى بار', 'حول الإنتاج: 1000 برميل/يوم إلى م³/يوم', 'حول كثافة الطين: 12 رطل/غالون إلى كغم/م³', 'حول درجة الحرارة: 300 فهرنهايت إلى مئوية'], submissionType: 'text' } } }
+  ]
+};
+
+const terminologyLesson: WeeklyLesson = {
+  lessonId: 'terminology',
+  days: [
+    { day: 1, type: 'learning', content: { ar: { title: 'المصطلحات الأساسية في هندسة النفط', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 أهمية المصطلحات</h2><p class="mb-4">تستخدم صناعة النفط مصطلحات متخصصة يجب على كل مهندس معرفتها للتواصل الفعال.</p></section>', keyTerms: [], practiceQuestion: { question: 'ما معنى Upstream؟', options: ['التكرير', 'الاستكشاف والإنتاج', 'النقل', 'التسويق'], correctAnswer: 1 } }, en: { title: 'Basic Petroleum Engineering Terms', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 Importance of Terminology</h2><p class="mb-4">The oil industry uses specialized terms that every engineer must know for effective communication.</p></section>', keyTerms: [], practiceQuestion: { question: 'What does Upstream mean?', options: ['Refining', 'Exploration and Production', 'Transportation', 'Marketing'], correctAnswer: 1 } } } },
+    { day: 2, type: 'learning', content: { ar: { title: 'مصطلحات الحفر', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 مصطلحات الحفر الأساسية</h2><p class="mb-4">مصطلحات الحفر تشمل: ROP, WOB, RPM, BHA, TD, MD, TVD.</p></section>', keyTerms: [], practiceQuestion: { question: 'ما معنى ROP؟', options: ['معدل الضغط', 'معدل الاختراق', 'معدل الإنتاج', 'معدل الضخ'], correctAnswer: 1 } }, en: { title: 'Drilling Terminology', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 Basic Drilling Terms</h2><p class="mb-4">Drilling terms include: ROP, WOB, RPM, BHA, TD, MD, TVD.</p></section>', keyTerms: [], practiceQuestion: { question: 'What does ROP stand for?', options: ['Rate of Pressure', 'Rate of Penetration', 'Rate of Production', 'Rate of Pumping'], correctAnswer: 1 } } } },
+    { day: 3, type: 'learning', content: { ar: { title: 'مصطلحات المخزون', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 مصطلحات المخزون</h2><p class="mb-4">مصطلحات المخزون: STOIIP, EUR, RF, PI, IPR, OWC, GOC.</p></section>', keyTerms: [], practiceQuestion: { question: 'ما معنى STOIIP؟', options: ['النفط المنتج', 'النفط الأصلي في المكان', 'النفط المكرر', 'النفط المصدر'], correctAnswer: 1 } }, en: { title: 'Reservoir Terminology', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 Reservoir Terms</h2><p class="mb-4">Reservoir terms: STOIIP, EUR, RF, PI, IPR, OWC, GOC.</p></section>', keyTerms: [], practiceQuestion: { question: 'What does STOIIP mean?', options: ['Produced oil', 'Stock Tank Oil Initially In Place', 'Refined oil', 'Exported oil'], correctAnswer: 1 } } } },
+    { day: 4, type: 'learning', content: { ar: { title: 'مصطلحات الإنتاج', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 مصطلحات الإنتاج</h2><p class="mb-4">مصطلحات الإنتاج: BOPD, BWPD, GOR, WOR, ESP, GL, SRP.</p></section>', keyTerms: [], practiceQuestion: { question: 'ما معنى GOR؟', options: ['نسبة الغاز للنفط', 'معدل النفط العام', 'نطاق التشغيل', 'معدل المكسب'], correctAnswer: 0 } }, en: { title: 'Production Terminology', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 Production Terms</h2><p class="mb-4">Production terms: BOPD, BWPD, GOR, WOR, ESP, GL, SRP.</p></section>', keyTerms: [], practiceQuestion: { question: 'What does GOR mean?', options: ['Gas Oil Ratio', 'General Operating Rate', 'Gain Operating Range', 'Ground Oil Reserve'], correctAnswer: 0 } } } },
+    { day: 5, type: 'learning', content: { ar: { title: 'الاختصارات الشائعة', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 الاختصارات الشائعة</h2><p class="mb-4">الاختصارات الشائعة: API, HSE, NPT, ILT, POOH, RIH, WOC.</p></section>', keyTerms: [], practiceQuestion: { question: 'ما معنى NPT؟', options: ['وقت غير منتج', 'اختبار ضغط جديد', 'نقل الأنابيب الشمالي', 'تقنية الضغط الطبيعي'], correctAnswer: 0 } }, en: { title: 'Common Abbreviations', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 Common Abbreviations</h2><p class="mb-4">Common abbreviations: API, HSE, NPT, ILT, POOH, RIH, WOC.</p></section>', keyTerms: [], practiceQuestion: { question: 'What does NPT stand for?', options: ['Non-Productive Time', 'New Pressure Test', 'North Pipe Transfer', 'Natural Pressure Technique'], correctAnswer: 0 } } } },
+    { day: 6, type: 'quiz', content: { en: { title: 'Weekly Quiz', explanation: 'Test your knowledge of terminology.', keyTerms: [] }, ar: { title: 'اختبار الأسبوع', explanation: 'اختبر معرفتك بالمصطلحات.', keyTerms: [] } }, quiz: { en: [{ question: 'What does ROP mean?', options: ['Rate of Pressure', 'Rate of Penetration', 'Rate of Production', 'Radius of Pipe'], correctAnswer: 1 }, { question: 'What is WOB?', options: ['Width of Bit', 'Weight on Bit', 'Water Oil Boundary', 'Well Operation Base'], correctAnswer: 1 }, { question: 'What does TD stand for?', options: ['Total Depth', 'Test Data', 'Time Duration', 'Technical Diagram'], correctAnswer: 0 }, { question: 'What is BOPD?', options: ['Barrels of Production Daily', 'Barrels of Oil Per Day', 'Basic Operating Procedure Document', 'Bottom of Pipe Depth'], correctAnswer: 1 }, { question: 'What does GOR stand for?', options: ['Gas Oil Ratio', 'General Operating Rules', 'Ground Oil Reserve', 'Gauge Oil Reading'], correctAnswer: 0 }, { question: 'What is BHA?', options: ['Bottom Hole Assembly', 'Basic Hydraulic Analysis', 'Bore Hole Angle', 'Bit Hour Account'], correctAnswer: 0 }, { question: 'What does ESP mean?', options: ['Emergency Safety Procedure', 'Electric Submersible Pump', 'Estimated Selling Price', 'External Support Platform'], correctAnswer: 1 }, { question: 'What is STOIIP?', options: ['Standard Test Oil In Initial Phase', 'Stock Tank Oil Initially In Place', 'System Total Oil Input/Output Program', 'Surface Tank Oil Inventory Index'], correctAnswer: 1 }, { question: 'What does MD stand for?', options: ['Measured Depth', 'Maximum Distance', 'Mud Density', 'Motor Drive'], correctAnswer: 0 }, { question: 'What is OWC?', options: ['Oil Water Contact', 'Operating Well Cost', 'Open Well Completion', 'Outer Well Casing'], correctAnswer: 0 }], ar: [{ question: 'ما معنى ROP؟', options: ['معدل الضغط', 'معدل الاختراق', 'معدل الإنتاج', 'نصف قطر الأنبوب'], correctAnswer: 1 }, { question: 'ما هو WOB؟', options: ['عرض رأس الحفر', 'الوزن على رأس الحفر', 'حدود الماء والنفط', 'قاعدة عمليات البئر'], correctAnswer: 1 }, { question: 'ماذا يعني TD؟', options: ['العمق الكلي', 'بيانات الاختبار', 'مدة الوقت', 'رسم تقني'], correctAnswer: 0 }, { question: 'ما هو BOPD؟', options: ['براميل الإنتاج اليومي', 'براميل النفط يومياً', 'وثيقة إجراء التشغيل', 'عمق قاع الأنبوب'], correctAnswer: 1 }, { question: 'ماذا يعني GOR؟', options: ['نسبة الغاز للنفط', 'قواعد التشغيل العامة', 'احتياطي النفط الأرضي', 'قراءة مقياس النفط'], correctAnswer: 0 }, { question: 'ما هو BHA؟', options: ['تجميعة قاع البئر', 'تحليل هيدروليكي أساسي', 'زاوية ثقب الحفر', 'حساب ساعات رأس الحفر'], correctAnswer: 0 }, { question: 'ماذا يعني ESP؟', options: ['إجراء سلامة طارئ', 'مضخة غاطسة كهربائية', 'سعر بيع تقديري', 'منصة دعم خارجية'], correctAnswer: 1 }, { question: 'ما هو STOIIP؟', options: ['اختبار النفط القياسي في المرحلة الأولية', 'النفط الأصلي في المكان عند ظروف الخزان', 'برنامج إدخال/إخراج النفط الكلي', 'مؤشر جرد النفط السطحي'], correctAnswer: 1 }, { question: 'ماذا يعني MD؟', options: ['العمق المقاس', 'المسافة القصوى', 'كثافة الطين', 'محرك الدفع'], correctAnswer: 0 }, { question: 'ما هو OWC؟', options: ['حد تماس الماء والنفط', 'تكلفة تشغيل البئر', 'إكمال البئر المفتوح', 'أنبوب التغليف الخارجي'], correctAnswer: 0 }] } },
+    { day: 7, type: 'project', content: { en: { title: 'Mini Project', explanation: 'Create a terminology glossary.', keyTerms: [] }, ar: { title: 'مشروع صغير', explanation: 'أنشئ قاموس مصطلحات.', keyTerms: [] } }, project: { en: { title: 'Personal Terminology Glossary', description: 'Create a personal glossary of 30 petroleum engineering terms.', instructions: ['Include at least 30 terms', 'Group them by category (drilling, reservoir, production, etc.)', 'Provide definition for each term', 'Include the abbreviation if applicable', 'Add Arabic translation for each term'], submissionType: 'text' }, ar: { title: 'قاموس مصطلحات شخصي', description: 'أنشئ قاموساً شخصياً يحتوي على 30 مصطلحاً في هندسة النفط.', instructions: ['تضمين 30 مصطلحاً على الأقل', 'تجميعها حسب الفئة (حفر، مخزون، إنتاج، إلخ)', 'تقديم تعريف لكل مصطلح', 'تضمين الاختصار إن وجد', 'إضافة الترجمة الإنجليزية لكل مصطلح'], submissionType: 'text' } } }
+  ]
+};
+
+// Export all lessons
 export const weeklyContent: WeeklyLesson[] = [
-  // Introduction to Petroleum Engineering
-  {
-    lessonId: 'intro',
-    days: [
-      {
-        day: 1,
-        type: 'learning',
-        content: {
-          en: {
-            title: 'What is Petroleum Engineering?',
-            explanation: 'Petroleum Engineering is a specialized field of engineering focused on the exploration, extraction, and production of crude oil and natural gas. It combines principles from geology, chemistry, physics, and mathematics to develop efficient methods for recovering hydrocarbons from underground reservoirs. Petroleum engineers work on designing drilling operations, optimizing production rates, and ensuring safe and environmentally responsible extraction processes.',
-            keyTerms: [
-              { term: 'Petroleum', definition: 'A naturally occurring liquid found beneath the Earth\'s surface that can be refined into fuel' },
-              { term: 'Hydrocarbons', definition: 'Organic compounds consisting of hydrogen and carbon, the main components of oil and gas' },
-              { term: 'Reservoir', definition: 'An underground formation of porous rock containing oil or gas' },
-            ],
-            practiceQuestion: {
-              question: 'What are hydrocarbons primarily composed of?',
-              options: ['Oxygen and nitrogen', 'Hydrogen and carbon', 'Sulfur and phosphorus', 'Iron and copper'],
-              correctAnswer: 1,
-            },
-          },
-          ar: {
-            title: 'ما هي هندسة النفط؟',
-            explanation: 'هندسة النفط هي مجال هندسي متخصص يركز على استكشاف واستخراج وإنتاج النفط الخام والغاز الطبيعي. تجمع بين مبادئ الجيولوجيا والكيمياء والفيزياء والرياضيات لتطوير طرق فعالة لاستخراج الهيدروكربونات من المخزونات الجوفية. يعمل مهندسو النفط على تصميم عمليات الحفر وتحسين معدلات الإنتاج وضمان عمليات استخراج آمنة ومسؤولة بيئياً.',
-            keyTerms: [
-              { term: 'النفط', definition: 'سائل طبيعي يوجد تحت سطح الأرض يمكن تكريره إلى وقود' },
-              { term: 'الهيدروكربونات', definition: 'مركبات عضوية تتكون من الهيدروجين والكربون، المكونات الرئيسية للنفط والغاز' },
-              { term: 'المخزون', definition: 'تكوين جوفي من الصخور المسامية يحتوي على النفط أو الغاز' },
-            ],
-            practiceQuestion: {
-              question: 'مما تتكون الهيدروكربونات بشكل أساسي؟',
-              options: ['الأكسجين والنيتروجين', 'الهيدروجين والكربون', 'الكبريت والفوسفور', 'الحديد والنحاس'],
-              correctAnswer: 1,
-            },
-          },
-        },
-      },
-      {
-        day: 2,
-        type: 'learning',
-        content: {
-          en: {
-            title: 'History and Importance of Oil & Gas',
-            explanation: 'The modern petroleum industry began in 1859 when Edwin Drake drilled the first commercial oil well in Pennsylvania, USA. Since then, oil and gas have become the primary energy sources powering global economies. Petroleum products are used in transportation, heating, electricity generation, and as raw materials for plastics, chemicals, and pharmaceuticals. Understanding this history helps appreciate the industry\'s evolution and future challenges.',
-            keyTerms: [
-              { term: 'Drake Well', definition: 'The first commercially successful oil well, drilled in 1859' },
-              { term: 'Crude Oil', definition: 'Unrefined petroleum extracted directly from the ground' },
-              { term: 'Petrochemicals', definition: 'Chemical products derived from petroleum' },
-            ],
-            practiceQuestion: {
-              question: 'When was the first commercial oil well drilled?',
-              options: ['1759', '1859', '1959', '1809'],
-              correctAnswer: 1,
-            },
-          },
-          ar: {
-            title: 'تاريخ وأهمية النفط والغاز',
-            explanation: 'بدأت صناعة النفط الحديثة في عام 1859 عندما حفر إدوين دريك أول بئر نفط تجاري في بنسلفانيا بالولايات المتحدة. منذ ذلك الحين، أصبح النفط والغاز المصادر الرئيسية للطاقة التي تدير الاقتصادات العالمية. تُستخدم المنتجات البترولية في النقل والتدفئة وتوليد الكهرباء وكمواد خام للبلاستيك والمواد الكيميائية والأدوية.',
-            keyTerms: [
-              { term: 'بئر دريك', definition: 'أول بئر نفط تجاري ناجح، حُفر في عام 1859' },
-              { term: 'النفط الخام', definition: 'النفط غير المكرر المستخرج مباشرة من الأرض' },
-              { term: 'البتروكيماويات', definition: 'المنتجات الكيميائية المشتقة من النفط' },
-            ],
-            practiceQuestion: {
-              question: 'متى تم حفر أول بئر نفط تجاري؟',
-              options: ['1759', '1859', '1959', '1809'],
-              correctAnswer: 1,
-            },
-          },
-        },
-      },
-      {
-        day: 3,
-        type: 'learning',
-        content: {
-          en: {
-            title: 'Branches of Petroleum Engineering',
-            explanation: 'Petroleum Engineering has four main branches: Drilling Engineering focuses on creating wellbores to access reservoirs. Reservoir Engineering analyzes reservoir properties and optimizes recovery. Production Engineering deals with bringing hydrocarbons to the surface efficiently. Formation Evaluation involves assessing rock and fluid properties. Each branch requires specialized knowledge and works together to maximize oil and gas recovery.',
-            keyTerms: [
-              { term: 'Drilling Engineering', definition: 'The branch focused on designing and executing drilling operations' },
-              { term: 'Reservoir Engineering', definition: 'The branch that analyzes underground formations to maximize recovery' },
-              { term: 'Production Engineering', definition: 'The branch dealing with surface facilities and well performance' },
-            ],
-            practiceQuestion: {
-              question: 'Which branch focuses on analyzing underground formations?',
-              options: ['Drilling Engineering', 'Reservoir Engineering', 'Production Engineering', 'Civil Engineering'],
-              correctAnswer: 1,
-            },
-          },
-          ar: {
-            title: 'فروع هندسة النفط',
-            explanation: 'لهندسة النفط أربعة فروع رئيسية: هندسة الحفر تركز على إنشاء الآبار للوصول إلى المخزونات. هندسة المخزونات تحلل خصائص المخزون وتحسن الاستخلاص. هندسة الإنتاج تتعامل مع إحضار الهيدروكربونات إلى السطح بكفاءة. تقييم التكوينات يتضمن تقييم خصائص الصخور والسوائل.',
-            keyTerms: [
-              { term: 'هندسة الحفر', definition: 'الفرع المركز على تصميم وتنفيذ عمليات الحفر' },
-              { term: 'هندسة المخزونات', definition: 'الفرع الذي يحلل التكوينات الجوفية لتعظيم الاستخلاص' },
-              { term: 'هندسة الإنتاج', definition: 'الفرع الذي يتعامل مع المرافق السطحية وأداء البئر' },
-            ],
-            practiceQuestion: {
-              question: 'أي فرع يركز على تحليل التكوينات الجوفية؟',
-              options: ['هندسة الحفر', 'هندسة المخزونات', 'هندسة الإنتاج', 'الهندسة المدنية'],
-              correctAnswer: 1,
-            },
-          },
-        },
-      },
-      {
-        day: 4,
-        type: 'learning',
-        content: {
-          en: {
-            title: 'Career Paths in Petroleum Engineering',
-            explanation: 'Petroleum engineers can work in various roles: Field Engineers work on drilling sites managing operations. Research Engineers develop new technologies and methods. Consulting Engineers provide expertise to multiple companies. Management positions oversee projects and teams. The industry offers competitive salaries and opportunities for global travel and advancement.',
-            keyTerms: [
-              { term: 'Field Engineer', definition: 'An engineer who works directly at drilling or production sites' },
-              { term: 'Upstream', definition: 'The exploration and production sector of the oil industry' },
-              { term: 'Downstream', definition: 'The refining and distribution sector of the oil industry' },
-            ],
-            practiceQuestion: {
-              question: 'What does "upstream" refer to in the oil industry?',
-              options: ['Refining operations', 'Exploration and production', 'Marketing and sales', 'Transportation'],
-              correctAnswer: 1,
-            },
-          },
-          ar: {
-            title: 'المسارات المهنية في هندسة النفط',
-            explanation: 'يمكن لمهندسي النفط العمل في أدوار مختلفة: مهندسو الميدان يعملون في مواقع الحفر لإدارة العمليات. مهندسو البحث يطورون تقنيات وطرق جديدة. المهندسون الاستشاريون يقدمون الخبرة لشركات متعددة. المناصب الإدارية تشرف على المشاريع والفرق.',
-            keyTerms: [
-              { term: 'مهندس ميداني', definition: 'مهندس يعمل مباشرة في مواقع الحفر أو الإنتاج' },
-              { term: 'المنبع', definition: 'قطاع الاستكشاف والإنتاج في صناعة النفط' },
-              { term: 'المصب', definition: 'قطاع التكرير والتوزيع في صناعة النفط' },
-            ],
-            practiceQuestion: {
-              question: 'إلى ماذا يشير مصطلح "المنبع" في صناعة النفط؟',
-              options: ['عمليات التكرير', 'الاستكشاف والإنتاج', 'التسويق والمبيعات', 'النقل'],
-              correctAnswer: 1,
-            },
-          },
-        },
-      },
-      {
-        day: 5,
-        type: 'learning',
-        content: {
-          en: {
-            title: 'Environmental Considerations',
-            explanation: 'Modern petroleum engineering emphasizes environmental responsibility. Engineers must minimize ecological impact through proper waste management, spill prevention, and emission controls. The industry is evolving toward cleaner technologies, including carbon capture and sustainable practices. Understanding environmental regulations is essential for all petroleum engineers.',
-            keyTerms: [
-              { term: 'Carbon Capture', definition: 'Technology to capture and store CO2 emissions' },
-              { term: 'HSE', definition: 'Health, Safety, and Environment - key industry standards' },
-              { term: 'Remediation', definition: 'The process of cleaning up contaminated sites' },
-            ],
-            practiceQuestion: {
-              question: 'What does HSE stand for?',
-              options: ['High Speed Equipment', 'Health, Safety, and Environment', 'Hydrocarbon Storage Estimate', 'Heavy Steel Engineering'],
-              correctAnswer: 1,
-            },
-          },
-          ar: {
-            title: 'الاعتبارات البيئية',
-            explanation: 'تؤكد هندسة النفط الحديثة على المسؤولية البيئية. يجب على المهندسين تقليل التأثير البيئي من خلال الإدارة السليمة للنفايات ومنع التسرب والتحكم في الانبعاثات. تتطور الصناعة نحو تقنيات أنظف، بما في ذلك احتجاز الكربون والممارسات المستدامة.',
-            keyTerms: [
-              { term: 'احتجاز الكربون', definition: 'تقنية لالتقاط وتخزين انبعاثات ثاني أكسيد الكربون' },
-              { term: 'الصحة والسلامة والبيئة', definition: 'معايير الصناعة الرئيسية' },
-              { term: 'المعالجة', definition: 'عملية تنظيف المواقع الملوثة' },
-            ],
-            practiceQuestion: {
-              question: 'ماذا تعني HSE؟',
-              options: ['معدات عالية السرعة', 'الصحة والسلامة والبيئة', 'تقدير تخزين الهيدروكربونات', 'هندسة الصلب الثقيل'],
-              correctAnswer: 1,
-            },
-          },
-        },
-      },
-      {
-        day: 6,
-        type: 'quiz',
-        content: {
-          en: { title: 'Weekly Quiz', explanation: 'Test your knowledge from this week\'s lessons.', keyTerms: [] },
-          ar: { title: 'اختبار الأسبوع', explanation: 'اختبر معرفتك من دروس هذا الأسبوع.', keyTerms: [] },
-        },
-        quiz: {
-          en: [
-            { question: 'What is Petroleum Engineering primarily concerned with?', options: ['Building roads', 'Exploration and production of oil and gas', 'Manufacturing cars', 'Food processing'], correctAnswer: 1 },
-            { question: 'When was the first commercial oil well drilled?', options: ['1759', '1859', '1959', '1909'], correctAnswer: 1 },
-            { question: 'What are hydrocarbons composed of?', options: ['Oxygen and nitrogen', 'Hydrogen and carbon', 'Iron and copper', 'Sulfur and calcium'], correctAnswer: 1 },
-            { question: 'Which branch of petroleum engineering focuses on creating wellbores?', options: ['Reservoir Engineering', 'Production Engineering', 'Drilling Engineering', 'Chemical Engineering'], correctAnswer: 2 },
-            { question: 'What does "upstream" refer to?', options: ['Refining', 'Exploration and production', 'Marketing', 'Transportation'], correctAnswer: 1 },
-            { question: 'What is a reservoir?', options: ['A storage tank', 'Underground rock formation with oil/gas', 'A type of drill', 'A refinery unit'], correctAnswer: 1 },
-            { question: 'Who drilled the first commercial oil well?', options: ['John Rockefeller', 'Edwin Drake', 'Henry Ford', 'Thomas Edison'], correctAnswer: 1 },
-            { question: 'What does HSE stand for?', options: ['High Speed Equipment', 'Health, Safety, Environment', 'Heavy Steel Engineering', 'Hydrocarbon Storage Estimate'], correctAnswer: 1 },
-            { question: 'What is carbon capture?', options: ['Mining carbon', 'Capturing and storing CO2', 'Burning carbon', 'Measuring carbon'], correctAnswer: 1 },
-            { question: 'What are petrochemicals?', options: ['Petroleum rocks', 'Chemicals from petroleum', 'Petroleum containers', 'Petroleum colors'], correctAnswer: 1 },
-          ],
-          ar: [
-            { question: 'ما هو الاهتمام الرئيسي لهندسة النفط؟', options: ['بناء الطرق', 'استكشاف وإنتاج النفط والغاز', 'تصنيع السيارات', 'معالجة الأغذية'], correctAnswer: 1 },
-            { question: 'متى تم حفر أول بئر نفط تجاري؟', options: ['1759', '1859', '1959', '1909'], correctAnswer: 1 },
-            { question: 'مما تتكون الهيدروكربونات؟', options: ['الأكسجين والنيتروجين', 'الهيدروجين والكربون', 'الحديد والنحاس', 'الكبريت والكالسيوم'], correctAnswer: 1 },
-            { question: 'أي فرع من هندسة النفط يركز على إنشاء الآبار؟', options: ['هندسة المخزونات', 'هندسة الإنتاج', 'هندسة الحفر', 'الهندسة الكيميائية'], correctAnswer: 2 },
-            { question: 'إلى ماذا يشير "المنبع"؟', options: ['التكرير', 'الاستكشاف والإنتاج', 'التسويق', 'النقل'], correctAnswer: 1 },
-            { question: 'ما هو المخزون؟', options: ['خزان تخزين', 'تكوين صخري جوفي به نفط/غاز', 'نوع من المثاقب', 'وحدة تكرير'], correctAnswer: 1 },
-            { question: 'من حفر أول بئر نفط تجاري؟', options: ['جون روكفلر', 'إدوين دريك', 'هنري فورد', 'توماس إديسون'], correctAnswer: 1 },
-            { question: 'ماذا تعني HSE؟', options: ['معدات عالية السرعة', 'الصحة والسلامة والبيئة', 'هندسة الصلب الثقيل', 'تقدير تخزين الهيدروكربونات'], correctAnswer: 1 },
-            { question: 'ما هو احتجاز الكربون؟', options: ['تعدين الكربون', 'التقاط وتخزين ثاني أكسيد الكربون', 'حرق الكربون', 'قياس الكربون'], correctAnswer: 1 },
-            { question: 'ما هي البتروكيماويات؟', options: ['صخور النفط', 'مواد كيميائية من النفط', 'حاويات النفط', 'ألوان النفط'], correctAnswer: 1 },
-          ],
-        },
-      },
-      {
-        day: 7,
-        type: 'project',
-        content: {
-          en: { title: 'Mini Project', explanation: 'Apply what you learned this week.', keyTerms: [] },
-          ar: { title: 'مشروع صغير', explanation: 'طبق ما تعلمته هذا الأسبوع.', keyTerms: [] },
-        },
-        project: {
-          en: {
-            title: 'Petroleum Industry Research',
-            description: 'Research and describe a major oil company or oil field in your region or globally.',
-            instructions: [
-              'Choose a well-known oil company (e.g., Saudi Aramco, ExxonMobil, BP) or oil field',
-              'Research its history, operations, and significance',
-              'Write a 200-word summary covering: founding date, main operations, production capacity, and environmental initiatives',
-              'You may include an image of the company logo or oil field',
-            ],
-            submissionType: 'both',
-          },
-          ar: {
-            title: 'بحث عن صناعة النفط',
-            description: 'ابحث وصف شركة نفط كبرى أو حقل نفطي في منطقتك أو عالمياً.',
-            instructions: [
-              'اختر شركة نفط معروفة (مثل أرامكو السعودية، إكسون موبيل، بي بي) أو حقل نفطي',
-              'ابحث عن تاريخها وعملياتها وأهميتها',
-              'اكتب ملخصاً من 200 كلمة يغطي: تاريخ التأسيس، العمليات الرئيسية، القدرة الإنتاجية، والمبادرات البيئية',
-              'يمكنك إضافة صورة لشعار الشركة أو الحقل النفطي',
-            ],
-            submissionType: 'both',
-          },
-        },
-      },
-    ],
-  },
-  // Basics of Drilling
-  {
-    lessonId: 'drilling',
-    days: [
-      {
-        day: 1,
-        type: 'learning',
-        content: {
-          en: {
-            title: 'Introduction to Drilling Operations',
-            explanation: 'Drilling is the process of creating a borehole in the earth to reach underground oil and gas reservoirs. This operation requires careful planning, specialized equipment, and skilled personnel. The drilling process involves rotating a drill bit attached to a drill string, which penetrates rock formations layer by layer until reaching the target depth.',
-            keyTerms: [
-              { term: 'Borehole', definition: 'The hole created by drilling into the earth' },
-              { term: 'Drill String', definition: 'The connected series of drill pipes that transmit rotation and weight to the drill bit' },
-              { term: 'Drill Bit', definition: 'The cutting tool at the end of the drill string that breaks rock' },
-            ],
-            practiceQuestion: {
-              question: 'What is the cutting tool at the end of the drill string called?',
-              options: ['Drill pipe', 'Drill bit', 'Casing', 'Derrick'],
-              correctAnswer: 1,
-            },
-          },
-          ar: {
-            title: 'مقدمة في عمليات الحفر',
-            explanation: 'الحفر هو عملية إنشاء ثقب في الأرض للوصول إلى مخزونات النفط والغاز الجوفية. تتطلب هذه العملية تخطيطاً دقيقاً ومعدات متخصصة وكوادر ماهرة. تتضمن عملية الحفر تدوير رأس حفر متصل بسلسلة الحفر، والذي يخترق طبقات الصخور حتى الوصول إلى العمق المستهدف.',
-            keyTerms: [
-              { term: 'فتحة البئر', definition: 'الثقب الناتج عن الحفر في الأرض' },
-              { term: 'سلسلة الحفر', definition: 'السلسلة المتصلة من أنابيب الحفر التي تنقل الدوران والوزن إلى رأس الحفر' },
-              { term: 'رأس الحفر', definition: 'أداة القطع في نهاية سلسلة الحفر التي تكسر الصخور' },
-            ],
-            practiceQuestion: {
-              question: 'ماذا تسمى أداة القطع في نهاية سلسلة الحفر؟',
-              options: ['أنبوب الحفر', 'رأس الحفر', 'الغلاف', 'البرج'],
-              correctAnswer: 1,
-            },
-          },
-        },
-      },
-      {
-        day: 2,
-        type: 'learning',
-        content: {
-          en: {
-            title: 'Drilling Fluids (Mud)',
-            explanation: 'Drilling fluid, commonly called mud, is essential for drilling operations. It circulates from the surface, down through the drill string, out through the bit, and back up the annulus. Mud serves multiple purposes: cooling and lubricating the bit, carrying rock cuttings to surface, maintaining hydrostatic pressure to prevent blowouts, and stabilizing the wellbore walls.',
-            keyTerms: [
-              { term: 'Drilling Mud', definition: 'A fluid circulated during drilling to cool the bit and remove cuttings' },
-              { term: 'Annulus', definition: 'The space between the drill string and the wellbore wall' },
-              { term: 'Cuttings', definition: 'Rock fragments produced by the drilling process' },
-            ],
-            practiceQuestion: {
-              question: 'What is the main purpose of drilling mud?',
-              options: ['To make the hole muddy', 'To cool the bit and carry cuttings', 'To fill the oil tank', 'To lubricate the derrick'],
-              correctAnswer: 1,
-            },
-          },
-          ar: {
-            title: 'سوائل الحفر (الطين)',
-            explanation: 'سائل الحفر، المعروف بالطين، ضروري لعمليات الحفر. يدور من السطح، نزولاً عبر سلسلة الحفر، خروجاً عبر الرأس، وصعوداً عبر الفراغ الحلقي. يخدم الطين أغراضاً متعددة: تبريد وتزييت الرأس، نقل فتات الصخور للسطح، الحفاظ على الضغط الهيدروستاتيكي لمنع الانفجارات، وتثبيت جدران البئر.',
-            keyTerms: [
-              { term: 'طين الحفر', definition: 'سائل يدور أثناء الحفر لتبريد الرأس وإزالة الفتات' },
-              { term: 'الفراغ الحلقي', definition: 'المساحة بين سلسلة الحفر وجدار البئر' },
-              { term: 'الفتات', definition: 'شظايا الصخور الناتجة عن عملية الحفر' },
-            ],
-            practiceQuestion: {
-              question: 'ما هو الغرض الرئيسي من طين الحفر؟',
-              options: ['لجعل الحفرة موحلة', 'لتبريد الرأس ونقل الفتات', 'لملء خزان النفط', 'لتزييت البرج'],
-              correctAnswer: 1,
-            },
-          },
-        },
-      },
-      {
-        day: 3,
-        type: 'learning',
-        content: {
-          en: {
-            title: 'Types of Drilling Methods',
-            explanation: 'There are several drilling methods used in petroleum operations. Rotary drilling is most common, using a rotating bit. Cable tool drilling uses a heavy bit that pounds the rock. Directional drilling allows wells to deviate from vertical. Horizontal drilling extends wells parallel to reservoir layers. Each method has specific applications based on geology and target objectives.',
-            keyTerms: [
-              { term: 'Rotary Drilling', definition: 'Drilling method using continuous rotation of the bit' },
-              { term: 'Directional Drilling', definition: 'Drilling at angles other than vertical' },
-              { term: 'Horizontal Drilling', definition: 'Drilling parallel to rock layers to maximize contact' },
-            ],
-            practiceQuestion: {
-              question: 'Which drilling method uses continuous rotation of the bit?',
-              options: ['Cable tool drilling', 'Rotary drilling', 'Manual drilling', 'Explosive drilling'],
-              correctAnswer: 1,
-            },
-          },
-          ar: {
-            title: 'أنواع طرق الحفر',
-            explanation: 'هناك عدة طرق حفر مستخدمة في عمليات النفط. الحفر الدوار هو الأكثر شيوعاً، باستخدام رأس دوار. حفر الكابل يستخدم رأساً ثقيلاً يطرق الصخر. الحفر الموجه يسمح للآبار بالانحراف عن العمودي. الحفر الأفقي يمد الآبار موازية لطبقات المخزون.',
-            keyTerms: [
-              { term: 'الحفر الدوار', definition: 'طريقة حفر تستخدم الدوران المستمر للرأس' },
-              { term: 'الحفر الموجه', definition: 'الحفر بزوايا غير عمودية' },
-              { term: 'الحفر الأفقي', definition: 'الحفر الموازي لطبقات الصخور لتعظيم التلامس' },
-            ],
-            practiceQuestion: {
-              question: 'أي طريقة حفر تستخدم الدوران المستمر للرأس؟',
-              options: ['حفر الكابل', 'الحفر الدوار', 'الحفر اليدوي', 'الحفر المتفجر'],
-              correctAnswer: 1,
-            },
-          },
-        },
-      },
-      {
-        day: 4,
-        type: 'learning',
-        content: {
-          en: {
-            title: 'Well Control and Safety',
-            explanation: 'Well control is critical for safe drilling operations. The Blowout Preventer (BOP) is the primary safety device that can seal the well if formation fluids unexpectedly enter the wellbore (a kick). Maintaining proper mud weight ensures the hydrostatic pressure exceeds formation pressure. Regular drills and training prepare crews for emergency situations.',
-            keyTerms: [
-              { term: 'BOP', definition: 'Blowout Preventer - equipment that seals the well in emergencies' },
-              { term: 'Kick', definition: 'Unexpected entry of formation fluids into the wellbore' },
-              { term: 'Mud Weight', definition: 'The density of drilling fluid, measured in pounds per gallon (ppg)' },
-            ],
-            practiceQuestion: {
-              question: 'What is a "kick" in drilling?',
-              options: ['A type of drill bit', 'Unexpected entry of formation fluids', 'A drilling technique', 'A safety meeting'],
-              correctAnswer: 1,
-            },
-          },
-          ar: {
-            title: 'التحكم في البئر والسلامة',
-            explanation: 'التحكم في البئر أمر حاسم لعمليات الحفر الآمنة. مانع الانفجار هو جهاز السلامة الرئيسي الذي يمكنه إغلاق البئر إذا دخلت سوائل التكوين بشكل غير متوقع (ركلة). الحفاظ على وزن الطين المناسب يضمن أن الضغط الهيدروستاتيكي يتجاوز ضغط التكوين.',
-            keyTerms: [
-              { term: 'مانع الانفجار', definition: 'معدات تغلق البئر في حالات الطوارئ' },
-              { term: 'الركلة', definition: 'دخول غير متوقع لسوائل التكوين إلى فتحة البئر' },
-              { term: 'وزن الطين', definition: 'كثافة سائل الحفر، تُقاس بالرطل لكل غالون' },
-            ],
-            practiceQuestion: {
-              question: 'ما هي "الركلة" في الحفر؟',
-              options: ['نوع من رؤوس الحفر', 'دخول غير متوقع لسوائل التكوين', 'تقنية حفر', 'اجتماع سلامة'],
-              correctAnswer: 1,
-            },
-          },
-        },
-      },
-      {
-        day: 5,
-        type: 'learning',
-        content: {
-          en: {
-            title: 'Drilling Optimization',
-            explanation: 'Rate of Penetration (ROP) measures drilling speed in feet per hour. Optimizing ROP reduces costs and time. Factors affecting ROP include bit type, weight on bit (WOB), rotary speed (RPM), and mud properties. Modern wells use real-time data monitoring and optimization software to maximize efficiency while maintaining safety.',
-            keyTerms: [
-              { term: 'ROP', definition: 'Rate of Penetration - drilling speed measured in feet/hour' },
-              { term: 'WOB', definition: 'Weight on Bit - downward force applied to the drill bit' },
-              { term: 'RPM', definition: 'Rotations Per Minute - speed of drill string rotation' },
-            ],
-            practiceQuestion: {
-              question: 'What does ROP measure?',
-              options: ['Mud pressure', 'Drilling speed', 'Well depth', 'Pipe weight'],
-              correctAnswer: 1,
-            },
-          },
-          ar: {
-            title: 'تحسين الحفر',
-            explanation: 'معدل الاختراق يقيس سرعة الحفر بالقدم في الساعة. تحسين المعدل يقلل التكاليف والوقت. العوامل المؤثرة تشمل نوع الرأس، الوزن على الرأس، السرعة الدورانية، وخصائص الطين. الآبار الحديثة تستخدم مراقبة البيانات في الوقت الفعلي وبرامج التحسين.',
-            keyTerms: [
-              { term: 'معدل الاختراق', definition: 'سرعة الحفر تُقاس بالقدم/الساعة' },
-              { term: 'الوزن على الرأس', definition: 'القوة الهابطة المطبقة على رأس الحفر' },
-              { term: 'الدورات في الدقيقة', definition: 'سرعة دوران سلسلة الحفر' },
-            ],
-            practiceQuestion: {
-              question: 'ماذا يقيس معدل الاختراق؟',
-              options: ['ضغط الطين', 'سرعة الحفر', 'عمق البئر', 'وزن الأنبوب'],
-              correctAnswer: 1,
-            },
-          },
-        },
-      },
-      {
-        day: 6,
-        type: 'quiz',
-        content: {
-          en: { title: 'Drilling Basics Quiz', explanation: 'Test your knowledge of drilling fundamentals.', keyTerms: [] },
-          ar: { title: 'اختبار أساسيات الحفر', explanation: 'اختبر معرفتك بأساسيات الحفر.', keyTerms: [] },
-        },
-        quiz: {
-          en: [
-            { question: 'What creates a borehole in drilling operations?', options: ['Explosives', 'Rotating drill bit', 'Water pressure', 'Chemicals'], correctAnswer: 1 },
-            { question: 'What is drilling mud primarily used for?', options: ['Making cement', 'Cooling bit and removing cuttings', 'Painting equipment', 'Cleaning workers'], correctAnswer: 1 },
-            { question: 'What is the annulus?', options: ['A type of drill bit', 'Space between drill string and wellbore', 'A safety valve', 'The derrick top'], correctAnswer: 1 },
-            { question: 'Which drilling method is most common?', options: ['Cable tool', 'Rotary drilling', 'Manual', 'Sonic'], correctAnswer: 1 },
-            { question: 'What does BOP stand for?', options: ['Basic Oil Pump', 'Blowout Preventer', 'Bit Operating Power', 'Bottom Of Pipe'], correctAnswer: 1 },
-            { question: 'What is a kick?', options: ['Breaking the bit', 'Formation fluids entering wellbore', 'Starting the drill', 'Ending operations'], correctAnswer: 1 },
-            { question: 'What does ROP measure?', options: ['Mud weight', 'Drilling speed', 'Pressure', 'Temperature'], correctAnswer: 1 },
-            { question: 'What affects Rate of Penetration?', options: ['Weather only', 'Bit type and WOB', 'Time of day', 'Crew size'], correctAnswer: 1 },
-            { question: 'What is directional drilling?', options: ['Drilling only up', 'Drilling at angles from vertical', 'Drilling in circles', 'Random drilling'], correctAnswer: 1 },
-            { question: 'Why is mud weight important?', options: ['For color', 'To control formation pressure', 'For taste', 'For smell'], correctAnswer: 1 },
-          ],
-          ar: [
-            { question: 'ما الذي ينشئ فتحة البئر في عمليات الحفر؟', options: ['المتفجرات', 'رأس الحفر الدوار', 'ضغط الماء', 'المواد الكيميائية'], correctAnswer: 1 },
-            { question: 'ما هو الاستخدام الرئيسي لطين الحفر؟', options: ['صنع الأسمنت', 'تبريد الرأس وإزالة الفتات', 'طلاء المعدات', 'تنظيف العمال'], correctAnswer: 1 },
-            { question: 'ما هو الفراغ الحلقي؟', options: ['نوع من رؤوس الحفر', 'المساحة بين سلسلة الحفر والبئر', 'صمام أمان', 'قمة البرج'], correctAnswer: 1 },
-            { question: 'أي طريقة حفر هي الأكثر شيوعاً؟', options: ['أداة الكابل', 'الحفر الدوار', 'اليدوي', 'الصوتي'], correctAnswer: 1 },
-            { question: 'ماذا يعني BOP؟', options: ['مضخة نفط أساسية', 'مانع الانفجار', 'قوة تشغيل الرأس', 'أسفل الأنبوب'], correctAnswer: 1 },
-            { question: 'ما هي الركلة؟', options: ['كسر الرأس', 'دخول سوائل التكوين للبئر', 'بدء الحفر', 'إنهاء العمليات'], correctAnswer: 1 },
-            { question: 'ماذا يقيس معدل الاختراق؟', options: ['وزن الطين', 'سرعة الحفر', 'الضغط', 'الحرارة'], correctAnswer: 1 },
-            { question: 'ما الذي يؤثر على معدل الاختراق؟', options: ['الطقس فقط', 'نوع الرأس والوزن عليه', 'وقت اليوم', 'حجم الطاقم'], correctAnswer: 1 },
-            { question: 'ما هو الحفر الموجه؟', options: ['الحفر للأعلى فقط', 'الحفر بزوايا من العمودي', 'الحفر بشكل دائري', 'الحفر العشوائي'], correctAnswer: 1 },
-            { question: 'لماذا وزن الطين مهم؟', options: ['للون', 'للتحكم في ضغط التكوين', 'للطعم', 'للرائحة'], correctAnswer: 1 },
-          ],
-        },
-      },
-      {
-        day: 7,
-        type: 'project',
-        content: {
-          en: { title: 'Drilling Project', explanation: 'Apply your drilling knowledge.', keyTerms: [] },
-          ar: { title: 'مشروع الحفر', explanation: 'طبق معرفتك بالحفر.', keyTerms: [] },
-        },
-        project: {
-          en: {
-            title: 'Design a Simple Well Plan',
-            description: 'Create a basic well plan diagram showing the major components of a drilling operation.',
-            instructions: [
-              'Draw or describe a simple wellbore showing: surface casing, intermediate casing, and production casing',
-              'Label the key components: derrick, drill string, drill bit, BOP, and mud system',
-              'Explain the purpose of each component in 2-3 sentences',
-              'Include the target depth and one drilling challenge you might face',
-            ],
-            submissionType: 'both',
-          },
-          ar: {
-            title: 'تصميم خطة بئر بسيطة',
-            description: 'أنشئ رسماً بيانياً لخطة بئر أساسية تُظهر المكونات الرئيسية لعملية الحفر.',
-            instructions: [
-              'ارسم أو صف فتحة بئر بسيطة تُظهر: الغلاف السطحي، الغلاف الوسيط، وغلاف الإنتاج',
-              'ضع علامات على المكونات الرئيسية: البرج، سلسلة الحفر، رأس الحفر، مانع الانفجار، ونظام الطين',
-              'اشرح غرض كل مكون في 2-3 جمل',
-              'أضف العمق المستهدف وتحدٍ حفر واحد قد تواجهه',
-            ],
-            submissionType: 'both',
-          },
-        },
-      },
-    ],
-  },
-  // Types of Wells
-  {
-    lessonId: 'wells',
-    days: [
-      {
-        day: 1,
-        type: 'learning',
-        content: {
-          en: {
-            title: 'Classification of Wells by Purpose',
-            explanation: 'Wells are classified based on their purpose. Exploration wells (wildcats) are drilled to discover new hydrocarbon reservoirs in unproven areas. Appraisal wells help determine the size and commercial viability of a discovery. Development wells are drilled after a field is confirmed to produce hydrocarbons commercially.',
-            keyTerms: [
-              { term: 'Wildcat Well', definition: 'An exploration well drilled in an unproven area' },
-              { term: 'Appraisal Well', definition: 'A well drilled to evaluate the extent of a discovered reservoir' },
-              { term: 'Development Well', definition: 'A well drilled to produce hydrocarbons from a proven field' },
-            ],
-            practiceQuestion: {
-              question: 'What is a wildcat well?',
-              options: ['A well with wild animals', 'An exploration well in an unproven area', 'A damaged well', 'A very deep well'],
-              correctAnswer: 1,
-            },
-          },
-          ar: {
-            title: 'تصنيف الآبار حسب الغرض',
-            explanation: 'تُصنف الآبار بناءً على غرضها. آبار الاستكشاف تُحفر لاكتشاف مخزونات هيدروكربونية جديدة في مناطق غير مثبتة. آبار التقييم تساعد في تحديد حجم الاكتشاف وجدواه التجارية. آبار التطوير تُحفر بعد تأكيد الحقل لإنتاج الهيدروكربونات تجارياً.',
-            keyTerms: [
-              { term: 'بئر استكشافي', definition: 'بئر استكشاف يُحفر في منطقة غير مثبتة' },
-              { term: 'بئر تقييم', definition: 'بئر يُحفر لتقييم مدى المخزون المكتشف' },
-              { term: 'بئر تطوير', definition: 'بئر يُحفر لإنتاج الهيدروكربونات من حقل مثبت' },
-            ],
-            practiceQuestion: {
-              question: 'ما هو البئر الاستكشافي؟',
-              options: ['بئر به حيوانات برية', 'بئر استكشاف في منطقة غير مثبتة', 'بئر تالف', 'بئر عميق جداً'],
-              correctAnswer: 1,
-            },
-          },
-        },
-      },
-      {
-        day: 2,
-        type: 'learning',
-        content: {
-          en: {
-            title: 'Wells by Trajectory',
-            explanation: 'Well trajectory refers to the path of the wellbore. Vertical wells go straight down and are simplest to drill. Deviated wells angle away from vertical to reach targets offset from the surface location. Horizontal wells run parallel to reservoir layers, maximizing contact area. Multilateral wells have multiple branches from a single main wellbore.',
-            keyTerms: [
-              { term: 'Vertical Well', definition: 'A well drilled straight down from surface' },
-              { term: 'Deviated Well', definition: 'A well drilled at an angle from vertical' },
-              { term: 'Multilateral Well', definition: 'A well with multiple branches from one main bore' },
-            ],
-            practiceQuestion: {
-              question: 'What is a horizontal well?',
-              options: ['A well that goes straight down', 'A well parallel to reservoir layers', 'A well that goes up', 'A well on flat ground'],
-              correctAnswer: 1,
-            },
-          },
-          ar: {
-            title: 'الآبار حسب المسار',
-            explanation: 'مسار البئر يشير إلى طريق فتحة البئر. الآبار العمودية تذهب مباشرة للأسفل وهي الأبسط حفراً. الآبار المنحرفة تميل بعيداً عن العمودي للوصول إلى أهداف بعيدة عن موقع السطح. الآبار الأفقية تسير موازية لطبقات المخزون. الآبار متعددة الفروع لها فروع متعددة من فتحة رئيسية واحدة.',
-            keyTerms: [
-              { term: 'بئر عمودي', definition: 'بئر يُحفر مباشرة للأسفل من السطح' },
-              { term: 'بئر منحرف', definition: 'بئر يُحفر بزاوية من العمودي' },
-              { term: 'بئر متعدد الفروع', definition: 'بئر بفروع متعددة من فتحة رئيسية واحدة' },
-            ],
-            practiceQuestion: {
-              question: 'ما هو البئر الأفقي؟',
-              options: ['بئر يذهب مباشرة للأسفل', 'بئر موازٍ لطبقات المخزون', 'بئر يذهب للأعلى', 'بئر على أرض مسطحة'],
-              correctAnswer: 1,
-            },
-          },
-        },
-      },
-      {
-        day: 3,
-        type: 'learning',
-        content: {
-          en: {
-            title: 'Production and Injection Wells',
-            explanation: 'Production wells bring oil and gas to the surface. They can produce naturally (flowing wells) or require artificial lift methods like pumps. Injection wells are used for Enhanced Oil Recovery (EOR) by injecting water, gas, or chemicals to maintain reservoir pressure and push oil toward production wells.',
-            keyTerms: [
-              { term: 'Production Well', definition: 'A well that brings hydrocarbons to the surface' },
-              { term: 'Injection Well', definition: 'A well used to inject fluids into the reservoir' },
-              { term: 'EOR', definition: 'Enhanced Oil Recovery - methods to increase oil extraction' },
-            ],
-            practiceQuestion: {
-              question: 'What is the purpose of an injection well?',
-              options: ['To produce oil', 'To inject fluids for pressure maintenance', 'To explore new areas', 'To store equipment'],
-              correctAnswer: 1,
-            },
-          },
-          ar: {
-            title: 'آبار الإنتاج والحقن',
-            explanation: 'آبار الإنتاج تجلب النفط والغاز إلى السطح. يمكن أن تنتج طبيعياً (آبار متدفقة) أو تتطلب طرق رفع اصطناعي مثل المضخات. آبار الحقن تُستخدم لتحسين استخلاص النفط بحقن الماء أو الغاز أو المواد الكيميائية للحفاظ على ضغط المخزون ودفع النفط نحو آبار الإنتاج.',
-            keyTerms: [
-              { term: 'بئر إنتاج', definition: 'بئر يجلب الهيدروكربونات إلى السطح' },
-              { term: 'بئر حقن', definition: 'بئر يُستخدم لحقن السوائل في المخزون' },
-              { term: 'تحسين الاستخلاص', definition: 'طرق لزيادة استخراج النفط' },
-            ],
-            practiceQuestion: {
-              question: 'ما هو غرض بئر الحقن؟',
-              options: ['لإنتاج النفط', 'لحقن السوائل للحفاظ على الضغط', 'لاستكشاف مناطق جديدة', 'لتخزين المعدات'],
-              correctAnswer: 1,
-            },
-          },
-        },
-      },
-      {
-        day: 4,
-        type: 'learning',
-        content: {
-          en: {
-            title: 'Onshore vs Offshore Wells',
-            explanation: 'Onshore wells are drilled on land and are generally simpler and less expensive. Offshore wells are drilled in marine environments using platforms, jack-up rigs, semi-submersibles, or drillships. Offshore drilling is more complex due to water depth, weather conditions, and logistics, but often accesses larger reserves.',
-            keyTerms: [
-              { term: 'Onshore', definition: 'Drilling operations conducted on land' },
-              { term: 'Offshore', definition: 'Drilling operations in marine environments' },
-              { term: 'Platform', definition: 'A fixed structure for offshore drilling and production' },
-            ],
-            practiceQuestion: {
-              question: 'What makes offshore drilling more complex?',
-              options: ['Simpler equipment', 'Water depth and weather', 'Shorter distances', 'Fewer regulations'],
-              correctAnswer: 1,
-            },
-          },
-          ar: {
-            title: 'الآبار البرية مقابل البحرية',
-            explanation: 'الآبار البرية تُحفر على اليابسة وهي عموماً أبسط وأقل تكلفة. الآبار البحرية تُحفر في البيئات البحرية باستخدام المنصات أو أجهزة الجاك أب أو شبه الغاطسة أو سفن الحفر. الحفر البحري أكثر تعقيداً بسبب عمق المياه والظروف الجوية والخدمات اللوجستية.',
-            keyTerms: [
-              { term: 'بري', definition: 'عمليات حفر تُجرى على اليابسة' },
-              { term: 'بحري', definition: 'عمليات حفر في البيئات البحرية' },
-              { term: 'منصة', definition: 'هيكل ثابت للحفر والإنتاج البحري' },
-            ],
-            practiceQuestion: {
-              question: 'ما الذي يجعل الحفر البحري أكثر تعقيداً؟',
-              options: ['معدات أبسط', 'عمق المياه والطقس', 'مسافات أقصر', 'لوائح أقل'],
-              correctAnswer: 1,
-            },
-          },
-        },
-      },
-      {
-        day: 5,
-        type: 'learning',
-        content: {
-          en: {
-            title: 'Well Completion and Workover',
-            explanation: 'Well completion prepares a drilled well for production by installing casing, cementing, and perforating the production zone. Workover operations are performed on existing wells to restore or enhance production, fix problems, or convert well use. Both are essential for maximizing well productivity throughout its lifecycle.',
-            keyTerms: [
-              { term: 'Completion', definition: 'Process of preparing a well for production' },
-              { term: 'Perforation', definition: 'Creating holes through casing to allow fluid flow' },
-              { term: 'Workover', definition: 'Operations to maintain or improve an existing well' },
-            ],
-            practiceQuestion: {
-              question: 'What is well completion?',
-              options: ['Abandoning a well', 'Preparing a well for production', 'Starting to drill', 'Destroying a well'],
-              correctAnswer: 1,
-            },
-          },
-          ar: {
-            title: 'إكمال البئر والصيانة',
-            explanation: 'إكمال البئر يُحضر البئر المحفور للإنتاج بتركيب الغلاف والتسميت وثقب منطقة الإنتاج. عمليات الصيانة تُجرى على الآبار الموجودة لاستعادة أو تحسين الإنتاج أو إصلاح المشاكل أو تحويل استخدام البئر.',
-            keyTerms: [
-              { term: 'الإكمال', definition: 'عملية تحضير البئر للإنتاج' },
-              { term: 'الثقب', definition: 'إنشاء ثقوب عبر الغلاف للسماح بتدفق السوائل' },
-              { term: 'الصيانة', definition: 'عمليات للحفاظ على بئر موجود أو تحسينه' },
-            ],
-            practiceQuestion: {
-              question: 'ما هو إكمال البئر؟',
-              options: ['التخلي عن البئر', 'تحضير البئر للإنتاج', 'بدء الحفر', 'تدمير البئر'],
-              correctAnswer: 1,
-            },
-          },
-        },
-      },
-      {
-        day: 6,
-        type: 'quiz',
-        content: {
-          en: { title: 'Types of Wells Quiz', explanation: 'Test your knowledge of well types.', keyTerms: [] },
-          ar: { title: 'اختبار أنواع الآبار', explanation: 'اختبر معرفتك بأنواع الآبار.', keyTerms: [] },
-        },
-        quiz: {
-          en: [
-            { question: 'What is a wildcat well?', options: ['A production well', 'An exploration well in unproven area', 'An injection well', 'A horizontal well'], correctAnswer: 1 },
-            { question: 'What determines an appraisal well?', options: ['It produces oil', 'It evaluates discovery size', 'It injects water', 'It is abandoned'], correctAnswer: 1 },
-            { question: 'What is a vertical well?', options: ['Drilled at 45 degrees', 'Drilled straight down', 'Drilled horizontally', 'Drilled in circles'], correctAnswer: 1 },
-            { question: 'What is the purpose of injection wells?', options: ['Produce gas', 'Maintain reservoir pressure', 'Store equipment', 'Train workers'], correctAnswer: 1 },
-            { question: 'Where is offshore drilling done?', options: ['Mountains', 'Marine environments', 'Deserts only', 'Underground caves'], correctAnswer: 1 },
-            { question: 'What is well completion?', options: ['Drilling start', 'Preparing well for production', 'Well abandonment', 'Equipment storage'], correctAnswer: 1 },
-            { question: 'What is a multilateral well?', options: ['Multiple wells', 'One well with multiple branches', 'A straight well', 'A water well'], correctAnswer: 1 },
-            { question: 'What does EOR stand for?', options: ['End of Resources', 'Enhanced Oil Recovery', 'Emergency Oil Response', 'Early Oil Removal'], correctAnswer: 1 },
-            { question: 'What is perforation?', options: ['Drilling deeper', 'Creating holes in casing', 'Cleaning the well', 'Cementing'], correctAnswer: 1 },
-            { question: 'What is a workover?', options: ['New drilling', 'Maintaining existing wells', 'Building platforms', 'Training exercise'], correctAnswer: 1 },
-          ],
-          ar: [
-            { question: 'ما هو البئر الاستكشافي؟', options: ['بئر إنتاج', 'بئر استكشاف في منطقة غير مثبتة', 'بئر حقن', 'بئر أفقي'], correctAnswer: 1 },
-            { question: 'ما الذي يحدد بئر التقييم؟', options: ['ينتج النفط', 'يقيم حجم الاكتشاف', 'يحقن الماء', 'مهجور'], correctAnswer: 1 },
-            { question: 'ما هو البئر العمودي؟', options: ['يُحفر بزاوية 45 درجة', 'يُحفر مباشرة للأسفل', 'يُحفر أفقياً', 'يُحفر بشكل دائري'], correctAnswer: 1 },
-            { question: 'ما هو غرض آبار الحقن؟', options: ['إنتاج الغاز', 'الحفاظ على ضغط المخزون', 'تخزين المعدات', 'تدريب العمال'], correctAnswer: 1 },
-            { question: 'أين يُجرى الحفر البحري؟', options: ['الجبال', 'البيئات البحرية', 'الصحاري فقط', 'الكهوف الجوفية'], correctAnswer: 1 },
-            { question: 'ما هو إكمال البئر؟', options: ['بدء الحفر', 'تحضير البئر للإنتاج', 'التخلي عن البئر', 'تخزين المعدات'], correctAnswer: 1 },
-            { question: 'ما هو البئر متعدد الفروع؟', options: ['آبار متعددة', 'بئر واحد بفروع متعددة', 'بئر مستقيم', 'بئر ماء'], correctAnswer: 1 },
-            { question: 'ماذا يعني EOR؟', options: ['نهاية الموارد', 'تحسين استخلاص النفط', 'استجابة طوارئ النفط', 'إزالة النفط المبكرة'], correctAnswer: 1 },
-            { question: 'ما هو الثقب؟', options: ['الحفر أعمق', 'إنشاء ثقوب في الغلاف', 'تنظيف البئر', 'التسميت'], correctAnswer: 1 },
-            { question: 'ما هي الصيانة؟', options: ['حفر جديد', 'صيانة الآبار الموجودة', 'بناء المنصات', 'تمرين تدريبي'], correctAnswer: 1 },
-          ],
-        },
-      },
-      {
-        day: 7,
-        type: 'project',
-        content: {
-          en: { title: 'Well Types Project', explanation: 'Apply your knowledge of well types.', keyTerms: [] },
-          ar: { title: 'مشروع أنواع الآبار', explanation: 'طبق معرفتك بأنواع الآبار.', keyTerms: [] },
-        },
-        project: {
-          en: {
-            title: 'Well Classification Chart',
-            description: 'Create a comprehensive chart or diagram showing different well types and their purposes.',
-            instructions: [
-              'Create a visual chart showing at least 6 different well types',
-              'Include: Purpose (exploration, production, injection), Trajectory (vertical, horizontal, deviated), and Location (onshore, offshore)',
-              'For each type, write one sentence explaining when it would be used',
-              'You may draw the chart or create it digitally',
-            ],
-            submissionType: 'both',
-          },
-          ar: {
-            title: 'مخطط تصنيف الآبار',
-            description: 'أنشئ مخططاً أو رسماً بيانياً شاملاً يُظهر أنواع الآبار المختلفة وأغراضها.',
-            instructions: [
-              'أنشئ مخططاً بصرياً يُظهر على الأقل 6 أنواع مختلفة من الآبار',
-              'أضف: الغرض (استكشاف، إنتاج، حقن)، المسار (عمودي، أفقي، منحرف)، والموقع (بري، بحري)',
-              'لكل نوع، اكتب جملة واحدة تشرح متى سيُستخدم',
-              'يمكنك رسم المخطط أو إنشاؤه رقمياً',
-            ],
-            submissionType: 'both',
-          },
-        },
-      },
-    ],
-  },
-  // Drilling Rig Overview
-  {
-    lessonId: 'rig',
-    days: [
-      {
-        day: 1,
-        type: 'learning',
-        content: {
-          en: {
-            title: 'Introduction to Drilling Rigs',
-            explanation: 'A drilling rig is a complex integrated system designed to drill boreholes into the earth. It includes mechanical, hydraulic, and electrical systems working together. The rig must handle the weight of miles of drill pipe, rotate the drill string, pump mud, and provide safety controls. Rigs range from small land units to massive offshore platforms.',
-            keyTerms: [
-              { term: 'Drilling Rig', definition: 'A machine used to create boreholes in the earth' },
-              { term: 'Land Rig', definition: 'A drilling rig designed for onshore operations' },
-              { term: 'Offshore Rig', definition: 'A drilling rig designed for marine environments' },
-            ],
-            practiceQuestion: {
-              question: 'What is the main purpose of a drilling rig?',
-              options: ['To pump water', 'To create boreholes in the earth', 'To transport oil', 'To refine petroleum'],
-              correctAnswer: 1,
-            },
-          },
-          ar: {
-            title: 'مقدمة في أجهزة الحفر',
-            explanation: 'جهاز الحفر هو نظام متكامل معقد مصمم لحفر ثقوب في الأرض. يشمل أنظمة ميكانيكية وهيدروليكية وكهربائية تعمل معاً. يجب أن يتعامل الجهاز مع وزن أميال من أنابيب الحفر، ويدير سلسلة الحفر، ويضخ الطين، ويوفر ضوابط السلامة.',
-            keyTerms: [
-              { term: 'جهاز الحفر', definition: 'آلة تُستخدم لإنشاء ثقوب في الأرض' },
-              { term: 'جهاز بري', definition: 'جهاز حفر مصمم للعمليات البرية' },
-              { term: 'جهاز بحري', definition: 'جهاز حفر مصمم للبيئات البحرية' },
-            ],
-            practiceQuestion: {
-              question: 'ما هو الغرض الرئيسي من جهاز الحفر؟',
-              options: ['ضخ المياه', 'إنشاء ثقوب في الأرض', 'نقل النفط', 'تكرير النفط'],
-              correctAnswer: 1,
-            },
-          },
-        },
-      },
-      {
-        day: 2,
-        type: 'learning',
-        content: {
-          en: {
-            title: 'The Derrick and Mast',
-            explanation: 'The derrick (or mast) is the tall structure that supports the hoisting equipment. Traditional derricks are permanently erected, while masts can be raised and lowered for transportation. The crown block sits at the top, and the traveling block moves up and down. Together they form the block and tackle system for lifting heavy loads.',
-            keyTerms: [
-              { term: 'Derrick', definition: 'The tall tower structure on a drilling rig' },
-              { term: 'Crown Block', definition: 'The fixed pulley system at the top of the derrick' },
-              { term: 'Traveling Block', definition: 'The movable pulley system that raises and lowers equipment' },
-            ],
-            practiceQuestion: {
-              question: 'Where is the crown block located?',
-              options: ['At the bottom of the well', 'At the top of the derrick', 'Underground', 'In the mud pit'],
-              correctAnswer: 1,
-            },
-          },
-          ar: {
-            title: 'البرج والصاري',
-            explanation: 'البرج (أو الصاري) هو الهيكل الطويل الذي يدعم معدات الرفع. الأبراج التقليدية تُنصب بشكل دائم، بينما الصواري يمكن رفعها وخفضها للنقل. البكرة العلوية توجد في الأعلى، والبكرة المتحركة تتحرك صعوداً ونزولاً.',
-            keyTerms: [
-              { term: 'البرج', definition: 'هيكل البرج الطويل على جهاز الحفر' },
-              { term: 'البكرة العلوية', definition: 'نظام البكرة الثابت في أعلى البرج' },
-              { term: 'البكرة المتحركة', definition: 'نظام البكرة المتحرك الذي يرفع ويخفض المعدات' },
-            ],
-            practiceQuestion: {
-              question: 'أين توجد البكرة العلوية؟',
-              options: ['في قاع البئر', 'في أعلى البرج', 'تحت الأرض', 'في حوض الطين'],
-              correctAnswer: 1,
-            },
-          },
-        },
-      },
-      {
-        day: 3,
-        type: 'learning',
-        content: {
-          en: {
-            title: 'Power and Hoisting Systems',
-            explanation: 'The drawworks is the main hoisting equipment, using powerful motors to raise and lower the drill string. Power is typically provided by diesel engines or electric motors. The rotary table or top drive provides rotation to the drill string. Modern rigs often use top drives for better efficiency and safety.',
-            keyTerms: [
-              { term: 'Drawworks', definition: 'The main hoisting mechanism on a drilling rig' },
-              { term: 'Top Drive', definition: 'A motor that rotates the drill string from above' },
-              { term: 'Rotary Table', definition: 'A rotating platform that turns the drill string' },
-            ],
-            practiceQuestion: {
-              question: 'What is the function of the drawworks?',
-              options: ['To circulate mud', 'To hoist the drill string', 'To prevent blowouts', 'To store pipe'],
-              correctAnswer: 1,
-            },
-          },
-          ar: {
-            title: 'أنظمة الطاقة والرفع',
-            explanation: 'الرافعة هي معدات الرفع الرئيسية، تستخدم محركات قوية لرفع وخفض سلسلة الحفر. الطاقة تُوفر عادة بمحركات الديزل أو المحركات الكهربائية. الطاولة الدوارة أو المحرك العلوي يوفر الدوران لسلسلة الحفر.',
-            keyTerms: [
-              { term: 'الرافعة', definition: 'آلية الرفع الرئيسية على جهاز الحفر' },
-              { term: 'المحرك العلوي', definition: 'محرك يدير سلسلة الحفر من الأعلى' },
-              { term: 'الطاولة الدوارة', definition: 'منصة دوارة تدير سلسلة الحفر' },
-            ],
-            practiceQuestion: {
-              question: 'ما هي وظيفة الرافعة؟',
-              options: ['تدوير الطين', 'رفع سلسلة الحفر', 'منع الانفجارات', 'تخزين الأنابيب'],
-              correctAnswer: 1,
-            },
-          },
-        },
-      },
-      {
-        day: 4,
-        type: 'learning',
-        content: {
-          en: {
-            title: 'Mud System and Circulation',
-            explanation: 'The mud system includes mud tanks, mud pumps, and circulation equipment. Mud pumps pressurize drilling fluid and send it down the drill string. The mud exits through the bit, cools it, and carries cuttings up the annulus. At surface, cuttings are removed by shale shakers, and clean mud is recirculated.',
-            keyTerms: [
-              { term: 'Mud Pump', definition: 'Pumps that pressurize and circulate drilling fluid' },
-              { term: 'Mud Tank', definition: 'Storage containers for drilling fluid' },
-              { term: 'Shale Shaker', definition: 'Equipment that separates cuttings from drilling mud' },
-            ],
-            practiceQuestion: {
-              question: 'What does a shale shaker do?',
-              options: ['Pumps mud', 'Separates cuttings from mud', 'Rotates the drill string', 'Prevents blowouts'],
-              correctAnswer: 1,
-            },
-          },
-          ar: {
-            title: 'نظام الطين والتدوير',
-            explanation: 'نظام الطين يشمل خزانات الطين ومضخات الطين ومعدات التدوير. مضخات الطين تضغط سائل الحفر وترسله عبر سلسلة الحفر. يخرج الطين عبر الرأس، يبرده، ويحمل الفتات عبر الفراغ الحلقي. على السطح، يُزال الفتات بالغرابيل.',
-            keyTerms: [
-              { term: 'مضخة الطين', definition: 'مضخات تضغط وتدور سائل الحفر' },
-              { term: 'خزان الطين', definition: 'حاويات تخزين لسائل الحفر' },
-              { term: 'غربال الصخر', definition: 'معدات تفصل الفتات عن طين الحفر' },
-            ],
-            practiceQuestion: {
-              question: 'ماذا يفعل غربال الصخر؟',
-              options: ['يضخ الطين', 'يفصل الفتات عن الطين', 'يدير سلسلة الحفر', 'يمنع الانفجارات'],
-              correctAnswer: 1,
-            },
-          },
-        },
-      },
-      {
-        day: 5,
-        type: 'learning',
-        content: {
-          en: {
-            title: 'Well Control Equipment',
-            explanation: 'The Blowout Preventer (BOP) stack is the primary well control equipment. It includes annular preventers that can seal around any shape, and ram preventers that can close on pipe or shear it in emergencies. The BOP is tested regularly and is essential for preventing uncontrolled releases of formation fluids.',
-            keyTerms: [
-              { term: 'BOP Stack', definition: 'Assembly of blowout preventers for well control' },
-              { term: 'Annular Preventer', definition: 'A BOP that seals around any size drill pipe' },
-              { term: 'Ram Preventer', definition: 'A BOP with rams that close to seal the well' },
-            ],
-            practiceQuestion: {
-              question: 'What can an annular preventer seal around?',
-              options: ['Only large pipe', 'Any size or shape', 'Only when empty', 'Only metal objects'],
-              correctAnswer: 1,
-            },
-          },
-          ar: {
-            title: 'معدات التحكم في البئر',
-            explanation: 'مجموعة مانع الانفجار هي معدات التحكم الرئيسية في البئر. تشمل موانع حلقية يمكنها الإغلاق حول أي شكل، وموانع كبس يمكنها الإغلاق على الأنبوب أو قصه في حالات الطوارئ. يُختبر مانع الانفجار بانتظام وهو ضروري لمنع الإطلاقات غير المتحكمة.',
-            keyTerms: [
-              { term: 'مجموعة مانع الانفجار', definition: 'تجميع موانع الانفجار للتحكم في البئر' },
-              { term: 'المانع الحلقي', definition: 'مانع انفجار يغلق حول أي حجم أنبوب' },
-              { term: 'مانع الكبس', definition: 'مانع انفجار بكباسات تغلق لإحكام البئر' },
-            ],
-            practiceQuestion: {
-              question: 'حول ماذا يمكن للمانع الحلقي الإغلاق؟',
-              options: ['الأنابيب الكبيرة فقط', 'أي حجم أو شكل', 'فقط عندما يكون فارغاً', 'الأجسام المعدنية فقط'],
-              correctAnswer: 1,
-            },
-          },
-        },
-      },
-      {
-        day: 6,
-        type: 'quiz',
-        content: {
-          en: { title: 'Drilling Rig Quiz', explanation: 'Test your knowledge of rig components.', keyTerms: [] },
-          ar: { title: 'اختبار جهاز الحفر', explanation: 'اختبر معرفتك بمكونات الجهاز.', keyTerms: [] },
-        },
-        quiz: {
-          en: [
-            { question: 'What is the tall structure on a rig called?', options: ['Pump house', 'Derrick/Mast', 'Mud tank', 'Generator'], correctAnswer: 1 },
-            { question: 'Where is the crown block?', options: ['Underground', 'Top of derrick', 'In the mud', 'On the ground'], correctAnswer: 1 },
-            { question: 'What does the drawworks do?', options: ['Pumps mud', 'Hoists drill string', 'Generates power', 'Stores pipe'], correctAnswer: 1 },
-            { question: 'What is a top drive?', options: ['A vehicle', 'Motor that rotates drill string from above', 'A pump', 'A safety valve'], correctAnswer: 1 },
-            { question: 'What do mud pumps do?', options: ['Store mud', 'Circulate drilling fluid', 'Clean the rig', 'Power the derrick'], correctAnswer: 1 },
-            { question: 'What does a shale shaker remove?', options: ['Oil', 'Cuttings from mud', 'Water', 'Gas'], correctAnswer: 1 },
-            { question: 'What does BOP stand for?', options: ['Bottom Of Pipe', 'Blowout Preventer', 'Basic Oil Pump', 'Bit Operation Power'], correctAnswer: 1 },
-            { question: 'What can an annular preventer seal?', options: ['Only empty hole', 'Any size pipe', 'Only casing', 'Only tubing'], correctAnswer: 1 },
-            { question: 'What type of rig works in the ocean?', options: ['Land rig', 'Offshore rig', 'Mountain rig', 'Desert rig'], correctAnswer: 1 },
-            { question: 'What does the rotary table do?', options: ['Stores tools', 'Rotates drill string', 'Pumps water', 'Houses crew'], correctAnswer: 1 },
-          ],
-          ar: [
-            { question: 'ماذا يُسمى الهيكل الطويل على الجهاز؟', options: ['بيت المضخات', 'البرج/الصاري', 'خزان الطين', 'المولد'], correctAnswer: 1 },
-            { question: 'أين توجد البكرة العلوية؟', options: ['تحت الأرض', 'أعلى البرج', 'في الطين', 'على الأرض'], correctAnswer: 1 },
-            { question: 'ماذا تفعل الرافعة؟', options: ['تضخ الطين', 'ترفع سلسلة الحفر', 'تولد الطاقة', 'تخزن الأنابيب'], correctAnswer: 1 },
-            { question: 'ما هو المحرك العلوي؟', options: ['مركبة', 'محرك يدير سلسلة الحفر من الأعلى', 'مضخة', 'صمام أمان'], correctAnswer: 1 },
-            { question: 'ماذا تفعل مضخات الطين؟', options: ['تخزن الطين', 'تدور سائل الحفر', 'تنظف الجهاز', 'تشغل البرج'], correctAnswer: 1 },
-            { question: 'ماذا يُزيل غربال الصخر؟', options: ['النفط', 'الفتات من الطين', 'الماء', 'الغاز'], correctAnswer: 1 },
-            { question: 'ماذا يعني BOP؟', options: ['أسفل الأنبوب', 'مانع الانفجار', 'مضخة نفط أساسية', 'قوة تشغيل الرأس'], correctAnswer: 1 },
-            { question: 'ماذا يمكن للمانع الحلقي إغلاقه؟', options: ['الفتحة الفارغة فقط', 'أي حجم أنبوب', 'الغلاف فقط', 'الأنابيب فقط'], correctAnswer: 1 },
-            { question: 'أي نوع جهاز يعمل في المحيط؟', options: ['جهاز بري', 'جهاز بحري', 'جهاز جبلي', 'جهاز صحراوي'], correctAnswer: 1 },
-            { question: 'ماذا تفعل الطاولة الدوارة؟', options: ['تخزن الأدوات', 'تدير سلسلة الحفر', 'تضخ الماء', 'تأوي الطاقم'], correctAnswer: 1 },
-          ],
-        },
-      },
-      {
-        day: 7,
-        type: 'project',
-        content: {
-          en: { title: 'Rig Components Project', explanation: 'Apply your knowledge of rig equipment.', keyTerms: [] },
-          ar: { title: 'مشروع مكونات الجهاز', explanation: 'طبق معرفتك بمعدات الجهاز.', keyTerms: [] },
-        },
-        project: {
-          en: {
-            title: 'Label a Drilling Rig Diagram',
-            description: 'Create a labeled diagram of a drilling rig showing all major components.',
-            instructions: [
-              'Draw or find a simple diagram of a drilling rig',
-              'Label at least 10 components: derrick, crown block, traveling block, drawworks, rotary table or top drive, mud pumps, mud tanks, shale shaker, BOP stack, and drill string',
-              'For each component, write a brief (1-2 sentence) description of its function',
-              'Include whether each component is part of the hoisting, rotation, circulation, or safety system',
-            ],
-            submissionType: 'both',
-          },
-          ar: {
-            title: 'تسمية مخطط جهاز الحفر',
-            description: 'أنشئ مخططاً مُعلَّماً لجهاز حفر يُظهر جميع المكونات الرئيسية.',
-            instructions: [
-              'ارسم أو ابحث عن مخطط بسيط لجهاز حفر',
-              'ضع علامات على 10 مكونات على الأقل: البرج، البكرة العلوية، البكرة المتحركة، الرافعة، الطاولة الدوارة أو المحرك العلوي، مضخات الطين، خزانات الطين، غربال الصخر، مجموعة مانع الانفجار، وسلسلة الحفر',
-              'لكل مكون، اكتب وصفاً موجزاً (1-2 جملة) لوظيفته',
-              'أضف ما إذا كان كل مكون جزءاً من نظام الرفع أو الدوران أو التدوير أو السلامة',
-            ],
-            submissionType: 'both',
-          },
-        },
-      },
-    ],
-  },
-  // Units & Measurements
-  {
-    lessonId: 'units',
-    days: [
-      {
-        day: 1,
-        type: 'learning',
-        content: {
-          en: {
-            title: 'Introduction to Petroleum Measurements',
-            explanation: 'The petroleum industry uses specific measurement units that differ from everyday units. Understanding these units is crucial for communication and calculations. The industry operates globally, so both metric and imperial units are used depending on region. Conversions between systems are essential skills for petroleum engineers.',
-            keyTerms: [
-              { term: 'Imperial Units', definition: 'Measurement system using feet, pounds, gallons (common in US oilfields)' },
-              { term: 'Metric Units', definition: 'Measurement system using meters, kilograms, liters' },
-              { term: 'Oilfield Units', definition: 'Specialized units used specifically in petroleum operations' },
-            ],
-            practiceQuestion: {
-              question: 'Why are both metric and imperial units used in the oil industry?',
-              options: ['For confusion', 'Because it operates globally', 'For historical reasons only', 'They are the same'],
-              correctAnswer: 1,
-            },
-          },
-          ar: {
-            title: 'مقدمة في قياسات النفط',
-            explanation: 'تستخدم صناعة النفط وحدات قياس محددة تختلف عن الوحدات اليومية. فهم هذه الوحدات أمر حاسم للتواصل والحسابات. تعمل الصناعة عالمياً، لذا تُستخدم الوحدات المترية والإمبريالية حسب المنطقة. التحويلات بين الأنظمة مهارات أساسية لمهندسي النفط.',
-            keyTerms: [
-              { term: 'الوحدات الإمبريالية', definition: 'نظام قياس يستخدم الأقدام والأرطال والغالونات' },
-              { term: 'الوحدات المترية', definition: 'نظام قياس يستخدم الأمتار والكيلوغرامات واللترات' },
-              { term: 'وحدات حقول النفط', definition: 'وحدات متخصصة تُستخدم خصيصاً في عمليات النفط' },
-            ],
-            practiceQuestion: {
-              question: 'لماذا تُستخدم الوحدات المترية والإمبريالية في صناعة النفط؟',
-              options: ['للإرباك', 'لأنها تعمل عالمياً', 'لأسباب تاريخية فقط', 'هي نفسها'],
-              correctAnswer: 1,
-            },
-          },
-        },
-      },
-      {
-        day: 2,
-        type: 'learning',
-        content: {
-          en: {
-            title: 'Volume Measurements',
-            explanation: 'The barrel (bbl) is the standard unit for oil volume. One barrel equals 42 US gallons or approximately 159 liters. Production is often reported in barrels per day (bpd) or thousands of barrels per day (Mbpd). Gas is measured in cubic feet (cf) or cubic meters, and often reported as MCF (thousand cubic feet) or BCF (billion cubic feet).',
-            keyTerms: [
-              { term: 'Barrel (bbl)', definition: '42 US gallons or 159 liters of oil' },
-              { term: 'BPD', definition: 'Barrels Per Day - daily production rate' },
-              { term: 'MCF', definition: 'Thousand Cubic Feet - gas volume measurement' },
-            ],
-            practiceQuestion: {
-              question: 'How many US gallons are in one barrel of oil?',
-              options: ['32', '42', '52', '100'],
-              correctAnswer: 1,
-            },
-          },
-          ar: {
-            title: 'قياسات الحجم',
-            explanation: 'البرميل هو الوحدة القياسية لحجم النفط. برميل واحد يساوي 42 غالون أمريكي أو حوالي 159 لتر. غالباً ما يُبلغ عن الإنتاج بالبراميل في اليوم أو آلاف البراميل في اليوم. يُقاس الغاز بالأقدام المكعبة أو الأمتار المكعبة.',
-            keyTerms: [
-              { term: 'البرميل', definition: '42 غالون أمريكي أو 159 لتر من النفط' },
-              { term: 'براميل في اليوم', definition: 'معدل الإنتاج اليومي' },
-              { term: 'ألف قدم مكعب', definition: 'قياس حجم الغاز' },
-            ],
-            practiceQuestion: {
-              question: 'كم غالون أمريكي في برميل نفط واحد؟',
-              options: ['32', '42', '52', '100'],
-              correctAnswer: 1,
-            },
-          },
-        },
-      },
-      {
-        day: 3,
-        type: 'learning',
-        content: {
-          en: {
-            title: 'Pressure Measurements',
-            explanation: 'Pressure is critical in drilling and production. PSI (pounds per square inch) is common in US operations. Bar and Pascal are used in metric systems. Hydrostatic pressure increases with depth due to fluid column weight. Formation pressure, mud weight pressure, and wellhead pressure must be carefully monitored and controlled.',
-            keyTerms: [
-              { term: 'PSI', definition: 'Pounds per Square Inch - pressure measurement' },
-              { term: 'Bar', definition: 'Metric pressure unit (1 bar ≈ 14.5 psi)' },
-              { term: 'Hydrostatic Pressure', definition: 'Pressure exerted by a fluid column due to gravity' },
-            ],
-            practiceQuestion: {
-              question: 'What unit is commonly used for pressure in US oilfields?',
-              options: ['Meters', 'PSI', 'Gallons', 'Feet'],
-              correctAnswer: 1,
-            },
-          },
-          ar: {
-            title: 'قياسات الضغط',
-            explanation: 'الضغط أمر حاسم في الحفر والإنتاج. رطل لكل بوصة مربعة شائع في العمليات الأمريكية. البار والباسكال يُستخدمان في الأنظمة المترية. الضغط الهيدروستاتيكي يزيد مع العمق بسبب وزن عمود السائل.',
-            keyTerms: [
-              { term: 'رطل/بوصة مربعة', definition: 'قياس الضغط' },
-              { term: 'بار', definition: 'وحدة ضغط مترية (1 بار ≈ 14.5 رطل/بوصة)' },
-              { term: 'الضغط الهيدروستاتيكي', definition: 'الضغط الذي يمارسه عمود السائل بسبب الجاذبية' },
-            ],
-            practiceQuestion: {
-              question: 'أي وحدة تُستخدم عادة للضغط في حقول النفط الأمريكية؟',
-              options: ['أمتار', 'رطل/بوصة مربعة', 'غالونات', 'أقدام'],
-              correctAnswer: 1,
-            },
-          },
-        },
-      },
-      {
-        day: 4,
-        type: 'learning',
-        content: {
-          en: {
-            title: 'Depth and Length Measurements',
-            explanation: 'Depth is measured from a reference point (usually kelly bushing or rotary table). Feet are standard in US operations; meters in most other countries. Measured Depth (MD) is the actual length of the wellbore. True Vertical Depth (TVD) is the vertical distance. These differ in directional wells.',
-            keyTerms: [
-              { term: 'Measured Depth (MD)', definition: 'The actual length along the wellbore path' },
-              { term: 'True Vertical Depth (TVD)', definition: 'The vertical distance from surface' },
-              { term: 'Kelly Bushing (KB)', definition: 'Common reference point for depth measurements' },
-            ],
-            practiceQuestion: {
-              question: 'What is the difference between MD and TVD?',
-              options: ['They are always the same', 'MD is along wellbore, TVD is vertical distance', 'TVD is longer', 'MD is measured from sea level'],
-              correctAnswer: 1,
-            },
-          },
-          ar: {
-            title: 'قياسات العمق والطول',
-            explanation: 'يُقاس العمق من نقطة مرجعية (عادة جلبة الكيلي أو الطاولة الدوارة). الأقدام قياسية في العمليات الأمريكية؛ الأمتار في معظم البلدان الأخرى. العمق المقاس هو الطول الفعلي لفتحة البئر. العمق العمودي الحقيقي هو المسافة العمودية.',
-            keyTerms: [
-              { term: 'العمق المقاس', definition: 'الطول الفعلي على طول مسار البئر' },
-              { term: 'العمق العمودي الحقيقي', definition: 'المسافة العمودية من السطح' },
-              { term: 'جلبة الكيلي', definition: 'نقطة مرجعية شائعة لقياسات العمق' },
-            ],
-            practiceQuestion: {
-              question: 'ما الفرق بين العمق المقاس والعمق العمودي الحقيقي؟',
-              options: ['دائماً متساويان', 'المقاس على طول البئر، العمودي هو المسافة العمودية', 'العمودي أطول', 'المقاس يُقاس من مستوى البحر'],
-              correctAnswer: 1,
-            },
-          },
-        },
-      },
-      {
-        day: 5,
-        type: 'learning',
-        content: {
-          en: {
-            title: 'Drilling Fluid Properties',
-            explanation: 'Mud weight is measured in pounds per gallon (ppg) or specific gravity (SG). Viscosity is measured using a Marsh funnel (seconds) or with a viscometer (centipoise). Proper mud weight maintains wellbore stability and prevents kicks. Too heavy causes lost circulation; too light risks blowouts.',
-            keyTerms: [
-              { term: 'PPG', definition: 'Pounds Per Gallon - mud weight measurement' },
-              { term: 'Specific Gravity', definition: 'Ratio of fluid density to water density' },
-              { term: 'Viscosity', definition: 'A fluid\'s resistance to flow' },
-            ],
-            practiceQuestion: {
-              question: 'What unit is used for mud weight?',
-              options: ['PSI', 'PPG', 'BPD', 'MCF'],
-              correctAnswer: 1,
-            },
-          },
-          ar: {
-            title: 'خصائص سوائل الحفر',
-            explanation: 'وزن الطين يُقاس بالرطل لكل غالون أو الكثافة النوعية. اللزوجة تُقاس باستخدام قمع مارش (ثواني) أو مقياس اللزوجة (سنتيبواز). وزن الطين المناسب يحافظ على استقرار البئر ويمنع الركلات.',
-            keyTerms: [
-              { term: 'رطل/غالون', definition: 'قياس وزن الطين' },
-              { term: 'الكثافة النوعية', definition: 'نسبة كثافة السائل إلى كثافة الماء' },
-              { term: 'اللزوجة', definition: 'مقاومة السائل للتدفق' },
-            ],
-            practiceQuestion: {
-              question: 'أي وحدة تُستخدم لوزن الطين؟',
-              options: ['رطل/بوصة', 'رطل/غالون', 'براميل/يوم', 'ألف قدم مكعب'],
-              correctAnswer: 1,
-            },
-          },
-        },
-      },
-      {
-        day: 6,
-        type: 'quiz',
-        content: {
-          en: { title: 'Units & Measurements Quiz', explanation: 'Test your knowledge of petroleum measurements.', keyTerms: [] },
-          ar: { title: 'اختبار الوحدات والقياسات', explanation: 'اختبر معرفتك بقياسات النفط.', keyTerms: [] },
-        },
-        quiz: {
-          en: [
-            { question: 'How many US gallons in one barrel?', options: ['32', '42', '52', '62'], correctAnswer: 1 },
-            { question: 'What does BPD stand for?', options: ['Big Pressure Device', 'Barrels Per Day', 'Bottom Pipe Depth', 'Basic Production Data'], correctAnswer: 1 },
-            { question: 'How many liters in one barrel?', options: ['100', '159', '200', '250'], correctAnswer: 1 },
-            { question: 'What unit measures pressure in US oilfields?', options: ['Meters', 'PSI', 'Gallons', 'Barrels'], correctAnswer: 1 },
-            { question: 'What is hydrostatic pressure?', options: ['Water pressure only', 'Pressure from fluid column weight', 'Air pressure', 'Rock pressure'], correctAnswer: 1 },
-            { question: 'What is Measured Depth (MD)?', options: ['Vertical distance', 'Length along wellbore', 'Surface elevation', 'Sea level depth'], correctAnswer: 1 },
-            { question: 'What unit measures mud weight?', options: ['PSI', 'PPG', 'BPD', 'TVD'], correctAnswer: 1 },
-            { question: 'What does MCF measure?', options: ['Oil volume', 'Gas volume', 'Pressure', 'Temperature'], correctAnswer: 1 },
-            { question: 'What is True Vertical Depth?', options: ['Along the wellbore', 'Vertical distance from surface', 'Horizontal distance', 'Total length'], correctAnswer: 1 },
-            { question: '1 bar equals approximately how many PSI?', options: ['5', '14.5', '100', '42'], correctAnswer: 1 },
-          ],
-          ar: [
-            { question: 'كم غالون أمريكي في برميل واحد؟', options: ['32', '42', '52', '62'], correctAnswer: 1 },
-            { question: 'ماذا يعني BPD؟', options: ['جهاز ضغط كبير', 'براميل في اليوم', 'عمق أنبوب القاع', 'بيانات إنتاج أساسية'], correctAnswer: 1 },
-            { question: 'كم لتر في برميل واحد؟', options: ['100', '159', '200', '250'], correctAnswer: 1 },
-            { question: 'أي وحدة تقيس الضغط في حقول النفط الأمريكية؟', options: ['أمتار', 'رطل/بوصة مربعة', 'غالونات', 'براميل'], correctAnswer: 1 },
-            { question: 'ما هو الضغط الهيدروستاتيكي؟', options: ['ضغط الماء فقط', 'الضغط من وزن عمود السائل', 'ضغط الهواء', 'ضغط الصخور'], correctAnswer: 1 },
-            { question: 'ما هو العمق المقاس؟', options: ['المسافة العمودية', 'الطول على طول البئر', 'ارتفاع السطح', 'عمق مستوى البحر'], correctAnswer: 1 },
-            { question: 'أي وحدة تقيس وزن الطين؟', options: ['رطل/بوصة', 'رطل/غالون', 'براميل/يوم', 'عمق عمودي'], correctAnswer: 1 },
-            { question: 'ماذا يقيس MCF؟', options: ['حجم النفط', 'حجم الغاز', 'الضغط', 'الحرارة'], correctAnswer: 1 },
-            { question: 'ما هو العمق العمودي الحقيقي؟', options: ['على طول البئر', 'المسافة العمودية من السطح', 'المسافة الأفقية', 'الطول الإجمالي'], correctAnswer: 1 },
-            { question: '1 بار يساوي تقريباً كم رطل/بوصة؟', options: ['5', '14.5', '100', '42'], correctAnswer: 1 },
-          ],
-        },
-      },
-      {
-        day: 7,
-        type: 'project',
-        content: {
-          en: { title: 'Units Conversion Project', explanation: 'Practice converting petroleum units.', keyTerms: [] },
-          ar: { title: 'مشروع تحويل الوحدات', explanation: 'تدرب على تحويل وحدات النفط.', keyTerms: [] },
-        },
-        project: {
-          en: {
-            title: 'Unit Conversion Calculator',
-            description: 'Create a reference sheet or simple calculator for common petroleum unit conversions.',
-            instructions: [
-              'Create a conversion reference table including: barrels to liters, feet to meters, PSI to bar, PPG to specific gravity',
-              'Solve these conversion problems: (1) A well produces 5,000 BPD. How many liters per day? (2) A well is 10,000 feet deep. How many meters? (3) Formation pressure is 3,000 PSI. How many bar?',
-              'Show your work and formulas used',
-              'Create 3 of your own conversion problems with solutions',
-            ],
-            submissionType: 'text',
-          },
-          ar: {
-            title: 'حاسبة تحويل الوحدات',
-            description: 'أنشئ ورقة مرجعية أو حاسبة بسيطة لتحويلات وحدات النفط الشائعة.',
-            instructions: [
-              'أنشئ جدول تحويل مرجعي يشمل: براميل إلى لترات، أقدام إلى أمتار، رطل/بوصة إلى بار، رطل/غالون إلى كثافة نوعية',
-              'حل مسائل التحويل التالية: (1) بئر ينتج 5,000 برميل/يوم. كم لتر في اليوم؟ (2) بئر عمقه 10,000 قدم. كم متر؟ (3) ضغط التكوين 3,000 رطل/بوصة. كم بار؟',
-              'أظهر عملك والصيغ المستخدمة',
-              'أنشئ 3 مسائل تحويل خاصة بك مع الحلول',
-            ],
-            submissionType: 'text',
-          },
-        },
-      },
-    ],
-  },
-  // Basic Drilling Terminology
-  {
-    lessonId: 'terminology',
-    days: [
-      {
-        day: 1,
-        type: 'learning',
-        content: {
-          en: {
-            title: 'Basic Drilling Operations Terms',
-            explanation: 'Understanding drilling terminology is essential for communication on the rig. Spudding is the act of starting to drill a new well. Making a connection involves adding a new joint of drill pipe. A trip refers to pulling the drill string out of the hole (trip out) or running it back in (trip in). These basic operations happen constantly during drilling.',
-            keyTerms: [
-              { term: 'Spud', definition: 'To begin drilling a new well' },
-              { term: 'Connection', definition: 'Adding a new section of drill pipe as the hole deepens' },
-              { term: 'Trip', definition: 'The process of pulling out or running in the drill string' },
-            ],
-            practiceQuestion: {
-              question: 'What does "spud" mean in drilling?',
-              options: ['To end drilling', 'To begin drilling a new well', 'To repair equipment', 'To test the mud'],
-              correctAnswer: 1,
-            },
-          },
-          ar: {
-            title: 'مصطلحات عمليات الحفر الأساسية',
-            explanation: 'فهم مصطلحات الحفر أمر ضروري للتواصل في الجهاز. البدء هو فعل بدء حفر بئر جديد. عمل التوصيل يتضمن إضافة قطعة جديدة من أنبوب الحفر. الرحلة تشير إلى سحب سلسلة الحفر من الحفرة أو إعادتها.',
-            keyTerms: [
-              { term: 'البدء', definition: 'بدء حفر بئر جديد' },
-              { term: 'التوصيل', definition: 'إضافة قسم جديد من أنبوب الحفر مع تعمق الحفرة' },
-              { term: 'الرحلة', definition: 'عملية السحب أو الإنزال لسلسلة الحفر' },
-            ],
-            practiceQuestion: {
-              question: 'ماذا يعني "البدء" في الحفر؟',
-              options: ['إنهاء الحفر', 'بدء حفر بئر جديد', 'إصلاح المعدات', 'اختبار الطين'],
-              correctAnswer: 1,
-            },
-          },
-        },
-      },
-      {
-        day: 2,
-        type: 'learning',
-        content: {
-          en: {
-            title: 'Wellbore Construction Terms',
-            explanation: 'Casing is steel pipe installed in the wellbore to maintain integrity. Cementing secures the casing in place and isolates formations. The annulus is the space between the casing and wellbore wall or between two strings. A liner is casing that doesn\'t extend to surface. These elements protect the well and environment.',
-            keyTerms: [
-              { term: 'Casing', definition: 'Steel pipe installed to line the wellbore' },
-              { term: 'Cementing', definition: 'Pumping cement to secure casing and seal formations' },
-              { term: 'Liner', definition: 'Casing string that does not extend to surface' },
-            ],
-            practiceQuestion: {
-              question: 'What is the purpose of casing?',
-              options: ['To carry oil', 'To line and protect the wellbore', 'To pump mud', 'To rotate the bit'],
-              correctAnswer: 1,
-            },
-          },
-          ar: {
-            title: 'مصطلحات بناء فتحة البئر',
-            explanation: 'الغلاف هو أنبوب فولاذي يُركب في فتحة البئر للحفاظ على السلامة. التسميت يثبت الغلاف في مكانه ويعزل التكوينات. الفراغ الحلقي هو المساحة بين الغلاف وجدار البئر. البطانة هي غلاف لا يمتد إلى السطح.',
-            keyTerms: [
-              { term: 'الغلاف', definition: 'أنبوب فولاذي يُركب لتبطين فتحة البئر' },
-              { term: 'التسميت', definition: 'ضخ الأسمنت لتثبيت الغلاف وإحكام التكوينات' },
-              { term: 'البطانة', definition: 'سلسلة غلاف لا تمتد إلى السطح' },
-            ],
-            practiceQuestion: {
-              question: 'ما هو غرض الغلاف؟',
-              options: ['نقل النفط', 'تبطين وحماية فتحة البئر', 'ضخ الطين', 'تدوير الرأس'],
-              correctAnswer: 1,
-            },
-          },
-        },
-      },
-      {
-        day: 3,
-        type: 'learning',
-        content: {
-          en: {
-            title: 'Drilling Problems Terminology',
-            explanation: 'A kick occurs when formation pressure exceeds mud pressure, causing formation fluids to enter the wellbore. Lost circulation is when drilling fluid flows into the formation instead of returning to surface. Stuck pipe occurs when the drill string cannot be moved. These problems require immediate attention and specific procedures.',
-            keyTerms: [
-              { term: 'Kick', definition: 'Influx of formation fluids into the wellbore' },
-              { term: 'Lost Circulation', definition: 'Loss of drilling fluid into the formation' },
-              { term: 'Stuck Pipe', definition: 'Drill string that cannot be moved up, down, or rotated' },
-            ],
-            practiceQuestion: {
-              question: 'What causes a kick?',
-              options: ['Too much mud', 'Formation pressure exceeds mud pressure', 'Broken equipment', 'Bad weather'],
-              correctAnswer: 1,
-            },
-          },
-          ar: {
-            title: 'مصطلحات مشاكل الحفر',
-            explanation: 'تحدث الركلة عندما يتجاوز ضغط التكوين ضغط الطين، مما يسبب دخول سوائل التكوين إلى البئر. فقدان الدوران هو عندما يتدفق سائل الحفر إلى التكوين بدلاً من العودة إلى السطح. الأنبوب العالق يحدث عندما لا يمكن تحريك سلسلة الحفر.',
-            keyTerms: [
-              { term: 'الركلة', definition: 'تدفق سوائل التكوين إلى فتحة البئر' },
-              { term: 'فقدان الدوران', definition: 'فقدان سائل الحفر في التكوين' },
-              { term: 'الأنبوب العالق', definition: 'سلسلة حفر لا يمكن تحريكها للأعلى أو للأسفل أو تدويرها' },
-            ],
-            practiceQuestion: {
-              question: 'ما الذي يسبب الركلة؟',
-              options: ['طين كثير', 'ضغط التكوين يتجاوز ضغط الطين', 'معدات مكسورة', 'طقس سيء'],
-              correctAnswer: 1,
-            },
-          },
-        },
-      },
-      {
-        day: 4,
-        type: 'learning',
-        content: {
-          en: {
-            title: 'Drilling Equipment Terms',
-            explanation: 'The kelly is a square or hexagonal pipe that transfers rotation from the rotary table to the drill string. Drill collars are heavy, thick-walled pipes that add weight to the bit. Stabilizers center the drill string in the hole. Together with the bit, these make up the Bottom Hole Assembly (BHA).',
-            keyTerms: [
-              { term: 'Kelly', definition: 'Pipe that transmits rotation to the drill string' },
-              { term: 'Drill Collar', definition: 'Heavy pipe sections that add weight on bit' },
-              { term: 'BHA', definition: 'Bottom Hole Assembly - the lower part of the drill string' },
-            ],
-            practiceQuestion: {
-              question: 'What is the purpose of drill collars?',
-              options: ['To cool the bit', 'To add weight on the bit', 'To pump mud', 'To prevent kicks'],
-              correctAnswer: 1,
-            },
-          },
-          ar: {
-            title: 'مصطلحات معدات الحفر',
-            explanation: 'الكيلي هو أنبوب مربع أو سداسي ينقل الدوران من الطاولة الدوارة إلى سلسلة الحفر. أطواق الحفر هي أنابيب ثقيلة سميكة الجدران تضيف وزناً للرأس. المثبتات تُمركز سلسلة الحفر في الحفرة.',
-            keyTerms: [
-              { term: 'الكيلي', definition: 'أنبوب ينقل الدوران إلى سلسلة الحفر' },
-              { term: 'طوق الحفر', definition: 'قطع أنابيب ثقيلة تضيف وزناً على الرأس' },
-              { term: 'تجميعة قاع الحفرة', definition: 'الجزء السفلي من سلسلة الحفر' },
-            ],
-            practiceQuestion: {
-              question: 'ما هو غرض أطواق الحفر؟',
-              options: ['تبريد الرأس', 'إضافة وزن على الرأس', 'ضخ الطين', 'منع الركلات'],
-              correctAnswer: 1,
-            },
-          },
-        },
-      },
-      {
-        day: 5,
-        type: 'learning',
-        content: {
-          en: {
-            title: 'Production and Completion Terms',
-            explanation: 'Perforation creates holes through casing to allow formation fluids to enter the well. Production tubing is smaller pipe inside casing through which oil flows. A packer seals the annular space. Artificial lift methods like rod pumps or gas lift help produce wells that don\'t flow naturally.',
-            keyTerms: [
-              { term: 'Perforation', definition: 'Creating holes in casing to allow flow' },
-              { term: 'Tubing', definition: 'Small diameter pipe for producing fluids' },
-              { term: 'Artificial Lift', definition: 'Methods to help produce non-flowing wells' },
-            ],
-            practiceQuestion: {
-              question: 'What is perforation?',
-              options: ['Drilling deeper', 'Creating holes in casing for flow', 'Installing pumps', 'Cementing'],
-              correctAnswer: 1,
-            },
-          },
-          ar: {
-            title: 'مصطلحات الإنتاج والإكمال',
-            explanation: 'الثقب ينشئ فتحات عبر الغلاف للسماح لسوائل التكوين بدخول البئر. أنابيب الإنتاج هي أنابيب أصغر داخل الغلاف يتدفق من خلالها النفط. الحاشية تغلق الفراغ الحلقي. طرق الرفع الاصطناعي مثل المضخات العمودية تساعد في إنتاج الآبار غير المتدفقة.',
-            keyTerms: [
-              { term: 'الثقب', definition: 'إنشاء فتحات في الغلاف للسماح بالتدفق' },
-              { term: 'الأنابيب', definition: 'أنبوب صغير القطر لإنتاج السوائل' },
-              { term: 'الرفع الاصطناعي', definition: 'طرق للمساعدة في إنتاج الآبار غير المتدفقة' },
-            ],
-            practiceQuestion: {
-              question: 'ما هو الثقب؟',
-              options: ['الحفر أعمق', 'إنشاء فتحات في الغلاف للتدفق', 'تركيب المضخات', 'التسميت'],
-              correctAnswer: 1,
-            },
-          },
-        },
-      },
-      {
-        day: 6,
-        type: 'quiz',
-        content: {
-          en: { title: 'Drilling Terminology Quiz', explanation: 'Test your knowledge of drilling terms.', keyTerms: [] },
-          ar: { title: 'اختبار مصطلحات الحفر', explanation: 'اختبر معرفتك بمصطلحات الحفر.', keyTerms: [] },
-        },
-        quiz: {
-          en: [
-            { question: 'What does "spud" mean?', options: ['End drilling', 'Begin drilling a new well', 'Repair pump', 'Test mud'], correctAnswer: 1 },
-            { question: 'What is a trip?', options: ['A vacation', 'Pulling out or running in drill string', 'A type of bit', 'A mud test'], correctAnswer: 1 },
-            { question: 'What is casing used for?', options: ['Pumping mud', 'Lining the wellbore', 'Rotating the bit', 'Measuring depth'], correctAnswer: 1 },
-            { question: 'What is a kick?', options: ['A sports move', 'Formation fluids entering wellbore', 'A type of pump', 'A safety drill'], correctAnswer: 1 },
-            { question: 'What is lost circulation?', options: ['Broken pump', 'Drilling fluid lost into formation', 'Missing pipe', 'Power outage'], correctAnswer: 1 },
-            { question: 'What is the kelly?', options: ['A person', 'Pipe transmitting rotation', 'A type of mud', 'A safety valve'], correctAnswer: 1 },
-            { question: 'What adds weight to the bit?', options: ['Mud', 'Drill collars', 'Casing', 'Cement'], correctAnswer: 1 },
-            { question: 'What is BHA?', options: ['Big Heavy Apparatus', 'Bottom Hole Assembly', 'Basic Hole Analysis', 'Bit Handling Area'], correctAnswer: 1 },
-            { question: 'What is perforation?', options: ['Making the hole bigger', 'Creating holes in casing', 'Cementing', 'Tripping out'], correctAnswer: 1 },
-            { question: 'What is artificial lift?', options: ['A crane', 'Methods to help produce non-flowing wells', 'Elevator', 'Manual labor'], correctAnswer: 1 },
-          ],
-          ar: [
-            { question: 'ماذا يعني "البدء"؟', options: ['إنهاء الحفر', 'بدء حفر بئر جديد', 'إصلاح المضخة', 'اختبار الطين'], correctAnswer: 1 },
-            { question: 'ما هي الرحلة؟', options: ['إجازة', 'سحب أو إنزال سلسلة الحفر', 'نوع من الرؤوس', 'اختبار طين'], correctAnswer: 1 },
-            { question: 'لماذا يُستخدم الغلاف؟', options: ['ضخ الطين', 'تبطين فتحة البئر', 'تدوير الرأس', 'قياس العمق'], correctAnswer: 1 },
-            { question: 'ما هي الركلة؟', options: ['حركة رياضية', 'سوائل التكوين تدخل البئر', 'نوع من المضخات', 'تمرين سلامة'], correctAnswer: 1 },
-            { question: 'ما هو فقدان الدوران؟', options: ['مضخة مكسورة', 'فقدان سائل الحفر في التكوين', 'أنبوب مفقود', 'انقطاع الكهرباء'], correctAnswer: 1 },
-            { question: 'ما هو الكيلي؟', options: ['شخص', 'أنبوب ينقل الدوران', 'نوع من الطين', 'صمام أمان'], correctAnswer: 1 },
-            { question: 'ما الذي يضيف وزناً للرأس؟', options: ['الطين', 'أطواق الحفر', 'الغلاف', 'الأسمنت'], correctAnswer: 1 },
-            { question: 'ما هي BHA؟', options: ['جهاز ثقيل كبير', 'تجميعة قاع الحفرة', 'تحليل الحفرة الأساسي', 'منطقة مناولة الرأس'], correctAnswer: 1 },
-            { question: 'ما هو الثقب؟', options: ['جعل الحفرة أكبر', 'إنشاء فتحات في الغلاف', 'التسميت', 'السحب للخارج'], correctAnswer: 1 },
-            { question: 'ما هو الرفع الاصطناعي؟', options: ['رافعة', 'طرق للمساعدة في إنتاج الآبار غير المتدفقة', 'مصعد', 'عمل يدوي'], correctAnswer: 1 },
-          ],
-        },
-      },
-      {
-        day: 7,
-        type: 'project',
-        content: {
-          en: { title: 'Terminology Project', explanation: 'Create your own drilling terminology guide.', keyTerms: [] },
-          ar: { title: 'مشروع المصطلحات', explanation: 'أنشئ دليل مصطلحات الحفر الخاص بك.', keyTerms: [] },
-        },
-        project: {
-          en: {
-            title: 'Drilling Terminology Glossary',
-            description: 'Create a comprehensive glossary of drilling terms you have learned.',
-            instructions: [
-              'Compile a glossary of at least 25 drilling terms from all lessons',
-              'Organize them into categories: Operations, Equipment, Problems, Measurements, Completion',
-              'For each term, provide: Definition (in your own words), Example of use in a sentence',
-              'Include 5 terms not covered in the lessons that you researched independently',
-            ],
-            submissionType: 'text',
-          },
-          ar: {
-            title: 'قاموس مصطلحات الحفر',
-            description: 'أنشئ قاموساً شاملاً لمصطلحات الحفر التي تعلمتها.',
-            instructions: [
-              'اجمع قاموساً من 25 مصطلح حفر على الأقل من جميع الدروس',
-              'نظمها في فئات: العمليات، المعدات، المشاكل، القياسات، الإكمال',
-              'لكل مصطلح، قدم: التعريف (بكلماتك الخاصة)، مثال على استخدامه في جملة',
-              'أضف 5 مصطلحات لم تُغطَّ في الدروس بحثت عنها بشكل مستقل',
-            ],
-            submissionType: 'text',
-          },
-        },
-      },
-    ],
-  },
+  introLesson,
+  drillingLesson,
+  wellTypesLesson,
+  rigOverviewLesson,
+  unitsLesson,
+  terminologyLesson,
 ];
