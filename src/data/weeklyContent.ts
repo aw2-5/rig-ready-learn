@@ -2478,14 +2478,1049 @@ const drillingLesson: WeeklyLesson = {
 const wellTypesLesson: WeeklyLesson = {
   lessonId: 'wells',
   days: [
-    { day: 1, type: 'learning', content: { ar: { title: 'تصنيف الآبار النفطية', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 مقدمة عن أنواع الآبار</h2><p class="mb-4">تُصنف الآبار النفطية بطرق مختلفة حسب مسارها وموقعها والغرض منها. فهم هذه التصنيفات ضروري لاختيار التقنية المناسبة لكل حالة.</p><h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 التصنيف حسب المسار</h3><ul class="list-disc list-inside space-y-2 mb-4"><li>الآبار العمودية (Vertical Wells)</li><li>الآبار المائلة (Directional Wells)</li><li>الآبار الأفقية (Horizontal Wells)</li><li>الآبار متعددة الفروع (Multilateral Wells)</li></ul></section>', keyTerms: [{ term: 'البئر العمودي', definition: 'بئر يُحفر بشكل مستقيم نحو الأسفل' }], practiceQuestion: { question: 'أي نوع من الآبار يُحفر بزاوية مع الرأسي؟', options: ['عمودي', 'مائل', 'حقن', 'سطحي'], correctAnswer: 1 } }, en: { title: 'Classification of Oil Wells', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 Introduction to Well Types</h2><p class="mb-4">Oil wells are classified in different ways based on their path, location, and purpose. Understanding these classifications is essential for selecting the appropriate technique for each case.</p><h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Classification by Path</h3><ul class="list-disc list-inside space-y-2 mb-4"><li>Vertical Wells</li><li>Directional Wells</li><li>Horizontal Wells</li><li>Multilateral Wells</li></ul></section>', keyTerms: [{ term: 'Vertical Well', definition: 'A well drilled straight down' }], practiceQuestion: { question: 'Which type of well is drilled at an angle to vertical?', options: ['Vertical', 'Directional', 'Injection', 'Surface'], correctAnswer: 1 } } } },
-    { day: 2, type: 'learning', content: { ar: { title: 'الآبار العمودية والمائلة', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 الآبار العمودية</h2><p class="mb-4">الآبار العمودية هي أبسط أنواع الآبار وأقدمها. تُحفر بشكل مستقيم من السطح نحو المخزون.</p></section>', keyTerms: [], practiceQuestion: { question: 'ما ميزة الآبار العمودية الرئيسية؟', options: ['أسرع حفراً', 'أقل تكلفة', 'أكثر إنتاجاً', 'أعمق'], correctAnswer: 1 } }, en: { title: 'Vertical and Directional Wells', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 Vertical Wells</h2><p class="mb-4">Vertical wells are the simplest and oldest type of wells. They are drilled straight down from the surface to the reservoir.</p></section>', keyTerms: [], practiceQuestion: { question: 'What is the main advantage of vertical wells?', options: ['Faster drilling', 'Lower cost', 'Higher production', 'Deeper'], correctAnswer: 1 } } } },
-    { day: 3, type: 'learning', content: { ar: { title: 'الآبار الأفقية', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 تقنية الحفر الأفقي</h2><p class="mb-4">الآبار الأفقية تبدأ عمودياً ثم تنحني تدريجياً حتى تصبح أفقية داخل المخزون.</p></section>', keyTerms: [], practiceQuestion: { question: 'متى تُستخدم الآبار الأفقية؟', options: ['المخزونات الرقيقة', 'المخزونات العميقة جداً', 'المخزونات السطحية', 'آبار الحقن فقط'], correctAnswer: 0 } }, en: { title: 'Horizontal Wells', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 Horizontal Drilling Technology</h2><p class="mb-4">Horizontal wells start vertically then gradually curve until they become horizontal within the reservoir.</p></section>', keyTerms: [], practiceQuestion: { question: 'When are horizontal wells used?', options: ['Thin reservoirs', 'Very deep reservoirs', 'Surface reservoirs', 'Injection wells only'], correctAnswer: 0 } } } },
-    { day: 4, type: 'learning', content: { ar: { title: 'الآبار البحرية', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 الحفر البحري</h2><p class="mb-4">الحفر في البحر يتطلب منصات خاصة وتقنيات متقدمة للتعامل مع تحديات البيئة البحرية.</p></section>', keyTerms: [], practiceQuestion: { question: 'ما التحدي الرئيسي في الحفر البحري؟', options: ['التكلفة العالية', 'البعد عن الشاطئ', 'عمق المياه والظروف الجوية', 'نوع الصخور'], correctAnswer: 2 } }, en: { title: 'Offshore Wells', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 Offshore Drilling</h2><p class="mb-4">Offshore drilling requires special platforms and advanced techniques to handle marine environment challenges.</p></section>', keyTerms: [], practiceQuestion: { question: 'What is the main challenge in offshore drilling?', options: ['High cost', 'Distance from shore', 'Water depth and weather conditions', 'Rock type'], correctAnswer: 2 } } } },
-    { day: 5, type: 'learning', content: { ar: { title: 'اختيار نوع البئر المناسب', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 عوامل اختيار نوع البئر</h2><p class="mb-4">يعتمد اختيار نوع البئر على عدة عوامل تقنية واقتصادية وبيئية.</p></section>', keyTerms: [], practiceQuestion: { question: 'أي عامل ليس مهماً في اختيار نوع البئر؟', options: ['شكل المخزون', 'التكلفة', 'لون النفط', 'البيئة'], correctAnswer: 2 } }, en: { title: 'Selecting the Right Well Type', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 Factors in Well Type Selection</h2><p class="mb-4">Well type selection depends on several technical, economic, and environmental factors.</p></section>', keyTerms: [], practiceQuestion: { question: 'Which factor is NOT important in well type selection?', options: ['Reservoir shape', 'Cost', 'Oil color', 'Environment'], correctAnswer: 2 } } } },
-    { day: 6, type: 'quiz', content: { en: { title: 'Weekly Quiz', explanation: 'Test your knowledge of well types.', keyTerms: [] }, ar: { title: 'اختبار الأسبوع', explanation: 'اختبر معرفتك بأنواع الآبار.', keyTerms: [] } }, quiz: { en: [{ question: 'What is a directional well?', options: ['Drilled straight down', 'Drilled at an angle', 'Only for water', 'Surface well'], correctAnswer: 1 }, { question: 'Why use horizontal wells?', options: ['Cheaper', 'More reservoir contact', 'Easier to drill', 'Shallower'], correctAnswer: 1 }, { question: 'What platform type is used in deep water?', options: ['Jack-up', 'Semi-submersible or drillship', 'Land rig', 'Truck-mounted'], correctAnswer: 1 }, { question: 'What is a multilateral well?', options: ['Well with multiple branches', 'Very deep well', 'Horizontal only', 'Injection well'], correctAnswer: 0 }, { question: 'Main advantage of directional drilling?', options: ['Lower cost', 'Reach targets not directly below', 'Faster', 'Simpler'], correctAnswer: 1 }, { question: 'Where are jack-up rigs used?', options: ['Deep water', 'Shallow water', 'Land', 'Arctic'], correctAnswer: 1 }, { question: 'What is extended reach drilling?', options: ['Very short wells', 'Wells reaching far horizontally', 'Surface wells', 'Vertical wells'], correctAnswer: 1 }, { question: 'Why choose vertical wells?', options: ['Higher production', 'Simpler and cheaper for suitable reservoirs', 'Reach more area', 'Better for thin reservoirs'], correctAnswer: 1 }, { question: 'What limits offshore drilling depth?', options: ['Water depth and technology', 'Oil quality', 'Distance from port', 'Weather only'], correctAnswer: 0 }, { question: 'What is a development well?', options: ['Exploration well', 'Well drilled in proven area for production', 'Test well', 'Abandoned well'], correctAnswer: 1 }], ar: [{ question: 'ما هو البئر المائل؟', options: ['يُحفر عمودياً', 'يُحفر بزاوية', 'للماء فقط', 'بئر سطحي'], correctAnswer: 1 }, { question: 'لماذا تُستخدم الآبار الأفقية؟', options: ['أرخص', 'تماس أكبر مع المخزون', 'أسهل حفراً', 'أقل عمقاً'], correctAnswer: 1 }, { question: 'أي منصة تُستخدم في المياه العميقة؟', options: ['جاك أب', 'شبه غاطسة أو سفينة حفر', 'جهاز بري', 'شاحنة'], correctAnswer: 1 }, { question: 'ما هو البئر متعدد الفروع؟', options: ['بئر بعدة فروع', 'بئر عميق جداً', 'أفقي فقط', 'بئر حقن'], correctAnswer: 0 }, { question: 'الميزة الرئيسية للحفر المائل؟', options: ['تكلفة أقل', 'الوصول لأهداف ليست تحت الموقع', 'أسرع', 'أبسط'], correctAnswer: 1 }, { question: 'أين تُستخدم منصات جاك أب؟', options: ['المياه العميقة', 'المياه الضحلة', 'البر', 'القطب الشمالي'], correctAnswer: 1 }, { question: 'ما هو الحفر الممتد؟', options: ['آبار قصيرة جداً', 'آبار تمتد أفقياً بعيداً', 'آبار سطحية', 'آبار عمودية'], correctAnswer: 1 }, { question: 'لماذا نختار الآبار العمودية؟', options: ['إنتاج أعلى', 'أبسط وأرخص للمخزونات المناسبة', 'تغطي مساحة أكبر', 'أفضل للمخزونات الرقيقة'], correctAnswer: 1 }, { question: 'ما يحد من عمق الحفر البحري؟', options: ['عمق المياه والتقنية', 'جودة النفط', 'البعد عن الميناء', 'الطقس فقط'], correctAnswer: 0 }, { question: 'ما هو بئر التطوير؟', options: ['بئر استكشاف', 'بئر يُحفر في منطقة مثبتة للإنتاج', 'بئر اختبار', 'بئر مهجور'], correctAnswer: 1 }] } },
-    { day: 7, type: 'project', content: { en: { title: 'Mini Project', explanation: 'Compare well types.', keyTerms: [] }, ar: { title: 'مشروع صغير', explanation: 'قارن بين أنواع الآبار.', keyTerms: [] } }, project: { en: { title: 'Well Type Comparison', description: 'Create a comparison table of different well types.', instructions: ['Compare vertical, directional, and horizontal wells', 'Include advantages and disadvantages of each', 'Mention suitable applications for each type', 'Add cost considerations', 'Include a recommendation for when to use each type'], submissionType: 'text' }, ar: { title: 'مقارنة أنواع الآبار', description: 'أنشئ جدول مقارنة لأنواع الآبار المختلفة.', instructions: ['قارن بين الآبار العمودية والمائلة والأفقية', 'اذكر مميزات وعيوب كل نوع', 'اذكر التطبيقات المناسبة لكل نوع', 'أضف اعتبارات التكلفة', 'قدم توصية لمتى يُستخدم كل نوع'], submissionType: 'text' } } }
-  ]
+    {
+      day: 1,
+      type: 'learning',
+      content: {
+        ar: {
+          title: 'تصنيف الآبار النفطية',
+          explanation: `<section>
+<h2 class="text-primary text-xl font-bold mb-4">🔷 مقدمة شاملة عن أنواع الآبار النفطية</h2>
+
+<p class="mb-4">تُعتبر الآبار النفطية الوسيلة الأساسية للوصول إلى المخزونات الهيدروكربونية تحت سطح الأرض. يختلف تصميم البئر حسب عدة عوامل منها طبيعة المخزون، والظروف الجيولوجية، والموقع الجغرافي، والاعتبارات الاقتصادية.</p>
+
+<p class="mb-4">فهم أنواع الآبار المختلفة يُعد أساسياً لأي مهندس نفط، حيث يؤثر اختيار نوع البئر بشكل مباشر على تكلفة المشروع، ومعدلات الإنتاج، وعمر البئر الافتراضي.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 أهمية تصنيف الآبار</h3>
+
+<p class="mb-4">تصنيف الآبار ليس مجرد تقسيم أكاديمي، بل هو أداة عملية تساعد في:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>اتخاذ قرارات التصميم الهندسي المناسبة</li>
+<li>تقدير التكاليف والميزانيات بدقة</li>
+<li>اختيار المعدات والتقنيات المطلوبة</li>
+<li>التخطيط لعمليات الإنتاج المستقبلية</li>
+<li>تقييم المخاطر المحتملة وإدارتها</li>
+</ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 التصنيف حسب مسار البئر (Well Trajectory)</h2>
+
+<p class="mb-4">يُعد تصنيف الآبار حسب مسارها من أهم التصنيفات وأكثرها استخداماً في الصناعة النفطية:</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 1. الآبار العمودية (Vertical Wells)</h3>
+
+<p class="mb-4">هي أبسط أنواع الآبار وأقدمها تاريخياً. تُحفر بشكل مستقيم من السطح نحو المخزون دون انحراف يُذكر. تتميز بـ:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>سهولة التصميم والتنفيذ</li>
+<li>تكلفة أقل مقارنة بالآبار المعقدة</li>
+<li>مناسبة للمخزونات السميكة والواسعة</li>
+<li>صيانة أسهل وأقل تعقيداً</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 2. الآبار المائلة (Directional Wells)</h3>
+
+<p class="mb-4">تُحفر بزاوية مع الخط العمودي للوصول إلى أهداف لا يمكن الوصول إليها بالحفر العمودي. أسباب استخدامها:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>الوصول لمخزونات تحت مناطق يصعب الحفر فيها (مدن، بحيرات)</li>
+<li>حفر عدة آبار من منصة واحدة</li>
+<li>تجنب الطبقات الصخرية المشكلة</li>
+<li>التحكم في اتجاه البئر المنحرف</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 3. الآبار الأفقية (Horizontal Wells)</h3>
+
+<p class="mb-4">تبدأ عمودياً ثم تنحني تدريجياً حتى تصبح أفقية داخل المخزون. مميزاتها:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>زيادة مساحة التماس مع المخزون بشكل كبير</li>
+<li>مثالية للمخزونات الرقيقة</li>
+<li>تقليل مشاكل تداخل المياه والغاز</li>
+<li>إنتاجية أعلى من الآبار العمودية</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 4. الآبار متعددة الفروع (Multilateral Wells)</h3>
+
+<p class="mb-4">بئر رئيسي تتفرع منه عدة آبار فرعية للوصول لأكثر من منطقة في المخزون من بئر واحد.</p>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 التصنيف حسب الغرض (Well Purpose)</h2>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 آبار الاستكشاف (Exploration Wells)</h3>
+
+<p class="mb-4">تُحفر للتأكد من وجود النفط أو الغاز في منطقة جديدة. تُسمى أيضاً "Wildcat Wells" وتحمل مخاطر عالية.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 آبار التطوير (Development Wells)</h3>
+
+<p class="mb-4">تُحفر في حقول مثبتة لزيادة الإنتاج. تكون المخاطر أقل لأن المخزون معروف.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 آبار الحقن (Injection Wells)</h3>
+
+<p class="mb-4">تُستخدم لحقن الماء أو الغاز في المخزون للحفاظ على الضغط وتحسين الاستخلاص.</p>
+
+<div class="bg-destructive/10 border-l-4 border-destructive p-4 my-6">
+<p class="text-destructive font-semibold">⚠️ ملاحظة مهمة:</p>
+<p>اختيار نوع البئر الخاطئ قد يؤدي إلى خسائر مالية ضخمة وفشل المشروع بالكامل. لذا يجب دراسة جميع العوامل بعناية قبل اتخاذ القرار.</p>
+</div>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 ملخص القسم</h3>
+
+<div class="bg-secondary/50 p-4 rounded-lg">
+<p>تُصنف الآبار النفطية بطرق متعددة حسب المسار والغرض والموقع. فهم هذه التصنيفات ضروري لاختيار التقنية المثلى لكل حالة وتحقيق أعلى كفاءة اقتصادية وإنتاجية.</p>
+</div>
+</section>`,
+          keyTerms: [
+            { term: 'البئر العمودي', definition: 'بئر يُحفر بشكل مستقيم من السطح إلى المخزون دون انحراف' },
+            { term: 'البئر المائل', definition: 'بئر يُحفر بزاوية مع الخط العمودي للوصول لأهداف محددة' },
+            { term: 'البئر الأفقي', definition: 'بئر يبدأ عمودياً ثم ينحني ليصبح أفقياً داخل المخزون' },
+            { term: 'بئر الاستكشاف', definition: 'أول بئر يُحفر في منطقة جديدة للتأكد من وجود النفط' },
+          ],
+          practiceQuestion: {
+            question: 'أي نوع من الآبار يُحفر بزاوية مع الخط العمودي؟',
+            options: ['البئر العمودي', 'البئر المائل', 'بئر الحقن', 'البئر السطحي'],
+            correctAnswer: 1,
+          },
+        },
+        en: {
+          title: 'Classification of Oil Wells',
+          explanation: `<section>
+<h2 class="text-primary text-xl font-bold mb-4">🔷 Comprehensive Introduction to Oil Well Types</h2>
+
+<p class="mb-4">Oil wells are the primary means of accessing hydrocarbon reservoirs beneath the earth's surface. Well design varies according to several factors including reservoir characteristics, geological conditions, geographic location, and economic considerations.</p>
+
+<p class="mb-4">Understanding different well types is fundamental for any petroleum engineer, as the choice of well type directly impacts project cost, production rates, and expected well lifespan.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Importance of Well Classification</h3>
+
+<p class="mb-4">Well classification is not merely an academic division but a practical tool that helps in:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Making appropriate engineering design decisions</li>
+<li>Accurately estimating costs and budgets</li>
+<li>Selecting required equipment and technologies</li>
+<li>Planning future production operations</li>
+<li>Assessing and managing potential risks</li>
+</ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 Classification by Well Trajectory</h2>
+
+<p class="mb-4">Classifying wells by their trajectory is one of the most important and widely used classifications in the petroleum industry:</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 1. Vertical Wells</h3>
+
+<p class="mb-4">These are the simplest and historically oldest type of wells. They are drilled straight from the surface toward the reservoir without significant deviation. They are characterized by:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Easy design and execution</li>
+<li>Lower cost compared to complex wells</li>
+<li>Suitable for thick and extensive reservoirs</li>
+<li>Easier and less complex maintenance</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 2. Directional Wells</h3>
+
+<p class="mb-4">Drilled at an angle to the vertical line to reach targets that cannot be accessed by vertical drilling. Reasons for use:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Reaching reservoirs under difficult-to-drill areas (cities, lakes)</li>
+<li>Drilling multiple wells from a single platform</li>
+<li>Avoiding problematic rock formations</li>
+<li>Controlling the direction of deviated wells</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 3. Horizontal Wells</h3>
+
+<p class="mb-4">Start vertically then gradually curve until they become horizontal within the reservoir. Their advantages:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Significantly increased contact area with the reservoir</li>
+<li>Ideal for thin reservoirs</li>
+<li>Reduced water and gas coning problems</li>
+<li>Higher productivity than vertical wells</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 4. Multilateral Wells</h3>
+
+<p class="mb-4">A main well from which several branch wells diverge to access multiple zones in the reservoir from a single wellbore.</p>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 Classification by Well Purpose</h2>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Exploration Wells</h3>
+
+<p class="mb-4">Drilled to confirm the presence of oil or gas in a new area. Also called "Wildcat Wells" and carry high risk.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Development Wells</h3>
+
+<p class="mb-4">Drilled in proven fields to increase production. Risk is lower because the reservoir is known.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Injection Wells</h3>
+
+<p class="mb-4">Used to inject water or gas into the reservoir to maintain pressure and improve recovery.</p>
+
+<div class="bg-destructive/10 border-l-4 border-destructive p-4 my-6">
+<p class="text-destructive font-semibold">⚠️ Important Note:</p>
+<p>Choosing the wrong well type can lead to huge financial losses and complete project failure. Therefore, all factors must be carefully studied before making a decision.</p>
+</div>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Section Summary</h3>
+
+<div class="bg-secondary/50 p-4 rounded-lg">
+<p>Oil wells are classified in multiple ways based on trajectory, purpose, and location. Understanding these classifications is essential for selecting the optimal technique for each case and achieving the highest economic and production efficiency.</p>
+</div>
+</section>`,
+          keyTerms: [
+            { term: 'Vertical Well', definition: 'A well drilled straight from the surface to the reservoir without deviation' },
+            { term: 'Directional Well', definition: 'A well drilled at an angle to the vertical line to reach specific targets' },
+            { term: 'Horizontal Well', definition: 'A well that starts vertically then curves to become horizontal within the reservoir' },
+            { term: 'Exploration Well', definition: 'The first well drilled in a new area to confirm the presence of oil' },
+          ],
+          practiceQuestion: {
+            question: 'Which type of well is drilled at an angle to the vertical line?',
+            options: ['Vertical Well', 'Directional Well', 'Injection Well', 'Surface Well'],
+            correctAnswer: 1,
+          },
+        },
+      },
+    },
+    {
+      day: 2,
+      type: 'learning',
+      content: {
+        ar: {
+          title: 'الآبار العمودية والمائلة بالتفصيل',
+          explanation: `<section>
+<h2 class="text-primary text-xl font-bold mb-4">🔷 الآبار العمودية (Vertical Wells)</h2>
+
+<p class="mb-4">الآبار العمودية هي الأساس الذي بُنيت عليه صناعة النفط الحديثة. منذ بئر دريك عام 1859، ظلت الآبار العمودية الخيار الأول لعقود طويلة. تُحفر هذه الآبار بشكل مستقيم من السطح إلى المخزون مع السماح بانحراف طفيف لا يتجاوز عادة 5 درجات.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 خصائص الآبار العمودية</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li><strong>البساطة:</strong> أقل تعقيداً في التصميم والتنفيذ</li>
+<li><strong>التكلفة:</strong> أرخص من الآبار المائلة والأفقية</li>
+<li><strong>المعدات:</strong> تتطلب معدات قياسية متوفرة</li>
+<li><strong>السرعة:</strong> زمن حفر أقصر عادةً</li>
+<li><strong>الصيانة:</strong> أسهل في الصيانة والإصلاح</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 متى نستخدم الآبار العمودية؟</h3>
+
+<p class="mb-4">تُفضل الآبار العمودية في الحالات التالية:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>المخزونات السميكة (أكثر من 30 متراً)</li>
+<li>عندما يكون الموقع السطحي مناسباً للحفر</li>
+<li>المخزونات ذات النفاذية العالية</li>
+<li>الميزانيات المحدودة</li>
+<li>آبار الاستكشاف الأولية</li>
+</ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 الآبار المائلة (Directional Wells)</h2>
+
+<p class="mb-4">الحفر المائل أو الاتجاهي هو تقنية حفر تسمح بالتحكم في اتجاه وميل البئر للوصول إلى أهداف لا يمكن الوصول إليها مباشرة من موقع الحفر السطحي.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 تاريخ تطور الحفر المائل</h3>
+
+<p class="mb-4">بدأ الحفر المائل في ثلاثينيات القرن العشرين، وتطور بشكل كبير مع تقدم تقنيات التوجيه والقياس. اليوم، يُستخدم في معظم العمليات البحرية وكثير من العمليات البرية.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 أسباب استخدام الحفر المائل</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li><strong>العوائق السطحية:</strong> الوصول لمخزونات تحت مدن، مباني، بحيرات، أو محميات طبيعية</li>
+<li><strong>الحفر من منصة واحدة:</strong> حفر عدة آبار للوصول لمناطق مختلفة من المخزون</li>
+<li><strong>السيطرة على البئر المنفجر:</strong> حفر بئر إغاثة للسيطرة على بئر خارج عن السيطرة</li>
+<li><strong>تجنب المشاكل الجيولوجية:</strong> الابتعاد عن طبقات صعبة أو مناطق ضغط عالي</li>
+<li><strong>زيادة التماس:</strong> زيادة طول البئر داخل المخزون</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 مكونات نظام الحفر المائل</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li><strong>محرك الحفر القاعي (Mud Motor):</strong> يدور رأس الحفر دون دوران سلسلة الحفر</li>
+<li><strong>أداة الانحناء (Bent Sub/Housing):</strong> توفر الزاوية اللازمة للانحراف</li>
+<li><strong>أدوات القياس (MWD/LWD):</strong> قياس الاتجاه والميل أثناء الحفر</li>
+<li><strong>المثبتات (Stabilizers):</strong> للتحكم في مسار البئر</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 مصطلحات مهمة في الحفر المائل</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li><strong>الميل (Inclination):</strong> الزاوية بين محور البئر والخط العمودي</li>
+<li><strong>السمت (Azimuth):</strong> اتجاه البئر بالنسبة للشمال</li>
+<li><strong>نقطة البداية (KOP - Kickoff Point):</strong> النقطة التي يبدأ فيها الانحراف</li>
+<li><strong>معدل البناء (Build Rate):</strong> معدل زيادة الميل لكل 30 متراً</li>
+</ul>
+
+<div class="bg-destructive/10 border-l-4 border-destructive p-4 my-6">
+<p class="text-destructive font-semibold">⚠️ تحذير:</p>
+<p>الحفر المائل يتطلب خبرة عالية ومراقبة مستمرة. الأخطاء في التوجيه قد تؤدي إلى عدم الوصول للهدف أو حتى تصادم مع آبار مجاورة.</p>
+</div>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 ملخص القسم</h3>
+
+<div class="bg-secondary/50 p-4 rounded-lg">
+<p>الآبار العمودية هي الأساس والأبسط والأرخص، بينما الآبار المائلة توفر مرونة للوصول لأهداف صعبة. الاختيار بينهما يعتمد على الظروف الجيولوجية والاقتصادية.</p>
+</div>
+</section>`,
+          keyTerms: [
+            { term: 'الميل (Inclination)', definition: 'الزاوية بين محور البئر والخط العمودي' },
+            { term: 'السمت (Azimuth)', definition: 'اتجاه البئر بالنسبة للشمال الجغرافي أو المغناطيسي' },
+            { term: 'نقطة البداية (KOP)', definition: 'النقطة التي يبدأ فيها انحراف البئر عن المسار العمودي' },
+            { term: 'محرك الحفر القاعي', definition: 'جهاز يدور رأس الحفر باستخدام قوة ضخ سائل الحفر' },
+          ],
+          practiceQuestion: {
+            question: 'ما الميزة الرئيسية للآبار العمودية؟',
+            options: ['أسرع حفراً', 'أقل تكلفة وأبسط تصميماً', 'أكثر إنتاجاً', 'أعمق وصولاً'],
+            correctAnswer: 1,
+          },
+        },
+        en: {
+          title: 'Vertical and Directional Wells in Detail',
+          explanation: `<section>
+<h2 class="text-primary text-xl font-bold mb-4">🔷 Vertical Wells</h2>
+
+<p class="mb-4">Vertical wells are the foundation upon which the modern oil industry was built. Since Drake's well in 1859, vertical wells remained the primary choice for many decades. These wells are drilled straight from the surface to the reservoir, allowing only slight deviation typically not exceeding 5 degrees.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Characteristics of Vertical Wells</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li><strong>Simplicity:</strong> Less complex in design and execution</li>
+<li><strong>Cost:</strong> Cheaper than directional and horizontal wells</li>
+<li><strong>Equipment:</strong> Requires standard, readily available equipment</li>
+<li><strong>Speed:</strong> Usually shorter drilling time</li>
+<li><strong>Maintenance:</strong> Easier to maintain and repair</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 When to Use Vertical Wells?</h3>
+
+<p class="mb-4">Vertical wells are preferred in the following cases:</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Thick reservoirs (more than 30 meters)</li>
+<li>When the surface location is suitable for drilling</li>
+<li>High permeability reservoirs</li>
+<li>Limited budgets</li>
+<li>Initial exploration wells</li>
+</ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 Directional Wells</h2>
+
+<p class="mb-4">Directional drilling is a drilling technique that allows control of the direction and inclination of the well to reach targets that cannot be directly accessed from the surface drilling location.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 History of Directional Drilling</h3>
+
+<p class="mb-4">Directional drilling began in the 1930s and has evolved significantly with advances in steering and measurement technologies. Today, it is used in most offshore operations and many onshore operations.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Reasons for Using Directional Drilling</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li><strong>Surface Obstacles:</strong> Reaching reservoirs under cities, buildings, lakes, or nature reserves</li>
+<li><strong>Drilling from One Platform:</strong> Drilling multiple wells to access different areas of the reservoir</li>
+<li><strong>Well Control:</strong> Drilling a relief well to control a blowout</li>
+<li><strong>Avoiding Geological Problems:</strong> Steering away from difficult formations or high-pressure zones</li>
+<li><strong>Increasing Contact:</strong> Extending well length within the reservoir</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Directional Drilling System Components</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li><strong>Mud Motor:</strong> Rotates the drill bit without rotating the drill string</li>
+<li><strong>Bent Sub/Housing:</strong> Provides the necessary angle for deviation</li>
+<li><strong>MWD/LWD Tools:</strong> Measuring direction and inclination while drilling</li>
+<li><strong>Stabilizers:</strong> For controlling the well path</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Important Directional Drilling Terms</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li><strong>Inclination:</strong> The angle between the wellbore axis and the vertical line</li>
+<li><strong>Azimuth:</strong> The direction of the well relative to north</li>
+<li><strong>KOP (Kickoff Point):</strong> The point where deviation begins</li>
+<li><strong>Build Rate:</strong> Rate of inclination increase per 30 meters (100 feet)</li>
+</ul>
+
+<div class="bg-destructive/10 border-l-4 border-destructive p-4 my-6">
+<p class="text-destructive font-semibold">⚠️ Warning:</p>
+<p>Directional drilling requires high expertise and continuous monitoring. Steering errors can lead to missing the target or even collision with adjacent wells.</p>
+</div>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Section Summary</h3>
+
+<div class="bg-secondary/50 p-4 rounded-lg">
+<p>Vertical wells are the foundation, simplest, and cheapest, while directional wells provide flexibility to reach difficult targets. The choice between them depends on geological and economic conditions.</p>
+</div>
+</section>`,
+          keyTerms: [
+            { term: 'Inclination', definition: 'The angle between the wellbore axis and the vertical line' },
+            { term: 'Azimuth', definition: 'The direction of the well relative to geographic or magnetic north' },
+            { term: 'KOP (Kickoff Point)', definition: 'The point where the well begins to deviate from vertical' },
+            { term: 'Mud Motor', definition: 'A device that rotates the drill bit using drilling fluid pumping force' },
+          ],
+          practiceQuestion: {
+            question: 'What is the main advantage of vertical wells?',
+            options: ['Faster drilling', 'Lower cost and simpler design', 'Higher production', 'Deeper reach'],
+            correctAnswer: 1,
+          },
+        },
+      },
+    },
+    {
+      day: 3,
+      type: 'learning',
+      content: {
+        ar: {
+          title: 'الآبار الأفقية - ثورة في صناعة النفط',
+          explanation: `<section>
+<h2 class="text-primary text-xl font-bold mb-4">🔷 مقدمة عن الآبار الأفقية</h2>
+
+<p class="mb-4">تُعتبر الآبار الأفقية من أهم التطورات التقنية في صناعة النفط والغاز خلال العقود الأخيرة. هذه التقنية غيّرت قواعد اللعبة وجعلت من الممكن استخراج النفط من مخزونات كان يُعتقد أنها غير اقتصادية.</p>
+
+<p class="mb-4">البئر الأفقي يبدأ عمودياً من السطح، ثم ينحني تدريجياً في منطقة تُسمى "منطقة البناء" (Build Section) حتى يصل إلى الزاوية المطلوبة، ثم يستمر أفقياً داخل المخزون.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 تاريخ تطور الحفر الأفقي</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li><strong>1929:</strong> أول محاولات الحفر الأفقي في تكساس</li>
+<li><strong>1980s:</strong> بداية الاستخدام التجاري مع تطور تقنيات التوجيه</li>
+<li><strong>1990s:</strong> انتشار واسع في حقول النفط العالمية</li>
+<li><strong>2000s:</strong> ثورة النفط الصخري بفضل الجمع بين الحفر الأفقي والتكسير الهيدروليكي</li>
+</ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 مميزات الآبار الأفقية</h2>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 1. زيادة مساحة التماس مع المخزون</h3>
+
+<p class="mb-4">البئر الأفقي يمكن أن يمتد لعدة كيلومترات داخل المخزون، مما يزيد مساحة التماس بشكل هائل مقارنة بالبئر العمودي الذي يخترق المخزون بسمكه فقط.</p>
+
+<p class="mb-4">مثال: إذا كان سمك المخزون 10 أمتار فقط، البئر العمودي يتماس مع 10 أمتار، بينما البئر الأفقي قد يتماس مع 1000 متر أو أكثر!</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 2. مثالية للمخزونات الرقيقة</h3>
+
+<p class="mb-4">المخزونات ذات السماكة القليلة (أقل من 10 أمتار) قد لا تكون اقتصادية بالآبار العمودية، لكنها تصبح مُجدية جداً بالحفر الأفقي.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 3. تقليل مشاكل تداخل المياه والغاز</h3>
+
+<p class="mb-4">في الآبار العمودية، قد يتداخل الماء من الأسفل أو الغاز من الأعلى بسرعة. البئر الأفقي يوزع الإنتاج على مساحة أكبر، مما يؤخر هذه المشاكل.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 4. إنتاجية أعلى</h3>
+
+<p class="mb-4">البئر الأفقي الواحد قد يُنتج ما يعادل 3-5 آبار عمودية أو أكثر، مما يقلل عدد الآبار المطلوبة وتكاليف البنية التحتية.</p>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 أقسام البئر الأفقي</h2>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li><strong>القسم العمودي (Vertical Section):</strong> من السطح حتى نقطة البداية</li>
+<li><strong>قسم البناء (Build Section):</strong> منطقة الانحناء التدريجي</li>
+<li><strong>القسم المماسي (Tangent Section):</strong> قسم اختياري بميل ثابت</li>
+<li><strong>القسم الأفقي (Horizontal Section):</strong> الجزء الأفقي داخل المخزون</li>
+</ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 تحديات الحفر الأفقي</h2>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li><strong>التكلفة:</strong> أعلى من الآبار العمودية بسبب التعقيد</li>
+<li><strong>تنظيف البئر:</strong> صعوبة إخراج الفتات من القسم الأفقي</li>
+<li><strong>عزم الدوران والاحتكاك:</strong> قوى أعلى على سلسلة الحفر</li>
+<li><strong>وضع الأنابيب:</strong> تحديات في إنزال التغليف الأفقي</li>
+<li><strong>الإكمال:</strong> تقنيات إكمال خاصة للآبار الأفقية</li>
+</ul>
+
+<div class="bg-destructive/10 border-l-4 border-destructive p-4 my-6">
+<p class="text-destructive font-semibold">⚠️ معلومة مهمة:</p>
+<p>الحفر الأفقي مع التكسير الهيدروليكي أحدث ثورة في إنتاج النفط الصخري، مما جعل أمريكا أكبر منتج للنفط في العالم.</p>
+</div>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 ملخص القسم</h3>
+
+<div class="bg-secondary/50 p-4 rounded-lg">
+<p>الآبار الأفقية توفر مساحة تماس هائلة مع المخزون، مما يزيد الإنتاجية بشكل كبير. رغم تكلفتها الأعلى، فإن العائد يبرر الاستثمار في معظم الحالات.</p>
+</div>
+</section>`,
+          keyTerms: [
+            { term: 'قسم البناء', definition: 'المنطقة التي ينحني فيها البئر تدريجياً من العمودي إلى الأفقي' },
+            { term: 'معدل البناء', definition: 'معدل تغير الزاوية لكل 30 متراً من الحفر' },
+            { term: 'القسم الأفقي', definition: 'الجزء من البئر الذي يمتد أفقياً داخل المخزون' },
+            { term: 'التكسير الهيدروليكي', definition: 'تقنية ضخ سوائل تحت ضغط عالي لكسر الصخور وتحرير النفط' },
+          ],
+          practiceQuestion: {
+            question: 'متى تُستخدم الآبار الأفقية بشكل مثالي؟',
+            options: ['المخزونات الرقيقة', 'المخزونات العميقة جداً', 'المخزونات السطحية فقط', 'آبار الحقن فقط'],
+            correctAnswer: 0,
+          },
+        },
+        en: {
+          title: 'Horizontal Wells - A Revolution in the Oil Industry',
+          explanation: `<section>
+<h2 class="text-primary text-xl font-bold mb-4">🔷 Introduction to Horizontal Wells</h2>
+
+<p class="mb-4">Horizontal wells are considered one of the most important technical developments in the oil and gas industry in recent decades. This technology has changed the rules of the game and made it possible to extract oil from reservoirs that were thought to be uneconomical.</p>
+
+<p class="mb-4">A horizontal well starts vertically from the surface, then gradually curves in an area called the "Build Section" until it reaches the required angle, then continues horizontally within the reservoir.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 History of Horizontal Drilling Development</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li><strong>1929:</strong> First horizontal drilling attempts in Texas</li>
+<li><strong>1980s:</strong> Beginning of commercial use with development of steering technologies</li>
+<li><strong>1990s:</strong> Widespread adoption in global oil fields</li>
+<li><strong>2000s:</strong> Shale oil revolution thanks to combining horizontal drilling with hydraulic fracturing</li>
+</ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 Advantages of Horizontal Wells</h2>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 1. Increased Contact Area with Reservoir</h3>
+
+<p class="mb-4">A horizontal well can extend for several kilometers within the reservoir, dramatically increasing the contact area compared to a vertical well that only penetrates the reservoir through its thickness.</p>
+
+<p class="mb-4">Example: If the reservoir thickness is only 10 meters, a vertical well contacts 10 meters, while a horizontal well may contact 1000 meters or more!</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 2. Ideal for Thin Reservoirs</h3>
+
+<p class="mb-4">Thin reservoirs (less than 10 meters thick) may not be economical with vertical wells, but they become very viable with horizontal drilling.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 3. Reducing Water and Gas Coning Problems</h3>
+
+<p class="mb-4">In vertical wells, water may cone up from below or gas down from above quickly. Horizontal wells distribute production over a larger area, delaying these problems.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 4. Higher Productivity</h3>
+
+<p class="mb-4">A single horizontal well may produce the equivalent of 3-5 or more vertical wells, reducing the number of wells required and infrastructure costs.</p>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 Sections of a Horizontal Well</h2>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li><strong>Vertical Section:</strong> From surface to the kickoff point</li>
+<li><strong>Build Section:</strong> Area of gradual curving</li>
+<li><strong>Tangent Section:</strong> Optional section with constant inclination</li>
+<li><strong>Horizontal Section:</strong> The horizontal portion within the reservoir</li>
+</ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 Challenges of Horizontal Drilling</h2>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li><strong>Cost:</strong> Higher than vertical wells due to complexity</li>
+<li><strong>Hole Cleaning:</strong> Difficulty removing cuttings from horizontal section</li>
+<li><strong>Torque and Drag:</strong> Higher forces on the drill string</li>
+<li><strong>Casing Running:</strong> Challenges in running horizontal casing</li>
+<li><strong>Completion:</strong> Special completion techniques for horizontal wells</li>
+</ul>
+
+<div class="bg-destructive/10 border-l-4 border-destructive p-4 my-6">
+<p class="text-destructive font-semibold">⚠️ Important Information:</p>
+<p>Horizontal drilling combined with hydraulic fracturing revolutionized shale oil production, making America the world's largest oil producer.</p>
+</div>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Section Summary</h3>
+
+<div class="bg-secondary/50 p-4 rounded-lg">
+<p>Horizontal wells provide enormous contact area with the reservoir, significantly increasing productivity. Despite their higher cost, the return justifies the investment in most cases.</p>
+</div>
+</section>`,
+          keyTerms: [
+            { term: 'Build Section', definition: 'The area where the well gradually curves from vertical to horizontal' },
+            { term: 'Build Rate', definition: 'Rate of angle change per 30 meters (100 feet) of drilling' },
+            { term: 'Horizontal Section', definition: 'The part of the well that extends horizontally within the reservoir' },
+            { term: 'Hydraulic Fracturing', definition: 'A technique of pumping fluids under high pressure to fracture rocks and release oil' },
+          ],
+          practiceQuestion: {
+            question: 'When are horizontal wells ideally used?',
+            options: ['Thin reservoirs', 'Very deep reservoirs', 'Surface reservoirs only', 'Injection wells only'],
+            correctAnswer: 0,
+          },
+        },
+      },
+    },
+    {
+      day: 4,
+      type: 'learning',
+      content: {
+        ar: {
+          title: 'الآبار البحرية - الحفر في أعماق المحيطات',
+          explanation: `<section>
+<h2 class="text-primary text-xl font-bold mb-4">🔷 مقدمة عن الحفر البحري</h2>
+
+<p class="mb-4">يُعد الحفر البحري (Offshore Drilling) من أكثر العمليات الهندسية تعقيداً وتحدياً في صناعة النفط. يتطلب التعامل مع بيئة قاسية تشمل الأمواج، الرياح، التيارات المائية، وأعماق المياه التي قد تصل إلى أكثر من 3000 متر.</p>
+
+<p class="mb-4">بدأ الحفر البحري في أواخر القرن التاسع عشر في المياه الضحلة، وتطور ليصل اليوم إلى أعماق مذهلة بفضل التقنيات المتقدمة.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 تاريخ الحفر البحري</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li><strong>1897:</strong> أول بئر بحري في كاليفورنيا على رصيف خشبي</li>
+<li><strong>1947:</strong> أول بئر خارج مرمى البصر من الشاطئ (خليج المكسيك)</li>
+<li><strong>1960s:</strong> تطوير منصات جاك أب</li>
+<li><strong>1970s:</strong> المنصات شبه الغاطسة وسفن الحفر</li>
+<li><strong>2000s:</strong> الحفر في أعماق تتجاوز 3000 متر</li>
+</ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 أنواع منصات الحفر البحرية</h2>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 1. المنصات الثابتة (Fixed Platforms)</h3>
+
+<p class="mb-4">هياكل فولاذية أو خرسانية مثبتة على قاع البحر. تُستخدم في المياه الضحلة حتى 500 متر تقريباً. تتميز بالاستقرار العالي وتُستخدم للإنتاج طويل المدى.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 2. منصات جاك أب (Jack-up Rigs)</h3>
+
+<p class="mb-4">منصات متحركة ترتكز على أرجل قابلة للرفع والخفض. تُنقل عائمة ثم تُرفع فوق سطح الماء. مناسبة للمياه حتى 150 متراً.</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>قابلة للنقل والتحريك</li>
+<li>مستقرة جداً عند الرفع</li>
+<li>تكلفة تشغيل أقل من المنصات العائمة</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 3. المنصات شبه الغاطسة (Semi-submersibles)</h3>
+
+<p class="mb-4">منصات عائمة على أعمدة مغمورة جزئياً تحت الماء. توفر استقراراً ممتازاً في الأمواج العالية. تُستخدم في أعماق 200-3000 متر.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 4. سفن الحفر (Drillships)</h3>
+
+<p class="mb-4">سفن مجهزة بمعدات حفر كاملة. الأكثر قدرة على الحركة والعمل في الأعماق الكبيرة. تُستخدم في المياه العميقة جداً (أكثر من 3000 متر).</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>مرونة عالية في التنقل</li>
+<li>قدرة على حمل معدات ومؤن كبيرة</li>
+<li>أنظمة تثبيت ديناميكية متقدمة</li>
+</ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 تحديات الحفر البحري</h2>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li><strong>الظروف الجوية:</strong> العواصف والأمواج العالية قد توقف العمليات</li>
+<li><strong>الضغط العالي:</strong> ضغط المياه يزداد مع العمق</li>
+<li><strong>درجات الحرارة:</strong> تغيرات كبيرة من السطح للقاع</li>
+<li><strong>اللوجستيات:</strong> صعوبة نقل المعدات والعمال</li>
+<li><strong>التكلفة:</strong> أضعاف تكلفة الحفر البري</li>
+<li><strong>السلامة:</strong> مخاطر أعلى تتطلب إجراءات صارمة</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 نظام الارتفاع البحري (Marine Riser)</h3>
+
+<p class="mb-4">أنبوب يصل بين المنصة وقاع البحر، يوفر مساراً لسلسلة الحفر وسائل الحفر. يجب أن يتحمل حركة المنصة والتيارات المائية.</p>
+
+<div class="bg-destructive/10 border-l-4 border-destructive p-4 my-6">
+<p class="text-destructive font-semibold">⚠️ تحذير أمني:</p>
+<p>حادثة Deepwater Horizon عام 2010 أظهرت مخاطر الحفر في المياه العميقة. السلامة في الحفر البحري ليست خياراً بل ضرورة حتمية.</p>
+</div>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 ملخص القسم</h3>
+
+<div class="bg-secondary/50 p-4 rounded-lg">
+<p>الحفر البحري يوفر الوصول لاحتياطيات نفطية ضخمة، لكنه يتطلب تقنيات متقدمة وتكاليف عالية. اختيار نوع المنصة يعتمد على عمق المياه والظروف البيئية.</p>
+</div>
+</section>`,
+          keyTerms: [
+            { term: 'منصة جاك أب', definition: 'منصة حفر متحركة ترتكز على أرجل قابلة للرفع فوق سطح الماء' },
+            { term: 'المنصة شبه الغاطسة', definition: 'منصة عائمة على أعمدة مغمورة جزئياً توفر استقراراً عالياً' },
+            { term: 'سفينة الحفر', definition: 'سفينة مجهزة بمعدات حفر كاملة للعمل في المياه العميقة جداً' },
+            { term: 'نظام الارتفاع البحري', definition: 'أنبوب يصل بين المنصة وقاع البحر لمرور معدات الحفر' },
+          ],
+          practiceQuestion: {
+            question: 'ما التحدي الرئيسي في الحفر البحري؟',
+            options: ['التكلفة العالية فقط', 'البعد عن الشاطئ', 'عمق المياه والظروف الجوية القاسية', 'نوع الصخور فقط'],
+            correctAnswer: 2,
+          },
+        },
+        en: {
+          title: 'Offshore Wells - Drilling in Ocean Depths',
+          explanation: `<section>
+<h2 class="text-primary text-xl font-bold mb-4">🔷 Introduction to Offshore Drilling</h2>
+
+<p class="mb-4">Offshore drilling is one of the most complex and challenging engineering operations in the oil industry. It requires dealing with a harsh environment including waves, winds, water currents, and water depths that can exceed 3000 meters.</p>
+
+<p class="mb-4">Offshore drilling began in the late 19th century in shallow waters and has evolved to reach amazing depths today thanks to advanced technologies.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 History of Offshore Drilling</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li><strong>1897:</strong> First offshore well in California on a wooden pier</li>
+<li><strong>1947:</strong> First well out of sight of land (Gulf of Mexico)</li>
+<li><strong>1960s:</strong> Development of jack-up platforms</li>
+<li><strong>1970s:</strong> Semi-submersibles and drillships</li>
+<li><strong>2000s:</strong> Drilling in depths exceeding 3000 meters</li>
+</ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 Types of Offshore Drilling Platforms</h2>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 1. Fixed Platforms</h3>
+
+<p class="mb-4">Steel or concrete structures fixed to the seabed. Used in shallow waters up to approximately 500 meters. Characterized by high stability and used for long-term production.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 2. Jack-up Rigs</h3>
+
+<p class="mb-4">Mobile platforms resting on legs that can be raised and lowered. Transported floating then raised above water surface. Suitable for waters up to 150 meters.</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>Transportable and movable</li>
+<li>Very stable when jacked up</li>
+<li>Lower operating costs than floating platforms</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 3. Semi-submersibles</h3>
+
+<p class="mb-4">Platforms floating on columns partially submerged underwater. Provide excellent stability in high waves. Used in depths of 200-3000 meters.</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 4. Drillships</h3>
+
+<p class="mb-4">Ships equipped with complete drilling equipment. Most capable of movement and working in great depths. Used in very deep water (more than 3000 meters).</p>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>High mobility flexibility</li>
+<li>Capability to carry large equipment and supplies</li>
+<li>Advanced dynamic positioning systems</li>
+</ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 Offshore Drilling Challenges</h2>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li><strong>Weather Conditions:</strong> Storms and high waves may halt operations</li>
+<li><strong>High Pressure:</strong> Water pressure increases with depth</li>
+<li><strong>Temperatures:</strong> Large variations from surface to bottom</li>
+<li><strong>Logistics:</strong> Difficulty transporting equipment and workers</li>
+<li><strong>Cost:</strong> Multiple times the cost of onshore drilling</li>
+<li><strong>Safety:</strong> Higher risks requiring strict procedures</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Marine Riser System</h3>
+
+<p class="mb-4">A pipe connecting the platform to the seabed, providing a path for the drill string and drilling fluid. Must withstand platform movement and water currents.</p>
+
+<div class="bg-destructive/10 border-l-4 border-destructive p-4 my-6">
+<p class="text-destructive font-semibold">⚠️ Safety Warning:</p>
+<p>The Deepwater Horizon incident in 2010 demonstrated the risks of deep water drilling. Safety in offshore drilling is not an option but an absolute necessity.</p>
+</div>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Section Summary</h3>
+
+<div class="bg-secondary/50 p-4 rounded-lg">
+<p>Offshore drilling provides access to huge oil reserves, but requires advanced technologies and high costs. Platform type selection depends on water depth and environmental conditions.</p>
+</div>
+</section>`,
+          keyTerms: [
+            { term: 'Jack-up Platform', definition: 'A mobile drilling platform resting on legs that can be raised above water surface' },
+            { term: 'Semi-submersible', definition: 'A platform floating on partially submerged columns providing high stability' },
+            { term: 'Drillship', definition: 'A ship equipped with complete drilling equipment for very deep water operations' },
+            { term: 'Marine Riser', definition: 'A pipe connecting the platform to the seabed for drilling equipment passage' },
+          ],
+          practiceQuestion: {
+            question: 'What is the main challenge in offshore drilling?',
+            options: ['High cost only', 'Distance from shore', 'Water depth and harsh weather conditions', 'Rock type only'],
+            correctAnswer: 2,
+          },
+        },
+      },
+    },
+    {
+      day: 5,
+      type: 'learning',
+      content: {
+        ar: {
+          title: 'اختيار نوع البئر المناسب',
+          explanation: `<section>
+<h2 class="text-primary text-xl font-bold mb-4">🔷 عملية اتخاذ قرار نوع البئر</h2>
+
+<p class="mb-4">اختيار نوع البئر المناسب هو قرار هندسي واقتصادي بالغ الأهمية. القرار الصحيح يمكن أن يوفر ملايين الدولارات ويضاعف الإنتاج، بينما القرار الخاطئ قد يؤدي لفشل المشروع.</p>
+
+<p class="mb-4">يجب على مهندسي النفط النظر في مجموعة شاملة من العوامل قبل اتخاذ هذا القرار الحاسم.</p>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 العوامل الجيولوجية</h2>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 1. سمك المخزون</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li><strong>مخزون سميك (> 50 م):</strong> الآبار العمودية غالباً كافية ومناسبة</li>
+<li><strong>مخزون متوسط (10-50 م):</strong> الآبار المائلة أو الأفقية قد تكون أفضل</li>
+<li><strong>مخزون رقيق (< 10 م):</strong> الآبار الأفقية ضرورية للجدوى الاقتصادية</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 2. نفاذية الصخور</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li><strong>نفاذية عالية:</strong> الآبار العمودية قد تكون كافية</li>
+<li><strong>نفاذية منخفضة:</strong> الآبار الأفقية مع التكسير الهيدروليكي</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 3. وجود طبقات مياه أو غاز</h3>
+
+<p class="mb-4">وجود ماء تحت المخزون أو غاز فوقه يؤثر على اختيار نوع البئر لتقليل مشاكل التداخل.</p>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 العوامل السطحية</h2>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 1. طبيعة الموقع</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li><strong>بري مفتوح:</strong> مرونة في اختيار موقع الحفر ونوع البئر</li>
+<li><strong>بحري:</strong> يُفضل الحفر المائل لحفر عدة آبار من منصة واحدة</li>
+<li><strong>مناطق حضرية:</strong> الحفر المائل للوصول لمخزونات تحت المباني</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 2. القيود البيئية</h3>
+
+<p class="mb-4">المحميات الطبيعية، مصادر المياه، والمناطق السكنية قد تحد من مواقع الحفر المباشر.</p>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 العوامل الاقتصادية</h2>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 1. تكلفة الحفر</h3>
+
+<table class="w-full border-collapse my-4">
+<tr class="bg-secondary/30">
+<td class="border p-2 font-bold">نوع البئر</td>
+<td class="border p-2 font-bold">التكلفة النسبية</td>
+</tr>
+<tr>
+<td class="border p-2">عمودي</td>
+<td class="border p-2">1x (المرجع)</td>
+</tr>
+<tr>
+<td class="border p-2">مائل</td>
+<td class="border p-2">1.3x - 1.5x</td>
+</tr>
+<tr>
+<td class="border p-2">أفقي</td>
+<td class="border p-2">1.5x - 3x</td>
+</tr>
+<tr>
+<td class="border p-2">بحري</td>
+<td class="border p-2">5x - 20x</td>
+</tr>
+</table>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 2. العائد المتوقع</h3>
+
+<p class="mb-4">يجب مقارنة تكلفة الحفر بالإنتاج المتوقع. بئر أفقي يكلف ضعفين لكنه ينتج 4 أضعاف = قرار مربح.</p>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 مخطط اتخاذ القرار</h2>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li><strong>الخطوة 1:</strong> تحليل بيانات المخزون (سمك، نفاذية، ضغط)</li>
+<li><strong>الخطوة 2:</strong> تقييم الموقع السطحي والقيود</li>
+<li><strong>الخطوة 3:</strong> حساب التكاليف لكل خيار</li>
+<li><strong>الخطوة 4:</strong> تقدير الإنتاج لكل خيار</li>
+<li><strong>الخطوة 5:</strong> حساب العائد الاقتصادي</li>
+<li><strong>الخطوة 6:</strong> تقييم المخاطر</li>
+<li><strong>الخطوة 7:</strong> اتخاذ القرار النهائي</li>
+</ul>
+
+<div class="bg-destructive/10 border-l-4 border-destructive p-4 my-6">
+<p class="text-destructive font-semibold">⚠️ نصيحة مهمة:</p>
+<p>لا تختر الخيار الأرخص دائماً. أحياناً البئر الأغلى يحقق عائداً أفضل. القرار يجب أن يعتمد على التحليل الاقتصادي الشامل.</p>
+</div>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 ملخص القسم</h3>
+
+<div class="bg-secondary/50 p-4 rounded-lg">
+<p>اختيار نوع البئر قرار معقد يتطلب موازنة عوامل جيولوجية وسطحية واقتصادية. الهدف هو تعظيم العائد الاقتصادي مع تقليل المخاطر.</p>
+</div>
+</section>`,
+          keyTerms: [
+            { term: 'الجدوى الاقتصادية', definition: 'تحليل ما إذا كان المشروع سيحقق أرباحاً تبرر التكاليف' },
+            { term: 'معدل العائد', definition: 'نسبة الأرباح إلى رأس المال المستثمر' },
+            { term: 'تحليل المخاطر', definition: 'دراسة احتمالات الفشل وتأثيرها على المشروع' },
+            { term: 'التكلفة الرأسمالية', definition: 'التكاليف الأولية لحفر وإكمال البئر' },
+          ],
+          practiceQuestion: {
+            question: 'أي عامل ليس مهماً في اختيار نوع البئر؟',
+            options: ['شكل وسمك المخزون', 'التكلفة والعائد المتوقع', 'لون النفط المنتج', 'الموقع الجغرافي والقيود البيئية'],
+            correctAnswer: 2,
+          },
+        },
+        en: {
+          title: 'Selecting the Right Well Type',
+          explanation: `<section>
+<h2 class="text-primary text-xl font-bold mb-4">🔷 Well Type Decision Process</h2>
+
+<p class="mb-4">Choosing the appropriate well type is a critically important engineering and economic decision. The right decision can save millions of dollars and multiply production, while the wrong decision can lead to project failure.</p>
+
+<p class="mb-4">Petroleum engineers must consider a comprehensive set of factors before making this crucial decision.</p>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 Geological Factors</h2>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 1. Reservoir Thickness</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li><strong>Thick reservoir (> 50 m):</strong> Vertical wells are often sufficient and appropriate</li>
+<li><strong>Medium reservoir (10-50 m):</strong> Directional or horizontal wells may be better</li>
+<li><strong>Thin reservoir (< 10 m):</strong> Horizontal wells are necessary for economic viability</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 2. Rock Permeability</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li><strong>High permeability:</strong> Vertical wells may be sufficient</li>
+<li><strong>Low permeability:</strong> Horizontal wells with hydraulic fracturing</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 3. Presence of Water or Gas Zones</h3>
+
+<p class="mb-4">Water below the reservoir or gas above it affects well type selection to minimize coning problems.</p>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 Surface Factors</h2>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 1. Location Nature</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li><strong>Open land:</strong> Flexibility in choosing drilling location and well type</li>
+<li><strong>Offshore:</strong> Directional drilling preferred to drill multiple wells from one platform</li>
+<li><strong>Urban areas:</strong> Directional drilling to reach reservoirs under buildings</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 2. Environmental Constraints</h3>
+
+<p class="mb-4">Nature reserves, water sources, and residential areas may limit direct drilling locations.</p>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 Economic Factors</h2>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 1. Drilling Cost</h3>
+
+<table class="w-full border-collapse my-4">
+<tr class="bg-secondary/30">
+<td class="border p-2 font-bold">Well Type</td>
+<td class="border p-2 font-bold">Relative Cost</td>
+</tr>
+<tr>
+<td class="border p-2">Vertical</td>
+<td class="border p-2">1x (Reference)</td>
+</tr>
+<tr>
+<td class="border p-2">Directional</td>
+<td class="border p-2">1.3x - 1.5x</td>
+</tr>
+<tr>
+<td class="border p-2">Horizontal</td>
+<td class="border p-2">1.5x - 3x</td>
+</tr>
+<tr>
+<td class="border p-2">Offshore</td>
+<td class="border p-2">5x - 20x</td>
+</tr>
+</table>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 2. Expected Return</h3>
+
+<p class="mb-4">Drilling cost must be compared with expected production. A horizontal well costs 2x but produces 4x = profitable decision.</p>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 Decision-Making Framework</h2>
+
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li><strong>Step 1:</strong> Analyze reservoir data (thickness, permeability, pressure)</li>
+<li><strong>Step 2:</strong> Evaluate surface location and constraints</li>
+<li><strong>Step 3:</strong> Calculate costs for each option</li>
+<li><strong>Step 4:</strong> Estimate production for each option</li>
+<li><strong>Step 5:</strong> Calculate economic return</li>
+<li><strong>Step 6:</strong> Assess risks</li>
+<li><strong>Step 7:</strong> Make final decision</li>
+</ul>
+
+<div class="bg-destructive/10 border-l-4 border-destructive p-4 my-6">
+<p class="text-destructive font-semibold">⚠️ Important Tip:</p>
+<p>Don't always choose the cheapest option. Sometimes the more expensive well achieves better returns. The decision should be based on comprehensive economic analysis.</p>
+</div>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Section Summary</h3>
+
+<div class="bg-secondary/50 p-4 rounded-lg">
+<p>Well type selection is a complex decision requiring balancing geological, surface, and economic factors. The goal is to maximize economic return while minimizing risks.</p>
+</div>
+</section>`,
+          keyTerms: [
+            { term: 'Economic Viability', definition: 'Analysis of whether the project will generate profits justifying costs' },
+            { term: 'Rate of Return', definition: 'Ratio of profits to invested capital' },
+            { term: 'Risk Analysis', definition: 'Study of failure probabilities and their impact on the project' },
+            { term: 'Capital Cost', definition: 'Initial costs for drilling and completing the well' },
+          ],
+          practiceQuestion: {
+            question: 'Which factor is NOT important in well type selection?',
+            options: ['Reservoir shape and thickness', 'Cost and expected return', 'Produced oil color', 'Geographic location and environmental constraints'],
+            correctAnswer: 2,
+          },
+        },
+      },
+    },
+    {
+      day: 6,
+      type: 'quiz',
+      content: {
+        ar: {
+          title: 'اختبار الأسبوع - أنواع الآبار',
+          explanation: 'اختبر معرفتك بأنواع الآبار النفطية وخصائصها وتطبيقاتها.',
+          keyTerms: [],
+        },
+        en: {
+          title: 'Weekly Quiz - Well Types',
+          explanation: 'Test your knowledge of oil well types, their characteristics, and applications.',
+          keyTerms: [],
+        },
+      },
+      quiz: {
+        ar: [
+          { question: 'ما هو البئر المائل؟', options: ['بئر يُحفر عمودياً فقط', 'بئر يُحفر بزاوية مع الخط العمودي', 'بئر للماء فقط', 'بئر سطحي'], correctAnswer: 1 },
+          { question: 'لماذا تُستخدم الآبار الأفقية؟', options: ['لأنها أرخص', 'لزيادة مساحة التماس مع المخزون', 'لأنها أسهل حفراً', 'لأنها أقل عمقاً'], correctAnswer: 1 },
+          { question: 'أي نوع من المنصات يُستخدم في المياه العميقة؟', options: ['منصة جاك أب', 'شبه غاطسة أو سفينة حفر', 'جهاز بري', 'منصة ثابتة'], correctAnswer: 1 },
+          { question: 'ما هو البئر متعدد الفروع؟', options: ['بئر له عدة فروع من بئر رئيسي واحد', 'بئر عميق جداً', 'بئر أفقي فقط', 'بئر للحقن'], correctAnswer: 0 },
+          { question: 'ما الميزة الرئيسية للحفر المائل؟', options: ['تكلفة أقل', 'الوصول لأهداف ليست مباشرة تحت موقع الحفر', 'سرعة أعلى', 'بساطة أكبر'], correctAnswer: 1 },
+          { question: 'أين تُستخدم منصات جاك أب؟', options: ['المياه العميقة جداً', 'المياه الضحلة', 'البر فقط', 'القطب الشمالي'], correctAnswer: 1 },
+          { question: 'ما هو الحفر الممتد (ERD)؟', options: ['آبار قصيرة جداً', 'آبار تمتد أفقياً لمسافات بعيدة', 'آبار سطحية', 'آبار عمودية عميقة'], correctAnswer: 1 },
+          { question: 'لماذا نختار الآبار العمودية؟', options: ['إنتاج أعلى دائماً', 'أبسط وأرخص للمخزونات المناسبة', 'تغطي مساحة أكبر', 'أفضل للمخزونات الرقيقة'], correctAnswer: 1 },
+          { question: 'ما يحد من عمق الحفر البحري؟', options: ['عمق المياه والتقنية المتاحة', 'جودة النفط', 'البعد عن الميناء فقط', 'الطقس فقط'], correctAnswer: 0 },
+          { question: 'ما هو بئر التطوير؟', options: ['بئر استكشاف', 'بئر يُحفر في منطقة مثبتة للإنتاج', 'بئر اختبار', 'بئر مهجور'], correctAnswer: 1 },
+        ],
+        en: [
+          { question: 'What is a directional well?', options: ['A well drilled only vertically', 'A well drilled at an angle to the vertical', 'A well for water only', 'A surface well'], correctAnswer: 1 },
+          { question: 'Why are horizontal wells used?', options: ['Because they are cheaper', 'To increase contact area with the reservoir', 'Because they are easier to drill', 'Because they are shallower'], correctAnswer: 1 },
+          { question: 'Which platform type is used in deep water?', options: ['Jack-up platform', 'Semi-submersible or drillship', 'Land rig', 'Fixed platform'], correctAnswer: 1 },
+          { question: 'What is a multilateral well?', options: ['A well with multiple branches from one main wellbore', 'A very deep well', 'A horizontal well only', 'An injection well'], correctAnswer: 0 },
+          { question: 'What is the main advantage of directional drilling?', options: ['Lower cost', 'Reaching targets not directly below drilling location', 'Higher speed', 'Greater simplicity'], correctAnswer: 1 },
+          { question: 'Where are jack-up rigs used?', options: ['Very deep water', 'Shallow water', 'Land only', 'Arctic'], correctAnswer: 1 },
+          { question: 'What is Extended Reach Drilling (ERD)?', options: ['Very short wells', 'Wells extending horizontally over long distances', 'Surface wells', 'Deep vertical wells'], correctAnswer: 1 },
+          { question: 'Why choose vertical wells?', options: ['Always higher production', 'Simpler and cheaper for suitable reservoirs', 'Cover larger area', 'Better for thin reservoirs'], correctAnswer: 1 },
+          { question: 'What limits offshore drilling depth?', options: ['Water depth and available technology', 'Oil quality', 'Distance from port only', 'Weather only'], correctAnswer: 0 },
+          { question: 'What is a development well?', options: ['An exploration well', 'A well drilled in a proven area for production', 'A test well', 'An abandoned well'], correctAnswer: 1 },
+        ],
+      },
+    },
+    {
+      day: 7,
+      type: 'project',
+      content: {
+        ar: {
+          title: 'مشروع الأسبوع - مقارنة أنواع الآبار',
+          explanation: 'طبّق ما تعلمته عن أنواع الآبار في مشروع عملي.',
+          keyTerms: [],
+        },
+        en: {
+          title: 'Weekly Project - Well Type Comparison',
+          explanation: 'Apply what you learned about well types in a practical project.',
+          keyTerms: [],
+        },
+      },
+      project: {
+        ar: {
+          title: 'تحليل ومقارنة أنواع الآبار النفطية',
+          description: 'قم بإنشاء تقرير مقارنة شامل يوضح الفروقات بين أنواع الآبار المختلفة ومتى يُستخدم كل نوع.',
+          instructions: [
+            'قارن بين الآبار العمودية والمائلة والأفقية من حيث: التصميم، التكلفة، التطبيقات، المميزات والعيوب',
+            'اشرح متى يُفضل استخدام كل نوع مع أمثلة عملية',
+            'ناقش العوامل المؤثرة في اختيار نوع البئر (جيولوجية، اقتصادية، بيئية)',
+            'قدم مثالاً على حقل نفطي واقعي واشرح لماذا تم اختيار نوع معين من الآبار',
+            'اختم بتوصياتك الشخصية لمهندس يواجه قرار اختيار نوع البئر',
+          ],
+          submissionType: 'text',
+        },
+        en: {
+          title: 'Analysis and Comparison of Oil Well Types',
+          description: 'Create a comprehensive comparison report showing the differences between different well types and when each is used.',
+          instructions: [
+            'Compare vertical, directional, and horizontal wells in terms of: design, cost, applications, advantages, and disadvantages',
+            'Explain when each type is preferred with practical examples',
+            'Discuss factors affecting well type selection (geological, economic, environmental)',
+            'Provide an example of a real oil field and explain why a specific well type was chosen',
+            'Conclude with your personal recommendations for an engineer facing a well type selection decision',
+          ],
+          submissionType: 'text',
+        },
+      },
+    },
+  ],
 };
 
 const rigOverviewLesson: WeeklyLesson = {
