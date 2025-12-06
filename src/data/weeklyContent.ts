@@ -3552,13 +3552,1822 @@ const unitsLesson: WeeklyLesson = {
 const terminologyLesson: WeeklyLesson = {
   lessonId: 'terminology',
   days: [
-    { day: 1, type: 'learning', content: { ar: { title: 'المصطلحات الأساسية في هندسة النفط', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 أهمية المصطلحات</h2><p class="mb-4">تستخدم صناعة النفط مصطلحات متخصصة يجب على كل مهندس معرفتها للتواصل الفعال.</p></section>', keyTerms: [], practiceQuestion: { question: 'ما معنى Upstream؟', options: ['التكرير', 'الاستكشاف والإنتاج', 'النقل', 'التسويق'], correctAnswer: 1 } }, en: { title: 'Basic Petroleum Engineering Terms', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 Importance of Terminology</h2><p class="mb-4">The oil industry uses specialized terms that every engineer must know for effective communication.</p></section>', keyTerms: [], practiceQuestion: { question: 'What does Upstream mean?', options: ['Refining', 'Exploration and Production', 'Transportation', 'Marketing'], correctAnswer: 1 } } } },
-    { day: 2, type: 'learning', content: { ar: { title: 'مصطلحات الحفر', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 مصطلحات الحفر الأساسية</h2><p class="mb-4">مصطلحات الحفر تشمل: ROP, WOB, RPM, BHA, TD, MD, TVD.</p></section>', keyTerms: [], practiceQuestion: { question: 'ما معنى ROP؟', options: ['معدل الضغط', 'معدل الاختراق', 'معدل الإنتاج', 'معدل الضخ'], correctAnswer: 1 } }, en: { title: 'Drilling Terminology', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 Basic Drilling Terms</h2><p class="mb-4">Drilling terms include: ROP, WOB, RPM, BHA, TD, MD, TVD.</p></section>', keyTerms: [], practiceQuestion: { question: 'What does ROP stand for?', options: ['Rate of Pressure', 'Rate of Penetration', 'Rate of Production', 'Rate of Pumping'], correctAnswer: 1 } } } },
-    { day: 3, type: 'learning', content: { ar: { title: 'مصطلحات المخزون', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 مصطلحات المخزون</h2><p class="mb-4">مصطلحات المخزون: STOIIP, EUR, RF, PI, IPR, OWC, GOC.</p></section>', keyTerms: [], practiceQuestion: { question: 'ما معنى STOIIP؟', options: ['النفط المنتج', 'النفط الأصلي في المكان', 'النفط المكرر', 'النفط المصدر'], correctAnswer: 1 } }, en: { title: 'Reservoir Terminology', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 Reservoir Terms</h2><p class="mb-4">Reservoir terms: STOIIP, EUR, RF, PI, IPR, OWC, GOC.</p></section>', keyTerms: [], practiceQuestion: { question: 'What does STOIIP mean?', options: ['Produced oil', 'Stock Tank Oil Initially In Place', 'Refined oil', 'Exported oil'], correctAnswer: 1 } } } },
-    { day: 4, type: 'learning', content: { ar: { title: 'مصطلحات الإنتاج', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 مصطلحات الإنتاج</h2><p class="mb-4">مصطلحات الإنتاج: BOPD, BWPD, GOR, WOR, ESP, GL, SRP.</p></section>', keyTerms: [], practiceQuestion: { question: 'ما معنى GOR؟', options: ['نسبة الغاز للنفط', 'معدل النفط العام', 'نطاق التشغيل', 'معدل المكسب'], correctAnswer: 0 } }, en: { title: 'Production Terminology', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 Production Terms</h2><p class="mb-4">Production terms: BOPD, BWPD, GOR, WOR, ESP, GL, SRP.</p></section>', keyTerms: [], practiceQuestion: { question: 'What does GOR mean?', options: ['Gas Oil Ratio', 'General Operating Rate', 'Gain Operating Range', 'Ground Oil Reserve'], correctAnswer: 0 } } } },
-    { day: 5, type: 'learning', content: { ar: { title: 'الاختصارات الشائعة', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 الاختصارات الشائعة</h2><p class="mb-4">الاختصارات الشائعة: API, HSE, NPT, ILT, POOH, RIH, WOC.</p></section>', keyTerms: [], practiceQuestion: { question: 'ما معنى NPT؟', options: ['وقت غير منتج', 'اختبار ضغط جديد', 'نقل الأنابيب الشمالي', 'تقنية الضغط الطبيعي'], correctAnswer: 0 } }, en: { title: 'Common Abbreviations', explanation: '<section><h2 class="text-primary text-xl font-bold mb-4">🔷 Common Abbreviations</h2><p class="mb-4">Common abbreviations: API, HSE, NPT, ILT, POOH, RIH, WOC.</p></section>', keyTerms: [], practiceQuestion: { question: 'What does NPT stand for?', options: ['Non-Productive Time', 'New Pressure Test', 'North Pipe Transfer', 'Natural Pressure Technique'], correctAnswer: 0 } } } },
-    { day: 6, type: 'quiz', content: { en: { title: 'Weekly Quiz', explanation: 'Test your knowledge of terminology.', keyTerms: [] }, ar: { title: 'اختبار الأسبوع', explanation: 'اختبر معرفتك بالمصطلحات.', keyTerms: [] } }, quiz: { en: [{ question: 'What does ROP mean?', options: ['Rate of Pressure', 'Rate of Penetration', 'Rate of Production', 'Radius of Pipe'], correctAnswer: 1 }, { question: 'What is WOB?', options: ['Width of Bit', 'Weight on Bit', 'Water Oil Boundary', 'Well Operation Base'], correctAnswer: 1 }, { question: 'What does TD stand for?', options: ['Total Depth', 'Test Data', 'Time Duration', 'Technical Diagram'], correctAnswer: 0 }, { question: 'What is BOPD?', options: ['Barrels of Production Daily', 'Barrels of Oil Per Day', 'Basic Operating Procedure Document', 'Bottom of Pipe Depth'], correctAnswer: 1 }, { question: 'What does GOR stand for?', options: ['Gas Oil Ratio', 'General Operating Rules', 'Ground Oil Reserve', 'Gauge Oil Reading'], correctAnswer: 0 }, { question: 'What is BHA?', options: ['Bottom Hole Assembly', 'Basic Hydraulic Analysis', 'Bore Hole Angle', 'Bit Hour Account'], correctAnswer: 0 }, { question: 'What does ESP mean?', options: ['Emergency Safety Procedure', 'Electric Submersible Pump', 'Estimated Selling Price', 'External Support Platform'], correctAnswer: 1 }, { question: 'What is STOIIP?', options: ['Standard Test Oil In Initial Phase', 'Stock Tank Oil Initially In Place', 'System Total Oil Input/Output Program', 'Surface Tank Oil Inventory Index'], correctAnswer: 1 }, { question: 'What does MD stand for?', options: ['Measured Depth', 'Maximum Distance', 'Mud Density', 'Motor Drive'], correctAnswer: 0 }, { question: 'What is OWC?', options: ['Oil Water Contact', 'Operating Well Cost', 'Open Well Completion', 'Outer Well Casing'], correctAnswer: 0 }], ar: [{ question: 'ما معنى ROP؟', options: ['معدل الضغط', 'معدل الاختراق', 'معدل الإنتاج', 'نصف قطر الأنبوب'], correctAnswer: 1 }, { question: 'ما هو WOB؟', options: ['عرض رأس الحفر', 'الوزن على رأس الحفر', 'حدود الماء والنفط', 'قاعدة عمليات البئر'], correctAnswer: 1 }, { question: 'ماذا يعني TD؟', options: ['العمق الكلي', 'بيانات الاختبار', 'مدة الوقت', 'رسم تقني'], correctAnswer: 0 }, { question: 'ما هو BOPD؟', options: ['براميل الإنتاج اليومي', 'براميل النفط يومياً', 'وثيقة إجراء التشغيل', 'عمق قاع الأنبوب'], correctAnswer: 1 }, { question: 'ماذا يعني GOR؟', options: ['نسبة الغاز للنفط', 'قواعد التشغيل العامة', 'احتياطي النفط الأرضي', 'قراءة مقياس النفط'], correctAnswer: 0 }, { question: 'ما هو BHA؟', options: ['تجميعة قاع البئر', 'تحليل هيدروليكي أساسي', 'زاوية ثقب الحفر', 'حساب ساعات رأس الحفر'], correctAnswer: 0 }, { question: 'ماذا يعني ESP؟', options: ['إجراء سلامة طارئ', 'مضخة غاطسة كهربائية', 'سعر بيع تقديري', 'منصة دعم خارجية'], correctAnswer: 1 }, { question: 'ما هو STOIIP؟', options: ['اختبار النفط القياسي في المرحلة الأولية', 'النفط الأصلي في المكان عند ظروف الخزان', 'برنامج إدخال/إخراج النفط الكلي', 'مؤشر جرد النفط السطحي'], correctAnswer: 1 }, { question: 'ماذا يعني MD؟', options: ['العمق المقاس', 'المسافة القصوى', 'كثافة الطين', 'محرك الدفع'], correctAnswer: 0 }, { question: 'ما هو OWC؟', options: ['حد تماس الماء والنفط', 'تكلفة تشغيل البئر', 'إكمال البئر المفتوح', 'أنبوب التغليف الخارجي'], correctAnswer: 0 }] } },
-    { day: 7, type: 'project', content: { en: { title: 'Mini Project', explanation: 'Create a terminology glossary.', keyTerms: [] }, ar: { title: 'مشروع صغير', explanation: 'أنشئ قاموس مصطلحات.', keyTerms: [] } }, project: { en: { title: 'Personal Terminology Glossary', description: 'Create a personal glossary of 30 petroleum engineering terms.', instructions: ['Include at least 30 terms', 'Group them by category (drilling, reservoir, production, etc.)', 'Provide definition for each term', 'Include the abbreviation if applicable', 'Add Arabic translation for each term'], submissionType: 'text' }, ar: { title: 'قاموس مصطلحات شخصي', description: 'أنشئ قاموساً شخصياً يحتوي على 30 مصطلحاً في هندسة النفط.', instructions: ['تضمين 30 مصطلحاً على الأقل', 'تجميعها حسب الفئة (حفر، مخزون، إنتاج، إلخ)', 'تقديم تعريف لكل مصطلح', 'تضمين الاختصار إن وجد', 'إضافة الترجمة الإنجليزية لكل مصطلح'], submissionType: 'text' } } }
+    { 
+      day: 1, 
+      type: 'learning', 
+      content: { 
+        ar: { 
+          title: 'مقدمة في المصطلحات النفطية وتقسيمات صناعة النفط', 
+          explanation: `
+<section class="mb-8">
+  <h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 أهمية المصطلحات في صناعة النفط والغاز</h2>
+  
+  <p class="mb-4" style="line-height: 1.8;">تُعد صناعة النفط والغاز من أكثر الصناعات تعقيداً وتخصصاً في العالم، وتستخدم لغة فنية خاصة تطورت عبر أكثر من 150 عاماً منذ بداية الصناعة في عام 1859 في بنسلفانيا. هذه المصطلحات ليست مجرد كلمات، بل هي وسيلة التواصل الأساسية بين المهندسين والفنيين والمشغلين في جميع أنحاء العالم. فعندما يتحدث مهندس حفر في الكويت مع زميله في تكساس أو بحر الشمال، يستخدمون نفس المصطلحات الإنجليزية لضمان الفهم الدقيق والآمن.</p>
+
+  <p class="mb-4" style="line-height: 1.8;">إن إتقان هذه المصطلحات ليس ترفاً أكاديمياً، بل ضرورة مهنية حقيقية. فسوء الفهم في حقل نفطي قد يؤدي إلى كوارث بيئية أو خسائر بشرية أو اقتصادية ضخمة. تخيل أن مهندساً أساء فهم مصطلح يتعلق بضغط البئر - النتيجة قد تكون انفجار البئر (Blowout) الذي شهدناه في كوارث مثل Deepwater Horizon عام 2010.</p>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 لماذا تحتاج لإتقان المصطلحات النفطية؟</h3>
+  
+  <ul class="mb-4" style="line-height: 2;">
+    <li><strong>التواصل الآمن:</strong> المصطلحات الدقيقة تمنع سوء الفهم الذي قد يسبب حوادث خطيرة</li>
+    <li><strong>قراءة التقارير:</strong> التقارير اليومية للحفر (DDR) والتقارير الجيولوجية مكتوبة بالمصطلحات الفنية</li>
+    <li><strong>الاجتماعات والتخطيط:</strong> اجتماعات تخطيط البئر تستخدم مصطلحات متخصصة بكثافة</li>
+    <li><strong>التوظيف والمقابلات:</strong> شركات النفط تختبر معرفتك بالمصطلحات في المقابلات</li>
+    <li><strong>التعلم المستمر:</strong> الكتب والدورات والأبحاث كلها بالإنجليزية وتستخدم هذه المصطلحات</li>
+    <li><strong>العمل الدولي:</strong> حقول النفط متعددة الجنسيات والمصطلحات هي اللغة المشتركة</li>
+  </ul>
+</section>
+
+<section class="mb-8">
+  <h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 التقسيم الرئيسي لصناعة النفط: Upstream, Midstream, Downstream</h2>
+  
+  <p class="mb-4" style="line-height: 1.8;">تُقسم صناعة النفط والغاز تقليدياً إلى ثلاثة قطاعات رئيسية، وهذا التقسيم أساسي لفهم كيفية عمل الصناعة ككل. كل قطاع له شركاته المتخصصة ومهندسوه ومصطلحاته الخاصة.</p>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 القطاع الأول: Upstream (المنبع) - الاستكشاف والإنتاج</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;">يُسمى أيضاً <strong>E&P (Exploration and Production)</strong>، وهو القطاع الذي يركز عليه معظم مهندسي البترول. يشمل:</p>
+  
+  <ul class="mb-4" style="line-height: 2;">
+    <li><strong>الاستكشاف (Exploration):</strong>
+      <ul style="margin-right: 1.5rem; margin-top: 0.5rem;">
+        <li>المسح الجيولوجي (Geological Survey) لدراسة الصخور السطحية</li>
+        <li>المسح الزلزالي (Seismic Survey) باستخدام الموجات الصوتية لتصوير الطبقات تحت الأرض</li>
+        <li>تحليل البيانات الجيوفيزيائية (Geophysical Analysis)</li>
+        <li>تحديد مواقع الحفر المحتملة (Prospect Evaluation)</li>
+        <li>حفر آبار الاستكشاف (Exploration Wells / Wildcats)</li>
+      </ul>
+    </li>
+    <li><strong>التقييم (Appraisal):</strong>
+      <ul style="margin-right: 1.5rem; margin-top: 0.5rem;">
+        <li>حفر آبار التقييم (Appraisal Wells) لتحديد حجم المكتشف</li>
+        <li>اختبارات الإنتاج (Production Tests)</li>
+        <li>تقدير الاحتياطيات (Reserves Estimation)</li>
+        <li>دراسة الجدوى الاقتصادية (Economic Feasibility)</li>
+      </ul>
+    </li>
+    <li><strong>التطوير (Development):</strong>
+      <ul style="margin-right: 1.5rem; margin-top: 0.5rem;">
+        <li>تصميم خطة تطوير الحقل (Field Development Plan - FDP)</li>
+        <li>حفر آبار التطوير (Development Wells)</li>
+        <li>بناء المنشآت السطحية (Surface Facilities)</li>
+        <li>مد خطوط الأنابيب الداخلية (Flowlines)</li>
+      </ul>
+    </li>
+    <li><strong>الإنتاج (Production):</strong>
+      <ul style="margin-right: 1.5rem; margin-top: 0.5rem;">
+        <li>استخراج النفط والغاز من الآبار</li>
+        <li>الفصل الأولي (Primary Separation) للنفط والغاز والماء</li>
+        <li>المعالجة الأولية (Initial Treatment)</li>
+        <li>إدارة المكمن (Reservoir Management)</li>
+        <li>الاستخلاص المعزز (Enhanced Oil Recovery - EOR)</li>
+      </ul>
+    </li>
+  </ul>
+
+  <p class="mb-4" style="background: #fef3c7; padding: 1rem; border-radius: 0.5rem;"><strong>💡 معلومة مهمة:</strong> شركات Upstream الكبرى تشمل: Saudi Aramco, ExxonMobil, Shell, BP, Chevron, TotalEnergies, Kuwait Oil Company (KOC), Abu Dhabi National Oil Company (ADNOC).</p>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 القطاع الثاني: Midstream (الوسط) - النقل والتخزين</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;">هذا القطاع يمثل الحلقة الوسطى بين الإنتاج والتكرير:</p>
+  
+  <ul class="mb-4" style="line-height: 2;">
+    <li><strong>خطوط الأنابيب (Pipelines):</strong> نقل النفط الخام والغاز لمسافات طويلة</li>
+    <li><strong>ناقلات النفط (Tankers):</strong> السفن العملاقة لنقل النفط بحراً</li>
+    <li><strong>الخزانات (Storage Tanks):</strong> تخزين النفط الخام والمنتجات</li>
+    <li><strong>محطات الضخ (Pumping Stations):</strong> دفع النفط عبر الأنابيب</li>
+    <li><strong>محطات الضغط (Compression Stations):</strong> ضغط الغاز للنقل</li>
+    <li><strong>محطات التحميل والتفريغ (Loading/Unloading Terminals):</strong> موانئ نفطية متخصصة</li>
+    <li><strong>معالجة الغاز (Gas Processing):</strong> إزالة الشوائب وفصل السوائل</li>
+    <li><strong>تسييل الغاز (LNG - Liquefied Natural Gas):</strong> تحويل الغاز لسائل للنقل بالسفن</li>
+  </ul>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 القطاع الثالث: Downstream (المصب) - التكرير والتسويق</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;">هذا القطاع يحول النفط الخام إلى منتجات قابلة للاستخدام:</p>
+  
+  <ul class="mb-4" style="line-height: 2;">
+    <li><strong>التكرير (Refining):</strong>
+      <ul style="margin-right: 1.5rem; margin-top: 0.5rem;">
+        <li>التقطير الجوي (Atmospheric Distillation)</li>
+        <li>التقطير الفراغي (Vacuum Distillation)</li>
+        <li>التكسير الحفزي (Catalytic Cracking - FCC)</li>
+        <li>التكسير الهيدروجيني (Hydrocracking)</li>
+        <li>إعادة التشكيل (Reforming)</li>
+      </ul>
+    </li>
+    <li><strong>المنتجات البترولية (Petroleum Products):</strong>
+      <ul style="margin-right: 1.5rem; margin-top: 0.5rem;">
+        <li>البنزين (Gasoline / Petrol)</li>
+        <li>الديزل (Diesel)</li>
+        <li>وقود الطائرات (Jet Fuel / Kerosene)</li>
+        <li>زيوت التشحيم (Lubricants)</li>
+        <li>الأسفلت (Asphalt / Bitumen)</li>
+        <li>البتروكيماويات (Petrochemicals)</li>
+      </ul>
+    </li>
+    <li><strong>التسويق والتوزيع (Marketing and Distribution):</strong>
+      <ul style="margin-right: 1.5rem; margin-top: 0.5rem;">
+        <li>محطات الوقود (Gas Stations)</li>
+        <li>البيع بالجملة للصناعات</li>
+        <li>التصدير الدولي</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+
+<section class="mb-8">
+  <h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 الشركات المتكاملة والمتخصصة</h2>
+  
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 الشركات المتكاملة (Integrated Oil Companies - IOCs)</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;">هذه الشركات تعمل في جميع القطاعات الثلاثة:</p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li><strong>Supermajors:</strong> ExxonMobil, Shell, BP, Chevron, TotalEnergies</li>
+    <li><strong>شركات النفط الوطنية (NOCs):</strong> Saudi Aramco, ADNOC, KPC, Qatar Energy, NIOC</li>
+  </ul>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 شركات الخدمات النفطية (Oilfield Service Companies)</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;">هذه الشركات توفر الخدمات والمعدات لشركات النفط:</p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li><strong>الكبرى:</strong> Schlumberger (SLB), Halliburton, Baker Hughes</li>
+    <li><strong>شركات الحفر:</strong> Transocean, Noble, Nabors, Patterson-UTI</li>
+    <li><strong>الخدمات المتخصصة:</strong> Weatherford, National Oilwell Varco (NOV)</li>
+  </ul>
+</section>
+
+<section class="mb-8">
+  <h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 ملخص اليوم الأول</h2>
+  <ul class="mb-4" style="line-height: 2;">
+    <li>المصطلحات النفطية هي لغة التواصل العالمية في الصناعة</li>
+    <li>صناعة النفط تنقسم إلى: Upstream (استكشاف وإنتاج)، Midstream (نقل وتخزين)، Downstream (تكرير وتسويق)</li>
+    <li>مهندسو البترول يعملون غالباً في قطاع Upstream</li>
+    <li>هناك شركات متكاملة (IOCs) وشركات خدمات (Service Companies)</li>
+  </ul>
+</section>
+`, 
+          keyTerms: [
+            { term: 'Upstream', definition: 'قطاع المنبع - الاستكشاف والإنتاج (E&P)' },
+            { term: 'Midstream', definition: 'القطاع الوسط - النقل والتخزين' },
+            { term: 'Downstream', definition: 'قطاع المصب - التكرير والتسويق' },
+            { term: 'E&P', definition: 'Exploration and Production - الاستكشاف والإنتاج' },
+            { term: 'IOC', definition: 'Integrated Oil Company - شركة نفط متكاملة' },
+            { term: 'NOC', definition: 'National Oil Company - شركة نفط وطنية' },
+            { term: 'Oilfield Services', definition: 'شركات الخدمات النفطية التي توفر المعدات والخدمات' }
+          ], 
+          practiceQuestion: { 
+            question: 'أي قطاع يركز على الاستكشاف وحفر الآبار وإنتاج النفط؟', 
+            options: ['Downstream', 'Upstream', 'Midstream', 'Refining'], 
+            correctAnswer: 1 
+          } 
+        }, 
+        en: { 
+          title: 'Introduction to Oil & Gas Terminology and Industry Sectors', 
+          explanation: `
+<section class="mb-8">
+  <h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 The Importance of Terminology in the Oil and Gas Industry</h2>
+  
+  <p class="mb-4" style="line-height: 1.8;">The oil and gas industry is one of the most complex and specialized industries in the world, using a technical language that has evolved over 150 years since the industry began in 1859 in Pennsylvania. These terms are not just words; they are the primary means of communication between engineers, technicians, and operators worldwide. When a drilling engineer in Kuwait speaks with a colleague in Texas or the North Sea, they use the same English terminology to ensure precise and safe understanding.</p>
+
+  <p class="mb-4" style="line-height: 1.8;">Mastering this terminology is not an academic luxury but a real professional necessity. Miscommunication in an oil field can lead to environmental disasters or massive human and economic losses. Imagine an engineer misunderstanding a term related to well pressure - the result could be a blowout like the Deepwater Horizon disaster in 2010.</p>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 Why You Need to Master Oil & Gas Terminology?</h3>
+  
+  <ul class="mb-4" style="line-height: 2;">
+    <li><strong>Safe Communication:</strong> Precise terminology prevents misunderstandings that could cause serious accidents</li>
+    <li><strong>Reading Reports:</strong> Daily Drilling Reports (DDR) and geological reports are written in technical terms</li>
+    <li><strong>Meetings and Planning:</strong> Well planning meetings use specialized terminology extensively</li>
+    <li><strong>Employment and Interviews:</strong> Oil companies test your knowledge of terminology in interviews</li>
+    <li><strong>Continuous Learning:</strong> Books, courses, and research all use these terms</li>
+    <li><strong>International Work:</strong> Oil fields are multinational and terminology is the common language</li>
+  </ul>
+</section>
+
+<section class="mb-8">
+  <h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 Main Divisions of the Oil Industry: Upstream, Midstream, Downstream</h2>
+  
+  <p class="mb-4" style="line-height: 1.8;">The oil and gas industry is traditionally divided into three main sectors. This division is fundamental to understanding how the industry works as a whole. Each sector has its specialized companies, engineers, and specific terminology.</p>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 First Sector: Upstream - Exploration and Production</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;">Also called <strong>E&P (Exploration and Production)</strong>, this is the sector most petroleum engineers focus on. It includes:</p>
+  
+  <ul class="mb-4" style="line-height: 2;">
+    <li><strong>Exploration:</strong>
+      <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+        <li>Geological Survey to study surface rocks</li>
+        <li>Seismic Survey using sound waves to image subsurface layers</li>
+        <li>Geophysical Analysis</li>
+        <li>Prospect Evaluation to identify potential drilling locations</li>
+        <li>Drilling Exploration Wells (Wildcats)</li>
+      </ul>
+    </li>
+    <li><strong>Appraisal:</strong>
+      <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+        <li>Drilling Appraisal Wells to determine discovery size</li>
+        <li>Production Tests</li>
+        <li>Reserves Estimation</li>
+        <li>Economic Feasibility Studies</li>
+      </ul>
+    </li>
+    <li><strong>Development:</strong>
+      <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+        <li>Field Development Plan (FDP) design</li>
+        <li>Drilling Development Wells</li>
+        <li>Building Surface Facilities</li>
+        <li>Installing Flowlines</li>
+      </ul>
+    </li>
+    <li><strong>Production:</strong>
+      <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+        <li>Extracting oil and gas from wells</li>
+        <li>Primary Separation of oil, gas, and water</li>
+        <li>Initial Treatment</li>
+        <li>Reservoir Management</li>
+        <li>Enhanced Oil Recovery (EOR)</li>
+      </ul>
+    </li>
+  </ul>
+
+  <p class="mb-4" style="background: #fef3c7; padding: 1rem; border-radius: 0.5rem;"><strong>💡 Important Note:</strong> Major Upstream companies include: Saudi Aramco, ExxonMobil, Shell, BP, Chevron, TotalEnergies, Kuwait Oil Company (KOC), Abu Dhabi National Oil Company (ADNOC).</p>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 Second Sector: Midstream - Transportation and Storage</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;">This sector represents the middle link between production and refining:</p>
+  
+  <ul class="mb-4" style="line-height: 2;">
+    <li><strong>Pipelines:</strong> Transporting crude oil and gas over long distances</li>
+    <li><strong>Tankers:</strong> Giant ships for maritime oil transport</li>
+    <li><strong>Storage Tanks:</strong> Storing crude oil and products</li>
+    <li><strong>Pumping Stations:</strong> Pushing oil through pipelines</li>
+    <li><strong>Compression Stations:</strong> Compressing gas for transport</li>
+    <li><strong>Loading/Unloading Terminals:</strong> Specialized oil ports</li>
+    <li><strong>Gas Processing:</strong> Removing impurities and separating liquids</li>
+    <li><strong>LNG (Liquefied Natural Gas):</strong> Converting gas to liquid for ship transport</li>
+  </ul>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 Third Sector: Downstream - Refining and Marketing</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;">This sector converts crude oil into usable products:</p>
+  
+  <ul class="mb-4" style="line-height: 2;">
+    <li><strong>Refining:</strong>
+      <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+        <li>Atmospheric Distillation</li>
+        <li>Vacuum Distillation</li>
+        <li>Catalytic Cracking (FCC)</li>
+        <li>Hydrocracking</li>
+        <li>Reforming</li>
+      </ul>
+    </li>
+    <li><strong>Petroleum Products:</strong>
+      <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+        <li>Gasoline (Petrol)</li>
+        <li>Diesel</li>
+        <li>Jet Fuel (Kerosene)</li>
+        <li>Lubricants</li>
+        <li>Asphalt (Bitumen)</li>
+        <li>Petrochemicals</li>
+      </ul>
+    </li>
+    <li><strong>Marketing and Distribution:</strong>
+      <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+        <li>Gas Stations</li>
+        <li>Wholesale to industries</li>
+        <li>International export</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+
+<section class="mb-8">
+  <h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 Integrated and Specialized Companies</h2>
+  
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 Integrated Oil Companies (IOCs)</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;">These companies operate across all three sectors:</p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li><strong>Supermajors:</strong> ExxonMobil, Shell, BP, Chevron, TotalEnergies</li>
+    <li><strong>National Oil Companies (NOCs):</strong> Saudi Aramco, ADNOC, KPC, Qatar Energy, NIOC</li>
+  </ul>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 Oilfield Service Companies</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;">These companies provide services and equipment to oil companies:</p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li><strong>Major Players:</strong> Schlumberger (SLB), Halliburton, Baker Hughes</li>
+    <li><strong>Drilling Contractors:</strong> Transocean, Noble, Nabors, Patterson-UTI</li>
+    <li><strong>Specialized Services:</strong> Weatherford, National Oilwell Varco (NOV)</li>
+  </ul>
+</section>
+
+<section class="mb-8">
+  <h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 Day 1 Summary</h2>
+  <ul class="mb-4" style="line-height: 2;">
+    <li>Oil & gas terminology is the global communication language in the industry</li>
+    <li>The industry divides into: Upstream (exploration & production), Midstream (transportation & storage), Downstream (refining & marketing)</li>
+    <li>Petroleum engineers primarily work in the Upstream sector</li>
+    <li>There are Integrated Oil Companies (IOCs) and Service Companies</li>
+  </ul>
+</section>
+`, 
+          keyTerms: [
+            { term: 'Upstream', definition: 'Exploration and Production sector (E&P)' },
+            { term: 'Midstream', definition: 'Transportation and Storage sector' },
+            { term: 'Downstream', definition: 'Refining and Marketing sector' },
+            { term: 'E&P', definition: 'Exploration and Production' },
+            { term: 'IOC', definition: 'Integrated Oil Company - operates in all sectors' },
+            { term: 'NOC', definition: 'National Oil Company - government-owned' },
+            { term: 'Oilfield Services', definition: 'Companies providing equipment and services to oil companies' }
+          ], 
+          practiceQuestion: { 
+            question: 'Which sector focuses on exploration, drilling wells, and oil production?', 
+            options: ['Downstream', 'Upstream', 'Midstream', 'Refining'], 
+            correctAnswer: 1 
+          } 
+        } 
+      } 
+    },
+    { 
+      day: 2, 
+      type: 'learning', 
+      content: { 
+        ar: { 
+          title: 'مصطلحات الحفر الأساسية - الجزء الأول', 
+          explanation: `
+<section class="mb-8">
+  <h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 مقدمة في مصطلحات الحفر</h2>
+  
+  <p class="mb-4" style="line-height: 1.8;">الحفر هو قلب صناعة النفط، وبدونه لا يمكن الوصول للنفط والغاز المحبوسين في أعماق الأرض. لذلك، تطورت مصطلحات الحفر لتكون دقيقة جداً، حيث أن أي سوء فهم قد يكلف ملايين الدولارات أو أرواحاً بشرية. في هذا الدرس سنتعلم أهم المصطلحات التي ستسمعها يومياً في حقول النفط.</p>
+
+  <p class="mb-4" style="line-height: 1.8;">معظم هذه المصطلحات اختصارات (Acronyms) لأن المهندسين والفنيين يستخدمونها مئات المرات يومياً، فالاختصار يوفر الوقت ويمنع الالتباس.</p>
+</section>
+
+<section class="mb-8">
+  <h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 مصطلحات قياسات عمق البئر</h2>
+  
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 TD - Total Depth (العمق الكلي)</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>التعريف:</strong> العمق النهائي المخطط أو المحفور للبئر، يُقاس عادةً من Kelly Bushing أو Rotary Table على سطح منصة الحفر.</p>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>الاستخدام العملي:</strong></p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li>"The well reached TD at 15,000 feet" - البئر وصل للعمق الكلي 15,000 قدم</li>
+    <li>"We are 500 feet from TD" - نحن على بعد 500 قدم من العمق المستهدف</li>
+    <li>"TD was achieved ahead of schedule" - تم الوصول للعمق الكلي قبل الموعد المحدد</li>
+  </ul>
+  
+  <p class="mb-4" style="background: #fee2e2; padding: 1rem; border-radius: 0.5rem;"><strong>⚠️ تنبيه:</strong> TD يمكن أن يكون مخططاً (Planned TD) أو فعلياً (Actual TD). أحياناً يتوقف الحفر قبل TD المخطط بسبب مشاكل تقنية أو وصول مبكر للهدف.</p>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 MD - Measured Depth (العمق المقاس)</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>التعريف:</strong> الطول الفعلي لمسار البئر من السطح إلى نقطة معينة، يُقاس على طول محور البئر. هذا هو العمق الذي ستراه في تقارير الحفر اليومية.</p>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>لماذا نستخدم MD؟</strong></p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li>لحساب كمية أنابيب الحفر (Drill Pipe) المطلوبة</li>
+    <li>لتحديد موقع الأدوات في البئر</li>
+    <li>لحساب الوقت المطلوب لسحب أو إنزال المعدات (Trip Time)</li>
+  </ul>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>مثال:</strong> بئر مائل (Deviated Well) قد يكون MD = 12,000 قدم بينما TVD = 10,000 قدم فقط.</p>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 TVD - True Vertical Depth (العمق العمودي الحقيقي)</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>التعريف:</strong> المسافة العمودية من نقطة مرجعية على السطح إلى نقطة في البئر. هذا العمق يتجاهل أي ميل أو انحراف في مسار البئر.</p>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>لماذا TVD مهم جداً؟</strong></p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li><strong>حسابات الضغط:</strong> الضغط الهيدروستاتيكي يعتمد على TVD وليس MD</li>
+    <li><strong>الخرائط الجيولوجية:</strong> الطبقات الجيولوجية ترسم حسب TVD</li>
+    <li><strong>تصميم البئر:</strong> أعماق أنابيب التغليف (Casing) تُحدد بناءً على TVD</li>
+  </ul>
+  
+  <p class="mb-4" style="background: #fef3c7; padding: 1rem; border-radius: 0.5rem;"><strong>💡 معادلة مهمة:</strong> TVD = MD × cos(θ) حيث θ هي زاوية الميل. في البئر العمودي المثالي: MD = TVD</p>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 TVDSS - True Vertical Depth Subsea (العمق العمودي تحت سطح البحر)</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>التعريف:</strong> العمق العمودي مقاساً من مستوى سطح البحر (Mean Sea Level - MSL). هذا هو المرجع القياسي العالمي للمقارنة بين الآبار.</p>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>الاستخدام:</strong></p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li>مقارنة أعماق الطبقات الجيولوجية بين آبار مختلفة</li>
+    <li>رسم الخرائط الهيكلية (Structural Maps)</li>
+    <li>تحديد تماسات الموائع (Fluid Contacts) مثل OWC و GOC</li>
+  </ul>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>مثال:</strong> منصة بحرية ارتفاعها 100 قدم فوق سطح البحر، وعمق البحر 300 قدم:<br/>
+  إذا كان TVD من Rotary Table = 10,000 قدم<br/>
+  فإن TVDSS = 10,000 - 100 = 9,900 قدم (تحت سطح البحر)</p>
+</section>
+
+<section class="mb-8">
+  <h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 مصطلحات معايير أداء الحفر</h2>
+  
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 ROP - Rate of Penetration (معدل الاختراق)</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>التعريف:</strong> السرعة التي يخترق بها رأس الحفر (Drill Bit) الصخور، تُقاس بالأقدام أو الأمتار في الساعة (ft/hr أو m/hr).</p>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>العوامل المؤثرة على ROP:</strong></p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li><strong>نوع الصخور:</strong> الصخور اللينة (Shale) = ROP عالي، الصخور الصلبة (Granite) = ROP منخفض</li>
+    <li><strong>WOB - Weight on Bit:</strong> زيادة الوزن تزيد ROP حتى حد معين</li>
+    <li><strong>RPM:</strong> سرعة دوران رأس الحفر</li>
+    <li><strong>نوع رأس الحفر:</strong> PDC bits أسرع من Roller Cone في بعض التكوينات</li>
+    <li><strong>خصائص سائل الحفر:</strong> الكثافة واللزوجة تؤثران على الأداء</li>
+    <li><strong>قوة الدفع الهيدروليكي:</strong> Hydraulic Horsepower عند رأس الحفر</li>
+  </ul>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>قيم نموذجية:</strong></p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li>طبقات لينة: 50-200 ft/hr</li>
+    <li>طبقات متوسطة: 10-50 ft/hr</li>
+    <li>طبقات صلبة جداً: 1-10 ft/hr</li>
+  </ul>
+  
+  <p class="mb-4" style="background: #fef3c7; padding: 1rem; border-radius: 0.5rem;"><strong>💡 نصيحة عملية:</strong> تتبع ROP يساعد في تحديد الطبقات الجيولوجية (Formation Tops) لأن التغير المفاجئ في ROP يشير لتغير نوع الصخور.</p>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 WOB - Weight on Bit (الوزن على رأس الحفر)</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>التعريف:</strong> القوة العمودية المطبقة على رأس الحفر لدفعه في الصخور، تُقاس بآلاف الأرطال (klbs أو Klbf).</p>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>كيف يتم التحكم في WOB؟</strong></p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li>يأتي الوزن من Drill Collars (أطواق الحفر الثقيلة)</li>
+    <li>يتحكم السائق (Driller) في الوزن عبر نظام الفرامل</li>
+    <li>زيادة الوزن تزيد ROP لكن قد تتلف رأس الحفر</li>
+    <li>وزن قليل جداً يسبب اهتزازات ضارة</li>
+  </ul>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>قيم نموذجية:</strong> 5,000 - 60,000 lbs حسب حجم ونوع رأس الحفر والتكوين</p>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 RPM - Rotations Per Minute (دورات في الدقيقة)</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>التعريف:</strong> سرعة دوران سلسلة الحفر ورأس الحفر، تُقاس بعدد الدورات الكاملة في الدقيقة.</p>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>مصادر الدوران:</strong></p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li><strong>Top Drive:</strong> محرك علوي يدور سلسلة الحفر من الأعلى (الأكثر شيوعاً حالياً)</li>
+    <li><strong>Rotary Table:</strong> طاولة دوارة تقليدية</li>
+    <li><strong>Mud Motor:</strong> محرك طيني يعمل بضغط سائل الحفر في أسفل البئر</li>
+  </ul>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>قيم نموذجية:</strong></p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li>Rotary Table / Top Drive: 60-200 RPM</li>
+    <li>Mud Motor: 100-400 RPM (إضافية)</li>
+    <li>إجمالي RPM عند رأس الحفر قد يصل 400+ RPM</li>
+  </ul>
+</section>
+
+<section class="mb-8">
+  <h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 مصطلحات تجميعة قاع البئر</h2>
+  
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 BHA - Bottom Hole Assembly (تجميعة قاع البئر)</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>التعريف:</strong> مجموعة المكونات الموجودة في الجزء السفلي من سلسلة الحفر، من رأس الحفر حتى نهاية Drill Collars أو HWDP.</p>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>مكونات BHA النموذجية:</strong></p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li><strong>Bit:</strong> رأس الحفر</li>
+    <li><strong>Bit Sub:</strong> وصلة بين رأس الحفر والمكونات الأخرى</li>
+    <li><strong>Mud Motor:</strong> محرك طيني (في الحفر الموجه)</li>
+    <li><strong>Stabilizers:</strong> مثبتات للتحكم في مسار البئر</li>
+    <li><strong>MWD/LWD Tools:</strong> أدوات القياس أثناء الحفر</li>
+    <li><strong>Drill Collars:</strong> أطواق حفر ثقيلة توفر الوزن</li>
+    <li><strong>HWDP:</strong> أنابيب حفر ثقيلة الوزن</li>
+    <li><strong>Jars:</strong> أدوات التحرير عند علوق سلسلة الحفر</li>
+    <li><strong>Shock Sub:</strong> ممتص الصدمات</li>
+  </ul>
+  
+  <p class="mb-4" style="background: #fef3c7; padding: 1rem; border-radius: 0.5rem;"><strong>💡 معلومة:</strong> تصميم BHA يحدد سلوك البئر - هل سيميل للأعلى (Build) أو للأسفل (Drop) أو يحافظ على زاويته (Hold).</p>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 Drill String (سلسلة الحفر)</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>التعريف:</strong> كامل الأنابيب والأدوات من السطح إلى رأس الحفر، تشمل:</p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li><strong>Kelly أو Top Drive:</strong> في الأعلى</li>
+    <li><strong>Drill Pipe:</strong> الأنابيب الرئيسية (5" أو 5-1/2" قطر)</li>
+    <li><strong>HWDP:</strong> Heavy Weight Drill Pipe - انتقالية</li>
+    <li><strong>BHA:</strong> في الأسفل</li>
+  </ul>
+</section>
+
+<section class="mb-8">
+  <h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 ملخص اليوم الثاني</h2>
+  <ul class="mb-4" style="line-height: 2;">
+    <li>TD: العمق الكلي المستهدف للبئر</li>
+    <li>MD: العمق المقاس على طول مسار البئر</li>
+    <li>TVD: العمق العمودي الحقيقي (مهم للضغط)</li>
+    <li>ROP: معدل الاختراق (سرعة الحفر)</li>
+    <li>WOB: الوزن على رأس الحفر</li>
+    <li>RPM: سرعة الدوران</li>
+    <li>BHA: تجميعة قاع البئر التي تحتوي أدوات الحفر</li>
+  </ul>
+</section>
+`, 
+          keyTerms: [
+            { term: 'TD', definition: 'Total Depth - العمق الكلي المخطط أو المحفور للبئر' },
+            { term: 'MD', definition: 'Measured Depth - الطول الفعلي لمسار البئر' },
+            { term: 'TVD', definition: 'True Vertical Depth - العمق العمودي الحقيقي' },
+            { term: 'TVDSS', definition: 'True Vertical Depth Subsea - العمق تحت سطح البحر' },
+            { term: 'ROP', definition: 'Rate of Penetration - معدل الاختراق (ft/hr)' },
+            { term: 'WOB', definition: 'Weight on Bit - الوزن المطبق على رأس الحفر' },
+            { term: 'RPM', definition: 'Rotations Per Minute - سرعة دوران سلسلة الحفر' },
+            { term: 'BHA', definition: 'Bottom Hole Assembly - تجميعة قاع البئر' }
+          ], 
+          practiceQuestion: { 
+            question: 'في بئر مائل، أي قياس يُستخدم لحساب الضغط الهيدروستاتيكي؟', 
+            options: ['MD - العمق المقاس', 'TVD - العمق العمودي الحقيقي', 'TD - العمق الكلي', 'ROP - معدل الاختراق'], 
+            correctAnswer: 1 
+          } 
+        }, 
+        en: { 
+          title: 'Basic Drilling Terminology - Part 1', 
+          explanation: `
+<section class="mb-8">
+  <h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 Introduction to Drilling Terminology</h2>
+  
+  <p class="mb-4" style="line-height: 1.8;">Drilling is the heart of the oil industry, without which we cannot access oil and gas trapped deep underground. Therefore, drilling terminology has evolved to be extremely precise, as any misunderstanding could cost millions of dollars or human lives. In this lesson, we will learn the most important terms you will hear daily in oil fields.</p>
+
+  <p class="mb-4" style="line-height: 1.8;">Most of these terms are acronyms because engineers and technicians use them hundreds of times daily, so abbreviations save time and prevent confusion.</p>
+</section>
+
+<section class="mb-8">
+  <h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 Well Depth Measurement Terms</h2>
+  
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 TD - Total Depth</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Definition:</strong> The final planned or drilled depth of the well, usually measured from the Kelly Bushing or Rotary Table on the rig floor surface.</p>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Practical Usage:</strong></p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li>"The well reached TD at 15,000 feet"</li>
+    <li>"We are 500 feet from TD"</li>
+    <li>"TD was achieved ahead of schedule"</li>
+  </ul>
+  
+  <p class="mb-4" style="background: #fee2e2; padding: 1rem; border-radius: 0.5rem;"><strong>⚠️ Note:</strong> TD can be planned (Planned TD) or actual (Actual TD). Sometimes drilling stops before planned TD due to technical issues or early target achievement.</p>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 MD - Measured Depth</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Definition:</strong> The actual length of the wellbore path from surface to a specific point, measured along the well axis. This is the depth you will see in daily drilling reports.</p>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Why do we use MD?</strong></p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li>To calculate the amount of Drill Pipe required</li>
+    <li>To determine tool locations in the well</li>
+    <li>To calculate time required for trips (Trip Time)</li>
+  </ul>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Example:</strong> A deviated well may have MD = 12,000 feet while TVD = only 10,000 feet.</p>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 TVD - True Vertical Depth</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Definition:</strong> The vertical distance from a reference point on surface to a point in the well. This depth ignores any inclination or deviation in the wellbore path.</p>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Why is TVD so important?</strong></p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li><strong>Pressure Calculations:</strong> Hydrostatic pressure depends on TVD, not MD</li>
+    <li><strong>Geological Maps:</strong> Geological layers are mapped according to TVD</li>
+    <li><strong>Well Design:</strong> Casing depths are determined based on TVD</li>
+  </ul>
+  
+  <p class="mb-4" style="background: #fef3c7; padding: 1rem; border-radius: 0.5rem;"><strong>💡 Important Formula:</strong> TVD = MD × cos(θ) where θ is the inclination angle. In an ideal vertical well: MD = TVD</p>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 TVDSS - True Vertical Depth Subsea</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Definition:</strong> The vertical depth measured from Mean Sea Level (MSL). This is the global standard reference for comparing wells.</p>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Usage:</strong></p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li>Comparing geological layer depths between different wells</li>
+    <li>Drawing structural maps</li>
+    <li>Determining fluid contacts (OWC and GOC)</li>
+  </ul>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Example:</strong> An offshore platform 100 feet above sea level, water depth 300 feet:<br/>
+  If TVD from Rotary Table = 10,000 feet<br/>
+  Then TVDSS = 10,000 - 100 = 9,900 feet (below sea level)</p>
+</section>
+
+<section class="mb-8">
+  <h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 Drilling Performance Parameter Terms</h2>
+  
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 ROP - Rate of Penetration</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Definition:</strong> The speed at which the drill bit penetrates the rock, measured in feet or meters per hour (ft/hr or m/hr).</p>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Factors Affecting ROP:</strong></p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li><strong>Rock Type:</strong> Soft rocks (Shale) = high ROP, Hard rocks (Granite) = low ROP</li>
+    <li><strong>WOB - Weight on Bit:</strong> Increasing weight increases ROP up to a limit</li>
+    <li><strong>RPM:</strong> Drill bit rotation speed</li>
+    <li><strong>Bit Type:</strong> PDC bits are faster than Roller Cone in some formations</li>
+    <li><strong>Drilling Fluid Properties:</strong> Density and viscosity affect performance</li>
+    <li><strong>Hydraulic Horsepower:</strong> Power at the bit</li>
+  </ul>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Typical Values:</strong></p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li>Soft formations: 50-200 ft/hr</li>
+    <li>Medium formations: 10-50 ft/hr</li>
+    <li>Very hard formations: 1-10 ft/hr</li>
+  </ul>
+  
+  <p class="mb-4" style="background: #fef3c7; padding: 1rem; border-radius: 0.5rem;"><strong>💡 Practical Tip:</strong> Tracking ROP helps identify formation tops because sudden ROP changes indicate rock type changes.</p>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 WOB - Weight on Bit</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Definition:</strong> The vertical force applied to the drill bit to push it into the rock, measured in thousands of pounds (klbs or Klbf).</p>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>How is WOB controlled?</strong></p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li>Weight comes from Drill Collars (heavy drilling pipes)</li>
+    <li>The Driller controls weight via the brake system</li>
+    <li>Increasing weight increases ROP but may damage the bit</li>
+    <li>Too little weight causes harmful vibrations</li>
+  </ul>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Typical Values:</strong> 5,000 - 60,000 lbs depending on bit size, type, and formation</p>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 RPM - Rotations Per Minute</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Definition:</strong> The rotation speed of the drill string and drill bit, measured in complete rotations per minute.</p>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Rotation Sources:</strong></p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li><strong>Top Drive:</strong> Upper motor rotating the drill string from above (most common now)</li>
+    <li><strong>Rotary Table:</strong> Traditional rotating table</li>
+    <li><strong>Mud Motor:</strong> Downhole motor powered by drilling fluid pressure</li>
+  </ul>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Typical Values:</strong></p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li>Rotary Table / Top Drive: 60-200 RPM</li>
+    <li>Mud Motor: 100-400 RPM (additional)</li>
+    <li>Total RPM at bit can reach 400+ RPM</li>
+  </ul>
+</section>
+
+<section class="mb-8">
+  <h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 Bottom Hole Assembly Terms</h2>
+  
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 BHA - Bottom Hole Assembly</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Definition:</strong> The collection of components at the lower part of the drill string, from the drill bit to the end of Drill Collars or HWDP.</p>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Typical BHA Components:</strong></p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li><strong>Bit:</strong> The drill bit</li>
+    <li><strong>Bit Sub:</strong> Connection between bit and other components</li>
+    <li><strong>Mud Motor:</strong> For directional drilling</li>
+    <li><strong>Stabilizers:</strong> Control wellbore trajectory</li>
+    <li><strong>MWD/LWD Tools:</strong> Measurement while drilling tools</li>
+    <li><strong>Drill Collars:</strong> Heavy pipes providing weight</li>
+    <li><strong>HWDP:</strong> Heavy Weight Drill Pipe</li>
+    <li><strong>Jars:</strong> Release tools when stuck</li>
+    <li><strong>Shock Sub:</strong> Shock absorber</li>
+  </ul>
+  
+  <p class="mb-4" style="background: #fef3c7; padding: 1rem; border-radius: 0.5rem;"><strong>💡 Note:</strong> BHA design determines well behavior - whether it will build angle, drop, or hold.</p>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 Drill String</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Definition:</strong> The complete tubulars and tools from surface to drill bit, including:</p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li><strong>Kelly or Top Drive:</strong> At the top</li>
+    <li><strong>Drill Pipe:</strong> Main pipes (5" or 5-1/2" diameter)</li>
+    <li><strong>HWDP:</strong> Heavy Weight Drill Pipe - transitional</li>
+    <li><strong>BHA:</strong> At the bottom</li>
+  </ul>
+</section>
+
+<section class="mb-8">
+  <h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 Day 2 Summary</h2>
+  <ul class="mb-4" style="line-height: 2;">
+    <li>TD: Total target depth of the well</li>
+    <li>MD: Measured depth along the wellbore path</li>
+    <li>TVD: True vertical depth (important for pressure)</li>
+    <li>ROP: Rate of penetration (drilling speed)</li>
+    <li>WOB: Weight on bit</li>
+    <li>RPM: Rotation speed</li>
+    <li>BHA: Bottom hole assembly containing drilling tools</li>
+  </ul>
+</section>
+`, 
+          keyTerms: [
+            { term: 'TD', definition: 'Total Depth - The final planned or drilled depth of the well' },
+            { term: 'MD', definition: 'Measured Depth - The actual length of the wellbore path' },
+            { term: 'TVD', definition: 'True Vertical Depth - The vertical distance from surface' },
+            { term: 'TVDSS', definition: 'True Vertical Depth Subsea - Depth below sea level' },
+            { term: 'ROP', definition: 'Rate of Penetration - Drilling speed (ft/hr)' },
+            { term: 'WOB', definition: 'Weight on Bit - Force applied to the drill bit' },
+            { term: 'RPM', definition: 'Rotations Per Minute - Drill string rotation speed' },
+            { term: 'BHA', definition: 'Bottom Hole Assembly - Lower drill string components' }
+          ], 
+          practiceQuestion: { 
+            question: 'In a deviated well, which measurement is used to calculate hydrostatic pressure?', 
+            options: ['MD - Measured Depth', 'TVD - True Vertical Depth', 'TD - Total Depth', 'ROP - Rate of Penetration'], 
+            correctAnswer: 1 
+          } 
+        } 
+      } 
+    },
+    { 
+      day: 3, 
+      type: 'learning', 
+      content: { 
+        ar: { 
+          title: 'مصطلحات المكمن والإنتاج', 
+          explanation: `
+<section class="mb-8">
+  <h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 مقدمة في مصطلحات المكمن</h2>
+  
+  <p class="mb-4" style="line-height: 1.8;">مهندس المكامن (Reservoir Engineer) هو الذي يحدد كمية النفط الموجودة وكيفية استخراجها بأفضل طريقة. لذلك، مصطلحات المكامن تركز على قياس وتقدير الموارد والاحتياطيات وسلوك الموائع في باطن الأرض.</p>
+</section>
+
+<section class="mb-8">
+  <h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 مصطلحات تقدير الموارد والاحتياطيات</h2>
+  
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 STOIIP - Stock Tank Oil Initially In Place (النفط الأصلي في المكان)</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>التعريف:</strong> إجمالي كمية النفط الموجودة أصلاً في المكمن قبل أي إنتاج، محسوبة عند ظروف السطح القياسية (60°F و 14.7 psia). تُقاس بالبراميل (STB) أو متر مكعب.</p>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>معادلة Volumetric STOIIP:</strong></p>
+  <p class="mb-4" style="background: #e0f2fe; padding: 1rem; border-radius: 0.5rem; font-family: monospace;">
+  STOIIP = (7758 × A × h × φ × (1-Sw)) / Bo<br/><br/>
+  حيث:<br/>
+  • A = مساحة المكمن (acres)<br/>
+  • h = السماكة الصافية المنتجة (Net Pay) بالأقدام<br/>
+  • φ = المسامية (Porosity) كنسبة عشرية<br/>
+  • Sw = تشبع الماء (Water Saturation)<br/>
+  • Bo = عامل حجم التكوين للنفط (Oil Formation Volume Factor)
+  </p>
+  
+  <p class="mb-4" style="background: #fef3c7; padding: 1rem; border-radius: 0.5rem;"><strong>💡 ملاحظة مهمة:</strong> STOIIP ≠ الاحتياطيات! ليس كل النفط في المكان يمكن استخراجه.</p>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 GIIP - Gas Initially In Place (الغاز الأصلي في المكان)</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>التعريف:</strong> إجمالي كمية الغاز في المكمن قبل الإنتاج، تُقاس بالقدم المكعب القياسي (SCF) أو بوحدة BCF (مليار قدم مكعب).</p>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 RF - Recovery Factor (عامل الاستخلاص)</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>التعريف:</strong> نسبة النفط أو الغاز التي يمكن استخراجها من المكمن، تُعبر كنسبة مئوية من STOIIP أو GIIP.</p>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>قيم نموذجية لعامل الاستخلاص:</strong></p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li><strong>الدفع بالماء (Water Drive):</strong> 35-75%</li>
+    <li><strong>الدفع بالغاز المذاب (Solution Gas Drive):</strong> 10-30%</li>
+    <li><strong>الدفع بتمدد الغطاء الغازي (Gas Cap Expansion):</strong> 20-40%</li>
+    <li><strong>مكامن الغاز:</strong> 70-90%</li>
+    <li><strong>مع EOR:</strong> يمكن زيادة RF بـ 10-30% إضافية</li>
+  </ul>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 EUR - Estimated Ultimate Recovery (الإنتاج النهائي المقدر)</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>التعريف:</strong> إجمالي كمية النفط أو الغاز المتوقع إنتاجها من بئر أو حقل على مدى عمره الإنتاجي.</p>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>EUR = STOIIP × RF</strong></p>
+  
+  <p class="mb-4" style="line-height: 1.8;">EUR يُستخدم لـ:</p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li>تقييم جدوى المشروع الاقتصادية</li>
+    <li>مقارنة الآبار والحقول</li>
+    <li>التخطيط طويل المدى</li>
+  </ul>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 تصنيف الاحتياطيات (Reserves Classification)</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;">حسب نظام SPE-PRMS:</p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li><strong>Proved Reserves (1P):</strong> احتياطيات مؤكدة بثقة ≥90%</li>
+    <li><strong>Probable Reserves (2P):</strong> مؤكدة + محتملة بثقة ≥50%</li>
+    <li><strong>Possible Reserves (3P):</strong> مؤكدة + محتملة + ممكنة بثقة ≥10%</li>
+  </ul>
+</section>
+
+<section class="mb-8">
+  <h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 مصطلحات أداء البئر والمكمن</h2>
+  
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 PI - Productivity Index (مؤشر الإنتاجية)</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>التعريف:</strong> مقياس لقدرة البئر على الإنتاج، يُحسب كنسبة معدل الإنتاج إلى فرق الضغط (Drawdown).</p>
+  
+  <p class="mb-4" style="background: #e0f2fe; padding: 1rem; border-radius: 0.5rem; font-family: monospace;">
+  PI = q / (Pr - Pwf)<br/><br/>
+  حيث:<br/>
+  • q = معدل الإنتاج (STB/day أو Mscf/day)<br/>
+  • Pr = ضغط المكمن (Reservoir Pressure)<br/>
+  • Pwf = ضغط قاع البئر المتدفق (Flowing Bottomhole Pressure)
+  </p>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>الوحدة:</strong> STB/day/psi أو m³/day/kPa</p>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 IPR - Inflow Performance Relationship (علاقة أداء التدفق)</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>التعريف:</strong> العلاقة بين معدل إنتاج البئر وضغط قاع البئر المتدفق. ترسم كمنحنى يوضح أداء البئر عند ظروف تشغيل مختلفة.</p>
+  
+  <p class="mb-4" style="line-height: 1.8;">نماذج IPR الشائعة:</p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li><strong>PI الخطي:</strong> للنفط فوق ضغط نقطة الفقاعة</li>
+    <li><strong>Vogel:</strong> للنفط تحت ضغط نقطة الفقاعة (two-phase flow)</li>
+    <li><strong>Fetkovich:</strong> للغاز والنفط</li>
+  </ul>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 OWC - Oil Water Contact (حد تماس النفط والماء)</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>التعريف:</strong> العمق أو المستوى الذي يفصل بين منطقة النفط ومنطقة الماء في المكمن. يُحدد عادةً بـ TVDSS.</p>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>أهمية OWC:</strong></p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li>تحديد السماكة المنتجة للنفط</li>
+    <li>تصميم مواقع الإكمال</li>
+    <li>مراقبة تقدم الماء مع الإنتاج</li>
+  </ul>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 GOC - Gas Oil Contact (حد تماس الغاز والنفط)</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>التعريف:</strong> العمق الذي يفصل بين الغطاء الغازي (Gas Cap) ومنطقة النفط في المكمن.</p>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 GWC - Gas Water Contact (حد تماس الغاز والماء)</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>التعريف:</strong> في مكامن الغاز بدون نفط، هو العمق الفاصل بين منطقة الغاز والماء.</p>
+</section>
+
+<section class="mb-8">
+  <h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 مصطلحات معدلات الإنتاج</h2>
+  
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 BOPD - Barrels of Oil Per Day (براميل النفط يومياً)</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>التعريف:</strong> معدل إنتاج النفط اليومي، الوحدة الأكثر شيوعاً في الصناعة.</p>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>مصطلحات مرتبطة:</strong></p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li><strong>BFPD:</strong> Barrels of Fluid Per Day - إجمالي السوائل (نفط + ماء)</li>
+    <li><strong>BWPD:</strong> Barrels of Water Per Day - براميل الماء المنتج</li>
+    <li><strong>BLPD:</strong> Barrels of Liquid Per Day - مرادف لـ BFPD</li>
+  </ul>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 GOR - Gas Oil Ratio (نسبة الغاز للنفط)</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>التعريف:</strong> كمية الغاز المنتج لكل برميل نفط، تُقاس بـ scf/STB.</p>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>أنواع GOR:</strong></p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li><strong>Solution GOR (Rs):</strong> الغاز المذاب في النفط عند ظروف المكمن</li>
+    <li><strong>Producing GOR:</strong> النسبة الفعلية عند الإنتاج</li>
+    <li><strong>Cumulative GOR:</strong> المتراكم على مدى عمر البئر</li>
+  </ul>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>قيم نموذجية:</strong></p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li>نفط ثقيل: 100-500 scf/STB</li>
+    <li>نفط متوسط: 500-2,000 scf/STB</li>
+    <li>نفط خفيف / مكثفات: 2,000-10,000+ scf/STB</li>
+  </ul>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 WOR / Water Cut (نسبة الماء للنفط / نسبة القطع المائي)</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Water Cut = BWPD / BFPD × 100%</strong></p>
+  
+  <p class="mb-4" style="line-height: 1.8;">ارتفاع Water Cut يشير إلى:</p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li>تقدم جبهة الماء (Water Coning أو Water Breakthrough)</li>
+    <li>نضوب المكمن</li>
+    <li>قد يتطلب إجراءات مثل Water Shutoff</li>
+  </ul>
+</section>
+
+<section class="mb-8">
+  <h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 ملخص اليوم الثالث</h2>
+  <ul class="mb-4" style="line-height: 2;">
+    <li>STOIIP/GIIP: إجمالي الهيدروكربونات في المكمن</li>
+    <li>RF: نسبة ما يمكن استخراجه</li>
+    <li>EUR: الإنتاج المتوقع على عمر البئر/الحقل</li>
+    <li>PI/IPR: أداء البئر الإنتاجي</li>
+    <li>OWC/GOC: حدود تماس الموائع</li>
+    <li>BOPD, GOR, Water Cut: معايير الإنتاج اليومية</li>
+  </ul>
+</section>
+`, 
+          keyTerms: [
+            { term: 'STOIIP', definition: 'Stock Tank Oil Initially In Place - النفط الأصلي في المكان' },
+            { term: 'GIIP', definition: 'Gas Initially In Place - الغاز الأصلي في المكان' },
+            { term: 'RF', definition: 'Recovery Factor - عامل الاستخلاص (نسبة مئوية)' },
+            { term: 'EUR', definition: 'Estimated Ultimate Recovery - الإنتاج النهائي المقدر' },
+            { term: 'PI', definition: 'Productivity Index - مؤشر إنتاجية البئر' },
+            { term: 'IPR', definition: 'Inflow Performance Relationship - علاقة أداء التدفق' },
+            { term: 'OWC', definition: 'Oil Water Contact - حد تماس النفط والماء' },
+            { term: 'GOC', definition: 'Gas Oil Contact - حد تماس الغاز والنفط' },
+            { term: 'BOPD', definition: 'Barrels of Oil Per Day - براميل النفط يومياً' },
+            { term: 'GOR', definition: 'Gas Oil Ratio - نسبة الغاز للنفط' }
+          ], 
+          practiceQuestion: { 
+            question: 'ما هو STOIIP؟', 
+            options: ['النفط المنتج فعلياً', 'النفط الأصلي الكلي في المكمن', 'النفط المتبقي بعد الإنتاج', 'النفط في خزانات السطح'], 
+            correctAnswer: 1 
+          } 
+        }, 
+        en: { 
+          title: 'Reservoir and Production Terminology', 
+          explanation: `
+<section class="mb-8">
+  <h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 Introduction to Reservoir Terminology</h2>
+  
+  <p class="mb-4" style="line-height: 1.8;">The Reservoir Engineer determines how much oil exists and how to extract it most efficiently. Therefore, reservoir terminology focuses on measuring and estimating resources and reserves, and understanding fluid behavior underground.</p>
+</section>
+
+<section class="mb-8">
+  <h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 Resource and Reserves Estimation Terms</h2>
+  
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 STOIIP - Stock Tank Oil Initially In Place</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Definition:</strong> The total amount of oil originally in the reservoir before any production, calculated at standard surface conditions (60°F and 14.7 psia). Measured in STB or cubic meters.</p>
+  
+  <p class="mb-4" style="background: #e0f2fe; padding: 1rem; border-radius: 0.5rem; font-family: monospace;">
+  Volumetric STOIIP = (7758 × A × h × φ × (1-Sw)) / Bo<br/><br/>
+  Where:<br/>
+  • A = Reservoir area (acres)<br/>
+  • h = Net Pay thickness (feet)<br/>
+  • φ = Porosity (decimal)<br/>
+  • Sw = Water Saturation<br/>
+  • Bo = Oil Formation Volume Factor
+  </p>
+  
+  <p class="mb-4" style="background: #fef3c7; padding: 1rem; border-radius: 0.5rem;"><strong>💡 Important Note:</strong> STOIIP ≠ Reserves! Not all oil in place can be extracted.</p>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 GIIP - Gas Initially In Place</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Definition:</strong> The total amount of gas in the reservoir before production, measured in SCF or BCF (billion cubic feet).</p>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 RF - Recovery Factor</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Definition:</strong> The percentage of oil or gas that can be extracted from the reservoir, expressed as a percentage of STOIIP or GIIP.</p>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Typical Recovery Factor Values:</strong></p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li><strong>Water Drive:</strong> 35-75%</li>
+    <li><strong>Solution Gas Drive:</strong> 10-30%</li>
+    <li><strong>Gas Cap Expansion:</strong> 20-40%</li>
+    <li><strong>Gas Reservoirs:</strong> 70-90%</li>
+    <li><strong>With EOR:</strong> Can add 10-30% additional</li>
+  </ul>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 EUR - Estimated Ultimate Recovery</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Definition:</strong> The total amount of oil or gas expected to be produced from a well or field over its productive life.</p>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>EUR = STOIIP × RF</strong></p>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 Reserves Classification</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;">According to SPE-PRMS:</p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li><strong>Proved Reserves (1P):</strong> Confirmed reserves with ≥90% confidence</li>
+    <li><strong>Probable Reserves (2P):</strong> Proved + probable with ≥50% confidence</li>
+    <li><strong>Possible Reserves (3P):</strong> Proved + probable + possible with ≥10% confidence</li>
+  </ul>
+</section>
+
+<section class="mb-8">
+  <h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 Well and Reservoir Performance Terms</h2>
+  
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 PI - Productivity Index</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Definition:</strong> A measure of well production capability, calculated as the ratio of production rate to pressure drawdown.</p>
+  
+  <p class="mb-4" style="background: #e0f2fe; padding: 1rem; border-radius: 0.5rem; font-family: monospace;">
+  PI = q / (Pr - Pwf)<br/><br/>
+  Where:<br/>
+  • q = Production rate (STB/day or Mscf/day)<br/>
+  • Pr = Reservoir Pressure<br/>
+  • Pwf = Flowing Bottomhole Pressure
+  </p>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 IPR - Inflow Performance Relationship</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Definition:</strong> The relationship between well production rate and flowing bottomhole pressure. Plotted as a curve showing well performance at different operating conditions.</p>
+  
+  <p class="mb-4" style="line-height: 1.8;">Common IPR Models:</p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li><strong>Linear PI:</strong> For oil above bubble point pressure</li>
+    <li><strong>Vogel:</strong> For oil below bubble point (two-phase flow)</li>
+    <li><strong>Fetkovich:</strong> For gas and oil</li>
+  </ul>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 OWC - Oil Water Contact</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Definition:</strong> The depth or level separating the oil zone from the water zone in the reservoir. Usually determined in TVDSS.</p>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 GOC - Gas Oil Contact</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Definition:</strong> The depth separating the gas cap from the oil zone in the reservoir.</p>
+</section>
+
+<section class="mb-8">
+  <h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 Production Rate Terms</h2>
+  
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 BOPD - Barrels of Oil Per Day</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Definition:</strong> Daily oil production rate, the most common unit in the industry.</p>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Related Terms:</strong></p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li><strong>BFPD:</strong> Barrels of Fluid Per Day - total liquids (oil + water)</li>
+    <li><strong>BWPD:</strong> Barrels of Water Per Day</li>
+    <li><strong>BLPD:</strong> Barrels of Liquid Per Day - synonym for BFPD</li>
+  </ul>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 GOR - Gas Oil Ratio</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Definition:</strong> Amount of gas produced per barrel of oil, measured in scf/STB.</p>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Typical Values:</strong></p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li>Heavy oil: 100-500 scf/STB</li>
+    <li>Medium oil: 500-2,000 scf/STB</li>
+    <li>Light oil/Condensate: 2,000-10,000+ scf/STB</li>
+  </ul>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 Water Cut</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Water Cut = BWPD / BFPD × 100%</strong></p>
+  
+  <p class="mb-4" style="line-height: 1.8;">High Water Cut indicates:</p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li>Water coning or water breakthrough</li>
+    <li>Reservoir depletion</li>
+    <li>May require Water Shutoff interventions</li>
+  </ul>
+</section>
+
+<section class="mb-8">
+  <h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 Day 3 Summary</h2>
+  <ul class="mb-4" style="line-height: 2;">
+    <li>STOIIP/GIIP: Total hydrocarbons in place</li>
+    <li>RF: Percentage that can be extracted</li>
+    <li>EUR: Expected lifetime production</li>
+    <li>PI/IPR: Well production performance</li>
+    <li>OWC/GOC: Fluid contact boundaries</li>
+    <li>BOPD, GOR, Water Cut: Daily production metrics</li>
+  </ul>
+</section>
+`, 
+          keyTerms: [
+            { term: 'STOIIP', definition: 'Stock Tank Oil Initially In Place - Total oil in reservoir' },
+            { term: 'GIIP', definition: 'Gas Initially In Place - Total gas in reservoir' },
+            { term: 'RF', definition: 'Recovery Factor - Percentage recoverable' },
+            { term: 'EUR', definition: 'Estimated Ultimate Recovery - Expected total production' },
+            { term: 'PI', definition: 'Productivity Index - Well production capability' },
+            { term: 'IPR', definition: 'Inflow Performance Relationship - Flow vs pressure curve' },
+            { term: 'OWC', definition: 'Oil Water Contact - Depth separating oil and water' },
+            { term: 'GOC', definition: 'Gas Oil Contact - Depth separating gas and oil' },
+            { term: 'BOPD', definition: 'Barrels of Oil Per Day - Daily oil production' },
+            { term: 'GOR', definition: 'Gas Oil Ratio - Gas per barrel of oil' }
+          ], 
+          practiceQuestion: { 
+            question: 'What is STOIIP?', 
+            options: ['Actually produced oil', 'Total original oil in the reservoir', 'Remaining oil after production', 'Oil in surface tanks'], 
+            correctAnswer: 1 
+          } 
+        } 
+      } 
+    },
+    { 
+      day: 4, 
+      type: 'learning', 
+      content: { 
+        ar: { 
+          title: 'مصطلحات عمليات الحفر والتقارير', 
+          explanation: `
+<section class="mb-8">
+  <h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 مصطلحات حركة سلسلة الحفر</h2>
+  
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 Trip (الرحلة)</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>التعريف:</strong> عملية سحب أو إنزال سلسلة الحفر من/إلى البئر.</p>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>أنواع الرحلات:</strong></p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li><strong>Round Trip:</strong> سحب كامل وإنزال كامل لسلسلة الحفر</li>
+    <li><strong>Short Trip:</strong> سحب جزئي (عادة لتنظيف البئر)</li>
+    <li><strong>Wiper Trip:</strong> رحلة لتنظيف جدار البئر</li>
+  </ul>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 POOH - Pull Out Of Hole (السحب من البئر)</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>التعريف:</strong> عملية سحب سلسلة الحفر أو أي أداة من البئر. تُكتب في التقارير كـ "POOH".</p>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>أسباب POOH:</strong></p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li>تغيير رأس الحفر البالي</li>
+    <li>تغيير BHA</li>
+    <li>إنزال أنابيب التغليف (Casing)</li>
+    <li>إجراء تسجيلات سلكية (Wireline Logs)</li>
+    <li>مشاكل تقنية</li>
+  </ul>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 RIH - Run In Hole (الإنزال في البئر)</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>التعريف:</strong> عملية إنزال سلسلة الحفر أو أي أداة في البئر.</p>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>احتياطات RIH:</strong></p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li>مراقبة وزن السلسلة (String Weight)</li>
+    <li>ملء البئر بسائل الحفر</li>
+    <li>مراقبة ضغط الضخ إن وجد</li>
+    <li>الحذر من Tight Spots</li>
+  </ul>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 Trip Speed / Connection Time</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Trip Speed:</strong> سرعة سحب أو إنزال سلسلة الحفر، تُقاس بالأقدام أو الوصلات في الساعة.</p>
+  <p class="mb-4" style="line-height: 1.8;"><strong>Connection Time:</strong> الوقت المستغرق لإضافة أو فك وصلة حفر واحدة (يجب أن يكون 2-4 دقائق للطاقم الماهر).</p>
+</section>
+
+<section class="mb-8">
+  <h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 مصطلحات الوقت والكفاءة</h2>
+  
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 NPT - Non-Productive Time (الوقت غير المنتج)</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>التعريف:</strong> أي وقت لا يساهم في تقدم حفر البئر أو إكماله. هذا المصطلح بالغ الأهمية لأن شركات النفط تراقبه بدقة.</p>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>أمثلة على NPT:</strong></p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li><strong>مشاكل ميكانيكية:</strong> أعطال المعدات، إصلاحات</li>
+    <li><strong>مشاكل البئر:</strong> علوق سلسلة الحفر (Stuck Pipe)، فقدان الدورة (Lost Circulation)</li>
+    <li><strong>تأخير الطقس:</strong> خاصة في المنصات البحرية</li>
+    <li><strong>انتظار المعدات:</strong> Waiting on Equipment (WOE)</li>
+    <li><strong>انتظار الطقس:</strong> Waiting on Weather (WOW)</li>
+    <li><strong>أعمال الصيد:</strong> Fishing operations</li>
+  </ul>
+  
+  <p class="mb-4" style="background: #fee2e2; padding: 1rem; border-radius: 0.5rem;"><strong>⚠️ تكلفة NPT:</strong> تكلفة جهاز الحفر قد تكون $500,000 - $1,000,000 يومياً للمنصات البحرية العميقة. كل ساعة NPT = خسارة مالية كبيرة!</p>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 ILT - Invisible Lost Time (الوقت الضائع غير المرئي)</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>التعريف:</strong> الفرق بين الوقت الفعلي والوقت المثالي لإنجاز مهمة. هذا الوقت لا يُسجل كـ NPT لكنه يمثل فرصة للتحسين.</p>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>أمثلة:</strong></p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li>Connection Time أطول من المثالي</li>
+    <li>Trip Speed أبطأ من الممكن</li>
+    <li>ROP أقل من الأمثل بسبب معاملات غير مثالية</li>
+  </ul>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 WOC - Wait On Cement (انتظار تصلب الإسمنت)</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>التعريف:</strong> فترة الانتظار بعد ضخ الإسمنت حتى يتصلب بما يكفي لاستئناف العمليات. عادة 8-24 ساعة حسب نوع الإسمنت والظروف.</p>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 WOW - Waiting On Weather</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>التعريف:</strong> توقف العمليات بسبب سوء الأحوال الجوية، شائع في المنصات البحرية.</p>
+</section>
+
+<section class="mb-8">
+  <h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 مصطلحات التقارير اليومية</h2>
+  
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 DDR - Daily Drilling Report (تقرير الحفر اليومي)</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>التعريف:</strong> التقرير الرسمي اليومي الذي يوثق جميع أنشطة الحفر خلال 24 ساعة.</p>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>محتويات DDR النموذجية:</strong></p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li>ملخص العمليات (Operations Summary)</li>
+    <li>العمق الحالي (Current Depth)</li>
+    <li>التقدم المحرز (Footage Drilled)</li>
+    <li>معاملات الحفر (Drilling Parameters)</li>
+    <li>خصائص سائل الحفر (Mud Properties)</li>
+    <li>BHA المستخدم</li>
+    <li>المشاكل والحلول</li>
+    <li>توقعات اليوم التالي</li>
+  </ul>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 Morning Report</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>التعريف:</strong> ملخص موجز يُرسل صباحاً للإدارة يتضمن أهم الأحداث والتقدم.</p>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 Bit Record</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>التعريف:</strong> سجل تفصيلي لأداء كل رأس حفر:</p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li>Bit Number and Size</li>
+    <li>Footage Drilled (المسافة المحفورة)</li>
+    <li>Hours on Bottom (ساعات الحفر)</li>
+    <li>Dull Grading (تقييم البلى)</li>
+    <li>Reason Pulled (سبب السحب)</li>
+  </ul>
+</section>
+
+<section class="mb-8">
+  <h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 مصطلحات السلامة والبيئة</h2>
+  
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 HSE - Health, Safety, and Environment</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>التعريف:</strong> قسم ومجموعة معايير تهتم بصحة العمال وسلامتهم وحماية البيئة.</p>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>مؤشرات HSE الرئيسية:</strong></p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li><strong>LTI - Lost Time Injury:</strong> إصابة تسببت في غياب عن العمل</li>
+    <li><strong>TRIR - Total Recordable Incident Rate:</strong> معدل الحوادث المسجلة</li>
+    <li><strong>Near Miss:</strong> حادث وشيك لم يقع</li>
+    <li><strong>Safety Stand-Down:</strong> توقف للمراجعة الأمنية</li>
+  </ul>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 PTW - Permit To Work (تصريح العمل)</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>التعريف:</strong> نظام رسمي للتحكم في الأعمال الخطرة، يتطلب موافقات مكتوبة قبل البدء.</p>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 JSA - Job Safety Analysis</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>التعريف:</strong> تحليل مخاطر العمل قبل البدء، يحدد المخاطر والإجراءات الوقائية.</p>
+</section>
+
+<section class="mb-8">
+  <h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 ملخص اليوم الرابع</h2>
+  <ul class="mb-4" style="line-height: 2;">
+    <li>POOH/RIH: سحب وإنزال سلسلة الحفر</li>
+    <li>NPT: الوقت غير المنتج (مكلف جداً)</li>
+    <li>ILT: الوقت الضائع غير المرئي</li>
+    <li>WOC: انتظار تصلب الإسمنت</li>
+    <li>DDR: تقرير الحفر اليومي</li>
+    <li>HSE: معايير الصحة والسلامة والبيئة</li>
+  </ul>
+</section>
+`, 
+          keyTerms: [
+            { term: 'POOH', definition: 'Pull Out Of Hole - سحب سلسلة الحفر من البئر' },
+            { term: 'RIH', definition: 'Run In Hole - إنزال سلسلة الحفر في البئر' },
+            { term: 'NPT', definition: 'Non-Productive Time - الوقت غير المنتج' },
+            { term: 'ILT', definition: 'Invisible Lost Time - الوقت الضائع غير المرئي' },
+            { term: 'WOC', definition: 'Wait On Cement - انتظار تصلب الإسمنت' },
+            { term: 'WOW', definition: 'Waiting On Weather - الانتظار بسبب الطقس' },
+            { term: 'DDR', definition: 'Daily Drilling Report - تقرير الحفر اليومي' },
+            { term: 'HSE', definition: 'Health, Safety, Environment - الصحة والسلامة والبيئة' },
+            { term: 'LTI', definition: 'Lost Time Injury - إصابة تسببت في غياب عن العمل' },
+            { term: 'PTW', definition: 'Permit To Work - تصريح العمل' }
+          ], 
+          practiceQuestion: { 
+            question: 'ما معنى NPT؟', 
+            options: ['وقت الإنتاج الصافي', 'الوقت غير المنتج', 'اختبار ضغط جديد', 'وقت الحفر الطبيعي'], 
+            correctAnswer: 1 
+          } 
+        }, 
+        en: { 
+          title: 'Drilling Operations and Reporting Terminology', 
+          explanation: `
+<section class="mb-8">
+  <h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 Drill String Movement Terms</h2>
+  
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 Trip</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Definition:</strong> The operation of pulling or running the drill string out of or into the well.</p>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Types of Trips:</strong></p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li><strong>Round Trip:</strong> Full pull out and run in of drill string</li>
+    <li><strong>Short Trip:</strong> Partial pull (usually for hole cleaning)</li>
+    <li><strong>Wiper Trip:</strong> Trip to clean wellbore wall</li>
+  </ul>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 POOH - Pull Out Of Hole</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Definition:</strong> The operation of pulling the drill string or any tool from the well. Written in reports as "POOH".</p>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Reasons for POOH:</strong></p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li>Changing worn drill bit</li>
+    <li>Changing BHA</li>
+    <li>Running casing</li>
+    <li>Running wireline logs</li>
+    <li>Technical problems</li>
+  </ul>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 RIH - Run In Hole</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Definition:</strong> The operation of running the drill string or any tool into the well.</p>
+</section>
+
+<section class="mb-8">
+  <h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 Time and Efficiency Terms</h2>
+  
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 NPT - Non-Productive Time</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Definition:</strong> Any time that does not contribute to drilling or completing the well. This term is critically important as oil companies monitor it closely.</p>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Examples of NPT:</strong></p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li><strong>Mechanical problems:</strong> Equipment failures, repairs</li>
+    <li><strong>Well problems:</strong> Stuck pipe, Lost circulation</li>
+    <li><strong>Weather delays:</strong> Especially on offshore platforms</li>
+    <li><strong>Waiting on equipment:</strong> WOE</li>
+    <li><strong>Fishing operations</strong></li>
+  </ul>
+  
+  <p class="mb-4" style="background: #fee2e2; padding: 1rem; border-radius: 0.5rem;"><strong>⚠️ NPT Cost:</strong> Rig cost can be $500,000 - $1,000,000 daily for deepwater platforms. Every hour of NPT = significant financial loss!</p>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 ILT - Invisible Lost Time</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Definition:</strong> The difference between actual time and ideal time to complete a task. Not recorded as NPT but represents improvement opportunity.</p>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 WOC - Wait On Cement</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Definition:</strong> The waiting period after pumping cement until it hardens enough to resume operations. Usually 8-24 hours depending on cement type and conditions.</p>
+</section>
+
+<section class="mb-8">
+  <h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 Daily Reporting Terms</h2>
+  
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 DDR - Daily Drilling Report</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Definition:</strong> The official daily report documenting all drilling activities during 24 hours.</p>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Typical DDR Contents:</strong></p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li>Operations Summary</li>
+    <li>Current Depth</li>
+    <li>Footage Drilled</li>
+    <li>Drilling Parameters</li>
+    <li>Mud Properties</li>
+    <li>BHA Used</li>
+    <li>Problems and Solutions</li>
+    <li>Next Day Forecast</li>
+  </ul>
+</section>
+
+<section class="mb-8">
+  <h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 Safety and Environment Terms</h2>
+  
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 HSE - Health, Safety, and Environment</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Definition:</strong> Department and set of standards focused on worker health and safety and environmental protection.</p>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Key HSE Indicators:</strong></p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li><strong>LTI - Lost Time Injury:</strong> Injury causing work absence</li>
+    <li><strong>TRIR - Total Recordable Incident Rate:</strong> Recorded incident rate</li>
+    <li><strong>Near Miss:</strong> Incident that almost happened</li>
+    <li><strong>Safety Stand-Down:</strong> Stop for safety review</li>
+  </ul>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 PTW - Permit To Work</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Definition:</strong> Formal system for controlling hazardous work, requiring written approvals before starting.</p>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 JSA - Job Safety Analysis</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Definition:</strong> Pre-job hazard analysis identifying risks and preventive measures.</p>
+</section>
+
+<section class="mb-8">
+  <h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 Day 4 Summary</h2>
+  <ul class="mb-4" style="line-height: 2;">
+    <li>POOH/RIH: Pull out and run in drill string</li>
+    <li>NPT: Non-productive time (very costly)</li>
+    <li>ILT: Invisible lost time</li>
+    <li>WOC: Wait on cement</li>
+    <li>DDR: Daily drilling report</li>
+    <li>HSE: Health, safety, and environment standards</li>
+  </ul>
+</section>
+`, 
+          keyTerms: [
+            { term: 'POOH', definition: 'Pull Out Of Hole - Pulling drill string from well' },
+            { term: 'RIH', definition: 'Run In Hole - Running drill string into well' },
+            { term: 'NPT', definition: 'Non-Productive Time - Unproductive time' },
+            { term: 'ILT', definition: 'Invisible Lost Time - Hidden inefficiency time' },
+            { term: 'WOC', definition: 'Wait On Cement - Waiting for cement to set' },
+            { term: 'WOW', definition: 'Waiting On Weather - Weather-related delays' },
+            { term: 'DDR', definition: 'Daily Drilling Report - Official daily report' },
+            { term: 'HSE', definition: 'Health, Safety, Environment' },
+            { term: 'LTI', definition: 'Lost Time Injury - Injury causing work absence' },
+            { term: 'PTW', definition: 'Permit To Work - Work authorization system' }
+          ], 
+          practiceQuestion: { 
+            question: 'What does NPT stand for?', 
+            options: ['Net Production Time', 'Non-Productive Time', 'New Pressure Test', 'Normal Penetration Time'], 
+            correctAnswer: 1 
+          } 
+        } 
+      } 
+    },
+    { 
+      day: 5, 
+      type: 'learning', 
+      content: { 
+        ar: { 
+          title: 'مصطلحات أنظمة الرفع الصناعي والتقنيات المتقدمة', 
+          explanation: `
+<section class="mb-8">
+  <h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 أنظمة الرفع الصناعي (Artificial Lift Systems)</h2>
+  
+  <p class="mb-4" style="line-height: 1.8;">عندما ينخفض ضغط المكمن ولا يستطيع النفط التدفق للسطح بشكل طبيعي، نحتاج لأنظمة الرفع الصناعي. فهم هذه المصطلحات ضروري لمهندس الإنتاج.</p>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 ESP - Electric Submersible Pump (المضخة الغاطسة الكهربائية)</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>التعريف:</strong> مضخة طرد مركزي متعددة المراحل تُنزل في البئر وتُشغل بالكهرباء لرفع السوائل للسطح.</p>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>مكونات نظام ESP:</strong></p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li><strong>Motor:</strong> محرك كهربائي في قاع البئر</li>
+    <li><strong>Seal Section (Protector):</strong> يحمي المحرك من السوائل</li>
+    <li><strong>Pump:</strong> مراحل متعددة من المضخات الطاردة</li>
+    <li><strong>Gas Separator:</strong> فاصل الغاز (إن وجد)</li>
+    <li><strong>Cable:</strong> كابل كهربائي على طول أنبوب الإنتاج</li>
+    <li><strong>VSD:</strong> Variable Speed Drive للتحكم في السرعة</li>
+  </ul>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>مميزات ESP:</strong> معدل إنتاج عالي، مناسب للآبار ذات الحجم الكبير</p>
+  <p class="mb-4" style="line-height: 1.8;"><strong>عيوب:</strong> استهلاك كهربائي عالي، حساس للغاز والرمل</p>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 GL - Gas Lift (الرفع بالغاز)</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>التعريف:</strong> نظام يستخدم حقن الغاز المضغوط في البئر لتخفيف كثافة عمود السائل وبالتالي رفعه للسطح.</p>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>مكونات Gas Lift:</strong></p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li><strong>Gas Lift Valves:</strong> صمامات على طول أنبوب الإنتاج</li>
+    <li><strong>Mandrels:</strong> حوامل الصمامات</li>
+    <li><strong>Injection Gas:</strong> غاز مضغوط من مصدر خارجي</li>
+  </ul>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>أنواع Gas Lift:</strong></p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li><strong>Continuous Gas Lift:</strong> حقن مستمر للغاز</li>
+    <li><strong>Intermittent Gas Lift:</strong> حقن متقطع للآبار ذات الإنتاج المنخفض</li>
+  </ul>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 SRP - Sucker Rod Pump / Beam Pump (مضخة القضبان)</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>التعريف:</strong> النظام الكلاسيكي للرفع الصناعي، يستخدم حركة ترددية عمودية من وحدة سطحية (Pumpjack) لتشغيل مضخة في قاع البئر.</p>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>مكونات النظام:</strong></p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li><strong>Pumpjack (Beam Unit):</strong> الوحدة السطحية المعروفة شكلها</li>
+    <li><strong>Sucker Rods:</strong> قضبان فولاذية تنقل الحركة</li>
+    <li><strong>Downhole Pump:</strong> المضخة في قاع البئر</li>
+    <li><strong>Barrel and Plunger:</strong> أسطوانة ومكبس</li>
+    <li><strong>Valves:</strong> صمامات ثابتة ومتحركة</li>
+  </ul>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 PCP - Progressive Cavity Pump (مضخة التجويف المتقدم)</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>التعريف:</strong> مضخة إزاحة موجبة تستخدم حلزوناً دواراً داخل تجويف مطاطي لرفع السوائل.</p>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>مميزات:</strong> مناسبة للنفط الثقيل واللزج، تتحمل الرمل</p>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 Jet Pump (مضخة النفث)</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>التعريف:</strong> تستخدم سائل مضغوط (Power Fluid) لخلق فراغ يسحب سوائل البئر.</p>
+</section>
+
+<section class="mb-8">
+  <h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 مصطلحات الحفر الموجه والأفقي</h2>
+  
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 MWD - Measurement While Drilling (القياس أثناء الحفر)</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>التعريف:</strong> أدوات إلكترونية في BHA ترسل بيانات في الوقت الفعلي عن:</p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li>Inclination (الميل)</li>
+    <li>Azimuth (الاتجاه)</li>
+    <li>Toolface (اتجاه أداة الحفر)</li>
+    <li>Gamma Ray (أشعة غاما للتعرف على الطبقات)</li>
+    <li>Downhole Weight and Torque</li>
+  </ul>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 LWD - Logging While Drilling (التسجيل أثناء الحفر)</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>التعريف:</strong> أدوات أكثر تقدماً تقيس خصائص التكوين في الوقت الفعلي:</p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li>Resistivity (المقاومية)</li>
+    <li>Density (الكثافة)</li>
+    <li>Porosity (المسامية)</li>
+    <li>Sonic (الصوتي)</li>
+    <li>Formation Pressure</li>
+  </ul>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 RSS - Rotary Steerable System (نظام التوجيه الدوار)</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>التعريف:</strong> تقنية متقدمة للحفر الموجه تسمح بتوجيه مسار البئر أثناء الدوران المستمر.</p>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>أنواع RSS:</strong></p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li><strong>Push-the-Bit:</strong> يدفع رأس الحفر جانبياً</li>
+    <li><strong>Point-the-Bit:</strong> يوجه رأس الحفر</li>
+  </ul>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 Geosteering (التوجيه الجيولوجي)</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>التعريف:</strong> توجيه مسار البئر بناءً على بيانات LWD في الوقت الفعلي للبقاء داخل المكمن المستهدف.</p>
+</section>
+
+<section class="mb-8">
+  <h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 مصطلحات الاستخلاص المعزز</h2>
+  
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 EOR - Enhanced Oil Recovery (الاستخلاص المعزز للنفط)</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>التعريف:</strong> تقنيات متقدمة لاستخراج النفط الذي لا يمكن إنتاجه بالطرق التقليدية.</p>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>أنواع EOR:</strong></p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li><strong>Thermal EOR:</strong>
+      <ul style="margin-right: 1.5rem;">
+        <li>Steam Injection (حقن البخار)</li>
+        <li>SAGD - Steam Assisted Gravity Drainage</li>
+        <li>In-Situ Combustion (الاحتراق الموضعي)</li>
+      </ul>
+    </li>
+    <li><strong>Chemical EOR:</strong>
+      <ul style="margin-right: 1.5rem;">
+        <li>Polymer Flooding (حقن البوليمر)</li>
+        <li>Surfactant Flooding</li>
+        <li>ASP - Alkali-Surfactant-Polymer</li>
+      </ul>
+    </li>
+    <li><strong>Gas EOR:</strong>
+      <ul style="margin-right: 1.5rem;">
+        <li>CO2 Injection</li>
+        <li>Miscible Gas Injection</li>
+        <li>WAG - Water Alternating Gas</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 IOR - Improved Oil Recovery</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>التعريف:</strong> مصطلح أوسع يشمل جميع طرق تحسين الاستخلاص بما فيها Secondary Recovery.</p>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 Waterflooding (الإغمار المائي)</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>التعريف:</strong> حقن الماء في المكمن لدفع النفط نحو آبار الإنتاج. هذا Secondary Recovery وليس EOR.</p>
+</section>
+
+<section class="mb-8">
+  <h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 ملخص اليوم الخامس</h2>
+  <ul class="mb-4" style="line-height: 2;">
+    <li>ESP: مضخة غاطسة كهربائية - الأكثر شيوعاً للإنتاج العالي</li>
+    <li>GL: رفع بالغاز - مناسب للآبار البحرية</li>
+    <li>SRP: مضخة القضبان التقليدية</li>
+    <li>MWD/LWD: قياس وتسجيل أثناء الحفر</li>
+    <li>RSS: نظام التوجيه الدوار المتقدم</li>
+    <li>EOR: تقنيات الاستخلاص المعزز</li>
+  </ul>
+</section>
+`, 
+          keyTerms: [
+            { term: 'ESP', definition: 'Electric Submersible Pump - مضخة غاطسة كهربائية' },
+            { term: 'GL', definition: 'Gas Lift - الرفع بالغاز' },
+            { term: 'SRP', definition: 'Sucker Rod Pump - مضخة القضبان' },
+            { term: 'PCP', definition: 'Progressive Cavity Pump - مضخة التجويف المتقدم' },
+            { term: 'MWD', definition: 'Measurement While Drilling - القياس أثناء الحفر' },
+            { term: 'LWD', definition: 'Logging While Drilling - التسجيل أثناء الحفر' },
+            { term: 'RSS', definition: 'Rotary Steerable System - نظام التوجيه الدوار' },
+            { term: 'EOR', definition: 'Enhanced Oil Recovery - الاستخلاص المعزز للنفط' },
+            { term: 'IOR', definition: 'Improved Oil Recovery - تحسين الاستخلاص' },
+            { term: 'SAGD', definition: 'Steam Assisted Gravity Drainage - الصرف بالجاذبية بمساعدة البخار' }
+          ], 
+          practiceQuestion: { 
+            question: 'ما هو نظام الرفع الصناعي الأكثر استخداماً للآبار ذات الإنتاج العالي؟', 
+            options: ['Gas Lift', 'ESP', 'Sucker Rod Pump', 'Jet Pump'], 
+            correctAnswer: 1 
+          } 
+        }, 
+        en: { 
+          title: 'Artificial Lift Systems and Advanced Technologies', 
+          explanation: `
+<section class="mb-8">
+  <h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 Artificial Lift Systems</h2>
+  
+  <p class="mb-4" style="line-height: 1.8;">When reservoir pressure drops and oil cannot flow to surface naturally, we need artificial lift systems. Understanding these terms is essential for production engineers.</p>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 ESP - Electric Submersible Pump</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Definition:</strong> A multi-stage centrifugal pump run downhole, powered by electricity to lift fluids to surface.</p>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>ESP System Components:</strong></p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li><strong>Motor:</strong> Electric motor at well bottom</li>
+    <li><strong>Seal Section (Protector):</strong> Protects motor from fluids</li>
+    <li><strong>Pump:</strong> Multiple centrifugal pump stages</li>
+    <li><strong>Gas Separator:</strong> If present</li>
+    <li><strong>Cable:</strong> Power cable along tubing</li>
+    <li><strong>VSD:</strong> Variable Speed Drive for speed control</li>
+  </ul>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>ESP Advantages:</strong> High production rate, suitable for high-volume wells</p>
+  <p class="mb-4" style="line-height: 1.8;"><strong>Disadvantages:</strong> High power consumption, sensitive to gas and sand</p>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 GL - Gas Lift</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Definition:</strong> A system that uses compressed gas injection into the well to lighten the fluid column and thus lift it to surface.</p>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Types:</strong></p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li><strong>Continuous Gas Lift:</strong> Continuous gas injection</li>
+    <li><strong>Intermittent Gas Lift:</strong> Intermittent injection for low-rate wells</li>
+  </ul>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 SRP - Sucker Rod Pump / Beam Pump</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Definition:</strong> The classic artificial lift system, using vertical reciprocating motion from a surface unit (Pumpjack) to operate a pump at well bottom.</p>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 PCP - Progressive Cavity Pump</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Definition:</strong> A positive displacement pump using a rotating helix inside a rubber stator to lift fluids.</p>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Advantages:</strong> Suitable for heavy, viscous oil; tolerates sand</p>
+</section>
+
+<section class="mb-8">
+  <h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 Directional and Horizontal Drilling Terms</h2>
+  
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 MWD - Measurement While Drilling</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Definition:</strong> Electronic tools in the BHA sending real-time data about:</p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li>Inclination</li>
+    <li>Azimuth</li>
+    <li>Toolface</li>
+    <li>Gamma Ray</li>
+    <li>Downhole Weight and Torque</li>
+  </ul>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 LWD - Logging While Drilling</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Definition:</strong> More advanced tools measuring formation properties in real-time:</p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li>Resistivity</li>
+    <li>Density</li>
+    <li>Porosity</li>
+    <li>Sonic</li>
+    <li>Formation Pressure</li>
+  </ul>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 RSS - Rotary Steerable System</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Definition:</strong> Advanced directional drilling technology allowing wellbore steering while rotating continuously.</p>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>RSS Types:</strong></p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li><strong>Push-the-Bit:</strong> Pushes bit sideways</li>
+    <li><strong>Point-the-Bit:</strong> Points the bit direction</li>
+  </ul>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 Geosteering</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Definition:</strong> Steering the wellbore path based on real-time LWD data to stay within the target reservoir.</p>
+</section>
+
+<section class="mb-8">
+  <h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 Enhanced Recovery Terms</h2>
+  
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 EOR - Enhanced Oil Recovery</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Definition:</strong> Advanced techniques for extracting oil that cannot be produced by conventional methods.</p>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>EOR Types:</strong></p>
+  <ul class="mb-4" style="line-height: 2;">
+    <li><strong>Thermal EOR:</strong> Steam Injection, SAGD, In-Situ Combustion</li>
+    <li><strong>Chemical EOR:</strong> Polymer, Surfactant, ASP Flooding</li>
+    <li><strong>Gas EOR:</strong> CO2 Injection, Miscible Gas, WAG</li>
+  </ul>
+
+  <h3 style="color: #f97316; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 Waterflooding</h3>
+  
+  <p class="mb-4" style="line-height: 1.8;"><strong>Definition:</strong> Injecting water into reservoir to push oil toward production wells. This is Secondary Recovery, not EOR.</p>
+</section>
+
+<section class="mb-8">
+  <h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 Day 5 Summary</h2>
+  <ul class="mb-4" style="line-height: 2;">
+    <li>ESP: Electric submersible pump - most common for high production</li>
+    <li>GL: Gas lift - suitable for offshore wells</li>
+    <li>SRP: Traditional rod pump</li>
+    <li>MWD/LWD: Measurement and logging while drilling</li>
+    <li>RSS: Advanced rotary steerable system</li>
+    <li>EOR: Enhanced oil recovery techniques</li>
+  </ul>
+</section>
+`, 
+          keyTerms: [
+            { term: 'ESP', definition: 'Electric Submersible Pump' },
+            { term: 'GL', definition: 'Gas Lift' },
+            { term: 'SRP', definition: 'Sucker Rod Pump' },
+            { term: 'PCP', definition: 'Progressive Cavity Pump' },
+            { term: 'MWD', definition: 'Measurement While Drilling' },
+            { term: 'LWD', definition: 'Logging While Drilling' },
+            { term: 'RSS', definition: 'Rotary Steerable System' },
+            { term: 'EOR', definition: 'Enhanced Oil Recovery' },
+            { term: 'IOR', definition: 'Improved Oil Recovery' },
+            { term: 'SAGD', definition: 'Steam Assisted Gravity Drainage' }
+          ], 
+          practiceQuestion: { 
+            question: 'What is the most common artificial lift system for high-rate wells?', 
+            options: ['Gas Lift', 'ESP', 'Sucker Rod Pump', 'Jet Pump'], 
+            correctAnswer: 1 
+          } 
+        } 
+      } 
+    },
+    { 
+      day: 6, 
+      type: 'quiz', 
+      content: { 
+        ar: { 
+          title: 'اختبار شامل في المصطلحات النفطية', 
+          explanation: 'اختبار شامل يغطي جميع المصطلحات التي تعلمتها هذا الأسبوع.',
+          keyTerms: [] 
+        }, 
+        en: { 
+          title: 'Comprehensive Oil & Gas Terminology Quiz', 
+          explanation: 'A comprehensive quiz covering all the terminology you learned this week.',
+          keyTerms: [] 
+        } 
+      }, 
+      quiz: { 
+        ar: [
+          { question: 'ما هو القطاع الذي يشمل الاستكشاف والحفر والإنتاج؟', options: ['Downstream', 'Midstream', 'Upstream', 'Refining'], correctAnswer: 2 },
+          { question: 'أي مصطلح يصف العمق العمودي الحقيقي المستخدم لحسابات الضغط؟', options: ['MD', 'TD', 'TVD', 'ROP'], correctAnswer: 2 },
+          { question: 'ما معنى STOIIP؟', options: ['النفط المنتج', 'النفط الأصلي في المكان', 'النفط المكرر', 'النفط المباع'], correctAnswer: 1 },
+          { question: 'ما هو المصطلح الذي يصف سرعة اختراق رأس الحفر للصخور؟', options: ['WOB', 'RPM', 'ROP', 'BHA'], correctAnswer: 2 },
+          { question: 'ما معنى NPT؟', options: ['وقت الإنتاج الصافي', 'الوقت غير المنتج', 'اختبار الضغط الجديد', 'التقنية الطبيعية للضغط'], correctAnswer: 1 },
+          { question: 'أي نظام رفع صناعي يستخدم مضخة طرد مركزي كهربائية في قاع البئر؟', options: ['Gas Lift', 'ESP', 'Sucker Rod Pump', 'Jet Pump'], correctAnswer: 1 },
+          { question: 'ما معنى GOR؟', options: ['معدل النفط العام', 'نسبة الغاز للنفط', 'نطاق التشغيل الجيد', 'التحسين العام'], correctAnswer: 1 },
+          { question: 'ما هو الاختصار الذي يصف عملية سحب سلسلة الحفر من البئر؟', options: ['RIH', 'POOH', 'WOC', 'DDR'], correctAnswer: 1 },
+          { question: 'ما هو OWC؟', options: ['تكلفة عمليات البئر', 'حد تماس النفط والماء', 'إكمال البئر المفتوح', 'أنبوب التغليف الخارجي'], correctAnswer: 1 },
+          { question: 'ما معنى MWD؟', options: ['عمق البئر الأقصى', 'القياس أثناء الحفر', 'كثافة الطين والوزن', 'التوجيه للأسفل'], correctAnswer: 1 },
+          { question: 'ما هو Recovery Factor؟', options: ['معامل استرداد التكلفة', 'نسبة النفط القابل للاستخراج', 'معدل التعافي من المشاكل', 'عامل إعادة التدوير'], correctAnswer: 1 },
+          { question: 'ما معنى HSE؟', options: ['معدات السلامة العالية', 'الصحة والسلامة والبيئة', 'هندسة النظم الهيدروليكية', 'تقييم السلامة الهيدروستاتيكية'], correctAnswer: 1 },
+          { question: 'ما هو EOR؟', options: ['نهاية التقرير', 'الاستخلاص المعزز للنفط', 'معدات التشغيل الطارئة', 'قراءة البئر المقدرة'], correctAnswer: 1 },
+          { question: 'ما معنى PI في هندسة المكامن؟', options: ['مؤشر الضغط', 'مؤشر الإنتاجية', 'مؤشر الأداء', 'مؤشر الطاقة'], correctAnswer: 1 },
+          { question: 'أي مصطلح يصف التقرير اليومي الرسمي لعمليات الحفر؟', options: ['NPT Report', 'Morning Report', 'DDR', 'BHA Report'], correctAnswer: 2 }
+        ],
+        en: [
+          { question: 'Which sector includes exploration, drilling, and production?', options: ['Downstream', 'Midstream', 'Upstream', 'Refining'], correctAnswer: 2 },
+          { question: 'Which term describes the true vertical depth used for pressure calculations?', options: ['MD', 'TD', 'TVD', 'ROP'], correctAnswer: 2 },
+          { question: 'What does STOIIP stand for?', options: ['Produced oil', 'Stock Tank Oil Initially In Place', 'Refined oil', 'Sold oil'], correctAnswer: 1 },
+          { question: 'What term describes the speed at which the drill bit penetrates rock?', options: ['WOB', 'RPM', 'ROP', 'BHA'], correctAnswer: 2 },
+          { question: 'What does NPT mean?', options: ['Net Production Time', 'Non-Productive Time', 'New Pressure Test', 'Natural Pressure Technique'], correctAnswer: 1 },
+          { question: 'Which artificial lift system uses an electric centrifugal pump downhole?', options: ['Gas Lift', 'ESP', 'Sucker Rod Pump', 'Jet Pump'], correctAnswer: 1 },
+          { question: 'What does GOR stand for?', options: ['General Oil Rate', 'Gas Oil Ratio', 'Good Operating Range', 'General Optimization'], correctAnswer: 1 },
+          { question: 'What abbreviation describes pulling the drill string out of the well?', options: ['RIH', 'POOH', 'WOC', 'DDR'], correctAnswer: 1 },
+          { question: 'What is OWC?', options: ['Operating Well Cost', 'Oil Water Contact', 'Open Well Completion', 'Outer Well Casing'], correctAnswer: 1 },
+          { question: 'What does MWD mean?', options: ['Maximum Well Depth', 'Measurement While Drilling', 'Mud Weight and Density', 'Moving Downward'], correctAnswer: 1 },
+          { question: 'What is Recovery Factor?', options: ['Cost recovery coefficient', 'Percentage of extractable oil', 'Problem recovery rate', 'Recycling factor'], correctAnswer: 1 },
+          { question: 'What does HSE stand for?', options: ['High Safety Equipment', 'Health, Safety, and Environment', 'Hydraulic System Engineering', 'Hydrostatic Safety Evaluation'], correctAnswer: 1 },
+          { question: 'What is EOR?', options: ['End of Report', 'Enhanced Oil Recovery', 'Emergency Operating Equipment', 'Estimated Oil Reading'], correctAnswer: 1 },
+          { question: 'What does PI mean in reservoir engineering?', options: ['Pressure Index', 'Productivity Index', 'Performance Index', 'Power Index'], correctAnswer: 1 },
+          { question: 'Which term describes the official daily drilling operations report?', options: ['NPT Report', 'Morning Report', 'DDR', 'BHA Report'], correctAnswer: 2 }
+        ]
+      } 
+    },
+    { 
+      day: 7, 
+      type: 'project', 
+      content: { 
+        ar: { 
+          title: 'مشروع الأسبوع: إنشاء قاموس مصطلحات نفطية شامل', 
+          explanation: 'في هذا المشروع ستُنشئ قاموساً شخصياً شاملاً للمصطلحات النفطية يمكنك الرجوع إليه طوال مسيرتك المهنية.',
+          keyTerms: [] 
+        }, 
+        en: { 
+          title: 'Weekly Project: Create a Comprehensive Oil & Gas Glossary', 
+          explanation: 'In this project, you will create a comprehensive personal glossary of oil and gas terminology that you can reference throughout your career.',
+          keyTerms: [] 
+        } 
+      }, 
+      project: { 
+        ar: { 
+          title: 'قاموس المصطلحات النفطية الشامل', 
+          description: 'قم بإنشاء قاموس شخصي يحتوي على 50 مصطلحاً نفطياً على الأقل، منظم حسب الفئات مع تعريفات دقيقة وأمثلة عملية.',
+          instructions: [
+            'قسم المصطلحات إلى 6 فئات على الأقل: (1) قطاعات الصناعة (Upstream/Midstream/Downstream)، (2) قياسات العمق والبئر، (3) مصطلحات الحفر وأدائه، (4) مصطلحات المكامن والإنتاج، (5) أنظمة الرفع الصناعي، (6) السلامة والتقارير',
+            'لكل مصطلح اكتب: الاختصار (إن وجد)، الاسم الكامل بالإنجليزية، الترجمة العربية، التعريف (2-3 جمل)، مثال عملي أو سياق استخدام',
+            'أضف قسماً للمعادلات الأساسية مع شرح كل متغير (مثل: STOIIP, Hydrostatic Pressure, PI)',
+            'أضف قسماً للقيم النموذجية (مثل: ROP نموذجي، RPM نموذجي، Recovery Factor حسب آلية الدفع)',
+            'اختتم بجدول يربط بين المصطلحات المتشابهة أو المرتبطة (مثل: MD vs TVD vs TVDSS)',
+            'تأكد من أن كل تعريف دقيق علمياً ومكتوب بأسلوبك الخاص وليس منسوخاً',
+            'الحد الأدنى: 50 مصطلحاً، المثالي: 75+ مصطلحاً'
+          ],
+          submissionType: 'text'
+        },
+        en: {
+          title: 'Comprehensive Oil & Gas Terminology Glossary',
+          description: 'Create a personal glossary containing at least 50 oil and gas terms, organized by categories with precise definitions and practical examples.',
+          instructions: [
+            'Divide terms into at least 6 categories: (1) Industry Sectors (Upstream/Midstream/Downstream), (2) Depth and Well Measurements, (3) Drilling Terms and Performance, (4) Reservoir and Production Terms, (5) Artificial Lift Systems, (6) Safety and Reporting',
+            'For each term write: Abbreviation (if any), Full English name, Arabic translation, Definition (2-3 sentences), Practical example or usage context',
+            'Add a section for basic formulas with explanation of each variable (e.g., STOIIP, Hydrostatic Pressure, PI)',
+            'Add a section for typical values (e.g., typical ROP, typical RPM, Recovery Factor by drive mechanism)',
+            'Conclude with a table linking similar or related terms (e.g., MD vs TVD vs TVDSS)',
+            'Ensure each definition is scientifically accurate and written in your own words, not copied',
+            'Minimum: 50 terms, Ideal: 75+ terms'
+          ],
+          submissionType: 'text'
+        }
+      } 
+    }
   ]
 };
 
