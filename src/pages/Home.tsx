@@ -5,18 +5,22 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
 import { lessons } from '@/data/lessons';
+import { useProgress } from '@/hooks/useProgress';
 import { 
   BookOpen, 
   GraduationCap, 
   LogOut, 
   Globe,
   ChevronRight,
-  Droplets
+  Droplets,
+  Cloud,
+  CloudOff
 } from 'lucide-react';
 
 export default function Home() {
   const { t, language, setLanguage, isRTL } = useLanguage();
-  const { user, logout } = useAuth();
+  const { user, profile, isGuest, logout } = useAuth();
+  const { getTotalProgress } = useProgress();
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -28,9 +32,9 @@ export default function Home() {
     navigate(`/lesson/${lessonId}`);
   };
 
-  // Simulated progress (in real app, this would come from user data)
-  const completedLessons = 0;
-  const progressPercentage = (completedLessons / lessons.length) * 100;
+  // Get real progress from useProgress hook
+  const lessonIds = lessons.map(l => l.id);
+  const progressPercentage = getTotalProgress(lessonIds);
 
   return (
     <div className="min-h-screen bg-background">
@@ -79,13 +83,21 @@ export default function Home() {
               <div className="flex-1">
                 <p className="text-sm text-muted-foreground">{t('welcomeBack')}</p>
                 <h2 className="text-xl font-bold text-foreground">
-                  {user?.name || t('student')}
+                  {profile?.full_name || user?.email?.split('@')[0] || t('student')}
                 </h2>
-                {user?.isGuest && (
-                  <span className="inline-block mt-1 px-2 py-0.5 text-xs bg-secondary rounded-full text-secondary-foreground">
-                    {t('guest')}
-                  </span>
-                )}
+                <div className="flex items-center gap-2 mt-1">
+                  {isGuest ? (
+                    <span className="inline-flex items-center gap-1 px-2 py-0.5 text-xs bg-secondary rounded-full text-secondary-foreground">
+                      <CloudOff className="w-3 h-3" />
+                      {t('guest')}
+                    </span>
+                  ) : (
+                    <span className="inline-flex items-center gap-1 px-2 py-0.5 text-xs bg-accent/20 rounded-full text-accent">
+                      <Cloud className="w-3 h-3" />
+                      {language === 'ar' ? 'متصل بالسحابة' : 'Cloud Synced'}
+                    </span>
+                  )}
+                </div>
               </div>
             </div>
           </CardContent>
@@ -97,7 +109,7 @@ export default function Home() {
             <div className="flex items-center justify-between mb-3">
               <span className="text-sm font-medium text-foreground">{t('progress')}</span>
               <span className="text-sm text-muted-foreground">
-                {completedLessons}/{lessons.length} {t('lessons')}
+                {progressPercentage}%
               </span>
             </div>
             <Progress value={progressPercentage} className="h-2" />
