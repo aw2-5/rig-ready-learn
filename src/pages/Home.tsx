@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useAuth } from '@/contexts/AuthContext';
@@ -5,6 +6,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
 import { lessons } from '@/data/lessons';
+import { lessonsYear2 } from '@/data/lessonsYear2';
 import { useProgress } from '@/hooks/useProgress';
 import { 
   BookOpen, 
@@ -22,6 +24,7 @@ export default function Home() {
   const { user, profile, isGuest, logout } = useAuth();
   const { getTotalProgress } = useProgress();
   const navigate = useNavigate();
+  const [selectedYear, setSelectedYear] = useState(1);
 
   const handleLogout = () => {
     logout();
@@ -32,8 +35,9 @@ export default function Home() {
     navigate(`/lesson/${lessonId}`);
   };
 
-  // Get real progress from useProgress hook
-  const lessonIds = lessons.map(l => l.id);
+  // Get lessons based on selected year
+  const currentLessons = selectedYear === 1 ? lessons : lessonsYear2;
+  const lessonIds = currentLessons.map(l => l.id);
   const progressPercentage = getTotalProgress(lessonIds);
 
   return (
@@ -48,7 +52,9 @@ export default function Home() {
               </div>
               <div>
                 <h1 className="font-bold text-foreground text-lg">{t('appName')}</h1>
-                <p className="text-xs text-muted-foreground">{t('firstYear')}</p>
+                <p className="text-xs text-muted-foreground">
+                  {selectedYear === 1 ? t('firstYear') : t('secondYear')}
+                </p>
               </div>
             </div>
             <div className="flex items-center gap-2">
@@ -103,6 +109,24 @@ export default function Home() {
           </CardContent>
         </Card>
 
+        {/* Year Selector */}
+        <div className="flex gap-2">
+          <Button
+            variant={selectedYear === 1 ? "default" : "outline"}
+            className="flex-1"
+            onClick={() => setSelectedYear(1)}
+          >
+            {t('firstYear')}
+          </Button>
+          <Button
+            variant={selectedYear === 2 ? "default" : "outline"}
+            className="flex-1"
+            onClick={() => setSelectedYear(2)}
+          >
+            {t('secondYear')}
+          </Button>
+        </div>
+
         {/* Progress Card */}
         <Card variant="default" className="animate-slide-up" style={{ animationDelay: '0.1s' }}>
           <CardContent className="p-6">
@@ -121,10 +145,11 @@ export default function Home() {
           <div className="flex items-center gap-2">
             <BookOpen className="w-5 h-5 text-accent" />
             <h3 className="text-lg font-semibold text-foreground">{t('subjects')}</h3>
+            <span className="text-sm text-muted-foreground">({currentLessons.length})</span>
           </div>
 
           <div className="grid gap-3">
-            {lessons.map((lesson, index) => (
+            {currentLessons.map((lesson, index) => (
               <Card 
                 key={lesson.id}
                 variant="interactive"
@@ -142,7 +167,7 @@ export default function Home() {
                         {t(lesson.titleKey)}
                       </h4>
                       <p className="text-sm text-muted-foreground">
-                        5 {t('quiz')} {t('question')}s
+                        7 {t('day')}s • {t('quiz')} • {t('project')}
                       </p>
                     </div>
                     <ChevronRight className={`w-5 h-5 text-muted-foreground ${isRTL ? 'rotate-180' : ''}`} />
@@ -157,7 +182,9 @@ export default function Home() {
         <Card variant="accent" className="animate-slide-up" style={{ animationDelay: '0.5s' }}>
           <CardContent className="p-4 text-center">
             <p className="text-sm text-muted-foreground mb-1">{t('petroleumEngineering')}</p>
-            <p className="font-bold text-gradient">{t('firstYear')}</p>
+            <p className="font-bold text-gradient">
+              {selectedYear === 1 ? t('firstYear') : t('secondYear')}
+            </p>
           </CardContent>
         </Card>
       </main>
