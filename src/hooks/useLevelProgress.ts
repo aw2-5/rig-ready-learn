@@ -20,7 +20,7 @@ export function useLevelProgress() {
   );
 
   const isLevel1Complete = level1Progress === 100;
-  const isLevel2Unlocked = isLevel1Complete;
+  const isLevel2Unlocked = level1Progress >= 80; // Unlock at 80%
   const isLevel2Complete = level2Progress === 100;
 
   // Calculate average quiz score for a level
