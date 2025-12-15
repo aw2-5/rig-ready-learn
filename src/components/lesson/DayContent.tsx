@@ -3,21 +3,26 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { DailyContent } from '@/data/weeklyContent';
-import { CheckCircle, XCircle, BookOpen, Key } from 'lucide-react';
+import { CheckCircle, XCircle, BookOpen, Key, Image } from 'lucide-react';
+import { LessonImage } from './LessonImage';
 
 interface DayContentProps {
   dayContent: DailyContent;
   onComplete: () => void;
   isComplete: boolean;
+  lessonId?: string;
 }
 
-export function DayContent({ dayContent, onComplete, isComplete }: DayContentProps) {
+export function DayContent({ dayContent, onComplete, isComplete, lessonId }: DayContentProps) {
   const { language, t } = useLanguage();
   const [practiceAnswer, setPracticeAnswer] = useState<number | null>(null);
   const [showPracticeResult, setShowPracticeResult] = useState(false);
 
   const content = dayContent.content[language];
   const practiceQuestion = content.practiceQuestion;
+  
+  // Show lesson image only on day 1
+  const showLessonImage = dayContent.day === 1 && lessonId;
 
   const handlePracticeAnswer = (index: number) => {
     setPracticeAnswer(index);
@@ -42,6 +47,11 @@ export function DayContent({ dayContent, onComplete, isComplete }: DayContentPro
           </div>
         </CardContent>
       </Card>
+
+      {/* Lesson Image - shown only on day 1 */}
+      {showLessonImage && (
+        <LessonImage lessonId={lessonId} className="mb-2" />
+      )}
 
       {/* Explanation */}
       <Card variant="default">

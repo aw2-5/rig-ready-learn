@@ -109,6 +109,7 @@ export default function Lesson() {
         dayContent={currentDayContent}
         onComplete={handleCompleteDay}
         isComplete={dayComplete}
+        lessonId={id}
       />
     );
   };
