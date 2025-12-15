@@ -2,8 +2,11 @@ import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { lessons } from '@/data/lessons';
+import { lessonsYear2 } from '@/data/lessonsYear2';
 import { weeklyContent } from '@/data/weeklyContent';
+import { weeklyContentYear2 } from '@/data/weeklyContentYear2';
 import { useProgress } from '@/hooks/useProgress';
+import { useLevelProgress } from '@/hooks/useLevelProgress';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { DaySelector } from '@/components/lesson/DaySelector';
@@ -11,6 +14,8 @@ import { WeeklyProgress } from '@/components/lesson/WeeklyProgress';
 import { DayContent } from '@/components/lesson/DayContent';
 import { DayQuiz } from '@/components/lesson/DayQuiz';
 import { DayProject } from '@/components/lesson/DayProject';
+import { LessonCompletionCard } from '@/components/LessonCompletionCard';
+import { LevelCompletionModal } from '@/components/LevelCompletionModal';
 import { ArrowLeft, ArrowRight, Globe, Home, BookOpen } from 'lucide-react';
 
 export default function Lesson() {
@@ -18,11 +23,29 @@ export default function Lesson() {
   const navigate = useNavigate();
   const { language, setLanguage, t, isRTL } = useLanguage();
   const { markDayComplete, isDayComplete, getDayScore, getWeekProgress } = useProgress();
+  const { 
+    isLevel1Complete, 
+    level1AverageScore, 
+    isLessonComplete,
+    level1LessonIds,
+  } = useLevelProgress();
   
   const [selectedDay, setSelectedDay] = useState(1);
+  const [showLevelCompleteModal, setShowLevelCompleteModal] = useState(false);
 
-  const lesson = lessons.find(l => l.id === id);
-  const weeklyLesson = weeklyContent.find(w => w.lessonId === id);
+  // Find lesson in both levels
+  const allLessons = [...lessons, ...lessonsYear2];
+  const allWeeklyContent = [...weeklyContent, ...weeklyContentYear2];
+  
+  const lesson = allLessons.find(l => l.id === id);
+  const weeklyLesson = allWeeklyContent.find(w => w.lessonId === id);
+  
+  // Determine which level this lesson belongs to
+  const isLevel1Lesson = lessons.some(l => l.id === id);
+  const currentLevelLessons = isLevel1Lesson ? lessons : lessonsYear2;
+  const currentLessonIndex = currentLevelLessons.findIndex(l => l.id === id);
+  const nextLesson = currentLevelLessons[currentLessonIndex + 1];
+  const isLastLessonInLevel = currentLessonIndex === currentLevelLessons.length - 1;
 
   useEffect(() => {
     if (id) {
@@ -75,8 +98,33 @@ export default function Lesson() {
   const handleCompleteProject = () => {
     if (id) {
       markDayComplete(id, 7);
+      // Check if this completes Level 1
+      if (isLevel1Lesson && isLastLessonInLevel) {
+        // Small delay to let state update
+        setTimeout(() => {
+          if (isLevel1Complete) {
+            setShowLevelCompleteModal(true);
+          }
+        }, 500);
+      }
     }
   };
+
+  const handleNextLesson = () => {
+    if (isLastLessonInLevel) {
+      navigate('/home');
+    } else if (nextLesson) {
+      navigate(`/lesson/${nextLesson.id}`);
+    }
+  };
+
+  const handleGoToLevel2 = () => {
+    setShowLevelCompleteModal(false);
+    navigate('/home');
+  };
+
+  // Check if current lesson is fully complete
+  const isCurrentLessonComplete = id ? isLessonComplete(id) : false;
 
   const renderDayContent = () => {
     if (!currentDayContent || !id) return null;
@@ -156,7 +204,25 @@ export default function Lesson() {
 
       <main className="container max-w-lg mx-auto px-4 pb-8">
         {renderDayContent()}
+        
+        {/* Show completion card when lesson is done */}
+        {isCurrentLessonComplete && (
+          <LessonCompletionCard
+            onNextLesson={handleNextLesson}
+            nextLessonTitle={nextLesson?.content[language].title}
+            isLastLesson={isLastLessonInLevel}
+          />
+        )}
       </main>
+
+      {/* Level Completion Modal */}
+      <LevelCompletionModal
+        isOpen={showLevelCompleteModal}
+        onClose={() => setShowLevelCompleteModal(false)}
+        level={1}
+        averageScore={level1AverageScore}
+        onGoToNextLevel={handleGoToLevel2}
+      />
     </div>
   );
 }
