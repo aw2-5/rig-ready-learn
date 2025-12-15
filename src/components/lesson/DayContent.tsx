@@ -1,9 +1,16 @@
 import { useState } from 'react';
+import DOMPurify from 'dompurify';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { DailyContent } from '@/data/weeklyContent';
 import { CheckCircle, XCircle, BookOpen, Key } from 'lucide-react';
+
+// Configure DOMPurify to only allow safe HTML tags
+const sanitizeConfig = {
+  ALLOWED_TAGS: ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol', 'li', 'strong', 'em', 'a', 'div', 'section', 'span', 'br'],
+  ALLOWED_ATTR: ['href', 'target', 'rel', 'class', 'style'],
+};
 
 interface DayContentProps {
   dayContent: DailyContent;
@@ -48,7 +55,7 @@ export function DayContent({ dayContent, onComplete, isComplete }: DayContentPro
         <CardContent className="p-4">
           <div 
             className="text-foreground leading-relaxed prose prose-sm max-w-none prose-headings:text-foreground prose-p:text-foreground prose-li:text-foreground prose-strong:text-foreground"
-            dangerouslySetInnerHTML={{ __html: content.explanation }}
+            dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(content.explanation, sanitizeConfig) }}
           />
         </CardContent>
       </Card>
