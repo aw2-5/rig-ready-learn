@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useAuth } from '@/contexts/AuthContext';
@@ -7,7 +7,8 @@ import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
 import { lessons } from '@/data/lessons';
 import { lessonsYear2 } from '@/data/lessonsYear2';
-import { useProgress } from '@/hooks/useProgress';
+import { useLevelProgress } from '@/hooks/useLevelProgress';
+import { LevelCompletionModal } from '@/components/LevelCompletionModal';
 import { 
   BookOpen, 
   GraduationCap, 
@@ -16,15 +17,38 @@ import {
   ChevronRight,
   Droplets,
   Cloud,
-  CloudOff
+  CloudOff,
+  Lock,
+  CheckCircle,
+  Star
 } from 'lucide-react';
+import { toast } from 'sonner';
 
 export default function Home() {
   const { t, language, setLanguage, isRTL } = useLanguage();
   const { user, profile, isGuest, logout } = useAuth();
-  const { getTotalProgress } = useProgress();
+  const { 
+    level1Progress, 
+    level2Progress,
+    isLevel1Complete,
+    isLevel2Unlocked,
+    level1AverageScore,
+    isLessonComplete,
+  } = useLevelProgress();
   const navigate = useNavigate();
   const [selectedYear, setSelectedYear] = useState(1);
+  const [showLevel1CompleteModal, setShowLevel1CompleteModal] = useState(false);
+
+  // Check if level 1 was just completed
+  useEffect(() => {
+    if (isLevel1Complete && selectedYear === 1) {
+      const hasSeenModal = localStorage.getItem('level1-complete-modal-seen');
+      if (!hasSeenModal) {
+        setShowLevel1CompleteModal(true);
+        localStorage.setItem('level1-complete-modal-seen', 'true');
+      }
+    }
+  }, [isLevel1Complete, selectedYear]);
 
   const handleLogout = () => {
     logout();
@@ -35,10 +59,26 @@ export default function Home() {
     navigate(`/lesson/${lessonId}`);
   };
 
+  const handleYearSelect = (year: number) => {
+    if (year === 2 && !isLevel2Unlocked) {
+      toast.error(
+        language === 'ar' 
+          ? 'أكمل المستوى الأول أولاً لفتح المستوى الثاني' 
+          : 'Complete Level 1 first to unlock Level 2'
+      );
+      return;
+    }
+    setSelectedYear(year);
+  };
+
+  const handleGoToLevel2 = () => {
+    setShowLevel1CompleteModal(false);
+    setSelectedYear(2);
+  };
+
   // Get lessons based on selected year
   const currentLessons = selectedYear === 1 ? lessons : lessonsYear2;
-  const lessonIds = currentLessons.map(l => l.id);
-  const progressPercentage = getTotalProgress(lessonIds);
+  const currentProgress = selectedYear === 1 ? level1Progress : level2Progress;
 
   return (
     <div className="min-h-screen bg-background">
@@ -109,23 +149,52 @@ export default function Home() {
           </CardContent>
         </Card>
 
-        {/* Year Selector */}
+        {/* Year Selector with Lock Status */}
         <div className="flex gap-2">
           <Button
             variant={selectedYear === 1 ? "default" : "outline"}
-            className="flex-1"
-            onClick={() => setSelectedYear(1)}
+            className="flex-1 gap-2"
+            onClick={() => handleYearSelect(1)}
           >
+            {isLevel1Complete && <CheckCircle className="w-4 h-4" />}
             {t('firstYear')}
+            {isLevel1Complete && <span className="text-xs opacity-75">✓</span>}
           </Button>
           <Button
             variant={selectedYear === 2 ? "default" : "outline"}
-            className="flex-1"
-            onClick={() => setSelectedYear(2)}
+            className={`flex-1 gap-2 ${!isLevel2Unlocked ? 'opacity-60' : ''}`}
+            onClick={() => handleYearSelect(2)}
           >
+            {!isLevel2Unlocked ? (
+              <Lock className="w-4 h-4" />
+            ) : (
+              <Star className="w-4 h-4" />
+            )}
             {t('secondYear')}
           </Button>
         </div>
+
+        {/* Level Status Message */}
+        {!isLevel2Unlocked && selectedYear === 1 && (
+          <Card variant="accent" className="animate-fade-in">
+            <CardContent className="p-4 flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center">
+                <Lock className="w-5 h-5 text-accent" />
+              </div>
+              <div className="flex-1">
+                <p className="text-sm font-medium text-foreground">
+                  {language === 'ar' ? 'أكمل المستوى الأول' : 'Complete Level 1'}
+                </p>
+                <p className="text-xs text-muted-foreground">
+                  {language === 'ar' 
+                    ? `${level1Progress}% مكتمل - ${100 - level1Progress}% متبقي`
+                    : `${level1Progress}% complete - ${100 - level1Progress}% remaining`
+                  }
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        )}
 
         {/* Progress Card */}
         <Card variant="default" className="animate-slide-up" style={{ animationDelay: '0.1s' }}>
@@ -133,10 +202,10 @@ export default function Home() {
             <div className="flex items-center justify-between mb-3">
               <span className="text-sm font-medium text-foreground">{t('progress')}</span>
               <span className="text-sm text-muted-foreground">
-                {progressPercentage}%
+                {currentProgress}%
               </span>
             </div>
-            <Progress value={progressPercentage} className="h-2" />
+            <Progress value={currentProgress} className="h-2" />
           </CardContent>
         </Card>
 
@@ -149,32 +218,41 @@ export default function Home() {
           </div>
 
           <div className="grid gap-3">
-            {currentLessons.map((lesson, index) => (
-              <Card 
-                key={lesson.id}
-                variant="interactive"
-                className="animate-slide-up"
-                style={{ animationDelay: `${0.15 + index * 0.05}s` }}
-                onClick={() => handleLessonClick(lesson.id)}
-              >
-                <CardContent className="p-4">
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center text-2xl">
-                      {lesson.icon}
+            {currentLessons.map((lesson, index) => {
+              const lessonComplete = isLessonComplete(lesson.id);
+              return (
+                <Card 
+                  key={lesson.id}
+                  variant="interactive"
+                  className="animate-slide-up"
+                  style={{ animationDelay: `${0.15 + index * 0.05}s` }}
+                  onClick={() => handleLessonClick(lesson.id)}
+                >
+                  <CardContent className="p-4">
+                    <div className="flex items-center gap-4">
+                      <div className={`w-12 h-12 rounded-xl flex items-center justify-center text-2xl relative ${lessonComplete ? 'bg-accent/20' : 'bg-secondary'}`}>
+                        {lesson.icon}
+                        {lessonComplete && (
+                          <CheckCircle className="absolute -bottom-1 -right-1 w-5 h-5 text-accent bg-card rounded-full" />
+                        )}
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h4 className="font-semibold text-foreground truncate">
+                          {t(lesson.titleKey)}
+                        </h4>
+                        <p className="text-sm text-muted-foreground">
+                          {lessonComplete 
+                            ? (language === 'ar' ? '✓ مكتمل' : '✓ Completed')
+                            : `7 ${t('day')}s • ${t('quiz')} • ${t('project')}`
+                          }
+                        </p>
+                      </div>
+                      <ChevronRight className={`w-5 h-5 text-muted-foreground ${isRTL ? 'rotate-180' : ''}`} />
                     </div>
-                    <div className="flex-1 min-w-0">
-                      <h4 className="font-semibold text-foreground truncate">
-                        {t(lesson.titleKey)}
-                      </h4>
-                      <p className="text-sm text-muted-foreground">
-                        7 {t('day')}s • {t('quiz')} • {t('project')}
-                      </p>
-                    </div>
-                    <ChevronRight className={`w-5 h-5 text-muted-foreground ${isRTL ? 'rotate-180' : ''}`} />
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
         </section>
 
@@ -188,6 +266,15 @@ export default function Home() {
           </CardContent>
         </Card>
       </main>
+
+      {/* Level 1 Completion Modal */}
+      <LevelCompletionModal
+        isOpen={showLevel1CompleteModal}
+        onClose={() => setShowLevel1CompleteModal(false)}
+        level={1}
+        averageScore={level1AverageScore}
+        onGoToNextLevel={handleGoToLevel2}
+      />
     </div>
   );
 }
