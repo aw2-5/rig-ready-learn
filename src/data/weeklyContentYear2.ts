@@ -1,5 +1,6 @@
 import { QuizQuestion } from './lessons';
 import { DailyContent, WeeklyLesson } from './weeklyContent';
+import { hoistingAdvancedLesson } from './year2/hoistingAdvancedContent';
 
 // Helper function to create placeholder weekly content for Year 2 lessons
 const createPlaceholderLesson = (lessonId: string, titleAr: string, titleEn: string): WeeklyLesson => ({
@@ -278,7 +279,7 @@ const createPlaceholderLesson = (lessonId: string, titleAr: string, titleEn: str
 
 // Create placeholder lessons for all Year 2 content
 export const weeklyContentYear2: WeeklyLesson[] = [
-  createPlaceholderLesson('hoisting-advanced', 'نظام الرفع المتقدم', 'Hoisting System – Advanced'),
+  hoistingAdvancedLesson, // Detailed content for lesson 1
   createPlaceholderLesson('rotary-systems', 'أنظمة الدوران', 'Rotary Systems'),
   createPlaceholderLesson('drillstring-bha', 'تصميم سلسلة الحفر و BHA', 'Drill String & BHA Design'),
   createPlaceholderLesson('drill-bits-advanced', 'رؤوس الحفر المتقدم', 'Drill Bits – Advanced'),
