@@ -9,6 +9,7 @@ import { lessons } from '@/data/lessons';
 import { lessonsYear2 } from '@/data/lessonsYear2';
 import { useLevelProgress } from '@/hooks/useLevelProgress';
 import { LevelCompletionModal } from '@/components/LevelCompletionModal';
+import { UpgradeAccountModal } from '@/components/UpgradeAccountModal';
 import { 
   BookOpen, 
   GraduationCap, 
@@ -20,7 +21,8 @@ import {
   CloudOff,
   Lock,
   CheckCircle,
-  Star
+  Star,
+  Sparkles
 } from 'lucide-react';
 import { toast } from 'sonner';
 
@@ -38,6 +40,7 @@ export default function Home() {
   const navigate = useNavigate();
   const [selectedYear, setSelectedYear] = useState(1);
   const [showLevel1CompleteModal, setShowLevel1CompleteModal] = useState(false);
+  const [showUpgradeModal, setShowUpgradeModal] = useState(false);
 
   // Check if level 1 was just completed
   useEffect(() => {
@@ -133,10 +136,13 @@ export default function Home() {
                 </h2>
                 <div className="flex items-center gap-2 mt-1">
                   {isGuest ? (
-                    <span className="inline-flex items-center gap-1 px-2 py-0.5 text-xs bg-secondary rounded-full text-secondary-foreground">
+                    <button 
+                      onClick={() => setShowUpgradeModal(true)}
+                      className="inline-flex items-center gap-1 px-2 py-0.5 text-xs bg-secondary rounded-full text-secondary-foreground hover:bg-secondary/80 transition-colors"
+                    >
                       <CloudOff className="w-3 h-3" />
                       {t('guest')}
-                    </span>
+                    </button>
                   ) : (
                     <span className="inline-flex items-center gap-1 px-2 py-0.5 text-xs bg-accent/20 rounded-full text-accent">
                       <Cloud className="w-3 h-3" />
@@ -148,6 +154,28 @@ export default function Home() {
             </div>
           </CardContent>
         </Card>
+
+        {/* Guest Upgrade Banner */}
+        {isGuest && (
+          <Card variant="accent" className="animate-fade-in cursor-pointer" onClick={() => setShowUpgradeModal(true)}>
+            <CardContent className="p-4">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent to-primary flex items-center justify-center">
+                  <Sparkles className="w-5 h-5 text-accent-foreground" />
+                </div>
+                <div className="flex-1">
+                  <p className="text-sm font-medium text-foreground">
+                    {language === 'ar' ? 'رقِّ حسابك الآن!' : 'Upgrade Your Account!'}
+                  </p>
+                  <p className="text-xs text-muted-foreground">
+                    {language === 'ar' ? 'احفظ تقدمك وزامن بين أجهزتك' : 'Save your progress and sync across devices'}
+                  </p>
+                </div>
+                <ChevronRight className={`w-5 h-5 text-muted-foreground ${isRTL ? 'rotate-180' : ''}`} />
+              </div>
+            </CardContent>
+          </Card>
+        )}
 
         {/* Year Selector with Lock Status */}
         <div className="flex gap-2">
@@ -274,6 +302,12 @@ export default function Home() {
         level={1}
         averageScore={level1AverageScore}
         onGoToNextLevel={handleGoToLevel2}
+      />
+
+      {/* Upgrade Account Modal */}
+      <UpgradeAccountModal
+        isOpen={showUpgradeModal}
+        onClose={() => setShowUpgradeModal(false)}
       />
     </div>
   );
