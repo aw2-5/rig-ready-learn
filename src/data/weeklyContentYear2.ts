@@ -7,6 +7,7 @@ import { drillBitsAdvancedLesson } from './year2/drillBitsAdvancedContent';
 import { bopSystemsLesson } from './year2/bopSystemsContent';
 import { drillingFluidsLevel2Lesson } from './year2/drillingFluidsLevel2Content';
 import { hydraulicsFlowLesson } from './year2/hydraulicsFlowContent';
+import { holeCleaningLesson } from './year2/holeCleaningContent';
 // Helper function to create placeholder weekly content for Year 2 lessons
 const createPlaceholderLesson = (lessonId: string, titleAr: string, titleEn: string): WeeklyLesson => ({
   lessonId,
