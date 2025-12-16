@@ -292,7 +292,7 @@ export const weeklyContentYear2: WeeklyLesson[] = [
   bopSystemsLesson, // Detailed content for lesson 5
   drillingFluidsLevel2Lesson, // Detailed content for lesson 6
   hydraulicsFlowLesson, // Detailed content for lesson 7
-  createPlaceholderLesson('hole-cleaning', 'تنظيف الحفرة ومعالجة الفتات', 'Hole Cleaning & Cuttings Handling'),
+  holeCleaningLesson, // Detailed content for lesson 8
   createPlaceholderLesson('pressure-ecd', 'حسابات الضغط و ECD', 'Pressure & ECD Calculations'),
   createPlaceholderLesson('kick-detection', 'كشف الكيك وإجراءات التحكم بالبئر', 'Kick Detection & Well Control Procedures'),
   createPlaceholderLesson('casing-cementing', 'التغليف والتسميت وضمان الجودة', 'Casing, Cementing & QA/QC'),
