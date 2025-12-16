@@ -9,6 +9,7 @@ import { drillingFluidsLevel2Lesson } from './year2/drillingFluidsLevel2Content'
 import { hydraulicsFlowLesson } from './year2/hydraulicsFlowContent';
 import { holeCleaningLesson } from './year2/holeCleaningContent';
 import { pressureEcdLesson } from './year2/pressureEcdContent';
+import { kickDetectionLesson } from './year2/kickDetectionContent';
 // Helper function to create placeholder weekly content for Year 2 lessons
 const createPlaceholderLesson = (lessonId: string, titleAr: string, titleEn: string): WeeklyLesson => ({
   lessonId,
@@ -295,7 +296,7 @@ export const weeklyContentYear2: WeeklyLesson[] = [
   hydraulicsFlowLesson, // Detailed content for lesson 7
   holeCleaningLesson, // Detailed content for lesson 8
   pressureEcdLesson, // Detailed content for lesson 9
-  createPlaceholderLesson('kick-detection', 'كشف الكيك وإجراءات التحكم بالبئر', 'Kick Detection & Well Control Procedures'),
+  kickDetectionLesson, // Detailed content for lesson 10
   createPlaceholderLesson('casing-cementing', 'التغليف والتسميت وضمان الجودة', 'Casing, Cementing & QA/QC'),
   createPlaceholderLesson('drilling-problems', 'مشاكل الحفر والإجراءات العلاجية', 'Drilling Problems & Remedial Actions'),
   createPlaceholderLesson('directional-drilling', 'الحفر الموجه والأفقي', 'Directional & Horizontal Drilling'),
