@@ -1010,62 +1010,60 @@ Dull bit grading is a systematic process for inspecting and documenting the bit 
     {
       day: 6,
       type: 'quiz',
-      quiz: [
-        {
-          question: { ar: 'ما هو التصنيف الرئيسي لرؤوس الحفر؟', en: 'What is the main classification of drill bits?' },
-          options: { ar: ['دوارة وثابتة', 'صغيرة وكبيرة', 'فولاذية وبلاستيكية', 'يدوية وآلية'], en: ['Roller cone and fixed cutter', 'Small and large', 'Steel and plastic', 'Manual and automatic'] },
-          correctAnswer: 0,
+      content: {
+        ar: {
+          title: 'اختبار الأسبوع - رؤوس الحفر المتقدمة',
+          explanation: 'اختبر معلوماتك حول رؤوس الحفر المتقدمة',
+          keyTerms: [],
         },
-        {
-          question: { ar: 'ما هي آلية عمل رؤوس الحفر الدوارة؟', en: 'What is the working mechanism of roller cone bits?' },
-          options: { ar: ['القص', 'السحق والتكسير', 'الاهتزاز', 'الليزر'], en: ['Shearing', 'Crushing and breaking', 'Vibration', 'Laser'] },
-          correctAnswer: 1,
+        en: {
+          title: 'Weekly Quiz - Advanced Drill Bits',
+          explanation: 'Test your knowledge about advanced drill bits',
+          keyTerms: [],
         },
-        {
-          question: { ar: 'ما هو نوع الرأس المناسب للتكوينات الصلبة جداً؟', en: 'What type of bit is suitable for very hard formations?' },
-          options: { ar: ['أسنان فولاذية طويلة', 'TCI بمداخل كربيد التنغستن', 'PDC', 'أسنان بلاستيكية'], en: ['Long steel teeth', 'TCI with tungsten carbide inserts', 'PDC', 'Plastic teeth'] },
-          correctAnswer: 1,
-        },
-        {
-          question: { ar: 'ما الذي يميز رؤوس PDC عن الرؤوس الدوارة؟', en: 'What distinguishes PDC bits from roller cone bits?' },
-          options: { ar: ['أرخص ثمناً', 'لا توجد أجزاء متحركة', 'أكبر حجماً', 'أثقل وزناً'], en: ['Cheaper', 'No moving parts', 'Larger size', 'Heavier weight'] },
-          correctAnswer: 1,
-        },
-        {
-          question: { ar: 'ما هي آلية القطع في رؤوس PDC؟', en: 'What is the cutting mechanism in PDC bits?' },
-          options: { ar: ['السحق', 'القص', 'الطحن', 'التفجير'], en: ['Crushing', 'Shearing', 'Grinding', 'Blasting'] },
-          correctAnswer: 1,
-        },
-        {
-          question: { ar: 'في كود IADC للرؤوس الدوارة، ماذا تعني الأرقام 1-3 في الخانة الأولى؟', en: 'In IADC roller cone code, what do numbers 1-3 in the first position indicate?' },
-          options: { ar: ['رؤوس TCI', 'رؤوس أسنان فولاذية', 'رؤوس PDC', 'رؤوس ماسية'], en: ['TCI bits', 'Milled tooth bits', 'PDC bits', 'Diamond bits'] },
-          correctAnswer: 1,
-        },
-        {
-          question: { ar: 'ما هو العنصر الأكثر عرضة للفشل في رؤوس الحفر الدوارة؟', en: 'What is the most failure-prone element in roller cone bits?' },
-          options: { ar: ['الجسم', 'المحامل', 'الفوهات', 'الوصلة'], en: ['Body', 'Bearings', 'Nozzles', 'Connection'] },
-          correctAnswer: 1,
-        },
-        {
-          question: { ar: 'ماذا يعني مقياس التآكل 8 في نظام IADC؟', en: 'What does a wear grade of 8 mean in the IADC system?' },
-          options: { ar: ['جديد تماماً', 'تآكل خفيف', 'تآكل متوسط', 'تالف تماماً'], en: ['Brand new', 'Light wear', 'Medium wear', 'Completely worn'] },
-          correctAnswer: 3,
-        },
-        {
-          question: { ar: 'أي من التالي ليس من عوامل تحسين أداء رأس الحفر؟', en: 'Which of the following is NOT a bit performance optimization factor?' },
-          options: { ar: ['الوزن على الرأس', 'سرعة الدوران', 'لون الرأس', 'الهيدروليكا'], en: ['Weight on Bit', 'Rotary Speed', 'Bit Color', 'Hydraulics'] },
-          correctAnswer: 2,
-        },
-        {
-          question: { ar: 'ما هو الحرف الأول في كود IADC لرأس PDC بجسم Matrix؟', en: 'What is the first letter in IADC code for a Matrix body PDC bit?' },
-          options: { ar: ['S', 'M', 'P', 'D'], en: ['S', 'M', 'P', 'D'] },
-          correctAnswer: 1,
-        },
-      ],
+      },
+      quiz: {
+        ar: [
+          { question: 'ما هو التصنيف الرئيسي لرؤوس الحفر؟', options: ['دوارة وثابتة', 'صغيرة وكبيرة', 'فولاذية وبلاستيكية', 'يدوية وآلية'], correctAnswer: 0 },
+          { question: 'ما هي آلية عمل رؤوس الحفر الدوارة؟', options: ['القص', 'السحق والتكسير', 'الاهتزاز', 'الليزر'], correctAnswer: 1 },
+          { question: 'ما هو نوع الرأس المناسب للتكوينات الصلبة جداً؟', options: ['أسنان فولاذية طويلة', 'TCI بمداخل كربيد التنغستن', 'PDC', 'أسنان بلاستيكية'], correctAnswer: 1 },
+          { question: 'ما الذي يميز رؤوس PDC عن الرؤوس الدوارة؟', options: ['أرخص ثمناً', 'لا توجد أجزاء متحركة', 'أكبر حجماً', 'أثقل وزناً'], correctAnswer: 1 },
+          { question: 'ما هي آلية القطع في رؤوس PDC؟', options: ['السحق', 'القص', 'الطحن', 'التفجير'], correctAnswer: 1 },
+          { question: 'في كود IADC للرؤوس الدوارة، ماذا تعني الأرقام 1-3 في الخانة الأولى؟', options: ['رؤوس TCI', 'رؤوس أسنان فولاذية', 'رؤوس PDC', 'رؤوس ماسية'], correctAnswer: 1 },
+          { question: 'ما هو العنصر الأكثر عرضة للفشل في رؤوس الحفر الدوارة؟', options: ['الجسم', 'المحامل', 'الفوهات', 'الوصلة'], correctAnswer: 1 },
+          { question: 'ماذا يعني مقياس التآكل 8 في نظام IADC؟', options: ['جديد تماماً', 'تآكل خفيف', 'تآكل متوسط', 'تالف تماماً'], correctAnswer: 3 },
+          { question: 'أي من التالي ليس من عوامل تحسين أداء رأس الحفر؟', options: ['الوزن على الرأس', 'سرعة الدوران', 'لون الرأس', 'الهيدروليكا'], correctAnswer: 2 },
+          { question: 'ما هو الحرف الأول في كود IADC لرأس PDC بجسم Matrix؟', options: ['S', 'M', 'P', 'D'], correctAnswer: 1 },
+        ],
+        en: [
+          { question: 'What is the main classification of drill bits?', options: ['Roller cone and fixed cutter', 'Small and large', 'Steel and plastic', 'Manual and automatic'], correctAnswer: 0 },
+          { question: 'What is the working mechanism of roller cone bits?', options: ['Shearing', 'Crushing and breaking', 'Vibration', 'Laser'], correctAnswer: 1 },
+          { question: 'What type of bit is suitable for very hard formations?', options: ['Long steel teeth', 'TCI with tungsten carbide inserts', 'PDC', 'Plastic teeth'], correctAnswer: 1 },
+          { question: 'What distinguishes PDC bits from roller cone bits?', options: ['Cheaper', 'No moving parts', 'Larger size', 'Heavier weight'], correctAnswer: 1 },
+          { question: 'What is the cutting mechanism in PDC bits?', options: ['Crushing', 'Shearing', 'Grinding', 'Blasting'], correctAnswer: 1 },
+          { question: 'In IADC roller cone code, what do numbers 1-3 in the first position indicate?', options: ['TCI bits', 'Milled tooth bits', 'PDC bits', 'Diamond bits'], correctAnswer: 1 },
+          { question: 'What is the most failure-prone element in roller cone bits?', options: ['Body', 'Bearings', 'Nozzles', 'Connection'], correctAnswer: 1 },
+          { question: 'What does a wear grade of 8 mean in the IADC system?', options: ['Brand new', 'Light wear', 'Medium wear', 'Completely worn'], correctAnswer: 3 },
+          { question: 'Which of the following is NOT a bit performance optimization factor?', options: ['Weight on Bit', 'Rotary Speed', 'Bit Color', 'Hydraulics'], correctAnswer: 2 },
+          { question: 'What is the first letter in IADC code for a Matrix body PDC bit?', options: ['S', 'M', 'P', 'D'], correctAnswer: 1 },
+        ],
+      },
     },
     {
       day: 7,
       type: 'project',
+      content: {
+        ar: {
+          title: 'مشروع رؤوس الحفر المتقدمة',
+          explanation: 'طبق ما تعلمته في هذا المشروع التطبيقي',
+          keyTerms: [],
+        },
+        en: {
+          title: 'Advanced Drill Bits Project',
+          explanation: 'Apply what you learned in this practical project',
+          keyTerms: [],
+        },
+      },
       project: {
         ar: {
           title: 'مشروع الأسبوع - تحليل واختيار رأس الحفر',
