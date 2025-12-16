@@ -83,7 +83,7 @@ export const holeCleaningLesson: WeeklyLesson = {
 <h3 style="color: #ff6b35;" class="text-lg font-bold mb-3 mt-6">🔸 Slip Velocity</h3>
 <p class="mb-4">Slip velocity is the rate at which cuttings fall through the drilling fluid due to gravity:</p>
 <div style="background: #f0fdf4; padding: 16px; border-radius: 8px; border-left: 4px solid #22c55e; margin: 16px 0;">
-<p class="font-mono text-center"><strong>Net Transport Velocity = Annular Velocity - Slip Velocity</strong></p>
+<p class="font-mono text-center" style="color: #166534;"><strong>Net Transport Velocity = Annular Velocity - Slip Velocity</strong></p>
 </div>
 
 <div style="background: #fef2f2; padding: 16px; border-radius: 8px; border-left: 4px solid #ef4444; margin: 16px 0;">
