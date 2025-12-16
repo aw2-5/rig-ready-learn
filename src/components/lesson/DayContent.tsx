@@ -52,7 +52,7 @@ export function DayContent({
 
       {/* Explanation */}
       <Card variant="default">
-        <CardContent className="p-4 border-background text-destructive">
+        <CardContent className="p-4 border-background text-ring">
           <div className="text-foreground leading-relaxed prose prose-sm max-w-none prose-headings:text-foreground prose-p:text-foreground prose-li:text-foreground prose-strong:text-foreground" dangerouslySetInnerHTML={{
           __html: DOMPurify.sanitize(content.explanation, sanitizeConfig)
         }} />
