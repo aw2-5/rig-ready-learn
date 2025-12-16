@@ -285,8 +285,8 @@ export const weeklyContentYear2: WeeklyLesson[] = [
   hoistingAdvancedLesson, // Detailed content for lesson 1
   rotarySystemsLesson, // Detailed content for lesson 2
   drillstringBhaLesson, // Detailed content for lesson 3
-  createPlaceholderLesson('drill-bits-advanced', 'رؤوس الحفر المتقدم', 'Drill Bits – Advanced'),
-  createPlaceholderLesson('bop-systems', 'أنظمة مانع الانفجار والاختبار', 'BOP Systems & Testing'),
+  drillBitsAdvancedLesson, // Detailed content for lesson 4
+  bopSystemsLesson, // Detailed content for lesson 5
   createPlaceholderLesson('drilling-fluids-2', 'سوائل الحفر - المستوى 2', 'Drilling Fluids – Level 2'),
   createPlaceholderLesson('hydraulics-flow', 'الهيدروليكا وتدفق سلسلة الحفر', 'Hydraulics & Drillstring Flow'),
   createPlaceholderLesson('hole-cleaning', 'تنظيف الحفرة ومعالجة الفتات', 'Hole Cleaning & Cuttings Handling'),
