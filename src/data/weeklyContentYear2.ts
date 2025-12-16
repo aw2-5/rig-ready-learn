@@ -5,6 +5,7 @@ import { rotarySystemsLesson } from './year2/rotarySystemsContent';
 import { drillstringBhaLesson } from './year2/drillstringBhaContent';
 import { drillBitsAdvancedLesson } from './year2/drillBitsAdvancedContent';
 import { bopSystemsLesson } from './year2/bopSystemsContent';
+import { drillingFluidsLevel2Lesson } from './year2/drillingFluidsLevel2Content';
 // Helper function to create placeholder weekly content for Year 2 lessons
 const createPlaceholderLesson = (lessonId: string, titleAr: string, titleEn: string): WeeklyLesson => ({
   lessonId,
@@ -287,7 +288,7 @@ export const weeklyContentYear2: WeeklyLesson[] = [
   drillstringBhaLesson, // Detailed content for lesson 3
   drillBitsAdvancedLesson, // Detailed content for lesson 4
   bopSystemsLesson, // Detailed content for lesson 5
-  createPlaceholderLesson('drilling-fluids-2', 'سوائل الحفر - المستوى 2', 'Drilling Fluids – Level 2'),
+  drillingFluidsLevel2Lesson, // Detailed content for lesson 6
   createPlaceholderLesson('hydraulics-flow', 'الهيدروليكا وتدفق سلسلة الحفر', 'Hydraulics & Drillstring Flow'),
   createPlaceholderLesson('hole-cleaning', 'تنظيف الحفرة ومعالجة الفتات', 'Hole Cleaning & Cuttings Handling'),
   createPlaceholderLesson('pressure-ecd', 'حسابات الضغط و ECD', 'Pressure & ECD Calculations'),
