@@ -17,50 +17,56 @@ import { DayProject } from '@/components/lesson/DayProject';
 import { LessonCompletionCard } from '@/components/LessonCompletionCard';
 import { LevelCompletionModal } from '@/components/LevelCompletionModal';
 import { ArrowLeft, ArrowRight, Globe, Home, BookOpen } from 'lucide-react';
-
 export default function Lesson() {
-  const { id } = useParams<{ id: string }>();
+  const {
+    id
+  } = useParams<{
+    id: string;
+  }>();
   const navigate = useNavigate();
-  const { language, setLanguage, t, isRTL } = useLanguage();
-  const { markDayComplete, isDayComplete, getDayScore, getWeekProgress } = useProgress();
-  const { 
-    isLevel1Complete, 
-    level1AverageScore, 
+  const {
+    language,
+    setLanguage,
+    t,
+    isRTL
+  } = useLanguage();
+  const {
+    markDayComplete,
+    isDayComplete,
+    getDayScore,
+    getWeekProgress
+  } = useProgress();
+  const {
+    isLevel1Complete,
+    level1AverageScore,
     isLessonComplete,
-    level1LessonIds,
+    level1LessonIds
   } = useLevelProgress();
-  
   const [selectedDay, setSelectedDay] = useState(1);
   const [showLevelCompleteModal, setShowLevelCompleteModal] = useState(false);
 
   // Find lesson in both levels
   const allLessons = [...lessons, ...lessonsYear2];
   const allWeeklyContent = [...weeklyContent, ...weeklyContentYear2];
-  
   const lesson = allLessons.find(l => l.id === id);
   const weeklyLesson = allWeeklyContent.find(w => w.lessonId === id);
-  
+
   // Determine which level this lesson belongs to
   const isLevel1Lesson = lessons.some(l => l.id === id);
   const currentLevelLessons = isLevel1Lesson ? lessons : lessonsYear2;
   const currentLessonIndex = currentLevelLessons.findIndex(l => l.id === id);
   const nextLesson = currentLevelLessons[currentLessonIndex + 1];
   const isLastLessonInLevel = currentLessonIndex === currentLevelLessons.length - 1;
-
   useEffect(() => {
     if (id) {
-      const firstIncomplete = [1, 2, 3, 4, 5, 6, 7].find(
-        day => !isDayComplete(id, day)
-      );
+      const firstIncomplete = [1, 2, 3, 4, 5, 6, 7].find(day => !isDayComplete(id, day));
       if (firstIncomplete) {
         setSelectedDay(firstIncomplete);
       }
     }
   }, [id]);
-
   if (!lesson || !weeklyLesson) {
-    return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
+    return <div className="min-h-screen bg-background flex items-center justify-center">
         <Card variant="default" className="max-w-md mx-4">
           <CardContent className="p-6 text-center">
             <h2 className="text-xl font-bold text-foreground mb-4">
@@ -72,13 +78,10 @@ export default function Lesson() {
             </Button>
           </CardContent>
         </Card>
-      </div>
-    );
+      </div>;
   }
-
   const content = lesson.content[language];
   const currentDayContent = weeklyLesson.days.find(d => d.day === selectedDay);
-
   const handleCompleteDay = () => {
     if (id) {
       markDayComplete(id, selectedDay);
@@ -87,14 +90,12 @@ export default function Lesson() {
       }
     }
   };
-
   const handleCompleteQuiz = (score: number) => {
     if (id) {
       markDayComplete(id, 6, score);
       setSelectedDay(7);
     }
   };
-
   const handleCompleteProject = () => {
     if (id) {
       markDayComplete(id, 7);
@@ -109,7 +110,6 @@ export default function Lesson() {
       }
     }
   };
-
   const handleNextLesson = () => {
     if (isLastLessonInLevel) {
       navigate('/home');
@@ -117,7 +117,6 @@ export default function Lesson() {
       navigate(`/lesson/${nextLesson.id}`);
     }
   };
-
   const handleGoToLevel2 = () => {
     setShowLevelCompleteModal(false);
     navigate('/home');
@@ -125,44 +124,18 @@ export default function Lesson() {
 
   // Check if current lesson is fully complete
   const isCurrentLessonComplete = id ? isLessonComplete(id) : false;
-
   const renderDayContent = () => {
     if (!currentDayContent || !id) return null;
-
     const dayComplete = isDayComplete(id, selectedDay);
-
     if (currentDayContent.type === 'quiz' && currentDayContent.quiz) {
-      return (
-        <DayQuiz
-          quiz={currentDayContent.quiz}
-          onComplete={handleCompleteQuiz}
-          isComplete={dayComplete}
-          previousScore={getDayScore(id, 6)}
-        />
-      );
+      return <DayQuiz quiz={currentDayContent.quiz} onComplete={handleCompleteQuiz} isComplete={dayComplete} previousScore={getDayScore(id, 6)} />;
     }
-
     if (currentDayContent.type === 'project') {
-      return (
-        <DayProject
-          dayContent={currentDayContent}
-          onComplete={handleCompleteProject}
-          isComplete={dayComplete}
-        />
-      );
+      return <DayProject dayContent={currentDayContent} onComplete={handleCompleteProject} isComplete={dayComplete} />;
     }
-
-    return (
-      <DayContent
-        dayContent={currentDayContent}
-        onComplete={handleCompleteDay}
-        isComplete={dayComplete}
-      />
-    );
+    return <DayContent dayContent={currentDayContent} onComplete={handleCompleteDay} isComplete={dayComplete} />;
   };
-
-  return (
-    <div className="min-h-screen bg-background" dir={isRTL ? 'rtl' : 'ltr'}>
+  return <div className="min-h-screen bg-background" dir={isRTL ? 'rtl' : 'ltr'}>
       <header className="sticky top-0 z-50 bg-card/80 backdrop-blur-md border-b border-border">
         <div className="container max-w-lg mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
@@ -175,11 +148,7 @@ export default function Lesson() {
                 {content.title}
               </h1>
             </div>
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => setLanguage(language === 'en' ? 'ar' : 'en')}
-            >
+            <Button variant="ghost" size="sm" onClick={() => setLanguage(language === 'en' ? 'ar' : 'en')}>
               <Globe className="w-4 h-4" />
             </Button>
           </div>
@@ -187,42 +156,21 @@ export default function Lesson() {
       </header>
 
       <div className="container max-w-lg mx-auto px-4 py-4">
-        <WeeklyProgress
-          lessonId={id!}
-          getWeekProgress={getWeekProgress}
-        />
+        <WeeklyProgress lessonId={id!} getWeekProgress={getWeekProgress} />
       </div>
 
       <div className="container max-w-lg mx-auto px-4 pb-4">
-        <DaySelector
-          currentDay={selectedDay}
-          onDaySelect={setSelectedDay}
-          isDayComplete={(day) => isDayComplete(id!, day)}
-          getDayScore={(day) => getDayScore(id!, day)}
-        />
+        <DaySelector currentDay={selectedDay} onDaySelect={setSelectedDay} isDayComplete={day => isDayComplete(id!, day)} getDayScore={day => getDayScore(id!, day)} />
       </div>
 
-      <main className="container max-w-lg mx-auto px-4 pb-8">
+      <main className="container max-w-lg mx-auto px-4 pb-8 text-destructive">
         {renderDayContent()}
         
         {/* Show completion card when lesson is done */}
-        {isCurrentLessonComplete && (
-          <LessonCompletionCard
-            onNextLesson={handleNextLesson}
-            nextLessonTitle={nextLesson?.content[language].title}
-            isLastLesson={isLastLessonInLevel}
-          />
-        )}
+        {isCurrentLessonComplete && <LessonCompletionCard onNextLesson={handleNextLesson} nextLessonTitle={nextLesson?.content[language].title} isLastLesson={isLastLessonInLevel} />}
       </main>
 
       {/* Level Completion Modal */}
-      <LevelCompletionModal
-        isOpen={showLevelCompleteModal}
-        onClose={() => setShowLevelCompleteModal(false)}
-        level={1}
-        averageScore={level1AverageScore}
-        onGoToNextLevel={handleGoToLevel2}
-      />
-    </div>
-  );
+      <LevelCompletionModal isOpen={showLevelCompleteModal} onClose={() => setShowLevelCompleteModal(false)} level={1} averageScore={level1AverageScore} onGoToNextLevel={handleGoToLevel2} />
+    </div>;
 }
