@@ -3,7 +3,8 @@ import { DailyContent, WeeklyLesson } from './weeklyContent';
 import { hoistingAdvancedLesson } from './year2/hoistingAdvancedContent';
 import { rotarySystemsLesson } from './year2/rotarySystemsContent';
 import { drillstringBhaLesson } from './year2/drillstringBhaContent';
-
+import { drillBitsAdvancedLesson } from './year2/drillBitsAdvancedContent';
+import { bopSystemsLesson } from './year2/bopSystemsContent';
 // Helper function to create placeholder weekly content for Year 2 lessons
 const createPlaceholderLesson = (lessonId: string, titleAr: string, titleEn: string): WeeklyLesson => ({
   lessonId,
