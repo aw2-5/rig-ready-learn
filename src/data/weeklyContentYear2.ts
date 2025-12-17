@@ -11,6 +11,7 @@ import { holeCleaningLesson } from './year2/holeCleaningContent';
 import { pressureEcdLesson } from './year2/pressureEcdContent';
 import { kickDetectionLesson } from './year2/kickDetectionContent';
 import { casingCementingLesson } from './year2/casingCementingContent';
+import { drillingProblemsLesson } from './year2/drillingProblemsContent';
 // Helper function to create placeholder weekly content for Year 2 lessons
 const createPlaceholderLesson = (lessonId: string, titleAr: string, titleEn: string): WeeklyLesson => ({
   lessonId,
@@ -299,6 +300,6 @@ export const weeklyContentYear2: WeeklyLesson[] = [
   pressureEcdLesson, // Detailed content for lesson 9
   kickDetectionLesson, // Detailed content for lesson 10
   casingCementingLesson, // Detailed content for lesson 11
-  createPlaceholderLesson('drilling-problems', 'مشاكل الحفر والإجراءات العلاجية', 'Drilling Problems & Remedial Actions'),
+  drillingProblemsLesson, // Detailed content for lesson 12
   createPlaceholderLesson('directional-drilling', 'الحفر الموجه والأفقي', 'Directional & Horizontal Drilling'),
 ];
