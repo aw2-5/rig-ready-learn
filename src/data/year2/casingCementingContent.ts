@@ -1024,215 +1024,121 @@ export const casingCementingLesson: WeeklyLesson = {
       type: 'quiz',
       content: {
         ar: {
-          title: 'اختبار: التغليف والتسميت وضمان الجودة',
-          questions: [
-            {
-              question: 'ما هو الغرض الرئيسي من التغليف السطحي (Surface Casing)؟',
-              options: [
-                'الوصول إلى المكمن',
-                'حماية طبقات المياه الجوفية ودعم معدات التحكم',
-                'توفير قناة الإنتاج',
-                'عزل مناطق الضغط العالي فقط'
-              ],
-              correctAnswer: 1
-            },
-            {
-              question: 'أي نوع من الأحمال يكون عادةً أقصى عند قاع سلسلة التغليف؟',
-              options: [
-                'ضغط الانفجار',
-                'حمل الشد',
-                'ضغط الانهيار',
-                'الحمل الحراري'
-              ],
-              correctAnswer: 2
-            },
-            {
-              question: 'ما هو صنف الإسمنت الأكثر استخداماً عالمياً؟',
-              options: [
-                'Class A',
-                'Class C',
-                'Class G',
-                'Class H'
-              ],
-              correctAnswer: 2
-            },
-            {
-              question: 'ما وظيفة المبطئات (Retarders) في ملاط الإسمنت؟',
-              options: [
-                'تقليل كثافة الملاط',
-                'زيادة زمن الضخ',
-                'زيادة قوة الإسمنت',
-                'تقليل فقدان السوائل'
-              ],
-              correctAnswer: 1
-            },
-            {
-              question: 'في طريقة الإزاحة بالسدادتين، ما الذي يميز السدادة السفلية؟',
-              options: [
-                'أنها صلبة بالكامل',
-                'تحتوي على غشاء قابل للكسر',
-                'تُستخدم لقياس الضغط',
-                'تمنع حركة التغليف'
-              ],
-              correctAnswer: 1
-            },
-            {
-              question: 'ما الذي تشير إليه "الضغطة النهائية" (Bump) في عملية التسميت؟',
-              options: [
-                'بداية ضخ الإسمنت',
-                'انتهاء زمن الضخ المسموح',
-                'ارتطام السدادة العلوية بالسفلية',
-                'فشل في معدات الضخ'
-              ],
-              correctAnswer: 2
-            },
-            {
-              question: 'ما هو الغرض من الضغط الإسمنتي (Squeeze Cementing)؟',
-              options: [
-                'تسميت التغليف لأول مرة',
-                'إصلاح قنوات التسرب أو سد الثقوب',
-                'إزالة الإسمنت القديم',
-                'اختبار جودة التسميت'
-              ],
-              correctAnswer: 1
-            },
-            {
-              question: 'في سجل CBL، السعة العالية للموجة تدل على:',
-              options: [
-                'ترابط ممتاز',
-                'ترابط ضعيف أو غياب الإسمنت',
-                'سمك إسمنت كبير',
-                'وجود غاز في الإسمنت'
-              ],
-              correctAnswer: 1
-            },
-            {
-              question: 'ما الفرق بين FIT و LOT؟',
-              options: [
-                'FIT للتغليف و LOT للتكوين',
-                'FIT يتحقق من ضغط محدد و LOT يحدد ضغط التكسير',
-                'لا فرق بينهما',
-                'FIT أسرع و LOT أدق'
-              ],
-              correctAnswer: 1
-            },
-            {
-              question: 'لماذا تُعد المركزات (Centralizers) ضرورية في عملية التغليف؟',
-              options: [
-                'لزيادة سرعة الإنزال',
-                'لضمان توسيط التغليف ومنع قنوات الإسمنت',
-                'لتقليل احتكاك الأنابيب',
-                'لقياس عمق التغليف'
-              ],
-              correctAnswer: 1
-            }
-          ]
+          title: 'اختبار التغليف والتسميت',
+          explanation: 'اختبار شامل حول التغليف والتسميت وضمان الجودة',
+          keyTerms: []
         },
         en: {
-          title: 'Quiz: Casing, Cementing & QA/QC',
-          questions: [
-            {
-              question: 'What is the main purpose of surface casing?',
-              options: [
-                'Reaching the reservoir',
-                'Protecting freshwater aquifers and supporting control equipment',
-                'Providing production conduit',
-                'Isolating high pressure zones only'
-              ],
-              correctAnswer: 1
-            },
-            {
-              question: 'Which type of load is usually maximum at the bottom of a casing string?',
-              options: [
-                'Burst pressure',
-                'Tensile load',
-                'Collapse pressure',
-                'Thermal load'
-              ],
-              correctAnswer: 2
-            },
-            {
-              question: 'Which cement class is most commonly used worldwide?',
-              options: [
-                'Class A',
-                'Class C',
-                'Class G',
-                'Class H'
-              ],
-              correctAnswer: 2
-            },
-            {
-              question: 'What is the function of retarders in cement slurry?',
-              options: [
-                'Reduce slurry density',
-                'Increase pumping time',
-                'Increase cement strength',
-                'Reduce fluid loss'
-              ],
-              correctAnswer: 1
-            },
-            {
-              question: 'In the two-plug method, what distinguishes the bottom plug?',
-              options: [
-                'It is completely solid',
-                'It contains a breakable diaphragm',
-                'It is used to measure pressure',
-                'It prevents casing movement'
-              ],
-              correctAnswer: 1
-            },
-            {
-              question: 'What does the "bump" indicate in cementing operations?',
-              options: [
-                'Start of cement pumping',
-                'End of allowed pumping time',
-                'Top plug landing on bottom plug',
-                'Failure in pumping equipment'
-              ],
-              correctAnswer: 2
-            },
-            {
-              question: 'What is the purpose of squeeze cementing?',
-              options: [
-                'Cementing casing for the first time',
-                'Repairing leak channels or sealing perforations',
-                'Removing old cement',
-                'Testing cement quality'
-              ],
-              correctAnswer: 1
-            },
-            {
-              question: 'In a CBL log, high wave amplitude indicates:',
-              options: [
-                'Excellent bond',
-                'Poor bond or absence of cement',
-                'Thick cement',
-                'Gas presence in cement'
-              ],
-              correctAnswer: 1
-            },
-            {
-              question: 'What is the difference between FIT and LOT?',
-              options: [
-                'FIT is for casing and LOT is for formation',
-                'FIT verifies a specific pressure and LOT determines fracture pressure',
-                'No difference between them',
-                'FIT is faster and LOT is more accurate'
-              ],
-              correctAnswer: 1
-            },
-            {
-              question: 'Why are centralizers essential in casing operations?',
-              options: [
-                'To increase running speed',
-                'To ensure casing centralization and prevent cement channels',
-                'To reduce pipe friction',
-                'To measure casing depth'
-              ],
-              correctAnswer: 1
-            }
-          ]
+          title: 'Casing and Cementing Quiz',
+          explanation: 'Comprehensive quiz on casing, cementing and QA/QC',
+          keyTerms: []
         }
+      },
+      quiz: {
+        ar: [
+          {
+            question: 'ما هو الغرض الرئيسي من التغليف السطحي (Surface Casing)؟',
+            options: ['الوصول إلى المكمن', 'حماية طبقات المياه الجوفية ودعم معدات التحكم', 'توفير قناة الإنتاج', 'عزل مناطق الضغط العالي فقط'],
+            correctAnswer: 1
+          },
+          {
+            question: 'أي نوع من الأحمال يكون عادةً أقصى عند قاع سلسلة التغليف؟',
+            options: ['ضغط الانفجار', 'حمل الشد', 'ضغط الانهيار', 'الحمل الحراري'],
+            correctAnswer: 2
+          },
+          {
+            question: 'ما هو صنف الإسمنت الأكثر استخداماً عالمياً؟',
+            options: ['Class A', 'Class C', 'Class G', 'Class H'],
+            correctAnswer: 2
+          },
+          {
+            question: 'ما وظيفة المبطئات (Retarders) في ملاط الإسمنت؟',
+            options: ['تقليل كثافة الملاط', 'زيادة زمن الضخ', 'زيادة قوة الإسمنت', 'تقليل فقدان السوائل'],
+            correctAnswer: 1
+          },
+          {
+            question: 'في طريقة الإزاحة بالسدادتين، ما الذي يميز السدادة السفلية؟',
+            options: ['أنها صلبة بالكامل', 'تحتوي على غشاء قابل للكسر', 'تُستخدم لقياس الضغط', 'تمنع حركة التغليف'],
+            correctAnswer: 1
+          },
+          {
+            question: 'ما الذي تشير إليه "الضغطة النهائية" (Bump) في عملية التسميت؟',
+            options: ['بداية ضخ الإسمنت', 'انتهاء زمن الضخ المسموح', 'ارتطام السدادة العلوية بالسفلية', 'فشل في معدات الضخ'],
+            correctAnswer: 2
+          },
+          {
+            question: 'ما هو الغرض من الضغط الإسمنتي (Squeeze Cementing)؟',
+            options: ['تسميت التغليف لأول مرة', 'إصلاح قنوات التسرب أو سد الثقوب', 'إزالة الإسمنت القديم', 'اختبار جودة التسميت'],
+            correctAnswer: 1
+          },
+          {
+            question: 'في سجل CBL، السعة العالية للموجة تدل على:',
+            options: ['ترابط ممتاز', 'ترابط ضعيف أو غياب الإسمنت', 'سمك إسمنت كبير', 'وجود غاز في الإسمنت'],
+            correctAnswer: 1
+          },
+          {
+            question: 'ما الفرق بين FIT و LOT؟',
+            options: ['FIT للتغليف و LOT للتكوين', 'FIT يتحقق من ضغط محدد و LOT يحدد ضغط التكسير', 'لا فرق بينهما', 'FIT أسرع و LOT أدق'],
+            correctAnswer: 1
+          },
+          {
+            question: 'لماذا تُعد المركزات (Centralizers) ضرورية في عملية التغليف؟',
+            options: ['لزيادة سرعة الإنزال', 'لضمان توسيط التغليف ومنع قنوات الإسمنت', 'لتقليل احتكاك الأنابيب', 'لقياس عمق التغليف'],
+            correctAnswer: 1
+          }
+        ],
+        en: [
+          {
+            question: 'What is the main purpose of surface casing?',
+            options: ['Reaching the reservoir', 'Protecting freshwater aquifers and supporting control equipment', 'Providing production conduit', 'Isolating high pressure zones only'],
+            correctAnswer: 1
+          },
+          {
+            question: 'Which type of load is usually maximum at the bottom of a casing string?',
+            options: ['Burst pressure', 'Tensile load', 'Collapse pressure', 'Thermal load'],
+            correctAnswer: 2
+          },
+          {
+            question: 'Which cement class is most commonly used worldwide?',
+            options: ['Class A', 'Class C', 'Class G', 'Class H'],
+            correctAnswer: 2
+          },
+          {
+            question: 'What is the function of retarders in cement slurry?',
+            options: ['Reduce slurry density', 'Increase pumping time', 'Increase cement strength', 'Reduce fluid loss'],
+            correctAnswer: 1
+          },
+          {
+            question: 'In the two-plug method, what distinguishes the bottom plug?',
+            options: ['It is completely solid', 'It contains a breakable diaphragm', 'It is used to measure pressure', 'It prevents casing movement'],
+            correctAnswer: 1
+          },
+          {
+            question: 'What does the "bump" indicate in cementing operations?',
+            options: ['Start of cement pumping', 'End of allowed pumping time', 'Top plug landing on bottom plug', 'Failure in pumping equipment'],
+            correctAnswer: 2
+          },
+          {
+            question: 'What is the purpose of squeeze cementing?',
+            options: ['Cementing casing for the first time', 'Repairing leak channels or sealing perforations', 'Removing old cement', 'Testing cement quality'],
+            correctAnswer: 1
+          },
+          {
+            question: 'In a CBL log, high wave amplitude indicates:',
+            options: ['Excellent bond', 'Poor bond or absence of cement', 'Thick cement', 'Gas presence in cement'],
+            correctAnswer: 1
+          },
+          {
+            question: 'What is the difference between FIT and LOT?',
+            options: ['FIT is for casing and LOT is for formation', 'FIT verifies a specific pressure and LOT determines fracture pressure', 'No difference between them', 'FIT is faster and LOT is more accurate'],
+            correctAnswer: 1
+          },
+          {
+            question: 'Why are centralizers essential in casing operations?',
+            options: ['To increase running speed', 'To ensure casing centralization and prevent cement channels', 'To reduce pipe friction', 'To measure casing depth'],
+            correctAnswer: 1
+          }
+        ]
       }
     },
     {
@@ -1240,26 +1146,40 @@ export const casingCementingLesson: WeeklyLesson = {
       type: 'project',
       content: {
         ar: {
-          title: 'مشروع: تصميم برنامج تغليف وتسميت',
+          title: 'مشروع التغليف والتسميت',
+          explanation: 'تطبيق عملي لتصميم برنامج تغليف وتسميت',
+          keyTerms: []
+        },
+        en: {
+          title: 'Casing and Cementing Project',
+          explanation: 'Practical application of casing and cementing program design',
+          keyTerms: []
+        }
+      },
+      project: {
+        ar: {
+          title: 'تصميم برنامج تغليف وتسميت',
           description: 'صمم برنامج تغليف وتسميت لبئر بعمق 3000 متر، يتضمن اختيار أنواع التغليف وأقطارها، ونوع الإسمنت والإضافات المناسبة لكل مرحلة، مع تحديد طرق ضمان الجودة.',
-          requirements: [
+          instructions: [
             'تحديد عدد سلاسل التغليف وأقطارها وأعماقها',
             'اختيار درجات الفولاذ والأوزان المناسبة',
             'تحديد نوع الإسمنت والإضافات لكل سلسلة',
             'وصف إجراءات التسميت المتبعة',
             'تحديد طرق التقييم وضمان الجودة'
-          ]
+          ],
+          submissionType: 'both'
         },
         en: {
-          title: 'Project: Casing and Cementing Program Design',
+          title: 'Casing and Cementing Program Design',
           description: 'Design a casing and cementing program for a 3000-meter well, including casing types and sizes, appropriate cement and additives for each stage, and quality assurance methods.',
-          requirements: [
+          instructions: [
             'Determine number of casing strings, diameters, and depths',
             'Select appropriate steel grades and weights',
             'Specify cement type and additives for each string',
             'Describe cementing procedures to be followed',
             'Identify evaluation and QA/QC methods'
-          ]
+          ],
+          submissionType: 'both'
         }
       }
     }
