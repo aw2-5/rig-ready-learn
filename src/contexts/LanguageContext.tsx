@@ -24,7 +24,7 @@ const translations: Record<Language, Record<string, string>> = {
     'orContinueWith': 'or continue with',
     'guest': 'Guest Mode',
     // Home
-    'firstYear': 'First Year',
+    'firstYear': 'Level 1',
     'petroleumEngineering': 'Petroleum Engineering',
     'welcomeBack': 'Welcome back',
     'student': 'Student',
@@ -53,7 +53,7 @@ const translations: Record<Language, Record<string, string>> = {
     'drillingProblems': 'Drilling Problems & Remedial Actions',
     'directionalDrilling': 'Directional & Horizontal Drilling',
     // Year selector
-    'secondYear': 'Second Year',
+    'secondYear': 'Level 2',
     'level': 'Level',
     'comingSoon': 'Coming Soon',
     'contentPlaceholder': 'Content will be added soon',
@@ -118,7 +118,7 @@ const translations: Record<Language, Record<string, string>> = {
     'orContinueWith': 'أو تابع بـ',
     'guest': 'وضع الضيف',
     // Home
-    'firstYear': 'السنة الأولى',
+    'firstYear': 'المستوى الأول',
     'petroleumEngineering': 'هندسة النفط',
     'welcomeBack': 'مرحباً بعودتك',
     'student': 'طالب',
@@ -147,7 +147,7 @@ const translations: Record<Language, Record<string, string>> = {
     'drillingProblems': 'مشاكل الحفر والإجراءات العلاجية',
     'directionalDrilling': 'الحفر الموجه والأفقي',
     // Year selector
-    'secondYear': 'السنة الثانية',
+    'secondYear': 'المستوى الثاني',
     'level': 'المستوى',
     'comingSoon': 'قريباً',
     'contentPlaceholder': 'سيتم إضافة المحتوى قريباً',
