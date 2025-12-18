@@ -1,7 +1,7 @@
 import { WeeklyLesson } from '../weeklyContent';
 
 export const casingCementingLesson: WeeklyLesson = {
-  lessonId: 'casing-cementing-qa',
+  lessonId: 'casing-cementing',
   days: [
     {
       day: 1,
