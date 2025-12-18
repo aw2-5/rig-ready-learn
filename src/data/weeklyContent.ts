@@ -3783,8 +3783,342 @@ const rigOverviewLesson: WeeklyLesson = {
   lessonId: 'rig',
   days: [
     { day: 1, type: 'learning', content: { ar: { title: 'مكونات جهاز الحفر الرئيسية', explanation: '<section class="mb-8"><h2 class="text-primary text-xl font-bold mb-4">🔷 ليش نحتاج نفهم جهاز الحفر؟</h2><div class="bg-accent/10 border-r-4 border-accent p-4 my-6"><p class="font-semibold text-lg mb-2">🎯 السؤال الأساسي:</p><p>جهاز الحفر استثمار بعشرات الملايين - 5 أنظمة لازم تشتغل معاً. تعطل واحد = توقف كامل = خسارة ضخمة يومياً!</p></div><div class="bg-destructive/10 border-r-4 border-destructive p-4 my-6"><p class="font-semibold text-destructive">⚠️ شنو يصير لو ما نفهم الأنظمة؟</p><ul class="list-disc list-inside space-y-1 mt-2"><li>ما نعرف وين المشكلة لما يصير عطل</li><li>ما نكدر نتواصل مع الفنيين بشكل صحيح</li><li>قرارات خاطئة تأخر العمليات</li><li>مخاطر سلامة بسبب جهل بالمعدات</li></ul></div><h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 الأنظمة الخمسة الرئيسية:</h3><p class="mb-2"><strong>1. نظام الطاقة (Power):</strong> محركات ديزل 1000-3000 HP</p><p class="mb-2"><strong>2. نظام الرفع (Hoisting):</strong> البرج + الرافعة (Drawworks)</p><p class="mb-2"><strong>3. نظام الدوران (Rotary):</strong> يدير سلسلة الحفر</p><p class="mb-2"><strong>4. نظام دوران السوائل (Circulating):</strong> مضخات الطين</p><p class="mb-2"><strong>5. نظام التحكم (Well Control):</strong> BOPs لمنع الانفجار</p><h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 أخطاء شائعة:</h3><table class="w-full border-collapse border border-border my-4"><thead><tr class="bg-muted"><th class="border border-border p-2 text-right">الخطأ</th><th class="border border-border p-2 text-right">ليش خطأ</th><th class="border border-border p-2 text-right">النتيجة</th></tr></thead><tbody><tr><td class="border border-border p-2">BOP مو مهم</td><td class="border border-border p-2">هو خط الدفاع الأخير ضد الانفجار</td><td class="border border-border p-2">كارثة مثل Deepwater Horizon</td></tr><tr><td class="border border-border p-2">أي جهاز يصلح لأي بئر</td><td class="border border-border p-2">الاختيار حسب العمق والموقع</td><td class="border border-border p-2">جهاز غير مناسب = تأخير وتكلفة</td></tr></tbody></table></section>', keyTerms: [{ term: 'جهاز الحفر', definition: 'مجموعة متكاملة من المعدات لحفر الآبار' }, { term: 'BOP', definition: 'Blowout Preventer - صمام منع الانفجار' }, { term: 'نظام الرفع', definition: 'المعدات المسؤولة عن رفع وإنزال الأنابيب' }], practiceQuestion: { question: 'كم عدد الأنظمة الرئيسية في جهاز الحفر؟', options: ['ثلاثة أنظمة', 'أربعة أنظمة', 'خمسة أنظمة', 'ستة أنظمة'], correctAnswer: 2 } }, en: { title: 'Main Drilling Rig Components', explanation: '<section class="mb-8"><h2 class="text-primary text-xl font-bold mb-4">🔷 Why Understand Drilling Rigs?</h2><div class="bg-accent/10 border-l-4 border-accent p-4 my-6"><p class="font-semibold text-lg mb-2">🎯 Key Question:</p><p>A drilling rig is a multi-million dollar investment - 5 systems must work together. One failure = complete stop = massive daily losses!</p></div><div class="bg-destructive/10 border-l-4 border-destructive p-4 my-6"><p class="font-semibold text-destructive">⚠️ What happens without understanding?</p><ul class="list-disc list-inside space-y-1 mt-2"><li>Cannot identify problems during breakdowns</li><li>Poor communication with technicians</li><li>Wrong decisions delay operations</li><li>Safety risks from equipment ignorance</li></ul></div><h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 The Five Main Systems:</h3><p class="mb-2"><strong>1. Power System:</strong> Diesel engines 1000-3000 HP</p><p class="mb-2"><strong>2. Hoisting System:</strong> Derrick + Drawworks</p><p class="mb-2"><strong>3. Rotary System:</strong> Rotates drill string</p><p class="mb-2"><strong>4. Circulating System:</strong> Mud pumps</p><p class="mb-2"><strong>5. Well Control:</strong> BOPs prevent blowouts</p><h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Common Mistakes:</h3><table class="w-full border-collapse border border-border my-4"><thead><tr class="bg-muted"><th class="border border-border p-2 text-left">Mistake</th><th class="border border-border p-2 text-left">Why Wrong</th><th class="border border-border p-2 text-left">Result</th></tr></thead><tbody><tr><td class="border border-border p-2">BOP not important</td><td class="border border-border p-2">Last line of defense against blowout</td><td class="border border-border p-2">Disaster like Deepwater Horizon</td></tr><tr><td class="border border-border p-2">Any rig works for any well</td><td class="border border-border p-2">Selection based on depth and location</td><td class="border border-border p-2">Wrong rig = delays and costs</td></tr></tbody></table></section>', keyTerms: [{ term: 'Drilling Rig', definition: 'Integrated equipment assembly for drilling wells' }, { term: 'BOP', definition: 'Blowout Preventer - critical safety device' }, { term: 'Hoisting System', definition: 'Equipment for raising and lowering pipes' }], practiceQuestion: { question: 'How many main systems are there in a drilling rig?', options: ['Three systems', 'Four systems', 'Five systems', 'Six systems'], correctAnswer: 2 } } } },
-    { day: 2, type: 'learning', content: { ar: { title: 'نظام الرفع والبرج', explanation: '<section class="mb-8"><h2 class="text-2xl font-bold text-blue-800 mb-6">🔷 نظام الرفع - العمود الفقري لجهاز الحفر</h2><div class="mb-6"><p class="text-lg leading-relaxed mb-4">نظام الرفع (Hoisting System) هو القلب النابض لجهاز الحفر، المسؤول عن جميع عمليات الرفع والإنزال للأنابيب والمعدات. يتعامل مع أحمال هائلة قد تصل إلى مئات الأطنان.</p></div><h3 class="text-xl font-bold text-orange-600 mb-4">🔶 مكونات نظام الرفع:</h3><div class="mb-6"><h4 class="font-bold text-lg mb-2">1. البرج (Derrick/Mast):</h4><ul class="list-disc pr-6 space-y-2 mb-4"><li><strong>الارتفاع:</strong> 80-200 قدم (24-60 متر)</li><li><strong>الأنواع:</strong> البرج القياسي (ثابت) أو الصاري (قابل للطي)</li><li><strong>قدرة التحمل:</strong> تصل إلى 2 مليون رطل</li></ul><h4 class="font-bold text-lg mb-2">2. الرافعة (Drawworks):</h4><ul class="list-disc pr-6 space-y-2 mb-4"><li><strong>الموقع:</strong> على أرضية الحفر</li><li><strong>القدرة:</strong> 500-3000 حصان</li><li><strong>الوظيفة:</strong> لف وفك كابل الحفر للرفع والإنزال</li></ul><h4 class="font-bold text-lg mb-2">3. الكتلة الثابتة (Crown Block):</h4><ul class="list-disc pr-6 space-y-2 mb-4"><li><strong>الموقع:</strong> أعلى البرج (القمة)</li><li><strong>التركيب:</strong> مجموعة بكرات ثابتة (4-8 بكرات)</li></ul><h4 class="font-bold text-lg mb-2">4. الكتلة المتنقلة (Traveling Block):</h4><ul class="list-disc pr-6 space-y-2 mb-4"><li><strong>الموقع:</strong> تتحرك صعوداً وهبوطاً داخل البرج</li><li><strong>الوزن:</strong> قد يصل إلى 25 طن</li></ul><h4 class="font-bold text-lg mb-2">5. كابل الحفر (Drilling Line):</h4><ul class="list-disc pr-6 space-y-2 mb-4"><li><strong>المادة:</strong> سلك فولاذي مجدول</li><li><strong>القطر:</strong> 1-1.5 بوصة</li><li><strong>عدد الخطوط:</strong> 8-12 خط لتوزيع الحمل</li></ul></div><div class="bg-blue-50 border-r-4 border-blue-500 p-4 mb-6"><h4 class="font-bold text-blue-700 mb-2">💡 مبدأ العمل:</h4><p>يعمل النظام على مبدأ البكرة المركبة - مع 10 خطوط: رفع 500,000 رطل يتطلب 50,000 رطل فقط على الكابل.</p></div></section>', keyTerms: [{ term: 'البرج (Derrick)', definition: 'الهيكل الفولاذي الطويل الذي يدعم نظام الرفع' }, { term: 'الرافعة (Drawworks)', definition: 'المعدة الرئيسية التي تلف وتفك كابل الحفر' }, { term: 'الكتلة الثابتة (Crown Block)', definition: 'مجموعة البكرات في أعلى البرج' }, { term: 'الكتلة المتنقلة (Traveling Block)', definition: 'البكرات المتحركة التي تحمل سلسلة الحفر' }], practiceQuestion: { question: 'أين تقع الكتلة الثابتة (Crown Block)؟', options: ['على أرضية الحفر', 'في أعلى البرج', 'تحت الأرض', 'في غرفة التحكم'], correctAnswer: 1 } }, en: { title: 'Hoisting System and Derrick', explanation: '<section class="mb-8"><h2 class="text-2xl font-bold text-blue-800 mb-6">🔷 Hoisting System - The Backbone of the Drilling Rig</h2><div class="mb-6"><p class="text-lg leading-relaxed mb-4">The Hoisting System is the beating heart of the drilling rig, responsible for all lifting and lowering operations of pipes and equipment. This system handles enormous loads that can reach hundreds of tons.</p></div><h3 class="text-xl font-bold text-orange-600 mb-4">🔶 Hoisting System Components:</h3><div class="mb-6"><h4 class="font-bold text-lg mb-2">1. Derrick/Mast:</h4><ul class="list-disc pl-6 space-y-2 mb-4"><li><strong>Height:</strong> 80-200 feet (24-60 meters)</li><li><strong>Types:</strong> Standard Derrick (fixed) or Mast (foldable)</li><li><strong>Load Capacity:</strong> Up to 2 million pounds</li></ul><h4 class="font-bold text-lg mb-2">2. Drawworks:</h4><ul class="list-disc pl-6 space-y-2 mb-4"><li><strong>Location:</strong> On the rig floor</li><li><strong>Capacity:</strong> 500-3,000 HP</li><li><strong>Function:</strong> Wind and unwind drilling line for lifting/lowering</li></ul><h4 class="font-bold text-lg mb-2">3. Crown Block:</h4><ul class="list-disc pl-6 space-y-2 mb-4"><li><strong>Location:</strong> Top of the derrick (crown)</li><li><strong>Configuration:</strong> Set of fixed sheaves (4-8 sheaves)</li></ul><h4 class="font-bold text-lg mb-2">4. Traveling Block:</h4><ul class="list-disc pl-6 space-y-2 mb-4"><li><strong>Location:</strong> Moves up and down inside derrick</li><li><strong>Weight:</strong> Can reach up to 25 tons</li></ul><h4 class="font-bold text-lg mb-2">5. Drilling Line:</h4><ul class="list-disc pl-6 space-y-2 mb-4"><li><strong>Material:</strong> Braided steel wire</li><li><strong>Diameter:</strong> 1-1.5 inches</li><li><strong>Number of Lines:</strong> 8-12 lines to distribute load</li></ul></div><div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6"><h4 class="font-bold text-blue-700 mb-2">💡 Operating Principle:</h4><p>The system works on the Block and Tackle principle - with 10 lines: lifting 500,000 lbs requires only 50,000 lbs on the line.</p></div></section>', keyTerms: [{ term: 'Derrick', definition: 'The tall steel structure supporting the hoisting system' }, { term: 'Drawworks', definition: 'Main equipment that winds and unwinds drilling line' }, { term: 'Crown Block', definition: 'Set of sheaves at the top of the derrick' }, { term: 'Traveling Block', definition: 'Moving sheaves that carry the drill string' }], practiceQuestion: { question: 'Where is the Crown Block located?', options: ['On the rig floor', 'At the top of the derrick', 'Underground', 'In the control room'], correctAnswer: 1 } } } },
-    { day: 3, type: 'learning', content: { ar: { title: 'نظام دوران السوائل', explanation: '<section class="mb-8"><h2 class="text-2xl font-bold text-blue-800 mb-6">🔷 نظام دوران السوائل - شريان الحياة</h2><div class="mb-6"><p class="text-lg leading-relaxed mb-4">نظام دوران السوائل (Circulating System) يضمن تدفق سائل الحفر (الطين) في دورة مستمرة من السطح إلى قاع البئر وعودته.</p></div><h3 class="text-xl font-bold text-orange-600 mb-4">🔶 وظائف سائل الحفر:</h3><ol class="list-decimal pr-6 space-y-2 mb-6"><li><strong>إزالة الفتات:</strong> حمل قطع الصخور من قاع البئر</li><li><strong>تبريد رأس الحفر:</strong> امتصاص الحرارة الناتجة عن الاحتكاك</li><li><strong>التحكم بالضغط:</strong> موازنة ضغط التكوينات</li><li><strong>تثبيت جدار البئر:</strong> تشكيل طبقة كعكة الطين</li><li><strong>تعليق الفتات:</strong> إبقاء الفتات معلقاً عند توقف الضخ</li></ol><h3 class="text-xl font-bold text-orange-600 mb-4">🔶 مكونات النظام:</h3><div class="mb-6"><h4 class="font-bold text-lg mb-2">1. مضخات الطين (Mud Pumps):</h4><ul class="list-disc pr-6 space-y-2 mb-4"><li><strong>الأنواع:</strong> مضخات ثلاثية المكابس (Triplex)</li><li><strong>القدرة:</strong> 1000-2000 حصان</li><li><strong>الضغط:</strong> حتى 7500 psi</li><li><strong>معدل التدفق:</strong> 200-1000 غالون/دقيقة</li></ul><h4 class="font-bold text-lg mb-2">2. خزانات الطين:</h4><ul class="list-disc pr-6 space-y-2 mb-4"><li>خزان السحب (Suction Tank)</li><li>خزان الخلط (Mixing Tank)</li><li>خزان الاحتياط (Reserve Tank)</li></ul><h4 class="font-bold text-lg mb-2">3. نظام التحكم بالمواد الصلبة:</h4><ul class="list-disc pr-6 space-y-2 mb-4"><li><strong>المناخل الهزازة (Shale Shakers):</strong> إزالة الفتات الكبير</li><li><strong>مزيلات الغازات (Degassers):</strong> إزالة الغازات المذابة</li><li><strong>مزيلات الرمال (Desanders):</strong> إزالة الجسيمات المتوسطة</li><li><strong>مزيلات الطمي (Desilters):</strong> إزالة الجسيمات الدقيقة</li><li><strong>أجهزة الطرد المركزي (Centrifuges):</strong> إزالة الجسيمات الأدق</li></ul></div><div class="bg-blue-50 border-r-4 border-blue-500 p-4 mb-6"><h4 class="font-bold text-blue-700 mb-2">🔄 مسار دورة الطين:</h4><p>الخزانات ← المضخات ← سلسلة الحفر ← رأس الحفر ← الفراغ الحلقي ← المناخل ← الخزانات</p></div></section>', keyTerms: [{ term: 'مضخات الطين', definition: 'المضخات القوية التي تدفع سائل الحفر' }, { term: 'المناخل الهزازة', definition: 'أول معدة لفصل الفتات من الطين' }, { term: 'الفراغ الحلقي', definition: 'المسافة بين أنابيب الحفر وجدار البئر' }, { term: 'كعكة الطين', definition: 'الطبقة التي يتركها الطين على جدار البئر' }], practiceQuestion: { question: 'ما هي أول معدة يمر بها الطين الخارج من البئر؟', options: ['الخزانات', 'المضخات', 'المناخل الهزازة', 'أجهزة الطرد المركزي'], correctAnswer: 2 } }, en: { title: 'Circulating System', explanation: '<section class="mb-8"><h2 class="text-2xl font-bold text-blue-800 mb-6">🔷 Circulating System - The Lifeline</h2><div class="mb-6"><p class="text-lg leading-relaxed mb-4">The Circulating System ensures continuous flow of drilling fluid (mud) from surface to bottom of the well and back.</p></div><h3 class="text-xl font-bold text-orange-600 mb-4">🔶 Drilling Mud Functions:</h3><ol class="list-decimal pl-6 space-y-2 mb-6"><li><strong>Cuttings Removal:</strong> Carrying rock pieces from bottom</li><li><strong>Bit Cooling:</strong> Absorbing friction heat</li><li><strong>Pressure Control:</strong> Balancing formation pressures</li><li><strong>Wellbore Stabilization:</strong> Forming mud cake</li><li><strong>Cuttings Suspension:</strong> Keeping cuttings suspended when circulation stops</li></ol><h3 class="text-xl font-bold text-orange-600 mb-4">🔶 System Components:</h3><div class="mb-6"><h4 class="font-bold text-lg mb-2">1. Mud Pumps:</h4><ul class="list-disc pl-6 space-y-2 mb-4"><li><strong>Types:</strong> Triplex pumps</li><li><strong>Capacity:</strong> 1000-2000 HP</li><li><strong>Pressure:</strong> Up to 7500 psi</li><li><strong>Flow Rate:</strong> 200-1000 GPM</li></ul><h4 class="font-bold text-lg mb-2">2. Mud Tanks:</h4><ul class="list-disc pl-6 space-y-2 mb-4"><li>Suction Tank</li><li>Mixing Tank</li><li>Reserve Tank</li></ul><h4 class="font-bold text-lg mb-2">3. Solids Control System:</h4><ul class="list-disc pl-6 space-y-2 mb-4"><li><strong>Shale Shakers:</strong> Remove large cuttings</li><li><strong>Degassers:</strong> Remove dissolved gases</li><li><strong>Desanders:</strong> Remove medium particles</li><li><strong>Desilters:</strong> Remove fine particles</li><li><strong>Centrifuges:</strong> Remove finest particles</li></ul></div><div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6"><h4 class="font-bold text-blue-700 mb-2">🔄 Mud Circulation Path:</h4><p>Tanks ← Pumps ← Drill String ← Bit ← Annulus ← Shakers ← Tanks</p></div></section>', keyTerms: [{ term: 'Mud Pumps', definition: 'Powerful pumps driving drilling fluid' }, { term: 'Shale Shakers', definition: 'First equipment to separate cuttings from mud' }, { term: 'Annulus', definition: 'Space between drill pipe and wellbore wall' }, { term: 'Mud Cake', definition: 'Layer mud deposits on wellbore wall' }], practiceQuestion: { question: 'What is the first equipment mud passes through when exiting the well?', options: ['Tanks', 'Pumps', 'Shale shakers', 'Centrifuges'], correctAnswer: 2 } } } },
+    { day: 2, type: 'learning', content: { ar: { title: 'نظام الرفع والبرج', explanation: `<section class="mb-8">
+<h2 class="text-primary text-xl font-bold mb-4">🔷 ليش نحتاج نظام الرفع؟</h2>
+
+<div class="bg-accent/10 border-r-4 border-accent p-4 my-6">
+<p class="font-semibold text-lg mb-2">🎯 السؤال الأساسي:</p>
+<p>سلسلة الحفر وزنها 200+ طن! كيف نرفعها ونخلي الحفار يتحكم بدقة ملليمترات؟ الجواب: نظام الرفع - أذكى نظام بكرات في العالم!</p>
+</div>
+
+<div class="bg-destructive/10 border-r-4 border-destructive p-4 my-6">
+<p class="text-destructive font-semibold">⚠️ شنو يصير لو فشل نظام الرفع؟</p>
+<ul class="list-disc list-inside space-y-1 mt-2">
+<li>سقوط سلسلة الحفر في البئر = خسارة ملايين</li>
+<li>انكسار كابل الحفر = إصابات خطيرة أو وفيات</li>
+<li>Crown Block يصطدم بالسقف = تدمير البرج</li>
+<li>Drawworks تعطلت = توقف كامل للعمليات</li>
+</ul>
+</div>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 مكونات نظام الرفع</h2>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 1. البرج (Derrick/Mast)</h3>
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li><strong>الارتفاع:</strong> 80-200 قدم (24-60 متر)</li>
+<li><strong>الأنواع:</strong> البرج القياسي (ثابت) أو الصاري (قابل للطي)</li>
+<li><strong>قدرة التحمل:</strong> تصل إلى 2 مليون رطل</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 2. الرافعة (Drawworks)</h3>
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li><strong>القدرة:</strong> 500-3000 حصان</li>
+<li><strong>الوظيفة:</strong> لف وفك كابل الحفر للرفع والإنزال</li>
+<li><strong>الفرامل:</strong> أهم جزء للسلامة!</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 3. الكتل (Blocks)</h3>
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li><strong>Crown Block:</strong> ثابت أعلى البرج (4-8 بكرات)</li>
+<li><strong>Traveling Block:</strong> يتحرك صعوداً وهبوطاً (حتى 25 طن)</li>
+<li><strong>كابل الحفر:</strong> 8-12 خط لتوزيع الحمل</li>
+</ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 أخطاء شائعة</h2>
+
+<div class="overflow-x-auto">
+<table class="w-full border-collapse border border-border my-4">
+<thead>
+<tr class="bg-muted">
+<th class="border border-border p-2 text-right">الخطأ</th>
+<th class="border border-border p-2 text-right">ليش خطأ</th>
+<th class="border border-border p-2 text-right">النتيجة</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="border border-border p-2">تجاهل فحص الكابل</td>
+<td class="border border-border p-2">الكابل يتآكل مع الاستخدام</td>
+<td class="border border-border p-2">انكسار مفاجئ = كارثة</td>
+</tr>
+<tr>
+<td class="border border-border p-2">الرفع بسرعة عالية جداً</td>
+<td class="border border-border p-2">يزيد الأحمال الديناميكية</td>
+<td class="border border-border p-2">إجهاد المعدات والأنابيب</td>
+</tr>
+<tr>
+<td class="border border-border p-2">Crown-o-matic معطل</td>
+<td class="border border-border p-2">لا حماية من الاصطدام</td>
+<td class="border border-border p-2">Block يضرب Crown = تدمير</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="bg-accent/10 border-r-4 border-accent p-4 my-6">
+<h4 class="font-bold mb-2">💡 مبدأ العمل:</h4>
+<p>مع 10 خطوط: رفع 500,000 رطل يتطلب 50,000 رطل فقط على الكابل!</p>
+</div>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 ملخص القسم</h3>
+<div class="bg-secondary/50 p-4 rounded-lg">
+<p>نظام الرفع يتحكم بأحمال ضخمة بدقة عالية. الـ Drawworks + البكرات = مضاعفة القوة. الفحص الدوري للكابل ضروري للسلامة.</p>
+</div>
+</section>`, keyTerms: [{ term: 'البرج (Derrick)', definition: 'الهيكل الفولاذي الطويل الذي يدعم نظام الرفع' }, { term: 'الرافعة (Drawworks)', definition: 'المعدة الرئيسية التي تلف وتفك كابل الحفر' }, { term: 'Crown Block', definition: 'مجموعة البكرات الثابتة في أعلى البرج' }, { term: 'Traveling Block', definition: 'البكرات المتحركة التي تحمل سلسلة الحفر' }], practiceQuestion: { question: 'أين تقع الكتلة الثابتة (Crown Block)؟', options: ['على أرضية الحفر', 'في أعلى البرج', 'تحت الأرض', 'في غرفة التحكم'], correctAnswer: 1 } }, en: { title: 'Hoisting System and Derrick', explanation: `<section class="mb-8">
+<h2 class="text-primary text-xl font-bold mb-4">🔷 Why Do We Need the Hoisting System?</h2>
+
+<div class="bg-accent/10 border-l-4 border-accent p-4 my-6">
+<p class="font-semibold text-lg mb-2">🎯 Key Question:</p>
+<p>The drill string weighs 200+ tons! How do we lift it and allow the driller to control it with millimeter precision? The answer: Hoisting System - the smartest pulley system in the world!</p>
+</div>
+
+<div class="bg-destructive/10 border-l-4 border-destructive p-4 my-6">
+<p class="text-destructive font-semibold">⚠️ What Happens if Hoisting Fails?</p>
+<ul class="list-disc list-inside space-y-1 mt-2">
+<li>Drill string drops into well = millions lost</li>
+<li>Drilling line breaks = serious injuries or fatalities</li>
+<li>Crown Block collision = derrick destruction</li>
+<li>Drawworks failure = complete operations shutdown</li>
+</ul>
+</div>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 Hoisting System Components</h2>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 1. Derrick/Mast</h3>
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li><strong>Height:</strong> 80-200 feet (24-60 meters)</li>
+<li><strong>Types:</strong> Standard Derrick (fixed) or Mast (foldable)</li>
+<li><strong>Capacity:</strong> Up to 2 million pounds</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 2. Drawworks</h3>
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li><strong>Power:</strong> 500-3000 HP</li>
+<li><strong>Function:</strong> Wind/unwind drilling line for lifting</li>
+<li><strong>Brakes:</strong> Most critical safety component!</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 3. Blocks</h3>
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li><strong>Crown Block:</strong> Fixed at top (4-8 sheaves)</li>
+<li><strong>Traveling Block:</strong> Moves up/down (up to 25 tons)</li>
+<li><strong>Drilling Line:</strong> 8-12 lines to distribute load</li>
+</ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 Common Mistakes</h2>
+
+<div class="overflow-x-auto">
+<table class="w-full border-collapse border border-border my-4">
+<thead>
+<tr class="bg-muted">
+<th class="border border-border p-2 text-left">Mistake</th>
+<th class="border border-border p-2 text-left">Why Wrong</th>
+<th class="border border-border p-2 text-left">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="border border-border p-2">Ignoring line inspection</td>
+<td class="border border-border p-2">Line wears with use</td>
+<td class="border border-border p-2">Sudden break = disaster</td>
+</tr>
+<tr>
+<td class="border border-border p-2">Hoisting too fast</td>
+<td class="border border-border p-2">Increases dynamic loads</td>
+<td class="border border-border p-2">Equipment and pipe stress</td>
+</tr>
+<tr>
+<td class="border border-border p-2">Crown-o-matic disabled</td>
+<td class="border border-border p-2">No collision protection</td>
+<td class="border border-border p-2">Block hits crown = destruction</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="bg-accent/10 border-l-4 border-accent p-4 my-6">
+<h4 class="font-bold mb-2">💡 Working Principle:</h4>
+<p>With 10 lines: lifting 500,000 lbs requires only 50,000 lbs on the line!</p>
+</div>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Section Summary</h3>
+<div class="bg-secondary/50 p-4 rounded-lg">
+<p>Hoisting system controls massive loads with precision. Drawworks + blocks = force multiplication. Regular line inspection is critical for safety.</p>
+</div>
+</section>`, keyTerms: [{ term: 'Derrick', definition: 'The tall steel structure supporting the hoisting system' }, { term: 'Drawworks', definition: 'Main equipment that winds and unwinds drilling line' }, { term: 'Crown Block', definition: 'Set of sheaves fixed at the top of the derrick' }, { term: 'Traveling Block', definition: 'Moving sheaves that carry the drill string' }], practiceQuestion: { question: 'Where is the Crown Block located?', options: ['On the rig floor', 'At the top of the derrick', 'Underground', 'In the control room'], correctAnswer: 1 } } } },
+    { day: 3, type: 'learning', content: { ar: { title: 'نظام دوران السوائل', explanation: `<section class="mb-8">
+<h2 class="text-primary text-xl font-bold mb-4">🔷 ليش نحتاج نظام الدوران؟</h2>
+
+<div class="bg-accent/10 border-r-4 border-accent p-4 my-6">
+<p class="font-semibold text-lg mb-2">🎯 السؤال الأساسي:</p>
+<p>الحفر ينتج أطنان من الفتات الصخري! كيف نطلعه من عمق 5000 متر؟ كيف نبرد رأس الحفر؟ كيف نمنع البئر من الانهيار؟ الجواب: سائل الحفر - الدم الذي يجري في عروق البئر!</p>
+</div>
+
+<div class="bg-destructive/10 border-r-4 border-destructive p-4 my-6">
+<p class="text-destructive font-semibold">⚠️ شنو يصير لو فشل نظام الدوران؟</p>
+<ul class="list-disc list-inside space-y-1 mt-2">
+<li>الفتات يتراكم = علوق سلسلة الحفر (Stuck Pipe)</li>
+<li>رأس الحفر يسخن = يحترق ويتلف بسرعة</li>
+<li>ضغط التكوين غير متوازن = Kick أو Blowout</li>
+<li>جدار البئر ينهار = Lost Circulation</li>
+</ul>
+</div>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 وظائف سائل الحفر (5 وظائف أساسية)</h2>
+
+<ol class="list-decimal list-inside space-y-2 mb-6">
+<li><strong>إزالة الفتات:</strong> حمل قطع الصخور من قاع البئر</li>
+<li><strong>تبريد رأس الحفر:</strong> امتصاص الحرارة الناتجة عن الاحتكاك</li>
+<li><strong>التحكم بالضغط:</strong> موازنة ضغط التكوينات (أهم وظيفة!)</li>
+<li><strong>تثبيت جدار البئر:</strong> تشكيل طبقة كعكة الطين (Mud Cake)</li>
+<li><strong>تعليق الفتات:</strong> إبقاء الفتات معلقاً عند توقف الضخ</li>
+</ol>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 مكونات النظام الرئيسية</h2>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 1. مضخات الطين (Mud Pumps)</h3>
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li><strong>النوع:</strong> ثلاثية المكابس (Triplex)</li>
+<li><strong>القدرة:</strong> 1000-2000 حصان</li>
+<li><strong>الضغط:</strong> حتى 7500 psi</li>
+<li><strong>معدل التدفق:</strong> 200-1000 غالون/دقيقة</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 2. نظام التحكم بالمواد الصلبة</h3>
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li><strong>المناخل الهزازة (Shale Shakers):</strong> إزالة الفتات الكبير</li>
+<li><strong>مزيلات الغازات (Degassers):</strong> إزالة الغازات المذابة</li>
+<li><strong>مزيلات الرمال (Desanders):</strong> إزالة الجسيمات المتوسطة</li>
+<li><strong>مزيلات الطمي (Desilters):</strong> إزالة الجسيمات الدقيقة</li>
+</ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 أخطاء شائعة</h2>
+
+<div class="overflow-x-auto">
+<table class="w-full border-collapse border border-border my-4">
+<thead>
+<tr class="bg-muted">
+<th class="border border-border p-2 text-right">الخطأ</th>
+<th class="border border-border p-2 text-right">ليش خطأ</th>
+<th class="border border-border p-2 text-right">النتيجة</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="border border-border p-2">إهمال مراقبة حجم الطين</td>
+<td class="border border-border p-2">نقص الحجم = تسرب للتكوين</td>
+<td class="border border-border p-2">Lost Circulation + Kick محتمل</td>
+</tr>
+<tr>
+<td class="border border-border p-2">Shaker screens مسدودة</td>
+<td class="border border-border p-2">الفتات يرجع للخزانات</td>
+<td class="border border-border p-2">تلف المضخات + خصائص طين سيئة</td>
+</tr>
+<tr>
+<td class="border border-border p-2">تجاهل Degasser</td>
+<td class="border border-border p-2">غاز مذاب يخفف الطين</td>
+<td class="border border-border p-2">انخفاض ضغط = Kick</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="bg-accent/10 border-r-4 border-accent p-4 my-6">
+<h4 class="font-bold mb-2">🔄 مسار دورة الطين:</h4>
+<p>الخزانات → المضخات → سلسلة الحفر → رأس الحفر → الفراغ الحلقي → المناخل → الخزانات</p>
+</div>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 ملخص القسم</h3>
+<div class="bg-secondary/50 p-4 rounded-lg">
+<p>نظام الدوران = شريان حياة البئر. 5 وظائف حيوية. مراقبة حجم الطين باستمرار. نظام Solids Control يحافظ على جودة الطين.</p>
+</div>
+</section>`, keyTerms: [{ term: 'مضخات الطين', definition: 'المضخات القوية التي تدفع سائل الحفر بضغط عالي' }, { term: 'المناخل الهزازة', definition: 'أول معدة لفصل الفتات من الطين' }, { term: 'الفراغ الحلقي', definition: 'المسافة بين أنابيب الحفر وجدار البئر' }, { term: 'كعكة الطين', definition: 'الطبقة الواقية التي يتركها الطين على جدار البئر' }], practiceQuestion: { question: 'ما هي أول معدة يمر بها الطين الخارج من البئر؟', options: ['الخزانات', 'المضخات', 'المناخل الهزازة', 'أجهزة الطرد المركزي'], correctAnswer: 2 } }, en: { title: 'Circulating System', explanation: `<section class="mb-8">
+<h2 class="text-primary text-xl font-bold mb-4">🔷 Why Do We Need the Circulating System?</h2>
+
+<div class="bg-accent/10 border-l-4 border-accent p-4 my-6">
+<p class="font-semibold text-lg mb-2">🎯 Key Question:</p>
+<p>Drilling produces tons of rock cuttings! How do we get them out from 5000m depth? How do we cool the bit? How do we prevent the well from collapsing? The answer: Drilling fluid - the blood flowing through the wells veins!</p>
+</div>
+
+<div class="bg-destructive/10 border-l-4 border-destructive p-4 my-6">
+<p class="text-destructive font-semibold">⚠️ What Happens if Circulation Fails?</p>
+<ul class="list-disc list-inside space-y-1 mt-2">
+<li>Cuttings accumulate = Stuck Pipe</li>
+<li>Bit overheats = burns out quickly</li>
+<li>Formation pressure unbalanced = Kick or Blowout</li>
+<li>Wellbore collapses = Lost Circulation</li>
+</ul>
+</div>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 Drilling Fluid Functions (5 Critical Functions)</h2>
+
+<ol class="list-decimal list-inside space-y-2 mb-6">
+<li><strong>Cuttings Removal:</strong> Carry rock pieces from bottom</li>
+<li><strong>Bit Cooling:</strong> Absorb friction heat</li>
+<li><strong>Pressure Control:</strong> Balance formation pressures (most critical!)</li>
+<li><strong>Wellbore Stabilization:</strong> Form Mud Cake on walls</li>
+<li><strong>Cuttings Suspension:</strong> Keep cuttings suspended when pumps stop</li>
+</ol>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 Main System Components</h2>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 1. Mud Pumps</h3>
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li><strong>Type:</strong> Triplex pumps</li>
+<li><strong>Power:</strong> 1000-2000 HP</li>
+<li><strong>Pressure:</strong> Up to 7500 psi</li>
+<li><strong>Flow Rate:</strong> 200-1000 GPM</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 2. Solids Control System</h3>
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li><strong>Shale Shakers:</strong> Remove large cuttings</li>
+<li><strong>Degassers:</strong> Remove dissolved gases</li>
+<li><strong>Desanders:</strong> Remove medium particles</li>
+<li><strong>Desilters:</strong> Remove fine particles</li>
+</ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 Common Mistakes</h2>
+
+<div class="overflow-x-auto">
+<table class="w-full border-collapse border border-border my-4">
+<thead>
+<tr class="bg-muted">
+<th class="border border-border p-2 text-left">Mistake</th>
+<th class="border border-border p-2 text-left">Why Wrong</th>
+<th class="border border-border p-2 text-left">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="border border-border p-2">Ignoring mud volume</td>
+<td class="border border-border p-2">Volume loss = formation losses</td>
+<td class="border border-border p-2">Lost Circulation + possible Kick</td>
+</tr>
+<tr>
+<td class="border border-border p-2">Clogged shaker screens</td>
+<td class="border border-border p-2">Cuttings return to tanks</td>
+<td class="border border-border p-2">Pump damage + poor mud properties</td>
+</tr>
+<tr>
+<td class="border border-border p-2">Ignoring Degasser</td>
+<td class="border border-border p-2">Dissolved gas lightens mud</td>
+<td class="border border-border p-2">Reduced pressure = Kick</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="bg-accent/10 border-l-4 border-accent p-4 my-6">
+<h4 class="font-bold mb-2">🔄 Mud Circulation Path:</h4>
+<p>Tanks → Pumps → Drill String → Bit → Annulus → Shakers → Tanks</p>
+</div>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Section Summary</h3>
+<div class="bg-secondary/50 p-4 rounded-lg">
+<p>Circulating system = wells lifeline. 5 critical functions. Monitor mud volume constantly. Solids Control maintains mud quality.</p>
+</div>
+</section>`, keyTerms: [{ term: 'Mud Pumps', definition: 'Powerful pumps driving drilling fluid at high pressure' }, { term: 'Shale Shakers', definition: 'First equipment to separate cuttings from mud' }, { term: 'Annulus', definition: 'Space between drill pipe and wellbore wall' }, { term: 'Mud Cake', definition: 'Protective layer mud deposits on wellbore wall' }], practiceQuestion: { question: 'What is the first equipment mud passes through when exiting the well?', options: ['Tanks', 'Pumps', 'Shale shakers', 'Centrifuges'], correctAnswer: 2 } } } },
     { day: 4, type: 'learning', content: { ar: { title: 'أنواع أجهزة الحفر', explanation: '<section class="mb-8"><h2 class="text-2xl font-bold text-blue-800 mb-6">🔷 التصنيف الشامل لأجهزة الحفر</h2><div class="mb-6"><p class="text-lg leading-relaxed mb-4">تتنوع أجهزة الحفر حسب بيئة العمل والقدرات والتصميم. اختيار النوع المناسب يعتمد على: موقع البئر، العمق المستهدف، الظروف الجيولوجية، والميزانية.</p></div><h3 class="text-xl font-bold text-orange-600 mb-4">🔶 أجهزة الحفر البرية (Land Rigs):</h3><div class="mb-6"><h4 class="font-bold text-lg mb-2">1. الأجهزة التقليدية:</h4><ul class="list-disc pr-6 space-y-2 mb-4"><li>العمق: 25,000+ قدم</li><li>للآبار العميقة والمعقدة</li></ul><h4 class="font-bold text-lg mb-2">2. الأجهزة المحمولة:</h4><ul class="list-disc pr-6 space-y-2 mb-4"><li>العمق: 5,000-15,000 قدم</li><li>سريعة النقل والتركيب</li></ul><h4 class="font-bold text-lg mb-2">3. أجهزة الصيانة:</h4><ul class="list-disc pr-6 space-y-2 mb-4"><li>أصغر وأخف</li><li>لإصلاح وصيانة الآبار</li></ul></div><h3 class="text-xl font-bold text-orange-600 mb-4">🔶 أجهزة الحفر البحرية (Offshore):</h3><div class="mb-6"><h4 class="font-bold text-lg mb-2">1. جاك-أب (Jack-up):</h4><ul class="list-disc pr-6 space-y-2 mb-4"><li>عمق المياه: حتى 400 قدم</li><li>أرجل قابلة للإنزال على القاع</li><li>التكلفة: 100,000-200,000 $/يوم</li></ul><h4 class="font-bold text-lg mb-2">2. شبه الغاطسة (Semi-submersible):</h4><ul class="list-disc pr-6 space-y-2 mb-4"><li>عمق المياه: 200-10,000+ قدم</li><li>طوافات مغمورة جزئياً للاستقرار</li><li>التكلفة: 200,000-500,000 $/يوم</li></ul><h4 class="font-bold text-lg mb-2">3. سفن الحفر (Drillships):</h4><ul class="list-disc pr-6 space-y-2 mb-4"><li>عمق المياه: 12,000+ قدم</li><li>قدرة عالية على التنقل</li><li>نظام تحديد موقع ديناميكي (DP)</li><li>التكلفة: 400,000-700,000 $/يوم</li></ul><h4 class="font-bold text-lg mb-2">4. المنصات الثابتة:</h4><ul class="list-disc pr-6 space-y-2 mb-4"><li>هيكل ثابت على القاع</li><li>للإنتاج طويل الأمد</li></ul></div></section>', keyTerms: [{ term: 'جاك-أب', definition: 'منصة بحرية ترفع نفسها بأرجل' }, { term: 'شبه غاطسة', definition: 'منصة تطفو بطوافات مغمورة جزئياً' }, { term: 'سفينة حفر', definition: 'سفينة مجهزة للحفر في المياه العميقة' }, { term: 'تحديد الموقع الديناميكي', definition: 'نظام حاسوبي للحفاظ على موقع السفينة بدون مراسي' }], practiceQuestion: { question: 'أي نوع يعمل في مياه أعمق من 10,000 قدم؟', options: ['جاك-أب', 'جهاز بري', 'سفينة حفر', 'جهاز صيانة'], correctAnswer: 2 } }, en: { title: 'Types of Drilling Rigs', explanation: '<section class="mb-8"><h2 class="text-2xl font-bold text-blue-800 mb-6">🔷 Comprehensive Classification of Drilling Rigs</h2><div class="mb-6"><p class="text-lg leading-relaxed mb-4">Drilling rigs vary according to work environment, capabilities, and design. Selection depends on: well location, target depth, geological conditions, and budget.</p></div><h3 class="text-xl font-bold text-orange-600 mb-4">🔶 Land Rigs:</h3><div class="mb-6"><h4 class="font-bold text-lg mb-2">1. Conventional Rigs:</h4><ul class="list-disc pl-6 space-y-2 mb-4"><li>Depth: 25,000+ feet</li><li>For deep and complex wells</li></ul><h4 class="font-bold text-lg mb-2">2. Portable Rigs:</h4><ul class="list-disc pl-6 space-y-2 mb-4"><li>Depth: 5,000-15,000 feet</li><li>Quick transport and setup</li></ul><h4 class="font-bold text-lg mb-2">3. Workover Rigs:</h4><ul class="list-disc pl-6 space-y-2 mb-4"><li>Smaller and lighter</li><li>For well repair and maintenance</li></ul></div><h3 class="text-xl font-bold text-orange-600 mb-4">🔶 Offshore Rigs:</h3><div class="mb-6"><h4 class="font-bold text-lg mb-2">1. Jack-up:</h4><ul class="list-disc pl-6 space-y-2 mb-4"><li>Water depth: Up to 400 feet</li><li>Retractable legs to seabed</li><li>Cost: $100,000-200,000/day</li></ul><h4 class="font-bold text-lg mb-2">2. Semi-submersible:</h4><ul class="list-disc pl-6 space-y-2 mb-4"><li>Water depth: 200-10,000+ feet</li><li>Partially submerged pontoons for stability</li><li>Cost: $200,000-500,000/day</li></ul><h4 class="font-bold text-lg mb-2">3. Drillships:</h4><ul class="list-disc pl-6 space-y-2 mb-4"><li>Water depth: 12,000+ feet</li><li>High mobility</li><li>Dynamic Positioning (DP) system</li><li>Cost: $400,000-700,000/day</li></ul><h4 class="font-bold text-lg mb-2">4. Fixed Platforms:</h4><ul class="list-disc pl-6 space-y-2 mb-4"><li>Fixed structure on seabed</li><li>For long-term production</li></ul></div></section>', keyTerms: [{ term: 'Jack-up', definition: 'Offshore platform that raises itself on legs' }, { term: 'Semi-submersible', definition: 'Platform floating on partially submerged pontoons' }, { term: 'Drillship', definition: 'Ship equipped for deepwater drilling' }, { term: 'Dynamic Positioning', definition: 'Computer system maintaining vessel position without anchors' }], practiceQuestion: { question: 'Which type operates in water deeper than 10,000 feet?', options: ['Jack-up', 'Land rig', 'Drillship', 'Workover rig'], correctAnswer: 2 } } } },
     { day: 5, type: 'learning', content: { ar: { title: 'طاقم جهاز الحفر', explanation: '<section class="mb-8"><h2 class="text-2xl font-bold text-blue-800 mb-6">🔷 فريق العمل على جهاز الحفر</h2><div class="mb-6"><p class="text-lg leading-relaxed mb-4">يعمل على جهاز الحفر فريق متكامل من المتخصصين. يعمل الفريق بنظام الورديات (12 ساعة عمل / 12 ساعة راحة) على مدار الساعة.</p></div><h3 class="text-xl font-bold text-orange-600 mb-4">🔶 الهيكل التنظيمي:</h3><div class="mb-6"><h4 class="font-bold text-lg mb-2">1. ممثل الشركة (Company Man):</h4><ul class="list-disc pr-6 space-y-2 mb-4"><li>أعلى سلطة من الشركة المالكة للبئر</li><li>اتخاذ القرارات الرئيسية</li><li>مراقبة التكاليف والجدول</li></ul><h4 class="font-bold text-lg mb-2">2. مدير الجهاز (Toolpusher):</h4><ul class="list-disc pr-6 space-y-2 mb-4"><li>المسؤول الأول عن الجهاز وطاقمه</li><li>إدارة جميع عمليات الجهاز</li></ul><h4 class="font-bold text-lg mb-2">3. المشرف/الحفّار (Driller):</h4><ul class="list-disc pr-6 space-y-2 mb-4"><li>قائد الوردية</li><li>يشغل معدات الحفر من كابينة التحكم</li><li>مراقبة جميع معايير الحفر</li><li>اتخاذ قرارات فورية في الطوارئ</li></ul><h4 class="font-bold text-lg mb-2">4. مساعد المشرف (Derrickhand):</h4><ul class="list-disc pr-6 space-y-2 mb-4"><li>يعمل في أعلى البرج أثناء السحب</li><li>مراقبة خزانات الطين</li></ul><h4 class="font-bold text-lg mb-2">5. عمال الأرضية (Roughnecks):</h4><ul class="list-disc pr-6 space-y-2 mb-4"><li>2-4 عمال لكل وردية</li><li>ربط وفك الأنابيب</li><li>الصيانة اليومية</li></ul><h4 class="font-bold text-lg mb-2">6. عامل الخدمات (Roustabout):</h4><ul class="list-disc pr-6 space-y-2 mb-4"><li>مستوى المبتدئين</li><li>النظافة ونقل المواد</li></ul></div><h3 class="text-xl font-bold text-orange-600 mb-4">🔶 فرق متخصصة أخرى:</h3><ul class="list-disc pr-6 space-y-2 mb-4"><li>مهندسو الطين</li><li>مهندسو القياس (MWD/LWD)</li><li>مهندسو الاتجاه</li><li>جيولوجيو الموقع</li></ul></section>', keyTerms: [{ term: 'ممثل الشركة', definition: 'أعلى سلطة من الشركة المالكة' }, { term: 'المشرف (Driller)', definition: 'يشغل معدات الحفر ويقود الوردية' }, { term: 'مساعد المشرف', definition: 'يعمل في أعلى البرج ويراقب الطين' }, { term: 'عامل الأرضية', definition: 'يعمل على أرضية الحفر' }], practiceQuestion: { question: 'من يشغل معدات الحفر من كابينة التحكم؟', options: ['ممثل الشركة', 'مدير الجهاز', 'المشرف (Driller)', 'عامل الأرضية'], correctAnswer: 2 } }, en: { title: 'Drilling Rig Crew', explanation: '<section class="mb-8"><h2 class="text-2xl font-bold text-blue-800 mb-6">🔷 The Drilling Rig Team</h2><div class="mb-6"><p class="text-lg leading-relaxed mb-4">A drilling rig operates with an integrated team of specialists. The team works in shifts (12 hours on / 12 hours off) around the clock.</p></div><h3 class="text-xl font-bold text-orange-600 mb-4">🔶 Organizational Structure:</h3><div class="mb-6"><h4 class="font-bold text-lg mb-2">1. Company Man:</h4><ul class="list-disc pl-6 space-y-2 mb-4"><li>Highest authority from well owner</li><li>Making major decisions</li><li>Monitoring costs and schedule</li></ul><h4 class="font-bold text-lg mb-2">2. Toolpusher:</h4><ul class="list-disc pl-6 space-y-2 mb-4"><li>Primary person responsible for rig and crew</li><li>Managing all rig operations</li></ul><h4 class="font-bold text-lg mb-2">3. Driller:</h4><ul class="list-disc pl-6 space-y-2 mb-4"><li>Shift leader</li><li>Operates drilling equipment from control cabin</li><li>Monitors all drilling parameters</li><li>Makes immediate decisions in emergencies</li></ul><h4 class="font-bold text-lg mb-2">4. Derrickhand:</h4><ul class="list-disc pl-6 space-y-2 mb-4"><li>Works at top of derrick during tripping</li><li>Monitors mud tanks</li></ul><h4 class="font-bold text-lg mb-2">5. Roughnecks:</h4><ul class="list-disc pl-6 space-y-2 mb-4"><li>2-4 workers per shift</li><li>Making up and breaking out pipe</li><li>Daily maintenance</li></ul><h4 class="font-bold text-lg mb-2">6. Roustabout:</h4><ul class="list-disc pl-6 space-y-2 mb-4"><li>Entry level</li><li>Cleaning and material handling</li></ul></div><h3 class="text-xl font-bold text-orange-600 mb-4">🔶 Other Specialized Teams:</h3><ul class="list-disc pl-6 space-y-2 mb-4"><li>Mud Engineers</li><li>MWD/LWD Engineers</li><li>Directional Drillers</li><li>Wellsite Geologists</li></ul></section>', keyTerms: [{ term: 'Company Man', definition: 'Highest authority from well owner' }, { term: 'Driller', definition: 'Operates drilling equipment and leads shift' }, { term: 'Derrickhand', definition: 'Works at top of derrick and monitors mud' }, { term: 'Roughneck', definition: 'Works on drill floor' }], practiceQuestion: { question: 'Who operates drilling equipment from the control cabin?', options: ['Company Man', 'Rig Manager', 'Driller', 'Roughneck'], correctAnswer: 2 } } } },
     { day: 6, type: 'quiz', content: { ar: { title: 'اختبار الأسبوع: جهاز الحفر', explanation: 'اختبر معرفتك بمكونات جهاز الحفر وأنظمته وأنواعه وطاقمه.', keyTerms: [] }, en: { title: 'Weekly Quiz: Drilling Rig', explanation: 'Test your knowledge of drilling rig components, systems, types, and crew.', keyTerms: [] } }, quiz: { ar: [{ question: 'كم عدد الأنظمة الرئيسية في جهاز الحفر؟', options: ['3 أنظمة', '4 أنظمة', '5 أنظمة', '6 أنظمة'], correctAnswer: 2 }, { question: 'أين تقع الكتلة الثابتة (Crown Block)؟', options: ['على الأرض', 'في أعلى البرج', 'في منتصف البرج', 'تحت الأرض'], correctAnswer: 1 }, { question: 'ما هي أول معدة يمر بها الطين العائد من البئر؟', options: ['المضخات', 'الخزانات', 'المناخل الهزازة', 'أجهزة الطرد المركزي'], correctAnswer: 2 }, { question: 'أي نوع من الأجهزة البحرية يعمل في المياه الضحلة فقط؟', options: ['سفينة الحفر', 'شبه الغاطسة', 'جاك-أب', 'المنصة الثابتة'], correctAnswer: 2 }, { question: 'من يشغل معدات الحفر من كابينة التحكم؟', options: ['ممثل الشركة', 'مدير الجهاز', 'المشرف (Driller)', 'عامل الأرضية'], correctAnswer: 2 }, { question: 'ما وظيفة الرافعة (Drawworks)؟', options: ['ضخ الطين', 'رفع وإنزال الأنابيب', 'دوران رأس الحفر', 'تخزين الطين'], correctAnswer: 1 }, { question: 'كم ساعة تستمر الوردية عادة؟', options: ['6 ساعات', '8 ساعات', '12 ساعة', '24 ساعة'], correctAnswer: 2 }, { question: 'ما هو نظام تحديد الموقع الديناميكي (DP)؟', options: ['نظام حفر', 'نظام للحفاظ على موقع السفينة بدون مراسي', 'نظام ضخ', 'نظام تبريد'], correctAnswer: 1 }, { question: 'أين يعمل مساعد المشرف (Derrickhand) أثناء السحب؟', options: ['في كابينة التحكم', 'على الأرض', 'في أعلى البرج', 'في غرفة المضخات'], correctAnswer: 2 }, { question: 'ما هو الفراغ الحلقي (Annulus)؟', options: ['داخل أنابيب الحفر', 'المسافة بين الأنابيب وجدار البئر', 'خزان الطين', 'قمة البرج'], correctAnswer: 1 }], en: [{ question: 'How many main systems are there in a drilling rig?', options: ['3 systems', '4 systems', '5 systems', '6 systems'], correctAnswer: 2 }, { question: 'Where is the Crown Block located?', options: ['On the ground', 'At the top of the derrick', 'In the middle of the derrick', 'Underground'], correctAnswer: 1 }, { question: 'What is the first equipment mud passes through when returning from the well?', options: ['Pumps', 'Tanks', 'Shale shakers', 'Centrifuges'], correctAnswer: 2 }, { question: 'Which offshore rig type works only in shallow water?', options: ['Drillship', 'Semi-submersible', 'Jack-up', 'Fixed platform'], correctAnswer: 2 }, { question: 'Who operates drilling equipment from the control cabin?', options: ['Company Man', 'Rig Manager', 'Driller', 'Roughneck'], correctAnswer: 2 }, { question: 'What is the function of the Drawworks?', options: ['Pump mud', 'Raise and lower pipes', 'Rotate the bit', 'Store mud'], correctAnswer: 1 }, { question: 'How many hours does a typical rig shift last?', options: ['6 hours', '8 hours', '12 hours', '24 hours'], correctAnswer: 2 }, { question: 'What is Dynamic Positioning (DP)?', options: ['A drilling system', 'A system to maintain vessel position without anchors', 'A pumping system', 'A cooling system'], correctAnswer: 1 }, { question: 'Where does the Derrickhand work during tripping?', options: ['In control cabin', 'On the ground', 'At the top of the derrick', 'In pump room'], correctAnswer: 2 }, { question: 'What is the Annulus?', options: ['Inside drill pipe', 'Space between pipe and wellbore wall', 'Mud tank', 'Top of derrick'], correctAnswer: 1 }] } },
