@@ -2821,9 +2821,26 @@ const wellTypesLesson: WeeklyLesson = {
         ar: {
           title: 'الآبار العمودية والمائلة بالتفصيل',
           explanation: `<section>
-<h2 class="text-primary text-xl font-bold mb-4">🔷 الآبار العمودية (Vertical Wells)</h2>
+<h2 class="text-primary text-xl font-bold mb-4">🔷 ليش نحتاج نفرق بين العمودي والمائل؟</h2>
 
-<p class="mb-4">الآبار العمودية هي الأساس الذي بُنيت عليه صناعة النفط الحديثة. منذ بئر دريك عام 1859، ظلت الآبار العمودية الخيار الأول لعقود طويلة. تُحفر هذه الآبار بشكل مستقيم من السطح إلى المخزون مع السماح بانحراف طفيف لا يتجاوز عادة 5 درجات.</p>
+<div class="bg-accent/10 border-r-4 border-accent p-4 my-6">
+<p class="font-semibold text-lg mb-2">🎯 السؤال الأساسي:</p>
+<p>المكمن تحتنا بس مو بالضبط - نحفر مستقيم ونضيعه؟ ولا نحفر مائل ونوصل له؟ القرار يحدد نجاح أو فشل البئر!</p>
+</div>
+
+<div class="bg-destructive/10 border-r-4 border-destructive p-4 my-6">
+<p class="text-destructive font-semibold">⚠️ شنو يصير لو اخترنا الخطأ؟</p>
+<ul class="list-disc list-inside space-y-1 mt-2">
+<li>عمودي لهدف مائل = نفوت المكمن تماماً</li>
+<li>مائل لهدف تحتنا مباشرة = تكلفة زائدة بلا فائدة</li>
+<li>خطأ في التوجيه = نصطدم ببئر مجاور</li>
+<li>ما نفهم KOP = نبدأ الانحراف بالعمق الخطأ</li>
+</ul>
+</div>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 الآبار العمودية (Vertical Wells)</h2>
+
+<p class="mb-4">الآبار العمودية هي الأساس - أبسط وأرخص. تُحفر مستقيمة مع انحراف أقل من 5 درجات.</p>
 
 <h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 خصائص الآبار العمودية</h3>
 
@@ -2834,6 +2851,37 @@ const wellTypesLesson: WeeklyLesson = {
 <li><strong>السرعة:</strong> زمن حفر أقصر عادةً</li>
 <li><strong>الصيانة:</strong> أسهل في الصيانة والإصلاح</li>
 </ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 أخطاء شائعة في اختيار العمودي vs المائل</h2>
+
+<div class="overflow-x-auto">
+<table class="w-full border-collapse border border-border my-4">
+<thead>
+<tr class="bg-muted">
+<th class="border border-border p-2 text-right">الخطأ</th>
+<th class="border border-border p-2 text-right">ليش خطأ</th>
+<th class="border border-border p-2 text-right">النتيجة</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="border border-border p-2">"العمودي دائماً أفضل لأنه أرخص"</td>
+<td class="border border-border p-2">لو الهدف مو تحتنا مباشرة نحتاج مائل</td>
+<td class="border border-border p-2">نفوت الهدف = بئر جاف</td>
+</tr>
+<tr>
+<td class="border border-border p-2">"نبدأ الانحراف من السطح"</td>
+<td class="border border-border p-2">KOP عمق محسوب بدقة حسب الجيولوجيا</td>
+<td class="border border-border p-2">مسار خاطئ أو صعوبات حفر</td>
+</tr>
+<tr>
+<td class="border border-border p-2">"كل الآبار المائلة نفس الشي"</td>
+<td class="border border-border p-2">كل بئر له زاوية وسمت مختلف</td>
+<td class="border border-border p-2">تصادم مع آبار مجاورة</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 <h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 متى نستخدم الآبار العمودية؟</h3>
 
@@ -3003,48 +3051,125 @@ const wellTypesLesson: WeeklyLesson = {
         ar: {
           title: 'الآبار الأفقية - ثورة في صناعة النفط',
           explanation: `<section>
-<h2 class="text-primary text-xl font-bold mb-4">🔷 مقدمة عن الآبار الأفقية</h2>
+<h2 class="text-primary text-xl font-bold mb-4">🔷 ليش نحتاج نحفر أفقي؟</h2>
 
-<p class="mb-4">تُعتبر الآبار الأفقية من أهم التطورات التقنية في صناعة النفط والغاز خلال العقود الأخيرة. هذه التقنية غيّرت قواعد اللعبة وجعلت من الممكن استخراج النفط من مخزونات كان يُعتقد أنها غير اقتصادية.</p>
+<div class="bg-accent/10 border-r-4 border-accent p-4 my-6">
+<p class="font-semibold text-lg mb-2">🎯 السؤال الأساسي:</p>
+<p>المكمن سماكته 5 متر بس! لو حفرنا عمودي، نتماس مع 5 متر فقط. لكن لو حفرنا أفقي، نتماس مع 1000 متر أو أكثر! الفرق = 200 ضعف الإنتاج!</p>
+</div>
 
-<p class="mb-4">البئر الأفقي يبدأ عمودياً من السطح، ثم ينحني تدريجياً في منطقة تُسمى "منطقة البناء" (Build Section) حتى يصل إلى الزاوية المطلوبة، ثم يستمر أفقياً داخل المخزون.</p>
-
-<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 تاريخ تطور الحفر الأفقي</h3>
-
-<ul class="list-disc list-inside space-y-2 mb-4">
-<li><strong>1929:</strong> أول محاولات الحفر الأفقي في تكساس</li>
-<li><strong>1980s:</strong> بداية الاستخدام التجاري مع تطور تقنيات التوجيه</li>
-<li><strong>1990s:</strong> انتشار واسع في حقول النفط العالمية</li>
-<li><strong>2000s:</strong> ثورة النفط الصخري بفضل الجمع بين الحفر الأفقي والتكسير الهيدروليكي</li>
+<div class="bg-destructive/10 border-r-4 border-destructive p-4 my-6">
+<p class="text-destructive font-semibold">⚠️ شنو يصير لو حفرنا عمودي في مكمن رقيق؟</p>
+<ul class="list-disc list-inside space-y-1 mt-2">
+<li>إنتاج ضعيف جداً - 50 برميل/يوم بدل 2000</li>
+<li>ما نسترد تكلفة الحفر</li>
+<li>المشروع يفشل اقتصادياً</li>
+<li>نحتاج 20 بئر عمودي بدل بئر أفقي واحد</li>
 </ul>
-
-<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 مميزات الآبار الأفقية</h2>
-
-<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 1. زيادة مساحة التماس مع المخزون</h3>
-
-<p class="mb-4">البئر الأفقي يمكن أن يمتد لعدة كيلومترات داخل المخزون، مما يزيد مساحة التماس بشكل هائل مقارنة بالبئر العمودي الذي يخترق المخزون بسمكه فقط.</p>
-
-<p class="mb-4">مثال: إذا كان سمك المخزون 10 أمتار فقط، البئر العمودي يتماس مع 10 أمتار، بينما البئر الأفقي قد يتماس مع 1000 متر أو أكثر!</p>
-
-<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 2. مثالية للمخزونات الرقيقة</h3>
-
-<p class="mb-4">المخزونات ذات السماكة القليلة (أقل من 10 أمتار) قد لا تكون اقتصادية بالآبار العمودية، لكنها تصبح مُجدية جداً بالحفر الأفقي.</p>
-
-<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 3. تقليل مشاكل تداخل المياه والغاز</h3>
-
-<p class="mb-4">في الآبار العمودية، قد يتداخل الماء من الأسفل أو الغاز من الأعلى بسرعة. البئر الأفقي يوزع الإنتاج على مساحة أكبر، مما يؤخر هذه المشاكل.</p>
-
-<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 4. إنتاجية أعلى</h3>
-
-<p class="mb-4">البئر الأفقي الواحد قد يُنتج ما يعادل 3-5 آبار عمودية أو أكثر، مما يقلل عدد الآبار المطلوبة وتكاليف البنية التحتية.</p>
+</div>
 
 <h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 أقسام البئر الأفقي</h2>
 
 <ul class="list-disc list-inside space-y-2 mb-4">
-<li><strong>القسم العمودي (Vertical Section):</strong> من السطح حتى نقطة البداية</li>
-<li><strong>قسم البناء (Build Section):</strong> منطقة الانحناء التدريجي</li>
-<li><strong>القسم المماسي (Tangent Section):</strong> قسم اختياري بميل ثابت</li>
-<li><strong>القسم الأفقي (Horizontal Section):</strong> الجزء الأفقي داخل المخزون</li>
+<li><strong>القسم العمودي:</strong> من السطح حتى نقطة البداية (KOP)</li>
+<li><strong>قسم البناء (Build Section):</strong> منطقة الانحناء التدريجي - أهم جزء!</li>
+<li><strong>القسم الأفقي:</strong> الجزء الأفقي داخل المخزون - هنا الإنتاج</li>
+</ul>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 مميزات الآبار الأفقية</h2>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 1. زيادة مساحة التماس</h3>
+<p class="mb-4">بئر أفقي طوله 1000م في مكمن سماكته 5م = 200 ضعف التماس مقارنة بالعمودي!</p>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 2. تقليل مشاكل الماء والغاز</h3>
+<p class="mb-4">الإنتاج يتوزع على مساحة أكبر = تأخير Water Coning و Gas Coning.</p>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 أخطاء شائعة في الآبار الأفقية</h2>
+
+<div class="overflow-x-auto">
+<table class="w-full border-collapse border border-border my-4">
+<thead>
+<tr class="bg-muted">
+<th class="border border-border p-2 text-right">الخطأ</th>
+<th class="border border-border p-2 text-right">ليش خطأ</th>
+<th class="border border-border p-2 text-right">النتيجة</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="border border-border p-2">"الأفقي دائماً أفضل"</td>
+<td class="border border-border p-2">في مكمن سميك العمودي يكفي</td>
+<td class="border border-border p-2">تكلفة 2-3x بدون فائدة</td>
+</tr>
+<tr>
+<td class="border border-border p-2">"تنظيف البئر الأفقي سهل"</td>
+<td class="border border-border p-2">الفتات يستقر في القسم الأفقي</td>
+<td class="border border-border p-2">علوق الأدوات</td>
+</tr>
+<tr>
+<td class="border border-border p-2">"نحفر أطول قسم أفقي ممكن"</td>
+<td class="border border-border p-2">بعد مسافة معينة المشاكل تزيد</td>
+<td class="border border-border p-2">Torque & Drag عالي + صعوبة الإكمال</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 ملخص القسم</h3>
+<div class="bg-secondary/50 p-4 rounded-lg">
+<p>الآبار الأفقية ضرورية للمكامن الرقيقة وتزيد الإنتاج بشكل هائل. لكنها أغلى وأصعب حفراً. القرار يعتمد على سماكة المكمن ونفاذيته.</p>
+</div>
+</section>`,
+          keyTerms: [
+            { term: 'قسم البناء', definition: 'المنطقة التي ينحني فيها البئر تدريجياً من العمودي إلى الأفقي' },
+            { term: 'معدل البناء', definition: 'معدل تغير الزاوية لكل 30 متراً من الحفر' },
+            { term: 'القسم الأفقي', definition: 'الجزء من البئر الذي يمتد أفقياً داخل المخزون' },
+            { term: 'التكسير الهيدروليكي', definition: 'تقنية ضخ سوائل تحت ضغط عالي لكسر الصخور وتحرير النفط' },
+          ],
+          practiceQuestion: {
+            question: 'متى تُستخدم الآبار الأفقية بشكل مثالي؟',
+            options: ['المخزونات الرقيقة', 'المخزونات العميقة جداً', 'المخزونات السطحية فقط', 'آبار الحقن فقط'],
+            correctAnswer: 0,
+          },
+        },
+        en: {
+          title: 'Horizontal Wells - A Revolution in the Oil Industry',
+          explanation: `<section>
+<h2 class="text-primary text-xl font-bold mb-4">🔷 Why Drill Horizontal?</h2>
+
+<div class="bg-accent/10 border-l-4 border-accent p-4 my-6">
+<p class="font-semibold text-lg mb-2">🎯 Key Question:</p>
+<p>Reservoir is only 5m thick! Vertical = 5m contact. Horizontal = 1000m+ contact! That's 200x more production!</p>
+</div>
+
+<div class="bg-destructive/10 border-l-4 border-destructive p-4 my-6">
+<p class="text-destructive font-semibold">⚠️ What if we drill vertical in thin reservoir?</p>
+<ul class="list-disc list-inside space-y-1 mt-2">
+<li>Very low production - 50 bbl/day instead of 2000</li>
+<li>Cannot recover drilling cost</li>
+<li>Project fails economically</li>
+</ul>
+</div>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 Section Summary</h3>
+<div class="bg-secondary/50 p-4 rounded-lg">
+<p>Horizontal wells are essential for thin reservoirs and massively increase production. Higher cost but justified by higher returns.</p>
+</div>
+</section>`,
+          keyTerms: [
+            { term: 'Build Section', definition: 'The area where the well gradually curves from vertical to horizontal' },
+            { term: 'Build Rate', definition: 'Rate of angle change per 30 meters of drilling' },
+            { term: 'Horizontal Section', definition: 'The part of the well that extends horizontally within the reservoir' },
+            { term: 'Hydraulic Fracturing', definition: 'Pumping fluids under high pressure to fracture rocks and release oil' },
+          ],
+          practiceQuestion: {
+            question: 'When are horizontal wells ideally used?',
+            options: ['Thin reservoirs', 'Very deep reservoirs', 'Surface reservoirs only', 'Injection wells only'],
+            correctAnswer: 0,
+          },
+        },
+      },
+    },
 </ul>
 
 <h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 تحديات الحفر الأفقي</h2>
@@ -3169,21 +3294,95 @@ const wellTypesLesson: WeeklyLesson = {
         ar: {
           title: 'الآبار البحرية - الحفر في أعماق المحيطات',
           explanation: `<section>
-<h2 class="text-primary text-xl font-bold mb-4">🔷 مقدمة عن الحفر البحري</h2>
+<h2 class="text-primary text-xl font-bold mb-4">🔷 ليش نحفر في البحر؟</h2>
 
-<p class="mb-4">يُعد الحفر البحري (Offshore Drilling) من أكثر العمليات الهندسية تعقيداً وتحدياً في صناعة النفط. يتطلب التعامل مع بيئة قاسية تشمل الأمواج، الرياح، التيارات المائية، وأعماق المياه التي قد تصل إلى أكثر من 3000 متر.</p>
+<div class="bg-accent/10 border-r-4 border-accent p-4 my-6">
+<p class="font-semibold text-lg mb-2">🎯 السؤال الأساسي:</p>
+<p>30% من نفط العالم تحت البحر! بس كيف نحفر وتحتنا 3000 متر ماء + الأمواج + العواصف؟ التكلفة 10-50 ضعف البري!</p>
+</div>
 
-<p class="mb-4">بدأ الحفر البحري في أواخر القرن التاسع عشر في المياه الضحلة، وتطور ليصل اليوم إلى أعماق مذهلة بفضل التقنيات المتقدمة.</p>
-
-<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 تاريخ الحفر البحري</h3>
-
-<ul class="list-disc list-inside space-y-2 mb-4">
-<li><strong>1897:</strong> أول بئر بحري في كاليفورنيا على رصيف خشبي</li>
-<li><strong>1947:</strong> أول بئر خارج مرمى البصر من الشاطئ (خليج المكسيك)</li>
-<li><strong>1960s:</strong> تطوير منصات جاك أب</li>
-<li><strong>1970s:</strong> المنصات شبه الغاطسة وسفن الحفر</li>
-<li><strong>2000s:</strong> الحفر في أعماق تتجاوز 3000 متر</li>
+<div class="bg-destructive/10 border-r-4 border-destructive p-4 my-6">
+<p class="text-destructive font-semibold">⚠️ شنو يصير لو أخطأنا في الحفر البحري؟</p>
+<ul class="list-disc list-inside space-y-1 mt-2">
+<li>Deepwater Horizon 2010: 11 قتيل + أكبر تسرب نفطي بالتاريخ</li>
+<li>خسائر بالمليارات من الدولارات</li>
+<li>كارثة بيئية تستمر لسنوات</li>
+<li>سمعة الشركة تنتهي للأبد</li>
 </ul>
+</div>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 أنواع منصات الحفر البحرية (حسب عمق المياه)</h2>
+
+<div class="overflow-x-auto">
+<table class="w-full border-collapse border border-border my-4">
+<thead>
+<tr class="bg-muted">
+<th class="border border-border p-2 text-right">النوع</th>
+<th class="border border-border p-2 text-right">عمق المياه</th>
+<th class="border border-border p-2 text-right">الخاصية</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="border border-border p-2">منصة ثابتة (Fixed)</td>
+<td class="border border-border p-2">0-500 م</td>
+<td class="border border-border p-2">مثبتة على القاع - للإنتاج الطويل</td>
+</tr>
+<tr>
+<td class="border border-border p-2">جاك أب (Jack-up)</td>
+<td class="border border-border p-2">0-150 م</td>
+<td class="border border-border p-2">أرجل قابلة للرفع - متحركة</td>
+</tr>
+<tr>
+<td class="border border-border p-2">شبه غاطسة (Semi-sub)</td>
+<td class="border border-border p-2">200-3000 م</td>
+<td class="border border-border p-2">عائمة على أعمدة - مستقرة بالأمواج</td>
+</tr>
+<tr>
+<td class="border border-border p-2">سفينة حفر (Drillship)</td>
+<td class="border border-border p-2">1000-3500 م</td>
+<td class="border border-border p-2">أعمق وصول - تثبيت ديناميكي</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 أخطاء شائعة في الحفر البحري</h2>
+
+<div class="overflow-x-auto">
+<table class="w-full border-collapse border border-border my-4">
+<thead>
+<tr class="bg-muted">
+<th class="border border-border p-2 text-right">الخطأ</th>
+<th class="border border-border p-2 text-right">ليش خطأ</th>
+<th class="border border-border p-2 text-right">النتيجة</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="border border-border p-2">"جاك أب يشتغل بأي عمق"</td>
+<td class="border border-border p-2">أرجلها لها حد أقصى 150م</td>
+<td class="border border-border p-2">المنصة ما تستقر = خطر</td>
+</tr>
+<tr>
+<td class="border border-border p-2">"BOP البحري مثل البري"</td>
+<td class="border border-border p-2">البحري على القاع ويحتاج ROV للصيانة</td>
+<td class="border border-border p-2">عدم القدرة على التدخل السريع</td>
+</tr>
+<tr>
+<td class="border border-border p-2">"التكلفة البحرية قريبة من البري"</td>
+<td class="border border-border p-2">10-50 ضعف التكلفة</td>
+<td class="border border-border p-2">ميزانية خاطئة = مشروع يتوقف</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 ملخص القسم</h3>
+<div class="bg-secondary/50 p-4 rounded-lg">
+<p>الحفر البحري ضروري للوصول لـ30% من نفط العالم. اختيار المنصة الصحيحة حسب عمق المياه حياة أو موت. التكلفة والمخاطر أعلى بكثير من البري.</p>
+</div>
+</section>`,
 
 <h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 أنواع منصات الحفر البحرية</h2>
 
@@ -3349,21 +3548,78 @@ const wellTypesLesson: WeeklyLesson = {
         ar: {
           title: 'اختيار نوع البئر المناسب',
           explanation: `<section>
-<h2 class="text-primary text-xl font-bold mb-4">🔷 عملية اتخاذ قرار نوع البئر</h2>
+<h2 class="text-primary text-xl font-bold mb-4">🔷 ليش قرار نوع البئر مهم جداً؟</h2>
 
-<p class="mb-4">اختيار نوع البئر المناسب هو قرار هندسي واقتصادي بالغ الأهمية. القرار الصحيح يمكن أن يوفر ملايين الدولارات ويضاعف الإنتاج، بينما القرار الخاطئ قد يؤدي لفشل المشروع.</p>
+<div class="bg-accent/10 border-r-4 border-accent p-4 my-6">
+<p class="font-semibold text-lg mb-2">🎯 السؤال الأساسي:</p>
+<p>عمودي؟ مائل؟ أفقي؟ القرار يحدد: التكلفة (1-50 مليون دولار)، الإنتاج (100-10,000 برميل/يوم)، ونجاح أو فشل المشروع!</p>
+</div>
 
-<p class="mb-4">يجب على مهندسي النفط النظر في مجموعة شاملة من العوامل قبل اتخاذ هذا القرار الحاسم.</p>
-
-<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 العوامل الجيولوجية</h2>
-
-<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 1. سمك المخزون</h3>
-
-<ul class="list-disc list-inside space-y-2 mb-4">
-<li><strong>مخزون سميك (> 50 م):</strong> الآبار العمودية غالباً كافية ومناسبة</li>
-<li><strong>مخزون متوسط (10-50 م):</strong> الآبار المائلة أو الأفقية قد تكون أفضل</li>
-<li><strong>مخزون رقيق (< 10 م):</strong> الآبار الأفقية ضرورية للجدوى الاقتصادية</li>
+<div class="bg-destructive/10 border-r-4 border-destructive p-4 my-6">
+<p class="text-destructive font-semibold">⚠️ شنو يصير لو اخترنا غلط؟</p>
+<ul class="list-disc list-inside space-y-1 mt-2">
+<li>بئر أفقي في مكمن سميك = 3x التكلفة بدون فائدة</li>
+<li>بئر عمودي في مكمن رقيق = إنتاج ضعيف = خسارة</li>
+<li>منصة جاك أب في مياه عميقة = ما تشتغل أصلاً</li>
+<li>عدم دراسة الاقتصاد = مشروع يخسر من البداية</li>
 </ul>
+</div>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 إطار اتخاذ القرار</h2>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 الخطوة 1: تحليل الجيولوجيا</h3>
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>سمك المكمن: رقيق (<10م) = أفقي، سميك (>50م) = عمودي</li>
+<li>النفاذية: منخفضة = أفقي + تكسير</li>
+<li>وجود ماء/غاز: يحدد موقع الإكمال</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 الخطوة 2: تحليل الموقع</h3>
+<ul class="list-disc list-inside space-y-2 mb-4">
+<li>بري: مرونة كاملة</li>
+<li>بحري: مائل لحفر عدة آبار من منصة واحدة</li>
+<li>تحت مدينة: مائل إجباري</li>
+</ul>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 الخطوة 3: التحليل الاقتصادي</h3>
+<p class="mb-4">التكلفة vs العائد: بئر أفقي يكلف 2x بس ينتج 5x = قرار صحيح!</p>
+
+<h2 class="text-primary text-xl font-bold mt-8 mb-4">🔷 أخطاء شائعة في اختيار نوع البئر</h2>
+
+<div class="overflow-x-auto">
+<table class="w-full border-collapse border border-border my-4">
+<thead>
+<tr class="bg-muted">
+<th class="border border-border p-2 text-right">الخطأ</th>
+<th class="border border-border p-2 text-right">ليش خطأ</th>
+<th class="border border-border p-2 text-right">النتيجة</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="border border-border p-2">"نختار الأرخص دائماً"</td>
+<td class="border border-border p-2">الأغلى قد يعوض تكلفته بإنتاج أعلى</td>
+<td class="border border-border p-2">خسارة طويلة المدى</td>
+</tr>
+<tr>
+<td class="border border-border p-2">"نقلد الحقل المجاور"</td>
+<td class="border border-border p-2">كل مكمن له خصائص مختلفة</td>
+<td class="border border-border p-2">نوع غير مناسب لمكمننا</td>
+</tr>
+<tr>
+<td class="border border-border p-2">"ما نحتاج دراسة جدوى"</td>
+<td class="border border-border p-2">القرار يحتاج أرقام مو حدس</td>
+<td class="border border-border p-2">مفاجآت مالية</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 ملخص القسم</h3>
+<div class="bg-secondary/50 p-4 rounded-lg">
+<p>اختيار نوع البئر = جيولوجيا + موقع + اقتصاد. لا يوجد نوع "أفضل" - الأفضل هو المناسب لظروفنا. التحليل الدقيق قبل القرار يوفر ملايين.</p>
+</div>
+</section>`,
 
 <h3 class="text-accent text-lg font-semibold mt-6 mb-3">🔶 2. نفاذية الصخور</h3>
 
