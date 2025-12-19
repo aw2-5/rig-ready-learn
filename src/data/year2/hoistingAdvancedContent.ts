@@ -8,1432 +8,1325 @@ export const hoistingAdvancedLesson: WeeklyLesson = {
       type: 'learning',
       content: {
         ar: {
-          title: 'نظام الرفع المتقدم - مقدمة ومكونات النظام',
+          title: 'حسابات الحمل على نظام الرفع - Hook Load',
           explanation: `<section>
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 مقدمة في نظام الرفع (Hoisting System)</h2>
-
+<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🎯 الهدف من اليوم</h2>
 <p style="margin-bottom: 1rem; line-height: 1.8;">
-نظام الرفع هو أحد أهم الأنظمة الرئيسية في جهاز الحفر، ويُعتبر العمود الفقري لعمليات الحفر. يتولى هذا النظام مهمة رفع وإنزال سلسلة الحفر (Drill String) وأنابيب التغليف (Casing) والمعدات الأخرى داخل وخارج البئر. تعتمد كفاءة عمليات الحفر بشكل كبير على أداء نظام الرفع، حيث أن أي خلل فيه قد يؤدي إلى توقف العمليات وتكاليف باهظة.
+تفهم كيف تحسب الحمل على الخطاف (Hook Load) ولماذا هذا الرقم حاسم في كل قرار تاخذه أثناء الحفر والرحلات.
 </p>
 
-<div style="background: linear-gradient(135deg, #1e3a5f15, #f9731620); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-right: 4px solid #f97316;">
-<h3 style="color: #f97316; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">📌 أهمية نظام الرفع</h3>
+<div style="background: linear-gradient(135deg, #dc262615, #dc262610); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-right: 4px solid #dc2626;">
+<h3 style="color: #dc2626; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">⚠️ سيناريو من الموقع</h3>
+<p style="line-height: 1.8;">
+أنت مهندس موقع، والدريلر يقول: "Hook Load 450,000 lbs وأنا شاك ليش عالي!"<br/>
+<strong>شنو تسوي؟</strong> لازم تعرف منين إجا هالرقم عشان تفهم إذا طبيعي أو فيه مشكلة.
+</p>
+</div>
+
+<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">📐 المعادلة الأساسية</h2>
+
+<div style="background: #f8fafc; padding: 1.5rem; border-radius: 12px; margin: 1rem 0; border: 2px solid #1e3a5f;">
+<p style="font-size: 1.3rem; font-weight: bold; text-align: center; color: #1e3a5f; direction: ltr;">
+Hook Load = (Weight of String in Air) - (Buoyancy Effect)
+</p>
+<p style="font-size: 1.2rem; text-align: center; color: #1e3a5f; margin-top: 0.5rem; direction: ltr;">
+HL = Wair × BF
+</p>
+</div>
+
+<h3 style="color: #059669; font-size: 1.2rem; font-weight: bold; margin: 1.5rem 0 0.75rem;">🔍 منين إجت هالمعادلة؟</h3>
 <ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2;">
-<li>رفع وإنزال سلسلة الحفر أثناء عمليات الحفر والرحلات (Tripping)</li>
-<li>التحكم في الوزن على رأس الحفر (Weight on Bit - WOB)</li>
-<li>إنزال وسحب أنابيب التغليف والإنتاج</li>
-<li>عمليات الإنقاذ والصيد (Fishing Operations)</li>
-<li>معالجة حالات الالتصاق (Stuck Pipe)</li>
+<li><strong>Wair:</strong> وزن سلسلة الحفر بالهواء = طول المواسير × وزن القدم الواحد</li>
+<li><strong>BF (Buoyancy Factor):</strong> لما المواسير تنزل بالطين، الطين يدفعها لفوق (مثل ما يصير لك بالمسبح)</li>
+<li>الطين كل ما ثقل، كل ما خفف الحمل على الخطاف</li>
+</ul>
+
+<div style="background: linear-gradient(135deg, #1e3a5f15, #1e3a5f10); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0;">
+<h3 style="color: #1e3a5f; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">📊 معادلة Buoyancy Factor</h3>
+<p style="font-size: 1.2rem; text-align: center; color: #1e3a5f; direction: ltr;">
+BF = 1 - (Mud Weight / Steel Density)
+</p>
+<p style="font-size: 1.1rem; text-align: center; color: #1e3a5f; direction: ltr;">
+BF = 1 - (MW / 65.4)
+</p>
+<p style="margin-top: 0.75rem; font-size: 0.95rem;">
+* كثافة الحديد = 65.4 ppg (ثابت)
+</p>
+</div>
+
+<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">🧮 مثال حسابي كامل</h2>
+
+<div style="background: #f0fdf4; padding: 1.5rem; border-radius: 12px; margin: 1rem 0; border: 2px solid #059669;">
+<h4 style="color: #059669; font-weight: bold; margin-bottom: 1rem;">المعطيات:</h4>
+<ul style="list-style: none; padding: 0; line-height: 2;">
+<li>• طول الـ Drill Pipe = 10,000 ft</li>
+<li>• وزن القدم = 19.5 lb/ft (5" DP)</li>
+<li>• طول الـ Drill Collars = 600 ft</li>
+<li>• وزن القدم = 147 lb/ft (8" DC)</li>
+<li>• وزن الطين = 12 ppg</li>
+</ul>
+
+<h4 style="color: #059669; font-weight: bold; margin: 1.5rem 0 1rem;">الحل خطوة بخطوة:</h4>
+
+<p style="margin-bottom: 0.5rem;"><strong>1. وزن String بالهواء:</strong></p>
+<p style="padding-right: 1rem; direction: ltr; margin-bottom: 1rem;">
+Wair = (10,000 × 19.5) + (600 × 147) = 195,000 + 88,200 = 283,200 lbs
+</p>
+
+<p style="margin-bottom: 0.5rem;"><strong>2. حساب BF:</strong></p>
+<p style="padding-right: 1rem; direction: ltr; margin-bottom: 1rem;">
+BF = 1 - (12 / 65.4) = 1 - 0.183 = 0.817
+</p>
+
+<p style="margin-bottom: 0.5rem;"><strong>3. Hook Load:</strong></p>
+<p style="padding-right: 1rem; direction: ltr; margin-bottom: 1rem;">
+HL = 283,200 × 0.817 = <strong style="color: #059669;">231,374 lbs</strong>
+</p>
+</div>
+
+<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">🎓 شنو تفهم من هالرقم ميدانياً؟</h2>
+
+<div style="display: grid; gap: 1rem; margin: 1rem 0;">
+<div style="background: #fef3c7; padding: 1rem; border-radius: 8px; border-right: 4px solid #f59e0b;">
+<p style="font-weight: bold; color: #92400e;">إذا Hook Load أعلى من المتوقع:</p>
+<ul style="margin-top: 0.5rem; padding-right: 1.5rem; line-height: 1.8;">
+<li>احتمال String عالق (Stuck Pipe)</li>
+<li>احتمال Tight Hole أو Ledges</li>
+<li>لازم تتأكد من الحفرة قبل تكمل</li>
 </ul>
 </div>
 
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 المكونات الرئيسية لنظام الرفع</h2>
-
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-يتكون نظام الرفع من عدة مكونات متكاملة تعمل معاً لتحقيق عمليات الرفع والإنزال بكفاءة وأمان:
-</p>
-
-<h3 style="color: #f97316; font-size: 1.2rem; font-weight: bold; margin: 1.5rem 0 0.75rem;">1️⃣ البكرة التاجية (Crown Block)</h3>
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-البكرة التاجية هي مجموعة من البكرات الثابتة المركبة في قمة برج الحفر (Derrick). تتكون من عدة بكرات (Sheaves) مرتبة بشكل أفقي، ويمر عبرها كابل الحفر. تتميز بأنها ثابتة لا تتحرك، وتعمل كنقطة ارتكاز علوية لنظام البكرات.
-</p>
-
-<div style="background: #1e3a5f10; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
-<strong style="color: #1e3a5f;">مواصفات البكرة التاجية:</strong>
-<ul style="list-style-type: circle; padding-right: 1.5rem; margin-top: 0.5rem; line-height: 1.8;">
-<li>عدد البكرات: عادة من 4 إلى 8 بكرات حسب حجم الجهاز</li>
-<li>قطر البكرة: يتراوح من 36 إلى 60 بوصة</li>
-<li>مادة الصنع: فولاذ عالي المقاومة مع محامل كروية (Ball Bearings)</li>
-<li>السعة: تُصنف حسب الحمولة القصوى (من 350 إلى 1000+ طن)</li>
+<div style="background: #dbeafe; padding: 1rem; border-radius: 8px; border-right: 4px solid #2563eb;">
+<p style="font-weight: bold; color: #1e40af;">إذا Hook Load أقل من المتوقع:</p>
+<ul style="margin-top: 0.5rem; padding-right: 1.5rem; line-height: 1.8;">
+<li>احتمال String يرتكز على قاع البئر</li>
+<li>أو الـ BHA داخل في Washout</li>
+<li>لازم تتابع الوزن بدقة</li>
 </ul>
 </div>
-
-<h3 style="color: #f97316; font-size: 1.2rem; font-weight: bold; margin: 1.5rem 0 0.75rem;">2️⃣ البكرة المتنقلة (Traveling Block)</h3>
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-البكرة المتنقلة هي مجموعة البكرات المتحركة التي تتصل بالخطاف وتتحرك عمودياً داخل برج الحفر. تتكون من عدة بكرات مشابهة للبكرة التاجية، وتعمل مع البكرة التاجية لتشكيل نظام البكرات المركب الذي يضاعف القوة الميكانيكية.
-</p>
-
-<h3 style="color: #f97316; font-size: 1.2rem; font-weight: bold; margin: 1.5rem 0 0.75rem;">3️⃣ الخطاف (Hook)</h3>
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-الخطاف هو الجزء الذي يتصل مباشرة بالبكرة المتنقلة من الأعلى وبالمحور الدوار (Swivel) أو الحمل من الأسفل. يحتوي على آلية قفل أمان لمنع السقوط العرضي للحمل، ويتم تصنيعه من الفولاذ المقوى ليتحمل الأحمال الثقيلة.
-</p>
-
-<div style="background: #dc262615; padding: 1rem; border-radius: 8px; margin: 1rem 0; border-right: 4px solid #dc2626;">
-<strong style="color: #dc2626;">⚠️ تحذير أمان:</strong>
-<p style="margin-top: 0.5rem; line-height: 1.8;">
-يجب فحص الخطاف بشكل دوري للتأكد من سلامة آلية القفل وعدم وجود تشققات أو تآكل. أي خلل في الخطاف قد يؤدي إلى سقوط الحمل وحوادث كارثية.
-</p>
 </div>
 
-<h3 style="color: #f97316; font-size: 1.2rem; font-weight: bold; margin: 1.5rem 0 0.75rem;">4️⃣ كابل الحفر (Drilling Line / Wire Rope)</h3>
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-كابل الحفر هو الحبل السلكي الذي يمر عبر البكرات ويربط بين رافعة الحفر والحمل. يتكون من عدة خيوط (Strands) ملفوفة حول قلب مركزي، ويُصنع من الفولاذ عالي الشد.
+<h2 style="color: #dc2626; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">⚡ قرار: متى تقلق من Hook Load؟</h2>
+
+<table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+<tr style="background: #1e3a5f; color: white;">
+<th style="padding: 12px; text-align: right;">الحالة</th>
+<th style="padding: 12px; text-align: right;">القرار</th>
+<th style="padding: 12px; text-align: right;">السبب</th>
+</tr>
+<tr style="background: #f8fafc;">
+<td style="padding: 12px; border: 1px solid #e2e8f0;">زيادة مفاجئة > 30,000 lbs</td>
+<td style="padding: 12px; border: 1px solid #e2e8f0;">وقف فوري + Work String</td>
+<td style="padding: 12px; border: 1px solid #e2e8f0;">احتمال Stuck عالي</td>
+</tr>
+<tr style="background: #ffffff;">
+<td style="padding: 12px; border: 1px solid #e2e8f0;">نقصان تدريجي</td>
+<td style="padding: 12px; border: 1px solid #e2e8f0;">راقب + سجل</td>
+<td style="padding: 12px; border: 1px solid #e2e8f0;">قد يكون طبيعي (Hole Washout)</td>
+</tr>
+<tr style="background: #f8fafc;">
+<td style="padding: 12px; border: 1px solid #e2e8f0;">قفز متكرر</td>
+<td style="padding: 12px; border: 1px solid #e2e8f0;">Short Trip + تنظيف</td>
+<td style="padding: 12px; border: 1px solid #e2e8f0;">Ledges أو Cuttings</td>
+</tr>
+</table>
+
+<div style="background: linear-gradient(135deg, #7c3aed15, #7c3aed10); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-right: 4px solid #7c3aed;">
+<h3 style="color: #7c3aed; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">💡 ربط الأنظمة</h3>
+<p style="line-height: 1.8;">
+Hook Load مرتبط بـ:
 </p>
-
-<h3 style="color: #f97316; font-size: 1.2rem; font-weight: bold; margin: 1.5rem 0 0.75rem;">5️⃣ رافعة الحفر (Drawworks)</h3>
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-رافعة الحفر هي قلب نظام الرفع، وهي عبارة عن ونش كبير يحتوي على بكرة (Drum) يُلف عليها كابل الحفر. تُزود بمحركات قوية وأنظمة فرامل للتحكم في سرعة الرفع والإنزال.
-</p>
-
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 مبدأ عمل نظام الرفع</h2>
-
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-يعمل نظام الرفع على مبدأ <strong>نظام البكرات المركب (Block and Tackle System)</strong>، حيث يمر كابل الحفر بين البكرة التاجية والبكرة المتنقلة عدة مرات لتضاعف القوة. كلما زاد عدد خطوط الكابل (Lines)، زادت الميزة الميكانيكية وقلت القوة المطلوبة لرفع الحمل.
-</p>
-
-<div style="background: linear-gradient(135deg, #10b98115, #1e3a5f15); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0;">
-<h3 style="color: #10b981; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.75rem;">💡 ملخص اليوم</h3>
 <ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2;">
-<li>نظام الرفع مسؤول عن رفع وإنزال جميع المعدات في البئر</li>
-<li>المكونات الرئيسية: البكرة التاجية، البكرة المتنقلة، الخطاف، كابل الحفر، ورافعة الحفر</li>
-<li>يعمل النظام على مبدأ البكرات المركب لمضاعفة القوة</li>
-<li>السلامة والصيانة الدورية ضرورية لمنع الحوادث</li>
+<li><strong>وزن الطين:</strong> طين أثقل = BF أقل = Hook Load أقل</li>
+<li><strong>تنظيف الحفرة:</strong> حفرة نظيفة = حركة سلسة = Hook Load ثابت</li>
+<li><strong>Torque:</strong> Torque عالي مع Hook Load عالي = علامة Stuck</li>
 </ul>
 </div>
 </section>`,
           keyTerms: [
-            { term: 'البكرة التاجية (Crown Block)', definition: 'مجموعة البكرات الثابتة في قمة برج الحفر التي يمر عبرها كابل الحفر' },
-            { term: 'البكرة المتنقلة (Traveling Block)', definition: 'مجموعة البكرات المتحركة التي تتصل بالخطاف وتتحرك عمودياً' },
-            { term: 'الخطاف (Hook)', definition: 'الجزء الذي يتصل بالبكرة المتنقلة ويحمل المحور الدوار أو الحمل' },
-            { term: 'نظام البكرات المركب (Block and Tackle)', definition: 'نظام ميكانيكي يستخدم بكرات متعددة لمضاعفة القوة الميكانيكية' },
+            { term: 'Hook Load', definition: 'الوزن الفعلي المقاس على الخطاف' },
+            { term: 'Buoyancy Factor', definition: 'معامل الطفو - تأثير الطين على تخفيف الوزن' },
+            { term: 'String Weight', definition: 'الوزن الإجمالي لسلسلة الحفر' },
+            { term: 'Overpull', definition: 'الزيادة في Hook Load عن المتوقع - علامة مقاومة' }
           ],
           practiceQuestion: {
-            question: 'ما هو المكون الثابت في نظام الرفع الموجود في قمة برج الحفر؟',
-            options: ['البكرة المتنقلة', 'البكرة التاجية', 'الخطاف', 'رافعة الحفر'],
-            correctAnswer: 1,
-          },
+            question: 'إذا كان Hook Load المتوقع 200,000 lbs والقراءة الفعلية 235,000 lbs، شنو أول شي تسويه؟',
+            options: [
+              'أكمل السحب بقوة أكبر',
+              'أوقف وأعمل Work String (رفع وإنزال خفيف)',
+              'أزيد وزن الطين',
+              'أتجاهل الفرق وأكمل'
+            ],
+            correctAnswer: 1
+          }
         },
         en: {
-          title: 'Advanced Hoisting System - Introduction and Components',
+          title: 'Hook Load Calculations',
           explanation: `<section>
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 Introduction to the Hoisting System</h2>
-
+<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🎯 Today's Goal</h2>
 <p style="margin-bottom: 1rem; line-height: 1.8;">
-The hoisting system is one of the most critical systems in a drilling rig, considered the backbone of drilling operations. This system is responsible for raising and lowering the drill string, casing, and other equipment into and out of the wellbore. The efficiency of drilling operations depends heavily on the hoisting system's performance, as any malfunction can lead to operational downtime and significant costs.
+Understand how to calculate Hook Load and why this number is critical for every decision you make during drilling and tripping.
 </p>
 
-<div style="background: linear-gradient(135deg, #1e3a5f15, #f9731620); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-left: 4px solid #f97316;">
-<h3 style="color: #f97316; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">📌 Importance of the Hoisting System</h3>
+<div style="background: linear-gradient(135deg, #dc262615, #dc262610); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-left: 4px solid #dc2626;">
+<h3 style="color: #dc2626; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">⚠️ Field Scenario</h3>
+<p style="line-height: 1.8;">
+You're the site engineer, and the driller says: "Hook Load is 450,000 lbs and I'm not sure why it's high!"<br/>
+<strong>What do you do?</strong> You need to know where this number came from to understand if it's normal or problematic.
+</p>
+</div>
+
+<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">📐 Basic Formula</h2>
+
+<div style="background: #f8fafc; padding: 1.5rem; border-radius: 12px; margin: 1rem 0; border: 2px solid #1e3a5f;">
+<p style="font-size: 1.3rem; font-weight: bold; text-align: center; color: #1e3a5f;">
+Hook Load = (Weight of String in Air) × (Buoyancy Factor)
+</p>
+<p style="font-size: 1.2rem; text-align: center; color: #1e3a5f; margin-top: 0.5rem;">
+HL = Wair × BF
+</p>
+</div>
+
+<h3 style="color: #059669; font-size: 1.2rem; font-weight: bold; margin: 1.5rem 0 0.75rem;">🔍 Where does this formula come from?</h3>
 <ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 2;">
-<li>Raising and lowering drill string during drilling and tripping operations</li>
-<li>Controlling Weight on Bit (WOB)</li>
-<li>Running and pulling casing and production tubing</li>
-<li>Fishing operations</li>
-<li>Handling stuck pipe situations</li>
+<li><strong>Wair:</strong> Weight of drill string in air = pipe length × weight per foot</li>
+<li><strong>BF (Buoyancy Factor):</strong> When pipes go into mud, the mud pushes them up (like swimming pool effect)</li>
+<li>Heavier mud = less weight on hook</li>
 </ul>
+
+<div style="background: linear-gradient(135deg, #1e3a5f15, #1e3a5f10); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0;">
+<h3 style="color: #1e3a5f; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">📊 Buoyancy Factor Formula</h3>
+<p style="font-size: 1.2rem; text-align: center; color: #1e3a5f;">
+BF = 1 - (Mud Weight / Steel Density)
+</p>
+<p style="font-size: 1.1rem; text-align: center; color: #1e3a5f;">
+BF = 1 - (MW / 65.4)
+</p>
+<p style="margin-top: 0.75rem; font-size: 0.95rem;">
+* Steel density = 65.4 ppg (constant)
+</p>
 </div>
 
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 Main Components of the Hoisting System</h2>
+<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">🧮 Complete Calculation Example</h2>
 
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-The hoisting system consists of several integrated components that work together to achieve efficient and safe hoisting operations:
-</p>
-
-<h3 style="color: #f97316; font-size: 1.2rem; font-weight: bold; margin: 1.5rem 0 0.75rem;">1️⃣ Crown Block</h3>
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-The crown block is a set of stationary sheaves mounted at the top of the derrick. It consists of multiple sheaves arranged horizontally through which the drilling line passes. It is characterized by being fixed and serves as the upper pivot point for the pulley system.
-</p>
-
-<div style="background: #1e3a5f10; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
-<strong style="color: #1e3a5f;">Crown Block Specifications:</strong>
-<ul style="list-style-type: circle; padding-left: 1.5rem; margin-top: 0.5rem; line-height: 1.8;">
-<li>Number of sheaves: Usually 4 to 8 depending on rig size</li>
-<li>Sheave diameter: Ranges from 36 to 60 inches</li>
-<li>Material: High-strength steel with ball bearings</li>
-<li>Capacity: Rated by maximum load (350 to 1000+ tons)</li>
+<div style="background: #f0fdf4; padding: 1.5rem; border-radius: 12px; margin: 1rem 0; border: 2px solid #059669;">
+<h4 style="color: #059669; font-weight: bold; margin-bottom: 1rem;">Given Data:</h4>
+<ul style="list-style: none; padding: 0; line-height: 2;">
+<li>• Drill Pipe length = 10,000 ft</li>
+<li>• Weight per foot = 19.5 lb/ft (5" DP)</li>
+<li>• Drill Collars length = 600 ft</li>
+<li>• Weight per foot = 147 lb/ft (8" DC)</li>
+<li>• Mud weight = 12 ppg</li>
 </ul>
+
+<h4 style="color: #059669; font-weight: bold; margin: 1.5rem 0 1rem;">Step-by-Step Solution:</h4>
+
+<p style="margin-bottom: 0.5rem;"><strong>1. String Weight in Air:</strong></p>
+<p style="padding-left: 1rem; margin-bottom: 1rem;">
+Wair = (10,000 × 19.5) + (600 × 147) = 195,000 + 88,200 = 283,200 lbs
+</p>
+
+<p style="margin-bottom: 0.5rem;"><strong>2. Calculate BF:</strong></p>
+<p style="padding-left: 1rem; margin-bottom: 1rem;">
+BF = 1 - (12 / 65.4) = 1 - 0.183 = 0.817
+</p>
+
+<p style="margin-bottom: 0.5rem;"><strong>3. Hook Load:</strong></p>
+<p style="padding-left: 1rem; margin-bottom: 1rem;">
+HL = 283,200 × 0.817 = <strong style="color: #059669;">231,374 lbs</strong>
+</p>
 </div>
 
-<h3 style="color: #f97316; font-size: 1.2rem; font-weight: bold; margin: 1.5rem 0 0.75rem;">2️⃣ Traveling Block</h3>
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-The traveling block is the moving sheave assembly that connects to the hook and moves vertically within the derrick. It consists of multiple sheaves similar to the crown block and works with it to form a compound pulley system that multiplies mechanical force.
-</p>
+<h2 style="color: #dc2626; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">⚡ Decision: When to Worry About Hook Load?</h2>
 
-<h3 style="color: #f97316; font-size: 1.2rem; font-weight: bold; margin: 1.5rem 0 0.75rem;">3️⃣ Hook</h3>
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-The hook is the component that connects directly to the traveling block from above and to the swivel or load from below. It contains a safety latch mechanism to prevent accidental load drops and is manufactured from hardened steel to withstand heavy loads.
-</p>
-
-<div style="background: #dc262615; padding: 1rem; border-radius: 8px; margin: 1rem 0; border-left: 4px solid #dc2626;">
-<strong style="color: #dc2626;">⚠️ Safety Warning:</strong>
-<p style="margin-top: 0.5rem; line-height: 1.8;">
-The hook must be inspected regularly to ensure the latch mechanism is functioning and there are no cracks or corrosion. Any defect in the hook can lead to load drops and catastrophic accidents.
-</p>
-</div>
-
-<h3 style="color: #f97316; font-size: 1.2rem; font-weight: bold; margin: 1.5rem 0 0.75rem;">4️⃣ Drilling Line (Wire Rope)</h3>
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-The drilling line is the wire rope that passes through the sheaves and connects the drawworks to the load. It consists of multiple strands wrapped around a central core and is made of high-tensile steel.
-</p>
-
-<h3 style="color: #f97316; font-size: 1.2rem; font-weight: bold; margin: 1.5rem 0 0.75rem;">5️⃣ Drawworks</h3>
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-The drawworks is the heart of the hoisting system, essentially a large winch containing a drum around which the drilling line is wound. It is equipped with powerful motors and brake systems to control hoisting and lowering speeds.
-</p>
-
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 Operating Principle</h2>
-
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-The hoisting system operates on the principle of a <strong>Block and Tackle System</strong>, where the drilling line passes between the crown block and traveling block multiple times to multiply force. The more lines strung, the greater the mechanical advantage and the less force required to lift the load.
-</p>
-
-<div style="background: linear-gradient(135deg, #10b98115, #1e3a5f15); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0;">
-<h3 style="color: #10b981; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.75rem;">💡 Day Summary</h3>
-<ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 2;">
-<li>The hoisting system is responsible for raising and lowering all equipment in the well</li>
-<li>Main components: Crown block, traveling block, hook, drilling line, and drawworks</li>
-<li>The system operates on the block and tackle principle to multiply force</li>
-<li>Safety and regular maintenance are essential to prevent accidents</li>
-</ul>
-</div>
+<table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+<tr style="background: #1e3a5f; color: white;">
+<th style="padding: 12px; text-align: left;">Situation</th>
+<th style="padding: 12px; text-align: left;">Decision</th>
+<th style="padding: 12px; text-align: left;">Reason</th>
+</tr>
+<tr style="background: #f8fafc;">
+<td style="padding: 12px; border: 1px solid #e2e8f0;">Sudden increase > 30,000 lbs</td>
+<td style="padding: 12px; border: 1px solid #e2e8f0;">Stop + Work String</td>
+<td style="padding: 12px; border: 1px solid #e2e8f0;">High stuck pipe probability</td>
+</tr>
+<tr style="background: #ffffff;">
+<td style="padding: 12px; border: 1px solid #e2e8f0;">Gradual decrease</td>
+<td style="padding: 12px; border: 1px solid #e2e8f0;">Monitor + Record</td>
+<td style="padding: 12px; border: 1px solid #e2e8f0;">Could be normal (Hole Washout)</td>
+</tr>
+</table>
 </section>`,
           keyTerms: [
-            { term: 'Crown Block', definition: 'The stationary sheave assembly at the top of the derrick through which the drilling line passes' },
-            { term: 'Traveling Block', definition: 'The moving sheave assembly that connects to the hook and moves vertically' },
-            { term: 'Hook', definition: 'The component connecting the traveling block to the swivel or load below' },
-            { term: 'Block and Tackle', definition: 'A mechanical system using multiple pulleys to multiply mechanical force' },
+            { term: 'Hook Load', definition: 'Actual weight measured at the hook' },
+            { term: 'Buoyancy Factor', definition: 'Buoyancy coefficient - effect of mud on reducing weight' },
+            { term: 'String Weight', definition: 'Total weight of drill string' },
+            { term: 'Overpull', definition: 'Increase in Hook Load above expected - sign of resistance' }
           ],
           practiceQuestion: {
-            question: 'What is the stationary component in the hoisting system located at the top of the derrick?',
-            options: ['Traveling Block', 'Crown Block', 'Hook', 'Drawworks'],
-            correctAnswer: 1,
-          },
-        },
-      },
+            question: 'If expected Hook Load is 200,000 lbs and actual reading is 235,000 lbs, what do you do first?',
+            options: [
+              'Continue pulling with more force',
+              'Stop and work the string (gentle up/down movement)',
+              'Increase mud weight',
+              'Ignore the difference and continue'
+            ],
+            correctAnswer: 1
+          }
+        }
+      }
     },
     {
       day: 2,
       type: 'learning',
       content: {
         ar: {
-          title: 'كابل الحفر - الأنواع والمواصفات',
+          title: 'Derrick Load وسعة البرج - متى نوصل للخطر؟',
           explanation: `<section>
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 كابل الحفر (Drilling Line / Wire Rope)</h2>
-
+<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🎯 الهدف من اليوم</h2>
 <p style="margin-bottom: 1rem; line-height: 1.8;">
-كابل الحفر هو العنصر الأساسي الذي ينقل القوة في نظام الرفع. يتكون من أسلاك فولاذية مجدولة بطريقة هندسية دقيقة لتوفير أقصى قوة شد مع المرونة اللازمة للالتفاف حول البكرات. يُعتبر اختيار الكابل المناسب أمراً حيوياً لسلامة العمليات.
+تفهم الفرق بين Hook Load و Derrick Load، وكيف تحسب إذا البرج يتحمل الحمل أو لا.
 </p>
 
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 تركيب كابل الحفر</h2>
+<div style="background: linear-gradient(135deg, #dc262615, #dc262610); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-right: 4px solid #dc2626;">
+<h3 style="color: #dc2626; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">⚠️ سيناريو من الموقع</h3>
+<p style="line-height: 1.8;">
+الشركة تبي تستخدم Drill Collars إضافية (وزن إضافي 150,000 lbs).<br/>
+المشرف يسأل: "البرج يتحمل؟"<br/>
+<strong>شلون تجاوب بثقة؟</strong>
+</p>
+</div>
 
-<div style="background: linear-gradient(135deg, #1e3a5f15, #f9731620); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-right: 4px solid #f97316;">
-<h3 style="color: #f97316; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">📌 مكونات الكابل</h3>
+<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">🔄 الفرق الجوهري</h2>
+
+<div style="display: grid; gap: 1rem; margin: 1rem 0;">
+<div style="background: #dbeafe; padding: 1.5rem; border-radius: 12px; border-right: 4px solid #2563eb;">
+<h4 style="color: #1e40af; font-weight: bold; margin-bottom: 0.75rem;">Hook Load</h4>
+<p>الوزن المعلق على الخطاف فقط</p>
+<p style="font-size: 0.9rem; color: #64748b; margin-top: 0.5rem;">= String Weight × BF</p>
+</div>
+
+<div style="background: #fef3c7; padding: 1.5rem; border-radius: 12px; border-right: 4px solid #f59e0b;">
+<h4 style="color: #92400e; font-weight: bold; margin-bottom: 0.75rem;">Derrick Load</h4>
+<p>الوزن الكلي على البرج = Hook Load + وزن المعدات الثابتة</p>
+<p style="font-size: 0.9rem; color: #64748b; margin-top: 0.5rem;">= Hook Load + Crown Block + Travelling Block + Deadline Anchor</p>
+</div>
+</div>
+
+<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">📐 المعادلة الرئيسية</h2>
+
+<div style="background: #f8fafc; padding: 1.5rem; border-radius: 12px; margin: 1rem 0; border: 2px solid #1e3a5f;">
+<p style="font-size: 1.2rem; font-weight: bold; text-align: center; color: #1e3a5f; direction: ltr;">
+Derrick Load = Hook Load × (n + 2) / n
+</p>
+<p style="text-align: center; margin-top: 1rem; font-size: 0.95rem;">
+حيث n = عدد خطوط الـ Drilling Line
+</p>
+</div>
+
+<h3 style="color: #059669; font-size: 1.2rem; font-weight: bold; margin: 1.5rem 0 0.75rem;">🔍 منين إجت هالمعادلة؟</h3>
+<p style="line-height: 1.8; margin-bottom: 1rem;">
+نظام البكرات يوزع الحمل على عدة خطوط:
+</p>
 <ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2;">
-<li><strong>الأسلاك (Wires):</strong> وحدات البناء الأساسية، مصنوعة من الفولاذ عالي الكربون</li>
-<li><strong>الخيوط (Strands):</strong> مجموعة من الأسلاك ملفوفة حلزونياً</li>
-<li><strong>القلب (Core):</strong> المحور المركزي الذي تُلف حوله الخيوط - قد يكون من الألياف أو الفولاذ</li>
-</ul>
-</div>
-
-<h3 style="color: #f97316; font-size: 1.2rem; font-weight: bold; margin: 1.5rem 0 0.75rem;">تصنيف الكابلات</h3>
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-يُرمز للكابل بأرقام تدل على تركيبته، مثل <strong>6×19</strong> حيث:
-</p>
-<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2; margin-bottom: 1rem;">
-<li>الرقم الأول (6): عدد الخيوط (Strands)</li>
-<li>الرقم الثاني (19): عدد الأسلاك في كل خيط (Wires per Strand)</li>
+<li><strong>n خطوط:</strong> تشيل Hook Load موزع</li>
+<li><strong>+2:</strong> خط Fast Line + خط Dead Line (إضافي على البرج)</li>
+<li>كل ما زادت الخطوط، قل الحمل على كل خط، لكن الحمل الكلي على البرج يبقى</li>
 </ul>
 
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 أنواع كابلات الحفر</h2>
+<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">🧮 مثال حسابي</h2>
 
-<h3 style="color: #f97316; font-size: 1.2rem; font-weight: bold; margin: 1.5rem 0 0.75rem;">1️⃣ كابل 6×19 Class</h3>
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-يحتوي على 6 خيوط، كل خيط يتكون من 19-26 سلك. يتميز بمقاومة عالية للتآكل لكن مرونة أقل. مناسب للأحمال الثقيلة مع انحناءات قليلة.
-</p>
-
-<h3 style="color: #f97316; font-size: 1.2rem; font-weight: bold; margin: 1.5rem 0 0.75rem;">2️⃣ كابل 6×37 Class</h3>
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-يحتوي على أسلاك أكثر وأرفع، مما يوفر مرونة أعلى. الأكثر استخداماً في عمليات الحفر لأنه يتحمل الانحناءات المتكررة حول البكرات.
-</p>
-
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 مصطلحات كابل الحفر الأساسية</h2>
-
-<div style="background: #1e3a5f10; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0;">
-<h3 style="color: #1e3a5f; font-size: 1.1rem; font-weight: bold; margin-bottom: 1rem;">خطوط الكابل في نظام الرفع:</h3>
-
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-<strong style="color: #f97316;">الخط السريع (Fast Line):</strong> الجزء من الكابل الممتد من بكرة رافعة الحفر إلى البكرة التاجية. يتحرك بسرعة عند تشغيل الرافعة ويتعرض لأعلى إجهاد.
-</p>
-
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-<strong style="color: #f97316;">الخط الميت (Dead Line):</strong> الجزء من الكابل الممتد من البكرة التاجية إلى نقطة التثبيت (Deadline Anchor). هذا الخط ثابت ولا يتحرك أثناء التشغيل.
-</p>
-
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-<strong style="color: #f97316;">خطوط السلسلة (String up Lines):</strong> الخطوط الممتدة بين البكرة التاجية والبكرة المتنقلة. عددها يحدد الميزة الميكانيكية للنظام.
-</p>
-</div>
-
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 حساب طول الكابل المطلوب</h2>
-
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-لحساب الطول الإجمالي للكابل المطلوب، نستخدم المعادلة التالية:
-</p>
-
-<div style="background: linear-gradient(135deg, #10b98115, #1e3a5f15); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; text-align: center;">
-<p style="font-size: 1.2rem; font-weight: bold; color: #1e3a5f; direction: ltr;">
-L = n × H + Drum Reserve + Dead Line
-</p>
-<p style="margin-top: 1rem; line-height: 1.8;">
-حيث: n = عدد الخطوط، H = ارتفاع الرفع
-</p>
-</div>
-
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 عوامل تآكل الكابل</h2>
-
-<div style="background: #dc262615; padding: 1rem; border-radius: 8px; margin: 1rem 0; border-right: 4px solid #dc2626;">
-<strong style="color: #dc2626;">⚠️ أسباب تلف الكابل:</strong>
-<ul style="list-style-type: disc; padding-right: 1.5rem; margin-top: 0.5rem; line-height: 2;">
-<li><strong>التآكل (Abrasion):</strong> الاحتكاك مع البكرات والأسطح</li>
-<li><strong>إجهاد الانحناء (Bending Fatigue):</strong> الانحناء المتكرر حول البكرات</li>
-<li><strong>الحمل الزائد (Overloading):</strong> تجاوز حد الشد المسموح</li>
-<li><strong>التآكل الكيميائي (Corrosion):</strong> التعرض للرطوبة والمواد الكيميائية</li>
-<li><strong>التلف الميكانيكي:</strong> الالتواء أو التشابك أو التعقد (Kinking)</li>
+<div style="background: #f0fdf4; padding: 1.5rem; border-radius: 12px; margin: 1rem 0; border: 2px solid #059669;">
+<h4 style="color: #059669; font-weight: bold; margin-bottom: 1rem;">المعطيات:</h4>
+<ul style="list-style: none; padding: 0; line-height: 2;">
+<li>• Hook Load = 400,000 lbs</li>
+<li>• عدد الخطوط n = 10</li>
+<li>• سعة البرج = 500,000 lbs</li>
 </ul>
+
+<h4 style="color: #059669; font-weight: bold; margin: 1.5rem 0 1rem;">الحل:</h4>
+<p style="direction: ltr; margin-bottom: 0.5rem;">
+Derrick Load = 400,000 × (10 + 2) / 10
+</p>
+<p style="direction: ltr; margin-bottom: 0.5rem;">
+= 400,000 × 12 / 10
+</p>
+<p style="direction: ltr; margin-bottom: 1rem;">
+= <strong style="color: #059669;">480,000 lbs</strong>
+</p>
+
+<div style="background: #dcfce7; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+<p style="font-weight: bold; color: #166534;">✅ آمن!</p>
+<p>480,000 < 500,000 (سعة البرج)</p>
+<p style="font-size: 0.9rem; margin-top: 0.5rem;">لكن الهامش فقط 20,000 lbs - لازم حذر!</p>
+</div>
 </div>
 
-<div style="background: linear-gradient(135deg, #10b98115, #1e3a5f15); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0;">
-<h3 style="color: #10b981; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.75rem;">💡 ملخص اليوم</h3>
+<h2 style="color: #dc2626; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">📊 قراءة المؤشرات</h2>
+
+<table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+<tr style="background: #1e3a5f; color: white;">
+<th style="padding: 12px; text-align: right;">المؤشر</th>
+<th style="padding: 12px; text-align: right;">شنو يدل؟</th>
+<th style="padding: 12px; text-align: right;">القرار</th>
+</tr>
+<tr style="background: #f8fafc;">
+<td style="padding: 12px; border: 1px solid #e2e8f0;">Derrick Load > 90% من السعة</td>
+<td style="padding: 12px; border: 1px solid #e2e8f0;">منطقة خطر قريبة</td>
+<td style="padding: 12px; border: 1px solid #e2e8f0;">قلل الحمل أو زد خطوط</td>
+</tr>
+<tr style="background: #ffffff;">
+<td style="padding: 12px; border: 1px solid #e2e8f0;">صوت غير طبيعي من البرج</td>
+<td style="padding: 12px; border: 1px solid #e2e8f0;">إجهاد هيكلي</td>
+<td style="padding: 12px; border: 1px solid #e2e8f0;">وقف فوري + فحص</td>
+</tr>
+<tr style="background: #f8fafc;">
+<td style="padding: 12px; border: 1px solid #e2e8f0;">اهتزاز مفرط أثناء الرفع</td>
+<td style="padding: 12px; border: 1px solid #e2e8f0;">توزيع حمل غير متساوي</td>
+<td style="padding: 12px; border: 1px solid #e2e8f0;">فحص الخطوط + التوازن</td>
+</tr>
+</table>
+
+<div style="background: linear-gradient(135deg, #7c3aed15, #7c3aed10); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-right: 4px solid #7c3aed;">
+<h3 style="color: #7c3aed; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">💡 ربط الأنظمة</h3>
 <ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2;">
-<li>كابل الحفر يتكون من أسلاك وخيوط ملفوفة حول قلب مركزي</li>
-<li>أشهر أنواع الكابلات: 6×19 و 6×37</li>
-<li>يجب فهم الفرق بين Fast Line و Dead Line</li>
-<li>الصيانة الدورية وفحص الكابل ضروري لمنع الحوادث</li>
+<li><strong>عدد الخطوط ↔ كفاءة الرفع:</strong> خطوط أكثر = رفع أبطأ لكن حمل موزع</li>
+<li><strong>وزن الطين ↔ Hook Load:</strong> طين أثقل = Hook Load أقل = Derrick Load أقل</li>
+<li><strong>عمق البئر ↔ تحميل البرج:</strong> كل ما زاد العمق، زاد الحمل</li>
 </ul>
+</div>
+
+<h2 style="color: #dc2626; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">⚡ قرار: متى نزيد عدد الخطوط؟</h2>
+
+<div style="background: #fef2f2; padding: 1.5rem; border-radius: 12px; margin: 1rem 0;">
+<p style="font-weight: bold; color: #dc2626; margin-bottom: 1rem;">نزيد من 10 إلى 12 خط إذا:</p>
+<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2;">
+<li>Hook Load المتوقع سيتجاوز 85% من سعة البرج</li>
+<li>عمليات Casing ثقيلة قادمة</li>
+<li>احتمال Stuck Pipe عالي (نحتاج قوة سحب إضافية)</li>
+</ul>
+
+<p style="font-weight: bold; color: #059669; margin: 1rem 0 0.5rem;">الثمن:</p>
+<p>سرعة الرفع تقل بنسبة ~17%</p>
 </div>
 </section>`,
           keyTerms: [
-            { term: 'الخط السريع (Fast Line)', definition: 'الجزء من الكابل الممتد من رافعة الحفر للبكرة التاجية، يتحرك بسرعة عند التشغيل' },
-            { term: 'الخط الميت (Dead Line)', definition: 'الجزء الثابت من الكابل الممتد من البكرة التاجية لنقطة التثبيت' },
-            { term: 'إجهاد الانحناء (Bending Fatigue)', definition: 'تلف الكابل الناتج عن الانحناء المتكرر حول البكرات' },
-            { term: 'مرساة الخط الميت (Deadline Anchor)', definition: 'نقطة تثبيت الخط الميت، وتستخدم لقياس وزن الحمل' },
+            { term: 'Derrick Load', definition: 'الحمل الكلي على البرج شامل كل المعدات' },
+            { term: 'Crown Block', definition: 'مجموعة البكرات الثابتة أعلى البرج' },
+            { term: 'Travelling Block', definition: 'مجموعة البكرات المتحركة المرتبطة بالخطاف' },
+            { term: 'Drilling Line', definition: 'الكيبل الفولاذي المستخدم في الرفع' }
           ],
           practiceQuestion: {
-            question: 'أي جزء من كابل الحفر يتعرض لأعلى إجهاد ويتحرك بسرعة عند تشغيل الرافعة؟',
-            options: ['الخط الميت', 'الخط السريع', 'القلب المركزي', 'خطوط السلسلة'],
-            correctAnswer: 1,
-          },
+            question: 'البرج سعته 600,000 lbs، Hook Load = 450,000 lbs، عدد الخطوط = 8. هل الوضع آمن؟',
+            options: [
+              'نعم آمن - Derrick Load = 506,250 lbs',
+              'لا خطير - Derrick Load = 562,500 lbs',
+              'نعم آمن - Derrick Load = 450,000 lbs',
+              'لا خطير - Derrick Load = 675,000 lbs'
+            ],
+            correctAnswer: 1
+          }
         },
         en: {
-          title: 'Drilling Line - Types and Specifications',
+          title: 'Derrick Load and Tower Capacity - When Do We Reach Danger?',
           explanation: `<section>
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 Drilling Line (Wire Rope)</h2>
-
+<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🎯 Today's Goal</h2>
 <p style="margin-bottom: 1rem; line-height: 1.8;">
-The drilling line is the essential element that transmits force in the hoisting system. It consists of steel wires braided in a precise engineering pattern to provide maximum tensile strength with the flexibility needed to wrap around sheaves. Selecting the appropriate wire rope is vital for operational safety.
+Understand the difference between Hook Load and Derrick Load, and how to calculate if the derrick can handle the load.
 </p>
 
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 Wire Rope Construction</h2>
+<div style="background: linear-gradient(135deg, #dc262615, #dc262610); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-left: 4px solid #dc2626;">
+<h3 style="color: #dc2626; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">⚠️ Field Scenario</h3>
+<p style="line-height: 1.8;">
+The company wants to use additional Drill Collars (extra weight 150,000 lbs).<br/>
+The supervisor asks: "Can the derrick handle it?"<br/>
+<strong>How do you answer with confidence?</strong>
+</p>
+</div>
 
-<div style="background: linear-gradient(135deg, #1e3a5f15, #f9731620); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-left: 4px solid #f97316;">
-<h3 style="color: #f97316; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">📌 Rope Components</h3>
+<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">📐 Main Formula</h2>
+
+<div style="background: #f8fafc; padding: 1.5rem; border-radius: 12px; margin: 1rem 0; border: 2px solid #1e3a5f;">
+<p style="font-size: 1.2rem; font-weight: bold; text-align: center; color: #1e3a5f;">
+Derrick Load = Hook Load × (n + 2) / n
+</p>
+<p style="text-align: center; margin-top: 1rem; font-size: 0.95rem;">
+Where n = number of Drilling Lines
+</p>
+</div>
+
+<h3 style="color: #059669; font-size: 1.2rem; font-weight: bold; margin: 1.5rem 0 0.75rem;">🔍 Where does this formula come from?</h3>
 <ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 2;">
-<li><strong>Wires:</strong> Basic building units made of high-carbon steel</li>
-<li><strong>Strands:</strong> Groups of wires wound helically together</li>
-<li><strong>Core:</strong> Central axis around which strands are wrapped - can be fiber or steel</li>
-</ul>
-</div>
-
-<h3 style="color: #f97316; font-size: 1.2rem; font-weight: bold; margin: 1.5rem 0 0.75rem;">Wire Rope Classification</h3>
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-Wire ropes are designated by numbers indicating their construction, such as <strong>6×19</strong> where:
-</p>
-<ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 2; margin-bottom: 1rem;">
-<li>First number (6): Number of strands</li>
-<li>Second number (19): Number of wires per strand</li>
+<li><strong>n lines:</strong> Carry distributed Hook Load</li>
+<li><strong>+2:</strong> Fast Line + Dead Line (additional on derrick)</li>
+<li>More lines = less load per line, but total derrick load remains</li>
 </ul>
 
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 Types of Drilling Wire Ropes</h2>
+<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">🧮 Calculation Example</h2>
 
-<h3 style="color: #f97316; font-size: 1.2rem; font-weight: bold; margin: 1.5rem 0 0.75rem;">1️⃣ 6×19 Class</h3>
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-Contains 6 strands with 19-26 wires each. Features high abrasion resistance but lower flexibility. Suitable for heavy loads with few bends.
-</p>
-
-<h3 style="color: #f97316; font-size: 1.2rem; font-weight: bold; margin: 1.5rem 0 0.75rem;">2️⃣ 6×37 Class</h3>
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-Contains more and finer wires, providing higher flexibility. Most commonly used in drilling operations as it withstands repeated bending around sheaves.
-</p>
-
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 Essential Drilling Line Terminology</h2>
-
-<div style="background: #1e3a5f10; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0;">
-<h3 style="color: #1e3a5f; font-size: 1.1rem; font-weight: bold; margin-bottom: 1rem;">Wire Rope Lines in the Hoisting System:</h3>
-
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-<strong style="color: #f97316;">Fast Line:</strong> The section of wire rope extending from the drawworks drum to the crown block. It moves rapidly when the drawworks operates and experiences the highest stress.
-</p>
-
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-<strong style="color: #f97316;">Dead Line:</strong> The section extending from the crown block to the anchor point. This line is stationary and does not move during operation.
-</p>
-
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-<strong style="color: #f97316;">String up Lines:</strong> The lines running between the crown block and traveling block. Their number determines the mechanical advantage.
-</p>
-</div>
-
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 Calculating Required Wire Rope Length</h2>
-
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-To calculate the total required wire rope length, use the following formula:
-</p>
-
-<div style="background: linear-gradient(135deg, #10b98115, #1e3a5f15); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; text-align: center;">
-<p style="font-size: 1.2rem; font-weight: bold; color: #1e3a5f;">
-L = n × H + Drum Reserve + Dead Line
-</p>
-<p style="margin-top: 1rem; line-height: 1.8;">
-Where: n = number of lines, H = hoisting height
-</p>
-</div>
-
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 Wire Rope Wear Factors</h2>
-
-<div style="background: #dc262615; padding: 1rem; border-radius: 8px; margin: 1rem 0; border-left: 4px solid #dc2626;">
-<strong style="color: #dc2626;">⚠️ Causes of Wire Rope Damage:</strong>
-<ul style="list-style-type: disc; padding-left: 1.5rem; margin-top: 0.5rem; line-height: 2;">
-<li><strong>Abrasion:</strong> Friction with sheaves and surfaces</li>
-<li><strong>Bending Fatigue:</strong> Repeated bending around sheaves</li>
-<li><strong>Overloading:</strong> Exceeding allowable tensile limits</li>
-<li><strong>Corrosion:</strong> Exposure to moisture and chemicals</li>
-<li><strong>Mechanical Damage:</strong> Kinking, bird-caging, or crushing</li>
+<div style="background: #f0fdf4; padding: 1.5rem; border-radius: 12px; margin: 1rem 0; border: 2px solid #059669;">
+<h4 style="color: #059669; font-weight: bold; margin-bottom: 1rem;">Given:</h4>
+<ul style="list-style: none; padding: 0; line-height: 2;">
+<li>• Hook Load = 400,000 lbs</li>
+<li>• Number of lines n = 10</li>
+<li>• Derrick capacity = 500,000 lbs</li>
 </ul>
-</div>
 
-<div style="background: linear-gradient(135deg, #10b98115, #1e3a5f15); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0;">
-<h3 style="color: #10b981; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.75rem;">💡 Day Summary</h3>
-<ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 2;">
-<li>Drilling wire rope consists of wires and strands wound around a central core</li>
-<li>Common wire rope types: 6×19 and 6×37</li>
-<li>Understanding Fast Line vs Dead Line is essential</li>
-<li>Regular maintenance and inspection prevents accidents</li>
-</ul>
+<h4 style="color: #059669; font-weight: bold; margin: 1.5rem 0 1rem;">Solution:</h4>
+<p style="margin-bottom: 0.5rem;">
+Derrick Load = 400,000 × (10 + 2) / 10 = <strong style="color: #059669;">480,000 lbs</strong>
+</p>
+
+<div style="background: #dcfce7; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+<p style="font-weight: bold; color: #166534;">✅ Safe!</p>
+<p>480,000 < 500,000 (derrick capacity)</p>
+</div>
 </div>
 </section>`,
           keyTerms: [
-            { term: 'Fast Line', definition: 'The wire rope section from drawworks to crown block that moves rapidly during operation' },
-            { term: 'Dead Line', definition: 'The stationary wire rope section from crown block to the anchor point' },
-            { term: 'Bending Fatigue', definition: 'Wire rope damage resulting from repeated bending around sheaves' },
-            { term: 'Deadline Anchor', definition: 'The dead line attachment point, also used for measuring hook load' },
+            { term: 'Derrick Load', definition: 'Total load on the derrick including all equipment' },
+            { term: 'Crown Block', definition: 'Fixed sheave assembly at top of derrick' },
+            { term: 'Travelling Block', definition: 'Moving sheave assembly connected to hook' },
+            { term: 'Drilling Line', definition: 'Steel cable used for hoisting' }
           ],
           practiceQuestion: {
-            question: 'Which part of the drilling line experiences the highest stress and moves rapidly when the drawworks operates?',
-            options: ['Dead Line', 'Fast Line', 'Core', 'String up Lines'],
-            correctAnswer: 1,
-          },
-        },
-      },
+            question: 'Derrick capacity is 600,000 lbs, Hook Load = 450,000 lbs, lines = 8. Is it safe?',
+            options: [
+              'Yes safe - Derrick Load = 506,250 lbs',
+              'No dangerous - Derrick Load = 562,500 lbs',
+              'Yes safe - Derrick Load = 450,000 lbs',
+              'No dangerous - Derrick Load = 675,000 lbs'
+            ],
+            correctAnswer: 1
+          }
+        }
+      }
     },
     {
       day: 3,
       type: 'learning',
       content: {
         ar: {
-          title: 'رافعة الحفر (Drawworks)',
+          title: 'Ton-Miles وعمر الكيبل - حسابات الصيانة',
           explanation: `<section>
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 رافعة الحفر (Drawworks)</h2>
-
+<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🎯 الهدف من اليوم</h2>
 <p style="margin-bottom: 1rem; line-height: 1.8;">
-رافعة الحفر هي قلب نظام الرفع ومحركه الأساسي. وهي عبارة عن ونش ضخم يوفر القوة اللازمة لرفع وإنزال سلسلة الحفر والمعدات الأخرى. تُعتبر من أكبر وأثقل المعدات على سطح الجهاز، وتتطلب قوة هائلة للتعامل مع الأحمال الثقيلة في الآبار العميقة.
+تتعلم كيف تحسب استهلاك الكيبل (Drilling Line) ومتى لازم تغيره قبل ما ينقطع.
 </p>
 
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 المكونات الرئيسية لرافعة الحفر</h2>
-
-<div style="background: linear-gradient(135deg, #1e3a5f15, #f9731620); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-right: 4px solid #f97316;">
-<h3 style="color: #f97316; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">📌 المكونات الأساسية</h3>
-
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-<strong>1. بكرة الكابل (Drum):</strong> أسطوانة كبيرة يُلف عليها كابل الحفر. تحتوي على أخاديد (Grooves) لتنظيم لف الكابل ومنع تشابكه.
-</p>
-
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-<strong>2. نظام المحركات (Power System):</strong> يوفر القوة لتدوير البكرة. قد يكون:
-</p>
-<ul style="list-style-type: circle; padding-right: 1.5rem; line-height: 1.8; margin-bottom: 1rem;">
-<li>محركات ديزل-ميكانيكية (في الأجهزة القديمة)</li>
-<li>محركات كهربائية DC أو AC (في الأجهزة الحديثة)</li>
-</ul>
-
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-<strong>3. صندوق التروس (Transmission / Gear Box):</strong> ينقل القوة من المحركات للبكرة مع تغيير نسب السرعة والعزم.
-</p>
-
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-<strong>4. نظام الفرامل (Brake System):</strong> للتحكم في سرعة الإنزال وإيقاف الحمل.
+<div style="background: linear-gradient(135deg, #dc262615, #dc262610); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-right: 4px solid #dc2626;">
+<h3 style="color: #dc2626; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">⚠️ سيناريو من الموقع</h3>
+<p style="line-height: 1.8;">
+الكيبل شغال من 3 أسابيع. المشرف يسأل: "متى نغيره؟"<br/>
+ما تقدر تقول "لما يبين عليه التعب" - هذا قرار يبنى على <strong>حسابات</strong>.
 </p>
 </div>
 
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 أنظمة الفرامل في رافعة الحفر</h2>
+<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">📐 مفهوم Ton-Miles</h2>
 
-<h3 style="color: #f97316; font-size: 1.2rem; font-weight: bold; margin: 1.5rem 0 0.75rem;">1️⃣ الفرامل الرئيسية (Main Brake / Band Brake)</h3>
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-فرامل احتكاكية تتكون من شريط معدني يلتف حول طارة (Brake Rim) متصلة بالبكرة. يتم التحكم بها يدوياً عبر ذراع الفرامل (Brake Lever). تُستخدم للتحكم في سرعة الإنزال وإيقاف الحمل.
+<div style="background: #f8fafc; padding: 1.5rem; border-radius: 12px; margin: 1rem 0; border: 2px solid #1e3a5f;">
+<p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1rem;">
+<strong>Ton-Mile:</strong> وحدة قياس الشغل على الكيبل
 </p>
-
-<div style="background: #1e3a5f10; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
-<strong style="color: #1e3a5f;">مكونات الفرامل الرئيسية:</strong>
-<ul style="list-style-type: circle; padding-right: 1.5rem; margin-top: 0.5rem; line-height: 1.8;">
-<li>طارة الفرامل (Brake Rim)</li>
-<li>شريط الفرامل (Brake Band)</li>
-<li>بطانات الاحتكاك (Brake Blocks / Linings)</li>
-<li>نظام التبريد بالماء (Water Cooling System)</li>
-</ul>
-</div>
-
-<h3 style="color: #f97316; font-size: 1.2rem; font-weight: bold; margin: 1.5rem 0 0.75rem;">2️⃣ الفرامل المساعدة (Auxiliary Brake)</h3>
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-تساعد الفرامل الرئيسية في التحكم بالأحمال الثقيلة وتمنع ارتفاع حرارة الفرامل الرئيسية. الأنواع الشائعة:
-</p>
-<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2; margin-bottom: 1rem;">
-<li><strong>الفرامل الكهرومغناطيسية (Electromagnetic Brake / Eddy Current Brake):</strong> تستخدم المجال المغناطيسي لإبطاء الدوران</li>
-<li><strong>الفرامل الهيدروديناميكية (Hydrodynamic Brake):</strong> تستخدم مقاومة السوائل لإبطاء الدوران</li>
-</ul>
-
-<h3 style="color: #f97316; font-size: 1.2rem; font-weight: bold; margin: 1.5rem 0 0.75rem;">3️⃣ فرامل الطوارئ (Emergency Brake)</h3>
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-فرامل أمان تعمل تلقائياً عند فشل الفرامل الرئيسية أو انقطاع الطاقة. عادة من نوع القرص أو القابض.
-</p>
-
-<div style="background: #dc262615; padding: 1rem; border-radius: 8px; margin: 1rem 0; border-right: 4px solid #dc2626;">
-<strong style="color: #dc2626;">⚠️ تحذير أمان:</strong>
-<p style="margin-top: 0.5rem; line-height: 1.8;">
-يجب فحص جميع أنظمة الفرامل قبل كل وردية عمل. فشل الفرامل قد يؤدي إلى سقوط الحمل بسرعة خطيرة وحوادث مميتة.
+<p style="font-size: 1.1rem; line-height: 1.8;">
+= (الحمل بالطن) × (المسافة بالميل)
 </p>
 </div>
 
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 متطلبات القوة لرافعة الحفر</h2>
-
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-تُصنف رافعات الحفر حسب:
-</p>
-
-<div style="background: #1e3a5f10; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0;">
+<h3 style="color: #059669; font-size: 1.2rem; font-weight: bold; margin: 1.5rem 0 0.75rem;">🔍 ليش نستخدم Ton-Miles؟</h3>
 <ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2;">
-<li><strong>قدرة الرفع (Hoisting Capacity):</strong> الحمل الأقصى الذي يمكن رفعه (بالطن)</li>
-<li><strong>قدرة المحرك (Input Horsepower):</strong> القوة المتاحة للتشغيل (بالحصان)</li>
-<li><strong>سرعة الخط السريع (Fast Line Speed):</strong> سرعة سحب الكابل (قدم/دقيقة)</li>
-<li><strong>سعة البكرة (Drum Capacity):</strong> طول الكابل الذي يمكن لفه</li>
+<li>الكيبل ما يتعب من الوقت - يتعب من <strong>الشغل</strong></li>
+<li>حمل ثقيل لمسافة قصيرة = حمل خفيف لمسافة طويلة (نفس التأثير)</li>
+<li>كل كيبل له عمر محدد بـ Ton-Miles (من المصنع)</li>
+</ul>
+
+<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">📊 أنواع العمليات و Ton-Miles</h2>
+
+<div style="background: linear-gradient(135deg, #1e3a5f15, #1e3a5f10); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0;">
+<h4 style="color: #1e3a5f; font-weight: bold; margin-bottom: 1rem;">1. Round Trip (رحلة كاملة - سحب + إنزال)</h4>
+<p style="direction: ltr; font-size: 1.1rem; margin-bottom: 0.5rem;">
+T = (D × W × 2) / (n × 10,560,000)
+</p>
+<p style="font-size: 0.9rem; color: #64748b;">
+D = عمق البئر (ft) | W = وزن الـ String (lbs) | n = عدد الخطوط
+</p>
+</div>
+
+<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">🧮 مثال حسابي</h2>
+
+<div style="background: #f0fdf4; padding: 1.5rem; border-radius: 12px; margin: 1rem 0; border: 2px solid #059669;">
+<h4 style="color: #059669; font-weight: bold; margin-bottom: 1rem;">المعطيات:</h4>
+<ul style="list-style: none; padding: 0; line-height: 2;">
+<li>• عمق البئر = 12,000 ft</li>
+<li>• وزن String بالهواء = 300,000 lbs</li>
+<li>• عدد الخطوط = 10</li>
+<li>• عمر الكيبل المصنعي = 800 Ton-Miles</li>
+</ul>
+
+<h4 style="color: #059669; font-weight: bold; margin: 1.5rem 0 1rem;">الحساب:</h4>
+<p style="direction: ltr; margin-bottom: 0.5rem;">
+T per trip = (12,000 × 300,000 × 2) / (10 × 10,560,000)
+</p>
+<p style="direction: ltr; margin-bottom: 1rem;">
+= 7,200,000,000 / 105,600,000 = <strong style="color: #059669;">68.2 Ton-Miles</strong> لكل رحلة
+</p>
+
+<div style="background: #dcfce7; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+<p style="font-weight: bold;">عدد الرحلات المسموحة:</p>
+<p>800 ÷ 68.2 = <strong>~11.7 رحلة</strong></p>
+<p style="font-size: 0.9rem; margin-top: 0.5rem; color: #166534;">بعد 11 رحلة كاملة، لازم نغير الكيبل!</p>
+</div>
+</div>
+
+<h2 style="color: #dc2626; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">📈 قراءة المؤشرات</h2>
+
+<table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+<tr style="background: #1e3a5f; color: white;">
+<th style="padding: 12px; text-align: right;">المؤشر</th>
+<th style="padding: 12px; text-align: right;">شنو يدل؟</th>
+<th style="padding: 12px; text-align: right;">القرار</th>
+</tr>
+<tr style="background: #f8fafc;">
+<td style="padding: 12px; border: 1px solid #e2e8f0;">Ton-Miles > 80% من العمر</td>
+<td style="padding: 12px; border: 1px solid #e2e8f0;">كيبل قارب ينتهي</td>
+<td style="padding: 12px; border: 1px solid #e2e8f0;">جدول للتغيير قريباً</td>
+</tr>
+<tr style="background: #ffffff;">
+<td style="padding: 12px; border: 1px solid #e2e8f0;">أسلاك مكسورة ظاهرة</td>
+<td style="padding: 12px; border: 1px solid #e2e8f0;">تلف ميكانيكي</td>
+<td style="padding: 12px; border: 1px solid #e2e8f0;">تغيير فوري</td>
+</tr>
+<tr style="background: #f8fafc;">
+<td style="padding: 12px; border: 1px solid #e2e8f0;">قطر الكيبل نقص > 5%</td>
+<td style="padding: 12px; border: 1px solid #e2e8f0;">تآكل/إجهاد</td>
+<td style="padding: 12px; border: 1px solid #e2e8f0;">تغيير + فحص البكرات</td>
+</tr>
+</table>
+
+<div style="background: linear-gradient(135deg, #7c3aed15, #7c3aed10); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-right: 4px solid #7c3aed;">
+<h3 style="color: #7c3aed; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">💡 ربط الأنظمة</h3>
+<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2;">
+<li><strong>عدد الرحلات ↔ تخطيط الحفر:</strong> كل رحلة = استهلاك من عمر الكيبل</li>
+<li><strong>وزن الطين ↔ Ton-Miles:</strong> طين خفيف = Hook Load أعلى = استهلاك أسرع</li>
+<li><strong>نوع الحفرة ↔ عدد الرحلات:</strong> حفرة مشاكلها كثيرة = رحلات أكثر = تغيير كيبل أسرع</li>
 </ul>
 </div>
 
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 تشغيل رافعة الحفر</h2>
+<h2 style="color: #dc2626; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">⚡ قرار: Slip & Cut</h2>
 
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-يتحكم حفار البئر (Driller) في رافعة الحفر من خلال لوحة التحكم التي تشمل:
-</p>
-<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2; margin-bottom: 1rem;">
-<li>ذراع الخانق (Throttle) للتحكم في سرعة المحرك</li>
-<li>ذراع الفرامل للتحكم في السرعة والإيقاف</li>
-<li>مؤشرات الوزن والعمق والسرعة</li>
-</ul>
-
-<div style="background: linear-gradient(135deg, #10b98115, #1e3a5f15); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0;">
-<h3 style="color: #10b981; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.75rem;">💡 ملخص اليوم</h3>
+<div style="background: #fef2f2; padding: 1.5rem; border-radius: 12px; margin: 1rem 0;">
+<p style="font-weight: bold; color: #dc2626; margin-bottom: 1rem;">بدل ما نغير الكيبل كامل، نسوي Slip & Cut:</p>
 <ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2;">
-<li>رافعة الحفر هي قلب نظام الرفع وتوفر القوة لجميع عمليات الرفع والإنزال</li>
-<li>تتكون من بكرة ومحركات وصندوق تروس وأنظمة فرامل متعددة</li>
-<li>أنظمة الفرامل الثلاثة (رئيسية، مساعدة، طوارئ) ضرورية للسلامة</li>
-<li>تُصنف حسب قدرة الرفع وقوة المحرك وسعة البكرة</li>
+<li>نسحب قطعة جديدة من البكرة</li>
+<li>نقطع الجزء المستهلك (عند البكرات)</li>
+<li>يطول عمر الكيبل بتكلفة أقل</li>
 </ul>
+
+<p style="font-weight: bold; color: #1e3a5f; margin: 1rem 0 0.5rem;">متى نسوي Slip & Cut؟</p>
+<p>كل 300-400 Ton-Miles تقريباً (حسب توصيات المصنع)</p>
 </div>
 </section>`,
           keyTerms: [
-            { term: 'بكرة الكابل (Drum)', definition: 'الأسطوانة التي يُلف عليها كابل الحفر في رافعة الحفر' },
-            { term: 'الفرامل الرئيسية (Band Brake)', definition: 'فرامل احتكاكية تتكون من شريط يلتف حول طارة للتحكم في سرعة الإنزال' },
-            { term: 'الفرامل الكهرومغناطيسية (Eddy Current Brake)', definition: 'فرامل مساعدة تستخدم المجال المغناطيسي لإبطاء الدوران' },
-            { term: 'قدرة الرفع (Hoisting Capacity)', definition: 'الحمل الأقصى الذي يمكن لرافعة الحفر رفعه بالطن' },
+            { term: 'Ton-Mile', definition: 'وحدة قياس الشغل المنجز على الكيبل' },
+            { term: 'Slip & Cut', definition: 'عملية تحريك الكيبل وقطع الجزء المستهلك' },
+            { term: 'Round Trip', definition: 'رحلة كاملة = سحب + إنزال سلسلة الحفر' },
+            { term: 'Service Life', definition: 'العمر الافتراضي للكيبل بـ Ton-Miles' }
           ],
           practiceQuestion: {
-            question: 'ما نوع الفرامل التي تعمل تلقائياً عند فشل الفرامل الرئيسية أو انقطاع الطاقة؟',
-            options: ['الفرامل الرئيسية', 'الفرامل الكهرومغناطيسية', 'فرامل الطوارئ', 'الفرامل الهيدروديناميكية'],
-            correctAnswer: 2,
-          },
+            question: 'كيبل عمره 800 Ton-Miles، استهلكنا 650 Ton-Miles. شنو القرار؟',
+            options: [
+              'نكمل - باقي 150 Ton-Miles',
+              'نسوي Slip & Cut ونتابع',
+              'نغير الكيبل فوراً',
+              'نوقف الحفر'
+            ],
+            correctAnswer: 1
+          }
         },
         en: {
-          title: 'Drawworks',
+          title: 'Ton-Miles and Cable Life - Maintenance Calculations',
           explanation: `<section>
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 Drawworks</h2>
-
+<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🎯 Today's Goal</h2>
 <p style="margin-bottom: 1rem; line-height: 1.8;">
-The drawworks is the heart and primary driver of the hoisting system. It is a massive winch that provides the power needed to raise and lower the drill string and other equipment. It is one of the largest and heaviest pieces of equipment on the rig floor, requiring tremendous power to handle heavy loads in deep wells.
+Learn how to calculate drilling line consumption and when to replace it before it breaks.
 </p>
 
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 Main Components of the Drawworks</h2>
-
-<div style="background: linear-gradient(135deg, #1e3a5f15, #f9731620); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-left: 4px solid #f97316;">
-<h3 style="color: #f97316; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">📌 Essential Components</h3>
-
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-<strong>1. Drum:</strong> A large cylinder around which the drilling line is wound. It has grooves to organize the wire rope and prevent tangling.
-</p>
-
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-<strong>2. Power System:</strong> Provides power to rotate the drum. Can be:
-</p>
-<ul style="list-style-type: circle; padding-left: 1.5rem; line-height: 1.8; margin-bottom: 1rem;">
-<li>Diesel-mechanical engines (in older rigs)</li>
-<li>DC or AC electric motors (in modern rigs)</li>
-</ul>
-
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-<strong>3. Transmission / Gear Box:</strong> Transfers power from engines to the drum while changing speed and torque ratios.
-</p>
-
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-<strong>4. Brake System:</strong> Controls lowering speed and stops the load.
+<div style="background: linear-gradient(135deg, #dc262615, #dc262610); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-left: 4px solid #dc2626;">
+<h3 style="color: #dc2626; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">⚠️ Field Scenario</h3>
+<p style="line-height: 1.8;">
+The cable has been running for 3 weeks. Supervisor asks: "When do we change it?"<br/>
+You can't say "when it looks tired" - this decision is based on <strong>calculations</strong>.
 </p>
 </div>
 
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 Drawworks Brake Systems</h2>
+<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">📐 Ton-Miles Concept</h2>
 
-<h3 style="color: #f97316; font-size: 1.2rem; font-weight: bold; margin: 1.5rem 0 0.75rem;">1️⃣ Main Brake (Band Brake)</h3>
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-A friction brake consisting of a metal band wrapped around a brake rim connected to the drum. Controlled manually via the brake lever. Used to control lowering speed and stop the load.
+<div style="background: #f8fafc; padding: 1.5rem; border-radius: 12px; margin: 1rem 0; border: 2px solid #1e3a5f;">
+<p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1rem;">
+<strong>Ton-Mile:</strong> Unit measuring work done on the cable
 </p>
-
-<div style="background: #1e3a5f10; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
-<strong style="color: #1e3a5f;">Main Brake Components:</strong>
-<ul style="list-style-type: circle; padding-left: 1.5rem; margin-top: 0.5rem; line-height: 1.8;">
-<li>Brake Rim</li>
-<li>Brake Band</li>
-<li>Brake Blocks / Linings</li>
-<li>Water Cooling System</li>
-</ul>
-</div>
-
-<h3 style="color: #f97316; font-size: 1.2rem; font-weight: bold; margin: 1.5rem 0 0.75rem;">2️⃣ Auxiliary Brake</h3>
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-Assists the main brake in controlling heavy loads and prevents main brake overheating. Common types:
-</p>
-<ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 2; margin-bottom: 1rem;">
-<li><strong>Electromagnetic Brake (Eddy Current Brake):</strong> Uses magnetic field to slow rotation</li>
-<li><strong>Hydrodynamic Brake:</strong> Uses fluid resistance to slow rotation</li>
-</ul>
-
-<h3 style="color: #f97316; font-size: 1.2rem; font-weight: bold; margin: 1.5rem 0 0.75rem;">3️⃣ Emergency Brake</h3>
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-Safety brake that activates automatically when main brakes fail or power is lost. Usually disc or clutch type.
-</p>
-
-<div style="background: #dc262615; padding: 1rem; border-radius: 8px; margin: 1rem 0; border-left: 4px solid #dc2626;">
-<strong style="color: #dc2626;">⚠️ Safety Warning:</strong>
-<p style="margin-top: 0.5rem; line-height: 1.8;">
-All brake systems must be inspected before each shift. Brake failure can cause the load to drop at dangerous speeds, leading to fatal accidents.
+<p style="font-size: 1.1rem; line-height: 1.8;">
+= (Load in tons) × (Distance in miles)
 </p>
 </div>
 
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 Drawworks Power Requirements</h2>
+<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">🧮 Calculation Example</h2>
 
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-Drawworks are rated by:
+<div style="background: #f0fdf4; padding: 1.5rem; border-radius: 12px; margin: 1rem 0; border: 2px solid #059669;">
+<h4 style="color: #059669; font-weight: bold; margin-bottom: 1rem;">Given:</h4>
+<ul style="list-style: none; padding: 0; line-height: 2;">
+<li>• Well depth = 12,000 ft</li>
+<li>• String weight in air = 300,000 lbs</li>
+<li>• Number of lines = 10</li>
+<li>• Cable service life = 800 Ton-Miles</li>
+</ul>
+
+<h4 style="color: #059669; font-weight: bold; margin: 1.5rem 0 1rem;">Calculation:</h4>
+<p style="margin-bottom: 0.5rem;">
+T per trip = (12,000 × 300,000 × 2) / (10 × 10,560,000)
+</p>
+<p style="margin-bottom: 1rem;">
+= <strong style="color: #059669;">68.2 Ton-Miles</strong> per trip
 </p>
 
-<div style="background: #1e3a5f10; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0;">
-<ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 2;">
-<li><strong>Hoisting Capacity:</strong> Maximum load that can be lifted (in tons)</li>
-<li><strong>Input Horsepower:</strong> Available power for operation</li>
-<li><strong>Fast Line Speed:</strong> Wire rope pulling speed (ft/min)</li>
-<li><strong>Drum Capacity:</strong> Length of wire rope that can be wound</li>
-</ul>
+<div style="background: #dcfce7; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+<p style="font-weight: bold;">Allowed trips:</p>
+<p>800 ÷ 68.2 = <strong>~11.7 trips</strong></p>
 </div>
-
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 Drawworks Operation</h2>
-
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-The driller controls the drawworks through a control panel that includes:
-</p>
-<ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 2; margin-bottom: 1rem;">
-<li>Throttle for engine speed control</li>
-<li>Brake lever for speed and stop control</li>
-<li>Weight, depth, and speed indicators</li>
-</ul>
-
-<div style="background: linear-gradient(135deg, #10b98115, #1e3a5f15); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0;">
-<h3 style="color: #10b981; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.75rem;">💡 Day Summary</h3>
-<ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 2;">
-<li>The drawworks is the heart of the hoisting system providing power for all hoisting operations</li>
-<li>Consists of drum, engines, transmission, and multiple brake systems</li>
-<li>Three brake systems (main, auxiliary, emergency) are essential for safety</li>
-<li>Rated by hoisting capacity, engine power, and drum capacity</li>
-</ul>
 </div>
 </section>`,
           keyTerms: [
-            { term: 'Drum', definition: 'The cylinder around which the drilling line is wound in the drawworks' },
-            { term: 'Band Brake', definition: 'Friction brake consisting of a band wrapped around a rim to control lowering speed' },
-            { term: 'Eddy Current Brake', definition: 'Auxiliary brake using magnetic field to slow rotation' },
-            { term: 'Hoisting Capacity', definition: 'Maximum load the drawworks can lift in tons' },
+            { term: 'Ton-Mile', definition: 'Unit measuring work done on the cable' },
+            { term: 'Slip & Cut', definition: 'Process of moving cable and cutting worn section' },
+            { term: 'Round Trip', definition: 'Complete trip = pulling + running drill string' },
+            { term: 'Service Life', definition: 'Expected cable life in Ton-Miles' }
           ],
           practiceQuestion: {
-            question: 'What type of brake activates automatically when main brakes fail or power is lost?',
-            options: ['Main Brake', 'Electromagnetic Brake', 'Emergency Brake', 'Hydrodynamic Brake'],
-            correctAnswer: 2,
-          },
-        },
-      },
+            question: 'Cable life is 800 Ton-Miles, we used 650 Ton-Miles. What\'s the decision?',
+            options: [
+              'Continue - 150 Ton-Miles remaining',
+              'Do Slip & Cut and continue',
+              'Replace cable immediately',
+              'Stop drilling'
+            ],
+            correctAnswer: 1
+          }
+        }
+      }
     },
     {
       day: 4,
       type: 'learning',
       content: {
         ar: {
-          title: 'حسابات نظام الرفع',
+          title: 'Drawworks Power - حسابات قدرة السحب',
           explanation: `<section>
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 حسابات نظام الرفع</h2>
-
+<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🎯 الهدف من اليوم</h2>
 <p style="margin-bottom: 1rem; line-height: 1.8;">
-فهم حسابات نظام الرفع ضروري لتصميم وتشغيل الجهاز بكفاءة وأمان. تشمل هذه الحسابات الميزة الميكانيكية، حمولة الخطاف، كفاءة النظام، وقوة الشد في الكابل.
+تفهم كيف تحسب قدرة الـ Drawworks المطلوبة وتقرر إذا الوينش يتحمل العملية أو لا.
 </p>
 
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 الميزة الميكانيكية (Mechanical Advantage)</h2>
-
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-الميزة الميكانيكية هي نسبة القوة الناتجة (الحمل المرفوع) إلى القوة المبذولة (الشد في الخط السريع). في نظام البكرات المركب:
-</p>
-
-<div style="background: linear-gradient(135deg, #10b98115, #1e3a5f15); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; text-align: center;">
-<p style="font-size: 1.3rem; font-weight: bold; color: #1e3a5f; direction: ltr; margin-bottom: 1rem;">
-MA = n (الميزة الميكانيكية المثالية)
-</p>
+<div style="background: linear-gradient(135deg, #dc262615, #dc262610); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-right: 4px solid #dc2626;">
+<h3 style="color: #dc2626; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">⚠️ سيناريو من الموقع</h3>
 <p style="line-height: 1.8;">
-حيث: n = عدد الخطوط بين البكرة التاجية والبكرة المتنقلة
+البئر عميق (15,000 ft) والـ Casing ثقيل. الدريلر يشتكي: "الوينش بطيء جداً!"<br/>
+<strong>شنو المشكلة؟ وشنو الحل؟</strong>
 </p>
 </div>
 
-<div style="background: #1e3a5f10; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0;">
-<h3 style="color: #f97316; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.75rem;">📌 مثال:</h3>
-<p style="line-height: 1.8;">
-إذا كان عدد الخطوط = 10، فإن الميزة الميكانيكية المثالية = 10
-</p>
-<p style="line-height: 1.8; margin-top: 0.5rem;">
-أي أن قوة 1 طن في الخط السريع يمكن أن ترفع حملاً قدره 10 طن (في الظروف المثالية)
-</p>
-</div>
+<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">📐 معادلة القدرة</h2>
 
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 كفاءة نظام البكرات (Block Efficiency)</h2>
-
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-في الواقع، هناك فقدان في الطاقة بسبب الاحتكاك في البكرات. كفاءة كل بكرة تتراوح عادة بين 96-98%. يتم حساب الكفاءة الكلية:
+<div style="background: #f8fafc; padding: 1.5rem; border-radius: 12px; margin: 1rem 0; border: 2px solid #1e3a5f;">
+<p style="font-size: 1.2rem; font-weight: bold; text-align: center; color: #1e3a5f; direction: ltr;">
+Power (HP) = (Hook Load × Hoisting Speed) / 33,000
 </p>
-
-<div style="background: linear-gradient(135deg, #10b98115, #1e3a5f15); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; text-align: center;">
-<p style="font-size: 1.2rem; font-weight: bold; color: #1e3a5f; direction: ltr; margin-bottom: 1rem;">
-K = (E^n - 1) / (n × E^(n-1) × (E - 1))
-</p>
-<p style="line-height: 1.8;">
-حيث: K = عامل الكفاءة، E = كفاءة البكرة الواحدة، n = عدد الخطوط
+<p style="text-align: center; margin-top: 0.75rem; font-size: 0.95rem;">
+Hook Load بـ lbs | Speed بـ ft/min | 33,000 = ثابت التحويل
 </p>
 </div>
 
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-أو يمكن استخدام الصيغة المبسطة:
-</p>
-
-<div style="background: #f9731620; padding: 1rem; border-radius: 8px; margin: 1rem 0; text-align: center;">
-<p style="font-size: 1.2rem; font-weight: bold; color: #1e3a5f; direction: ltr;">
-K ≈ E^(n/2)
-</p>
-</div>
-
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 حمولة الخطاف (Hook Load)</h2>
-
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-حمولة الخطاف هي الوزن الإجمالي المعلق من الخطاف، وتشمل:
-</p>
-
-<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2; margin-bottom: 1rem;">
-<li>وزن البكرة المتنقلة والخطاف والمعدات المساعدة</li>
-<li>وزن سلسلة الحفر في الهواء</li>
-<li>ناقص قوة الطفو (Buoyancy) من سائل الحفر</li>
-</ul>
-
-<div style="background: linear-gradient(135deg, #10b98115, #1e3a5f15); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; text-align: center;">
-<p style="font-size: 1.2rem; font-weight: bold; color: #1e3a5f; direction: ltr; margin-bottom: 1rem;">
-Hook Load = W_air × BF + W_TB
-</p>
-<p style="line-height: 1.8; direction: ltr;">
-BF (Buoyancy Factor) = 1 - (MW / 65.5)
-</p>
-<p style="line-height: 1.8; margin-top: 0.5rem;">
-حيث: MW = وزن سائل الحفر (ppg)
-</p>
-</div>
-
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 قوة الشد في الخط السريع (Fast Line Tension)</h2>
-
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-لحساب الشد الفعلي في الخط السريع مع الأخذ بالاعتبار الكفاءة:
-</p>
-
-<div style="background: linear-gradient(135deg, #10b98115, #1e3a5f15); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; text-align: center;">
-<p style="font-size: 1.2rem; font-weight: bold; color: #1e3a5f; direction: ltr;">
-F_fast = Hook Load / (n × K)
-</p>
-</div>
-
-<div style="background: #1e3a5f10; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0;">
-<h3 style="color: #f97316; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.75rem;">📌 مثال محلول:</h3>
-<p style="line-height: 1.8; margin-bottom: 0.5rem;"><strong>المعطيات:</strong></p>
-<ul style="list-style-type: circle; padding-right: 1.5rem; line-height: 1.8; margin-bottom: 1rem;">
-<li>حمولة الخطاف = 400,000 رطل</li>
-<li>عدد الخطوط (n) = 10</li>
-<li>كفاءة البكرة (E) = 0.96</li>
-</ul>
-<p style="line-height: 1.8;"><strong>الحل:</strong></p>
-<p style="line-height: 1.8; direction: ltr;">K ≈ 0.96^5 = 0.815</p>
-<p style="line-height: 1.8; direction: ltr;">F_fast = 400,000 / (10 × 0.815) = 49,080 lb</p>
-</div>
-
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 الشد في الخط الميت (Dead Line Tension)</h2>
-
-<div style="background: linear-gradient(135deg, #10b98115, #1e3a5f15); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; text-align: center;">
-<p style="font-size: 1.2rem; font-weight: bold; color: #1e3a5f; direction: ltr;">
-F_dead = F_fast × E^n
-</p>
-</div>
-
-<div style="background: #dc262615; padding: 1rem; border-radius: 8px; margin: 1rem 0; border-right: 4px solid #dc2626;">
-<strong style="color: #dc2626;">⚠️ ملاحظة هامة:</strong>
-<p style="margin-top: 0.5rem; line-height: 1.8;">
-الخط الميت يتعرض لأقل شد في النظام، لذا يُستخدم لقياس حمولة الخطاف عبر خلية الحمل (Load Cell) المثبتة على مرساة الخط الميت.
-</p>
-</div>
-
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 عامل الأمان (Safety Factor)</h2>
-
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-يجب دائماً حساب عامل الأمان للتأكد من أن الكابل يتحمل الحمل بأمان:
-</p>
-
-<div style="background: linear-gradient(135deg, #10b98115, #1e3a5f15); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; text-align: center;">
-<p style="font-size: 1.2rem; font-weight: bold; color: #1e3a5f; direction: ltr;">
-SF = Breaking Strength / F_fast
-</p>
-<p style="margin-top: 0.5rem; line-height: 1.8;">
-يجب أن يكون SF ≥ 2 للتشغيل الآمن
-</p>
-</div>
-
-<div style="background: linear-gradient(135deg, #10b98115, #1e3a5f15); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0;">
-<h3 style="color: #10b981; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.75rem;">💡 ملخص اليوم</h3>
+<h3 style="color: #059669; font-size: 1.2rem; font-weight: bold; margin: 1.5rem 0 0.75rem;">🔍 منين إجت هالمعادلة؟</h3>
 <ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2;">
-<li>الميزة الميكانيكية المثالية تساوي عدد خطوط الكابل</li>
-<li>كفاءة النظام الفعلية أقل من المثالية بسبب احتكاك البكرات</li>
-<li>الخط السريع يتحمل أعلى شد في النظام</li>
-<li>عامل الأمان يجب أن يكون 2 أو أكثر</li>
+<li><strong>القدرة = القوة × السرعة:</strong> قانون فيزيائي أساسي</li>
+<li><strong>33,000:</strong> تحويل ft-lbs/min إلى Horsepower</li>
+<li>كل ما زاد الحمل أو السرعة، احتجنا قدرة أكبر</li>
+</ul>
+
+<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">🧮 مثال حسابي</h2>
+
+<div style="background: #f0fdf4; padding: 1.5rem; border-radius: 12px; margin: 1rem 0; border: 2px solid #059669;">
+<h4 style="color: #059669; font-weight: bold; margin-bottom: 1rem;">المعطيات:</h4>
+<ul style="list-style: none; padding: 0; line-height: 2;">
+<li>• Hook Load = 400,000 lbs</li>
+<li>• السرعة المطلوبة = 60 ft/min</li>
+<li>• قدرة الـ Drawworks = 1,500 HP</li>
+<li>• كفاءة النظام = 85%</li>
+</ul>
+
+<h4 style="color: #059669; font-weight: bold; margin: 1.5rem 0 1rem;">الحساب:</h4>
+<p style="margin-bottom: 0.5rem;"><strong>1. القدرة المطلوبة نظرياً:</strong></p>
+<p style="direction: ltr; margin-bottom: 1rem;">
+P = (400,000 × 60) / 33,000 = 727 HP
+</p>
+
+<p style="margin-bottom: 0.5rem;"><strong>2. القدرة الفعلية المطلوبة (مع الكفاءة):</strong></p>
+<p style="direction: ltr; margin-bottom: 1rem;">
+P actual = 727 / 0.85 = <strong style="color: #059669;">855 HP</strong>
+</p>
+
+<div style="background: #dcfce7; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+<p style="font-weight: bold; color: #166534;">✅ الوينش يتحمل!</p>
+<p>855 HP < 1,500 HP (قدرة الوينش)</p>
+<p style="font-size: 0.9rem; margin-top: 0.5rem;">الهامش = 645 HP للطوارئ</p>
+</div>
+</div>
+
+<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">📊 العلاقة العكسية: الحمل vs السرعة</h2>
+
+<div style="background: linear-gradient(135deg, #f59e0b15, #f59e0b10); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-right: 4px solid #f59e0b;">
+<p style="line-height: 1.8; margin-bottom: 1rem;">
+بقدرة ثابتة، لازم توازن بين:
+</p>
+<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2;">
+<li><strong>حمل عالي:</strong> سرعة رفع أبطأ</li>
+<li><strong>سرعة عالية:</strong> حمل أقل فقط</li>
+</ul>
+
+<table style="width: 100%; border-collapse: collapse; margin-top: 1rem;">
+<tr style="background: #1e3a5f; color: white;">
+<th style="padding: 10px; text-align: right;">Hook Load (lbs)</th>
+<th style="padding: 10px; text-align: right;">Max Speed (ft/min)</th>
+</tr>
+<tr style="background: #f8fafc;">
+<td style="padding: 10px; border: 1px solid #e2e8f0;">200,000</td>
+<td style="padding: 10px; border: 1px solid #e2e8f0;">120</td>
+</tr>
+<tr style="background: #ffffff;">
+<td style="padding: 10px; border: 1px solid #e2e8f0;">400,000</td>
+<td style="padding: 10px; border: 1px solid #e2e8f0;">60</td>
+</tr>
+<tr style="background: #f8fafc;">
+<td style="padding: 10px; border: 1px solid #e2e8f0;">600,000</td>
+<td style="padding: 10px; border: 1px solid #e2e8f0;">40</td>
+</tr>
+</table>
+</div>
+
+<h2 style="color: #dc2626; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">⚡ قرارات عملية</h2>
+
+<table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+<tr style="background: #1e3a5f; color: white;">
+<th style="padding: 12px; text-align: right;">الموقف</th>
+<th style="padding: 12px; text-align: right;">المشكلة</th>
+<th style="padding: 12px; text-align: right;">الحل</th>
+</tr>
+<tr style="background: #f8fafc;">
+<td style="padding: 12px; border: 1px solid #e2e8f0;">رحلة بطيئة جداً</td>
+<td style="padding: 12px; border: 1px solid #e2e8f0;">الحمل قريب من الحد الأقصى</td>
+<td style="padding: 12px; border: 1px solid #e2e8f0;">زيادة وزن الطين (يقلل Hook Load)</td>
+</tr>
+<tr style="background: #ffffff;">
+<td style="padding: 12px; border: 1px solid #e2e8f0;">Drawworks يسخن</td>
+<td style="padding: 12px; border: 1px solid #e2e8f0;">تجاوز القدرة المستمرة</td>
+<td style="padding: 12px; border: 1px solid #e2e8f0;">إبطاء + فترات راحة</td>
+</tr>
+<tr style="background: #f8fafc;">
+<td style="padding: 12px; border: 1px solid #e2e8f0;">إنزال Casing ثقيل</td>
+<td style="padding: 12px; border: 1px solid #e2e8f0;">سرعة إنزال محدودة</td>
+<td style="padding: 12px; border: 1px solid #e2e8f0;">استخدام البريك بكفاءة</td>
+</tr>
+</table>
+
+<div style="background: linear-gradient(135deg, #7c3aed15, #7c3aed10); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-right: 4px solid #7c3aed;">
+<h3 style="color: #7c3aed; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">💡 ربط الأنظمة</h3>
+<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2;">
+<li><strong>Drawworks ↔ برنامج الحفر:</strong> عمق أكبر = String أثقل = رحلات أبطأ</li>
+<li><strong>القدرة ↔ Rig Selection:</strong> بئر عميق يحتاج Drawworks أقوى</li>
+<li><strong>السرعة ↔ التكلفة:</strong> رحلة أبطأ = وقت أكثر = تكلفة أعلى</li>
 </ul>
 </div>
 </section>`,
           keyTerms: [
-            { term: 'الميزة الميكانيكية (Mechanical Advantage)', definition: 'نسبة الحمل المرفوع إلى القوة المبذولة، تساوي عدد الخطوط في النظام المثالي' },
-            { term: 'عامل الطفو (Buoyancy Factor)', definition: 'معامل يقلل الوزن الظاهري للمعدات المغمورة في سائل الحفر' },
-            { term: 'عامل الكفاءة (K Factor)', definition: 'معامل يعبر عن فقدان الطاقة بسبب الاحتكاك في البكرات' },
-            { term: 'عامل الأمان (Safety Factor)', definition: 'نسبة قوة الكسر للكابل إلى الشد الفعلي، يجب أن يكون 2 أو أكثر' },
+            { term: 'Drawworks', definition: 'الوينش الرئيسي للرفع والإنزال' },
+            { term: 'Horsepower (HP)', definition: 'وحدة قياس القدرة' },
+            { term: 'Hoisting Speed', definition: 'سرعة الرفع (ft/min)' },
+            { term: 'Mechanical Efficiency', definition: 'نسبة القدرة المستفادة من الإجمالية' }
           ],
           practiceQuestion: {
-            question: 'إذا كان عدد الخطوط 8 وكفاءة كل بكرة 96%، ما هي الكفاءة التقريبية للنظام (K)؟',
-            options: ['0.96', '0.85', '0.92', '0.78'],
-            correctAnswer: 1,
-          },
+            question: 'Drawworks قدرته 2,000 HP، Hook Load = 500,000 lbs. شنو أقصى سرعة رفع (كفاءة 80%)؟',
+            options: [
+              '132 ft/min',
+              '106 ft/min',
+              '85 ft/min',
+              '66 ft/min'
+            ],
+            correctAnswer: 1
+          }
         },
         en: {
-          title: 'Hoisting System Calculations',
+          title: 'Drawworks Power - Hoisting Capacity Calculations',
           explanation: `<section>
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 Hoisting System Calculations</h2>
-
+<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🎯 Today's Goal</h2>
 <p style="margin-bottom: 1rem; line-height: 1.8;">
-Understanding hoisting system calculations is essential for efficient and safe rig design and operation. These calculations include mechanical advantage, hook load, system efficiency, and wire rope tension.
+Understand how to calculate required Drawworks power and decide if the winch can handle the operation.
 </p>
 
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 Mechanical Advantage (MA)</h2>
+<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">📐 Power Formula</h2>
 
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-Mechanical advantage is the ratio of output force (lifted load) to input force (fast line tension). In a block and tackle system:
-</p>
-
-<div style="background: linear-gradient(135deg, #10b98115, #1e3a5f15); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; text-align: center;">
-<p style="font-size: 1.3rem; font-weight: bold; color: #1e3a5f; margin-bottom: 1rem;">
-MA = n (Ideal Mechanical Advantage)
-</p>
-<p style="line-height: 1.8;">
-Where: n = number of lines between crown and traveling blocks
+<div style="background: #f8fafc; padding: 1.5rem; border-radius: 12px; margin: 1rem 0; border: 2px solid #1e3a5f;">
+<p style="font-size: 1.2rem; font-weight: bold; text-align: center; color: #1e3a5f;">
+Power (HP) = (Hook Load × Hoisting Speed) / 33,000
 </p>
 </div>
 
-<div style="background: #1e3a5f10; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0;">
-<h3 style="color: #f97316; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.75rem;">📌 Example:</h3>
-<p style="line-height: 1.8;">
-If number of lines = 10, then ideal mechanical advantage = 10
-</p>
-<p style="line-height: 1.8; margin-top: 0.5rem;">
-Meaning 1 ton of force on the fast line can lift 10 tons (under ideal conditions)
-</p>
-</div>
+<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">🧮 Calculation Example</h2>
 
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 Block Efficiency</h2>
-
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-In reality, energy is lost due to friction in the sheaves. Each sheave efficiency typically ranges from 96-98%. Total efficiency is calculated as:
-</p>
-
-<div style="background: linear-gradient(135deg, #10b98115, #1e3a5f15); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; text-align: center;">
-<p style="font-size: 1.2rem; font-weight: bold; color: #1e3a5f; margin-bottom: 1rem;">
-K = (E^n - 1) / (n × E^(n-1) × (E - 1))
-</p>
-<p style="line-height: 1.8;">
-Where: K = efficiency factor, E = single sheave efficiency, n = number of lines
-</p>
-</div>
-
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-Or use the simplified formula:
-</p>
-
-<div style="background: #f9731620; padding: 1rem; border-radius: 8px; margin: 1rem 0; text-align: center;">
-<p style="font-size: 1.2rem; font-weight: bold; color: #1e3a5f;">
-K ≈ E^(n/2)
-</p>
-</div>
-
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 Hook Load</h2>
-
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-Hook load is the total weight suspended from the hook, including:
-</p>
-
-<ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 2; margin-bottom: 1rem;">
-<li>Weight of traveling block, hook, and auxiliary equipment</li>
-<li>Weight of drill string in air</li>
-<li>Minus buoyancy force from drilling fluid</li>
+<div style="background: #f0fdf4; padding: 1.5rem; border-radius: 12px; margin: 1rem 0; border: 2px solid #059669;">
+<h4 style="color: #059669; font-weight: bold; margin-bottom: 1rem;">Given:</h4>
+<ul style="list-style: none; padding: 0; line-height: 2;">
+<li>• Hook Load = 400,000 lbs</li>
+<li>• Required speed = 60 ft/min</li>
+<li>• Drawworks capacity = 1,500 HP</li>
+<li>• System efficiency = 85%</li>
 </ul>
 
-<div style="background: linear-gradient(135deg, #10b98115, #1e3a5f15); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; text-align: center;">
-<p style="font-size: 1.2rem; font-weight: bold; color: #1e3a5f; margin-bottom: 1rem;">
-Hook Load = W_air × BF + W_TB
+<h4 style="color: #059669; font-weight: bold; margin: 1.5rem 0 1rem;">Solution:</h4>
+<p style="margin-bottom: 0.5rem;"><strong>1. Theoretical power:</strong></p>
+<p style="margin-bottom: 1rem;">
+P = (400,000 × 60) / 33,000 = 727 HP
 </p>
-<p style="line-height: 1.8;">
-BF (Buoyancy Factor) = 1 - (MW / 65.5)
+
+<p style="margin-bottom: 0.5rem;"><strong>2. Actual power (with efficiency):</strong></p>
+<p style="margin-bottom: 1rem;">
+P actual = 727 / 0.85 = <strong style="color: #059669;">855 HP</strong>
 </p>
-<p style="line-height: 1.8; margin-top: 0.5rem;">
-Where: MW = mud weight (ppg)
-</p>
+
+<div style="background: #dcfce7; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+<p style="font-weight: bold; color: #166534;">✅ Drawworks can handle it!</p>
+<p>855 HP < 1,500 HP capacity</p>
 </div>
-
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 Fast Line Tension</h2>
-
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-To calculate actual fast line tension considering efficiency:
-</p>
-
-<div style="background: linear-gradient(135deg, #10b98115, #1e3a5f15); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; text-align: center;">
-<p style="font-size: 1.2rem; font-weight: bold; color: #1e3a5f;">
-F_fast = Hook Load / (n × K)
-</p>
-</div>
-
-<div style="background: #1e3a5f10; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0;">
-<h3 style="color: #f97316; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.75rem;">📌 Solved Example:</h3>
-<p style="line-height: 1.8; margin-bottom: 0.5rem;"><strong>Given:</strong></p>
-<ul style="list-style-type: circle; padding-left: 1.5rem; line-height: 1.8; margin-bottom: 1rem;">
-<li>Hook Load = 400,000 lb</li>
-<li>Number of lines (n) = 10</li>
-<li>Sheave efficiency (E) = 0.96</li>
-</ul>
-<p style="line-height: 1.8;"><strong>Solution:</strong></p>
-<p style="line-height: 1.8;">K ≈ 0.96^5 = 0.815</p>
-<p style="line-height: 1.8;">F_fast = 400,000 / (10 × 0.815) = 49,080 lb</p>
-</div>
-
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 Dead Line Tension</h2>
-
-<div style="background: linear-gradient(135deg, #10b98115, #1e3a5f15); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; text-align: center;">
-<p style="font-size: 1.2rem; font-weight: bold; color: #1e3a5f;">
-F_dead = F_fast × E^n
-</p>
-</div>
-
-<div style="background: #dc262615; padding: 1rem; border-radius: 8px; margin: 1rem 0; border-left: 4px solid #dc2626;">
-<strong style="color: #dc2626;">⚠️ Important Note:</strong>
-<p style="margin-top: 0.5rem; line-height: 1.8;">
-The dead line experiences the lowest tension in the system, which is why it's used to measure hook load via a load cell mounted on the deadline anchor.
-</p>
-</div>
-
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 Safety Factor</h2>
-
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-Always calculate the safety factor to ensure the wire rope can safely handle the load:
-</p>
-
-<div style="background: linear-gradient(135deg, #10b98115, #1e3a5f15); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; text-align: center;">
-<p style="font-size: 1.2rem; font-weight: bold; color: #1e3a5f;">
-SF = Breaking Strength / F_fast
-</p>
-<p style="margin-top: 0.5rem; line-height: 1.8;">
-SF should be ≥ 2 for safe operation
-</p>
-</div>
-
-<div style="background: linear-gradient(135deg, #10b98115, #1e3a5f15); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0;">
-<h3 style="color: #10b981; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.75rem;">💡 Day Summary</h3>
-<ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 2;">
-<li>Ideal mechanical advantage equals the number of lines</li>
-<li>Actual system efficiency is less than ideal due to sheave friction</li>
-<li>Fast line experiences the highest tension in the system</li>
-<li>Safety factor must be 2 or greater</li>
-</ul>
 </div>
 </section>`,
           keyTerms: [
-            { term: 'Mechanical Advantage', definition: 'Ratio of lifted load to applied force, equals number of lines in ideal system' },
-            { term: 'Buoyancy Factor', definition: 'Factor reducing apparent weight of equipment submerged in drilling fluid' },
-            { term: 'K Factor (Efficiency Factor)', definition: 'Factor expressing energy loss due to sheave friction' },
-            { term: 'Safety Factor', definition: 'Ratio of wire rope breaking strength to actual tension, should be 2 or more' },
+            { term: 'Drawworks', definition: 'Main hoisting winch' },
+            { term: 'Horsepower (HP)', definition: 'Unit of power measurement' },
+            { term: 'Hoisting Speed', definition: 'Lifting speed (ft/min)' },
+            { term: 'Mechanical Efficiency', definition: 'Ratio of useful power to total power' }
           ],
           practiceQuestion: {
-            question: 'If the number of lines is 8 and each sheave efficiency is 96%, what is the approximate system efficiency (K)?',
-            options: ['0.96', '0.85', '0.92', '0.78'],
-            correctAnswer: 1,
-          },
-        },
-      },
+            question: 'Drawworks capacity is 2,000 HP, Hook Load = 500,000 lbs. Max hoisting speed (80% efficiency)?',
+            options: [
+              '132 ft/min',
+              '106 ft/min',
+              '85 ft/min',
+              '66 ft/min'
+            ],
+            correctAnswer: 1
+          }
+        }
+      }
     },
     {
       day: 5,
       type: 'learning',
       content: {
         ar: {
-          title: 'صيانة الكابل وحساب Ton-Mile',
+          title: 'تحليل سيناريو شامل - مشكلة رفع في الموقع',
           explanation: `<section>
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 صيانة كابل الحفر والسلامة</h2>
-
+<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🎯 الهدف من اليوم</h2>
 <p style="margin-bottom: 1rem; line-height: 1.8;">
-صيانة كابل الحفر من أهم متطلبات السلامة في عمليات الحفر. الكابل التالف قد يؤدي إلى كوارث، لذا يجب اتباع برنامج صيانة صارم يشمل الفحص الدوري والتزييت وتحريك الكابل (Slip and Cut).
+تطبق كل ما تعلمته على سيناريو واقعي وتتخذ قرارات مبنية على الحسابات.
 </p>
 
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 فحص كابل الحفر</h2>
-
-<div style="background: linear-gradient(135deg, #1e3a5f15, #f9731620); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-right: 4px solid #f97316;">
-<h3 style="color: #f97316; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">📌 علامات تلف الكابل التي تستوجب الاستبدال:</h3>
-<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2;">
-<li><strong>الأسلاك المكسورة (Broken Wires):</strong> أكثر من 6 أسلاك مكسورة في حبل واحد أو 3 في خيط واحد</li>
-<li><strong>تآكل القطر (Diameter Reduction):</strong> انخفاض أكثر من 1/32 بوصة في القطر الأصلي</li>
-<li><strong>التآكل الكيميائي (Corrosion):</strong> صدأ واضح أو تغير في لون الكابل</li>
-<li><strong>التعقد (Kinking):</strong> أي التواء حاد أو تشوه دائم</li>
-<li><strong>انتفاخ العش (Bird Caging):</strong> انفصال الخيوط وانتفاخها للخارج</li>
-<li><strong>تسطح الكابل (Flattening):</strong> فقدان الشكل الدائري</li>
+<div style="background: linear-gradient(135deg, #dc262615, #dc262610); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-right: 4px solid #dc2626;">
+<h3 style="color: #dc2626; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">📋 السيناريو</h3>
+<p style="line-height: 1.8;">
+أنت مهندس موقع في بئر بعمق 14,000 ft. أثناء سحب الـ String لتغيير البت:
+</p>
+<ul style="list-style-type: disc; padding-right: 1.5rem; margin-top: 0.75rem; line-height: 2;">
+<li>Hook Load المتوقع = 280,000 lbs</li>
+<li>القراءة الفعلية = 340,000 lbs</li>
+<li>الدريلر يقول: "الـ String ما يتحرك!"</li>
 </ul>
 </div>
 
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 عملية تحريك وقطع الكابل (Slip and Cut)</h2>
+<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">🔍 الخطوة 1: تحليل الفرق</h2>
 
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-هي عملية دورية لتوزيع التآكل على طول الكابل. تتم بتحريك الكابل بمسافة معينة ثم قطع الجزء الأكثر تآكلاً (عادة من جهة الخط الميت).
+<div style="background: #f0fdf4; padding: 1.5rem; border-radius: 12px; margin: 1rem 0; border: 2px solid #059669;">
+<p style="margin-bottom: 1rem;"><strong>الفرق (Overpull):</strong></p>
+<p style="direction: ltr; font-size: 1.2rem; margin-bottom: 1rem;">
+340,000 - 280,000 = <strong style="color: #dc2626;">60,000 lbs overpull</strong>
 </p>
 
-<div style="background: #1e3a5f10; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0;">
-<h3 style="color: #1e3a5f; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.75rem;">خطوات عملية Slip and Cut:</h3>
-<ol style="padding-right: 1.5rem; line-height: 2;">
-<li>إرخاء الكابل من مرساة الخط الميت</li>
-<li>سحب كمية محددة من الكابل من بكرة رافعة الحفر</li>
-<li>قطع الجزء التالف من طرف الخط الميت</li>
-<li>إعادة تثبيت الكابل على المرساة</li>
-<li>تسجيل العملية في سجل الكابل</li>
-</ol>
+<p style="font-weight: bold; color: #dc2626;">⚠️ هذا رقم خطير! يدل على مقاومة عالية.</p>
 </div>
 
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 حساب Ton-Mile</h2>
+<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">🤔 الخطوة 2: شنو الاحتمالات؟</h2>
 
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-Ton-Mile هو مقياس لكمية العمل الذي أداه الكابل، ويُستخدم لتحديد موعد عملية Slip and Cut واستبدال الكابل. يتم حسابه بضرب الحمل المرفوع (بالطن) في المسافة المقطوعة (بالأميال).
-</p>
-
-<div style="background: linear-gradient(135deg, #10b98115, #1e3a5f15); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; text-align: center;">
-<p style="font-size: 1.2rem; font-weight: bold; color: #1e3a5f; direction: ltr; margin-bottom: 1rem;">
-Ton-Mile = Σ (Load × Distance)
-</p>
+<div style="display: grid; gap: 1rem; margin: 1rem 0;">
+<div style="background: #fef3c7; padding: 1rem; border-radius: 8px; border-right: 4px solid #f59e0b;">
+<p style="font-weight: bold; color: #92400e;">1. Differential Sticking</p>
+<p style="font-size: 0.95rem; margin-top: 0.5rem;">الـ String لصق بالجدار بسبب فرق الضغط</p>
+<p style="font-size: 0.9rem; color: #64748b; margin-top: 0.25rem;">يصير في مناطق Permeable مع Overbalance عالي</p>
 </div>
 
-<h3 style="color: #f97316; font-size: 1.2rem; font-weight: bold; margin: 1.5rem 0 0.75rem;">معادلات Ton-Mile لعمليات مختلفة:</h3>
-
-<div style="background: #1e3a5f10; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0;">
-<p style="line-height: 1.8; margin-bottom: 1rem;"><strong>1. رحلة واحدة (Round Trip):</strong></p>
-<p style="direction: ltr; background: #f9731620; padding: 0.75rem; border-radius: 6px; margin-bottom: 1rem;">
-T = (D/5280) × [(W_m × L_s) + (2 × W_BHA × D) + (W_dp × D²/L_s)]
-</p>
-
-<p style="line-height: 1.8; margin-bottom: 1rem;"><strong>2. حفر فترة واحدة (Drilling):</strong></p>
-<p style="direction: ltr; background: #f9731620; padding: 0.75rem; border-radius: 6px; margin-bottom: 1rem;">
-T = (3 × D × W_m + 2 × D × W_BHA) / (5280 × 2)
-</p>
-
-<p style="line-height: 1.8;"><strong>3. إنزال التغليف (Casing):</strong></p>
-<p style="direction: ltr; background: #f9731620; padding: 0.75rem; border-radius: 6px;">
-T = (D × W_casing × BF) / 10,560
-</p>
+<div style="background: #dbeafe; padding: 1rem; border-radius: 8px; border-right: 4px solid #2563eb;">
+<p style="font-weight: bold; color: #1e40af;">2. Mechanical Sticking</p>
+<p style="font-size: 0.95rem; margin-top: 0.5rem;">الـ String علق في Keyseating أو Ledge</p>
+<p style="font-size: 0.9rem; color: #64748b; margin-top: 0.25rem;">يصير في Deviated holes أو formations متغيرة</p>
 </div>
 
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 جدول Slip and Cut</h2>
+<div style="background: #f3e8ff; padding: 1rem; border-radius: 8px; border-right: 4px solid #7c3aed;">
+<p style="font-weight: bold; color: #6b21a8;">3. Pack-off</p>
+<p style="font-size: 0.95rem; margin-top: 0.5rem;">Cuttings تراكمت حول الـ BHA</p>
+<p style="font-size: 0.9rem; color: #64748b; margin-top: 0.25rem;">يصير مع Hole Cleaning ضعيف</p>
+</div>
+</div>
 
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-يعتمد موعد Slip and Cut على Ton-Miles المتراكمة. القيم النموذجية:
-</p>
+<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">📊 الخطوة 3: قراءة المؤشرات الإضافية</h2>
 
-<div style="background: #1e3a5f10; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0;">
-<table style="width: 100%; border-collapse: collapse; text-align: center;">
+<table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
 <tr style="background: #1e3a5f; color: white;">
-<th style="padding: 0.75rem; border: 1px solid #ccc;">نوع العملية</th>
-<th style="padding: 0.75rem; border: 1px solid #ccc;">Ton-Miles قبل Slip</th>
+<th style="padding: 12px; text-align: right;">المؤشر</th>
+<th style="padding: 12px; text-align: right;">إذا عالي</th>
+<th style="padding: 12px; text-align: right;">يدل على</th>
 </tr>
-<tr>
-<td style="padding: 0.75rem; border: 1px solid #ccc;">الحفر العادي</td>
-<td style="padding: 0.75rem; border: 1px solid #ccc;">500 - 800</td>
+<tr style="background: #f8fafc;">
+<td style="padding: 12px; border: 1px solid #e2e8f0;">Torque</td>
+<td style="padding: 12px; border: 1px solid #e2e8f0;">يزيد مع المقاومة</td>
+<td style="padding: 12px; border: 1px solid #e2e8f0;">Mechanical Sticking</td>
 </tr>
-<tr style="background: #f5f5f5;">
-<td style="padding: 0.75rem; border: 1px solid #ccc;">إنزال التغليف</td>
-<td style="padding: 0.75rem; border: 1px solid #ccc;">150 - 300</td>
+<tr style="background: #ffffff;">
+<td style="padding: 12px; border: 1px solid #e2e8f0;">Pump Pressure</td>
+<td style="padding: 12px; border: 1px solid #e2e8f0;">يرتفع فجأة</td>
+<td style="padding: 12px; border: 1px solid #e2e8f0;">Pack-off حول BHA</td>
 </tr>
-<tr>
-<td style="padding: 0.75rem; border: 1px solid #ccc;">عمليات الصيد</td>
-<td style="padding: 0.75rem; border: 1px solid #ccc;">100 - 200</td>
+<tr style="background: #f8fafc;">
+<td style="padding: 12px; border: 1px solid #e2e8f0;">Free Point</td>
+<td style="padding: 12px; border: 1px solid #e2e8f0;">قريب من القاع</td>
+<td style="padding: 12px; border: 1px solid #e2e8f0;">Diff. Sticking</td>
 </tr>
 </table>
+
+<h2 style="color: #dc2626; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">⚡ الخطوة 4: شجرة القرار</h2>
+
+<div style="background: #f8fafc; padding: 1.5rem; border-radius: 12px; margin: 1rem 0;">
+<p style="font-weight: bold; margin-bottom: 1rem;">إذا الـ String عالق:</p>
+
+<div style="padding-right: 1rem;">
+<p style="margin-bottom: 0.75rem;"><strong>1. أول شي:</strong> Work String (رفع/إنزال 5-10 ft)</p>
+<p style="margin-bottom: 0.75rem;"><strong>2. إذا ما تحرك:</strong> Pump + Rotate (إذا ممكن)</p>
+<p style="margin-bottom: 0.75rem;"><strong>3. إذا Diff. Stick:</strong> Spotting Fluid (زيت أو سائل تحرير)</p>
+<p style="margin-bottom: 0.75rem;"><strong>4. إذا كل شي فشل:</strong> Free Point Survey + Back-off</p>
+</div>
 </div>
 
-<div style="background: #dc262615; padding: 1rem; border-radius: 8px; margin: 1rem 0; border-right: 4px solid #dc2626;">
-<strong style="color: #dc2626;">⚠️ تحذير:</strong>
-<p style="margin-top: 0.5rem; line-height: 1.8;">
-يجب تسجيل جميع عمليات Ton-Mile في سجل الكابل (Wire Line Record). الإهمال في التتبع قد يؤدي إلى فشل الكابل المفاجئ.
-</p>
-</div>
+<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">🧮 حساب: كم نقدر نسحب؟</h2>
 
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 تزييت الكابل</h2>
-
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-التزييت المنتظم ضروري لحماية الكابل من التآكل والصدأ. يجب استخدام زيوت خاصة تخترق إلى قلب الكابل.
-</p>
-
-<div style="background: linear-gradient(135deg, #10b98115, #1e3a5f15); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0;">
-<h3 style="color: #10b981; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.75rem;">💡 ملخص اليوم</h3>
-<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2;">
-<li>فحص الكابل يومياً للبحث عن علامات التلف</li>
-<li>عملية Slip and Cut توزع التآكل وتطيل عمر الكابل</li>
-<li>Ton-Mile يقيس العمل المنجز ويحدد موعد الصيانة</li>
-<li>التزييت المنتظم يحمي من الصدأ والتآكل</li>
+<div style="background: #f0fdf4; padding: 1.5rem; border-radius: 12px; margin: 1rem 0; border: 2px solid #059669;">
+<h4 style="color: #059669; font-weight: bold; margin-bottom: 1rem;">المعطيات:</h4>
+<ul style="list-style: none; padding: 0; line-height: 2;">
+<li>• سعة البرج = 650,000 lbs</li>
+<li>• عدد الخطوط = 10</li>
+<li>• قوة الشد للـ DP = 500,000 lbs</li>
 </ul>
+
+<h4 style="color: #059669; font-weight: bold; margin: 1.5rem 0 1rem;">الحسابات:</h4>
+
+<p style="margin-bottom: 0.5rem;"><strong>1. أقصى Hook Load من البرج:</strong></p>
+<p style="direction: ltr; margin-bottom: 1rem;">
+Max HL = Derrick Capacity × n / (n+2) = 650,000 × 10/12 = 541,667 lbs
+</p>
+
+<p style="margin-bottom: 0.5rem;"><strong>2. حد السحب الآمن (80% من قوة الشد):</strong></p>
+<p style="direction: ltr; margin-bottom: 1rem;">
+Safe Pull = 500,000 × 0.80 = 400,000 lbs
+</p>
+
+<div style="background: #fef3c7; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+<p style="font-weight: bold; color: #92400e;">⚠️ الحد الأقصى للسحب = 400,000 lbs</p>
+<p style="font-size: 0.9rem; margin-top: 0.5rem;">(الأقل بين قدرة البرج وقوة الشد)</p>
+</div>
+
+<p style="margin-top: 1rem;"><strong>الـ Overpull المسموح:</strong></p>
+<p style="direction: ltr;">
+400,000 - 280,000 = <strong style="color: #059669;">120,000 lbs overpull</strong>
+</p>
+</div>
+
+<div style="background: linear-gradient(135deg, #059669, #047857); color: white; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0;">
+<h3 style="font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">✅ القرار النهائي</h3>
+<p style="line-height: 1.8;">
+نقدر نسحب بـ 60,000 lbs overpull إضافية (الحالي 60k، مسموح 120k).<br/>
+لكن لازم نحاول Work String أولاً قبل ما نزيد السحب.
+</p>
 </div>
 </section>`,
           keyTerms: [
-            { term: 'Ton-Mile', definition: 'مقياس لكمية العمل الذي أداه الكابل، يُحسب بضرب الحمل بالمسافة' },
-            { term: 'Slip and Cut', definition: 'عملية تحريك وقطع الكابل لتوزيع التآكل وإزالة الجزء التالف' },
-            { term: 'Bird Caging', definition: 'انتفاخ الخيوط وانفصالها عن بعضها نتيجة الحمل الزائد أو التآكل' },
-            { term: 'سجل الكابل (Wire Line Record)', definition: 'سجل يوثق جميع عمليات الصيانة وTon-Miles المتراكمة للكابل' },
+            { term: 'Overpull', definition: 'القوة الإضافية فوق Hook Load الطبيعي' },
+            { term: 'Differential Sticking', definition: 'التصاق بسبب فرق الضغط' },
+            { term: 'Work String', definition: 'تحريك خفيف للتحرير' },
+            { term: 'Free Point', definition: 'النقطة اللي الـ String حر فوقها' }
           ],
           practiceQuestion: {
-            question: 'ما هو الغرض الرئيسي من عملية Slip and Cut؟',
-            options: ['زيادة طول الكابل', 'توزيع التآكل وإزالة الجزء التالف', 'زيادة قوة الشد', 'تقليل الوزن'],
-            correctAnswer: 1,
-          },
+            question: 'في السيناريو: Overpull = 60,000 lbs، Pump Pressure طبيعي، Torque عالي. شنو التشخيص الأرجح؟',
+            options: [
+              'Differential Sticking',
+              'Mechanical Sticking (Keyseating)',
+              'Pack-off',
+              'Wellbore Collapse'
+            ],
+            correctAnswer: 1
+          }
         },
         en: {
-          title: 'Wire Rope Maintenance and Ton-Mile Calculation',
+          title: 'Comprehensive Scenario Analysis - Field Hoisting Problem',
           explanation: `<section>
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 Drilling Line Maintenance and Safety</h2>
-
+<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🎯 Today's Goal</h2>
 <p style="margin-bottom: 1rem; line-height: 1.8;">
-Wire rope maintenance is one of the most critical safety requirements in drilling operations. A damaged wire rope can lead to disasters, so a strict maintenance program including regular inspection, lubrication, and slip and cut operations must be followed.
+Apply everything you learned to a realistic scenario and make decisions based on calculations.
 </p>
 
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 Wire Rope Inspection</h2>
-
-<div style="background: linear-gradient(135deg, #1e3a5f15, #f9731620); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-left: 4px solid #f97316;">
-<h3 style="color: #f97316; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">📌 Wire Rope Damage Signs Requiring Replacement:</h3>
-<ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 2;">
-<li><strong>Broken Wires:</strong> More than 6 broken wires in one rope lay or 3 in one strand</li>
-<li><strong>Diameter Reduction:</strong> More than 1/32 inch reduction from original diameter</li>
-<li><strong>Corrosion:</strong> Visible rust or wire rope discoloration</li>
-<li><strong>Kinking:</strong> Any sharp bends or permanent deformation</li>
-<li><strong>Bird Caging:</strong> Strand separation and bulging outward</li>
-<li><strong>Flattening:</strong> Loss of round cross-section</li>
+<div style="background: linear-gradient(135deg, #dc262615, #dc262610); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-left: 4px solid #dc2626;">
+<h3 style="color: #dc2626; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">📋 The Scenario</h3>
+<p style="line-height: 1.8;">
+You're a site engineer at a 14,000 ft well. While pulling the String to change the bit:
+</p>
+<ul style="list-style-type: disc; padding-left: 1.5rem; margin-top: 0.75rem; line-height: 2;">
+<li>Expected Hook Load = 280,000 lbs</li>
+<li>Actual reading = 340,000 lbs</li>
+<li>Driller says: "The String won't move!"</li>
 </ul>
 </div>
 
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 Slip and Cut Operation</h2>
+<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">🔍 Step 1: Analyze the Difference</h2>
 
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-A periodic operation to distribute wear along the wire rope length. It involves slipping the rope a specified distance and cutting the most worn section (usually from the dead line end).
+<div style="background: #f0fdf4; padding: 1.5rem; border-radius: 12px; margin: 1rem 0; border: 2px solid #059669;">
+<p style="margin-bottom: 1rem;"><strong>Overpull:</strong></p>
+<p style="font-size: 1.2rem; margin-bottom: 1rem;">
+340,000 - 280,000 = <strong style="color: #dc2626;">60,000 lbs overpull</strong>
 </p>
 
-<div style="background: #1e3a5f10; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0;">
-<h3 style="color: #1e3a5f; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.75rem;">Slip and Cut Steps:</h3>
-<ol style="padding-left: 1.5rem; line-height: 2;">
-<li>Release wire rope from deadline anchor</li>
-<li>Pull specified amount of rope from drawworks drum</li>
-<li>Cut the damaged section from the dead line end</li>
-<li>Re-attach wire rope to anchor</li>
-<li>Record operation in wire line record</li>
-</ol>
+<p style="font-weight: bold; color: #dc2626;">⚠️ This is dangerous! Indicates high resistance.</p>
 </div>
 
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 Ton-Mile Calculation</h2>
+<h2 style="color: #dc2626; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">⚡ Decision Tree</h2>
 
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-Ton-Mile is a measure of the work performed by the wire rope, used to determine when to perform slip and cut and wire rope replacement. It is calculated by multiplying the lifted load (in tons) by the distance traveled (in miles).
-</p>
+<div style="background: #f8fafc; padding: 1.5rem; border-radius: 12px; margin: 1rem 0;">
+<p style="font-weight: bold; margin-bottom: 1rem;">If String is stuck:</p>
 
-<div style="background: linear-gradient(135deg, #10b98115, #1e3a5f15); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; text-align: center;">
-<p style="font-size: 1.2rem; font-weight: bold; color: #1e3a5f; margin-bottom: 1rem;">
-Ton-Mile = Σ (Load × Distance)
-</p>
+<div style="padding-left: 1rem;">
+<p style="margin-bottom: 0.75rem;"><strong>1. First:</strong> Work String (up/down 5-10 ft)</p>
+<p style="margin-bottom: 0.75rem;"><strong>2. If no movement:</strong> Pump + Rotate (if possible)</p>
+<p style="margin-bottom: 0.75rem;"><strong>3. If Diff. Stick:</strong> Spotting Fluid</p>
+<p style="margin-bottom: 0.75rem;"><strong>4. If all fails:</strong> Free Point Survey + Back-off</p>
 </div>
-
-<h3 style="color: #f97316; font-size: 1.2rem; font-weight: bold; margin: 1.5rem 0 0.75rem;">Ton-Mile Equations for Different Operations:</h3>
-
-<div style="background: #1e3a5f10; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0;">
-<p style="line-height: 1.8; margin-bottom: 1rem;"><strong>1. Round Trip:</strong></p>
-<p style="background: #f9731620; padding: 0.75rem; border-radius: 6px; margin-bottom: 1rem;">
-T = (D/5280) × [(W_m × L_s) + (2 × W_BHA × D) + (W_dp × D²/L_s)]
-</p>
-
-<p style="line-height: 1.8; margin-bottom: 1rem;"><strong>2. Drilling:</strong></p>
-<p style="background: #f9731620; padding: 0.75rem; border-radius: 6px; margin-bottom: 1rem;">
-T = (3 × D × W_m + 2 × D × W_BHA) / (5280 × 2)
-</p>
-
-<p style="line-height: 1.8;"><strong>3. Casing:</strong></p>
-<p style="background: #f9731620; padding: 0.75rem; border-radius: 6px;">
-T = (D × W_casing × BF) / 10,560
-</p>
-</div>
-
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 Slip and Cut Schedule</h2>
-
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-Slip and cut timing depends on accumulated Ton-Miles. Typical values:
-</p>
-
-<div style="background: #1e3a5f10; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0;">
-<table style="width: 100%; border-collapse: collapse; text-align: center;">
-<tr style="background: #1e3a5f; color: white;">
-<th style="padding: 0.75rem; border: 1px solid #ccc;">Operation Type</th>
-<th style="padding: 0.75rem; border: 1px solid #ccc;">Ton-Miles Before Slip</th>
-</tr>
-<tr>
-<td style="padding: 0.75rem; border: 1px solid #ccc;">Normal Drilling</td>
-<td style="padding: 0.75rem; border: 1px solid #ccc;">500 - 800</td>
-</tr>
-<tr style="background: #f5f5f5;">
-<td style="padding: 0.75rem; border: 1px solid #ccc;">Running Casing</td>
-<td style="padding: 0.75rem; border: 1px solid #ccc;">150 - 300</td>
-</tr>
-<tr>
-<td style="padding: 0.75rem; border: 1px solid #ccc;">Fishing Operations</td>
-<td style="padding: 0.75rem; border: 1px solid #ccc;">100 - 200</td>
-</tr>
-</table>
-</div>
-
-<div style="background: #dc262615; padding: 1rem; border-radius: 8px; margin: 1rem 0; border-left: 4px solid #dc2626;">
-<strong style="color: #dc2626;">⚠️ Warning:</strong>
-<p style="margin-top: 0.5rem; line-height: 1.8;">
-All Ton-Mile operations must be recorded in the Wire Line Record. Neglecting tracking can lead to sudden wire rope failure.
-</p>
-</div>
-
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 Wire Rope Lubrication</h2>
-
-<p style="margin-bottom: 1rem; line-height: 1.8;">
-Regular lubrication is essential to protect wire rope from wear and corrosion. Special oils that penetrate to the wire rope core should be used.
-</p>
-
-<div style="background: linear-gradient(135deg, #10b98115, #1e3a5f15); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0;">
-<h3 style="color: #10b981; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.75rem;">💡 Day Summary</h3>
-<ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 2;">
-<li>Inspect wire rope daily for damage signs</li>
-<li>Slip and cut operation distributes wear and extends rope life</li>
-<li>Ton-Mile measures work done and determines maintenance timing</li>
-<li>Regular lubrication protects against rust and corrosion</li>
-</ul>
 </div>
 </section>`,
           keyTerms: [
-            { term: 'Ton-Mile', definition: 'Measure of work performed by wire rope, calculated by multiplying load by distance' },
-            { term: 'Slip and Cut', definition: 'Operation of slipping and cutting wire rope to distribute wear and remove damaged section' },
-            { term: 'Bird Caging', definition: 'Strand bulging and separation resulting from overload or wear' },
-            { term: 'Wire Line Record', definition: 'Record documenting all maintenance operations and accumulated Ton-Miles' },
+            { term: 'Overpull', definition: 'Extra force above normal Hook Load' },
+            { term: 'Differential Sticking', definition: 'Sticking due to pressure differential' },
+            { term: 'Work String', definition: 'Light movement to free pipe' },
+            { term: 'Free Point', definition: 'Point above which the string is free' }
           ],
           practiceQuestion: {
-            question: 'What is the main purpose of the Slip and Cut operation?',
-            options: ['Increase wire rope length', 'Distribute wear and remove damaged section', 'Increase tensile strength', 'Reduce weight'],
-            correctAnswer: 1,
-          },
-        },
-      },
+            question: 'In scenario: Overpull = 60,000 lbs, Pump Pressure normal, Torque high. Most likely diagnosis?',
+            options: [
+              'Differential Sticking',
+              'Mechanical Sticking (Keyseating)',
+              'Pack-off',
+              'Wellbore Collapse'
+            ],
+            correctAnswer: 1
+          }
+        }
+      }
     },
     {
       day: 6,
       type: 'quiz',
       content: {
         ar: {
-          title: 'اختبار نظام الرفع المتقدم',
-          explanation: 'اختبر معلوماتك في نظام الرفع المتقدم',
+          title: 'اختبار: حسابات وقرارات نظام الرفع',
+          explanation: 'اختبار شامل على حسابات Hook Load، Derrick Load، Ton-Miles، وقدرة الـ Drawworks.',
           keyTerms: [],
+          practiceQuestion: {
+            question: '',
+            options: [],
+            correctAnswer: 0
+          }
         },
         en: {
-          title: 'Advanced Hoisting System Quiz',
-          explanation: 'Test your knowledge on the Advanced Hoisting System',
+          title: 'Quiz: Hoisting System Calculations and Decisions',
+          explanation: 'Comprehensive test on Hook Load, Derrick Load, Ton-Miles, and Drawworks power calculations.',
           keyTerms: [],
-        },
+          practiceQuestion: {
+            question: '',
+            options: [],
+            correctAnswer: 0
+          }
+        }
       },
       quiz: {
         ar: [
-          { 
-            question: 'ما هو المكون الثابت في نظام الرفع الموجود في قمة برج الحفر؟', 
-            options: ['البكرة المتنقلة', 'البكرة التاجية', 'الخطاف', 'رافعة الحفر'], 
-            correctAnswer: 1 
+          {
+            question: 'String وزنه بالهواء 250,000 lbs، وزن الطين 14 ppg. كم Hook Load؟',
+            options: ['196,483 lbs', '214,679 lbs', '250,000 lbs', '303,030 lbs'],
+            correctAnswer: 0
           },
-          { 
-            question: 'أي جزء من كابل الحفر يتعرض لأعلى شد؟', 
-            options: ['الخط الميت', 'الخط السريع', 'خطوط السلسلة', 'القلب المركزي'], 
-            correctAnswer: 1 
+          {
+            question: 'Hook Load = 350,000 lbs، عدد الخطوط = 8. كم Derrick Load؟',
+            options: ['350,000 lbs', '393,750 lbs', '437,500 lbs', '525,000 lbs'],
+            correctAnswer: 2
           },
-          { 
-            question: 'ما نوع الفرامل التي تعمل تلقائياً عند انقطاع الطاقة؟', 
-            options: ['الفرامل الرئيسية', 'الفرامل الكهرومغناطيسية', 'فرامل الطوارئ', 'الفرامل الهيدروديناميكية'], 
-            correctAnswer: 2 
+          {
+            question: 'Drawworks 1,800 HP، كفاءة 85%، Hook Load 400,000 lbs. أقصى سرعة رفع؟',
+            options: ['126 ft/min', '107 ft/min', '91 ft/min', '76 ft/min'],
+            correctAnswer: 0
           },
-          { 
-            question: 'إذا كان عدد الخطوط 10، ما هي الميزة الميكانيكية المثالية؟', 
-            options: ['5', '10', '20', '100'], 
-            correctAnswer: 1 
+          {
+            question: 'Hook Load المتوقع 200k، الفعلي 270k. شنو أول إجراء؟',
+            options: ['زيادة السحب', 'Work String', 'Spot Oil', 'Back-off'],
+            correctAnswer: 1
           },
-          { 
-            question: 'ما هو الغرض من عملية Slip and Cut؟', 
-            options: ['زيادة طول الكابل', 'توزيع التآكل وإزالة الجزء التالف', 'زيادة قوة الشد', 'تقليل عدد الخطوط'], 
-            correctAnswer: 1 
+          {
+            question: 'كيبل عمره 1,000 Ton-Miles، كل رحلة 80 T-M. بعد 10 رحلات، شنو الوضع؟',
+            options: ['آمن - باقي 200 T-M', 'لازم Slip & Cut', 'خطر - توقف فوري', 'نكمل 2 رحلة'],
+            correctAnswer: 1
           },
-          { 
-            question: 'ما هي وحدة قياس Ton-Mile؟', 
-            options: ['الحمل فقط', 'المسافة فقط', 'الحمل × المسافة', 'الحمل ÷ المسافة'], 
-            correctAnswer: 2 
+          {
+            question: 'زيادة وزن الطين من 10 إلى 12 ppg، شنو يصير للـ Hook Load؟',
+            options: ['يزيد', 'يقل', 'ما يتغير', 'يتضاعف'],
+            correctAnswer: 1
           },
-          { 
-            question: 'كم يجب أن يكون عامل الأمان كحد أدنى للتشغيل الآمن؟', 
-            options: ['1', '1.5', '2', '3'], 
-            correctAnswer: 2 
+          {
+            question: 'Overpull عالي + Torque طبيعي + Pump Pressure عالي. التشخيص؟',
+            options: ['Differential Stick', 'Keyseating', 'Pack-off', 'Undergauge Hole'],
+            correctAnswer: 2
           },
-          { 
-            question: 'أي من التالي يُعتبر علامة على تلف الكابل؟', 
-            options: ['لمعان السطح', 'Bird Caging', 'الشكل الدائري', 'المرونة العالية'], 
-            correctAnswer: 1 
+          {
+            question: 'سعة البرج 500,000 lbs. كم أقصى Hook Load بـ 10 خطوط؟',
+            options: ['416,667 lbs', '450,000 lbs', '500,000 lbs', '600,000 lbs'],
+            correctAnswer: 0
           },
-          { 
-            question: 'ما هو عامل الطفو (Buoyancy Factor) عندما يكون وزن سائل الحفر 10 ppg؟', 
-            options: ['0.85', '0.90', '0.95', '1.0'], 
-            correctAnswer: 0 
+          {
+            question: 'ليش نزيد عدد الخطوط من 10 إلى 12؟',
+            options: ['زيادة سرعة الرفع', 'تقليل الحمل على الكيبل', 'زيادة قدرة السحب', 'تقليل استهلاك الوقود'],
+            correctAnswer: 1
           },
-          { 
-            question: 'أين يتم تثبيت خلية الحمل (Load Cell) لقياس حمولة الخطاف؟', 
-            options: ['على الخط السريع', 'على مرساة الخط الميت', 'على البكرة التاجية', 'على رافعة الحفر'], 
-            correctAnswer: 1 
-          },
+          {
+            question: 'String علق، Free Point عند 12,000 ft، العمق الكلي 14,000 ft. وين العلقة؟',
+            options: ['فوق 12,000 ft', 'تحت 12,000 ft', 'عند السطح', 'ما نقدر نحدد'],
+            correctAnswer: 1
+          }
         ],
         en: [
-          { 
-            question: 'What is the stationary component in the hoisting system located at the top of the derrick?', 
-            options: ['Traveling Block', 'Crown Block', 'Hook', 'Drawworks'], 
-            correctAnswer: 1 
+          {
+            question: 'String weight in air 250,000 lbs, mud weight 14 ppg. Hook Load?',
+            options: ['196,483 lbs', '214,679 lbs', '250,000 lbs', '303,030 lbs'],
+            correctAnswer: 0
           },
-          { 
-            question: 'Which part of the drilling line experiences the highest tension?', 
-            options: ['Dead Line', 'Fast Line', 'String Lines', 'Core'], 
-            correctAnswer: 1 
+          {
+            question: 'Hook Load = 350,000 lbs, lines = 8. Derrick Load?',
+            options: ['350,000 lbs', '393,750 lbs', '437,500 lbs', '525,000 lbs'],
+            correctAnswer: 2
           },
-          { 
-            question: 'What type of brake activates automatically when power is lost?', 
-            options: ['Main Brake', 'Electromagnetic Brake', 'Emergency Brake', 'Hydrodynamic Brake'], 
-            correctAnswer: 2 
+          {
+            question: 'Drawworks 1,800 HP, 85% efficiency, Hook Load 400,000 lbs. Max hoisting speed?',
+            options: ['126 ft/min', '107 ft/min', '91 ft/min', '76 ft/min'],
+            correctAnswer: 0
           },
-          { 
-            question: 'If the number of lines is 10, what is the ideal mechanical advantage?', 
-            options: ['5', '10', '20', '100'], 
-            correctAnswer: 1 
+          {
+            question: 'Expected Hook Load 200k, actual 270k. First action?',
+            options: ['Increase pull', 'Work String', 'Spot Oil', 'Back-off'],
+            correctAnswer: 1
           },
-          { 
-            question: 'What is the purpose of the Slip and Cut operation?', 
-            options: ['Increase wire rope length', 'Distribute wear and remove damaged section', 'Increase tensile strength', 'Reduce number of lines'], 
-            correctAnswer: 1 
+          {
+            question: 'Cable life 1,000 Ton-Miles, each trip 80 T-M. After 10 trips, status?',
+            options: ['Safe - 200 T-M left', 'Need Slip & Cut', 'Danger - stop now', 'Continue 2 trips'],
+            correctAnswer: 1
           },
-          { 
-            question: 'What is the unit of measurement for Ton-Mile?', 
-            options: ['Load only', 'Distance only', 'Load × Distance', 'Load ÷ Distance'], 
-            correctAnswer: 2 
+          {
+            question: 'Mud weight increase from 10 to 12 ppg, what happens to Hook Load?',
+            options: ['Increases', 'Decreases', 'No change', 'Doubles'],
+            correctAnswer: 1
           },
-          { 
-            question: 'What should be the minimum safety factor for safe operation?', 
-            options: ['1', '1.5', '2', '3'], 
-            correctAnswer: 2 
+          {
+            question: 'High Overpull + Normal Torque + High Pump Pressure. Diagnosis?',
+            options: ['Differential Stick', 'Keyseating', 'Pack-off', 'Undergauge Hole'],
+            correctAnswer: 2
           },
-          { 
-            question: 'Which of the following is a sign of wire rope damage?', 
-            options: ['Shiny surface', 'Bird Caging', 'Round shape', 'High flexibility'], 
-            correctAnswer: 1 
+          {
+            question: 'Derrick capacity 500,000 lbs. Max Hook Load with 10 lines?',
+            options: ['416,667 lbs', '450,000 lbs', '500,000 lbs', '600,000 lbs'],
+            correctAnswer: 0
           },
-          { 
-            question: 'What is the Buoyancy Factor when mud weight is 10 ppg?', 
-            options: ['0.85', '0.90', '0.95', '1.0'], 
-            correctAnswer: 0 
+          {
+            question: 'Why increase lines from 10 to 12?',
+            options: ['Increase hoisting speed', 'Reduce load per line', 'Increase pulling capacity', 'Reduce fuel consumption'],
+            correctAnswer: 1
           },
-          { 
-            question: 'Where is the Load Cell installed to measure hook load?', 
-            options: ['On the Fast Line', 'On the Deadline Anchor', 'On the Crown Block', 'On the Drawworks'], 
-            correctAnswer: 1 
-          },
-        ],
-      },
+          {
+            question: 'String stuck, Free Point at 12,000 ft, total depth 14,000 ft. Where is the stuck point?',
+            options: ['Above 12,000 ft', 'Below 12,000 ft', 'At surface', 'Cannot determine'],
+            correctAnswer: 1
+          }
+        ]
+      }
     },
     {
       day: 7,
       type: 'project',
       content: {
         ar: {
-          title: 'مشروع نظام الرفع المتقدم',
-          explanation: 'طبق ما تعلمته في هذا المشروع التطبيقي',
+          title: 'مشروع: تحليل حالة علقة وتقديم توصيات',
+          explanation: 'طبق ما تعلمته في تحليل حالة واقعية واتخذ قرارات مبنية على الحسابات.',
           keyTerms: [],
+          practiceQuestion: {
+            question: '',
+            options: [],
+            correctAnswer: 0
+          }
         },
         en: {
-          title: 'Advanced Hoisting System Project',
-          explanation: 'Apply what you learned in this practical project',
+          title: 'Project: Stuck Pipe Analysis and Recommendations',
+          explanation: 'Apply what you learned to analyze a realistic case and make calculation-based decisions.',
           keyTerms: [],
-        },
+          practiceQuestion: {
+            question: '',
+            options: [],
+            correctAnswer: 0
+          }
+        }
       },
       project: {
         ar: {
-          title: 'حساب حمولة الخطاف والميزة الميكانيكية',
-          description: 'في هذا المشروع، ستقوم بحساب معاملات نظام الرفع لحالة حفر فعلية. هذه المهارة ضرورية لمهندسي الحفر لضمان التشغيل الآمن.',
+          title: 'تحليل حالة علقة Stuck Pipe',
+          description: 'أنت مهندس موقع وتلقيت التقرير التالي:\n\n• عمق البئر: 13,500 ft\n• String: 12,800 ft DP (5", 19.5 lb/ft) + 700 ft DC (8", 147 lb/ft)\n• وزن الطين: 11.5 ppg\n• Hook Load المتوقع: ?\n• Hook Load الفعلي: 295,000 lbs\n• Torque: مرتفع 15% عن الطبيعي\n• Pump Pressure: طبيعي\n• سعة البرج: 600,000 lbs\n• عدد الخطوط: 10\n• قوة شد الـ DP: 500,000 lbs',
           instructions: [
-            'البيانات المعطاة: عمق البئر = 12,000 قدم، وزن أنابيب الحفر = 19.5 رطل/قدم، طول أطواق الحفر = 600 قدم، وزن أطواق الحفر = 147 رطل/قدم، وزن سائل الحفر = 11 ppg، عدد الخطوط = 10، كفاءة البكرة = 96%',
-            'احسب: (1) عامل الطفو، (2) وزن سلسلة الحفر في السائل، (3) حمولة الخطاف الإجمالية (مع افتراض وزن TB+Hook = 25,000 رطل)',
-            'احسب: (4) الشد في الخط السريع، (5) عامل الأمان إذا كانت قوة كسر الكابل = 136,000 رطل',
-            'اكتب تقريراً يشمل جميع الحسابات مع شرح كل خطوة',
-            'حدد هل نظام الرفع آمن للتشغيل؟ ولماذا؟',
+            '1. احسب Hook Load المتوقع (اعرض خطوات الحساب)',
+            '2. احسب الـ Overpull الحالي',
+            '3. بناءً على المؤشرات (Torque, Pump Pressure)، شنو التشخيص الأرجح؟',
+            '4. احسب أقصى Overpull مسموح (من البرج ومن قوة الشد)',
+            '5. اكتب خطة الإجراءات المقترحة (3-5 خطوات مرتبة)',
+            '6. إذا فشلت كل المحاولات، شنو الخيارات؟'
           ],
-          submissionType: 'text',
+          submissionType: 'text'
         },
         en: {
-          title: 'Hook Load and Mechanical Advantage Calculation',
-          description: 'In this project, you will calculate hoisting system parameters for an actual drilling scenario. This skill is essential for drilling engineers to ensure safe operations.',
+          title: 'Stuck Pipe Case Analysis',
+          description: 'You are a site engineer and received this report:\n\n• Well depth: 13,500 ft\n• String: 12,800 ft DP (5", 19.5 lb/ft) + 700 ft DC (8", 147 lb/ft)\n• Mud weight: 11.5 ppg\n• Expected Hook Load: ?\n• Actual Hook Load: 295,000 lbs\n• Torque: 15% above normal\n• Pump Pressure: normal\n• Derrick capacity: 600,000 lbs\n• Lines: 10\n• DP tensile strength: 500,000 lbs',
           instructions: [
-            'Given Data: Well depth = 12,000 ft, Drill pipe weight = 19.5 lb/ft, Drill collar length = 600 ft, Drill collar weight = 147 lb/ft, Mud weight = 11 ppg, Number of lines = 10, Sheave efficiency = 96%',
-            'Calculate: (1) Buoyancy Factor, (2) Drill string weight in fluid, (3) Total Hook Load (assuming TB+Hook weight = 25,000 lb)',
-            'Calculate: (4) Fast Line Tension, (5) Safety Factor if wire rope breaking strength = 136,000 lb',
-            'Write a report including all calculations with explanation of each step',
-            'Determine if the hoisting system is safe for operation? And why?',
+            '1. Calculate expected Hook Load (show calculation steps)',
+            '2. Calculate current Overpull',
+            '3. Based on indicators (Torque, Pump Pressure), what is the likely diagnosis?',
+            '4. Calculate maximum allowed Overpull (from derrick and tensile strength)',
+            '5. Write proposed action plan (3-5 ordered steps)',
+            '6. If all attempts fail, what are the options?'
           ],
-          submissionType: 'text',
-        },
-      },
-    },
-  ],
+          submissionType: 'text'
+        }
+      }
+    }
+  ]
 };
