@@ -128,7 +128,7 @@ export default function Lesson() {
     if (!currentDayContent || !id) return null;
     const dayComplete = isDayComplete(id, selectedDay);
     if (currentDayContent.type === 'quiz' && currentDayContent.quiz) {
-      return <DayQuiz quiz={currentDayContent.quiz} onComplete={handleCompleteQuiz} isComplete={dayComplete} previousScore={getDayScore(id, 6)} />;
+      return <DayQuiz key={`quiz-${id}-${selectedDay}`} quiz={currentDayContent.quiz} onComplete={handleCompleteQuiz} isComplete={dayComplete} previousScore={getDayScore(id, 6)} />;
     }
     if (currentDayContent.type === 'project') {
       return <DayProject dayContent={currentDayContent} onComplete={handleCompleteProject} isComplete={dayComplete} />;
@@ -136,7 +136,7 @@ export default function Lesson() {
     return <DayContent dayContent={currentDayContent} onComplete={handleCompleteDay} isComplete={dayComplete} />;
   };
   return <div className="min-h-screen bg-background" dir={isRTL ? 'rtl' : 'ltr'}>
-      <header className="sticky top-0 z-50 bg-card/80 backdrop-blur-md border-b border-border">
+      <header className="sticky top-0 z-50 glass-header">
         <div className="container max-w-lg mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <Button variant="ghost" size="icon" onClick={() => navigate('/home')}>

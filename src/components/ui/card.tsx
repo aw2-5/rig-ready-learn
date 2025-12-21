@@ -9,10 +9,10 @@ const cardVariants = cva(
     variants: {
       variant: {
         default: "bg-card shadow-card",
-        glass: "bg-card/50 backdrop-blur-md border-border/50",
+        glass: "glass-card",
         gradient: "gradient-card shadow-card",
-        interactive: "bg-card shadow-card hover:shadow-lg hover:scale-[1.02] cursor-pointer active:scale-[0.98]",
-        accent: "bg-card shadow-card border-accent/20 hover:border-accent/50",
+        interactive: "glass-card hover:shadow-lg hover:scale-[1.02] cursor-pointer active:scale-[0.98]",
+        accent: "glass-card border-accent/30 hover:border-accent/60 glass-glow",
       },
     },
     defaultVariants: {
