@@ -92,8 +92,10 @@ export default function Lesson() {
   };
   const handleCompleteQuiz = (score: number) => {
     if (id) {
-      markDayComplete(id, 6, score);
-      setSelectedDay(7);
+      markDayComplete(id, selectedDay, score);
+      if (selectedDay < 7) {
+        setSelectedDay(selectedDay + 1);
+      }
     }
   };
   const handleCompleteProject = () => {
@@ -126,13 +128,25 @@ export default function Lesson() {
   const isCurrentLessonComplete = id ? isLessonComplete(id) : false;
   const renderDayContent = () => {
     if (!currentDayContent || !id) return null;
+
     const dayComplete = isDayComplete(id, selectedDay);
+
     if (currentDayContent.type === 'quiz' && currentDayContent.quiz) {
-      return <DayQuiz key={`quiz-${id}-${selectedDay}`} quiz={currentDayContent.quiz} onComplete={handleCompleteQuiz} isComplete={dayComplete} previousScore={getDayScore(id, 6)} />;
+      return (
+        <DayQuiz
+          key={`quiz-${id}-${selectedDay}`}
+          quiz={currentDayContent.quiz}
+          onComplete={handleCompleteQuiz}
+          isComplete={dayComplete}
+          previousScore={getDayScore(id, selectedDay)}
+        />
+      );
     }
+
     if (currentDayContent.type === 'project') {
       return <DayProject dayContent={currentDayContent} onComplete={handleCompleteProject} isComplete={dayComplete} />;
     }
+
     return <DayContent dayContent={currentDayContent} onComplete={handleCompleteDay} isComplete={dayComplete} />;
   };
   return <div className="min-h-screen bg-background" dir={isRTL ? 'rtl' : 'ltr'}>
