@@ -1,16 +1,15 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { QuizQuestion } from '@/data/lessons';
-import { 
-  ArrowLeft, 
-  ArrowRight, 
-  CheckCircle, 
-  XCircle, 
+import {
+  ArrowLeft,
+  ArrowRight,
+  XCircle,
   RotateCcw,
-  Trophy
+  Trophy,
 } from 'lucide-react';
 
 interface DayQuizProps {
@@ -30,6 +29,13 @@ export function DayQuiz({ quiz, onComplete, isComplete, previousScore }: DayQuiz
   const [showResults, setShowResults] = useState(false);
 
   const questions = quiz[language];
+
+  useEffect(() => {
+    // مهم: تصفير حالة الاختبار عند تغيير اليوم/الدرس (تغيير الـ props)
+    setCurrentQuestion(0);
+    setAnswers([]);
+    setShowResults(false);
+  }, [quiz, language]);
 
   const handleAnswer = (index: number) => {
     const newAnswers = [...answers];
