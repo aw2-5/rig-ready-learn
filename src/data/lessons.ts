@@ -30,6 +30,81 @@ export interface QuizQuestion {
 
 export const lessons: Lesson[] = [
   {
+    id: 'drilling-fluids',
+    titleKey: 'drilling-fluids',
+    icon: '🧪',
+    content: {
+      en: {
+        title: 'Drilling Fluids Basics',
+        definition: 'Drilling fluids (mud) are fluids pumped into the well during drilling to perform multiple critical functions.',
+        explanation: 'Drilling fluids cool and lubricate the drill bit, carry rock cuttings to the surface, control formation pressure, and stabilize the wellbore. There are three main types: Water-Based Mud (WBM), Oil-Based Mud (OBM), and Synthetic-Based Mud (SBM). Each type has specific advantages and is chosen based on well conditions, cost, and environmental factors.',
+        summary: 'Drilling fluids are essential for safe and efficient drilling operations, performing cooling, cuttings transport, pressure control, and wellbore stabilization functions.',
+      },
+      ar: {
+        title: 'أساسيات سوائل الحفر',
+        definition: 'سوائل الحفر (الطين) هي السوائل التي تُضخ في البئر أثناء الحفر لأداء وظائف حيوية متعددة.',
+        explanation: 'سوائل الحفر تبرد وتزيت رأس الحفر، وترفع فتات الصخور للسطح، وتتحكم في ضغط التكوين، وتثبت جدران البئر. هناك ثلاثة أنواع رئيسية: سائل مائي (WBM)، سائل زيتي (OBM)، وسائل اصطناعي (SBM). يُختار كل نوع بناءً على ظروف البئر والتكلفة والعوامل البيئية.',
+        summary: 'سوائل الحفر ضرورية لعمليات الحفر الآمنة والفعالة، وتؤدي وظائف التبريد ونقل الفتات والتحكم بالضغط وتثبيت البئر.',
+      },
+    },
+    quiz: {
+      en: [
+        {
+          question: 'What is the common field name for drilling fluid?',
+          options: ['Oil', 'Water', 'Mud', 'Gas'],
+          correctAnswer: 2,
+        },
+        {
+          question: 'Which is the most commonly used drilling fluid type?',
+          options: ['OBM', 'SBM', 'WBM', 'Air'],
+          correctAnswer: 2,
+        },
+        {
+          question: 'What happens if drilling fluid density is too low?',
+          options: ['Lost circulation', 'Formation fluid influx (Kick)', 'Better cooling', 'Nothing'],
+          correctAnswer: 1,
+        },
+        {
+          question: 'What is the Annulus?',
+          options: ['Inside drill string', 'Space between drill string and wellbore', 'Drill bit opening', 'Mud tank'],
+          correctAnswer: 1,
+        },
+        {
+          question: 'What is the purpose of Shale Shakers?',
+          options: ['Mix fluid', 'Separate cuttings from fluid', 'Measure density', 'Pump fluid'],
+          correctAnswer: 1,
+        },
+      ],
+      ar: [
+        {
+          question: 'ما هو الاسم الشائع لسائل الحفر في الميدان؟',
+          options: ['الزيت', 'الماء', 'الطين', 'الغاز'],
+          correctAnswer: 2,
+        },
+        {
+          question: 'ما هو نوع سائل الحفر الأكثر استخداماً؟',
+          options: ['OBM', 'SBM', 'WBM', 'الهواء'],
+          correctAnswer: 2,
+        },
+        {
+          question: 'ماذا يحدث إذا كانت كثافة سائل الحفر منخفضة جداً؟',
+          options: ['فقدان الدوران', 'دخول سوائل للبئر (Kick)', 'تبريد أفضل', 'لا شيء'],
+          correctAnswer: 1,
+        },
+        {
+          question: 'ما هو الفراغ الحلقي (Annulus)؟',
+          options: ['داخل سلسلة الحفر', 'المسافة بين السلسلة وجدار البئر', 'فتحة رأس الحفر', 'حوض الطين'],
+          correctAnswer: 1,
+        },
+        {
+          question: 'ما هي وظيفة المناخل الاهتزازية؟',
+          options: ['خلط السائل', 'فصل الفتات عن السائل', 'قياس الكثافة', 'ضخ السائل'],
+          correctAnswer: 1,
+        },
+      ],
+    },
+  },
+  {
     id: 'intro',
     titleKey: 'intro',
     icon: '🛢️',
