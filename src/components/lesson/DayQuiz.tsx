@@ -1,9 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { QuizQuestion } from '@/data/lessons';
+import { useShuffledQuiz } from '@/hooks/useShuffledQuiz';
 import {
   ArrowLeft,
   ArrowRight,
@@ -27,11 +28,17 @@ export function DayQuiz({ quiz, onComplete, isComplete, previousScore }: DayQuiz
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState<number[]>([]);
   const [showResults, setShowResults] = useState(false);
+  
+  // Generate session seed once per quiz instance
+  const [sessionSeed] = useState(() => Math.floor(Math.random() * 100000));
 
   const questions = quiz[language];
+  
+  // Use shuffled questions
+  const shuffledQuestions = useShuffledQuiz(questions, sessionSeed);
 
   useEffect(() => {
-    // مهم: تصفير حالة الاختبار عند تغيير اليوم/الدرس (تغيير الـ props)
+    // Reset quiz state when day/lesson changes
     setCurrentQuestion(0);
     setAnswers([]);
     setShowResults(false);
@@ -44,7 +51,7 @@ export function DayQuiz({ quiz, onComplete, isComplete, previousScore }: DayQuiz
   };
 
   const nextQuestion = () => {
-    if (currentQuestion < questions.length - 1) {
+    if (currentQuestion < shuffledQuestions.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
     } else {
       setShowResults(true);
@@ -67,13 +74,14 @@ export function DayQuiz({ quiz, onComplete, isComplete, previousScore }: DayQuiz
 
   const calculateScore = () => {
     return answers.reduce((score, answer, index) => {
-      return score + (answer === questions[index].correctAnswer ? 1 : 0);
+      // Compare with shuffled correct answer
+      return score + (answer === shuffledQuestions[index].correctAnswer ? 1 : 0);
     }, 0);
   };
 
   if (showResults || isComplete) {
     const score = showResults ? calculateScore() : (previousScore || 0);
-    const percentage = (score / questions.length) * 100;
+    const percentage = (score / shuffledQuestions.length) * 100;
     const passed = percentage >= 60;
 
     return (
@@ -90,7 +98,7 @@ export function DayQuiz({ quiz, onComplete, isComplete, previousScore }: DayQuiz
           </div>
           <h3 className="text-2xl font-bold text-foreground mb-2">{t('quizComplete')}</h3>
           <p className="text-4xl font-bold text-gradient mb-2">
-            {score}/{questions.length}
+            {score}/{shuffledQuestions.length}
           </p>
           <p className="text-lg text-muted-foreground mb-4">
             {percentage.toFixed(0)}%
@@ -109,7 +117,7 @@ export function DayQuiz({ quiz, onComplete, isComplete, previousScore }: DayQuiz
     );
   }
 
-  const currentQ = questions[currentQuestion];
+  const currentQ = shuffledQuestions[currentQuestion];
 
   return (
     <div className="space-y-4 animate-fade-in">
@@ -120,11 +128,11 @@ export function DayQuiz({ quiz, onComplete, isComplete, previousScore }: DayQuiz
               {t('weeklyQuiz')}
             </span>
             <span className="text-sm text-muted-foreground">
-              {currentQuestion + 1}/{questions.length}
+              {currentQuestion + 1}/{shuffledQuestions.length}
             </span>
           </div>
           <Progress 
-            value={((currentQuestion + 1) / questions.length) * 100} 
+            value={((currentQuestion + 1) / shuffledQuestions.length) * 100} 
             className="h-2"
           />
         </CardContent>
@@ -172,7 +180,7 @@ export function DayQuiz({ quiz, onComplete, isComplete, previousScore }: DayQuiz
           onClick={nextQuestion}
           disabled={answers[currentQuestion] === undefined}
         >
-          {currentQuestion === questions.length - 1 ? t('finish') : t('next')}
+          {currentQuestion === shuffledQuestions.length - 1 ? t('finish') : t('next')}
           {isRTL ? <ArrowLeft className="w-4 h-4" /> : <ArrowRight className="w-4 h-4" />}
         </Button>
       </div>
