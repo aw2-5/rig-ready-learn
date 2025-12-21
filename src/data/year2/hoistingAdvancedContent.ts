@@ -1292,6 +1292,10 @@ Regular lubrication is essential to protect wire rope from wear and corrosion. S
     {
       day: 6,
       type: 'quiz',
+      content: {
+        ar: { title: 'اختبار الأسبوع', explanation: '', keyTerms: [] },
+        en: { title: 'Weekly Quiz', explanation: '', keyTerms: [] }
+      },
       quiz: {
         ar: [
             {
@@ -1402,6 +1406,10 @@ Regular lubrication is essential to protect wire rope from wear and corrosion. S
     {
       day: 7,
       type: 'project',
+      content: {
+        ar: { title: 'مشروع الأسبوع', explanation: '', keyTerms: [] },
+        en: { title: 'Weekly Project', explanation: '', keyTerms: [] }
+      },
       project: {
         ar: {
           title: 'تحليل نظام الرفع',
