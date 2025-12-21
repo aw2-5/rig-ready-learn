@@ -1,4 +1,5 @@
 import { QuizQuestion } from './lessons';
+import { drillingFluidsLesson } from './drillingFluidsContent';
 
 export interface DailyContent {
   day: number;
@@ -5969,4 +5970,5 @@ export const weeklyContent: WeeklyLesson[] = [
   rigOverviewLesson,
   unitsLesson,
   terminologyLesson,
+  drillingFluidsLesson,
 ];
