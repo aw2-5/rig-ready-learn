@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
 import { lessons } from '@/data/lessons';
 import { lessonsYear2 } from '@/data/lessonsYear2';
+import { lessonsYear3 } from '@/data/lessonsYear3';
 import { useLevelProgress } from '@/hooks/useLevelProgress';
 import { LevelCompletionModal } from '@/components/LevelCompletionModal';
 import { UpgradeAccountModal } from '@/components/UpgradeAccountModal';
@@ -22,7 +23,8 @@ import {
   Lock,
   CheckCircle,
   Star,
-  Sparkles
+  Sparkles,
+  Trophy
 } from 'lucide-react';
 import { toast } from 'sonner';
 
@@ -32,14 +34,19 @@ export default function Home() {
   const { 
     level1Progress, 
     level2Progress,
+    level3Progress,
     isLevel1Complete,
     isLevel2Unlocked,
+    isLevel2Complete,
+    isLevel3Unlocked,
     level1AverageScore,
+    level2AverageScore,
     isLessonComplete,
   } = useLevelProgress();
   const navigate = useNavigate();
   const [selectedYear, setSelectedYear] = useState(1);
   const [showLevel1CompleteModal, setShowLevel1CompleteModal] = useState(false);
+  const [showLevel2CompleteModal, setShowLevel2CompleteModal] = useState(false);
   const [showUpgradeModal, setShowUpgradeModal] = useState(false);
 
   // Check if level 1 was just completed
@@ -52,6 +59,17 @@ export default function Home() {
       }
     }
   }, [isLevel1Complete, selectedYear]);
+
+  // Check if level 2 was just completed
+  useEffect(() => {
+    if (isLevel2Complete && selectedYear === 2) {
+      const hasSeenModal = localStorage.getItem('level2-complete-modal-seen');
+      if (!hasSeenModal) {
+        setShowLevel2CompleteModal(true);
+        localStorage.setItem('level2-complete-modal-seen', 'true');
+      }
+    }
+  }, [isLevel2Complete, selectedYear]);
 
   const handleLogout = () => {
     logout();
@@ -66,8 +84,16 @@ export default function Home() {
     if (year === 2 && !isLevel2Unlocked) {
       toast.error(
         language === 'ar' 
-          ? 'أكمل المستوى الأول أولاً لفتح المستوى الثاني' 
-          : 'Complete Level 1 first to unlock Level 2'
+          ? 'أكمل 80% من المستوى الأول لفتح المستوى الثاني' 
+          : 'Complete 80% of Level 1 to unlock Level 2'
+      );
+      return;
+    }
+    if (year === 3 && !isLevel3Unlocked) {
+      toast.error(
+        language === 'ar' 
+          ? 'أكمل 80% من المستوى الثاني لفتح المستوى الثالث' 
+          : 'Complete 80% of Level 2 to unlock Level 3'
       );
       return;
     }
@@ -79,9 +105,20 @@ export default function Home() {
     setSelectedYear(2);
   };
 
+  const handleGoToLevel3 = () => {
+    setShowLevel2CompleteModal(false);
+    setSelectedYear(3);
+  };
+
   // Get lessons based on selected year
-  const currentLessons = selectedYear === 1 ? lessons : lessonsYear2;
-  const currentProgress = selectedYear === 1 ? level1Progress : level2Progress;
+  const currentLessons = selectedYear === 1 ? lessons : selectedYear === 2 ? lessonsYear2 : lessonsYear3;
+  const currentProgress = selectedYear === 1 ? level1Progress : selectedYear === 2 ? level2Progress : level3Progress;
+
+  const getYearLabel = () => {
+    if (selectedYear === 1) return t('firstYear');
+    if (selectedYear === 2) return t('secondYear');
+    return language === 'ar' ? 'المستوى الثالث' : 'Level 3';
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -96,7 +133,7 @@ export default function Home() {
               <div>
                 <h1 className="font-bold text-foreground text-lg">{t('appName')}</h1>
                 <p className="text-xs text-muted-foreground">
-                  {selectedYear === 1 ? t('firstYear') : t('secondYear')}
+                  {getYearLabel()}
                 </p>
               </div>
             </div>
@@ -181,24 +218,37 @@ export default function Home() {
         <div className="flex gap-2">
           <Button
             variant={selectedYear === 1 ? "default" : "outline"}
-            className="flex-1 gap-2"
+            className="flex-1 gap-1 text-xs px-2"
             onClick={() => handleYearSelect(1)}
           >
-            {isLevel1Complete && <CheckCircle className="w-4 h-4" />}
-            {t('firstYear')}
-            {isLevel1Complete && <span className="text-xs opacity-75">✓</span>}
+            {isLevel1Complete && <CheckCircle className="w-3 h-3" />}
+            {language === 'ar' ? 'المستوى 1' : 'Level 1'}
           </Button>
           <Button
             variant={selectedYear === 2 ? "default" : "outline"}
-            className={`flex-1 gap-2 ${!isLevel2Unlocked ? 'opacity-60' : ''}`}
+            className={`flex-1 gap-1 text-xs px-2 ${!isLevel2Unlocked ? 'opacity-60' : ''}`}
             onClick={() => handleYearSelect(2)}
           >
             {!isLevel2Unlocked ? (
-              <Lock className="w-4 h-4" />
+              <Lock className="w-3 h-3" />
+            ) : isLevel2Complete ? (
+              <CheckCircle className="w-3 h-3" />
             ) : (
-              <Star className="w-4 h-4" />
+              <Star className="w-3 h-3" />
             )}
-            {t('secondYear')}
+            {language === 'ar' ? 'المستوى 2' : 'Level 2'}
+          </Button>
+          <Button
+            variant={selectedYear === 3 ? "default" : "outline"}
+            className={`flex-1 gap-1 text-xs px-2 ${!isLevel3Unlocked ? 'opacity-60' : ''}`}
+            onClick={() => handleYearSelect(3)}
+          >
+            {!isLevel3Unlocked ? (
+              <Lock className="w-3 h-3" />
+            ) : (
+              <Trophy className="w-3 h-3" />
+            )}
+            {language === 'ar' ? 'المستوى 3' : 'Level 3'}
           </Button>
         </div>
 
@@ -211,12 +261,33 @@ export default function Home() {
               </div>
               <div className="flex-1">
                 <p className="text-sm font-medium text-foreground">
-                  {language === 'ar' ? 'أكمل المستوى الأول' : 'Complete Level 1'}
+                  {language === 'ar' ? 'أكمل 80% لفتح المستوى الثاني' : 'Complete 80% to unlock Level 2'}
                 </p>
                 <p className="text-xs text-muted-foreground">
                   {language === 'ar' 
-                    ? `${level1Progress}% مكتمل - ${100 - level1Progress}% متبقي`
-                    : `${level1Progress}% complete - ${100 - level1Progress}% remaining`
+                    ? `${level1Progress}% مكتمل - ${Math.max(0, 80 - level1Progress)}% متبقي`
+                    : `${level1Progress}% complete - ${Math.max(0, 80 - level1Progress)}% remaining`
+                  }
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        )}
+
+        {!isLevel3Unlocked && selectedYear === 2 && (
+          <Card variant="accent" className="animate-fade-in">
+            <CardContent className="p-4 flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center">
+                <Lock className="w-5 h-5 text-accent" />
+              </div>
+              <div className="flex-1">
+                <p className="text-sm font-medium text-foreground">
+                  {language === 'ar' ? 'أكمل 80% لفتح المستوى الثالث' : 'Complete 80% to unlock Level 3'}
+                </p>
+                <p className="text-xs text-muted-foreground">
+                  {language === 'ar' 
+                    ? `${level2Progress}% مكتمل - ${Math.max(0, 80 - level2Progress)}% متبقي`
+                    : `${level2Progress}% complete - ${Math.max(0, 80 - level2Progress)}% remaining`
                   }
                 </p>
               </div>
@@ -289,7 +360,7 @@ export default function Home() {
           <CardContent className="p-4 text-center">
             <p className="text-sm text-muted-foreground mb-1">{t('petroleumEngineering')}</p>
             <p className="font-bold text-gradient">
-              {selectedYear === 1 ? t('firstYear') : t('secondYear')}
+              {getYearLabel()}
             </p>
           </CardContent>
         </Card>
@@ -302,6 +373,15 @@ export default function Home() {
         level={1}
         averageScore={level1AverageScore}
         onGoToNextLevel={handleGoToLevel2}
+      />
+
+      {/* Level 2 Completion Modal */}
+      <LevelCompletionModal
+        isOpen={showLevel2CompleteModal}
+        onClose={() => setShowLevel2CompleteModal(false)}
+        level={2}
+        averageScore={level2AverageScore}
+        onGoToNextLevel={handleGoToLevel3}
       />
 
       {/* Upgrade Account Modal */}

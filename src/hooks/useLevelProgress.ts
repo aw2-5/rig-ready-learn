@@ -2,12 +2,14 @@ import { useMemo } from 'react';
 import { useProgress } from './useProgress';
 import { lessons } from '@/data/lessons';
 import { lessonsYear2 } from '@/data/lessonsYear2';
+import { lessonsYear3 } from '@/data/lessonsYear3';
 
 export function useLevelProgress() {
   const { getTotalProgress, getWeekProgress, getDayScore } = useProgress();
 
   const level1LessonIds = useMemo(() => lessons.map(l => l.id), []);
   const level2LessonIds = useMemo(() => lessonsYear2.map(l => l.id), []);
+  const level3LessonIds = useMemo(() => lessonsYear3.map(l => l.id), []);
 
   const level1Progress = useMemo(() => 
     getTotalProgress(level1LessonIds), 
@@ -19,15 +21,22 @@ export function useLevelProgress() {
     [getTotalProgress, level2LessonIds]
   );
 
+  const level3Progress = useMemo(() => 
+    getTotalProgress(level3LessonIds), 
+    [getTotalProgress, level3LessonIds]
+  );
+
   const isLevel1Complete = level1Progress === 100;
-  const isLevel2Unlocked = level1Progress >= 80; // Unlock at 80%
+  const isLevel2Unlocked = level1Progress >= 80;
   const isLevel2Complete = level2Progress === 100;
+  const isLevel3Unlocked = level2Progress >= 80;
+  const isLevel3Complete = level3Progress === 100;
 
   // Calculate average quiz score for a level
   const getAverageQuizScore = (lessonIds: string[]): number | undefined => {
     const scores: number[] = [];
     lessonIds.forEach(lessonId => {
-      const score = getDayScore(lessonId, 6); // Day 6 is quiz day
+      const score = getDayScore(lessonId, 6);
       if (score !== undefined) {
         scores.push(score);
       }
@@ -46,6 +55,11 @@ export function useLevelProgress() {
     [level2LessonIds, getDayScore]
   );
 
+  const level3AverageScore = useMemo(() => 
+    getAverageQuizScore(level3LessonIds), 
+    [level3LessonIds, getDayScore]
+  );
+
   // Check if a specific lesson is complete (all 7 days done)
   const isLessonComplete = (lessonId: string): boolean => {
     return getWeekProgress(lessonId) === 100;
@@ -58,20 +72,25 @@ export function useLevelProgress() {
         return i;
       }
     }
-    return -1; // All complete
+    return -1;
   };
 
   return {
     level1Progress,
     level2Progress,
+    level3Progress,
     isLevel1Complete,
     isLevel2Unlocked,
     isLevel2Complete,
+    isLevel3Unlocked,
+    isLevel3Complete,
     level1AverageScore,
     level2AverageScore,
+    level3AverageScore,
     isLessonComplete,
     getNextIncompleteLessonIndex,
     level1LessonIds,
     level2LessonIds,
+    level3LessonIds,
   };
 }
