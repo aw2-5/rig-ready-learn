@@ -16,16 +16,26 @@ export interface LessonProgress {
   [lessonId: string]: WeekProgress;
 }
 
-const LOCAL_STORAGE_KEY = 'petrolearn-progress';
+const LOCAL_STORAGE_KEY_PREFIX = 'petrolearn-progress';
+const GUEST_STORAGE_KEY = 'petrolearn-progress-guest';
 
 export function useProgress() {
   const { user, isGuest } = useAuth();
   const [progress, setProgress] = useState<LessonProgress>({});
   const [isSyncing, setIsSyncing] = useState(false);
 
-  // Load local progress
+  // Get user-specific storage key
+  const getStorageKey = useCallback(() => {
+    if (user && !isGuest) {
+      return `${LOCAL_STORAGE_KEY_PREFIX}-${user.id}`;
+    }
+    return GUEST_STORAGE_KEY;
+  }, [user, isGuest]);
+
+  // Load local progress for current user
   const loadLocalProgress = useCallback((): LessonProgress => {
-    const saved = localStorage.getItem(LOCAL_STORAGE_KEY);
+    const key = getStorageKey();
+    const saved = localStorage.getItem(key);
     if (saved) {
       try {
         return JSON.parse(saved);
@@ -34,12 +44,13 @@ export function useProgress() {
       }
     }
     return {};
-  }, []);
+  }, [getStorageKey]);
 
-  // Save to local storage
+  // Save to local storage for current user
   const saveLocalProgress = useCallback((newProgress: LessonProgress) => {
-    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(newProgress));
-  }, []);
+    const key = getStorageKey();
+    localStorage.setItem(key, JSON.stringify(newProgress));
+  }, [getStorageKey]);
 
   // Fetch progress from cloud
   const fetchCloudProgress = useCallback(async (): Promise<LessonProgress> => {
@@ -143,21 +154,34 @@ export function useProgress() {
   // Initialize progress
   useEffect(() => {
     const initProgress = async () => {
-      const localProgress = loadLocalProgress();
-
       if (user && !isGuest) {
-        // Logged in user: merge local and cloud, then sync
+        // Logged in user: load cloud progress first, then check for guest data to migrate
         const cloudProgress = await fetchCloudProgress();
-        const merged = mergeProgress(localProgress, cloudProgress);
-        setProgress(merged);
-        saveLocalProgress(merged);
+        const guestProgress = localStorage.getItem(GUEST_STORAGE_KEY);
         
-        // Sync any local-only progress to cloud
-        if (Object.keys(localProgress).length > 0) {
-          await syncToCloud(merged);
+        if (guestProgress && Object.keys(cloudProgress).length === 0) {
+          // Migrate guest progress to new user account
+          try {
+            const parsedGuest = JSON.parse(guestProgress);
+            const merged = mergeProgress(parsedGuest, cloudProgress);
+            setProgress(merged);
+            saveLocalProgress(merged);
+            await syncToCloud(merged);
+            // Clear guest progress after migration
+            localStorage.removeItem(GUEST_STORAGE_KEY);
+          } catch (e) {
+            console.error('Failed to migrate guest progress:', e);
+            setProgress(cloudProgress);
+            saveLocalProgress(cloudProgress);
+          }
+        } else {
+          // Use cloud progress for logged-in users
+          setProgress(cloudProgress);
+          saveLocalProgress(cloudProgress);
         }
       } else {
-        // Guest: use local only
+        // Guest: use guest storage only
+        const localProgress = loadLocalProgress();
         setProgress(localProgress);
       }
     };
