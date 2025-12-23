@@ -54,6 +54,7 @@ const translations: Record<Language, Record<string, string>> = {
     'directionalDrilling': 'Directional & Horizontal Drilling',
     // Year selector
     'secondYear': 'Level 2',
+    'thirdYear': 'Level 3',
     'level': 'Level',
     'comingSoon': 'Coming Soon',
     'contentPlaceholder': 'Content will be added soon',
@@ -148,6 +149,7 @@ const translations: Record<Language, Record<string, string>> = {
     'directionalDrilling': 'الحفر الموجه والأفقي',
     // Year selector
     'secondYear': 'المستوى الثاني',
+    'thirdYear': 'المستوى الثالث',
     'level': 'المستوى',
     'comingSoon': 'قريباً',
     'contentPlaceholder': 'سيتم إضافة المحتوى قريباً',
