@@ -24,7 +24,8 @@ import {
   CheckCircle,
   Star,
   Sparkles,
-  Trophy
+  Trophy,
+  User
 } from 'lucide-react';
 import { toast } from 'sonner';
 
@@ -138,6 +139,13 @@ export default function Home() {
               </div>
             </div>
             <div className="flex items-center gap-2">
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => navigate('/profile')}
+              >
+                <User className="w-5 h-5" />
+              </Button>
               <Button
                 variant="ghost"
                 size="icon"
