@@ -1,1 +1,4 @@
 project_id = "bxgivubdnqkelbzgbhue"
+
+[functions.send-level-completion]
+verify_jwt = false
