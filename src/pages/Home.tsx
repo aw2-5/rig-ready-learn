@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useAuth } from '@/contexts/AuthContext';
@@ -11,6 +11,7 @@ import { lessonsYear3 } from '@/data/lessonsYear3';
 import { useLevelProgress } from '@/hooks/useLevelProgress';
 import { LevelCompletionModal } from '@/components/LevelCompletionModal';
 import { UpgradeAccountModal } from '@/components/UpgradeAccountModal';
+import { sendLevelCompletionEmail } from '@/lib/emailNotifications';
 import { 
   BookOpen, 
   GraduationCap, 
@@ -40,15 +41,49 @@ export default function Home() {
     isLevel2Unlocked,
     isLevel2Complete,
     isLevel3Unlocked,
+    isLevel3Complete,
     level1AverageScore,
     level2AverageScore,
+    level3AverageScore,
     isLessonComplete,
   } = useLevelProgress();
   const navigate = useNavigate();
   const [selectedYear, setSelectedYear] = useState(1);
   const [showLevel1CompleteModal, setShowLevel1CompleteModal] = useState(false);
   const [showLevel2CompleteModal, setShowLevel2CompleteModal] = useState(false);
+  const [showLevel3CompleteModal, setShowLevel3CompleteModal] = useState(false);
   const [showUpgradeModal, setShowUpgradeModal] = useState(false);
+  
+  // Track if email was sent to prevent duplicate sends
+  const emailSentRef = useRef<{ [key: number]: boolean }>({});
+
+  // Send email notification when level is completed
+  const sendEmailNotification = async (level: number, averageScore?: number) => {
+    if (!user || isGuest || !user.email) return;
+    if (emailSentRef.current[level]) return;
+    
+    const emailSentKey = `level${level}-email-sent-${user.id}`;
+    if (localStorage.getItem(emailSentKey)) return;
+    
+    emailSentRef.current[level] = true;
+    localStorage.setItem(emailSentKey, 'true');
+    
+    const success = await sendLevelCompletionEmail({
+      email: user.email,
+      userName: profile?.full_name || user.email.split('@')[0],
+      level,
+      averageScore,
+      language,
+    });
+    
+    if (success) {
+      toast.success(
+        language === 'ar' 
+          ? 'تم إرسال إشعار إكمال المستوى إلى بريدك الإلكتروني!' 
+          : 'Level completion notification sent to your email!'
+      );
+    }
+  };
 
   // Check if level 1 was just completed
   useEffect(() => {
@@ -57,6 +92,7 @@ export default function Home() {
       if (!hasSeenModal) {
         setShowLevel1CompleteModal(true);
         localStorage.setItem('level1-complete-modal-seen', 'true');
+        sendEmailNotification(1, level1AverageScore);
       }
     }
   }, [isLevel1Complete, selectedYear]);
@@ -68,9 +104,22 @@ export default function Home() {
       if (!hasSeenModal) {
         setShowLevel2CompleteModal(true);
         localStorage.setItem('level2-complete-modal-seen', 'true');
+        sendEmailNotification(2, level2AverageScore);
       }
     }
   }, [isLevel2Complete, selectedYear]);
+
+  // Check if level 3 was just completed
+  useEffect(() => {
+    if (isLevel3Complete && selectedYear === 3) {
+      const hasSeenModal = localStorage.getItem('level3-complete-modal-seen');
+      if (!hasSeenModal) {
+        setShowLevel3CompleteModal(true);
+        localStorage.setItem('level3-complete-modal-seen', 'true');
+        sendEmailNotification(3, level3AverageScore);
+      }
+    }
+  }, [isLevel3Complete, selectedYear]);
 
   const handleLogout = () => {
     logout();
@@ -390,6 +439,15 @@ export default function Home() {
         level={2}
         averageScore={level2AverageScore}
         onGoToNextLevel={handleGoToLevel3}
+      />
+
+      {/* Level 3 Completion Modal */}
+      <LevelCompletionModal
+        isOpen={showLevel3CompleteModal}
+        onClose={() => setShowLevel3CompleteModal(false)}
+        level={3}
+        averageScore={level3AverageScore}
+        onGoToNextLevel={() => setShowLevel3CompleteModal(false)}
       />
 
       {/* Upgrade Account Modal */}
