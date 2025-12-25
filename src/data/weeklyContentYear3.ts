@@ -1,5 +1,6 @@
 import { WeeklyLesson } from './weeklyContent';
 import { wellControlAdvancedLesson } from './year3/wellControlAdvancedContent';
+import { managedPressureDrillingLesson } from './year3/managedPressureDrillingContent';
 
 // Helper function to create placeholder weekly content for Year 3 lessons
 const createPlaceholderLesson = (lessonId: string, titleAr: string, titleEn: string): WeeklyLesson => ({
@@ -249,8 +250,10 @@ export const weeklyContentYear3: WeeklyLesson[] = [
   // Lesson 1: Advanced Well Control (Full Content)
   wellControlAdvancedLesson,
   
-  // Lesson 2-20: Placeholders
-  createPlaceholderLesson('managed-pressure-drilling', 'الحفر بالضغط المُدار', 'Managed Pressure Drilling (MPD)'),
+  // Lesson 2: Managed Pressure Drilling (Full Content)
+  managedPressureDrillingLesson,
+  
+  // Lesson 3-20: Placeholders
   createPlaceholderLesson('underbalanced-drilling', 'الحفر تحت التوازن', 'Underbalanced Drilling (UBD)'),
   createPlaceholderLesson('extended-reach-drilling', 'الحفر الممتد المدى', 'Extended Reach Drilling (ERD)'),
   createPlaceholderLesson('horizontal-drilling', 'الحفر الأفقي', 'Horizontal Drilling'),
