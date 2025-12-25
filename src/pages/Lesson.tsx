@@ -3,8 +3,10 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { lessons } from '@/data/lessons';
 import { lessonsYear2 } from '@/data/lessonsYear2';
+import { lessonsYear3 } from '@/data/lessonsYear3';
 import { weeklyContent } from '@/data/weeklyContent';
 import { weeklyContentYear2 } from '@/data/weeklyContentYear2';
+import { weeklyContentYear3 } from '@/data/weeklyContentYear3';
 import { useProgress } from '@/hooks/useProgress';
 import { useLevelProgress } from '@/hooks/useLevelProgress';
 import { Button } from '@/components/ui/button';
@@ -45,15 +47,17 @@ export default function Lesson() {
   const [selectedDay, setSelectedDay] = useState(1);
   const [showLevelCompleteModal, setShowLevelCompleteModal] = useState(false);
 
-  // Find lesson in both levels
-  const allLessons = [...lessons, ...lessonsYear2];
-  const allWeeklyContent = [...weeklyContent, ...weeklyContentYear2];
+  // Find lesson in all levels
+  const allLessons = [...lessons, ...lessonsYear2, ...lessonsYear3];
+  const allWeeklyContent = [...weeklyContent, ...weeklyContentYear2, ...weeklyContentYear3];
   const lesson = allLessons.find(l => l.id === id);
   const weeklyLesson = allWeeklyContent.find(w => w.lessonId === id);
 
   // Determine which level this lesson belongs to
   const isLevel1Lesson = lessons.some(l => l.id === id);
-  const currentLevelLessons = isLevel1Lesson ? lessons : lessonsYear2;
+  const isLevel2Lesson = lessonsYear2.some(l => l.id === id);
+  const isLevel3Lesson = lessonsYear3.some(l => l.id === id);
+  const currentLevelLessons = isLevel1Lesson ? lessons : isLevel2Lesson ? lessonsYear2 : lessonsYear3;
   const currentLessonIndex = currentLevelLessons.findIndex(l => l.id === id);
   const nextLesson = currentLevelLessons[currentLessonIndex + 1];
   const isLastLessonInLevel = currentLessonIndex === currentLevelLessons.length - 1;
