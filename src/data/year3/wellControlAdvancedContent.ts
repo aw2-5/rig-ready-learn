@@ -24,37 +24,37 @@ export const wellControlAdvancedLesson: WeeklyLesson = {
 
 <h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 المفاهيم الأساسية في التحكم بالبئر</h2>
 
-<div style="background: #f0fdf4; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #059669;">
+<div style="background: #f0fdf4; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #059669; color: #065f46;">
 <h3 style="color: #059669; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">1️⃣ الضغط الهيدروستاتيكي (Hydrostatic Pressure)</h3>
-<p style="line-height: 1.8; margin-bottom: 1rem;">
+<p style="line-height: 1.8; margin-bottom: 1rem; color: #065f46;">
 الضغط الهيدروستاتيكي هو الضغط الناتج عن وزن عمود سائل الحفر. يُحسب بالمعادلة:
 </p>
-<div style="background: #fff; padding: 1rem; border-radius: 8px; text-align: center; font-family: monospace; font-size: 1.1rem;">
+<div style="background: #fff; padding: 1rem; border-radius: 8px; text-align: center; font-family: monospace; font-size: 1.1rem; color: #1e3a5f;">
 P<sub>h</sub> = 0.052 × ρ × TVD
 </div>
-<p style="margin-top: 0.5rem; font-size: 0.9rem;">
+<p style="margin-top: 0.5rem; font-size: 0.9rem; color: #065f46;">
 حيث: P<sub>h</sub> = الضغط (psi)، ρ = كثافة الطين (ppg)، TVD = العمق الحقيقي العمودي (ft)
 </p>
 </div>
 
-<div style="background: #dbeafe; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #2563eb;">
+<div style="background: #dbeafe; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #2563eb; color: #1e3a8a;">
 <h3 style="color: #1e40af; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">2️⃣ ضغط التكوين (Formation Pressure)</h3>
-<p style="line-height: 1.8;">
+<p style="line-height: 1.8; color: #1e3a8a;">
 ضغط التكوين هو الضغط الموجود في مسامات الصخور تحت السطح. يمكن أن يكون:
 </p>
-<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2; margin-top: 0.5rem;">
+<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2; margin-top: 0.5rem; color: #1e3a8a;">
 <li><strong>عادي (Normal):</strong> يساوي ضغط عمود ماء بنفس العمق (~0.465 psi/ft)</li>
 <li><strong>غير طبيعي (Abnormal):</strong> أعلى من العادي</li>
 <li><strong>تحت العادي (Subnormal):</strong> أقل من العادي</li>
 </ul>
 </div>
 
-<div style="background: #fef3c7; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #f59e0b;">
+<div style="background: #fef3c7; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #f59e0b; color: #78350f;">
 <h3 style="color: #92400e; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">3️⃣ الحاجز الأولي والثانوي (Primary & Secondary Barriers)</h3>
-<p style="line-height: 1.8;">
+<p style="line-height: 1.8; color: #78350f;">
 <strong>الحاجز الأولي:</strong> سائل الحفر بكثافة كافية للحفاظ على الضغط الهيدروستاتيكي أعلى من ضغط التكوين.
 </p>
-<p style="line-height: 1.8; margin-top: 0.5rem;">
+<p style="line-height: 1.8; margin-top: 0.5rem; color: #78350f;">
 <strong>الحاجز الثانوي:</strong> مانع الانفجار (BOP) الذي يُستخدم عند فشل الحاجز الأولي.
 </p>
 </div>
@@ -64,9 +64,9 @@ P<sub>h</sub> = 0.052 × ρ × TVD
 الركلة (Kick) هي تدفق غير مرغوب من سوائل التكوين إلى البئر. التعرف المبكر على الركلة أمر حاسم:
 </p>
 
-<div style="background: #f8fafc; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #64748b;">
+<div style="background: #f8fafc; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #64748b; color: #334155;">
 <h3 style="color: #475569; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.75rem;">المؤشرات الإيجابية (أثناء الحفر):</h3>
-<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2;">
+<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2; color: #334155;">
 <li>زيادة في معدل التدفق الخارج (Flow Rate)</li>
 <li>زيادة في حجم حوض الطين (Pit Volume)</li>
 <li>زيادة في سرعة الاختراق (ROP)</li>
@@ -75,18 +75,18 @@ P<sub>h</sub> = 0.052 × ρ × TVD
 </ul>
 </div>
 
-<div style="background: #fae8ff; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #a855f7;">
+<div style="background: #fae8ff; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #a855f7; color: #581c87;">
 <h3 style="color: #7c3aed; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.75rem;">المؤشرات أثناء الرحلات (Tripping):</h3>
-<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2;">
+<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2; color: #581c87;">
 <li>عدم ملء البئر بالحجم المتوقع عند السحب</li>
 <li>تدفق السائل عند إيقاف المضخات</li>
 <li>عدم قبول البئر للحجم المتوقع عند الإنزال</li>
 </ul>
 </div>
 
-<div style="background: linear-gradient(135deg, #7c3aed15, #7c3aed10); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-right: 4px solid #7c3aed;">
+<div style="background: linear-gradient(135deg, #7c3aed15, #7c3aed10); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-right: 4px solid #7c3aed; color: #581c87;">
 <h3 style="color: #7c3aed; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">💡 ملخص اليوم</h3>
-<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2;">
+<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2; color: #581c87;">
 <li>التحكم بالبئر يعتمد على موازنة الضغط الهيدروستاتيكي مع ضغط التكوين</li>
 <li>الحاجز الأولي هو سائل الحفر والحاجز الثانوي هو BOP</li>
 <li>التعرف المبكر على مؤشرات الركلة ضروري للسلامة</li>
@@ -124,37 +124,37 @@ Failure in well control can lead to environmental disasters and massive human an
 
 <h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 Fundamental Concepts in Well Control</h2>
 
-<div style="background: #f0fdf4; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #059669;">
+<div style="background: #f0fdf4; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #059669; color: #065f46;">
 <h3 style="color: #059669; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">1️⃣ Hydrostatic Pressure</h3>
-<p style="line-height: 1.8; margin-bottom: 1rem;">
+<p style="line-height: 1.8; margin-bottom: 1rem; color: #065f46;">
 Hydrostatic pressure is the pressure exerted by a column of drilling fluid. It's calculated using:
 </p>
-<div style="background: #fff; padding: 1rem; border-radius: 8px; text-align: center; font-family: monospace; font-size: 1.1rem;">
+<div style="background: #fff; padding: 1rem; border-radius: 8px; text-align: center; font-family: monospace; font-size: 1.1rem; color: #1e3a5f;">
 P<sub>h</sub> = 0.052 × ρ × TVD
 </div>
-<p style="margin-top: 0.5rem; font-size: 0.9rem;">
+<p style="margin-top: 0.5rem; font-size: 0.9rem; color: #065f46;">
 Where: P<sub>h</sub> = Pressure (psi), ρ = Mud weight (ppg), TVD = True Vertical Depth (ft)
 </p>
 </div>
 
-<div style="background: #dbeafe; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #2563eb;">
+<div style="background: #dbeafe; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #2563eb; color: #1e3a8a;">
 <h3 style="color: #1e40af; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">2️⃣ Formation Pressure</h3>
-<p style="line-height: 1.8;">
+<p style="line-height: 1.8; color: #1e3a8a;">
 Formation pressure is the pressure within rock pore spaces underground. It can be:
 </p>
-<ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 2; margin-top: 0.5rem;">
+<ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 2; margin-top: 0.5rem; color: #1e3a8a;">
 <li><strong>Normal:</strong> Equal to a water column pressure at the same depth (~0.465 psi/ft)</li>
 <li><strong>Abnormal:</strong> Higher than normal</li>
 <li><strong>Subnormal:</strong> Lower than normal</li>
 </ul>
 </div>
 
-<div style="background: #fef3c7; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #f59e0b;">
+<div style="background: #fef3c7; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #f59e0b; color: #78350f;">
 <h3 style="color: #92400e; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">3️⃣ Primary & Secondary Barriers</h3>
-<p style="line-height: 1.8;">
+<p style="line-height: 1.8; color: #78350f;">
 <strong>Primary Barrier:</strong> Drilling fluid with sufficient density to maintain hydrostatic pressure above formation pressure.
 </p>
-<p style="line-height: 1.8; margin-top: 0.5rem;">
+<p style="line-height: 1.8; margin-top: 0.5rem; color: #78350f;">
 <strong>Secondary Barrier:</strong> Blowout Preventer (BOP) used when the primary barrier fails.
 </p>
 </div>
@@ -164,9 +164,9 @@ Formation pressure is the pressure within rock pore spaces underground. It can b
 A kick is an unwanted influx of formation fluids into the wellbore. Early recognition is critical:
 </p>
 
-<div style="background: #f8fafc; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #64748b;">
+<div style="background: #f8fafc; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #64748b; color: #334155;">
 <h3 style="color: #475569; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.75rem;">Positive Indicators (While Drilling):</h3>
-<ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 2;">
+<ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 2; color: #334155;">
 <li>Increase in flow rate out</li>
 <li>Increase in pit volume</li>
 <li>Increase in rate of penetration (ROP)</li>
@@ -175,9 +175,9 @@ A kick is an unwanted influx of formation fluids into the wellbore. Early recogn
 </ul>
 </div>
 
-<div style="background: linear-gradient(135deg, #7c3aed15, #7c3aed10); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-left: 4px solid #7c3aed;">
+<div style="background: linear-gradient(135deg, #7c3aed15, #7c3aed10); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-left: 4px solid #7c3aed; color: #581c87;">
 <h3 style="color: #7c3aed; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">💡 Day Summary</h3>
-<ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 2;">
+<ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 2; color: #581c87;">
 <li>Well control relies on balancing hydrostatic pressure with formation pressure</li>
 <li>Primary barrier is drilling fluid, secondary barrier is BOP</li>
 <li>Early kick detection is essential for safety</li>
@@ -212,13 +212,13 @@ A kick is an unwanted influx of formation fluids into the wellbore. Early recogn
 عند اكتشاف ركلة، يجب إغلاق البئر فوراً لمنع تفاقم الموقف. هناك طريقتان رئيسيتان للإغلاق تعتمدان على وضع سلسلة الحفر في البئر.
 </p>
 
-<div style="background: #f0fdf4; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #059669;">
+<div style="background: #f0fdf4; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #059669; color: #065f46;">
 <h3 style="color: #059669; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">1️⃣ إغلاق صعب (Hard Shut-In)</h3>
-<p style="line-height: 1.8; margin-bottom: 1rem;">
+<p style="line-height: 1.8; margin-bottom: 1rem; color: #065f46;">
 في هذه الطريقة، يتم إغلاق BOP مباشرة دون فتح خط الخنق (Choke Line). تُستخدم عندما يكون الوقت حرجاً ونحتاج لإيقاف التدفق فوراً.
 </p>
-<p style="font-weight: bold; margin-bottom: 0.5rem;">الخطوات:</p>
-<ol style="list-style-type: decimal; padding-right: 1.5rem; line-height: 2;">
+<p style="font-weight: bold; margin-bottom: 0.5rem; color: #065f46;">الخطوات:</p>
+<ol style="list-style-type: decimal; padding-right: 1.5rem; line-height: 2; color: #065f46;">
 <li>رفع Kelly/Top Drive عن الأرضية</li>
 <li>إيقاف المضخات</li>
 <li>إغلاق BOP</li>
@@ -227,13 +227,13 @@ A kick is an unwanted influx of formation fluids into the wellbore. Early recogn
 </ol>
 </div>
 
-<div style="background: #dbeafe; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #2563eb;">
+<div style="background: #dbeafe; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #2563eb; color: #1e3a8a;">
 <h3 style="color: #1e40af; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">2️⃣ إغلاق ناعم (Soft Shut-In)</h3>
-<p style="line-height: 1.8; margin-bottom: 1rem;">
+<p style="line-height: 1.8; margin-bottom: 1rem; color: #1e3a8a;">
 في هذه الطريقة، يتم فتح خط الخنق قبل إغلاق BOP لتجنب صدمة الضغط (Pressure Surge).
 </p>
-<p style="font-weight: bold; margin-bottom: 0.5rem;">الخطوات:</p>
-<ol style="list-style-type: decimal; padding-right: 1.5rem; line-height: 2;">
+<p style="font-weight: bold; margin-bottom: 0.5rem; color: #1e3a8a;">الخطوات:</p>
+<ol style="list-style-type: decimal; padding-right: 1.5rem; line-height: 2; color: #1e3a8a;">
 <li>رفع Kelly/Top Drive عن الأرضية</li>
 <li>إيقاف المضخات</li>
 <li>فتح خط الخنق</li>
@@ -245,28 +245,28 @@ A kick is an unwanted influx of formation fluids into the wellbore. Early recogn
 
 <h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 قراءة الضغوط بعد الإغلاق</h2>
 
-<div style="background: #fef3c7; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #f59e0b;">
+<div style="background: #fef3c7; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #f59e0b; color: #78350f;">
 <h3 style="color: #92400e; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">الضغوط المهمة:</h3>
-<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2;">
+<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2; color: #78350f;">
 <li><strong>SIDPP (Shut-In Drill Pipe Pressure):</strong> ضغط الإغلاق على أنبوب الحفر</li>
 <li><strong>SICP (Shut-In Casing Pressure):</strong> ضغط الإغلاق على الفتحة الحلقية</li>
 <li><strong>Pit Gain:</strong> الزيادة في حجم حوض الطين</li>
 </ul>
 </div>
 
-<div style="background: #f8fafc; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #64748b;">
+<div style="background: #f8fafc; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #64748b; color: #334155;">
 <h3 style="color: #475569; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">حساب كثافة القتل (Kill Mud Weight)</h3>
-<div style="background: #fff; padding: 1rem; border-radius: 8px; text-align: center; font-family: monospace; font-size: 1.1rem; margin-bottom: 1rem;">
+<div style="background: #fff; padding: 1rem; border-radius: 8px; text-align: center; font-family: monospace; font-size: 1.1rem; margin-bottom: 1rem; color: #1e3a5f;">
 KMW = OMW + (SIDPP / (0.052 × TVD))
 </div>
-<p style="font-size: 0.9rem;">
+<p style="font-size: 0.9rem; color: #334155;">
 حيث: KMW = كثافة طين القتل، OMW = كثافة الطين الأصلية، SIDPP = ضغط الإغلاق، TVD = العمق الحقيقي
 </p>
 </div>
 
-<div style="background: linear-gradient(135deg, #dc262615, #dc262610); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-right: 4px solid #dc2626;">
+<div style="background: linear-gradient(135deg, #dc262615, #dc262610); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-right: 4px solid #dc2626; color: #7f1d1d;">
 <h3 style="color: #dc2626; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">⚠️ نقاط السلامة الحرجة</h3>
-<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2;">
+<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2; color: #7f1d1d;">
 <li>لا تحاول الاستمرار بالحفر بعد اكتشاف ركلة</li>
 <li>تأكد من أن جميع أفراد الطاقم في مواقعهم</li>
 <li>لا تغلق BOP إذا كان المفصل (Tool Joint) داخل preventers</li>
@@ -274,9 +274,9 @@ KMW = OMW + (SIDPP / (0.052 × TVD))
 </ul>
 </div>
 
-<div style="background: linear-gradient(135deg, #7c3aed15, #7c3aed10); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-right: 4px solid #7c3aed;">
+<div style="background: linear-gradient(135deg, #7c3aed15, #7c3aed10); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-right: 4px solid #7c3aed; color: #581c87;">
 <h3 style="color: #7c3aed; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">💡 ملخص اليوم</h3>
-<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2;">
+<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2; color: #581c87;">
 <li>Hard Shut-In أسرع لكن يسبب صدمة ضغط</li>
 <li>Soft Shut-In أبطأ لكن أكثر أماناً للتكوينات الضعيفة</li>
 <li>SIDPP و SICP ضروريان لحساب كثافة القتل</li>
@@ -310,13 +310,13 @@ KMW = OMW + (SIDPP / (0.052 × TVD))
 When a kick is detected, the well must be shut in immediately to prevent escalation. There are two main shut-in methods depending on the drillstring position in the well.
 </p>
 
-<div style="background: #f0fdf4; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #059669;">
+<div style="background: #f0fdf4; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #059669; color: #065f46;">
 <h3 style="color: #059669; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">1️⃣ Hard Shut-In</h3>
-<p style="line-height: 1.8; margin-bottom: 1rem;">
+<p style="line-height: 1.8; margin-bottom: 1rem; color: #065f46;">
 In this method, the BOP is closed directly without opening the choke line. Used when time is critical and flow must be stopped immediately.
 </p>
-<p style="font-weight: bold; margin-bottom: 0.5rem;">Steps:</p>
-<ol style="list-style-type: decimal; padding-left: 1.5rem; line-height: 2;">
+<p style="font-weight: bold; margin-bottom: 0.5rem; color: #065f46;">Steps:</p>
+<ol style="list-style-type: decimal; padding-left: 1.5rem; line-height: 2; color: #065f46;">
 <li>Raise Kelly/Top Drive off the floor</li>
 <li>Stop pumps</li>
 <li>Close BOP</li>
@@ -325,13 +325,13 @@ In this method, the BOP is closed directly without opening the choke line. Used 
 </ol>
 </div>
 
-<div style="background: #dbeafe; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #2563eb;">
+<div style="background: #dbeafe; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #2563eb; color: #1e3a8a;">
 <h3 style="color: #1e40af; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">2️⃣ Soft Shut-In</h3>
-<p style="line-height: 1.8; margin-bottom: 1rem;">
+<p style="line-height: 1.8; margin-bottom: 1rem; color: #1e3a8a;">
 In this method, the choke line is opened before closing the BOP to avoid pressure surge.
 </p>
-<p style="font-weight: bold; margin-bottom: 0.5rem;">Steps:</p>
-<ol style="list-style-type: decimal; padding-left: 1.5rem; line-height: 2;">
+<p style="font-weight: bold; margin-bottom: 0.5rem; color: #1e3a8a;">Steps:</p>
+<ol style="list-style-type: decimal; padding-left: 1.5rem; line-height: 2; color: #1e3a8a;">
 <li>Raise Kelly/Top Drive off the floor</li>
 <li>Stop pumps</li>
 <li>Open choke line</li>
@@ -343,28 +343,28 @@ In this method, the choke line is opened before closing the BOP to avoid pressur
 
 <h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 Reading Pressures After Shut-In</h2>
 
-<div style="background: #fef3c7; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #f59e0b;">
+<div style="background: #fef3c7; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #f59e0b; color: #78350f;">
 <h3 style="color: #92400e; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">Critical Pressures:</h3>
-<ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 2;">
+<ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 2; color: #78350f;">
 <li><strong>SIDPP (Shut-In Drill Pipe Pressure):</strong> Pressure on the drillpipe</li>
 <li><strong>SICP (Shut-In Casing Pressure):</strong> Pressure on the annulus</li>
 <li><strong>Pit Gain:</strong> Increase in mud pit volume</li>
 </ul>
 </div>
 
-<div style="background: #f8fafc; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #64748b;">
+<div style="background: #f8fafc; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #64748b; color: #334155;">
 <h3 style="color: #475569; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">Kill Mud Weight Calculation</h3>
-<div style="background: #fff; padding: 1rem; border-radius: 8px; text-align: center; font-family: monospace; font-size: 1.1rem; margin-bottom: 1rem;">
+<div style="background: #fff; padding: 1rem; border-radius: 8px; text-align: center; font-family: monospace; font-size: 1.1rem; margin-bottom: 1rem; color: #1e3a5f;">
 KMW = OMW + (SIDPP / (0.052 × TVD))
 </div>
-<p style="font-size: 0.9rem;">
+<p style="font-size: 0.9rem; color: #334155;">
 Where: KMW = Kill Mud Weight, OMW = Original Mud Weight, SIDPP = Shut-In Drill Pipe Pressure, TVD = True Vertical Depth
 </p>
 </div>
 
-<div style="background: linear-gradient(135deg, #7c3aed15, #7c3aed10); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-left: 4px solid #7c3aed;">
+<div style="background: linear-gradient(135deg, #7c3aed15, #7c3aed10); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-left: 4px solid #7c3aed; color: #581c87;">
 <h3 style="color: #7c3aed; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">💡 Day Summary</h3>
-<ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 2;">
+<ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 2; color: #581c87;">
 <li>Hard Shut-In is faster but causes pressure surge</li>
 <li>Soft Shut-In is slower but safer for weak formations</li>
 <li>SIDPP and SICP are essential for kill weight calculations</li>
