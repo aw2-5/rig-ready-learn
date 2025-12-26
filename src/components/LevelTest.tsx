@@ -61,7 +61,7 @@ export function LevelTest({ level, onComplete, onCancel }: LevelTestProps) {
   // Use shuffled questions
   const shuffledQuestions = useShuffledQuiz(selectedQuestions, sessionSeed);
 
-  const passingScore = 80; // Need 80% to pass
+  const passingCorrectAnswers = 25; // Need 25 correct answers to pass
 
   const handleAnswer = (index: number) => {
     const newAnswers = [...answers];
@@ -75,19 +75,18 @@ export function LevelTest({ level, onComplete, onCancel }: LevelTestProps) {
     } else {
       setShowResults(true);
       const score = calculateScore();
-      const percentage = (score / shuffledQuestions.length) * 100;
-      const passed = percentage >= passingScore;
+      const passed = score >= passingCorrectAnswers;
       
       if (passed) {
         // Mark all days in all lessons as complete
         levelLessons.forEach(lesson => {
           for (let day = 1; day <= 7; day++) {
-            markDayComplete(lesson.id, day, day === 6 ? Math.round(percentage) : undefined);
+            markDayComplete(lesson.id, day, day === 6 ? score : undefined);
           }
         });
       }
       
-      onComplete(passed, Math.round(percentage));
+      onComplete(passed, score);
     }
   };
 
@@ -129,8 +128,8 @@ export function LevelTest({ level, onComplete, onCancel }: LevelTestProps) {
           </h3>
           <p className="text-muted-foreground mb-6">
             {language === 'ar' 
-              ? `هذا الاختبار يتكون من ${shuffledQuestions.length} سؤال من جميع دروس ${getLevelName()}. يجب الحصول على ${passingScore}% للنجاح وتخطي المستوى.`
-              : `This test consists of ${shuffledQuestions.length} questions from all ${getLevelName()} lessons. You need ${passingScore}% to pass and skip the level.`
+              ? `هذا الاختبار يتكون من ${shuffledQuestions.length} سؤال من جميع دروس ${getLevelName()}. يجب الحصول على ${passingCorrectAnswers} إجابة صحيحة على الأقل للنجاح وتخطي المستوى.`
+              : `This test consists of ${shuffledQuestions.length} questions from all ${getLevelName()} lessons. You need at least ${passingCorrectAnswers} correct answers to pass and skip the level.`
             }
           </p>
           
@@ -162,65 +161,131 @@ export function LevelTest({ level, onComplete, onCancel }: LevelTestProps) {
     );
   }
 
+  // Get wrong answers for results
+  const getWrongAnswers = () => {
+    return shuffledQuestions
+      .map((q, index) => ({
+        question: q,
+        userAnswer: answers[index],
+        questionIndex: index,
+      }))
+      .filter(item => item.userAnswer !== item.question.correctAnswer);
+  };
+
   // Results screen
   if (showResults) {
     const score = calculateScore();
-    const percentage = (score / shuffledQuestions.length) * 100;
-    const passed = percentage >= passingScore;
+    const passed = score >= passingCorrectAnswers;
+    const wrongAnswers = getWrongAnswers();
 
     return (
-      <Card variant="default" className="animate-scale-in">
-        <CardContent className="p-6 text-center">
-          <div className={`w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-4 ${
-            passed ? 'bg-green-500/20' : 'bg-destructive/20'
-          }`}>
-            {passed ? (
-              <Trophy className="w-10 h-10 text-green-500" />
-            ) : (
-              <XCircle className="w-10 h-10 text-destructive" />
-            )}
-          </div>
-          <h3 className="text-2xl font-bold text-foreground mb-2">
-            {passed 
-              ? (language === 'ar' ? 'مبروك! نجحت في الاختبار' : 'Congratulations! You passed!')
-              : (language === 'ar' ? 'للأسف، لم تنجح' : 'Sorry, you did not pass')
-            }
-          </h3>
-          <p className="text-4xl font-bold text-gradient mb-2">
-            {score}/{shuffledQuestions.length}
-          </p>
-          <p className="text-lg text-muted-foreground mb-4">
-            {percentage.toFixed(0)}%
-          </p>
-          <p className="text-muted-foreground mb-6">
-            {passed 
-              ? (language === 'ar' 
-                  ? `🎉 تم تخطي ${getLevelName()} بنجاح!` 
-                  : `🎉 ${getLevelName()} skipped successfully!`
-                )
-              : (language === 'ar' 
-                  ? `تحتاج ${passingScore}% للنجاح. ننصحك بدراسة الدروس والمحاولة مرة أخرى.`
-                  : `You need ${passingScore}% to pass. We recommend studying the lessons and trying again.`
-                )
-            }
-          </p>
-          <div className="flex gap-3">
-            {!passed && (
-              <Button variant="secondary" className="flex-1" onClick={resetQuiz}>
-                <RotateCcw className="w-4 h-4" />
-                {t('tryAgain')}
+      <div className="space-y-4 animate-scale-in">
+        <Card variant="default">
+          <CardContent className="p-6 text-center">
+            <div className={`w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-4 ${
+              passed ? 'bg-green-500/20' : 'bg-destructive/20'
+            }`}>
+              {passed ? (
+                <Trophy className="w-10 h-10 text-green-500" />
+              ) : (
+                <XCircle className="w-10 h-10 text-destructive" />
+              )}
+            </div>
+            <h3 className="text-2xl font-bold text-foreground mb-2">
+              {passed 
+                ? (language === 'ar' ? 'مبروك! نجحت في الاختبار' : 'Congratulations! You passed!')
+                : (language === 'ar' ? 'للأسف، لم تنجح' : 'Sorry, you did not pass')
+              }
+            </h3>
+            <p className="text-4xl font-bold text-gradient mb-2">
+              {score}/{shuffledQuestions.length}
+            </p>
+            <p className="text-lg text-muted-foreground mb-4">
+              {language === 'ar' 
+                ? `${score} إجابة صحيحة من ${shuffledQuestions.length}` 
+                : `${score} correct out of ${shuffledQuestions.length}`
+              }
+            </p>
+            <p className="text-muted-foreground mb-6">
+              {passed 
+                ? (language === 'ar' 
+                    ? `🎉 تم تخطي ${getLevelName()} بنجاح!` 
+                    : `🎉 ${getLevelName()} skipped successfully!`
+                  )
+                : (language === 'ar' 
+                    ? `تحتاج ${passingCorrectAnswers} إجابة صحيحة على الأقل للنجاح. ننصحك بدراسة الدروس والمحاولة مرة أخرى.`
+                    : `You need at least ${passingCorrectAnswers} correct answers to pass. We recommend studying the lessons and trying again.`
+                  )
+              }
+            </p>
+            <div className="flex gap-3">
+              {!passed && (
+                <Button variant="secondary" className="flex-1" onClick={resetQuiz}>
+                  <RotateCcw className="w-4 h-4" />
+                  {t('tryAgain')}
+                </Button>
+              )}
+              <Button 
+                variant="accent" 
+                className="flex-1" 
+                onClick={() => navigate('/home')}
+              >
+                {t('backToHome')}
               </Button>
-            )}
-            <Button 
-              variant="accent" 
-              className="flex-1" 
-              onClick={() => navigate('/home')}
-            >
-              {t('backToHome')}
-            </Button>
-          </div>
-        </CardContent>
-      </Card>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Wrong Answers Section */}
+        {wrongAnswers.length > 0 && (
+          <Card variant="default">
+            <CardContent className="p-4">
+              <h4 className="text-lg font-semibold text-foreground mb-4 flex items-center gap-2">
+                <XCircle className="w-5 h-5 text-destructive" />
+                {language === 'ar' ? 'الإجابات الخاطئة والحلول الصحيحة' : 'Wrong Answers & Correct Solutions'}
+              </h4>
+              <div className="space-y-4">
+                {wrongAnswers.map((item, idx) => (
+                  <div key={idx} className="p-4 rounded-lg bg-muted/50 border border-border">
+                    <p className="font-medium text-foreground mb-3">
+                      <span className="text-muted-foreground">
+                        {language === 'ar' ? 'س' : 'Q'}{item.questionIndex + 1}:
+                      </span>{' '}
+                      {item.question.question}
+                    </p>
+                    
+                    <div className="space-y-2">
+                      <div className="flex items-start gap-2 p-2 rounded bg-destructive/10 border border-destructive/30">
+                        <XCircle className="w-4 h-4 text-destructive mt-0.5 shrink-0" />
+                        <div>
+                          <span className="text-xs text-destructive font-medium">
+                            {language === 'ar' ? 'إجابتك:' : 'Your answer:'}
+                          </span>
+                          <p className="text-sm text-foreground">
+                            {item.question.options[item.userAnswer]}
+                          </p>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-start gap-2 p-2 rounded bg-green-500/10 border border-green-500/30">
+                        <Trophy className="w-4 h-4 text-green-500 mt-0.5 shrink-0" />
+                        <div>
+                          <span className="text-xs text-green-600 font-medium">
+                            {language === 'ar' ? 'الإجابة الصحيحة:' : 'Correct answer:'}
+                          </span>
+                          <p className="text-sm text-foreground">
+                            {item.question.options[item.question.correctAnswer]}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        )}
+      </div>
     );
   }
 
