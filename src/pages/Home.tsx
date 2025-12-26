@@ -11,6 +11,7 @@ import { lessonsYear3 } from '@/data/lessonsYear3';
 import { useLevelProgress } from '@/hooks/useLevelProgress';
 import { LevelCompletionModal } from '@/components/LevelCompletionModal';
 import { UpgradeAccountModal } from '@/components/UpgradeAccountModal';
+import { LevelTest } from '@/components/LevelTest';
 import { sendLevelCompletionEmail } from '@/lib/emailNotifications';
 import { 
   BookOpen, 
@@ -26,7 +27,8 @@ import {
   Star,
   Sparkles,
   Trophy,
-  User
+  User,
+  Zap
 } from 'lucide-react';
 import { toast } from 'sonner';
 
@@ -53,6 +55,7 @@ export default function Home() {
   const [showLevel2CompleteModal, setShowLevel2CompleteModal] = useState(false);
   const [showLevel3CompleteModal, setShowLevel3CompleteModal] = useState(false);
   const [showUpgradeModal, setShowUpgradeModal] = useState(false);
+  const [showLevelTest, setShowLevelTest] = useState<1 | 2 | 3 | null>(null);
   
   // Track if email was sent to prevent duplicate sends
   const emailSentRef = useRef<{ [key: number]: boolean }>({});
@@ -160,15 +163,68 @@ export default function Home() {
     setSelectedYear(3);
   };
 
+  // Handle level test completion
+  const handleLevelTestComplete = (passed: boolean, score: number) => {
+    if (passed) {
+      toast.success(
+        language === 'ar' 
+          ? `تم تخطي المستوى ${showLevelTest} بنجاح!`
+          : `Level ${showLevelTest} skipped successfully!`
+      );
+      // Trigger level completion modal if needed
+      if (showLevelTest === 1) {
+        setShowLevel1CompleteModal(true);
+        sendEmailNotification(1, score);
+      } else if (showLevelTest === 2) {
+        setShowLevel2CompleteModal(true);
+        sendEmailNotification(2, score);
+      } else if (showLevelTest === 3) {
+        setShowLevel3CompleteModal(true);
+        sendEmailNotification(3, score);
+      }
+    }
+    setShowLevelTest(null);
+  };
+
   // Get lessons based on selected year
   const currentLessons = selectedYear === 1 ? lessons : selectedYear === 2 ? lessonsYear2 : lessonsYear3;
   const currentProgress = selectedYear === 1 ? level1Progress : selectedYear === 2 ? level2Progress : level3Progress;
+  const isCurrentLevelComplete = selectedYear === 1 ? isLevel1Complete : selectedYear === 2 ? isLevel2Complete : isLevel3Complete;
 
   const getYearLabel = () => {
     if (selectedYear === 1) return t('firstYear');
     if (selectedYear === 2) return t('secondYear');
     return language === 'ar' ? 'المستوى الثالث' : 'Level 3';
   };
+
+  // Show level test if active
+  if (showLevelTest) {
+    return (
+      <div className="min-h-screen bg-background">
+        <header className="sticky top-0 z-50 glass-header">
+          <div className="container max-w-lg mx-auto px-4 py-4">
+            <div className="flex items-center justify-center">
+              <div className="w-10 h-10 rounded-xl gradient-accent flex items-center justify-center shadow-md">
+                <Zap className="w-5 h-5 text-accent-foreground" />
+              </div>
+              <div className="ml-3">
+                <h1 className="font-bold text-foreground text-lg">
+                  {language === 'ar' ? 'اختبار التخطي' : 'Skip Test'}
+                </h1>
+              </div>
+            </div>
+          </div>
+        </header>
+        <main className="container max-w-lg mx-auto px-4 py-6">
+          <LevelTest
+            level={showLevelTest}
+            onComplete={handleLevelTestComplete}
+            onCancel={() => setShowLevelTest(null)}
+          />
+        </main>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-background">
@@ -362,6 +418,19 @@ export default function Home() {
               </span>
             </div>
             <Progress value={currentProgress} className="h-2" />
+            
+            {/* Skip Test Button - only show if level not complete */}
+            {!isCurrentLevelComplete && currentProgress < 100 && (
+              <Button
+                variant="outline"
+                size="sm"
+                className="w-full mt-4 gap-2"
+                onClick={() => setShowLevelTest(selectedYear as 1 | 2 | 3)}
+              >
+                <Zap className="w-4 h-4" />
+                {language === 'ar' ? 'اختبار تخطي المستوى' : 'Take Skip Test'}
+              </Button>
+            )}
           </CardContent>
         </Card>
 
