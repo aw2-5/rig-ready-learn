@@ -756,6 +756,126 @@ A 10-barrel gas bubble at 10,000 ft will expand to about 200+ barrels at surface
     },
     {
       day: 5,
+      type: 'learning',
+      content: {
+        ar: {
+          title: 'مراجعة أسبوعية - التحكم المتقدم بالبئر',
+          explanation: `<section>
+<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 ملخص الأسبوع - التحكم المتقدم بالبئر</h2>
+
+<div style="background: #f0fdf4; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #059669;">
+<h3 style="color: #059669; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">📚 اليوم الأول: المفاهيم الأساسية</h3>
+<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2;">
+<li>الضغط الهيدروستاتيكي = 0.052 × ρ × TVD</li>
+<li>الحاجز الأولي: سائل الحفر</li>
+<li>الحاجز الثانوي: مانع الانفجار BOP</li>
+<li>مؤشرات الركلة: زيادة التدفق، زيادة الحوض، زيادة ROP</li>
+</ul>
+</div>
+
+<div style="background: #dbeafe; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #2563eb;">
+<h3 style="color: #1e40af; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">📚 اليوم الثاني: إجراءات الإغلاق</h3>
+<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2;">
+<li>Hard Shut-In: سريع، يسبب صدمة ضغط</li>
+<li>Soft Shut-In: أبطأ، أكثر أماناً</li>
+<li>KMW = OMW + (SIDPP / 0.052 × TVD)</li>
+</ul>
+</div>
+
+<div style="background: #fef3c7; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #f59e0b;">
+<h3 style="color: #92400e; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">📚 اليوم الثالث: طرق القتل</h3>
+<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2;">
+<li>Driller's Method: دورتين، بسيط</li>
+<li>Wait & Weight: دورة واحدة، أسرع</li>
+<li>ICP = SIDPP + SPR</li>
+<li>FCP = SPR × (KMW / OMW)</li>
+</ul>
+</div>
+
+<div style="background: #fae8ff; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #a855f7;">
+<h3 style="color: #7c3aed; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">📚 اليوم الرابع: الحالات الخاصة</h3>
+<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2;">
+<li>الركلة أثناء الرحلات: تركيب Inside BOP</li>
+<li>Underground Blowout: تدفق بين الطبقات</li>
+<li>Shallow Gas: استخدام Diverter</li>
+<li>تمدد الغاز: P₁V₁ = P₂V₂</li>
+</ul>
+</div>
+
+<div style="background: linear-gradient(135deg, #7c3aed15, #7c3aed10); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-right: 4px solid #7c3aed;">
+<h3 style="color: #7c3aed; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">🎯 النقاط الأساسية للتذكر</h3>
+<ol style="list-style-type: decimal; padding-right: 1.5rem; line-height: 2;">
+<li>السلامة أولاً - لا تتردد في إغلاق البئر</li>
+<li>الاكتشاف المبكر للركلة يوفر الكثير من المشاكل</li>
+<li>اختيار طريقة القتل يعتمد على الظروف</li>
+<li>التوثيق الدقيق ضروري</li>
+<li>التدريب المستمر يحافظ على الجاهزية</li>
+</ol>
+</div>
+</section>`,
+          keyTerms: [],
+        },
+        en: {
+          title: 'Weekly Review - Advanced Well Control',
+          explanation: `<section>
+<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 Week Summary - Advanced Well Control</h2>
+
+<div style="background: #f0fdf4; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #059669;">
+<h3 style="color: #059669; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">📚 Day 1: Basic Concepts</h3>
+<ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 2;">
+<li>Hydrostatic Pressure = 0.052 × ρ × TVD</li>
+<li>Primary Barrier: Drilling Fluid</li>
+<li>Secondary Barrier: BOP</li>
+<li>Kick Indicators: Flow increase, pit gain, ROP increase</li>
+</ul>
+</div>
+
+<div style="background: #dbeafe; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #2563eb;">
+<h3 style="color: #1e40af; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">📚 Day 2: Shut-In Procedures</h3>
+<ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 2;">
+<li>Hard Shut-In: Fast, causes pressure surge</li>
+<li>Soft Shut-In: Slower, safer</li>
+<li>KMW = OMW + (SIDPP / 0.052 × TVD)</li>
+</ul>
+</div>
+
+<div style="background: #fef3c7; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #f59e0b;">
+<h3 style="color: #92400e; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">📚 Day 3: Kill Methods</h3>
+<ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 2;">
+<li>Driller's Method: Two cycles, simple</li>
+<li>Wait & Weight: One cycle, faster</li>
+<li>ICP = SIDPP + SPR</li>
+<li>FCP = SPR × (KMW / OMW)</li>
+</ul>
+</div>
+
+<div style="background: #fae8ff; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #a855f7;">
+<h3 style="color: #7c3aed; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">📚 Day 4: Special Cases</h3>
+<ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 2;">
+<li>Kick while tripping: Install Inside BOP</li>
+<li>Underground Blowout: Flow between layers</li>
+<li>Shallow Gas: Use Diverter</li>
+<li>Gas Expansion: P₁V₁ = P₂V₂</li>
+</ul>
+</div>
+
+<div style="background: linear-gradient(135deg, #7c3aed15, #7c3aed10); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-left: 4px solid #7c3aed;">
+<h3 style="color: #7c3aed; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">🎯 Key Points to Remember</h3>
+<ol style="list-style-type: decimal; padding-left: 1.5rem; line-height: 2;">
+<li>Safety first - don't hesitate to shut in</li>
+<li>Early kick detection saves many problems</li>
+<li>Kill method selection depends on conditions</li>
+<li>Accurate documentation is essential</li>
+<li>Continuous training maintains readiness</li>
+</ol>
+</div>
+</section>`,
+          keyTerms: [],
+        },
+      },
+    },
+    {
+      day: 6,
       type: 'quiz',
       content: {
         ar: {
@@ -967,7 +1087,7 @@ A 10-barrel gas bubble at 10,000 ft will expand to about 200+ barrels at surface
       },
     },
     {
-      day: 6,
+      day: 7,
       type: 'project',
       content: {
         ar: {
@@ -1009,126 +1129,6 @@ A 10-barrel gas bubble at 10,000 ft will expand to about 200+ barrels at surface
             'Determine the influx type (gas or liquid) based on SIDPP and SICP difference'
           ],
           submissionType: 'text',
-        },
-      },
-    },
-    {
-      day: 7,
-      type: 'learning',
-      content: {
-        ar: {
-          title: 'مراجعة أسبوعية - التحكم المتقدم بالبئر',
-          explanation: `<section>
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 ملخص الأسبوع - التحكم المتقدم بالبئر</h2>
-
-<div style="background: #f0fdf4; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #059669;">
-<h3 style="color: #059669; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">📚 اليوم الأول: المفاهيم الأساسية</h3>
-<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2;">
-<li>الضغط الهيدروستاتيكي = 0.052 × ρ × TVD</li>
-<li>الحاجز الأولي: سائل الحفر</li>
-<li>الحاجز الثانوي: مانع الانفجار BOP</li>
-<li>مؤشرات الركلة: زيادة التدفق، زيادة الحوض، زيادة ROP</li>
-</ul>
-</div>
-
-<div style="background: #dbeafe; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #2563eb;">
-<h3 style="color: #1e40af; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">📚 اليوم الثاني: إجراءات الإغلاق</h3>
-<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2;">
-<li>Hard Shut-In: سريع، يسبب صدمة ضغط</li>
-<li>Soft Shut-In: أبطأ، أكثر أماناً</li>
-<li>KMW = OMW + (SIDPP / 0.052 × TVD)</li>
-</ul>
-</div>
-
-<div style="background: #fef3c7; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #f59e0b;">
-<h3 style="color: #92400e; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">📚 اليوم الثالث: طرق القتل</h3>
-<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2;">
-<li>Driller's Method: دورتين، بسيط</li>
-<li>Wait & Weight: دورة واحدة، أسرع</li>
-<li>ICP = SIDPP + SPR</li>
-<li>FCP = SPR × (KMW / OMW)</li>
-</ul>
-</div>
-
-<div style="background: #fae8ff; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #a855f7;">
-<h3 style="color: #7c3aed; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">📚 اليوم الرابع: الحالات الخاصة</h3>
-<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2;">
-<li>الركلة أثناء الرحلات: تركيب Inside BOP</li>
-<li>Underground Blowout: تدفق بين الطبقات</li>
-<li>Shallow Gas: استخدام Diverter</li>
-<li>تمدد الغاز: P₁V₁ = P₂V₂</li>
-</ul>
-</div>
-
-<div style="background: linear-gradient(135deg, #7c3aed15, #7c3aed10); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-right: 4px solid #7c3aed;">
-<h3 style="color: #7c3aed; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">🎯 النقاط الأساسية للتذكر</h3>
-<ol style="list-style-type: decimal; padding-right: 1.5rem; line-height: 2;">
-<li>السلامة أولاً - لا تتردد في إغلاق البئر</li>
-<li>الاكتشاف المبكر للركلة يوفر الكثير من المشاكل</li>
-<li>اختيار طريقة القتل يعتمد على الظروف</li>
-<li>التوثيق الدقيق ضروري</li>
-<li>التدريب المستمر يحافظ على الجاهزية</li>
-</ol>
-</div>
-</section>`,
-          keyTerms: [],
-        },
-        en: {
-          title: 'Weekly Review - Advanced Well Control',
-          explanation: `<section>
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 Week Summary - Advanced Well Control</h2>
-
-<div style="background: #f0fdf4; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #059669;">
-<h3 style="color: #059669; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">📚 Day 1: Basic Concepts</h3>
-<ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 2;">
-<li>Hydrostatic Pressure = 0.052 × ρ × TVD</li>
-<li>Primary Barrier: Drilling Fluid</li>
-<li>Secondary Barrier: BOP</li>
-<li>Kick Indicators: Flow increase, pit gain, ROP increase</li>
-</ul>
-</div>
-
-<div style="background: #dbeafe; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #2563eb;">
-<h3 style="color: #1e40af; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">📚 Day 2: Shut-In Procedures</h3>
-<ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 2;">
-<li>Hard Shut-In: Fast, causes pressure surge</li>
-<li>Soft Shut-In: Slower, safer</li>
-<li>KMW = OMW + (SIDPP / 0.052 × TVD)</li>
-</ul>
-</div>
-
-<div style="background: #fef3c7; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #f59e0b;">
-<h3 style="color: #92400e; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">📚 Day 3: Kill Methods</h3>
-<ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 2;">
-<li>Driller's Method: Two cycles, simple</li>
-<li>Wait & Weight: One cycle, faster</li>
-<li>ICP = SIDPP + SPR</li>
-<li>FCP = SPR × (KMW / OMW)</li>
-</ul>
-</div>
-
-<div style="background: #fae8ff; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #a855f7;">
-<h3 style="color: #7c3aed; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">📚 Day 4: Special Cases</h3>
-<ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 2;">
-<li>Kick while tripping: Install Inside BOP</li>
-<li>Underground Blowout: Flow between layers</li>
-<li>Shallow Gas: Use Diverter</li>
-<li>Gas Expansion: P₁V₁ = P₂V₂</li>
-</ul>
-</div>
-
-<div style="background: linear-gradient(135deg, #7c3aed15, #7c3aed10); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-left: 4px solid #7c3aed;">
-<h3 style="color: #7c3aed; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">🎯 Key Points to Remember</h3>
-<ol style="list-style-type: decimal; padding-left: 1.5rem; line-height: 2;">
-<li>Safety first - don't hesitate to shut in</li>
-<li>Early kick detection saves many problems</li>
-<li>Kill method selection depends on conditions</li>
-<li>Accurate documentation is essential</li>
-<li>Continuous training maintains readiness</li>
-</ol>
-</div>
-</section>`,
-          keyTerms: [],
         },
       },
     },
