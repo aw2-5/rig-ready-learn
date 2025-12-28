@@ -472,150 +472,270 @@ export const managedPressureDrillingLesson: WeeklyLesson = {
       type: 'learning',
       content: {
         ar: {
-          title: 'الحفر بالضغط المُدار - اليوم الثالث: المعدات والأنظمة',
+          title: 'الحفر بالضغط المُدار - اليوم الثالث: الهيدروليكا المتقدمة والنمذجة الديناميكية',
           explanation: `<section>
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1.5rem;">🔷 المعدات المتخصصة لنظام MPD</h2>
+<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1.5rem;">🔷 التحليل الهيدروليكي المتقدم لـ MPD</h2>
 
-<p style="margin-bottom: 1.5rem; line-height: 1.8;">نجاح عملية MPD يعتمد على معدات متخصصة عالية الجودة. سنتناول كل مكون بالتفصيل.</p>
+<div style="background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%); color: white; padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem;">
+<h3 style="font-size: 1.25rem; margin-bottom: 1rem;">💡 فهم ديناميكيات التدفق في الأنظمة المعقدة</h3>
+<p style="line-height: 1.8;">الهيدروليكا المتقدمة في MPD تتطلب فهماً عميقاً لسلوك السوائل غير النيوتونية، تأثيرات الاضطراب، وتفاعل متغيرات متعددة في الوقت الحقيقي.</p>
+</div>
 
-<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 1. جهاز التحكم الدوار (RCD) بالتفصيل</h3>
+<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 نموذج فقد الضغط الشامل (Comprehensive Pressure Loss Model)</h3>
 <div style="background: #e8f4f8; padding: 1.5rem; border-radius: 12px; margin: 1rem 0;">
-<h4 style="color: #1e3a5f; margin-bottom: 1rem;">التصميم والمكونات:</h4>
-<ul style="line-height: 2; padding-right: 1.5rem;">
-<li><strong>الحشوة المطاطية (Stripper Rubber):</strong> تتحمل الدوران والضغط، عمرها 50-200 ساعة حسب الظروف</li>
-<li><strong>المحمل الرئيسي (Main Bearing):</strong> يتحمل أحمال تصل 500,000 رطل</li>
-<li><strong>نظام التبريد:</strong> يحافظ على حرارة الحشوة ضمن الحدود الآمنة</li>
-<li><strong>الإطار الداخلي (Inner Barrel):</strong> يسمح بمرور الأدوات والـ BHA</li>
-</ul>
+<h4 style="color: #1e3a5f; margin-bottom: 1rem;">التحليل الطبقي لفقد الضغط:</h4>
+<div style="background: #1e3a5f; color: white; padding: 1rem; border-radius: 8px; text-align: center; margin: 1rem 0;">
+<p style="font-weight: bold; font-size: 1.1rem;">ΔP_total = ΔP_surface + ΔP_drillstring + ΔP_bit + ΔP_annulus + ΔP_choke</p>
+</div>
 
-<h4 style="color: #1e3a5f; margin: 1.5rem 0 1rem;">تصنيفات RCD:</h4>
-<table style="width: 100%; border-collapse: collapse;">
+<div style="background: white; padding: 1rem; border-radius: 8px; border-right: 4px solid #1e3a5f; margin: 1rem 0;">
+<p style="font-weight: bold; margin-bottom: 0.5rem;">معادلة Herschel-Bulkley للسوائل غير النيوتونية:</p>
+<p style="font-family: monospace; margin-top: 0.5rem;">τ = τ₀ + K × γ̇ⁿ</p>
+<p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">حيث: τ₀ = Yield Point، K = Consistency Index، n = Flow Behavior Index</p>
+</div>
+
+<table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+<thead>
 <tr style="background: #1e3a5f; color: white;">
-<th style="padding: 10px; border: 1px solid #ddd;">النوع</th>
-<th style="padding: 10px; border: 1px solid #ddd;">ضغط العمل</th>
-<th style="padding: 10px; border: 1px solid #ddd;">الاستخدام</th>
+<th style="padding: 12px; text-align: right; border: 1px solid #ddd;">القسم</th>
+<th style="padding: 12px; text-align: right; border: 1px solid #ddd;">نوع التدفق</th>
+<th style="padding: 12px; text-align: right; border: 1px solid #ddd;">معادلة فقد الضغط</th>
+<th style="padding: 12px; text-align: right; border: 1px solid #ddd;">% من الإجمالي</th>
 </tr>
+</thead>
+<tbody>
 <tr style="background: #f8fafc;">
-<td style="padding: 10px; border: 1px solid #ddd;">Active RCD</td>
-<td style="padding: 10px; border: 1px solid #ddd;">2,500-5,000 psi</td>
-<td style="padding: 10px; border: 1px solid #ddd;">MPD/UBD مع ضغط عالي</td>
+<td style="padding: 12px; border: 1px solid #ddd;">داخل الأنابيب</td>
+<td style="padding: 12px; border: 1px solid #ddd;">Turbulent</td>
+<td style="padding: 12px; border: 1px solid #ddd;">Fanning Equation</td>
+<td style="padding: 12px; border: 1px solid #ddd;">45-55%</td>
 </tr>
 <tr>
-<td style="padding: 10px; border: 1px solid #ddd;">Passive RCD</td>
-<td style="padding: 10px; border: 1px solid #ddd;">500-1,500 psi</td>
-<td style="padding: 10px; border: 1px solid #ddd;">MPD أساسي</td>
+<td style="padding: 12px; border: 1px solid #ddd;">البت (Bit)</td>
+<td style="padding: 12px; border: 1px solid #ddd;">Nozzle Flow</td>
+<td style="padding: 12px; border: 1px solid #ddd;">ΔP = ρQ²/12,032C²A²</td>
+<td style="padding: 12px; border: 1px solid #ddd;">30-40%</td>
 </tr>
+<tr style="background: #f8fafc;">
+<td style="padding: 12px; border: 1px solid #ddd;">الحلقي (Annulus)</td>
+<td style="padding: 12px; border: 1px solid #ddd;">Laminar/Transitional</td>
+<td style="padding: 12px; border: 1px solid #ddd;">Power Law Model</td>
+<td style="padding: 12px; border: 1px solid #ddd;">15-25%</td>
+</tr>
+</tbody>
 </table>
 </div>
 
-<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 2. نظام صمام الخنق الآلي (Automated Choke System)</h3>
+<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 حساب Reynolds Number المعدل للسوائل غير النيوتونية</h3>
 <div style="background: #fef9e7; padding: 1.5rem; border-radius: 12px; margin: 1rem 0;">
-<h4 style="color: #e67e22; margin-bottom: 1rem;">المكونات الرئيسية:</h4>
-<div style="display: grid; gap: 1rem;">
-<div style="background: white; padding: 1rem; border-radius: 8px; border-right: 3px solid #e67e22;">
-<strong>صمام الخنق المتغير (Variable Choke):</strong>
-<p style="margin-top: 0.5rem; line-height: 1.7;">يتحكم بفتحة التدفق بشكل دقيق (0-100%). يستجيب للأوامر الإلكترونية خلال أجزاء من الثانية.</p>
+<div style="background: white; padding: 1rem; border-radius: 8px; border-right: 4px solid #e67e22; margin: 0.5rem 0;">
+<p style="font-weight: bold; margin-bottom: 0.5rem;">Generalized Reynolds Number (للتدفق في الأنابيب):</p>
+<p style="font-family: monospace; margin-top: 0.5rem; font-size: 1rem;">Re_g = (ρ × V^(2-n) × D^n) / (K × 8^(n-1) × ((3n+1)/4n)^n)</p>
 </div>
-<div style="background: white; padding: 1rem; border-radius: 8px; border-right: 3px solid #e67e22;">
-<strong>وحدة التحكم (Control Unit):</strong>
-<p style="margin-top: 0.5rem; line-height: 1.7;">كمبيوتر متخصص يحسب الضغط المطلوب ويُعدل الخنق تلقائياً. يعمل بخوارزميات PID للتحكم الدقيق.</p>
-</div>
-<div style="background: white; padding: 1rem; border-radius: 8px; border-right: 3px solid #e67e22;">
-<strong>مستشعرات الضغط والتدفق:</strong>
-<p style="margin-top: 0.5rem; line-height: 1.7;">تقيس الضغط بدقة ±0.1% وتكتشف تغييرات التدفق بحساسية 0.25 bbl/min.</p>
-</div>
+<div style="background: #fff3cd; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+<p><strong>⚠️ نقطة حرجة:</strong> عندما n < 1 (Shear Thinning)، يقل Re_g مما يعني تأخر الانتقال للتدفق المضطرب. هذا يؤثر مباشرة على حسابات فقد الضغط!</p>
 </div>
 </div>
 
-<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 3. نظام الفصل (Separation System)</h3>
+<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 تحليل Bit Hydraulics المتقدم</h3>
 <div style="background: #e8f8f5; padding: 1.5rem; border-radius: 12px; margin: 1rem 0;">
-<p style="line-height: 1.8; margin-bottom: 1rem;">في MPD، نحتاج فاصل مضغوط يعمل تحت ضغط بدلاً من الفاصل الجوي التقليدي.</p>
-<h4 style="color: #27ae60; margin: 1rem 0 0.5rem;">مكونات الفاصل المضغوط:</h4>
-<ul style="line-height: 2; padding-right: 1.5rem;">
-<li>وعاء ضغط مصنف لـ 500-1,500 psi</li>
-<li>صمامات تصريف السوائل والغاز</li>
-<li>مستشعرات مستوى السائل</li>
-<li>نظام إشعال للغازات المنفصلة (Flare System)</li>
-</ul>
+<h4 style="color: #27ae60; margin-bottom: 1rem;">تحسين HSI و Impact Force:</h4>
+
+<div style="display: grid; gap: 1rem; margin: 1rem 0;">
+<div style="background: white; padding: 1rem; border-radius: 8px; border-right: 4px solid #27ae60;">
+<p style="font-weight: bold;">Hydraulic Horsepower per Square Inch (HSI):</p>
+<p style="font-family: monospace; margin-top: 0.5rem;">HSI = (Q × ΔP_bit) / (1714 × A_bit)</p>
+<p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">القيمة المثالية: 2.5-5.0 hp/in²</p>
 </div>
 
-<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 4. نظام المراقبة والتحكم (SCADA/DCS)</h3>
+<div style="background: white; padding: 1rem; border-radius: 8px; border-right: 4px solid #27ae60;">
+<p style="font-weight: bold;">Jet Impact Force:</p>
+<p style="font-family: monospace; margin-top: 0.5rem;">F_j = 0.01823 × C_d × Q × √(ρ × ΔP_bit)</p>
+<p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">القيمة المستهدفة: 1,000-1,500 lbf</p>
+</div>
+
+<div style="background: white; padding: 1rem; border-radius: 8px; border-right: 4px solid #27ae60;">
+<p style="font-weight: bold;">Nozzle Velocity:</p>
+<p style="font-family: monospace; margin-top: 0.5rem;">V_n = Q / (3.117 × A_n)</p>
+<p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">السرعة المثالية: 250-450 ft/s</p>
+</div>
+</div>
+
+<div style="background: #d4edda; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+<p><strong>💡 استراتيجية MPD:</strong> في MPD، يجب موازنة ΔP_bit مع SBP المتاح. زيادة ΔP_bit تعني تقليل المرونة في التحكم بالضغط السطحي.</p>
+</div>
+</div>
+
+<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 نمذجة ECD الديناميكية في الوقت الحقيقي</h3>
 <div style="background: #f5e6ff; padding: 1.5rem; border-radius: 12px; margin: 1rem 0;">
-<h4 style="color: #9b59b6; margin-bottom: 1rem;">الوظائف الرئيسية:</h4>
-<ul style="line-height: 2; padding-right: 1.5rem;">
-<li><strong>جمع البيانات:</strong> من جميع المستشعرات بشكل لحظي</li>
-<li><strong>العرض:</strong> شاشات توضح حالة البئر والضغوط والتدفقات</li>
-<li><strong>الإنذارات:</strong> تنبيهات فورية عند تجاوز الحدود المحددة</li>
-<li><strong>التسجيل:</strong> حفظ جميع البيانات للتحليل اللاحق</li>
-<li><strong>التحكم الآلي:</strong> استجابة تلقائية للمواقف المحددة مسبقاً</li>
-</ul>
+<h4 style="color: #9b59b6; margin-bottom: 1rem;">العوامل المؤثرة على ECD الحقيقي:</h4>
+
+<div style="background: white; padding: 1rem; border-radius: 8px; border-right: 4px solid #9b59b6; margin: 0.5rem 0;">
+<p style="font-weight: bold; margin-bottom: 0.5rem;">ECD الشامل (مع جميع التصحيحات):</p>
+<p style="font-family: monospace; margin-top: 0.5rem;">ECD_real = MW_eff(T,P) + ΔP_friction/(0.052×TVD) + ΔP_cuttings/(0.052×TVD) + ΔP_rotation/(0.052×TVD)</p>
 </div>
 
-<div style="background: #fff3cd; border-right: 4px solid #f39c12; padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">
-<h4 style="color: #856404; margin-bottom: 0.5rem;">⚠️ الصيانة الحرجة</h4>
-<p style="line-height: 1.7;">حشوات RCD تحتاج فحص كل 8-12 ساعة من العمل المتواصل. صمامات الخنق تحتاج معايرة يومية. أي إهمال قد يؤدي لفشل النظام بالكامل.</p>
+<table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+<thead>
+<tr style="background: #9b59b6; color: white;">
+<th style="padding: 10px; border: 1px solid #ddd;">العامل</th>
+<th style="padding: 10px; border: 1px solid #ddd;">التأثير النموذجي</th>
+<th style="padding: 10px; border: 1px solid #ddd;">متى يكون حرجاً</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: #f8fafc;">
+<td style="padding: 10px; border: 1px solid #ddd;">Cuttings Loading</td>
+<td style="padding: 10px; border: 1px solid #ddd;">+0.2 to +0.8 ppg</td>
+<td style="padding: 10px; border: 1px solid #ddd;">ROP عالي، تنظيف ضعيف</td>
+</tr>
+<tr>
+<td style="padding: 10px; border: 1px solid #ddd;">Thermal Effect</td>
+<td style="padding: 10px; border: 1px solid #ddd;">-0.3 to -0.8 ppg</td>
+<td style="padding: 10px; border: 1px solid #ddd;">آبار HPHT، عمق > 15,000 ft</td>
+</tr>
+<tr style="background: #f8fafc;">
+<td style="padding: 10px; border: 1px solid #ddd;">Drillstring Rotation</td>
+<td style="padding: 10px; border: 1px solid #ddd;">+0.1 to +0.3 ppg</td>
+<td style="padding: 10px; border: 1px solid #ddd;">RPM > 150، فجوة ضيقة</td>
+</tr>
+<tr>
+<td style="padding: 10px; border: 1px solid #ddd;">Gelling (Static)</td>
+<td style="padding: 10px; border: 1px solid #ddd;">Surge +50-200 psi</td>
+<td style="padding: 10px; border: 1px solid #ddd;">بعد التوقف > 10 دقائق</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 مثال حسابي متقدم</h3>
+<div style="background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); color: white; padding: 1.5rem; border-radius: 12px; margin: 1rem 0;">
+<h4 style="margin-bottom: 1rem;">📊 سيناريو: تحسين هيدروليكا البت في بئر MPD</h4>
+
+<p style="margin-bottom: 1rem;"><strong>المعطيات:</strong></p>
+<ul style="line-height: 1.8; padding-right: 1.5rem; margin-bottom: 1rem;">
+<li>معدل التدفق Q = 650 gpm</li>
+<li>كثافة الطين ρ = 12.5 ppg</li>
+<li>قطر البت = 8.5 in</li>
+<li>عدد الفوهات = 3 × 14/32" + 2 × 12/32"</li>
+<li>SBP المتاح = 0-350 psi</li>
+</ul>
+
+<p style="margin-bottom: 0.5rem;"><strong>الحل:</strong></p>
+<div style="background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 8px;">
+<p style="margin-bottom: 0.5rem;">1. حساب المساحة الإجمالية للفوهات:</p>
+<p style="font-family: monospace; margin-bottom: 1rem;">A_n = 3×(14/32)² × π/4 + 2×(12/32)² × π/4 = 0.467 in²</p>
+
+<p style="margin-bottom: 0.5rem;">2. حساب ΔP_bit:</p>
+<p style="font-family: monospace; margin-bottom: 1rem;">ΔP_bit = (12.5 × 650²) / (12,032 × 0.95² × 0.467²) = 2,480 psi</p>
+
+<p style="margin-bottom: 0.5rem;">3. حساب HSI:</p>
+<p style="font-family: monospace; margin-bottom: 1rem;">HSI = (650 × 2,480) / (1,714 × 56.7) = 16.6 hp/in² ⚠️ (مرتفع جداً!)</p>
+
+<p style="margin-bottom: 0.5rem;">4. التوصية: تكبير الفوهات لتقليل ΔP_bit وزيادة مرونة SBP</p>
+</div>
+</div>
+
+<div style="background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%); color: white; padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">
+<h4 style="margin-bottom: 0.5rem;">🚨 تحذير: Hydraulic Lockout</h4>
+<p style="line-height: 1.7;">إذا كان ΔP_bit + ΔP_system قريباً من الضغط المتاح، تفقد القدرة على تطبيق SBP كافي. هذا يُسمى "Hydraulic Lockout" ويُعتبر فشلاً في تصميم MPD!</p>
 </div>
 
 </section>`,
           keyTerms: [
-            { term: 'Stripper Rubber', definition: 'الحشوة المطاطية في RCD التي تُغلق حول عمود الحفر' },
-            { term: 'PID Control', definition: 'نظام تحكم آلي يستخدم النسبي-التكاملي-التفاضلي' },
-            { term: 'Pressurized Separator', definition: 'فاصل يعمل تحت ضغط لفصل السوائل والغازات' },
-            { term: 'SCADA', definition: 'نظام التحكم الإشرافي وجمع البيانات' },
+            { term: 'Herschel-Bulkley Model', definition: 'نموذج ريولوجي متقدم للسوائل غير النيوتونية يشمل Yield Point' },
+            { term: 'Generalized Reynolds Number', definition: 'رقم رينولدز المعدل للسوائل ذات السلوك غير الخطي' },
+            { term: 'HSI (Hydraulic Horsepower per Square Inch)', definition: 'القدرة الهيدروليكية لكل بوصة مربعة من البت' },
+            { term: 'Hydraulic Lockout', definition: 'حالة فقدان المرونة في التحكم بالضغط بسبب ارتفاع فقد الضغط الهيدروليكي' },
+            { term: 'Cuttings Loading Effect', definition: 'زيادة ECD الناتجة عن تراكم الفتات في الحلقي' },
           ],
           practiceQuestion: {
-            question: 'كم يبلغ عمر حشوة RCD التقريبي قبل الحاجة للاستبدال؟',
+            question: 'إذا كان ΔP_bit = 2,500 psi والضغط الإجمالي المتاح للنظام = 3,000 psi، ما هو الحد الأقصى لـ SBP المتاح؟',
             options: [
-              '10-20 ساعة',
-              '50-200 ساعة',
-              '500-1000 ساعة',
-              '2000+ ساعة'
+              '500 psi',
+              '1,000 psi',
+              '2,500 psi',
+              '3,000 psi'
             ],
-            correctAnswer: 1,
+            correctAnswer: 0,
           },
         },
         en: {
-          title: 'Managed Pressure Drilling - Day 3: Equipment and Systems',
+          title: 'Managed Pressure Drilling - Day 3: Advanced Hydraulics and Dynamic Modeling',
           explanation: `<section>
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1.5rem;">🔷 Specialized MPD Equipment</h2>
+<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1.5rem;">🔷 Advanced Hydraulic Analysis for MPD</h2>
 
-<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 1. Rotating Control Device (RCD) in Detail</h3>
+<div style="background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%); color: white; padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem;">
+<h3 style="font-size: 1.25rem; margin-bottom: 1rem;">💡 Understanding Flow Dynamics in Complex Systems</h3>
+<p style="line-height: 1.8;">Advanced hydraulics in MPD requires deep understanding of non-Newtonian fluid behavior, turbulence effects, and real-time multi-variable interactions.</p>
+</div>
+
+<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 Comprehensive Pressure Loss Model</h3>
 <div style="background: #e8f4f8; padding: 1.5rem; border-radius: 12px; margin: 1rem 0;">
-<h4 style="color: #1e3a5f; margin-bottom: 1rem;">Design and Components:</h4>
-<ul style="line-height: 2; padding-left: 1.5rem;">
-<li><strong>Stripper Rubber:</strong> Handles rotation and pressure, 50-200 hour lifespan</li>
-<li><strong>Main Bearing:</strong> Supports loads up to 500,000 lbs</li>
-<li><strong>Cooling System:</strong> Maintains rubber temperature within safe limits</li>
-<li><strong>Inner Barrel:</strong> Allows tools and BHA passage</li>
-</ul>
+<div style="background: #1e3a5f; color: white; padding: 1rem; border-radius: 8px; text-align: center; margin: 1rem 0;">
+<p style="font-weight: bold; font-size: 1.1rem;">ΔP_total = ΔP_surface + ΔP_drillstring + ΔP_bit + ΔP_annulus + ΔP_choke</p>
 </div>
 
-<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 2. Automated Choke System</h3>
+<div style="background: white; padding: 1rem; border-radius: 8px; border-left: 4px solid #1e3a5f; margin: 1rem 0;">
+<p style="font-weight: bold; margin-bottom: 0.5rem;">Herschel-Bulkley Model for Non-Newtonian Fluids:</p>
+<p style="font-family: monospace; margin-top: 0.5rem;">τ = τ₀ + K × γ̇ⁿ</p>
+<p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">where: τ₀ = Yield Point, K = Consistency Index, n = Flow Behavior Index</p>
+</div>
+</div>
+
+<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 Modified Reynolds Number for Non-Newtonian Fluids</h3>
 <div style="background: #fef9e7; padding: 1.5rem; border-radius: 12px; margin: 1rem 0;">
-<p style="line-height: 1.8;">Variable choke with electronic control, response time in fractions of a second. Control unit uses PID algorithms for precise pressure management.</p>
+<div style="background: white; padding: 1rem; border-radius: 8px; border-left: 4px solid #e67e22; margin: 0.5rem 0;">
+<p style="font-weight: bold; margin-bottom: 0.5rem;">Generalized Reynolds Number (pipe flow):</p>
+<p style="font-family: monospace; margin-top: 0.5rem; font-size: 1rem;">Re_g = (ρ × V^(2-n) × D^n) / (K × 8^(n-1) × ((3n+1)/4n)^n)</p>
+</div>
 </div>
 
-<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 3. Pressurized Separation System</h3>
+<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 Advanced Bit Hydraulics Analysis</h3>
 <div style="background: #e8f8f5; padding: 1.5rem; border-radius: 12px; margin: 1rem 0;">
-<p style="line-height: 1.8;">Pressure vessel rated for 500-1,500 psi with liquid/gas discharge valves, level sensors, and flare system for separated gases.</p>
+<div style="display: grid; gap: 1rem; margin: 1rem 0;">
+<div style="background: white; padding: 1rem; border-radius: 8px; border-left: 4px solid #27ae60;">
+<p style="font-weight: bold;">HSI = (Q × ΔP_bit) / (1714 × A_bit)</p>
+<p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">Target: 2.5-5.0 hp/in²</p>
+</div>
+
+<div style="background: white; padding: 1rem; border-radius: 8px; border-left: 4px solid #27ae60;">
+<p style="font-weight: bold;">Jet Impact Force: F_j = 0.01823 × C_d × Q × √(ρ × ΔP_bit)</p>
+<p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">Target: 1,000-1,500 lbf</p>
+</div>
+</div>
+</div>
+
+<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 Real-Time Dynamic ECD Modeling</h3>
+<div style="background: #f5e6ff; padding: 1.5rem; border-radius: 12px; margin: 1rem 0;">
+<div style="background: white; padding: 1rem; border-radius: 8px; border-left: 4px solid #9b59b6; margin: 0.5rem 0;">
+<p style="font-weight: bold; margin-bottom: 0.5rem;">Comprehensive ECD (all corrections):</p>
+<p style="font-family: monospace; margin-top: 0.5rem;">ECD_real = MW_eff(T,P) + ΔP_friction/(0.052×TVD) + ΔP_cuttings/(0.052×TVD) + ΔP_rotation/(0.052×TVD)</p>
+</div>
+</div>
+
+<div style="background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%); color: white; padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">
+<h4 style="margin-bottom: 0.5rem;">🚨 Warning: Hydraulic Lockout</h4>
+<p style="line-height: 1.7;">When ΔP_bit + ΔP_system approaches available pressure, you lose ability to apply sufficient SBP. This is called "Hydraulic Lockout" - a critical MPD design failure!</p>
 </div>
 
 </section>`,
           keyTerms: [
-            { term: 'Stripper Rubber', definition: 'RCD rubber element that seals around drill string' },
-            { term: 'PID Control', definition: 'Proportional-Integral-Derivative control system' },
-            { term: 'Pressurized Separator', definition: 'Separator operating under pressure' },
-            { term: 'SCADA', definition: 'Supervisory Control and Data Acquisition' },
+            { term: 'Herschel-Bulkley Model', definition: 'Advanced rheological model for non-Newtonian fluids including Yield Point' },
+            { term: 'Generalized Reynolds Number', definition: 'Modified Reynolds number for non-linear behavior fluids' },
+            { term: 'HSI', definition: 'Hydraulic Horsepower per Square Inch of bit area' },
+            { term: 'Hydraulic Lockout', definition: 'Loss of pressure control flexibility due to high hydraulic pressure losses' },
+            { term: 'Cuttings Loading Effect', definition: 'ECD increase from cuttings accumulation in annulus' },
           ],
           practiceQuestion: {
-            question: 'What is the approximate lifespan of an RCD stripper rubber before replacement?',
+            question: 'If ΔP_bit = 2,500 psi and total available system pressure = 3,000 psi, what is the maximum available SBP?',
             options: [
-              '10-20 hours',
-              '50-200 hours',
-              '500-1000 hours',
-              '2000+ hours'
+              '500 psi',
+              '1,000 psi',
+              '2,500 psi',
+              '3,000 psi'
             ],
-            correctAnswer: 1,
+            correctAnswer: 0,
           },
         },
       },
@@ -625,148 +745,265 @@ export const managedPressureDrillingLesson: WeeklyLesson = {
       type: 'learning',
       content: {
         ar: {
-          title: 'الحفر بالضغط المُدار - اليوم الرابع: التخطيط والحسابات',
+          title: 'الحفر بالضغط المُدار - اليوم الرابع: سيناريوهات الطوارئ والاستجابة المتقدمة',
           explanation: `<section>
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1.5rem;">🔷 التخطيط لعملية MPD</h2>
+<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1.5rem;">🔷 إدارة الطوارئ في عمليات MPD</h2>
 
-<p style="margin-bottom: 1.5rem; line-height: 1.8;">التخطيط الدقيق لعملية MPD يتطلب فهماً عميقاً لظروف البئر والحسابات الهيدروليكية المعقدة.</p>
+<div style="background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%); color: white; padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem;">
+<h3 style="font-size: 1.25rem; margin-bottom: 1rem;">⚠️ الطوارئ في MPD أكثر تعقيداً</h3>
+<p style="line-height: 1.8;">في MPD، النوافذ الضيقة والأنظمة المعقدة تجعل الاستجابة للطوارئ تحدياً كبيراً. الفشل في الاستجابة الصحيحة قد يحول حادثة بسيطة إلى كارثة.</p>
+</div>
 
-<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 1. تحديد نافذة الضغط (Pressure Window)</h3>
+<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 السيناريو الأول: فشل نظام الخنق (Choke Failure)</h3>
 <div style="background: #e8f4f8; padding: 1.5rem; border-radius: 12px; margin: 1rem 0;">
-<p style="line-height: 1.8; margin-bottom: 1rem;">الخطوة الأولى في التخطيط هي تحديد الحدود الآمنة للضغط:</p>
-<div style="background: #1e3a5f; color: white; padding: 1rem; border-radius: 8px; text-align: center; margin: 1rem 0;">
-<p style="font-weight: bold;">الحد الأدنى = ضغط المسام (Pore Pressure) + هامش أمان (عادة 100-200 psi)</p>
-<p style="margin-top: 0.5rem;">الحد الأعلى = ضغط الكسر (Fracture Pressure) - هامش أمان</p>
+<h4 style="color: #c0392b; margin-bottom: 1rem;">🚨 تحليل المخاطر:</h4>
+<div style="background: white; padding: 1rem; border-radius: 8px; border-right: 4px solid #c0392b; margin: 0.5rem 0;">
+<p style="line-height: 1.8;"><strong>فشل مفتوح (Fail Open):</strong> فقدان كامل لـ SBP → انخفاض BHP تحت Pore Pressure → Kick!</p>
+<p style="line-height: 1.8; margin-top: 0.5rem;"><strong>فشل مغلق (Fail Closed):</strong> ارتفاع حاد في الضغط → كسر التكوين → Lost Circulation!</p>
 </div>
-<div style="background: #fff3cd; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
-<p><strong>💡 مثال:</strong> إذا كان ضغط المسام = 3,500 psi وضغط الكسر = 3,800 psi، فالنافذة = 300 psi فقط! هذا يتطلب MPD للتحكم الدقيق.</p>
+
+<h4 style="color: #1e3a5f; margin: 1rem 0 0.5rem;">إجراءات الاستجابة:</h4>
+<div style="background: #d4edda; padding: 1rem; border-radius: 8px;">
+<ol style="line-height: 2; padding-right: 1.5rem;">
+<li><strong>التحويل الفوري:</strong> استخدام صمام الخنق الاحتياطي (Backup Choke)</li>
+<li><strong>ضبط معدل الضخ:</strong> تعديل SPM للتعويض عن فقدان SBP</li>
+<li><strong>تفعيل RCD Bypass:</strong> إذا لزم الأمر للتحكم في الضغط</li>
+<li><strong>زيادة كثافة الطين:</strong> إذا استمر الفشل، التحول لطريقة تقليدية</li>
+</ol>
+</div>
+
+<div style="background: #1e3a5f; color: white; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+<p style="font-weight: bold; margin-bottom: 0.5rem;">⏱️ وقت الاستجابة الحرج:</p>
+<p>فشل الخنق المفتوح: < 30 ثانية للتحويل للاحتياطي</p>
+<p>فشل الخنق المغلق: < 15 ثانية لفتح Bypass</p>
 </div>
 </div>
 
-<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 2. حساب ECD والضغط المكافئ</h3>
+<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 السيناريو الثاني: فشل RCD أثناء الحفر</h3>
 <div style="background: #fef9e7; padding: 1.5rem; border-radius: 12px; margin: 1rem 0;">
-<h4 style="color: #e67e22; margin-bottom: 1rem;">معادلات أساسية:</h4>
-
-<div style="background: white; padding: 1rem; border-radius: 8px; margin: 1rem 0; border-right: 3px solid #e67e22;">
-<p style="font-weight: bold; margin-bottom: 0.5rem;">الضغط الهيدروستاتيكي (Hydrostatic Pressure):</p>
-<p style="font-family: monospace; font-size: 1.1rem;">P_h = 0.052 × MW × TVD</p>
-<p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">حيث MW = وزن الطين (ppg)، TVD = العمق الحقيقي (ft)</p>
-</div>
-
-<div style="background: white; padding: 1rem; border-radius: 8px; margin: 1rem 0; border-right: 3px solid #e67e22;">
-<p style="font-weight: bold; margin-bottom: 0.5rem;">كثافة الدورة المكافئة (ECD):</p>
-<p style="font-family: monospace; font-size: 1.1rem;">ECD = MW + (AFP / (0.052 × TVD))</p>
-<p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">حيث AFP = ضغط الاحتكاك الحلقي (psi)</p>
-</div>
-
-<div style="background: white; padding: 1rem; border-radius: 8px; margin: 1rem 0; border-right: 3px solid #e67e22;">
-<p style="font-weight: bold; margin-bottom: 0.5rem;">الضغط الكلي في قاع البئر (BHP) في MPD:</p>
-<p style="font-family: monospace; font-size: 1.1rem;">BHP = P_h + AFP + SBP</p>
-<p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">حيث SBP = الضغط السطحي المُطبق</p>
-</div>
-</div>
-
-<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 3. مثال حسابي شامل</h3>
-<div style="background: #e8f8f5; padding: 1.5rem; border-radius: 12px; margin: 1rem 0;">
-<h4 style="color: #27ae60; margin-bottom: 1rem;">المعطيات:</h4>
-<ul style="line-height: 1.8; padding-right: 1.5rem; margin-bottom: 1rem;">
-<li>العمق الحقيقي (TVD) = 12,000 ft</li>
-<li>وزن الطين (MW) = 10.5 ppg</li>
-<li>ضغط الاحتكاك الحلقي (AFP) عند الضخ = 180 psi</li>
-<li>ضغط المسام = 6,550 psi</li>
-<li>ضغط الكسر = 6,800 psi</li>
+<h4 style="color: #e67e22; margin-bottom: 1rem;">علامات فشل RCD:</h4>
+<ul style="line-height: 2; padding-right: 1.5rem; margin-bottom: 1rem;">
+<li>انخفاض مفاجئ في SBP رغم ثبات فتحة الخنق</li>
+<li>ظهور طين من حول RCD (تسريب خارجي)</li>
+<li>ارتفاع حرارة RCD بشكل غير طبيعي</li>
+<li>اهتزاز غير عادي أثناء الدوران</li>
 </ul>
 
-<h4 style="color: #27ae60; margin-bottom: 0.5rem;">الحل:</h4>
-<div style="background: white; padding: 1rem; border-radius: 8px;">
-<p style="margin-bottom: 0.5rem;"><strong>1. الضغط الهيدروستاتيكي:</strong></p>
-<p style="font-family: monospace; margin-bottom: 1rem;">P_h = 0.052 × 10.5 × 12,000 = 6,552 psi</p>
-
-<p style="margin-bottom: 0.5rem;"><strong>2. BHP أثناء الضخ:</strong></p>
-<p style="font-family: monospace; margin-bottom: 1rem;">BHP = 6,552 + 180 = 6,732 psi ✓ (ضمن النافذة)</p>
-
-<p style="margin-bottom: 0.5rem;"><strong>3. عند إيقاف المضخات (بدون SBP):</strong></p>
-<p style="font-family: monospace; margin-bottom: 1rem;">BHP = 6,552 psi ✗ (أقل من ضغط المسام!)</p>
-
-<p style="margin-bottom: 0.5rem;"><strong>4. SBP المطلوب عند إيقاف المضخات:</strong></p>
-<p style="font-family: monospace;">SBP ≥ 6,550 - 6,552 + هامش أمان = 100 psi على الأقل</p>
-</div>
-</div>
-
-<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 4. جدول تعويض الضغط (Pressure Compensation Schedule)</h3>
-<div style="background: #f5e6ff; padding: 1.5rem; border-radius: 12px; margin: 1rem 0;">
-<p style="line-height: 1.8; margin-bottom: 1rem;">يجب إعداد جدول مسبق يوضح SBP المطلوب لكل معدل ضخ:</p>
-<table style="width: 100%; border-collapse: collapse;">
-<tr style="background: #9b59b6; color: white;">
-<th style="padding: 10px; border: 1px solid #ddd;">معدل الضخ (gpm)</th>
-<th style="padding: 10px; border: 1px solid #ddd;">AFP (psi)</th>
-<th style="padding: 10px; border: 1px solid #ddd;">SBP المطلوب (psi)</th>
+<h4 style="color: #1e3a5f; margin: 1rem 0 0.5rem;">خطة الطوارئ المتكاملة:</h4>
+<table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+<thead>
+<tr style="background: #e67e22; color: white;">
+<th style="padding: 12px; border: 1px solid #ddd;">الخطوة</th>
+<th style="padding: 12px; border: 1px solid #ddd;">الإجراء</th>
+<th style="padding: 12px; border: 1px solid #ddd;">الوقت المستهدف</th>
 </tr>
+</thead>
+<tbody>
 <tr style="background: #f8fafc;">
-<td style="padding: 10px; text-align: center; border: 1px solid #ddd;">0 (متوقف)</td>
-<td style="padding: 10px; text-align: center; border: 1px solid #ddd;">0</td>
-<td style="padding: 10px; text-align: center; border: 1px solid #ddd;">180</td>
+<td style="padding: 12px; border: 1px solid #ddd;">1</td>
+<td style="padding: 12px; border: 1px solid #ddd;">إيقاف الدوران فوراً</td>
+<td style="padding: 12px; border: 1px solid #ddd;">فوري</td>
 </tr>
 <tr>
-<td style="padding: 10px; text-align: center; border: 1px solid #ddd;">200</td>
-<td style="padding: 10px; text-align: center; border: 1px solid #ddd;">90</td>
-<td style="padding: 10px; text-align: center; border: 1px solid #ddd;">90</td>
+<td style="padding: 12px; border: 1px solid #ddd;">2</td>
+<td style="padding: 12px; border: 1px solid #ddd;">زيادة كثافة الطين (إذا كان الوقت يسمح)</td>
+<td style="padding: 12px; border: 1px solid #ddd;">5-15 دقيقة</td>
 </tr>
 <tr style="background: #f8fafc;">
-<td style="padding: 10px; text-align: center; border: 1px solid #ddd;">400</td>
-<td style="padding: 10px; text-align: center; border: 1px solid #ddd;">180</td>
-<td style="padding: 10px; text-align: center; border: 1px solid #ddd;">0</td>
+<td style="padding: 12px; border: 1px solid #ddd;">3</td>
+<td style="padding: 12px; border: 1px solid #ddd;">سحب الأنابيب لموقع آمن فوق RCD</td>
+<td style="padding: 12px; border: 1px solid #ddd;">حسب العمق</td>
 </tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;">4</td>
+<td style="padding: 12px; border: 1px solid #ddd;">تركيب Annular Preventer واستبدال RCD</td>
+<td style="padding: 12px; border: 1px solid #ddd;">2-4 ساعات</td>
+</tr>
+</tbody>
 </table>
+</div>
+
+<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 السيناريو الثالث: Kick أثناء عملية MPD</h3>
+<div style="background: #e8f8f5; padding: 1.5rem; border-radius: 12px; margin: 1rem 0;">
+<h4 style="color: #27ae60; margin-bottom: 1rem;">الفرق بين Kick Detection التقليدي و MPD:</h4>
+
+<div style="display: grid; gap: 1rem; margin: 1rem 0;">
+<div style="background: white; padding: 1rem; border-radius: 8px; border-right: 4px solid #27ae60;">
+<p style="font-weight: bold;">التقليدي:</p>
+<p style="margin-top: 0.5rem; line-height: 1.7;">زيادة حجم الحفرة، زيادة معدل العائد، انخفاض ضغط المضخات</p>
+</div>
+<div style="background: white; padding: 1rem; border-radius: 8px; border-right: 4px solid #27ae60;">
+<p style="font-weight: bold;">MPD:</p>
+<p style="margin-top: 0.5rem; line-height: 1.7;">زيادة في Casing Pressure مع ثبات Choke Position، تغير في معدل الخنق (Choke Flow Rate)، PWD يُظهر زيادة BHP غير متوقعة</p>
+</div>
+</div>
+
+<div style="background: #1e3a5f; color: white; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+<h4 style="margin-bottom: 0.5rem;">إجراء MPD Influx Management Envelope (IME):</h4>
+<ol style="line-height: 2; padding-right: 1.5rem;">
+<li>لا تُغلق البئر! استخدم زيادة SBP للتحكم</li>
+<li>زيادة SBP بمقدار 100-200 psi فوراً</li>
+<li>مراقبة استجابة الضغط والتدفق</li>
+<li>تدوير Influx للخارج تحت ضغط محكوم</li>
+<li>التحول لـ Conventional Kill إذا تجاوز حجم Kick الحدود</li>
+</ol>
+</div>
+</div>
+
+<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 السيناريو الرابع: فقدان الكهرباء الكامل</h3>
+<div style="background: #f5e6ff; padding: 1.5rem; border-radius: 12px; margin: 1rem 0;">
+<h4 style="color: #9b59b6; margin-bottom: 1rem;">التحليل:</h4>
+<p style="line-height: 1.8; margin-bottom: 1rem;">فقدان الكهرباء يعني فقدان:</p>
+<ul style="line-height: 2; padding-right: 1.5rem;">
+<li>التحكم الآلي بالخنق</li>
+<li>مراقبة الضغط والتدفق</li>
+<li>مضخات الطين الرئيسية</li>
+<li>أنظمة الإنذار والتسجيل</li>
+</ul>
+
+<div style="background: white; padding: 1rem; border-radius: 8px; border-right: 4px solid #9b59b6; margin: 1rem 0;">
+<p style="font-weight: bold; margin-bottom: 0.5rem;">إجراء الطوارئ المعتمد:</p>
+<ol style="line-height: 2; padding-right: 1.5rem;">
+<li><strong>خلال 0-30 ثانية:</strong> التحويل للتحكم اليدوي بالخنق (UPS يُغطي هذه الفترة)</li>
+<li><strong>خلال 30 ثانية - 2 دقيقة:</strong> تشغيل مولد الطوارئ</li>
+<li><strong>إذا فشل المولد:</strong> فتح الخنق يدوياً + مراقبة بصرية للتدفق</li>
+<li><strong>الحل النهائي:</strong> إغلاق BOP وإجراء Conventional Shut-in</li>
+</ol>
+</div>
+</div>
+
+<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 شجرة القرار للطوارئ (Emergency Decision Tree)</h3>
+<div style="background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); color: white; padding: 1.5rem; border-radius: 12px; margin: 1rem 0;">
+<div style="text-align: center;">
+<p style="font-size: 1.1rem; font-weight: bold; margin-bottom: 1rem;">🔍 هل الضغط تحت السيطرة؟</p>
+<div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+<div style="background: rgba(39, 174, 96, 0.3); padding: 1rem; border-radius: 8px; min-width: 200px;">
+<p style="font-weight: bold; color: #2ecc71;">نعم ✓</p>
+<p style="font-size: 0.9rem; margin-top: 0.5rem;">→ استمر في MPD Mode</p>
+<p style="font-size: 0.9rem;">→ أصلح المشكلة</p>
+<p style="font-size: 0.9rem;">→ وثّق الحادثة</p>
+</div>
+<div style="background: rgba(231, 76, 60, 0.3); padding: 1rem; border-radius: 8px; min-width: 200px;">
+<p style="font-weight: bold; color: #e74c3c;">لا ✗</p>
+<p style="font-size: 0.9rem; margin-top: 0.5rem;">→ هل يمكن استعادة السيطرة؟</p>
+<p style="font-size: 0.9rem;">→ نعم: زيادة SBP/كثافة الطين</p>
+<p style="font-size: 0.9rem;">→ لا: Conventional Shut-in</p>
+</div>
+</div>
+</div>
+</div>
+
+<div style="background: #fff3cd; border-right: 4px solid #f39c12; padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">
+<h4 style="color: #856404; margin-bottom: 0.5rem;">📋 قاعدة ذهبية</h4>
+<p style="line-height: 1.7;">في أي طوارئ MPD: إذا شككت في قدرتك على التحكم، تحوّل فوراً للطريقة التقليدية (Conventional Well Control). السلامة أولاً!</p>
 </div>
 
 </section>`,
           keyTerms: [
-            { term: 'Pressure Window', definition: 'الفرق بين ضغط المسام وضغط الكسر' },
-            { term: 'ECD - Equivalent Circulating Density', definition: 'كثافة الدورة المكافئة التي تشمل تأثير الاحتكاك' },
-            { term: 'Compensation Schedule', definition: 'جدول يوضح SBP المطلوب لكل معدل ضخ' },
+            { term: 'Fail Open/Closed', definition: 'أوضاع فشل صمام الخنق - مفتوح أو مغلق' },
+            { term: 'IME (Influx Management Envelope)', definition: 'إطار إدارة الدخول في MPD بدون إغلاق البئر' },
+            { term: 'Emergency Decision Tree', definition: 'شجرة قرار منهجية للتعامل مع حالات الطوارئ' },
+            { term: 'RCD Bypass', definition: 'مسار تجاوز RCD للتحكم في الضغط أثناء الطوارئ' },
+            { term: 'Conventional Shut-in', definition: 'إجراء الإغلاق التقليدي للبئر عند فشل MPD' },
           ],
           practiceQuestion: {
-            question: 'إذا كان AFP = 200 psi أثناء الضخ، كم يجب أن يكون SBP عند إيقاف المضخات للحفاظ على نفس BHP؟',
+            question: 'عند فشل صمام الخنق في وضع مفتوح (Fail Open)، ما هو الخطر الرئيسي؟',
             options: [
-              '0 psi',
-              '100 psi',
-              '200 psi',
-              '400 psi'
+              'كسر التكوين (Formation Fracture)',
+              'فقدان الدورة (Lost Circulation)',
+              'دخول التكوين (Kick)',
+              'تآكل الأنابيب (Pipe Corrosion)'
             ],
             correctAnswer: 2,
           },
         },
         en: {
-          title: 'Managed Pressure Drilling - Day 4: Planning and Calculations',
+          title: 'Managed Pressure Drilling - Day 4: Emergency Scenarios and Advanced Response',
           explanation: `<section>
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1.5rem;">🔷 MPD Planning</h2>
+<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1.5rem;">🔷 Emergency Management in MPD Operations</h2>
 
-<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 Key Equations</h3>
+<div style="background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%); color: white; padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem;">
+<h3 style="font-size: 1.25rem; margin-bottom: 1rem;">⚠️ MPD Emergencies Are More Complex</h3>
+<p style="line-height: 1.8;">In MPD, narrow windows and complex systems make emergency response a significant challenge. Failure to respond correctly can turn a minor incident into a disaster.</p>
+</div>
+
+<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 Scenario 1: Choke System Failure</h3>
+<div style="background: #e8f4f8; padding: 1.5rem; border-radius: 12px; margin: 1rem 0;">
+<h4 style="color: #c0392b; margin-bottom: 1rem;">🚨 Risk Analysis:</h4>
+<div style="background: white; padding: 1rem; border-radius: 8px; border-left: 4px solid #c0392b; margin: 0.5rem 0;">
+<p style="line-height: 1.8;"><strong>Fail Open:</strong> Complete SBP loss → BHP drops below Pore Pressure → Kick!</p>
+<p style="line-height: 1.8; margin-top: 0.5rem;"><strong>Fail Closed:</strong> Sharp pressure increase → Formation fracture → Lost Circulation!</p>
+</div>
+
+<div style="background: #d4edda; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+<h4 style="margin-bottom: 0.5rem;">Response Procedures:</h4>
+<ol style="line-height: 2; padding-left: 1.5rem;">
+<li>Immediate switch to backup choke</li>
+<li>Adjust pump rate to compensate for SBP loss</li>
+<li>Activate RCD bypass if necessary</li>
+<li>Increase mud weight if failure persists</li>
+</ol>
+</div>
+</div>
+
+<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 Scenario 2: RCD Failure During Drilling</h3>
 <div style="background: #fef9e7; padding: 1.5rem; border-radius: 12px; margin: 1rem 0;">
-<div style="background: white; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
-<p style="font-weight: bold;">Hydrostatic Pressure: P_h = 0.052 × MW × TVD</p>
-<p style="font-weight: bold; margin-top: 1rem;">ECD = MW + (AFP / (0.052 × TVD))</p>
-<p style="font-weight: bold; margin-top: 1rem;">BHP (MPD) = P_h + AFP + SBP</p>
+<h4 style="color: #e67e22; margin-bottom: 1rem;">RCD Failure Signs:</h4>
+<ul style="line-height: 2; padding-left: 1.5rem;">
+<li>Sudden SBP drop despite constant choke position</li>
+<li>Mud appearing around RCD (external leak)</li>
+<li>Abnormal RCD temperature rise</li>
+<li>Unusual vibration during rotation</li>
+</ul>
+</div>
+
+<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 Scenario 3: Kick During MPD Operations</h3>
+<div style="background: #e8f8f5; padding: 1.5rem; border-radius: 12px; margin: 1rem 0;">
+<div style="background: #1e3a5f; color: white; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+<h4 style="margin-bottom: 0.5rem;">MPD Influx Management Envelope (IME):</h4>
+<ol style="line-height: 2; padding-left: 1.5rem;">
+<li>DO NOT shut in! Use SBP increase for control</li>
+<li>Increase SBP by 100-200 psi immediately</li>
+<li>Monitor pressure and flow response</li>
+<li>Circulate influx out under controlled pressure</li>
+<li>Switch to conventional kill if kick exceeds limits</li>
+</ol>
 </div>
 </div>
 
-<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 Pressure Compensation Schedule</h3>
-<p style="line-height: 1.8;">A pre-calculated table showing required SBP for each pump rate to maintain constant BHP throughout drilling operations.</p>
+<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 Scenario 4: Complete Power Loss</h3>
+<div style="background: #f5e6ff; padding: 1.5rem; border-radius: 12px; margin: 1rem 0;">
+<div style="background: white; padding: 1rem; border-radius: 8px; border-left: 4px solid #9b59b6; margin: 1rem 0;">
+<p style="font-weight: bold; margin-bottom: 0.5rem;">Emergency Procedure:</p>
+<ol style="line-height: 2; padding-left: 1.5rem;">
+<li><strong>0-30 seconds:</strong> Switch to manual choke control (UPS covers this)</li>
+<li><strong>30 sec - 2 min:</strong> Start emergency generator</li>
+<li><strong>If generator fails:</strong> Open choke manually + visual flow monitoring</li>
+<li><strong>Final solution:</strong> Close BOP and perform conventional shut-in</li>
+</ol>
+</div>
+</div>
+
+<div style="background: #fff3cd; border-left: 4px solid #f39c12; padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">
+<h4 style="color: #856404; margin-bottom: 0.5rem;">📋 Golden Rule</h4>
+<p style="line-height: 1.7;">In any MPD emergency: If you doubt your ability to control, immediately switch to conventional well control. Safety first!</p>
+</div>
 
 </section>`,
           keyTerms: [
-            { term: 'Pressure Window', definition: 'Difference between pore pressure and fracture pressure' },
-            { term: 'ECD', definition: 'Equivalent Circulating Density including friction effects' },
-            { term: 'Compensation Schedule', definition: 'Table showing required SBP for each pump rate' },
+            { term: 'Fail Open/Closed', definition: 'Choke valve failure modes - open or closed position' },
+            { term: 'IME (Influx Management Envelope)', definition: 'Framework for managing influx in MPD without shutting in' },
+            { term: 'Emergency Decision Tree', definition: 'Systematic decision tree for handling emergencies' },
+            { term: 'RCD Bypass', definition: 'RCD bypass path for pressure control during emergencies' },
+            { term: 'Conventional Shut-in', definition: 'Traditional well shut-in procedure when MPD fails' },
           ],
           practiceQuestion: {
-            question: 'If AFP = 200 psi while pumping, what should SBP be when pumps are off to maintain the same BHP?',
+            question: 'When the choke valve fails open, what is the main risk?',
             options: [
-              '0 psi',
-              '100 psi',
-              '200 psi',
-              '400 psi'
+              'Formation Fracture',
+              'Lost Circulation',
+              'Kick',
+              'Pipe Corrosion'
             ],
             correctAnswer: 2,
           },
@@ -778,147 +1015,280 @@ export const managedPressureDrillingLesson: WeeklyLesson = {
       type: 'learning',
       content: {
         ar: {
-          title: 'الحفر بالضغط المُدار - اليوم الخامس: التشغيل والتحديات',
+          title: 'الحفر بالضغط المُدار - اليوم الخامس: التكامل والحسابات المتقدمة والأداء',
           explanation: `<section>
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1.5rem;">🔷 تشغيل نظام MPD والتحديات العملية</h2>
+<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1.5rem;">🔷 التحليل المتكامل لعمليات MPD المتقدمة</h2>
 
-<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 إجراءات بدء التشغيل (Start-up Procedures)</h3>
+<div style="background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%); color: white; padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem;">
+<h3 style="font-size: 1.25rem; margin-bottom: 1rem;">💡 الربط بين جميع المفاهيم</h3>
+<p style="line-height: 1.8;">في هذا اليوم، نجمع كل ما تعلمناه: الهيدروليكا، سيناريوهات الطوارئ، والتقنيات المختلفة في إطار عملي متكامل مع حسابات معقدة.</p>
+</div>
+
+<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 نموذج الضغط الشامل المتكامل</h3>
 <div style="background: #e8f4f8; padding: 1.5rem; border-radius: 12px; margin: 1rem 0;">
-<ol style="line-height: 2; padding-right: 1.5rem;">
-<li><strong>فحص المعدات:</strong> التأكد من سلامة RCD، صمامات الخنق، والمستشعرات</li>
-<li><strong>اختبار الضغط:</strong> فحص تحمل الخطوط للضغط المتوقع + 500 psi</li>
-<li><strong>معايرة الأجهزة:</strong> ضبط مستشعرات الضغط والتدفق</li>
-<li><strong>برمجة النظام:</strong> إدخال جدول التعويض وحدود الإنذار</li>
-<li><strong>اختبار وظيفي:</strong> تشغيل النظام بدون ضغط للتأكد من الاستجابة</li>
-</ol>
+<div style="background: #1e3a5f; color: white; padding: 1rem; border-radius: 8px; text-align: center; margin: 1rem 0;">
+<p style="font-weight: bold; font-size: 1.1rem;">BHP_dynamic(t) = ρ(T,P,c) × g × TVD + ΔP_ann(Q,μ,geometry) + SBP(t) + ΔP_surge/swab(V_pipe) + ΔP_acceleration</p>
 </div>
 
-<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 عمليات الاتصال والفصل (Connections)</h3>
-<div style="background: #fef9e7; padding: 1.5rem; border-radius: 12px; margin: 1rem 0;">
-<p style="line-height: 1.8; margin-bottom: 1rem;">عملية إضافة أنبوب جديد (Connection) هي الأكثر حساسية في MPD لأنها تتطلب إيقاف المضخات.</p>
-<h4 style="color: #e67e22; margin: 1rem 0 0.5rem;">خطوات الاتصال الآمن:</h4>
-<ol style="line-height: 2; padding-right: 1.5rem;">
-<li>خفض معدل الضخ تدريجياً (ramp down)</li>
-<li>زيادة SBP بالتناسب مع انخفاض الضخ</li>
-<li>إيقاف المضخات مع الوصول لـ SBP الكامل</li>
-<li>إجراء الاتصال مع مراقبة الضغط</li>
-<li>استئناف الضخ مع خفض SBP تدريجياً</li>
-</ol>
-<div style="background: #fff3cd; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
-<p><strong>⚠️ تحذير:</strong> أي تأخير في زيادة SBP عند إيقاف المضخات قد يسبب Kick!</p>
-</div>
-</div>
-
-<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 التحديات الشائعة والحلول</h3>
-<div style="display: grid; gap: 1rem; margin: 1rem 0;">
-<div style="background: #ffebee; padding: 1rem; border-radius: 8px; border-right: 4px solid #c0392b;">
-<h4 style="color: #c0392b; margin-bottom: 0.5rem;">1️⃣ تآكل حشوة RCD</h4>
-<p style="line-height: 1.7;"><strong>الأعراض:</strong> تسرب حول عمود الحفر، صعوبة الحفاظ على الضغط</p>
-<p style="line-height: 1.7;"><strong>الحل:</strong> استبدال الحشوة، استخدام أنواع مقاومة للتآكل، تقليل سرعة الدوران</p>
-</div>
-<div style="background: #fff3e0; padding: 1rem; border-radius: 8px; border-right: 4px solid #e67e22;">
-<h4 style="color: #e67e22; margin-bottom: 0.5rem;">2️⃣ انسداد صمام الخنق</h4>
-<p style="line-height: 1.7;"><strong>الأعراض:</strong> عدم استجابة الضغط للأوامر</p>
-<p style="line-height: 1.7;"><strong>الحل:</strong> التبديل للخنق الاحتياطي، تنظيف الفلاتر، تحسين نظافة الطين</p>
-</div>
-<div style="background: #e3f2fd; padding: 1rem; border-radius: 8px; border-right: 4px solid #1976d2;">
-<h4 style="color: #1976d2; margin-bottom: 0.5rem;">3️⃣ فشل المستشعرات</h4>
-<p style="line-height: 1.7;"><strong>الأعراض:</strong> قراءات غير منطقية أو ثابتة</p>
-<p style="line-height: 1.7;"><strong>الحل:</strong> التبديل للمستشعر الاحتياطي، إعادة المعايرة، التحقق من الأسلاك</p>
-</div>
-</div>
-
-<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 الاستجابة للطوارئ</h3>
-<div style="background: #e8f8f5; padding: 1.5rem; border-radius: 12px; margin: 1rem 0;">
-<h4 style="color: #27ae60; margin-bottom: 1rem;">في حالة الـ Kick:</h4>
-<ol style="line-height: 2; padding-right: 1.5rem;">
-<li>زيادة SBP فوراً لوقف التدفق</li>
-<li>إيقاف المضخات إذا لزم الأمر</li>
-<li>تقييم حجم الـ Kick من بيانات التدفق</li>
-<li>البدء بإجراءات القتل المناسبة</li>
-</ol>
-<div style="background: #c8e6c9; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
-<p><strong>✅ ميزة MPD:</strong> القدرة على زيادة الضغط فوراً دون انتظار تغيير وزن الطين!</p>
-</div>
-</div>
-
-<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 مؤشرات الأداء الرئيسية (KPIs)</h3>
+<h4 style="color: #1e3a5f; margin: 1rem 0 0.5rem;">تفصيل المتغيرات:</h4>
 <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
 <thead>
 <tr style="background: #1e3a5f; color: white;">
-<th style="padding: 12px; text-align: right; border: 1px solid #ddd;">المؤشر</th>
-<th style="padding: 12px; text-align: right; border: 1px solid #ddd;">الهدف</th>
-<th style="padding: 12px; text-align: right; border: 1px solid #ddd;">علامة الخطر</th>
+<th style="padding: 10px; border: 1px solid #ddd;">المتغير</th>
+<th style="padding: 10px; border: 1px solid #ddd;">الوصف</th>
+<th style="padding: 10px; border: 1px solid #ddd;">النطاق النموذجي</th>
 </tr>
 </thead>
 <tbody>
 <tr style="background: #f8fafc;">
-<td style="padding: 12px; border: 1px solid #ddd;">تذبذب BHP</td>
-<td style="padding: 12px; border: 1px solid #ddd;">±25 psi</td>
-<td style="padding: 12px; border: 1px solid #ddd;">&gt;50 psi</td>
+<td style="padding: 10px; border: 1px solid #ddd;">ρ(T,P,c)</td>
+<td style="padding: 10px; border: 1px solid #ddd;">الكثافة المصححة للحرارة والضغط والفتات</td>
+<td style="padding: 10px; border: 1px solid #ddd;">±0.5 ppg من السطحية</td>
 </tr>
 <tr>
-<td style="padding: 12px; border: 1px solid #ddd;">زمن استجابة الخنق</td>
-<td style="padding: 12px; border: 1px solid #ddd;">&lt;2 ثانية</td>
-<td style="padding: 12px; border: 1px solid #ddd;">&gt;5 ثواني</td>
+<td style="padding: 10px; border: 1px solid #ddd;">ΔP_ann</td>
+<td style="padding: 10px; border: 1px solid #ddd;">فقد الاحتكاك الحلقي</td>
+<td style="padding: 10px; border: 1px solid #ddd;">100-500 psi</td>
 </tr>
 <tr style="background: #f8fafc;">
-<td style="padding: 12px; border: 1px solid #ddd;">عمر حشوة RCD</td>
-<td style="padding: 12px; border: 1px solid #ddd;">&gt;100 ساعة</td>
-<td style="padding: 12px; border: 1px solid #ddd;">&lt;50 ساعة</td>
+<td style="padding: 10px; border: 1px solid #ddd;">ΔP_surge/swab</td>
+<td style="padding: 10px; border: 1px solid #ddd;">تأثير حركة الأنابيب</td>
+<td style="padding: 10px; border: 1px solid #ddd;">±50-300 psi</td>
+</tr>
+<tr>
+<td style="padding: 10px; border: 1px solid #ddd;">ΔP_acceleration</td>
+<td style="padding: 10px; border: 1px solid #ddd;">تأثير تسارع التدفق</td>
+<td style="padding: 10px; border: 1px solid #ddd;">10-50 psi</td>
 </tr>
 </tbody>
 </table>
+</div>
+
+<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 مثال حسابي شامل ومعقد</h3>
+<div style="background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); color: white; padding: 1.5rem; border-radius: 12px; margin: 1rem 0;">
+<h4 style="margin-bottom: 1rem;">📊 سيناريو: تصميم MPD لبئر HPHT معقد</h4>
+
+<p style="margin-bottom: 1rem;"><strong>المعطيات:</strong></p>
+<ul style="line-height: 1.8; padding-right: 1.5rem; margin-bottom: 1rem;">
+<li>TVD = 18,500 ft | BHT = 380°F</li>
+<li>Pore Pressure Gradient = 16.2 ppg EMW</li>
+<li>Fracture Gradient = 17.1 ppg EMW</li>
+<li>Surface MW = 16.8 ppg | β = 0.00035/°F</li>
+<li>Q = 480 gpm | AFP at Q = 280 psi</li>
+<li>Cuttings Loading = +0.3 ppg equivalent</li>
+</ul>
+
+<p style="margin-bottom: 0.5rem;"><strong>الحل المتكامل:</strong></p>
+<div style="background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 8px;">
+<p style="margin-bottom: 0.5rem;"><strong>1. تصحيح الكثافة الحرارية:</strong></p>
+<p style="font-family: monospace; margin-bottom: 0.5rem;">ΔT = 380 - 80 = 300°F</p>
+<p style="font-family: monospace; margin-bottom: 1rem;">ρ_bottom = 16.8 × [1 - 0.00035 × 300] = 16.8 × 0.895 = <strong>15.04 ppg</strong></p>
+
+<p style="margin-bottom: 0.5rem;"><strong>2. الكثافة الفعالة مع الفتات:</strong></p>
+<p style="font-family: monospace; margin-bottom: 1rem;">ρ_effective = 15.04 + 0.3 = <strong>15.34 ppg</strong></p>
+
+<p style="margin-bottom: 0.5rem;"><strong>3. الضغط الهيدروستاتيكي (متوسط الكثافة):</strong></p>
+<p style="font-family: monospace; margin-bottom: 1rem;">ρ_avg ≈ (16.8 + 15.34)/2 = 16.07 ppg</p>
+<p style="font-family: monospace; margin-bottom: 1rem;">P_h = 0.052 × 16.07 × 18,500 = <strong>15,459 psi</strong></p>
+
+<p style="margin-bottom: 0.5rem;"><strong>4. حدود الضغط:</strong></p>
+<p style="font-family: monospace; margin-bottom: 0.5rem;">P_pore = 0.052 × 16.2 × 18,500 = <strong>15,584 psi</strong></p>
+<p style="font-family: monospace; margin-bottom: 1rem;">P_frac = 0.052 × 17.1 × 18,500 = <strong>16,449 psi</strong></p>
+
+<p style="margin-bottom: 0.5rem;"><strong>5. تحليل النتائج:</strong></p>
+<p style="font-family: monospace; margin-bottom: 0.5rem;">BHP أثناء الضخ = 15,459 + 280 = 15,739 psi ✓</p>
+<p style="font-family: monospace; margin-bottom: 0.5rem;">BHP عند التوقف = 15,459 psi ⚠️ (أقل من P_pore!)</p>
+<p style="font-family: monospace; margin-bottom: 1rem;"><strong>SBP المطلوب = 15,584 - 15,459 + 100 (هامش) = 225 psi</strong></p>
+</div>
+</div>
+
+<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 تحليل الحساسية (Sensitivity Analysis)</h3>
+<div style="background: #fef9e7; padding: 1.5rem; border-radius: 12px; margin: 1rem 0;">
+<p style="line-height: 1.8; margin-bottom: 1rem;">دراسة تأثير تغير المتغيرات على BHP:</p>
+<table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+<thead>
+<tr style="background: #e67e22; color: white;">
+<th style="padding: 10px; border: 1px solid #ddd;">المتغير</th>
+<th style="padding: 10px; border: 1px solid #ddd;">التغير</th>
+<th style="padding: 10px; border: 1px solid #ddd;">تأثير على BHP</th>
+<th style="padding: 10px; border: 1px solid #ddd;">الخطورة</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: #f8fafc;">
+<td style="padding: 10px; border: 1px solid #ddd;">MW</td>
+<td style="padding: 10px; border: 1px solid #ddd;">+0.1 ppg</td>
+<td style="padding: 10px; border: 1px solid #ddd;">+96 psi</td>
+<td style="padding: 10px; border: 1px solid #ddd; color: #27ae60;">منخفضة</td>
+</tr>
+<tr>
+<td style="padding: 10px; border: 1px solid #ddd;">Q (Flow Rate)</td>
+<td style="padding: 10px; border: 1px solid #ddd;">+50 gpm</td>
+<td style="padding: 10px; border: 1px solid #ddd;">+35 psi AFP</td>
+<td style="padding: 10px; border: 1px solid #ddd; color: #27ae60;">منخفضة</td>
+</tr>
+<tr style="background: #f8fafc;">
+<td style="padding: 10px; border: 1px solid #ddd;">Temperature</td>
+<td style="padding: 10px; border: 1px solid #ddd;">+50°F</td>
+<td style="padding: 10px; border: 1px solid #ddd;">-150 psi</td>
+<td style="padding: 10px; border: 1px solid #ddd; color: #e67e22;">متوسطة</td>
+</tr>
+<tr>
+<td style="padding: 10px; border: 1px solid #ddd;">Cuttings Load</td>
+<td style="padding: 10px; border: 1px solid #ddd;">+0.2 ppg</td>
+<td style="padding: 10px; border: 1px solid #ddd;">+190 psi</td>
+<td style="padding: 10px; border: 1px solid #ddd; color: #c0392b;">عالية</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 مصفوفة اتخاذ القرار لاختيار تقنية MPD</h3>
+<div style="background: #e8f8f5; padding: 1.5rem; border-radius: 12px; margin: 1rem 0;">
+<table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+<thead>
+<tr style="background: #27ae60; color: white;">
+<th style="padding: 10px; border: 1px solid #ddd;">ظروف البئر</th>
+<th style="padding: 10px; border: 1px solid #ddd;">التقنية المقترحة</th>
+<th style="padding: 10px; border: 1px solid #ddd;">المبرر</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: #f8fafc;">
+<td style="padding: 10px; border: 1px solid #ddd;">نافذة ضيقة (< 0.5 ppg)</td>
+<td style="padding: 10px; border: 1px solid #ddd;">CBHP + PWD</td>
+<td style="padding: 10px; border: 1px solid #ddd;">تحكم دقيق بالضغط في الوقت الحقيقي</td>
+</tr>
+<tr>
+<td style="padding: 10px; border: 1px solid #ddd;">Depleted Zone + HP Zone</td>
+<td style="padding: 10px; border: 1px solid #ddd;">DGD (Dual Gradient)</td>
+<td style="padding: 10px; border: 1px solid #ddd;">محاكاة تدرج ضغط متعدد</td>
+</tr>
+<tr style="background: #f8fafc;">
+<td style="padding: 10px; border: 1px solid #ddd;">Lost Circulation متكرر</td>
+<td style="padding: 10px; border: 1px solid #ddd;">CML + Active SBP</td>
+<td style="padding: 10px; border: 1px solid #ddd;">تقليل ECD أثناء الضخ</td>
+</tr>
+<tr>
+<td style="padding: 10px; border: 1px solid #ddd;">آبار بحرية عميقة</td>
+<td style="padding: 10px; border: 1px solid #ddd;">Riser Dilution + MPD</td>
+<td style="padding: 10px; border: 1px solid #ddd;">معالجة ضغط عمود الماء</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 مؤشرات الأداء الرئيسية المتقدمة (Advanced KPIs)</h3>
+<div style="background: #f5e6ff; padding: 1.5rem; border-radius: 12px; margin: 1rem 0;">
+<table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+<thead>
+<tr style="background: #9b59b6; color: white;">
+<th style="padding: 10px; border: 1px solid #ddd;">المؤشر</th>
+<th style="padding: 10px; border: 1px solid #ddd;">الهدف</th>
+<th style="padding: 10px; border: 1px solid #ddd;">علامة الخطر</th>
+<th style="padding: 10px; border: 1px solid #ddd;">الإجراء</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: #f8fafc;">
+<td style="padding: 10px; border: 1px solid #ddd;">BHP Stability (σ)</td>
+<td style="padding: 10px; border: 1px solid #ddd;">< 25 psi</td>
+<td style="padding: 10px; border: 1px solid #ddd;">> 50 psi</td>
+<td style="padding: 10px; border: 1px solid #ddd;">ضبط PID gains</td>
+</tr>
+<tr>
+<td style="padding: 10px; border: 1px solid #ddd;">Connection Time</td>
+<td style="padding: 10px; border: 1px solid #ddd;">< 4 min</td>
+<td style="padding: 10px; border: 1px solid #ddd;">> 8 min</td>
+<td style="padding: 10px; border: 1px solid #ddd;">مراجعة الإجراءات</td>
+</tr>
+<tr style="background: #f8fafc;">
+<td style="padding: 10px; border: 1px solid #ddd;">NPT due to MPD</td>
+<td style="padding: 10px; border: 1px solid #ddd;">< 2%</td>
+<td style="padding: 10px; border: 1px solid #ddd;">> 5%</td>
+<td style="padding: 10px; border: 1px solid #ddd;">صيانة وقائية</td>
+</tr>
+<tr>
+<td style="padding: 10px; border: 1px solid #ddd;">Kick Detection Time</td>
+<td style="padding: 10px; border: 1px solid #ddd;">< 30 sec</td>
+<td style="padding: 10px; border: 1px solid #ddd;">> 60 sec</td>
+<td style="padding: 10px; border: 1px solid #ddd;">معايرة المستشعرات</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div style="background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%); color: white; padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">
+<h4 style="margin-bottom: 0.5rem;">✅ ملخص التكامل</h4>
+<p style="line-height: 1.7;">نجاح عمليات MPD يعتمد على: (1) فهم الهيدروليكا المتقدمة، (2) الاستعداد لجميع سيناريوهات الطوارئ، (3) اختيار التقنية المناسبة، (4) المراقبة المستمرة لمؤشرات الأداء.</p>
+</div>
 
 </section>`,
           keyTerms: [
-            { term: 'Ramp Down/Up', definition: 'تغيير تدريجي لمعدل الضخ مع تعويض الضغط' },
-            { term: 'Connection Procedure', definition: 'إجراءات إضافة أنبوب جديد أثناء MPD' },
-            { term: 'KPI - Key Performance Indicator', definition: 'مؤشرات قياس أداء العملية' },
+            { term: 'Sensitivity Analysis', definition: 'تحليل تأثير تغير كل متغير على النتيجة النهائية' },
+            { term: 'Decision Matrix', definition: 'مصفوفة منهجية لاختيار التقنية المناسبة' },
+            { term: 'NPT (Non-Productive Time)', definition: 'الوقت الضائع غير المنتج بسبب مشاكل المعدات' },
+            { term: 'PID Gains', definition: 'معاملات نظام التحكم (Proportional, Integral, Derivative)' },
           ],
           practiceQuestion: {
-            question: 'ما هو أهم إجراء عند إيقاف المضخات لإضافة أنبوب جديد في نظام MPD؟',
+            question: 'في بئر HPHT، إذا كانت كثافة الطين السطحية 16.5 ppg وانخفضت عند القاع بسبب الحرارة إلى 15.5 ppg، ما هو تأثير ذلك على BHP مقارنة بالحساب التقليدي (عمق 18,000 ft)؟',
             options: [
-              'تقليل وزن الطين',
-              'زيادة SBP لتعويض فقدان AFP',
-              'إغلاق BOP',
-              'إيقاف الدوران فقط'
+              'أعلى بـ 468 psi',
+              'أقل بـ 468 psi',
+              'أقل بـ 936 psi',
+              'لا يوجد تأثير'
             ],
             correctAnswer: 1,
           },
         },
         en: {
-          title: 'Managed Pressure Drilling - Day 5: Operations and Challenges',
+          title: 'Managed Pressure Drilling - Day 5: Integration, Advanced Calculations and Performance',
           explanation: `<section>
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1.5rem;">🔷 MPD Operations and Practical Challenges</h2>
+<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1.5rem;">🔷 Integrated Analysis of Advanced MPD Operations</h2>
 
-<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 Connection Procedure</h3>
-<div style="background: #fef9e7; padding: 1.5rem; border-radius: 12px; margin: 1rem 0;">
-<ol style="line-height: 2; padding-left: 1.5rem;">
-<li>Ramp down pump rate gradually</li>
-<li>Increase SBP proportionally as pumping decreases</li>
-<li>Stop pumps with full SBP applied</li>
-<li>Make connection while monitoring pressure</li>
-<li>Resume pumping while gradually reducing SBP</li>
-</ol>
+<div style="background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%); color: white; padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem;">
+<h3 style="font-size: 1.25rem; margin-bottom: 1rem;">💡 Connecting All Concepts</h3>
+<p style="line-height: 1.8;">In this day, we integrate everything learned: hydraulics, emergency scenarios, and different techniques in a practical framework with complex calculations.</p>
 </div>
 
-<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 Common Challenges</h3>
-<p style="line-height: 1.8;">RCD element wear, choke plugging, and sensor failures are the most common issues requiring backup systems and preventive maintenance.</p>
+<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 Comprehensive Integrated Pressure Model</h3>
+<div style="background: #e8f4f8; padding: 1.5rem; border-radius: 12px; margin: 1rem 0;">
+<div style="background: #1e3a5f; color: white; padding: 1rem; border-radius: 8px; text-align: center; margin: 1rem 0;">
+<p style="font-weight: bold; font-size: 1.1rem;">BHP_dynamic(t) = ρ(T,P,c) × g × TVD + ΔP_ann(Q,μ,geometry) + SBP(t) + ΔP_surge/swab(V_pipe) + ΔP_acceleration</p>
+</div>
+</div>
+
+<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 Complex Calculation Example</h3>
+<div style="background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); color: white; padding: 1.5rem; border-radius: 12px; margin: 1rem 0;">
+<h4 style="margin-bottom: 1rem;">📊 Scenario: MPD Design for Complex HPHT Well</h4>
+<p style="margin-bottom: 1rem;">Given: TVD = 18,500 ft, BHT = 380°F, PP = 16.2 ppg, FG = 17.1 ppg, Surface MW = 16.8 ppg, β = 0.00035/°F</p>
+<p style="margin-bottom: 1rem;">Solution involves thermal correction, cuttings loading, and SBP calculation to maintain BHP within the narrow pressure window.</p>
+</div>
+
+<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 MPD Technique Decision Matrix</h3>
+<div style="background: #e8f8f5; padding: 1.5rem; border-radius: 12px; margin: 1rem 0;">
+<p style="line-height: 1.8;">Selecting the right MPD technique based on well conditions: CBHP for narrow windows, DGD for multiple pressure regimes, CML for lost circulation issues.</p>
+</div>
+
+<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 Advanced KPIs</h3>
+<div style="background: #f5e6ff; padding: 1.5rem; border-radius: 12px; margin: 1rem 0;">
+<p style="line-height: 1.8;">Key metrics: BHP Stability (< 25 psi), Connection Time (< 4 min), NPT due to MPD (< 2%), Kick Detection Time (< 30 sec)</p>
+</div>
 
 </section>`,
           keyTerms: [
-            { term: 'Ramp Down/Up', definition: 'Gradual pump rate change with pressure compensation' },
-            { term: 'Connection Procedure', definition: 'Steps to add new pipe during MPD' },
-            { term: 'KPI', definition: 'Key Performance Indicator for operation monitoring' },
+            { term: 'Sensitivity Analysis', definition: 'Analysis of how each variable change affects the final result' },
+            { term: 'Decision Matrix', definition: 'Systematic matrix for selecting appropriate technique' },
+            { term: 'NPT', definition: 'Non-Productive Time due to equipment issues' },
+            { term: 'PID Gains', definition: 'Control system parameters (Proportional, Integral, Derivative)' },
           ],
           practiceQuestion: {
-            question: 'What is the most important action when stopping pumps to make a connection in MPD?',
+            question: 'In an HPHT well, if surface MW is 16.5 ppg and decreases to 15.5 ppg at bottom due to temperature, what is the BHP effect compared to conventional calculation (18,000 ft depth)?',
             options: [
-              'Reduce mud weight',
-              'Increase SBP to compensate for AFP loss',
-              'Close BOP',
-              'Stop rotation only'
+              'Higher by 468 psi',
+              'Lower by 468 psi',
+              'Lower by 936 psi',
+              'No effect'
             ],
             correctAnswer: 1,
           },
