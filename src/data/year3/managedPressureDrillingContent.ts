@@ -1184,142 +1184,162 @@ Long water column creates unique challenges.
     {
       day: 6,
       type: 'quiz',
-      quiz: {
+      content: {
         ar: {
           title: 'اختبار الحفر بالضغط المُدار',
-          questions: [
-            {
-              question: 'ما هو الغرض الرئيسي من SBP في نظام MPD؟',
-              options: ['تبريد البت', 'تعويض فقدان ECD عند إيقاف المضخات', 'زيادة سرعة الحفر', 'تقليل كثافة الطين'],
-              correctAnswer: 1,
-            },
-            {
-              question: 'ما هو RCD؟',
-              options: ['جهاز قياس العمق', 'جهاز إغلاق دوار حول سلسلة الحفر', 'مضخة الطين', 'صمام الأمان'],
-              correctAnswer: 1,
-            },
-            {
-              question: 'أي تقنية MPD الأفضل للآبار البحرية العميقة؟',
-              options: ['CBHP', 'DGD', 'الحفر التقليدي', 'Underbalanced'],
-              correctAnswer: 1,
-            },
-            {
-              question: 'ماذا يحدث لـ SBP عند زيادة معدل الضخ؟',
-              options: ['يزداد', 'ينخفض', 'يبقى ثابتاً', 'يتذبذب'],
-              correctAnswer: 1,
-            },
-            {
-              question: 'ما هو الهدف المثالي لتذبذب BHP؟',
-              options: ['± 200 psi', '± 50 psi', '± 500 psi', 'لا يهم'],
-              correctAnswer: 1,
-            },
-            {
-              question: 'ماذا تفعل أولاً عند فشل الخنق الآلي؟',
-              options: ['إيقاف الحفر', 'التحويل للخنق الاحتياطي', 'زيادة كثافة الطين', 'الاتصال بالمكتب'],
-              correctAnswer: 1,
-            },
-            {
-              question: 'متى يُستخدم MPD بشكل أساسي؟',
-              options: ['في كل الآبار', 'عند نافذة طين ضيقة', 'في الآبار الضحلة فقط', 'عند عدم توفر طين'],
-              correctAnswer: 1,
-            },
-            {
-              question: 'ما هي نسبة تقليل فقدان الطين النموذجية مع MPD؟',
-              options: ['5-10%', '20-30%', '50-80%', '100%'],
-              correctAnswer: 2,
-            },
-            {
-              question: 'ما أهم وقت حساس في تشغيل MPD؟',
-              options: ['أثناء الحفر', 'عند الوصلات والرحلات', 'أثناء تغيير البت', 'عند بداية البئر'],
-              correctAnswer: 1,
-            },
-            {
-              question: 'كيف يتم التعامل مع ركلة صغيرة في MPD؟',
-              options: ['إغلاق فوري', 'زيادة SBP لاحتوائها', 'تجاهلها', 'إيقاف الحفر فقط'],
-              correctAnswer: 1,
-            },
-          ],
+          explanation: '',
+          keyTerms: [],
         },
         en: {
           title: 'Managed Pressure Drilling Quiz',
-          questions: [
-            {
-              question: 'What is the main purpose of SBP in MPD system?',
-              options: ['Cool the bit', 'Compensate for ECD loss when pumps stop', 'Increase drilling speed', 'Reduce mud weight'],
-              correctAnswer: 1,
-            },
-            {
-              question: 'What is RCD?',
-              options: ['Depth measurement device', 'Rotating seal device around drillstring', 'Mud pump', 'Safety valve'],
-              correctAnswer: 1,
-            },
-            {
-              question: 'Which MPD technique is best for deepwater wells?',
-              options: ['CBHP', 'DGD', 'Conventional drilling', 'Underbalanced'],
-              correctAnswer: 1,
-            },
-            {
-              question: 'What happens to SBP when pump rate increases?',
-              options: ['Increases', 'Decreases', 'Stays constant', 'Oscillates'],
-              correctAnswer: 1,
-            },
-            {
-              question: 'What is the ideal target for BHP fluctuation?',
-              options: ['± 200 psi', '± 50 psi', '± 500 psi', 'Does not matter'],
-              correctAnswer: 1,
-            },
-            {
-              question: 'What do you do first when automated choke fails?',
-              options: ['Stop drilling', 'Switch to backup choke', 'Increase mud weight', 'Call office'],
-              correctAnswer: 1,
-            },
-            {
-              question: 'When is MPD primarily used?',
-              options: ['In all wells', 'With narrow mud window', 'In shallow wells only', 'When mud unavailable'],
-              correctAnswer: 1,
-            },
-            {
-              question: 'What is typical mud loss reduction with MPD?',
-              options: ['5-10%', '20-30%', '50-80%', '100%'],
-              correctAnswer: 2,
-            },
-            {
-              question: 'What is the most sensitive time in MPD operation?',
-              options: ['During drilling', 'During connections and trips', 'During bit change', 'At well start'],
-              correctAnswer: 1,
-            },
-            {
-              question: 'How is a small kick handled in MPD?',
-              options: ['Immediate shut-in', 'Increase SBP to contain it', 'Ignore it', 'Just stop drilling'],
-              correctAnswer: 1,
-            },
-          ],
+          explanation: '',
+          keyTerms: [],
         },
+      },
+      quiz: {
+        ar: [
+          {
+            question: 'ما هو الغرض الرئيسي من SBP في نظام MPD؟',
+            options: ['تبريد البت', 'تعويض فقدان ECD عند إيقاف المضخات', 'زيادة سرعة الحفر', 'تقليل كثافة الطين'],
+            correctAnswer: 1,
+          },
+          {
+            question: 'ما هو RCD؟',
+            options: ['جهاز قياس العمق', 'جهاز إغلاق دوار حول سلسلة الحفر', 'مضخة الطين', 'صمام الأمان'],
+            correctAnswer: 1,
+          },
+          {
+            question: 'أي تقنية MPD الأفضل للآبار البحرية العميقة؟',
+            options: ['CBHP', 'DGD', 'الحفر التقليدي', 'Underbalanced'],
+            correctAnswer: 1,
+          },
+          {
+            question: 'ماذا يحدث لـ SBP عند زيادة معدل الضخ؟',
+            options: ['يزداد', 'ينخفض', 'يبقى ثابتاً', 'يتذبذب'],
+            correctAnswer: 1,
+          },
+          {
+            question: 'ما هو الهدف المثالي لتذبذب BHP؟',
+            options: ['± 200 psi', '± 50 psi', '± 500 psi', 'لا يهم'],
+            correctAnswer: 1,
+          },
+          {
+            question: 'ماذا تفعل أولاً عند فشل الخنق الآلي؟',
+            options: ['إيقاف الحفر', 'التحويل للخنق الاحتياطي', 'زيادة كثافة الطين', 'الاتصال بالمكتب'],
+            correctAnswer: 1,
+          },
+          {
+            question: 'متى يُستخدم MPD بشكل أساسي؟',
+            options: ['في كل الآبار', 'عند نافذة طين ضيقة', 'في الآبار الضحلة فقط', 'عند عدم توفر طين'],
+            correctAnswer: 1,
+          },
+          {
+            question: 'ما هي نسبة تقليل فقدان الطين النموذجية مع MPD؟',
+            options: ['5-10%', '20-30%', '50-80%', '100%'],
+            correctAnswer: 2,
+          },
+          {
+            question: 'ما أهم وقت حساس في تشغيل MPD؟',
+            options: ['أثناء الحفر', 'عند الوصلات والرحلات', 'أثناء تغيير البت', 'عند بداية البئر'],
+            correctAnswer: 1,
+          },
+          {
+            question: 'كيف يتم التعامل مع ركلة صغيرة في MPD؟',
+            options: ['إغلاق فوري', 'زيادة SBP لاحتوائها', 'تجاهلها', 'إيقاف الحفر فقط'],
+            correctAnswer: 1,
+          },
+        ],
+        en: [
+          {
+            question: 'What is the main purpose of SBP in MPD system?',
+            options: ['Cool the bit', 'Compensate for ECD loss when pumps stop', 'Increase drilling speed', 'Reduce mud weight'],
+            correctAnswer: 1,
+          },
+          {
+            question: 'What is RCD?',
+            options: ['Depth measurement device', 'Rotating seal device around drillstring', 'Mud pump', 'Safety valve'],
+            correctAnswer: 1,
+          },
+          {
+            question: 'Which MPD technique is best for deepwater wells?',
+            options: ['CBHP', 'DGD', 'Conventional drilling', 'Underbalanced'],
+            correctAnswer: 1,
+          },
+          {
+            question: 'What happens to SBP when pump rate increases?',
+            options: ['Increases', 'Decreases', 'Stays constant', 'Oscillates'],
+            correctAnswer: 1,
+          },
+          {
+            question: 'What is the ideal target for BHP fluctuation?',
+            options: ['± 200 psi', '± 50 psi', '± 500 psi', 'Does not matter'],
+            correctAnswer: 1,
+          },
+          {
+            question: 'What do you do first when automated choke fails?',
+            options: ['Stop drilling', 'Switch to backup choke', 'Increase mud weight', 'Call office'],
+            correctAnswer: 1,
+          },
+          {
+            question: 'When is MPD primarily used?',
+            options: ['In all wells', 'With narrow mud window', 'In shallow wells only', 'When mud unavailable'],
+            correctAnswer: 1,
+          },
+          {
+            question: 'What is typical mud loss reduction with MPD?',
+            options: ['5-10%', '20-30%', '50-80%', '100%'],
+            correctAnswer: 2,
+          },
+          {
+            question: 'What is the most sensitive time in MPD operation?',
+            options: ['During drilling', 'During connections and trips', 'During bit change', 'At well start'],
+            correctAnswer: 1,
+          },
+          {
+            question: 'How is a small kick handled in MPD?',
+            options: ['Immediate shut-in', 'Increase SBP to contain it', 'Ignore it', 'Just stop drilling'],
+            correctAnswer: 1,
+          },
+        ],
       },
     },
     {
       day: 7,
       type: 'project',
+      content: {
+        ar: {
+          title: 'مشروع: تصميم خطة MPD لبئر صعب',
+          explanation: '',
+          keyTerms: [],
+        },
+        en: {
+          title: 'Project: Design MPD Plan for Difficult Well',
+          explanation: '',
+          keyTerms: [],
+        },
+      },
       project: {
         ar: {
           title: 'مشروع: تصميم خطة MPD لبئر صعب',
           description: 'قم بتصميم خطة MPD لبئر HPHT بنافذة طين ضيقة (0.8 ppg). حدد التقنية المناسبة وإجراءات التشغيل.',
-          requirements: [
+          instructions: [
             'اختيار تقنية MPD المناسبة مع التبرير',
             'إعداد جدول تعويض الضغط المبسط',
             'وصف إجراءات الوصلات',
             'تحديد مؤشرات الأداء المستهدفة',
           ],
+          submissionType: 'both',
         },
         en: {
           title: 'Project: Design MPD Plan for Difficult Well',
           description: 'Design an MPD plan for an HPHT well with narrow mud window (0.8 ppg). Specify appropriate technique and operating procedures.',
-          requirements: [
+          instructions: [
             'Select appropriate MPD technique with justification',
             'Prepare simplified pressure compensation schedule',
             'Describe connection procedures',
             'Define target performance indicators',
           ],
+          submissionType: 'both',
         },
       },
     },
