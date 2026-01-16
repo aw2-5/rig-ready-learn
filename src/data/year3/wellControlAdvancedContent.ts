@@ -1288,142 +1288,162 @@ Most difficult case: Losing mud downhole while receiving a kick simultaneously!
     {
       day: 6,
       type: 'quiz',
-      quiz: {
+      content: {
         ar: {
           title: 'اختبار التحكم المتقدم بالبئر',
-          questions: [
-            {
-              question: 'ما هي نافذة الطين (Mud Window)؟',
-              options: ['الفرق بين ضغط المسام وضغط الكسر', 'كثافة الطين المستخدمة', 'عمق البئر', 'قطر الفتحة'],
-              correctAnswer: 0,
-            },
-            {
-              question: 'لماذا يُعتبر الغاز أخطر أنواع الركلات؟',
-              options: ['لأنه سام', 'لأنه يتمدد بشكل هائل عند الصعود', 'لأنه خفيف', 'لأنه قابل للاشتعال فقط'],
-              correctAnswer: 1,
-            },
-            {
-              question: 'ما هو MAASP؟',
-              options: ['كثافة الطين القاتل', 'أقصى ضغط سطحي مسموح على الفتحة الحلقية', 'معدل الضخ', 'عمق الكيسنق'],
-              correctAnswer: 1,
-            },
-            {
-              question: 'متى نستخدم طريقة Bullheading؟',
-              options: ['في كل الركلات', 'عند وجود غازات سامة', 'عند عدم توفر طين', 'في الآبار الضحلة فقط'],
-              correctAnswer: 1,
-            },
-            {
-              question: 'ما الفرق بين Stripping و Snubbing؟',
-              options: ['لا فرق', 'Snubbing يحتاج قوة ميكانيكية لدفع الأنابيب', 'Stripping أسرع', 'Snubbing للآبار البحرية فقط'],
-              correctAnswer: 1,
-            },
-            {
-              question: 'ما هو Underground Blowout؟',
-              options: ['انفجار سطحي', 'تدفق من تكوين لآخر داخل البئر', 'ركلة عادية', 'فقدان طين'],
-              correctAnswer: 1,
-            },
-            {
-              question: 'ما سبب Swabbed Kick؟',
-              options: ['كثافة طين منخفضة', 'سحب الأنابيب بسرعة عالية', 'ضغط تكوين عالي', 'عطل BOP'],
-              correctAnswer: 1,
-            },
-            {
-              question: 'ما هو معدل هجرة الغاز التقريبي؟',
-              options: ['100-200 قدم/ساعة', '500-1000 قدم/ساعة', '2000-3000 قدم/ساعة', '50 قدم/ساعة'],
-              correctAnswer: 1,
-            },
-            {
-              question: 'متى نستخدم Dynamic Kill؟',
-              options: ['في كل الحالات', 'عند تدفق قوي لا يمكن السيطرة عليه بالوزن', 'في الآبار الضحلة', 'عند عدم وجود ركلة'],
-              correctAnswer: 1,
-            },
-            {
-              question: 'ما أول إجراء عند اكتشاف H₂S في الركلة؟',
-              options: ['الاستمرار بالضخ', 'Bullhead وإخلاء المنطقة', 'الانتظار', 'زيادة كثافة الطين فقط'],
-              correctAnswer: 1,
-            },
-          ],
+          explanation: '',
+          keyTerms: [],
         },
         en: {
           title: 'Advanced Well Control Quiz',
-          questions: [
-            {
-              question: 'What is the Mud Window?',
-              options: ['Difference between pore pressure and fracture pressure', 'Mud weight used', 'Well depth', 'Hole diameter'],
-              correctAnswer: 0,
-            },
-            {
-              question: 'Why is gas considered the most dangerous kick type?',
-              options: ['Because it is toxic', 'Because it expands enormously as it rises', 'Because it is light', 'Because it is flammable only'],
-              correctAnswer: 1,
-            },
-            {
-              question: 'What is MAASP?',
-              options: ['Kill mud weight', 'Maximum allowable annular surface pressure', 'Pump rate', 'Casing depth'],
-              correctAnswer: 1,
-            },
-            {
-              question: 'When do we use Bullheading?',
-              options: ['For all kicks', 'When toxic gases are present', 'When mud is unavailable', 'In shallow wells only'],
-              correctAnswer: 1,
-            },
-            {
-              question: 'What is the difference between Stripping and Snubbing?',
-              options: ['No difference', 'Snubbing requires mechanical force to push pipe', 'Stripping is faster', 'Snubbing is for offshore only'],
-              correctAnswer: 1,
-            },
-            {
-              question: 'What is Underground Blowout?',
-              options: ['Surface explosion', 'Flow from one formation to another inside well', 'Normal kick', 'Mud loss'],
-              correctAnswer: 1,
-            },
-            {
-              question: 'What causes Swabbed Kick?',
-              options: ['Low mud weight', 'Pulling pipe too fast', 'High formation pressure', 'BOP failure'],
-              correctAnswer: 1,
-            },
-            {
-              question: 'What is the approximate gas migration rate?',
-              options: ['100-200 ft/hr', '500-1000 ft/hr', '2000-3000 ft/hr', '50 ft/hr'],
-              correctAnswer: 1,
-            },
-            {
-              question: 'When do we use Dynamic Kill?',
-              options: ['In all cases', 'When strong flow cannot be controlled by weight', 'In shallow wells', 'When there is no kick'],
-              correctAnswer: 1,
-            },
-            {
-              question: 'What is the first action when H₂S is detected in a kick?',
-              options: ['Continue pumping', 'Bullhead and evacuate area', 'Wait', 'Just increase mud weight'],
-              correctAnswer: 1,
-            },
-          ],
+          explanation: '',
+          keyTerms: [],
         },
+      },
+      quiz: {
+        ar: [
+          {
+            question: 'ما هي نافذة الطين (Mud Window)؟',
+            options: ['الفرق بين ضغط المسام وضغط الكسر', 'كثافة الطين المستخدمة', 'عمق البئر', 'قطر الفتحة'],
+            correctAnswer: 0,
+          },
+          {
+            question: 'لماذا يُعتبر الغاز أخطر أنواع الركلات؟',
+            options: ['لأنه سام', 'لأنه يتمدد بشكل هائل عند الصعود', 'لأنه خفيف', 'لأنه قابل للاشتعال فقط'],
+            correctAnswer: 1,
+          },
+          {
+            question: 'ما هو MAASP؟',
+            options: ['كثافة الطين القاتل', 'أقصى ضغط سطحي مسموح على الفتحة الحلقية', 'معدل الضخ', 'عمق الكيسنق'],
+            correctAnswer: 1,
+          },
+          {
+            question: 'متى نستخدم طريقة Bullheading؟',
+            options: ['في كل الركلات', 'عند وجود غازات سامة', 'عند عدم توفر طين', 'في الآبار الضحلة فقط'],
+            correctAnswer: 1,
+          },
+          {
+            question: 'ما الفرق بين Stripping و Snubbing؟',
+            options: ['لا فرق', 'Snubbing يحتاج قوة ميكانيكية لدفع الأنابيب', 'Stripping أسرع', 'Snubbing للآبار البحرية فقط'],
+            correctAnswer: 1,
+          },
+          {
+            question: 'ما هو Underground Blowout؟',
+            options: ['انفجار سطحي', 'تدفق من تكوين لآخر داخل البئر', 'ركلة عادية', 'فقدان طين'],
+            correctAnswer: 1,
+          },
+          {
+            question: 'ما سبب Swabbed Kick؟',
+            options: ['كثافة طين منخفضة', 'سحب الأنابيب بسرعة عالية', 'ضغط تكوين عالي', 'عطل BOP'],
+            correctAnswer: 1,
+          },
+          {
+            question: 'ما هو معدل هجرة الغاز التقريبي؟',
+            options: ['100-200 قدم/ساعة', '500-1000 قدم/ساعة', '2000-3000 قدم/ساعة', '50 قدم/ساعة'],
+            correctAnswer: 1,
+          },
+          {
+            question: 'متى نستخدم Dynamic Kill؟',
+            options: ['في كل الحالات', 'عند تدفق قوي لا يمكن السيطرة عليه بالوزن', 'في الآبار الضحلة', 'عند عدم وجود ركلة'],
+            correctAnswer: 1,
+          },
+          {
+            question: 'ما أول إجراء عند اكتشاف H₂S في الركلة؟',
+            options: ['الاستمرار بالضخ', 'Bullhead وإخلاء المنطقة', 'الانتظار', 'زيادة كثافة الطين فقط'],
+            correctAnswer: 1,
+          },
+        ],
+        en: [
+          {
+            question: 'What is the Mud Window?',
+            options: ['Difference between pore pressure and fracture pressure', 'Mud weight used', 'Well depth', 'Hole diameter'],
+            correctAnswer: 0,
+          },
+          {
+            question: 'Why is gas considered the most dangerous kick type?',
+            options: ['Because it is toxic', 'Because it expands enormously as it rises', 'Because it is light', 'Because it is flammable only'],
+            correctAnswer: 1,
+          },
+          {
+            question: 'What is MAASP?',
+            options: ['Kill mud weight', 'Maximum allowable annular surface pressure', 'Pump rate', 'Casing depth'],
+            correctAnswer: 1,
+          },
+          {
+            question: 'When do we use Bullheading?',
+            options: ['For all kicks', 'When toxic gases are present', 'When mud is unavailable', 'In shallow wells only'],
+            correctAnswer: 1,
+          },
+          {
+            question: 'What is the difference between Stripping and Snubbing?',
+            options: ['No difference', 'Snubbing requires mechanical force to push pipe', 'Stripping is faster', 'Snubbing is for offshore only'],
+            correctAnswer: 1,
+          },
+          {
+            question: 'What is Underground Blowout?',
+            options: ['Surface explosion', 'Flow from one formation to another inside well', 'Normal kick', 'Mud loss'],
+            correctAnswer: 1,
+          },
+          {
+            question: 'What causes Swabbed Kick?',
+            options: ['Low mud weight', 'Pulling pipe too fast', 'High formation pressure', 'BOP failure'],
+            correctAnswer: 1,
+          },
+          {
+            question: 'What is the approximate gas migration rate?',
+            options: ['100-200 ft/hr', '500-1000 ft/hr', '2000-3000 ft/hr', '50 ft/hr'],
+            correctAnswer: 1,
+          },
+          {
+            question: 'When do we use Dynamic Kill?',
+            options: ['In all cases', 'When strong flow cannot be controlled by weight', 'In shallow wells', 'When there is no kick'],
+            correctAnswer: 1,
+          },
+          {
+            question: 'What is the first action when H₂S is detected in a kick?',
+            options: ['Continue pumping', 'Bullhead and evacuate area', 'Wait', 'Just increase mud weight'],
+            correctAnswer: 1,
+          },
+        ],
       },
     },
     {
       day: 7,
       type: 'project',
+      content: {
+        ar: {
+          title: 'مشروع: تحليل سيناريو تحكم بالبئر',
+          explanation: '',
+          keyTerms: [],
+        },
+        en: {
+          title: 'Project: Well Control Scenario Analysis',
+          explanation: '',
+          keyTerms: [],
+        },
+      },
       project: {
         ar: {
           title: 'مشروع: تحليل سيناريو تحكم بالبئر',
           description: 'قم بتحليل سيناريو ركلة غاز في بئر HPHT. حدد: نوع الركلة، الطريقة المناسبة للقتل، والإجراءات الوقائية.',
-          requirements: [
+          instructions: [
             'تحديد علامات الركلة وكيفية اكتشافها',
             'اختيار طريقة القتل المناسبة مع التبرير',
             'وصف الإجراءات خطوة بخطوة',
             'ذكر المخاطر المحتملة وكيفية تجنبها',
           ],
+          submissionType: 'both',
         },
         en: {
           title: 'Project: Well Control Scenario Analysis',
           description: 'Analyze a gas kick scenario in an HPHT well. Identify: kick type, appropriate kill method, and preventive measures.',
-          requirements: [
+          instructions: [
             'Identify kick indicators and how to detect them',
             'Select appropriate kill method with justification',
             'Describe step-by-step procedures',
             'Mention potential risks and how to avoid them',
           ],
+          submissionType: 'both',
         },
       },
     },
