@@ -12,126 +12,136 @@ export const wellControlAdvancedLesson: WeeklyLesson = {
           explanation: `<section>
 <h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 المفاهيم المتقدمة في ديناميكيات التحكم بالبئر</h2>
 <p style="margin-bottom: 1rem; line-height: 1.8;">
-في المستوى المتقدم من التحكم بالبئر، نتجاوز المفاهيم الأساسية لنفهم الديناميكيات المعقدة للضغط والتدفق. هذا يتطلب فهماً عميقاً للعلاقات بين الضغط الهيدروستاتيكي، ECD، ونافذة الطين (Mud Window)، بالإضافة إلى تأثير الحالات الاستثنائية مثل HPHT وآبار الغاز العميقة.
+في المستوى المتقدم من التحكم بالبئر، نتجاوز المفاهيم الأساسية لنفهم الديناميكيات المعقدة للضغط والتدفق. هذا يتطلب فهماً عميقاً للعلاقات بين الضغط الهيدروستاتيكي، ECD، ونافذة الطين (Mud Window).
 </p>
 
 <div style="background: linear-gradient(135deg, #dc262615, #dc262610); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-right: 4px solid #dc2626;">
-<h3 style="color: #dc2626; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">⚠️ نافذة الطين (Mud Window) ونطاق العمل الآمن</h3>
+<h3 style="color: #dc2626; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">⚠️ نافذة الطين (Mud Window) - أهم مفهوم</h3>
 <p style="line-height: 1.8;">
-نافذة الطين هي النطاق بين ضغط المسام (Pore Pressure) وضغط الكسر (Fracture Pressure). في الآبار HPHT، تكون هذه النافذة ضيقة جداً مما يجعل التحكم بالبئر أكثر تحدياً. تضييق النافذة بمقدار 0.5 ppg يزيد من خطر الركلة أو التكسير بشكل كبير.
+نافذة الطين هي النطاق الآمن للعمل بين ضغط المسام (Pore Pressure) وضغط الكسر (Fracture Pressure). كلما كانت النافذة أضيق، زادت صعوبة التحكم بالبئر.
 </p>
-<div style="background: #fff; padding: 1rem; border-radius: 8px; margin-top: 1rem; text-align: center; font-family: monospace; font-size: 1rem; color: #1e3a5f;">
-Mud Window = Fracture Gradient - Pore Pressure Gradient
-</div>
-</div>
-
-<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 MAASP - أقصى ضغط سطحي مسموح على الفتحة الحلقية</h2>
-
-<div style="background: #f0fdf4; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #059669; color: #065f46;">
-<h3 style="color: #059669; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">حسابات MAASP المتقدمة</h3>
-<p style="line-height: 1.8; margin-bottom: 1rem; color: #065f46;">
-MAASP (Maximum Allowable Annular Surface Pressure) هو أقصى ضغط يمكن تحمله على الفتحة الحلقية دون تكسير أضعف نقطة (عادة عند الكيسنق):
-</p>
-<div style="background: #fff; padding: 1rem; border-radius: 8px; text-align: center; font-family: monospace; font-size: 1rem; color: #1e3a5f;">
-MAASP = (Fracture Gradient - Current MW) × 0.052 × Shoe TVD
-</div>
-<p style="margin-top: 1rem; font-size: 0.9rem; color: #065f46;">
-<strong>مثال:</strong> إذا كان Fracture Gradient = 14.2 ppg، Current MW = 12.0 ppg، Shoe TVD = 8,500 ft:<br/>
-MAASP = (14.2 - 12.0) × 0.052 × 8,500 = <strong>972 psi</strong>
-</p>
-</div>
-
-<div style="background: #dbeafe; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #2563eb; color: #1e3a8a;">
-<h3 style="color: #1e40af; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">ECD وتأثيره على التحكم بالبئر</h3>
-<p style="line-height: 1.8; color: #1e3a8a;">
-ECD (Equivalent Circulating Density) يمثل الكثافة الفعالة أثناء الضخ ويؤثر بشكل مباشر على نافذة الطين:
-</p>
-<div style="background: #fff; padding: 1rem; border-radius: 8px; margin-top: 1rem; text-align: center; font-family: monospace; font-size: 1rem; color: #1e3a5f;">
-ECD = MW + (Annular Pressure Loss / (0.052 × TVD))
-</div>
-<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2; margin-top: 1rem; color: #1e3a8a;">
-<li><strong>أثناء الضخ:</strong> ECD > Static MW (قد يسبب تكسير)</li>
-<li><strong>عند إيقاف الضخ:</strong> الضغط يعود للهيدروستاتيكي (قد يسبب ركلة)</li>
-<li><strong>في الآبار الضيقة:</strong> ECD يرتفع بشكل كبير</li>
+<div style="background: #fff; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+<p style="font-weight: bold; margin-bottom: 0.5rem;">📌 ماذا يحدث عند تجاوز الحدود؟</p>
+<ul style="padding-right: 1.5rem; line-height: 2;">
+<li><strong>أقل من ضغط المسام:</strong> ركلة (Kick) - دخول سوائل التكوين للبئر</li>
+<li><strong>أعلى من ضغط الكسر:</strong> تكسير التكوين وفقدان الطين (Lost Circulation)</li>
 </ul>
 </div>
-
-<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 سلوك الغاز متعدد الأطوار (Multi-Phase Flow)</h2>
-
-<div style="background: #fef3c7; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #f59e0b; color: #78350f;">
-<h3 style="color: #92400e; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">تمدد الغاز وقانون الغازات الحقيقية</h3>
-<p style="line-height: 1.8; color: #78350f;">
-في الظروف العالية (HPHT)، لا يتبع الغاز قانون Boyle المثالي. نستخدم قانون الغازات الحقيقية مع معامل الانضغاطية Z:
-</p>
-<div style="background: #fff; padding: 1rem; border-radius: 8px; margin-top: 1rem; text-align: center; font-family: monospace; font-size: 1rem; color: #1e3a5f;">
-P₁V₁/Z₁T₁ = P₂V₂/Z₂T₂
-</div>
-<p style="margin-top: 1rem; line-height: 1.8; color: #78350f;">
-معامل Z يتراوح من 0.8-1.2 حسب الضغط والحرارة. في الضغوط العالية جداً، قد يكون Z > 1 مما يعني أن الغاز أكثر انضغاطاً من المتوقع.
-</p>
 </div>
 
-<div style="background: #f8fafc; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #64748b; color: #334155;">
-<h3 style="color: #475569; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">Gas Migration Rate - معدل هجرة الغاز</h3>
-<p style="line-height: 1.8; margin-bottom: 1rem; color: #334155;">
-الغاز يهاجر للأعلى حتى في البئر المغلق. معدل الهجرة يعتمد على:
-</p>
-<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2; color: #334155;">
-<li><strong>لزوجة الطين:</strong> كلما زادت اللزوجة، قل معدل الهجرة</li>
-<li><strong>حجم الفقاعة:</strong> الفقاعات الكبيرة أسرع من الصغيرة</li>
-<li><strong>قطر الفتحة:</strong> الفتحات الضيقة تبطئ الهجرة</li>
-<li><strong>المعدل النموذجي:</strong> 500-1000 ft/hr في الطين العادي</li>
-</ul>
-<div style="background: #fff; padding: 1rem; border-radius: 8px; margin-top: 1rem; text-align: center; font-family: monospace; font-size: 0.9rem; color: #1e3a5f;">
-زيادة الضغط السطحي بسبب الهجرة ≈ 0.1 - 0.3 psi/min (تقريباً)
-</div>
-</div>
+<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 MAASP - حد الأمان للضغط السطحي</h2>
 
-<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 تحديد نوع السائل الداخل (Influx Type)</h2>
-
-<div style="background: #fae8ff; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #a855f7; color: #581c87;">
-<h3 style="color: #7c3aed; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">تحليل الفرق بين SIDPP و SICP</h3>
-<p style="line-height: 1.8; color: #581c87;">
-الفرق بين الضغطين يكشف نوع السائل الداخل:
+<div style="background: #f0fdf4; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #059669;">
+<h3 style="color: #059669; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">ما هو MAASP ولماذا هو مهم؟</h3>
+<p style="line-height: 1.8; margin-bottom: 1rem;">
+MAASP (Maximum Allowable Annular Surface Pressure) هو أقصى ضغط يمكن تطبيقه على الفتحة الحلقية دون تكسير أضعف نقطة في البئر (عادةً عند الكيسنج).
 </p>
-<div style="background: #fff; padding: 1rem; border-radius: 8px; margin-top: 1rem; color: #1e3a5f;">
-<p style="margin-bottom: 0.5rem;"><strong>حساب كثافة السائل الداخل:</strong></p>
-<p style="font-family: monospace; text-align: center;">
-ρ<sub>influx</sub> = MW - ((SICP - SIDPP) / (0.052 × Kick Height))
-</p>
-<p style="margin-top: 1rem; font-size: 0.9rem;">
-Kick Height = Pit Gain / Annular Capacity
-</p>
-</div>
-<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2; margin-top: 1rem; color: #581c87;">
-<li><strong>غاز:</strong> كثافة 1-3 ppg (فرق كبير بين SICP و SIDPP)</li>
-<li><strong>نفط:</strong> كثافة 5-7 ppg</li>
-<li><strong>ماء مالح:</strong> كثافة 8-9 ppg (فرق صغير)</li>
+<div style="background: #fff; padding: 1rem; border-radius: 8px;">
+<p style="font-weight: bold; margin-bottom: 0.5rem;">💡 لماذا يجب مراقبته دائماً؟</p>
+<ul style="padding-right: 1.5rem; line-height: 2;">
+<li>تجاوز MAASP يسبب تكسير التكوين عند الحذاء (Shoe)</li>
+<li>يمكن أن يؤدي لـ Underground Blowout</li>
+<li>يجب إعادة حسابه كلما تغيرت كثافة الطين</li>
 </ul>
 </div>
+</div>
 
-<div style="background: linear-gradient(135deg, #7c3aed15, #7c3aed10); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-right: 4px solid #7c3aed; color: #581c87;">
+<div style="background: #dbeafe; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #2563eb;">
+<h3 style="color: #1e40af; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">ECD - الكثافة الفعالة أثناء الضخ</h3>
+<p style="line-height: 1.8;">
+ECD (Equivalent Circulating Density) هي الكثافة الفعلية التي يشعر بها التكوين أثناء الضخ. تكون دائماً أعلى من كثافة الطين الساكن بسبب فقد الاحتكاك.
+</p>
+<div style="background: #fff; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+<p style="font-weight: bold; margin-bottom: 0.5rem;">📌 نقاط عملية مهمة:</p>
+<ul style="padding-right: 1.5rem; line-height: 2;">
+<li><strong>أثناء الضخ:</strong> ECD أعلى من MW → قد يسبب تكسير</li>
+<li><strong>عند إيقاف المضخات:</strong> الضغط ينخفض فجأة → قد يسبب ركلة</li>
+<li><strong>الفتحات الضيقة:</strong> ECD يرتفع بشكل أكبر بسبب زيادة الاحتكاك</li>
+</ul>
+</div>
+</div>
+
+<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 سلوك الغاز في البئر</h2>
+
+<div style="background: #fef3c7; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #f59e0b;">
+<h3 style="color: #92400e; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">لماذا الغاز خطير جداً؟</h3>
+<p style="line-height: 1.8;">
+الغاز يتمدد بشكل هائل عند صعوده للسطح. فقاعة غاز صغيرة في القاع يمكن أن تملأ البئر بالكامل عند وصولها للسطح!
+</p>
+<div style="background: #fff; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+<p style="font-weight: bold; margin-bottom: 0.5rem;">📌 حقائق مهمة عن الغاز:</p>
+<ul style="padding-right: 1.5rem; line-height: 2;">
+<li><strong>معدل الهجرة:</strong> 500-1000 قدم/ساعة (يعتمد على لزوجة الطين)</li>
+<li><strong>التمدد:</strong> الحجم يتضاعف مع كل نصف انخفاض في الضغط</li>
+<li><strong>أكبر خطر:</strong> آخر 1000-2000 قدم قبل السطح</li>
+</ul>
+</div>
+</div>
+
+<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 تحديد نوع السائل الداخل (الركلة)</h2>
+
+<div style="background: #fae8ff; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #a855f7;">
+<h3 style="color: #7c3aed; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">كيف نعرف نوع الركلة؟</h3>
+<p style="line-height: 1.8;">
+الفرق بين SIDPP و SICP يكشف نوع السائل الداخل:
+</p>
+<div style="background: #fff; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+<table style="width: 100%; border-collapse: collapse;">
+<thead>
+<tr style="background: #f3e8ff;">
+<th style="padding: 10px; border: 1px solid #ddd; text-align: right;">نوع الركلة</th>
+<th style="padding: 10px; border: 1px solid #ddd; text-align: right;">الفرق بين SICP و SIDPP</th>
+<th style="padding: 10px; border: 1px solid #ddd; text-align: right;">الخطورة</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding: 10px; border: 1px solid #ddd;">غاز</td>
+<td style="padding: 10px; border: 1px solid #ddd;">فرق كبير جداً</td>
+<td style="padding: 10px; border: 1px solid #ddd; color: #dc2626; font-weight: bold;">عالية جداً ⚠️</td>
+</tr>
+<tr style="background: #f8fafc;">
+<td style="padding: 10px; border: 1px solid #ddd;">نفط</td>
+<td style="padding: 10px; border: 1px solid #ddd;">فرق متوسط</td>
+<td style="padding: 10px; border: 1px solid #ddd; color: #f59e0b;">متوسطة</td>
+</tr>
+<tr>
+<td style="padding: 10px; border: 1px solid #ddd;">ماء مالح</td>
+<td style="padding: 10px; border: 1px solid #ddd;">فرق صغير</td>
+<td style="padding: 10px; border: 1px solid #ddd; color: #22c55e;">أقل خطورة</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div style="background: linear-gradient(135deg, #7c3aed15, #7c3aed10); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-right: 4px solid #7c3aed;">
 <h3 style="color: #7c3aed; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">💡 ملخص اليوم</h3>
-<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2; color: #581c87;">
-<li>نافذة الطين الضيقة في HPHT تتطلب دقة عالية في التحكم</li>
-<li>MAASP يحدد الحد الأقصى للضغط السطحي الآمن</li>
-<li>ECD يتغير أثناء الضخ ويؤثر على استقرار البئر</li>
-<li>قانون الغازات الحقيقية ضروري في ظروف HPHT</li>
-<li>تحليل الفرق بين SIDPP و SICP يكشف نوع الركلة</li>
+<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2;">
+<li>نافذة الطين تحدد نطاق العمل الآمن</li>
+<li>MAASP يحمي من تكسير التكوين عند الحذاء</li>
+<li>ECD أعلى من MW أثناء الضخ - انتبه عند التوقف</li>
+<li>الغاز أخطر أنواع الركلات بسبب تمدده الهائل</li>
+<li>الفرق بين SIDPP و SICP يكشف نوع الركلة</li>
 </ul>
 </div>
 </section>`,
           keyTerms: [
-            { term: 'Mud Window', definition: 'الفرق بين ضغط المسام وضغط الكسر - نطاق العمل الآمن لكثافة الطين' },
-            { term: 'MAASP', definition: 'Maximum Allowable Annular Surface Pressure - أقصى ضغط سطحي مسموح دون تكسير التكوين' },
-            { term: 'ECD', definition: 'Equivalent Circulating Density - الكثافة الفعالة أثناء الضخ تشمل فقدان الضغط الاحتكاكي' },
-            { term: 'Z-Factor', definition: 'معامل انضغاطية الغاز الحقيقي - يحدد انحراف الغاز عن السلوك المثالي' },
-            { term: 'Gas Migration', definition: 'هجرة الغاز للأعلى في البئر المغلق بمعدل 500-1000 قدم/ساعة' },
+            { term: 'Mud Window', definition: 'النطاق الآمن بين ضغط المسام وضغط الكسر - كلما ضاقت النافذة زادت صعوبة التحكم' },
+            { term: 'MAASP', definition: 'أقصى ضغط سطحي مسموح على الفتحة الحلقية دون تكسير التكوين' },
+            { term: 'ECD', definition: 'الكثافة الفعالة أثناء الضخ - أعلى من كثافة الطين الساكن' },
+            { term: 'Gas Migration', definition: 'صعود الغاز في البئر المغلق بمعدل 500-1000 قدم/ساعة' },
+            { term: 'SIDPP vs SICP', definition: 'الفرق بينهما يحدد نوع السائل الداخل (غاز، نفط، ماء)' },
           ],
           practiceQuestion: {
-            question: 'إذا كان Fracture Gradient = 15.0 ppg، MW = 11.5 ppg، Shoe TVD = 10,000 ft، ما هو MAASP؟',
-            options: ['1,820 psi', '1,500 psi', '2,080 psi', '1,300 psi'],
-            correctAnswer: 0,
+            question: 'ما هو أخطر نوع من الركلات ولماذا؟',
+            options: [
+              'ماء مالح لأنه يسبب تآكل المعدات',
+              'نفط لأنه قابل للاشتعال',
+              'غاز لأنه يتمدد بشكل هائل عند الصعود',
+              'جميعها بنفس الخطورة'
+            ],
+            correctAnswer: 2,
           },
         },
         en: {
@@ -139,126 +149,136 @@ Kick Height = Pit Gain / Annular Capacity
           explanation: `<section>
 <h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 Advanced Concepts in Well Control Dynamics</h2>
 <p style="margin-bottom: 1rem; line-height: 1.8;">
-At the advanced level of well control, we go beyond basic concepts to understand the complex dynamics of pressure and flow. This requires a deep understanding of relationships between hydrostatic pressure, ECD, and the mud window, as well as the effects of exceptional conditions like HPHT and deep gas wells.
+At the advanced level of well control, we go beyond basic concepts to understand the complex dynamics of pressure and flow. This requires a deep understanding of relationships between hydrostatic pressure, ECD, and the mud window.
 </p>
 
 <div style="background: linear-gradient(135deg, #dc262615, #dc262610); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-left: 4px solid #dc2626;">
-<h3 style="color: #dc2626; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">⚠️ Mud Window and Safe Operating Range</h3>
+<h3 style="color: #dc2626; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">⚠️ Mud Window - The Most Important Concept</h3>
 <p style="line-height: 1.8;">
-The mud window is the range between pore pressure and fracture pressure. In HPHT wells, this window is very narrow, making well control more challenging. A 0.5 ppg window reduction significantly increases kick or fracture risk.
+The mud window is the safe operating range between Pore Pressure and Fracture Pressure. The narrower the window, the more difficult well control becomes.
 </p>
-<div style="background: #fff; padding: 1rem; border-radius: 8px; margin-top: 1rem; text-align: center; font-family: monospace; font-size: 1rem; color: #1e3a5f;">
-Mud Window = Fracture Gradient - Pore Pressure Gradient
-</div>
-</div>
-
-<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 MAASP - Maximum Allowable Annular Surface Pressure</h2>
-
-<div style="background: #f0fdf4; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #059669; color: #065f46;">
-<h3 style="color: #059669; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">Advanced MAASP Calculations</h3>
-<p style="line-height: 1.8; margin-bottom: 1rem; color: #065f46;">
-MAASP is the maximum pressure tolerable on the annulus without fracturing the weakest point (usually at the casing shoe):
-</p>
-<div style="background: #fff; padding: 1rem; border-radius: 8px; text-align: center; font-family: monospace; font-size: 1rem; color: #1e3a5f;">
-MAASP = (Fracture Gradient - Current MW) × 0.052 × Shoe TVD
-</div>
-<p style="margin-top: 1rem; font-size: 0.9rem; color: #065f46;">
-<strong>Example:</strong> If Fracture Gradient = 14.2 ppg, Current MW = 12.0 ppg, Shoe TVD = 8,500 ft:<br/>
-MAASP = (14.2 - 12.0) × 0.052 × 8,500 = <strong>972 psi</strong>
-</p>
-</div>
-
-<div style="background: #dbeafe; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #2563eb; color: #1e3a8a;">
-<h3 style="color: #1e40af; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">ECD and Its Effect on Well Control</h3>
-<p style="line-height: 1.8; color: #1e3a8a;">
-ECD (Equivalent Circulating Density) represents effective density while pumping and directly affects the mud window:
-</p>
-<div style="background: #fff; padding: 1rem; border-radius: 8px; margin-top: 1rem; text-align: center; font-family: monospace; font-size: 1rem; color: #1e3a5f;">
-ECD = MW + (Annular Pressure Loss / (0.052 × TVD))
-</div>
-<ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 2; margin-top: 1rem; color: #1e3a8a;">
-<li><strong>While pumping:</strong> ECD > Static MW (may cause fracturing)</li>
-<li><strong>When pumps stop:</strong> Pressure returns to hydrostatic (may cause kick)</li>
-<li><strong>In slim holes:</strong> ECD increases significantly</li>
+<div style="background: #fff; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+<p style="font-weight: bold; margin-bottom: 0.5rem;">📌 What happens when limits are exceeded?</p>
+<ul style="padding-left: 1.5rem; line-height: 2;">
+<li><strong>Below Pore Pressure:</strong> Kick - formation fluids enter the wellbore</li>
+<li><strong>Above Fracture Pressure:</strong> Formation breakdown and lost circulation</li>
 </ul>
 </div>
-
-<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 Multi-Phase Gas Behavior</h2>
-
-<div style="background: #fef3c7; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #f59e0b; color: #78350f;">
-<h3 style="color: #92400e; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">Gas Expansion and Real Gas Law</h3>
-<p style="line-height: 1.8; color: #78350f;">
-Under HPHT conditions, gas doesn't follow ideal Boyle's Law. We use the real gas law with compressibility factor Z:
-</p>
-<div style="background: #fff; padding: 1rem; border-radius: 8px; margin-top: 1rem; text-align: center; font-family: monospace; font-size: 1rem; color: #1e3a5f;">
-P₁V₁/Z₁T₁ = P₂V₂/Z₂T₂
-</div>
-<p style="margin-top: 1rem; line-height: 1.8; color: #78350f;">
-Z-factor ranges from 0.8-1.2 depending on pressure and temperature. At very high pressures, Z > 1 means gas is more compressible than expected.
-</p>
 </div>
 
-<div style="background: #f8fafc; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #64748b; color: #334155;">
-<h3 style="color: #475569; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">Gas Migration Rate</h3>
-<p style="line-height: 1.8; margin-bottom: 1rem; color: #334155;">
-Gas migrates upward even in a shut-in well. Migration rate depends on:
-</p>
-<ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 2; color: #334155;">
-<li><strong>Mud viscosity:</strong> Higher viscosity = slower migration</li>
-<li><strong>Bubble size:</strong> Larger bubbles migrate faster</li>
-<li><strong>Hole diameter:</strong> Narrow holes slow migration</li>
-<li><strong>Typical rate:</strong> 500-1000 ft/hr in regular mud</li>
-</ul>
-<div style="background: #fff; padding: 1rem; border-radius: 8px; margin-top: 1rem; text-align: center; font-family: monospace; font-size: 0.9rem; color: #1e3a5f;">
-Surface pressure increase due to migration ≈ 0.1 - 0.3 psi/min (approximately)
-</div>
-</div>
+<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 MAASP - Surface Pressure Safety Limit</h2>
 
-<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 Influx Type Identification</h2>
-
-<div style="background: #fae8ff; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #a855f7; color: #581c87;">
-<h3 style="color: #7c3aed; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">Analyzing SIDPP vs SICP Difference</h3>
-<p style="line-height: 1.8; color: #581c87;">
-The difference between these pressures reveals influx type:
+<div style="background: #f0fdf4; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #059669;">
+<h3 style="color: #059669; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">What is MAASP and why is it important?</h3>
+<p style="line-height: 1.8; margin-bottom: 1rem;">
+MAASP (Maximum Allowable Annular Surface Pressure) is the maximum pressure that can be applied to the annulus without fracturing the weakest point in the well (usually at the casing shoe).
 </p>
-<div style="background: #fff; padding: 1rem; border-radius: 8px; margin-top: 1rem; color: #1e3a5f;">
-<p style="margin-bottom: 0.5rem;"><strong>Influx density calculation:</strong></p>
-<p style="font-family: monospace; text-align: center;">
-ρ<sub>influx</sub> = MW - ((SICP - SIDPP) / (0.052 × Kick Height))
-</p>
-<p style="margin-top: 1rem; font-size: 0.9rem;">
-Kick Height = Pit Gain / Annular Capacity
-</p>
-</div>
-<ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 2; margin-top: 1rem; color: #581c87;">
-<li><strong>Gas:</strong> 1-3 ppg density (large SICP-SIDPP difference)</li>
-<li><strong>Oil:</strong> 5-7 ppg density</li>
-<li><strong>Salt water:</strong> 8-9 ppg density (small difference)</li>
+<div style="background: #fff; padding: 1rem; border-radius: 8px;">
+<p style="font-weight: bold; margin-bottom: 0.5rem;">💡 Why must it always be monitored?</p>
+<ul style="padding-left: 1.5rem; line-height: 2;">
+<li>Exceeding MAASP causes formation breakdown at the shoe</li>
+<li>Can lead to Underground Blowout</li>
+<li>Must be recalculated whenever mud weight changes</li>
 </ul>
 </div>
+</div>
 
-<div style="background: linear-gradient(135deg, #7c3aed15, #7c3aed10); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-left: 4px solid #7c3aed; color: #581c87;">
+<div style="background: #dbeafe; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #2563eb;">
+<h3 style="color: #1e40af; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">ECD - Effective Density While Pumping</h3>
+<p style="line-height: 1.8;">
+ECD (Equivalent Circulating Density) is the actual density felt by the formation during pumping. It's always higher than static mud weight due to friction losses.
+</p>
+<div style="background: #fff; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+<p style="font-weight: bold; margin-bottom: 0.5rem;">📌 Important practical points:</p>
+<ul style="padding-left: 1.5rem; line-height: 2;">
+<li><strong>While pumping:</strong> ECD higher than MW → may cause fracturing</li>
+<li><strong>When pumps stop:</strong> Pressure drops suddenly → may cause kick</li>
+<li><strong>Narrow holes:</strong> ECD increases more due to higher friction</li>
+</ul>
+</div>
+</div>
+
+<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 Gas Behavior in the Well</h2>
+
+<div style="background: #fef3c7; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #f59e0b;">
+<h3 style="color: #92400e; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">Why is gas so dangerous?</h3>
+<p style="line-height: 1.8;">
+Gas expands enormously as it rises to surface. A small gas bubble at bottom can fill the entire well when it reaches surface!
+</p>
+<div style="background: #fff; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+<p style="font-weight: bold; margin-bottom: 0.5rem;">📌 Important facts about gas:</p>
+<ul style="padding-left: 1.5rem; line-height: 2;">
+<li><strong>Migration rate:</strong> 500-1000 ft/hr (depends on mud viscosity)</li>
+<li><strong>Expansion:</strong> Volume doubles with each halving of pressure</li>
+<li><strong>Greatest danger:</strong> Last 1000-2000 ft before surface</li>
+</ul>
+</div>
+</div>
+
+<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 Identifying Influx Type</h2>
+
+<div style="background: #fae8ff; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #a855f7;">
+<h3 style="color: #7c3aed; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">How do we know the kick type?</h3>
+<p style="line-height: 1.8;">
+The difference between SIDPP and SICP reveals the influx type:
+</p>
+<div style="background: #fff; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+<table style="width: 100%; border-collapse: collapse;">
+<thead>
+<tr style="background: #f3e8ff;">
+<th style="padding: 10px; border: 1px solid #ddd; text-align: left;">Kick Type</th>
+<th style="padding: 10px; border: 1px solid #ddd; text-align: left;">SICP - SIDPP Difference</th>
+<th style="padding: 10px; border: 1px solid #ddd; text-align: left;">Danger Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding: 10px; border: 1px solid #ddd;">Gas</td>
+<td style="padding: 10px; border: 1px solid #ddd;">Very large difference</td>
+<td style="padding: 10px; border: 1px solid #ddd; color: #dc2626; font-weight: bold;">Very High ⚠️</td>
+</tr>
+<tr style="background: #f8fafc;">
+<td style="padding: 10px; border: 1px solid #ddd;">Oil</td>
+<td style="padding: 10px; border: 1px solid #ddd;">Medium difference</td>
+<td style="padding: 10px; border: 1px solid #ddd; color: #f59e0b;">Medium</td>
+</tr>
+<tr>
+<td style="padding: 10px; border: 1px solid #ddd;">Salt Water</td>
+<td style="padding: 10px; border: 1px solid #ddd;">Small difference</td>
+<td style="padding: 10px; border: 1px solid #ddd; color: #22c55e;">Lower risk</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div style="background: linear-gradient(135deg, #7c3aed15, #7c3aed10); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-left: 4px solid #7c3aed;">
 <h3 style="color: #7c3aed; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">💡 Day Summary</h3>
-<ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 2; color: #581c87;">
-<li>Narrow mud window in HPHT requires high precision control</li>
-<li>MAASP determines maximum safe surface pressure</li>
-<li>ECD changes during pumping and affects well stability</li>
-<li>Real gas law is essential in HPHT conditions</li>
-<li>SIDPP vs SICP analysis reveals kick type</li>
+<ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 2;">
+<li>Mud window determines safe operating range</li>
+<li>MAASP protects against formation breakdown at shoe</li>
+<li>ECD is higher than MW while pumping - watch when stopping</li>
+<li>Gas is the most dangerous kick type due to massive expansion</li>
+<li>SIDPP vs SICP difference reveals kick type</li>
 </ul>
 </div>
 </section>`,
           keyTerms: [
-            { term: 'Mud Window', definition: 'Difference between pore pressure and fracture pressure - safe operating range for mud weight' },
-            { term: 'MAASP', definition: 'Maximum Allowable Annular Surface Pressure - max surface pressure without fracturing formation' },
-            { term: 'ECD', definition: 'Equivalent Circulating Density - effective density while pumping includes frictional pressure loss' },
-            { term: 'Z-Factor', definition: 'Real gas compressibility factor - determines gas deviation from ideal behavior' },
-            { term: 'Gas Migration', definition: 'Gas rising in shut-in well at rate of 500-1000 ft/hr' },
+            { term: 'Mud Window', definition: 'Safe range between pore pressure and fracture pressure - narrower window = harder control' },
+            { term: 'MAASP', definition: 'Maximum surface pressure allowed on annulus without fracturing formation' },
+            { term: 'ECD', definition: 'Effective density while pumping - higher than static mud weight' },
+            { term: 'Gas Migration', definition: 'Gas rising in shut-in well at 500-1000 ft/hr rate' },
+            { term: 'SIDPP vs SICP', definition: 'Difference determines influx type (gas, oil, water)' },
           ],
           practiceQuestion: {
-            question: 'If Fracture Gradient = 15.0 ppg, MW = 11.5 ppg, Shoe TVD = 10,000 ft, what is MAASP?',
-            options: ['1,820 psi', '1,500 psi', '2,080 psi', '1,300 psi'],
-            correctAnswer: 0,
+            question: 'What is the most dangerous kick type and why?',
+            options: [
+              'Salt water because it causes equipment corrosion',
+              'Oil because it is flammable',
+              'Gas because it expands enormously as it rises',
+              'All are equally dangerous'
+            ],
+            correctAnswer: 2,
           },
         },
       },
@@ -268,239 +288,249 @@ Kick Height = Pit Gain / Annular Capacity
       type: 'learning',
       content: {
         ar: {
-          title: 'تقنيات الإغلاق المتقدمة وطرق التحكم غير التقليدية',
+          title: 'طرق قتل البئر التقليدية والمتقدمة',
           explanation: `<section>
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 تحليل متقدم لإجراءات الإغلاق</h2>
+<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 طرق قتل البئر (Well Kill Methods)</h2>
 <p style="margin-bottom: 1rem; line-height: 1.8;">
-في هذا المستوى المتقدم، نتجاوز الإجراءات الأساسية لنفهم الديناميكيات المعقدة للإغلاق، بما في ذلك تأثير Water Hammer، وحسابات Choke Pressure، وطرق التحكم البديلة مثل Volumetric Method و Bullheading.
+عند حدوث ركلة، يجب "قتل" البئر - أي إعادة التوازن الهيدروستاتيكي. هناك عدة طرق، ولكل منها استخداماتها ومميزاتها.
 </p>
 
-<div style="background: linear-gradient(135deg, #dc262615, #dc262610); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-right: 4px solid #dc2626;">
-<h3 style="color: #dc2626; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">⚠️ Water Hammer Effect - تأثير صدمة الماء</h3>
-<p style="line-height: 1.8;">
-Water Hammer هو ارتفاع مفاجئ في الضغط عند إغلاق BOP بسرعة. يمكن أن يصل إلى 100-500 psi إضافية. في التكوينات الضعيفة، هذا الضغط الإضافي قد يسبب تكسير التكوين:
+<div style="background: #f0fdf4; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #059669;">
+<h3 style="color: #059669; font-size: 1.3rem; font-weight: bold; margin-bottom: 1rem;">1️⃣ طريقة الحفار (Driller's Method)</h3>
+<p style="line-height: 1.8; margin-bottom: 1rem;">
+أبسط وأسرع طريقة للبدء. تتم على دورتين: الأولى لإخراج الركلة، والثانية لضخ الطين الثقيل.
 </p>
-<div style="background: #fff; padding: 1rem; border-radius: 8px; margin-top: 1rem; text-align: center; font-family: monospace; font-size: 1rem; color: #1e3a5f;">
-ΔP<sub>hammer</sub> = (ρ × c × Δv) / 144<br/>
-حيث c = سرعة الصوت في الطين ≈ 4,000-5,000 ft/s
-</div>
-</div>
-
-<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 Volumetric Method - طريقة التحكم الحجمي</h2>
-
-<div style="background: #f0fdf4; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #059669; color: #065f46;">
-<h3 style="color: #059669; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">متى تُستخدم Volumetric Method؟</h3>
-<p style="line-height: 1.8; margin-bottom: 1rem; color: #065f46;">
-تُستخدم عندما لا يمكن الضخ (انسداد، فشل المضخات، عدم وجود سلسلة حفر):
-</p>
-<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2; color: #065f46;">
-<li>السماح للغاز بالهجرة للأعلى تدريجياً</li>
-<li>تصريف كميات محسوبة من الطين للحفاظ على BHP ثابت</li>
-<li>مراقبة زيادة الضغط السطحي بسبب هجرة الغاز</li>
+<div style="background: #fff; padding: 1rem; border-radius: 8px;">
+<p style="font-weight: bold; margin-bottom: 0.5rem;">📌 متى نستخدمها؟</p>
+<ul style="padding-right: 1.5rem; line-height: 2;">
+<li>عندما لا يتوفر وقت لحساب الطين الثقيل</li>
+<li>ركلات صغيرة ونوافذ طين واسعة</li>
+<li>الطاقم أقل خبرة (أسهل في التنفيذ)</li>
 </ul>
-<div style="background: #fff; padding: 1rem; border-radius: 8px; margin-top: 1rem; text-align: center; font-family: monospace; font-size: 0.95rem; color: #1e3a5f;">
-حجم الطين للتصريف = (زيادة الضغط المسموحة) / (0.052 × MW × Annular Capacity)
+<p style="font-weight: bold; margin: 1rem 0 0.5rem;">⚠️ العيوب:</p>
+<ul style="padding-right: 1.5rem; line-height: 2; color: #dc2626;">
+<li>ضغوط أعلى خلال الدورة الأولى</li>
+<li>وقت أطول (دورتان كاملتان)</li>
+</ul>
 </div>
 </div>
 
-<div style="background: #dbeafe; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #2563eb; color: #1e3a8a;">
-<h3 style="color: #1e40af; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">خطوات Volumetric Method</h3>
-<ol style="list-style-type: decimal; padding-right: 1.5rem; line-height: 2.2; color: #1e3a8a;">
-<li>تحديد Work Pressure = SICP + Safety Margin (50-100 psi)</li>
-<li>حساب Lubricate Pressure = ΔP المسموح (عادة 50-100 psi)</li>
-<li>انتظر حتى يرتفع SICP بمقدار Lubricate Pressure</li>
-<li>صرّف حجم محسوب من الطين ببطء</li>
-<li>كرر حتى يصل الغاز للسطح</li>
-<li>عند وصول الغاز، تحويل لطريقة قتل تقليدية</li>
+<div style="background: #dbeafe; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #2563eb;">
+<h3 style="color: #1e40af; font-size: 1.3rem; font-weight: bold; margin-bottom: 1rem;">2️⃣ طريقة الانتظار والوزن (Wait & Weight)</h3>
+<p style="line-height: 1.8; margin-bottom: 1rem;">
+الطريقة المفضلة عند توفر الوقت. يتم تحضير الطين الثقيل أولاً، ثم يُضخ في دورة واحدة.
+</p>
+<div style="background: #fff; padding: 1rem; border-radius: 8px;">
+<p style="font-weight: bold; margin-bottom: 0.5rem;">📌 المميزات:</p>
+<ul style="padding-right: 1.5rem; line-height: 2;">
+<li>ضغوط أقل على البئر والمعدات</li>
+<li>دورة واحدة فقط = وقت أقصر إجمالاً</li>
+<li>أكثر أماناً للتكوينات الضعيفة</li>
+</ul>
+<p style="font-weight: bold; margin: 1rem 0 0.5rem;">⚠️ التحديات:</p>
+<ul style="padding-right: 1.5rem; line-height: 2; color: #e67e22;">
+<li>يتطلب وقت لتحضير الطين الثقيل</li>
+<li>هجرة الغاز أثناء الانتظار قد تكون مشكلة</li>
+</ul>
+</div>
+</div>
+
+<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 مقارنة بين الطريقتين</h2>
+
+<div style="background: #f8fafc; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #64748b;">
+<table style="width: 100%; border-collapse: collapse;">
+<thead>
+<tr style="background: #e2e8f0;">
+<th style="padding: 12px; border: 1px solid #cbd5e1; text-align: right;">المعيار</th>
+<th style="padding: 12px; border: 1px solid #cbd5e1; text-align: right;">Driller's Method</th>
+<th style="padding: 12px; border: 1px solid #cbd5e1; text-align: right;">Wait & Weight</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">سرعة البدء</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">✅ فوري</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">⏳ يحتاج تحضير</td>
+</tr>
+<tr style="background: #f1f5f9;">
+<td style="padding: 12px; border: 1px solid #cbd5e1;">عدد الدورات</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">دورتان</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">✅ دورة واحدة</td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">الضغوط على البئر</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">⚠️ أعلى</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">✅ أقل</td>
+</tr>
+<tr style="background: #f1f5f9;">
+<td style="padding: 12px; border: 1px solid #cbd5e1;">سهولة التنفيذ</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">✅ أسهل</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">تحتاج حسابات</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 مبادئ أساسية لكلا الطريقتين</h2>
+
+<div style="background: #fef3c7; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #f59e0b;">
+<h3 style="color: #92400e; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">القواعد الذهبية للتحكم بالبئر</h3>
+<ol style="padding-right: 1.5rem; line-height: 2.2;">
+<li><strong>الحفاظ على ضغط القاع ثابتاً:</strong> BHP = ثابت طوال العملية</li>
+<li><strong>مراقبة MAASP:</strong> لا تتجاوز الحد الأقصى المسموح</li>
+<li><strong>الصبر:</strong> لا تتسرع - التسرع يسبب كوارث</li>
+<li><strong>المراقبة المستمرة:</strong> Pit Level، الضغوط، معدل التدفق</li>
 </ol>
 </div>
 
-<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 Bullheading - طريقة الضخ القسري</h2>
-
-<div style="background: #fef3c7; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #f59e0b; color: #78350f;">
-<h3 style="color: #92400e; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">مفهوم Bullheading</h3>
-<p style="line-height: 1.8; margin-bottom: 1rem; color: #78350f;">
-الضخ القسري للطين أو السوائل لإعادة الركلة إلى التكوين بدلاً من إخراجها للسطح:
-</p>
-<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2; color: #78350f;">
-<li><strong>المميزات:</strong> سريعة، تتجنب معالجة السوائل الخطرة على السطح</li>
-<li><strong>العيوب:</strong> خطر تكسير التكوين، قد تدفع الغاز لمناطق أخرى</li>
-<li><strong>الاستخدام:</strong> عندما يكون H₂S موجوداً، أو عند عدم وجود معدات معالجة كافية</li>
-</ul>
-<div style="background: #fff; padding: 1rem; border-radius: 8px; margin-top: 1rem; text-align: center; font-family: monospace; font-size: 0.95rem; color: #1e3a5f;">
-الضغط المطلوب للـ Bullheading = BHP + Friction Losses + Safety Margin
-</div>
-</div>
-
-<div style="background: #f8fafc; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #64748b; color: #334155;">
-<h3 style="color: #475569; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">حسابات Choke Pressure المتقدمة</h3>
-<p style="line-height: 1.8; margin-bottom: 1rem; color: #334155;">
-خلال عملية القتل، يجب التحكم بضغط الخنق للحفاظ على BHP ثابت:
-</p>
-<div style="background: #fff; padding: 1rem; border-radius: 8px; margin-bottom: 1rem; color: #1e3a5f;">
-<p style="font-family: monospace; text-align: center; margin-bottom: 0.5rem;">
-BHP = P<sub>hydrostatic</sub> + P<sub>choke</sub>
-</p>
-<p style="font-family: monospace; text-align: center;">
-عند دخول طين ثقيل: P<sub>choke</sub> = BHP - (0.052 × MW<sub>new</sub> × TVD)
-</p>
-</div>
-<p style="font-size: 0.9rem; color: #334155;">
-كلما زاد عمود الطين الثقيل، يجب تقليل ضغط الخنق للحفاظ على BHP ثابت.
-</p>
-</div>
-
-<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 Stripping vs Snubbing</h2>
-
-<div style="background: #fae8ff; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #a855f7; color: #581c87;">
-<h3 style="color: #7c3aed; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">إدخال الأنابيب تحت الضغط</h3>
-<p style="line-height: 1.8; color: #581c87; margin-bottom: 1rem;">
-عند الحاجة لإنزال سلسلة الحفر والبئر تحت الضغط:
-</p>
-<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2; color: #581c87;">
-<li><strong>Stripping:</strong> عندما يكون وزن الأنابيب > قوة الضغط للأعلى (الأنابيب تنزل بوزنها)</li>
-<li><strong>Snubbing:</strong> عندما يكون وزن الأنابيب < قوة الضغط (تحتاج قوة إضافية للإنزال)</li>
-</ul>
-<div style="background: #fff; padding: 1rem; border-radius: 8px; margin-top: 1rem; text-align: center; font-family: monospace; font-size: 0.95rem; color: #1e3a5f;">
-قوة الضغط = Wellhead Pressure × π × (OD²/4)<br/>
-إذا وزن الأنابيب < قوة الضغط → Snubbing مطلوب
-</div>
-</div>
-
-<div style="background: linear-gradient(135deg, #7c3aed15, #7c3aed10); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-right: 4px solid #7c3aed; color: #581c87;">
+<div style="background: linear-gradient(135deg, #7c3aed15, #7c3aed10); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-right: 4px solid #7c3aed;">
 <h3 style="color: #7c3aed; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">💡 ملخص اليوم</h3>
-<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2; color: #581c87;">
-<li>Water Hammer يمكن أن يضيف 100-500 psi أثناء الإغلاق السريع</li>
-<li>Volumetric Method للتحكم بدون الضخ عبر الأنابيب</li>
-<li>Bullheading لإعادة الركلة للتكوين (خطر تكسير)</li>
-<li>الفرق بين Stripping و Snubbing يعتمد على موازنة الوزن والضغط</li>
+<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2;">
+<li>Driller's Method: سريعة البدء لكن ضغوط أعلى</li>
+<li>Wait & Weight: ضغوط أقل لكن تحتاج تحضير</li>
+<li>اختيار الطريقة يعتمد على الظروف والمعدات</li>
+<li>الهدف دائماً: الحفاظ على BHP ثابت</li>
 </ul>
 </div>
 </section>`,
           keyTerms: [
-            { term: 'Water Hammer', definition: 'ارتفاع مفاجئ في الضغط عند الإغلاق السريع بسبب تباطؤ السائل المتحرك' },
-            { term: 'Volumetric Method', definition: 'طريقة تحكم بدون ضخ - السماح للغاز بالهجرة وتصريف كميات محسوبة' },
-            { term: 'Bullheading', definition: 'ضخ قسري لإعادة الركلة للتكوين بدلاً من إخراجها للسطح' },
-            { term: 'Stripping', definition: 'إنزال الأنابيب تحت الضغط عندما يكون وزنها أكبر من قوة الضغط للأعلى' },
-            { term: 'Snubbing', definition: 'إنزال الأنابيب تحت الضغط باستخدام قوة ميكانيكية إضافية' },
+            { term: "Driller's Method", definition: 'طريقة بدورتين - إخراج الركلة أولاً ثم ضخ الطين الثقيل' },
+            { term: 'Wait & Weight', definition: 'تحضير الطين الثقيل ثم ضخه في دورة واحدة - ضغوط أقل' },
+            { term: 'Kill Mud Weight', definition: 'كثافة الطين المطلوبة لموازنة ضغط التكوين' },
+            { term: 'Constant BHP', definition: 'الحفاظ على ضغط القاع ثابتاً طوال عملية القتل' },
+            { term: 'ICP/FCP', definition: 'ضغط الضخ المبدئي والنهائي - يتناقص تدريجياً' },
           ],
           practiceQuestion: {
-            question: 'متى تُستخدم Volumetric Method؟',
+            question: 'أي طريقة تُفضل عند التعامل مع تكوينات ضعيفة ونافذة طين ضيقة؟',
             options: [
-              'عند توفر ضغط عالي من المضخات',
-              'عند انسداد سلسلة الحفر أو عدم القدرة على الضخ',
-              'فقط في الآبار الأفقية',
-              'عند وجود ركلة سائلة فقط'
+              "Driller's Method لأنها أسرع",
+              'Wait & Weight لأن ضغوطها أقل',
+              'لا فرق بين الطريقتين',
+              'لا تُستخدم أي منهما'
             ],
             correctAnswer: 1,
           },
         },
         en: {
-          title: 'Advanced Shut-In Techniques and Non-Conventional Control Methods',
+          title: 'Conventional and Advanced Well Kill Methods',
           explanation: `<section>
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 Advanced Shut-In Analysis</h2>
+<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 Well Kill Methods</h2>
 <p style="margin-bottom: 1rem; line-height: 1.8;">
-At this advanced level, we go beyond basic procedures to understand complex shut-in dynamics, including Water Hammer effects, Choke Pressure calculations, and alternative control methods like Volumetric Method and Bullheading.
+When a kick occurs, the well must be "killed" - meaning restoring hydrostatic balance. There are several methods, each with its uses and advantages.
 </p>
 
-<div style="background: linear-gradient(135deg, #dc262615, #dc262610); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-left: 4px solid #dc2626;">
-<h3 style="color: #dc2626; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">⚠️ Water Hammer Effect</h3>
-<p style="line-height: 1.8;">
-Water Hammer is a sudden pressure spike when BOP closes rapidly. It can add 100-500 psi. In weak formations, this extra pressure may cause fracturing:
+<div style="background: #f0fdf4; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #059669;">
+<h3 style="color: #059669; font-size: 1.3rem; font-weight: bold; margin-bottom: 1rem;">1️⃣ Driller's Method</h3>
+<p style="line-height: 1.8; margin-bottom: 1rem;">
+The simplest and fastest method to start. Done in two circulations: first to remove the kick, second to pump heavy mud.
 </p>
-<div style="background: #fff; padding: 1rem; border-radius: 8px; margin-top: 1rem; text-align: center; font-family: monospace; font-size: 1rem; color: #1e3a5f;">
-ΔP<sub>hammer</sub> = (ρ × c × Δv) / 144<br/>
-where c = speed of sound in mud ≈ 4,000-5,000 ft/s
-</div>
-</div>
-
-<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 Volumetric Method</h2>
-
-<div style="background: #f0fdf4; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #059669; color: #065f46;">
-<h3 style="color: #059669; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">When to Use Volumetric Method?</h3>
-<p style="line-height: 1.8; margin-bottom: 1rem; color: #065f46;">
-Used when pumping is not possible (plugged pipe, pump failure, no drillstring):
-</p>
-<ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 2; color: #065f46;">
-<li>Allow gas to migrate upward gradually</li>
-<li>Bleed calculated volumes to maintain constant BHP</li>
-<li>Monitor surface pressure increase from gas migration</li>
+<div style="background: #fff; padding: 1rem; border-radius: 8px;">
+<p style="font-weight: bold; margin-bottom: 0.5rem;">📌 When to use?</p>
+<ul style="padding-left: 1.5rem; line-height: 2;">
+<li>When there's no time to weight up mud</li>
+<li>Small kicks and wide mud windows</li>
+<li>Less experienced crew (easier to execute)</li>
 </ul>
-<div style="background: #fff; padding: 1rem; border-radius: 8px; margin-top: 1rem; text-align: center; font-family: monospace; font-size: 0.95rem; color: #1e3a5f;">
-Bleed Volume = (Allowable Pressure Increase) / (0.052 × MW × Annular Capacity)
+<p style="font-weight: bold; margin: 1rem 0 0.5rem;">⚠️ Disadvantages:</p>
+<ul style="padding-left: 1.5rem; line-height: 2; color: #dc2626;">
+<li>Higher pressures during first circulation</li>
+<li>Longer time (two full circulations)</li>
+</ul>
 </div>
 </div>
 
-<div style="background: #dbeafe; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #2563eb; color: #1e3a8a;">
-<h3 style="color: #1e40af; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">Volumetric Method Steps</h3>
-<ol style="list-style-type: decimal; padding-left: 1.5rem; line-height: 2.2; color: #1e3a8a;">
-<li>Determine Work Pressure = SICP + Safety Margin (50-100 psi)</li>
-<li>Calculate Lubricate Pressure = Allowable ΔP (usually 50-100 psi)</li>
-<li>Wait for SICP to increase by Lubricate Pressure amount</li>
-<li>Slowly bleed calculated volume of mud</li>
-<li>Repeat until gas reaches surface</li>
-<li>When gas surfaces, switch to conventional kill method</li>
+<div style="background: #dbeafe; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #2563eb;">
+<h3 style="color: #1e40af; font-size: 1.3rem; font-weight: bold; margin-bottom: 1rem;">2️⃣ Wait & Weight Method</h3>
+<p style="line-height: 1.8; margin-bottom: 1rem;">
+The preferred method when time is available. Heavy mud is prepared first, then pumped in one circulation.
+</p>
+<div style="background: #fff; padding: 1rem; border-radius: 8px;">
+<p style="font-weight: bold; margin-bottom: 0.5rem;">📌 Advantages:</p>
+<ul style="padding-left: 1.5rem; line-height: 2;">
+<li>Lower pressures on well and equipment</li>
+<li>Only one circulation = shorter total time</li>
+<li>Safer for weak formations</li>
+</ul>
+<p style="font-weight: bold; margin: 1rem 0 0.5rem;">⚠️ Challenges:</p>
+<ul style="padding-left: 1.5rem; line-height: 2; color: #e67e22;">
+<li>Requires time to prepare heavy mud</li>
+<li>Gas migration during waiting may be a problem</li>
+</ul>
+</div>
+</div>
+
+<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 Comparison Between Methods</h2>
+
+<div style="background: #f8fafc; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #64748b;">
+<table style="width: 100%; border-collapse: collapse;">
+<thead>
+<tr style="background: #e2e8f0;">
+<th style="padding: 12px; border: 1px solid #cbd5e1; text-align: left;">Criteria</th>
+<th style="padding: 12px; border: 1px solid #cbd5e1; text-align: left;">Driller's Method</th>
+<th style="padding: 12px; border: 1px solid #cbd5e1; text-align: left;">Wait & Weight</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">Start Speed</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">✅ Immediate</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">⏳ Needs preparation</td>
+</tr>
+<tr style="background: #f1f5f9;">
+<td style="padding: 12px; border: 1px solid #cbd5e1;">Number of Circulations</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">Two</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">✅ One</td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">Well Pressures</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">⚠️ Higher</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">✅ Lower</td>
+</tr>
+<tr style="background: #f1f5f9;">
+<td style="padding: 12px; border: 1px solid #cbd5e1;">Ease of Execution</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">✅ Easier</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">Needs calculations</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 Fundamental Principles for Both Methods</h2>
+
+<div style="background: #fef3c7; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #f59e0b;">
+<h3 style="color: #92400e; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">Golden Rules of Well Control</h3>
+<ol style="padding-left: 1.5rem; line-height: 2.2;">
+<li><strong>Keep BHP constant:</strong> Bottomhole pressure = constant throughout operation</li>
+<li><strong>Monitor MAASP:</strong> Never exceed maximum allowable</li>
+<li><strong>Patience:</strong> Don't rush - rushing causes disasters</li>
+<li><strong>Continuous monitoring:</strong> Pit Level, pressures, flow rate</li>
 </ol>
 </div>
 
-<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 Bullheading</h2>
-
-<div style="background: #fef3c7; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #f59e0b; color: #78350f;">
-<h3 style="color: #92400e; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">Bullheading Concept</h3>
-<p style="line-height: 1.8; margin-bottom: 1rem; color: #78350f;">
-Forcefully pumping mud or fluids to push the kick back into formation instead of circulating out:
-</p>
-<ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 2; color: #78350f;">
-<li><strong>Advantages:</strong> Fast, avoids handling dangerous fluids at surface</li>
-<li><strong>Disadvantages:</strong> Fracture risk, may push gas to other zones</li>
-<li><strong>Use:</strong> When H₂S is present, or insufficient surface handling equipment</li>
-</ul>
-<div style="background: #fff; padding: 1rem; border-radius: 8px; margin-top: 1rem; text-align: center; font-family: monospace; font-size: 0.95rem; color: #1e3a5f;">
-Bullheading Pressure Required = BHP + Friction Losses + Safety Margin
-</div>
-</div>
-
-<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 Stripping vs Snubbing</h2>
-
-<div style="background: #fae8ff; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #a855f7; color: #581c87;">
-<h3 style="color: #7c3aed; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">Running Pipe Under Pressure</h3>
-<p style="line-height: 1.8; color: #581c87; margin-bottom: 1rem;">
-When drillstring must be run with well under pressure:
-</p>
-<ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 2; color: #581c87;">
-<li><strong>Stripping:</strong> When pipe weight > upward pressure force (pipe goes down by weight)</li>
-<li><strong>Snubbing:</strong> When pipe weight < pressure force (needs additional force)</li>
-</ul>
-<div style="background: #fff; padding: 1rem; border-radius: 8px; margin-top: 1rem; text-align: center; font-family: monospace; font-size: 0.95rem; color: #1e3a5f;">
-Pressure Force = Wellhead Pressure × π × (OD²/4)<br/>
-If Pipe Weight < Pressure Force → Snubbing Required
-</div>
-</div>
-
-<div style="background: linear-gradient(135deg, #7c3aed15, #7c3aed10); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-left: 4px solid #7c3aed; color: #581c87;">
+<div style="background: linear-gradient(135deg, #7c3aed15, #7c3aed10); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-left: 4px solid #7c3aed;">
 <h3 style="color: #7c3aed; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">💡 Day Summary</h3>
-<ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 2; color: #581c87;">
-<li>Water Hammer can add 100-500 psi during rapid shut-in</li>
-<li>Volumetric Method for control without pumping through string</li>
-<li>Bullheading pushes kick back to formation (fracture risk)</li>
-<li>Stripping vs Snubbing depends on weight vs pressure force balance</li>
+<ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 2;">
+<li>Driller's Method: Quick to start but higher pressures</li>
+<li>Wait & Weight: Lower pressures but needs preparation</li>
+<li>Method choice depends on conditions and equipment</li>
+<li>Goal always: Keep BHP constant</li>
 </ul>
 </div>
 </section>`,
           keyTerms: [
-            { term: 'Water Hammer', definition: 'Sudden pressure spike during rapid shut-in due to deceleration of moving fluid' },
-            { term: 'Volumetric Method', definition: 'Control method without pumping - allowing gas migration and bleeding calculated volumes' },
-            { term: 'Bullheading', definition: 'Forceful pumping to push kick back into formation instead of circulating out' },
-            { term: 'Stripping', definition: 'Running pipe under pressure when pipe weight exceeds upward pressure force' },
-            { term: 'Snubbing', definition: 'Running pipe under pressure using additional mechanical force' },
+            { term: "Driller's Method", definition: 'Two-circulation method - remove kick first then pump heavy mud' },
+            { term: 'Wait & Weight', definition: 'Prepare heavy mud then pump in one circulation - lower pressures' },
+            { term: 'Kill Mud Weight', definition: 'Mud density required to balance formation pressure' },
+            { term: 'Constant BHP', definition: 'Maintaining constant bottomhole pressure throughout kill operation' },
+            { term: 'ICP/FCP', definition: 'Initial and Final Circulating Pressures - decrease gradually' },
           ],
           practiceQuestion: {
-            question: 'When is Volumetric Method used?',
+            question: 'Which method is preferred when dealing with weak formations and narrow mud windows?',
             options: [
-              'When high pump pressure is available',
-              'When drillstring is plugged or pumping is not possible',
-              'Only in horizontal wells',
-              'Only for liquid kicks'
+              "Driller's Method because it's faster",
+              'Wait & Weight because it has lower pressures',
+              'No difference between methods',
+              'Neither is used'
             ],
             correctAnswer: 1,
           },
@@ -512,106 +542,92 @@ If Pipe Weight < Pressure Force → Snubbing Required
       type: 'learning',
       content: {
         ar: {
-          title: 'تقنيات القتل غير التقليدية المتقدمة',
+          title: 'تقنيات القتل غير التقليدية',
           explanation: `<section>
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 تقنيات التحكم غير التقليدية (Non-Conventional Kill Techniques)</h2>
+<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 متى نحتاج تقنيات غير تقليدية؟</h2>
 <p style="margin-bottom: 1rem; line-height: 1.8;">
-في الحالات التي لا تنجح فيها طرق القتل التقليدية (Driller's Method و Wait & Weight)، نلجأ لتقنيات متقدمة. هذه التقنيات تُستخدم في الظروف الاستثنائية مثل انسداد الأنابيب، عدم القدرة على الضخ، أو هجرة الغاز السريعة.
+أحياناً لا تنجح الطرق التقليدية بسبب ظروف استثنائية. هنا نلجأ لتقنيات متقدمة مصممة لمواقف محددة.
 </p>
 
 <div style="background: linear-gradient(135deg, #dc262615, #dc262610); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-right: 4px solid #dc2626;">
-<h3 style="color: #dc2626; font-size: 1.3rem; font-weight: bold; margin-bottom: 1rem;">⚠️ 1. طريقة التشحيم والتنفيس (Lubricate & Bleed)</h3>
-<p style="line-height: 1.8; margin-bottom: 1rem; color: #1e293b;">
-تُستخدم عندما لا يمكن الضخ (انسداد الأنابيب، عطل المضخات، أو عدم وجود سلسلة حفر). تعتمد على ضخ كميات صغيرة من الطين وتنفيس الغاز بالتناوب.
+<h3 style="color: #dc2626; font-size: 1.3rem; font-weight: bold; margin-bottom: 1rem;">1️⃣ طريقة التشحيم والتنفيس (Lubricate & Bleed)</h3>
+<p style="line-height: 1.8; margin-bottom: 1rem;">
+تُستخدم عندما لا يمكن الضخ العادي (انسداد الأنابيب أو عطل المضخات).
 </p>
-<div style="background: #fff; padding: 1.25rem; border-radius: 8px; margin: 1rem 0;">
-<p style="font-weight: bold; color: #dc2626; margin-bottom: 0.75rem;">خطوات التنفيذ:</p>
-<ol style="padding-right: 1.5rem; line-height: 2.2; color: #1e293b;">
-<li><strong>حساب حجم الطين:</strong> ضخ كمية صغيرة (عادة 5-10 براميل) عبر Kill Line</li>
-<li><strong>الانتظار:</strong> السماح للطين بالاستقرار فوق الغاز (10-15 دقيقة)</li>
-<li><strong>القراءة:</strong> حساب الانخفاض المتوقع في الضغط</li>
-<li><strong>التنفيس:</strong> تنفيس الغاز من Choke Line حتى يصل الضغط للقيمة المتوقعة</li>
-<li><strong>التكرار:</strong> تكرار العملية حتى إخراج كل الغاز</li>
+<div style="background: #fff; padding: 1rem; border-radius: 8px;">
+<p style="font-weight: bold; margin-bottom: 0.5rem;">📌 كيف تعمل؟</p>
+<ol style="padding-right: 1.5rem; line-height: 2.2;">
+<li>ضخ كمية صغيرة من الطين (5-10 براميل)</li>
+<li>الانتظار ليستقر الطين فوق الغاز</li>
+<li>تنفيس الغاز من الأعلى</li>
+<li>تكرار العملية حتى إخراج كل الغاز</li>
 </ol>
-</div>
-<div style="background: #fef2f2; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
-<p style="font-family: monospace; text-align: center; color: #1e293b; font-size: 1rem;">
-انخفاض الضغط لكل برميل = (MW × 0.052 × Annular Height per bbl)
-</p>
-<p style="margin-top: 0.75rem; font-size: 0.9rem; color: #dc2626;">
-<strong>⚡ تحذير:</strong> عند التنفيس، لا تخفض الضغط أكثر من المحسوب لتجنب ركلة جديدة!
+<p style="margin-top: 1rem; background: #fef2f2; padding: 0.75rem; border-radius: 6px;">
+<strong>⚠️ تحذير:</strong> بطيئة جداً - قد تستغرق ساعات طويلة
 </p>
 </div>
 </div>
-
-<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2.5rem 0 1rem;">🔷 2. القتل العكسي (Reverse Kill / Bullheading)</h2>
 
 <div style="background: #dbeafe; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #2563eb;">
-<p style="line-height: 1.8; margin-bottom: 1rem; color: #1e3a8a;">
-طريقة تعتمد على ضخ الطين الثقيل من السطح لدفع السائل الداخل عائداً إلى التكوين. تُستخدم في حالات محددة جداً.
+<h3 style="color: #1e40af; font-size: 1.3rem; font-weight: bold; margin-bottom: 1rem;">2️⃣ القتل العكسي (Bullheading)</h3>
+<p style="line-height: 1.8; margin-bottom: 1rem;">
+دفع السائل الداخل عائداً للتكوين بالضغط العالي. خطيرة لكن ضرورية أحياناً.
 </p>
-<div style="background: #fff; padding: 1.25rem; border-radius: 8px; margin: 1rem 0;">
-<p style="font-weight: bold; color: #1e40af; margin-bottom: 0.75rem;">شروط الاستخدام:</p>
-<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2; color: #1e3a8a;">
-<li>تكوين قادر على استيعاب السوائل (عالي النفاذية)</li>
-<li>H₂S أو غازات سامة تمنع الضخ العادي للسطح</li>
+<div style="background: #fff; padding: 1rem; border-radius: 8px;">
+<p style="font-weight: bold; margin-bottom: 0.5rem;">📌 متى نستخدمها؟</p>
+<ul style="padding-right: 1.5rem; line-height: 2;">
+<li>وجود غازات سامة (H₂S) - خطر على الطاقم</li>
+<li>معدات معالجة الغاز غير كافية</li>
 <li>خطر انفجار سطحي عالي</li>
-<li>عدم وجود معدات معالجة كافية للغاز</li>
 </ul>
-</div>
-<div style="background: #eff6ff; padding: 1rem; border-radius: 8px; margin-top: 1rem; color: #1e3a8a;">
-<p style="font-weight: bold; margin-bottom: 0.5rem;">⚠️ مخاطر Bullheading:</p>
-<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 1.8; font-size: 0.95rem;">
-<li>تكسير التكوين (Fracturing) إذا تجاوز الضغط LOT</li>
-<li>Underground Blowout إذا كان التكوين ضعيفاً</li>
-<li>انسداد التكوين بالحفريات والباريت</li>
-</ul>
+<p style="margin-top: 1rem; background: #fef2f2; padding: 0.75rem; border-radius: 6px;">
+<strong>⚠️ خطر:</strong> قد تسبب تكسير التكوين إذا تجاوز الضغط LOT
+</p>
 </div>
 </div>
-
-<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2.5rem 0 1rem;">🔷 3. الطريقة الحجمية (Volumetric Method)</h2>
 
 <div style="background: #f0fdf4; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #059669;">
-<p style="line-height: 1.8; margin-bottom: 1rem; color: #065f46;">
-تُستخدم عندما لا يمكن الضخ إطلاقاً. تتحكم في هجرة الغاز بالتنفيس المحسوب للحفاظ على BHP ثابت فوق ضغط التكوين.
+<h3 style="color: #059669; font-size: 1.3rem; font-weight: bold; margin-bottom: 1rem;">3️⃣ الطريقة الحجمية (Volumetric Method)</h3>
+<p style="line-height: 1.8; margin-bottom: 1rem;">
+للحالات التي لا يمكن فيها الضخ إطلاقاً. نسيطر على هجرة الغاز بالتنفيس فقط.
 </p>
-<div style="background: #fff; padding: 1.25rem; border-radius: 8px; margin: 1rem 0;">
-<p style="font-weight: bold; color: #059669; margin-bottom: 0.75rem;">مبدأ العمل:</p>
-<p style="line-height: 1.8; color: #065f46;">
-عند هجرة الغاز للأعلى، يزداد الضغط السطحي. نسمح بزيادة الضغط بمقدار محسوب (Safety Margin) ثم ننفس لتخفيضه. هذا يسمح للغاز بالصعود مع الحفاظ على ضغط القاع.
-</p>
-</div>
-<div style="background: #dcfce7; padding: 1rem; border-radius: 8px; margin-top: 1rem; font-family: monospace; text-align: center; color: #065f46;">
-ΔP للتنفيس = (زيادة الضغط) - (Hydrostatic من الطين المُنفَّس)
+<div style="background: #fff; padding: 1rem; border-radius: 8px;">
+<p style="font-weight: bold; margin-bottom: 0.5rem;">📌 مبدأ العمل:</p>
+<ul style="padding-right: 1.5rem; line-height: 2;">
+<li>الغاز يهاجر للأعلى ويزيد الضغط السطحي</li>
+<li>نسمح بزيادة محدودة (هامش أمان)</li>
+<li>ننفس لخفض الضغط</li>
+<li>نكرر حتى يخرج كل الغاز</li>
+</ul>
 </div>
 </div>
 
-<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2.5rem 0 1rem;">🔷 4. مقارنة التقنيات</h2>
+<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 مقارنة سريعة</h2>
 
 <div style="background: #f8fafc; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #64748b;">
-<table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+<table style="width: 100%; border-collapse: collapse;">
 <thead>
 <tr style="background: #e2e8f0;">
-<th style="padding: 0.75rem; border: 1px solid #cbd5e1; text-align: right; color: #1e293b;">التقنية</th>
-<th style="padding: 0.75rem; border: 1px solid #cbd5e1; text-align: right; color: #1e293b;">متى تُستخدم</th>
-<th style="padding: 0.75rem; border: 1px solid #cbd5e1; text-align: right; color: #1e293b;">المخاطر</th>
+<th style="padding: 12px; border: 1px solid #cbd5e1; text-align: right;">التقنية</th>
+<th style="padding: 12px; border: 1px solid #cbd5e1; text-align: right;">متى نستخدمها</th>
+<th style="padding: 12px; border: 1px solid #cbd5e1; text-align: right;">الخطر الرئيسي</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="padding: 0.75rem; border: 1px solid #cbd5e1; color: #1e293b;">Lubricate & Bleed</td>
-<td style="padding: 0.75rem; border: 1px solid #cbd5e1; color: #1e293b;">انسداد أنابيب، عطل مضخات</td>
-<td style="padding: 0.75rem; border: 1px solid #cbd5e1; color: #1e293b;">بطيئة، تتطلب دقة عالية</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">Lubricate & Bleed</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">انسداد الأنابيب/عطل المضخات</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">بطيئة جداً</td>
 </tr>
 <tr style="background: #f1f5f9;">
-<td style="padding: 0.75rem; border: 1px solid #cbd5e1; color: #1e293b;">Bullheading</td>
-<td style="padding: 0.75rem; border: 1px solid #cbd5e1; color: #1e293b;">غازات سامة، خطر سطحي</td>
-<td style="padding: 0.75rem; border: 1px solid #cbd5e1; color: #1e293b;">تكسير التكوين</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">Bullheading</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">غازات سامة/خطر سطحي</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">تكسير التكوين</td>
 </tr>
 <tr>
-<td style="padding: 0.75rem; border: 1px solid #cbd5e1; color: #1e293b;">Volumetric</td>
-<td style="padding: 0.75rem; border: 1px solid #cbd5e1; color: #1e293b;">لا يمكن الضخ إطلاقاً</td>
-<td style="padding: 0.75rem; border: 1px solid #cbd5e1; color: #1e293b;">معقدة حسابياً</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">Volumetric</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">لا يمكن الضخ إطلاقاً</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">تحتاج دقة عالية</td>
 </tr>
 </tbody>
 </table>
@@ -619,133 +635,119 @@ If Pipe Weight < Pressure Force → Snubbing Required
 
 <div style="background: linear-gradient(135deg, #7c3aed15, #7c3aed10); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-right: 4px solid #7c3aed;">
 <h3 style="color: #7c3aed; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">💡 ملخص اليوم</h3>
-<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2; color: #581c87;">
-<li><strong>Lubricate & Bleed:</strong> ضخ طين صغير + تنفيس غاز بالتناوب</li>
-<li><strong>Bullheading:</strong> دفع الغاز للتكوين - خطر تكسير</li>
-<li><strong>Volumetric:</strong> تنفيس محسوب بدون ضخ</li>
-<li>اختيار التقنية يعتمد على الظروف والمعدات المتاحة</li>
+<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2;">
+<li>التقنيات غير التقليدية للحالات الاستثنائية فقط</li>
+<li>Lubricate & Bleed: بطيئة لكن آمنة عند عدم القدرة على الضخ</li>
+<li>Bullheading: خطيرة لكن ضرورية مع الغازات السامة</li>
+<li>Volumetric: بدون ضخ - تنفيس محسوب فقط</li>
 </ul>
 </div>
 </section>`,
           keyTerms: [
-            { term: 'Lubricate & Bleed', definition: 'ضخ كميات صغيرة من الطين وتنفيس الغاز بالتناوب عند عدم القدرة على الضخ العادي' },
-            { term: 'Bullheading', definition: 'دفع السائل الداخل عائداً للتكوين بالضغط العالي - يُستخدم مع الغازات السامة' },
-            { term: 'Volumetric Method', definition: 'السيطرة على هجرة الغاز بالتنفيس المحسوب فقط بدون ضخ أي سوائل' },
-            { term: 'Safety Margin', definition: 'هامش الضغط المسموح به قبل التنفيس (عادة 50-100 psi)' },
-            { term: 'LOT (Leak-Off Test)', definition: 'اختبار لتحديد ضغط تكسير التكوين - حد أقصى لا يجب تجاوزه' },
+            { term: 'Lubricate & Bleed', definition: 'ضخ كميات صغيرة وتنفيس الغاز بالتناوب - للحالات التي لا يمكن فيها الضخ العادي' },
+            { term: 'Bullheading', definition: 'دفع الركلة للتكوين بالضغط - للغازات السامة والخطر السطحي' },
+            { term: 'Volumetric Method', definition: 'السيطرة على هجرة الغاز بالتنفيس فقط - بدون ضخ' },
+            { term: 'Safety Margin', definition: 'هامش الأمان المسموح به قبل التنفيس (50-100 psi)' },
+            { term: 'LOT', definition: 'اختبار تحديد ضغط تكسير التكوين - الحد الأقصى للضغط' },
           ],
           practiceQuestion: {
-            question: 'متى تُستخدم طريقة Lubricate & Bleed بشكل أساسي؟',
+            question: 'ما هي الطريقة المناسبة عند اكتشاف وجود H₂S في الركلة؟',
             options: [
-              'عند توفر مضخات قوية',
-              'عند انسداد الأنابيب أو عطل المضخات',
-              'فقط في الآبار البحرية',
-              'عند وجود H₂S فقط'
+              'الاستمرار بالطريقة التقليدية',
+              'Bullheading لتجنب خروج الغاز للسطح',
+              'Lubricate & Bleed',
+              'إيقاف كل شيء وانتظار الخبراء'
             ],
             correctAnswer: 1,
           },
         },
         en: {
-          title: 'Advanced Non-Conventional Kill Techniques',
+          title: 'Non-Conventional Kill Techniques',
           explanation: `<section>
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 Non-Conventional Kill Techniques</h2>
+<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 When Do We Need Non-Conventional Techniques?</h2>
 <p style="margin-bottom: 1rem; line-height: 1.8;">
-When conventional kill methods (Driller's Method and Wait & Weight) cannot be used, we resort to advanced techniques. These are employed in exceptional circumstances such as plugged pipe, inability to pump, or rapid gas migration.
+Sometimes conventional methods don't work due to exceptional circumstances. Here we resort to advanced techniques designed for specific situations.
 </p>
 
 <div style="background: linear-gradient(135deg, #dc262615, #dc262610); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-left: 4px solid #dc2626;">
-<h3 style="color: #dc2626; font-size: 1.3rem; font-weight: bold; margin-bottom: 1rem;">⚠️ 1. Lubricate & Bleed Method</h3>
-<p style="line-height: 1.8; margin-bottom: 1rem; color: #1e293b;">
-Used when pumping is not possible (plugged pipe, pump failure, or no drillstring). It relies on pumping small volumes of mud and bleeding gas alternately.
+<h3 style="color: #dc2626; font-size: 1.3rem; font-weight: bold; margin-bottom: 1rem;">1️⃣ Lubricate & Bleed Method</h3>
+<p style="line-height: 1.8; margin-bottom: 1rem;">
+Used when normal pumping is not possible (plugged pipe or pump failure).
 </p>
-<div style="background: #fff; padding: 1.25rem; border-radius: 8px; margin: 1rem 0;">
-<p style="font-weight: bold; color: #dc2626; margin-bottom: 0.75rem;">Execution Steps:</p>
-<ol style="padding-left: 1.5rem; line-height: 2.2; color: #1e293b;">
-<li><strong>Calculate mud volume:</strong> Pump small quantity (typically 5-10 bbls) through Kill Line</li>
-<li><strong>Wait:</strong> Allow mud to settle above the gas (10-15 minutes)</li>
-<li><strong>Calculate:</strong> Compute expected pressure drop</li>
-<li><strong>Bleed:</strong> Bleed gas from Choke Line until pressure reaches expected value</li>
-<li><strong>Repeat:</strong> Continue until all gas is removed</li>
+<div style="background: #fff; padding: 1rem; border-radius: 8px;">
+<p style="font-weight: bold; margin-bottom: 0.5rem;">📌 How does it work?</p>
+<ol style="padding-left: 1.5rem; line-height: 2.2;">
+<li>Pump small amount of mud (5-10 barrels)</li>
+<li>Wait for mud to settle above gas</li>
+<li>Bleed gas from top</li>
+<li>Repeat until all gas is removed</li>
 </ol>
-</div>
-<div style="background: #fef2f2; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
-<p style="font-family: monospace; text-align: center; color: #1e293b; font-size: 1rem;">
-Pressure drop per barrel = (MW × 0.052 × Annular Height per bbl)
-</p>
-<p style="margin-top: 0.75rem; font-size: 0.9rem; color: #dc2626;">
-<strong>⚡ Warning:</strong> When bleeding, do not reduce pressure more than calculated to avoid a new kick!
+<p style="margin-top: 1rem; background: #fef2f2; padding: 0.75rem; border-radius: 6px;">
+<strong>⚠️ Warning:</strong> Very slow - may take many hours
 </p>
 </div>
 </div>
-
-<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2.5rem 0 1rem;">🔷 2. Reverse Kill / Bullheading</h2>
 
 <div style="background: #dbeafe; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #2563eb;">
-<p style="line-height: 1.8; margin-bottom: 1rem; color: #1e3a8a;">
-A method that pumps heavy mud from surface to push the influx back into the formation. Used only in specific situations.
+<h3 style="color: #1e40af; font-size: 1.3rem; font-weight: bold; margin-bottom: 1rem;">2️⃣ Bullheading (Reverse Kill)</h3>
+<p style="line-height: 1.8; margin-bottom: 1rem;">
+Pushing the influx back into formation with high pressure. Dangerous but sometimes necessary.
 </p>
-<div style="background: #fff; padding: 1.25rem; border-radius: 8px; margin: 1rem 0;">
-<p style="font-weight: bold; color: #1e40af; margin-bottom: 0.75rem;">When to Use:</p>
-<ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 2; color: #1e3a8a;">
-<li>Formation capable of receiving fluids (high permeability)</li>
-<li>H₂S or toxic gases preventing normal circulation to surface</li>
-<li>High surface explosion risk</li>
+<div style="background: #fff; padding: 1rem; border-radius: 8px;">
+<p style="font-weight: bold; margin-bottom: 0.5rem;">📌 When to use?</p>
+<ul style="padding-left: 1.5rem; line-height: 2;">
+<li>Presence of toxic gases (H₂S) - crew hazard</li>
 <li>Insufficient gas handling equipment</li>
+<li>High surface explosion risk</li>
 </ul>
-</div>
-<div style="background: #eff6ff; padding: 1rem; border-radius: 8px; margin-top: 1rem; color: #1e3a8a;">
-<p style="font-weight: bold; margin-bottom: 0.5rem;">⚠️ Bullheading Risks:</p>
-<ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 1.8; font-size: 0.95rem;">
-<li>Formation fracturing if pressure exceeds LOT</li>
-<li>Underground Blowout if formation is weak</li>
-<li>Plugging formation with cuttings and barite</li>
-</ul>
+<p style="margin-top: 1rem; background: #fef2f2; padding: 0.75rem; border-radius: 6px;">
+<strong>⚠️ Danger:</strong> May fracture formation if pressure exceeds LOT
+</p>
 </div>
 </div>
-
-<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2.5rem 0 1rem;">🔷 3. Volumetric Method</h2>
 
 <div style="background: #f0fdf4; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #059669;">
-<p style="line-height: 1.8; margin-bottom: 1rem; color: #065f46;">
-Used when pumping is absolutely impossible. Controls gas migration through calculated bleeding to maintain BHP constant above formation pressure.
+<h3 style="color: #059669; font-size: 1.3rem; font-weight: bold; margin-bottom: 1rem;">3️⃣ Volumetric Method</h3>
+<p style="line-height: 1.8; margin-bottom: 1rem;">
+For cases when pumping is absolutely impossible. Control gas migration by bleeding only.
 </p>
-<div style="background: #fff; padding: 1.25rem; border-radius: 8px; margin: 1rem 0;">
-<p style="font-weight: bold; color: #059669; margin-bottom: 0.75rem;">Working Principle:</p>
-<p style="line-height: 1.8; color: #065f46;">
-As gas migrates upward, surface pressure increases. We allow pressure to increase by a calculated amount (Safety Margin) then bleed to reduce it. This allows gas to rise while maintaining bottomhole pressure.
-</p>
-</div>
-<div style="background: #dcfce7; padding: 1rem; border-radius: 8px; margin-top: 1rem; font-family: monospace; text-align: center; color: #065f46;">
-ΔP to bleed = (Pressure increase) - (Hydrostatic from bled mud)
+<div style="background: #fff; padding: 1rem; border-radius: 8px;">
+<p style="font-weight: bold; margin-bottom: 0.5rem;">📌 Working Principle:</p>
+<ul style="padding-left: 1.5rem; line-height: 2;">
+<li>Gas migrates upward, increasing surface pressure</li>
+<li>Allow limited increase (safety margin)</li>
+<li>Bleed to reduce pressure</li>
+<li>Repeat until all gas exits</li>
+</ul>
 </div>
 </div>
 
-<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2.5rem 0 1rem;">🔷 4. Technique Comparison</h2>
+<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 Quick Comparison</h2>
 
 <div style="background: #f8fafc; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #64748b;">
-<table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+<table style="width: 100%; border-collapse: collapse;">
 <thead>
 <tr style="background: #e2e8f0;">
-<th style="padding: 0.75rem; border: 1px solid #cbd5e1; text-align: left; color: #1e293b;">Technique</th>
-<th style="padding: 0.75rem; border: 1px solid #cbd5e1; text-align: left; color: #1e293b;">When to Use</th>
-<th style="padding: 0.75rem; border: 1px solid #cbd5e1; text-align: left; color: #1e293b;">Risks</th>
+<th style="padding: 12px; border: 1px solid #cbd5e1; text-align: left;">Technique</th>
+<th style="padding: 12px; border: 1px solid #cbd5e1; text-align: left;">When to Use</th>
+<th style="padding: 12px; border: 1px solid #cbd5e1; text-align: left;">Main Risk</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="padding: 0.75rem; border: 1px solid #cbd5e1; color: #1e293b;">Lubricate & Bleed</td>
-<td style="padding: 0.75rem; border: 1px solid #cbd5e1; color: #1e293b;">Plugged pipe, pump failure</td>
-<td style="padding: 0.75rem; border: 1px solid #cbd5e1; color: #1e293b;">Slow, requires high precision</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">Lubricate & Bleed</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">Plugged pipe/pump failure</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">Very slow</td>
 </tr>
 <tr style="background: #f1f5f9;">
-<td style="padding: 0.75rem; border: 1px solid #cbd5e1; color: #1e293b;">Bullheading</td>
-<td style="padding: 0.75rem; border: 1px solid #cbd5e1; color: #1e293b;">Toxic gases, surface hazard</td>
-<td style="padding: 0.75rem; border: 1px solid #cbd5e1; color: #1e293b;">Formation fracturing</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">Bullheading</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">Toxic gas/surface hazard</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">Formation fracturing</td>
 </tr>
 <tr>
-<td style="padding: 0.75rem; border: 1px solid #cbd5e1; color: #1e293b;">Volumetric</td>
-<td style="padding: 0.75rem; border: 1px solid #cbd5e1; color: #1e293b;">No pumping possible at all</td>
-<td style="padding: 0.75rem; border: 1px solid #cbd5e1; color: #1e293b;">Complex calculations</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">Volumetric</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">Cannot pump at all</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">Requires high precision</td>
 </tr>
 </tbody>
 </table>
@@ -753,28 +755,28 @@ As gas migrates upward, surface pressure increases. We allow pressure to increas
 
 <div style="background: linear-gradient(135deg, #7c3aed15, #7c3aed10); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-left: 4px solid #7c3aed;">
 <h3 style="color: #7c3aed; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">💡 Day Summary</h3>
-<ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 2; color: #581c87;">
-<li><strong>Lubricate & Bleed:</strong> Small mud pumping + alternating gas bleeding</li>
-<li><strong>Bullheading:</strong> Push gas back to formation - fracture risk</li>
-<li><strong>Volumetric:</strong> Calculated bleeding without pumping</li>
-<li>Technique selection depends on conditions and available equipment</li>
+<ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 2;">
+<li>Non-conventional techniques for exceptional cases only</li>
+<li>Lubricate & Bleed: Slow but safe when pumping is impossible</li>
+<li>Bullheading: Dangerous but necessary with toxic gases</li>
+<li>Volumetric: No pumping - calculated bleeding only</li>
 </ul>
 </div>
 </section>`,
           keyTerms: [
-            { term: 'Lubricate & Bleed', definition: 'Pumping small mud volumes and bleeding gas alternately when normal pumping is impossible' },
-            { term: 'Bullheading', definition: 'Forcing the influx back into formation with high pressure - used with toxic gases' },
-            { term: 'Volumetric Method', definition: 'Controlling gas migration through calculated bleeding only without pumping any fluids' },
-            { term: 'Safety Margin', definition: 'Allowable pressure increase before bleeding (typically 50-100 psi)' },
-            { term: 'LOT (Leak-Off Test)', definition: 'Test to determine formation fracture pressure - maximum limit not to exceed' },
+            { term: 'Lubricate & Bleed', definition: 'Pump small amounts and bleed gas alternately - when normal pumping impossible' },
+            { term: 'Bullheading', definition: 'Push kick into formation with pressure - for toxic gases and surface hazard' },
+            { term: 'Volumetric Method', definition: 'Control gas migration by bleeding only - no pumping' },
+            { term: 'Safety Margin', definition: 'Allowable pressure increase before bleeding (50-100 psi)' },
+            { term: 'LOT', definition: 'Leak-Off Test to determine formation fracture pressure - maximum limit' },
           ],
           practiceQuestion: {
-            question: 'When is the Lubricate & Bleed method primarily used?',
+            question: 'What is the appropriate method when H₂S is detected in the kick?',
             options: [
-              'When powerful pumps are available',
-              'When pipe is plugged or pumps have failed',
-              'Only in offshore wells',
-              'Only when H₂S is present'
+              'Continue with conventional method',
+              'Bullheading to prevent gas from reaching surface',
+              'Lubricate & Bleed',
+              'Stop everything and wait for experts'
             ],
             correctAnswer: 1,
           },
@@ -786,132 +788,244 @@ As gas migrates upward, surface pressure increases. We allow pressure to increas
       type: 'learning',
       content: {
         ar: {
-          title: 'تقنيات القتل المتقدمة: Dynamic Kill و Off-Bottom Kill و Stripping',
+          title: 'تقنيات متقدمة: Dynamic Kill و Stripping',
           explanation: `<section>
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 تقنيات القتل في الحالات الاستثنائية</h2>
+<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 تقنيات القتل الديناميكي</h2>
 <p style="margin-bottom: 1rem; line-height: 1.8;">
-في بعض الحالات المعقدة، لا تكفي الطرق التقليدية. نحتاج لتقنيات أكثر تخصصاً تعتمد على مبادئ ديناميكية.
+هناك حالات تتطلب تقنيات أكثر تطوراً تعتمد على الاحتكاك والحركة بدلاً من الوزن فقط.
 </p>
 
-<div style="background: linear-gradient(135deg, #05966915, #05966910); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-right: 4px solid #059669;">
-<h3 style="color: #059669; font-size: 1.3rem; font-weight: bold; margin-bottom: 1rem;">🔥 1. القتل الديناميكي (Dynamic Kill)</h3>
-<p style="line-height: 1.8; margin-bottom: 1rem; color: #1e293b;">
-يعتمد على استخدام فقدان الضغط الاحتكاكي (Friction Pressure Loss) أثناء الضخ بمعدلات عالية للتغلب على ضغط التكوين.
+<div style="background: #f0fdf4; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #059669;">
+<h3 style="color: #059669; font-size: 1.3rem; font-weight: bold; margin-bottom: 1rem;">1️⃣ القتل الديناميكي (Dynamic Kill)</h3>
+<p style="line-height: 1.8; margin-bottom: 1rem;">
+استخدام فقد الاحتكاك للسيطرة على البئر بدلاً من كثافة الطين فقط. مفيد جداً في حالات محددة.
 </p>
-<div style="background: #fff; padding: 1rem; border-radius: 8px; margin: 1rem 0; font-family: monospace; text-align: center; color: #065f46;">
-BHP = Hydrostatic + Friction Losses (AFP)
+<div style="background: #fff; padding: 1rem; border-radius: 8px;">
+<p style="font-weight: bold; margin-bottom: 0.5rem;">📌 متى نستخدمه؟</p>
+<ul style="padding-right: 1.5rem; line-height: 2;">
+<li>تدفق قوي لا يمكن السيطرة عليه بالوزن</li>
+<li>عدم توفر طين ثقيل كافي</li>
+<li>البئر يتدفق بشكل مستمر</li>
+</ul>
+<p style="font-weight: bold; margin: 1rem 0 0.5rem;">💡 الفكرة:</p>
+<p style="line-height: 1.8;">الضخ بمعدل عالي يُنتج فقد احتكاك كبير يُضاف للضغط الهيدروستاتيكي ويتغلب على ضغط التكوين.</p>
 </div>
-<p style="line-height: 1.8; color: #1e293b;">يُستخدم في عمليات إطفاء الانفجارات عبر آبار الإغاثة (Relief Wells).</p>
 </div>
 
 <div style="background: #dbeafe; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #2563eb;">
-<h3 style="color: #1e40af; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">🔷 2. القتل بعيداً عن القاع (Off-Bottom Kill)</h3>
-<p style="line-height: 1.8; margin-bottom: 1rem; color: #1e3a8a;">
-يُستخدم عندما لا تصل سلسلة الحفر لقاع البئر. التحدي: عدم القدرة على قراءة SIDPP الحقيقي!
+<h3 style="color: #1e40af; font-size: 1.3rem; font-weight: bold; margin-bottom: 1rem;">2️⃣ القتل من خارج القاع (Off-Bottom Kill)</h3>
+<p style="line-height: 1.8; margin-bottom: 1rem;">
+عندما يكون البت ليس في القاع وقت حدوث الركلة. يتطلب اعتبارات خاصة.
 </p>
-<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2; color: #1e3a8a;">
-<li>استخدام Volumetric Method حتى يصل الغاز للسلسلة</li>
-<li>محاولة إنزال السلسلة للقاع إذا كان آمناً (مع Stripping)</li>
+<div style="background: #fff; padding: 1rem; border-radius: 8px;">
+<p style="font-weight: bold; margin-bottom: 0.5rem;">📌 التحديات:</p>
+<ul style="padding-right: 1.5rem; line-height: 2;">
+<li>الركلة قد تكون تحت البت (في الفتحة المفتوحة)</li>
+<li>عدم القدرة على الدوران بسبب موقع البت</li>
+<li>تعقيد حسابات Kill Mud</li>
 </ul>
+<p style="font-weight: bold; margin: 1rem 0 0.5rem;">الحل:</p>
+<p style="line-height: 1.8;">العودة للقاع بحذر مع مراقبة الضغوط، أو استخدام طرق بديلة.</p>
+</div>
 </div>
 
 <div style="background: #fef3c7; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #f59e0b;">
-<h3 style="color: #92400e; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">🔷 3. التجريد والدفع (Stripping & Snubbing)</h3>
-<p style="line-height: 1.8; margin-bottom: 1rem; color: #78350f;">تقنيات لإنزال أو سحب الأنابيب في بئر تحت الضغط:</p>
-<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2; color: #78350f;">
-<li><strong>Stripping:</strong> وزن السلسلة أكبر من قوة الضغط الصاعدة - تنزل بوزنها</li>
-<li><strong>Snubbing:</strong> وزن السلسلة أقل - نحتاج قوة خارجية لدفعها</li>
+<h3 style="color: #92400e; font-size: 1.3rem; font-weight: bold; margin-bottom: 1rem;">3️⃣ الـ Stripping (إدخال الأنابيب تحت الضغط)</h3>
+<p style="line-height: 1.8; margin-bottom: 1rem;">
+إدخال أو إخراج الأنابيب والبئر تحت الضغط - عملية حساسة جداً.
+</p>
+<div style="background: #fff; padding: 1rem; border-radius: 8px;">
+<p style="font-weight: bold; margin-bottom: 0.5rem;">📌 لماذا نحتاجها؟</p>
+<ul style="padding-right: 1.5rem; line-height: 2;">
+<li>الوصول للقاع بعد ركلة بينما البت في الأعلى</li>
+<li>إخراج الأنابيب لإصلاح أو تغيير البت</li>
+<li>التعامل مع Stuck Pipe تحت ظروف الركلة</li>
 </ul>
+<p style="margin-top: 1rem; background: #fef2f2; padding: 0.75rem; border-radius: 6px;">
+<strong>⚠️ خطر:</strong> يجب تعويض حجم الأنابيب المُدخلة بتنفيس طين متساوي للحفاظ على BHP ثابت
+</p>
+</div>
+</div>
+
+<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 تقنية Snubbing</h2>
+
+<div style="background: #fae8ff; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #a855f7;">
+<h3 style="color: #7c3aed; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">ما الفرق بين Stripping و Snubbing؟</h3>
+<div style="background: #fff; padding: 1rem; border-radius: 8px;">
+<table style="width: 100%; border-collapse: collapse;">
+<thead>
+<tr style="background: #f3e8ff;">
+<th style="padding: 10px; border: 1px solid #ddd; text-align: right;">المعيار</th>
+<th style="padding: 10px; border: 1px solid #ddd; text-align: right;">Stripping</th>
+<th style="padding: 10px; border: 1px solid #ddd; text-align: right;">Snubbing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding: 10px; border: 1px solid #ddd;">وزن الأنابيب</td>
+<td style="padding: 10px; border: 1px solid #ddd;">أثقل من قوة الرفع</td>
+<td style="padding: 10px; border: 1px solid #ddd;">أخف من قوة الرفع</td>
+</tr>
+<tr style="background: #f8fafc;">
+<td style="padding: 10px; border: 1px solid #ddd;">الحركة</td>
+<td style="padding: 10px; border: 1px solid #ddd;">بالجاذبية</td>
+<td style="padding: 10px; border: 1px solid #ddd;">بقوة ميكانيكية</td>
+</tr>
+<tr>
+<td style="padding: 10px; border: 1px solid #ddd;">المعدات</td>
+<td style="padding: 10px; border: 1px solid #ddd;">BOP عادي</td>
+<td style="padding: 10px; border: 1px solid #ddd;">وحدة Snubbing خاصة</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 
 <div style="background: linear-gradient(135deg, #7c3aed15, #7c3aed10); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-right: 4px solid #7c3aed;">
 <h3 style="color: #7c3aed; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">💡 ملخص اليوم</h3>
-<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2; color: #581c87;">
-<li><strong>Dynamic Kill:</strong> استخدام الاحتكاك للسيطرة على التدفق العالي</li>
-<li><strong>Off-Bottom Kill:</strong> قتل البئر بدون السلسلة في القاع</li>
-<li><strong>Stripping vs Snubbing:</strong> الفرق في وزن السلسلة مقابل الضغط</li>
+<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2;">
+<li>Dynamic Kill: يستخدم الاحتكاك للسيطرة على التدفق القوي</li>
+<li>Off-Bottom Kill: تحديات خاصة عندما البت ليس في القاع</li>
+<li>Stripping: إدخال الأنابيب تحت الضغط مع التعويض</li>
+<li>Snubbing: مثل Stripping لكن يحتاج قوة دفع ميكانيكية</li>
 </ul>
 </div>
 </section>`,
           keyTerms: [
-            { term: 'Dynamic Kill', definition: 'استخدام ضغط الاحتكاك من الضخ العالي للسيطرة على التدفق' },
-            { term: 'Off-Bottom Kill', definition: 'قتل البئر عندما لا تكون سلسلة الحفر في قاع البئر' },
-            { term: 'Stripping', definition: 'إنزال الأنابيب في بئر تحت الضغط عندما يكون وزن السلسلة أكبر من القوة الصاعدة' },
-            { term: 'Snubbing', definition: 'دفع الأنابيب للأسفل ضد الضغط باستخدام وحدة خارجية' },
-            { term: 'AFP', definition: 'Annular Friction Pressure - ضغط الاحتكاك في الفتحة الحلقية' },
+            { term: 'Dynamic Kill', definition: 'استخدام فقد الاحتكاك من الضخ العالي للسيطرة على البئر' },
+            { term: 'Off-Bottom Kill', definition: 'قتل البئر عندما يكون البت ليس في القاع - يحتاج اعتبارات خاصة' },
+            { term: 'Stripping', definition: 'إدخال الأنابيب تحت الضغط مع تعويض الحجم بتنفيس الطين' },
+            { term: 'Snubbing', definition: 'مثل Stripping لكن الأنابيب أخف من قوة الرفع فتحتاج دفع ميكانيكي' },
+            { term: 'Volume Compensation', definition: 'تعويض حجم الأنابيب المُدخلة للحفاظ على ثبات الضغط' },
           ],
           practiceQuestion: {
-            question: 'ما الفرق الأساسي بين Stripping و Snubbing؟',
+            question: 'ما الفرق الرئيسي بين Stripping و Snubbing؟',
             options: [
+              'Stripping أسرع من Snubbing',
+              'Snubbing يحتاج قوة ميكانيكية لدفع الأنابيب للأسفل',
               'Stripping للآبار البحرية فقط',
-              'Snubbing يتطلب قوة خارجية لدفع الأنابيب ضد الضغط',
-              'Stripping أسرع دائماً',
               'لا يوجد فرق'
             ],
             correctAnswer: 1,
           },
         },
         en: {
-          title: 'Advanced Kill Techniques: Dynamic Kill, Off-Bottom Kill & Stripping',
+          title: 'Advanced Techniques: Dynamic Kill & Stripping',
           explanation: `<section>
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 Kill Techniques for Exceptional Situations</h2>
+<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 Dynamic Kill Techniques</h2>
 <p style="margin-bottom: 1rem; line-height: 1.8;">
-In complex situations, conventional methods are insufficient. We need specialized techniques based on dynamic principles.
+Some situations require more sophisticated techniques that rely on friction and movement rather than weight alone.
 </p>
 
-<div style="background: linear-gradient(135deg, #05966915, #05966910); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-left: 4px solid #059669;">
-<h3 style="color: #059669; font-size: 1.3rem; font-weight: bold; margin-bottom: 1rem;">🔥 1. Dynamic Kill</h3>
-<p style="line-height: 1.8; margin-bottom: 1rem; color: #1e293b;">
-Uses Friction Pressure Loss during high-rate pumping to overcome formation pressure.
+<div style="background: #f0fdf4; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #059669;">
+<h3 style="color: #059669; font-size: 1.3rem; font-weight: bold; margin-bottom: 1rem;">1️⃣ Dynamic Kill</h3>
+<p style="line-height: 1.8; margin-bottom: 1rem;">
+Using friction loss to control the well instead of mud density alone. Very useful in specific cases.
 </p>
-<div style="background: #fff; padding: 1rem; border-radius: 8px; margin: 1rem 0; font-family: monospace; text-align: center; color: #065f46;">
-BHP = Hydrostatic + Friction Losses (AFP)
+<div style="background: #fff; padding: 1rem; border-radius: 8px;">
+<p style="font-weight: bold; margin-bottom: 0.5rem;">📌 When to use?</p>
+<ul style="padding-left: 1.5rem; line-height: 2;">
+<li>Strong flow that cannot be controlled by weight</li>
+<li>Insufficient heavy mud available</li>
+<li>Well is flowing continuously</li>
+</ul>
+<p style="font-weight: bold; margin: 1rem 0 0.5rem;">💡 The Idea:</p>
+<p style="line-height: 1.8;">High pumping rate produces large friction loss that adds to hydrostatic pressure and overcomes formation pressure.</p>
 </div>
-<p style="line-height: 1.8; color: #1e293b;">Used in blowout killing operations via Relief Wells.</p>
 </div>
 
 <div style="background: #dbeafe; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #2563eb;">
-<h3 style="color: #1e40af; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">🔷 2. Off-Bottom Kill</h3>
-<p style="line-height: 1.8; margin-bottom: 1rem; color: #1e3a8a;">
-Used when drillstring doesn't reach bottom. Challenge: cannot read true SIDPP!
+<h3 style="color: #1e40af; font-size: 1.3rem; font-weight: bold; margin-bottom: 1rem;">2️⃣ Off-Bottom Kill</h3>
+<p style="line-height: 1.8; margin-bottom: 1rem;">
+When the bit is not at bottom when kick occurs. Requires special considerations.
 </p>
-<ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 2; color: #1e3a8a;">
-<li>Use Volumetric Method until gas reaches the string</li>
-<li>Attempt to run string to bottom if safe (with Stripping)</li>
+<div style="background: #fff; padding: 1rem; border-radius: 8px;">
+<p style="font-weight: bold; margin-bottom: 0.5rem;">📌 Challenges:</p>
+<ul style="padding-left: 1.5rem; line-height: 2;">
+<li>Kick may be below bit (in open hole)</li>
+<li>Cannot circulate due to bit position</li>
+<li>Complex Kill Mud calculations</li>
 </ul>
+<p style="font-weight: bold; margin: 1rem 0 0.5rem;">Solution:</p>
+<p style="line-height: 1.8;">Return to bottom carefully while monitoring pressures, or use alternative methods.</p>
+</div>
 </div>
 
 <div style="background: #fef3c7; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #f59e0b;">
-<h3 style="color: #92400e; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">🔷 3. Stripping & Snubbing</h3>
-<p style="line-height: 1.8; margin-bottom: 1rem; color: #78350f;">Techniques for running pipe in a pressurized well:</p>
-<ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 2; color: #78350f;">
-<li><strong>Stripping:</strong> String weight > upward pressure force - runs by its weight</li>
-<li><strong>Snubbing:</strong> String weight < pressure - needs external force</li>
+<h3 style="color: #92400e; font-size: 1.3rem; font-weight: bold; margin-bottom: 1rem;">3️⃣ Stripping (Running Pipe Under Pressure)</h3>
+<p style="line-height: 1.8; margin-bottom: 1rem;">
+Running pipe in or out while well is under pressure - very sensitive operation.
+</p>
+<div style="background: #fff; padding: 1rem; border-radius: 8px;">
+<p style="font-weight: bold; margin-bottom: 0.5rem;">📌 Why do we need it?</p>
+<ul style="padding-left: 1.5rem; line-height: 2;">
+<li>Reach bottom after kick while bit is up</li>
+<li>Pull pipe to repair or change bit</li>
+<li>Deal with Stuck Pipe under kick conditions</li>
 </ul>
+<p style="margin-top: 1rem; background: #fef2f2; padding: 0.75rem; border-radius: 6px;">
+<strong>⚠️ Danger:</strong> Must compensate volume of pipe run in by bleeding equal mud to maintain constant BHP
+</p>
+</div>
+</div>
+
+<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 Snubbing Technique</h2>
+
+<div style="background: #fae8ff; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #a855f7;">
+<h3 style="color: #7c3aed; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">What's the difference between Stripping and Snubbing?</h3>
+<div style="background: #fff; padding: 1rem; border-radius: 8px;">
+<table style="width: 100%; border-collapse: collapse;">
+<thead>
+<tr style="background: #f3e8ff;">
+<th style="padding: 10px; border: 1px solid #ddd; text-align: left;">Criteria</th>
+<th style="padding: 10px; border: 1px solid #ddd; text-align: left;">Stripping</th>
+<th style="padding: 10px; border: 1px solid #ddd; text-align: left;">Snubbing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding: 10px; border: 1px solid #ddd;">Pipe Weight</td>
+<td style="padding: 10px; border: 1px solid #ddd;">Heavier than buoyancy</td>
+<td style="padding: 10px; border: 1px solid #ddd;">Lighter than buoyancy</td>
+</tr>
+<tr style="background: #f8fafc;">
+<td style="padding: 10px; border: 1px solid #ddd;">Movement</td>
+<td style="padding: 10px; border: 1px solid #ddd;">By gravity</td>
+<td style="padding: 10px; border: 1px solid #ddd;">By mechanical force</td>
+</tr>
+<tr>
+<td style="padding: 10px; border: 1px solid #ddd;">Equipment</td>
+<td style="padding: 10px; border: 1px solid #ddd;">Standard BOP</td>
+<td style="padding: 10px; border: 1px solid #ddd;">Special Snubbing unit</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 
 <div style="background: linear-gradient(135deg, #7c3aed15, #7c3aed10); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-left: 4px solid #7c3aed;">
 <h3 style="color: #7c3aed; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">💡 Day Summary</h3>
-<ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 2; color: #581c87;">
-<li><strong>Dynamic Kill:</strong> Using friction to control high-rate flow</li>
-<li><strong>Off-Bottom Kill:</strong> Killing well without string at bottom</li>
-<li><strong>Stripping vs Snubbing:</strong> Difference in string weight vs pressure</li>
+<ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 2;">
+<li>Dynamic Kill: Uses friction to control strong flow</li>
+<li>Off-Bottom Kill: Special challenges when bit not at bottom</li>
+<li>Stripping: Running pipe under pressure with compensation</li>
+<li>Snubbing: Like Stripping but needs mechanical push force</li>
 </ul>
 </div>
 </section>`,
           keyTerms: [
-            { term: 'Dynamic Kill', definition: 'Using high-rate pumping friction pressure to control flow' },
-            { term: 'Off-Bottom Kill', definition: 'Killing well when drillstring is not at bottom' },
-            { term: 'Stripping', definition: 'Running pipe in pressurized well when string weight exceeds upward force' },
-            { term: 'Snubbing', definition: 'Forcing pipe down against pressure using external unit' },
-            { term: 'AFP', definition: 'Annular Friction Pressure - friction pressure in the annulus' },
+            { term: 'Dynamic Kill', definition: 'Using high pump rate friction loss to control the well' },
+            { term: 'Off-Bottom Kill', definition: 'Killing well when bit is not at bottom - needs special considerations' },
+            { term: 'Stripping', definition: 'Running pipe under pressure with volume compensation by bleeding mud' },
+            { term: 'Snubbing', definition: 'Like Stripping but pipe is lighter than buoyancy so needs mechanical push' },
+            { term: 'Volume Compensation', definition: 'Compensating pipe volume run in to maintain constant pressure' },
           ],
           practiceQuestion: {
-            question: 'What is the fundamental difference between Stripping and Snubbing?',
+            question: 'What is the main difference between Stripping and Snubbing?',
             options: [
+              'Stripping is faster than Snubbing',
+              'Snubbing requires mechanical force to push pipe down',
               'Stripping is for offshore wells only',
-              'Snubbing requires external force to push pipe against pressure',
-              'Stripping is always faster',
               'There is no difference'
             ],
             correctAnswer: 1,
@@ -924,376 +1038,392 @@ Used when drillstring doesn't reach bottom. Challenge: cannot read true SIDPP!
       type: 'learning',
       content: {
         ar: {
-          title: 'مراجعة أسبوعية - التحكم المتقدم بالبئر',
+          title: 'سيناريوهات معقدة وقرارات حرجة',
           explanation: `<section>
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 ملخص الأسبوع - التحكم المتقدم بالبئر</h2>
+<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 السيناريوهات المعقدة في التحكم بالبئر</h2>
+<p style="margin-bottom: 1rem; line-height: 1.8;">
+في الواقع العملي، نادراً ما تكون الحالات "مثالية". فهم السيناريوهات المعقدة يُحضرك للتعامل مع الطوارئ الحقيقية.
+</p>
 
-<div style="background: #f0fdf4; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #059669;">
-<h3 style="color: #059669; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">📚 اليوم الأول: المفاهيم الأساسية</h3>
-<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2;">
-<li>الضغط الهيدروستاتيكي = 0.052 × ρ × TVD</li>
-<li>الحاجز الأولي: سائل الحفر</li>
-<li>الحاجز الثانوي: مانع الانفجار BOP</li>
-<li>مؤشرات الركلة: زيادة التدفق، زيادة الحوض، زيادة ROP</li>
+<div style="background: linear-gradient(135deg, #dc262615, #dc262610); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-right: 4px solid #dc2626;">
+<h3 style="color: #dc2626; font-size: 1.3rem; font-weight: bold; margin-bottom: 1rem;">⚠️ السيناريو 1: Underground Blowout</h3>
+<p style="line-height: 1.8; margin-bottom: 1rem;">
+أخطر الحالات: التدفق من تكوين لآخر داخل البئر دون وصوله للسطح.
+</p>
+<div style="background: #fff; padding: 1rem; border-radius: 8px;">
+<p style="font-weight: bold; margin-bottom: 0.5rem;">📌 علامات التحذير:</p>
+<ul style="padding-right: 1.5rem; line-height: 2;">
+<li>فقدان طين مستمر مع عدم تغير الضغوط السطحية</li>
+<li>صوت تدفق تحت السطح</li>
+<li>تغيرات في قراءات MWD/LWD غير مفسرة</li>
 </ul>
+<p style="font-weight: bold; margin: 1rem 0 0.5rem;">الإجراء:</p>
+<p style="line-height: 1.8;">إغلاق البئر فوراً ← تقييم ← قد نحتاج حفر Relief Well</p>
 </div>
-
-<div style="background: #dbeafe; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #2563eb;">
-<h3 style="color: #1e40af; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">📚 اليوم الثاني: إجراءات الإغلاق</h3>
-<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2;">
-<li>Hard Shut-In: سريع، يسبب صدمة ضغط</li>
-<li>Soft Shut-In: أبطأ، أكثر أماناً</li>
-<li>KMW = OMW + (SIDPP / 0.052 × TVD)</li>
-</ul>
 </div>
 
 <div style="background: #fef3c7; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #f59e0b;">
-<h3 style="color: #92400e; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">📚 اليوم الثالث: طرق القتل</h3>
-<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2;">
-<li>Driller's Method: دورتين، بسيط</li>
-<li>Wait & Weight: دورة واحدة، أسرع</li>
-<li>ICP = SIDPP + SPR</li>
-<li>FCP = SPR × (KMW / OMW)</li>
+<h3 style="color: #92400e; font-size: 1.3rem; font-weight: bold; margin-bottom: 1rem;">السيناريو 2: Swabbed Kick أثناء الرحلة</h3>
+<p style="line-height: 1.8; margin-bottom: 1rem;">
+ركلة ناتجة عن سحب الأنابيب بسرعة (Swabbing) - شائعة جداً.
+</p>
+<div style="background: #fff; padding: 1rem; border-radius: 8px;">
+<p style="font-weight: bold; margin-bottom: 0.5rem;">📌 الوقاية:</p>
+<ul style="padding-right: 1.5rem; line-height: 2;">
+<li>سرعة سحب مناسبة (لا تتجاوز 3 stands/min)</li>
+<li>مراقبة Trip Tank باستمرار</li>
+<li>استخدام Pill قبل الرحلة إذا لزم</li>
 </ul>
+<p style="font-weight: bold; margin: 1rem 0 0.5rem;">إذا حدثت:</p>
+<p style="line-height: 1.8;">إنزال الأنابيب فوراً ← Space Out ← إغلاق البئر</p>
+</div>
 </div>
 
-<div style="background: #fae8ff; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #a855f7;">
-<h3 style="color: #7c3aed; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">📚 اليوم الرابع: الحالات الخاصة</h3>
-<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2;">
-<li>الركلة أثناء الرحلات: تركيب Inside BOP</li>
-<li>Underground Blowout: تدفق بين الطبقات</li>
-<li>Shallow Gas: استخدام Diverter</li>
-<li>تمدد الغاز: P₁V₁ = P₂V₂</li>
+<div style="background: #dbeafe; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #2563eb;">
+<h3 style="color: #1e40af; font-size: 1.3rem; font-weight: bold; margin-bottom: 1rem;">السيناريو 3: Lost Circulation مع Kick</h3>
+<p style="line-height: 1.8; margin-bottom: 1rem;">
+أصعب الحالات: تخسر طين من الأسفل وتستقبل ركلة في نفس الوقت!
+</p>
+<div style="background: #fff; padding: 1rem; border-radius: 8px;">
+<p style="font-weight: bold; margin-bottom: 0.5rem;">📌 لماذا يحدث؟</p>
+<ul style="padding-right: 1.5rem; line-height: 2;">
+<li>نافذة طين ضيقة جداً (HPHT)</li>
+<li>طبقات متعددة بضغوط مختلفة</li>
+<li>ECD مرتفع يكسر طبقة بينما طبقة أخرى تتدفق</li>
 </ul>
+<p style="font-weight: bold; margin: 1rem 0 0.5rem;">الحل:</p>
+<p style="line-height: 1.8;">MPD (Managed Pressure Drilling) أو الكيسنق الوسيط للفصل بين الطبقات</p>
+</div>
+</div>
+
+<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 مصفوفة القرار السريع</h2>
+
+<div style="background: #f8fafc; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #64748b;">
+<table style="width: 100%; border-collapse: collapse;">
+<thead>
+<tr style="background: #e2e8f0;">
+<th style="padding: 12px; border: 1px solid #cbd5e1; text-align: right;">الموقف</th>
+<th style="padding: 12px; border: 1px solid #cbd5e1; text-align: right;">الإجراء الفوري</th>
+<th style="padding: 12px; border: 1px solid #cbd5e1; text-align: right;">الأولوية</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">ركلة غاز</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">إغلاق فوري + W&W</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1; color: #dc2626;">عالية جداً</td>
+</tr>
+<tr style="background: #f1f5f9;">
+<td style="padding: 12px; border: 1px solid #cbd5e1;">تجاوز MAASP</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">خفض معدل الضخ</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1; color: #dc2626;">عالية جداً</td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">H₂S مُكتشف</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">Bullhead + إخلاء</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1; color: #dc2626;">طوارئ</td>
+</tr>
+<tr style="background: #f1f5f9;">
+<td style="padding: 12px; border: 1px solid #cbd5e1;">عطل BOP</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">Secondary barrier</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1; color: #dc2626;">حرجة</td>
+</tr>
+</tbody>
+</table>
 </div>
 
 <div style="background: linear-gradient(135deg, #7c3aed15, #7c3aed10); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-right: 4px solid #7c3aed;">
-<h3 style="color: #7c3aed; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">🎯 النقاط الأساسية للتذكر</h3>
-<ol style="list-style-type: decimal; padding-right: 1.5rem; line-height: 2;">
-<li>السلامة أولاً - لا تتردد في إغلاق البئر</li>
-<li>الاكتشاف المبكر للركلة يوفر الكثير من المشاكل</li>
-<li>اختيار طريقة القتل يعتمد على الظروف</li>
-<li>التوثيق الدقيق ضروري</li>
-<li>التدريب المستمر يحافظ على الجاهزية</li>
-</ol>
+<h3 style="color: #7c3aed; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">💡 ملخص اليوم</h3>
+<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2;">
+<li>Underground Blowout: تدفق داخلي خفي - الأخطر</li>
+<li>Swabbed Kick: شائعة ويمكن تجنبها بالسرعة المناسبة</li>
+<li>Lost + Kick: تحتاج MPD أو كيسنق وسيط</li>
+<li>القرارات السريعة الصحيحة تنقذ الأرواح والمعدات</li>
+</ul>
 </div>
 </section>`,
-          keyTerms: [],
+          keyTerms: [
+            { term: 'Underground Blowout', definition: 'تدفق من تكوين لآخر داخل البئر دون وصوله للسطح - أخطر الحالات' },
+            { term: 'Swabbed Kick', definition: 'ركلة ناتجة عن سحب الأنابيب بسرعة مما يسبب انخفاض الضغط مؤقتاً' },
+            { term: 'Lost + Kick', definition: 'فقدان طين وركلة معاً - من أصعب الحالات' },
+            { term: 'Relief Well', definition: 'بئر إغاثة يُحفر للسيطرة على بئر خارج السيطرة' },
+            { term: 'Space Out', definition: 'تحريك الأنابيب ليكون Tool Joint في موضع مناسب للإغلاق' },
+          ],
+          practiceQuestion: {
+            question: 'ما هي أخطر حالة في التحكم بالبئر؟',
+            options: [
+              'ركلة غاز عادية',
+              'Underground Blowout',
+              'فقدان طين بسيط',
+              'Swabbed Kick'
+            ],
+            correctAnswer: 1,
+          },
         },
         en: {
-          title: 'Weekly Review - Advanced Well Control',
+          title: 'Complex Scenarios and Critical Decisions',
           explanation: `<section>
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 Week Summary - Advanced Well Control</h2>
+<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 Complex Well Control Scenarios</h2>
+<p style="margin-bottom: 1rem; line-height: 1.8;">
+In real operations, situations are rarely "ideal." Understanding complex scenarios prepares you for real emergencies.
+</p>
 
-<div style="background: #f0fdf4; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #059669;">
-<h3 style="color: #059669; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">📚 Day 1: Basic Concepts</h3>
-<ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 2;">
-<li>Hydrostatic Pressure = 0.052 × ρ × TVD</li>
-<li>Primary Barrier: Drilling Fluid</li>
-<li>Secondary Barrier: BOP</li>
-<li>Kick Indicators: Flow increase, pit gain, ROP increase</li>
+<div style="background: linear-gradient(135deg, #dc262615, #dc262610); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-left: 4px solid #dc2626;">
+<h3 style="color: #dc2626; font-size: 1.3rem; font-weight: bold; margin-bottom: 1rem;">⚠️ Scenario 1: Underground Blowout</h3>
+<p style="line-height: 1.8; margin-bottom: 1rem;">
+Most dangerous case: Flow from one formation to another inside the well without reaching surface.
+</p>
+<div style="background: #fff; padding: 1rem; border-radius: 8px;">
+<p style="font-weight: bold; margin-bottom: 0.5rem;">📌 Warning Signs:</p>
+<ul style="padding-left: 1.5rem; line-height: 2;">
+<li>Continuous mud loss with no surface pressure change</li>
+<li>Underground flow sounds</li>
+<li>Unexplained MWD/LWD reading changes</li>
 </ul>
+<p style="font-weight: bold; margin: 1rem 0 0.5rem;">Action:</p>
+<p style="line-height: 1.8;">Shut in immediately ← Evaluate ← May need Relief Well</p>
 </div>
-
-<div style="background: #dbeafe; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #2563eb;">
-<h3 style="color: #1e40af; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">📚 Day 2: Shut-In Procedures</h3>
-<ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 2;">
-<li>Hard Shut-In: Fast, causes pressure surge</li>
-<li>Soft Shut-In: Slower, safer</li>
-<li>KMW = OMW + (SIDPP / 0.052 × TVD)</li>
-</ul>
 </div>
 
 <div style="background: #fef3c7; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #f59e0b;">
-<h3 style="color: #92400e; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">📚 Day 3: Kill Methods</h3>
-<ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 2;">
-<li>Driller's Method: Two cycles, simple</li>
-<li>Wait & Weight: One cycle, faster</li>
-<li>ICP = SIDPP + SPR</li>
-<li>FCP = SPR × (KMW / OMW)</li>
+<h3 style="color: #92400e; font-size: 1.3rem; font-weight: bold; margin-bottom: 1rem;">Scenario 2: Swabbed Kick During Trip</h3>
+<p style="line-height: 1.8; margin-bottom: 1rem;">
+Kick caused by pulling pipe too fast (Swabbing) - very common.
+</p>
+<div style="background: #fff; padding: 1rem; border-radius: 8px;">
+<p style="font-weight: bold; margin-bottom: 0.5rem;">📌 Prevention:</p>
+<ul style="padding-left: 1.5rem; line-height: 2;">
+<li>Appropriate pulling speed (don't exceed 3 stands/min)</li>
+<li>Continuous Trip Tank monitoring</li>
+<li>Use Pill before trip if needed</li>
 </ul>
+<p style="font-weight: bold; margin: 1rem 0 0.5rem;">If it happens:</p>
+<p style="line-height: 1.8;">Run pipe down immediately ← Space Out ← Shut in</p>
+</div>
 </div>
 
-<div style="background: #fae8ff; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #a855f7;">
-<h3 style="color: #7c3aed; font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">📚 Day 4: Special Cases</h3>
-<ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 2;">
-<li>Kick while tripping: Install Inside BOP</li>
-<li>Underground Blowout: Flow between layers</li>
-<li>Shallow Gas: Use Diverter</li>
-<li>Gas Expansion: P₁V₁ = P₂V₂</li>
+<div style="background: #dbeafe; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #2563eb;">
+<h3 style="color: #1e40af; font-size: 1.3rem; font-weight: bold; margin-bottom: 1rem;">Scenario 3: Lost Circulation with Kick</h3>
+<p style="line-height: 1.8; margin-bottom: 1rem;">
+Most difficult case: Losing mud downhole while receiving a kick simultaneously!
+</p>
+<div style="background: #fff; padding: 1rem; border-radius: 8px;">
+<p style="font-weight: bold; margin-bottom: 0.5rem;">📌 Why does it happen?</p>
+<ul style="padding-left: 1.5rem; line-height: 2;">
+<li>Very narrow mud window (HPHT)</li>
+<li>Multiple formations with different pressures</li>
+<li>High ECD fractures one zone while another flows</li>
 </ul>
+<p style="font-weight: bold; margin: 1rem 0 0.5rem;">Solution:</p>
+<p style="line-height: 1.8;">MPD (Managed Pressure Drilling) or intermediate casing to isolate zones</p>
+</div>
+</div>
+
+<h2 style="color: #1e3a5f; font-size: 1.4rem; font-weight: bold; margin: 2rem 0 1rem;">🔷 Quick Decision Matrix</h2>
+
+<div style="background: #f8fafc; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #64748b;">
+<table style="width: 100%; border-collapse: collapse;">
+<thead>
+<tr style="background: #e2e8f0;">
+<th style="padding: 12px; border: 1px solid #cbd5e1; text-align: left;">Situation</th>
+<th style="padding: 12px; border: 1px solid #cbd5e1; text-align: left;">Immediate Action</th>
+<th style="padding: 12px; border: 1px solid #cbd5e1; text-align: left;">Priority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">Gas Kick</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">Immediate shut-in + W&W</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1; color: #dc2626;">Very High</td>
+</tr>
+<tr style="background: #f1f5f9;">
+<td style="padding: 12px; border: 1px solid #cbd5e1;">MAASP Exceeded</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">Reduce pump rate</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1; color: #dc2626;">Very High</td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">H₂S Detected</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">Bullhead + Evacuate</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1; color: #dc2626;">Emergency</td>
+</tr>
+<tr style="background: #f1f5f9;">
+<td style="padding: 12px; border: 1px solid #cbd5e1;">BOP Failure</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">Secondary barrier</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1; color: #dc2626;">Critical</td>
+</tr>
+</tbody>
+</table>
 </div>
 
 <div style="background: linear-gradient(135deg, #7c3aed15, #7c3aed10); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-left: 4px solid #7c3aed;">
-<h3 style="color: #7c3aed; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">🎯 Key Points to Remember</h3>
-<ol style="list-style-type: decimal; padding-left: 1.5rem; line-height: 2;">
-<li>Safety first - don't hesitate to shut in</li>
-<li>Early kick detection saves many problems</li>
-<li>Kill method selection depends on conditions</li>
-<li>Accurate documentation is essential</li>
-<li>Continuous training maintains readiness</li>
-</ol>
+<h3 style="color: #7c3aed; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">💡 Day Summary</h3>
+<ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 2;">
+<li>Underground Blowout: Hidden internal flow - most dangerous</li>
+<li>Swabbed Kick: Common and preventable with proper speed</li>
+<li>Lost + Kick: Needs MPD or intermediate casing</li>
+<li>Correct quick decisions save lives and equipment</li>
+</ul>
 </div>
 </section>`,
-          keyTerms: [],
+          keyTerms: [
+            { term: 'Underground Blowout', definition: 'Flow from one formation to another inside well without reaching surface - most dangerous' },
+            { term: 'Swabbed Kick', definition: 'Kick caused by pulling pipe too fast, temporarily reducing pressure' },
+            { term: 'Lost + Kick', definition: 'Mud loss and kick simultaneously - one of the most difficult cases' },
+            { term: 'Relief Well', definition: 'Relief well drilled to control an out-of-control well' },
+            { term: 'Space Out', definition: 'Moving pipe so tool joint is in appropriate position for shut-in' },
+          ],
+          practiceQuestion: {
+            question: 'What is the most dangerous well control situation?',
+            options: [
+              'Normal gas kick',
+              'Underground Blowout',
+              'Minor mud loss',
+              'Swabbed Kick'
+            ],
+            correctAnswer: 1,
+          },
         },
       },
     },
     {
       day: 6,
       type: 'quiz',
-      content: {
+      quiz: {
         ar: {
           title: 'اختبار التحكم المتقدم بالبئر',
-          explanation: 'اختبر معلوماتك عن التحكم المتقدم بالبئر',
-          keyTerms: [],
+          questions: [
+            {
+              question: 'ما هي نافذة الطين (Mud Window)؟',
+              options: ['الفرق بين ضغط المسام وضغط الكسر', 'كثافة الطين المستخدمة', 'عمق البئر', 'قطر الفتحة'],
+              correctAnswer: 0,
+            },
+            {
+              question: 'لماذا يُعتبر الغاز أخطر أنواع الركلات؟',
+              options: ['لأنه سام', 'لأنه يتمدد بشكل هائل عند الصعود', 'لأنه خفيف', 'لأنه قابل للاشتعال فقط'],
+              correctAnswer: 1,
+            },
+            {
+              question: 'ما هو MAASP؟',
+              options: ['كثافة الطين القاتل', 'أقصى ضغط سطحي مسموح على الفتحة الحلقية', 'معدل الضخ', 'عمق الكيسنق'],
+              correctAnswer: 1,
+            },
+            {
+              question: 'متى نستخدم طريقة Bullheading؟',
+              options: ['في كل الركلات', 'عند وجود غازات سامة', 'عند عدم توفر طين', 'في الآبار الضحلة فقط'],
+              correctAnswer: 1,
+            },
+            {
+              question: 'ما الفرق بين Stripping و Snubbing؟',
+              options: ['لا فرق', 'Snubbing يحتاج قوة ميكانيكية لدفع الأنابيب', 'Stripping أسرع', 'Snubbing للآبار البحرية فقط'],
+              correctAnswer: 1,
+            },
+            {
+              question: 'ما هو Underground Blowout؟',
+              options: ['انفجار سطحي', 'تدفق من تكوين لآخر داخل البئر', 'ركلة عادية', 'فقدان طين'],
+              correctAnswer: 1,
+            },
+            {
+              question: 'ما سبب Swabbed Kick؟',
+              options: ['كثافة طين منخفضة', 'سحب الأنابيب بسرعة عالية', 'ضغط تكوين عالي', 'عطل BOP'],
+              correctAnswer: 1,
+            },
+            {
+              question: 'ما هو معدل هجرة الغاز التقريبي؟',
+              options: ['100-200 قدم/ساعة', '500-1000 قدم/ساعة', '2000-3000 قدم/ساعة', '50 قدم/ساعة'],
+              correctAnswer: 1,
+            },
+            {
+              question: 'متى نستخدم Dynamic Kill؟',
+              options: ['في كل الحالات', 'عند تدفق قوي لا يمكن السيطرة عليه بالوزن', 'في الآبار الضحلة', 'عند عدم وجود ركلة'],
+              correctAnswer: 1,
+            },
+            {
+              question: 'ما أول إجراء عند اكتشاف H₂S في الركلة؟',
+              options: ['الاستمرار بالضخ', 'Bullhead وإخلاء المنطقة', 'الانتظار', 'زيادة كثافة الطين فقط'],
+              correctAnswer: 1,
+            },
+          ],
         },
         en: {
           title: 'Advanced Well Control Quiz',
-          explanation: 'Test your knowledge of Advanced Well Control',
-          keyTerms: [],
+          questions: [
+            {
+              question: 'What is the Mud Window?',
+              options: ['Difference between pore pressure and fracture pressure', 'Mud weight used', 'Well depth', 'Hole diameter'],
+              correctAnswer: 0,
+            },
+            {
+              question: 'Why is gas considered the most dangerous kick type?',
+              options: ['Because it is toxic', 'Because it expands enormously as it rises', 'Because it is light', 'Because it is flammable only'],
+              correctAnswer: 1,
+            },
+            {
+              question: 'What is MAASP?',
+              options: ['Kill mud weight', 'Maximum allowable annular surface pressure', 'Pump rate', 'Casing depth'],
+              correctAnswer: 1,
+            },
+            {
+              question: 'When do we use Bullheading?',
+              options: ['For all kicks', 'When toxic gases are present', 'When mud is unavailable', 'In shallow wells only'],
+              correctAnswer: 1,
+            },
+            {
+              question: 'What is the difference between Stripping and Snubbing?',
+              options: ['No difference', 'Snubbing requires mechanical force to push pipe', 'Stripping is faster', 'Snubbing is for offshore only'],
+              correctAnswer: 1,
+            },
+            {
+              question: 'What is Underground Blowout?',
+              options: ['Surface explosion', 'Flow from one formation to another inside well', 'Normal kick', 'Mud loss'],
+              correctAnswer: 1,
+            },
+            {
+              question: 'What causes Swabbed Kick?',
+              options: ['Low mud weight', 'Pulling pipe too fast', 'High formation pressure', 'BOP failure'],
+              correctAnswer: 1,
+            },
+            {
+              question: 'What is the approximate gas migration rate?',
+              options: ['100-200 ft/hr', '500-1000 ft/hr', '2000-3000 ft/hr', '50 ft/hr'],
+              correctAnswer: 1,
+            },
+            {
+              question: 'When do we use Dynamic Kill?',
+              options: ['In all cases', 'When strong flow cannot be controlled by weight', 'In shallow wells', 'When there is no kick'],
+              correctAnswer: 1,
+            },
+            {
+              question: 'What is the first action when H₂S is detected in a kick?',
+              options: ['Continue pumping', 'Bullhead and evacuate area', 'Wait', 'Just increase mud weight'],
+              correctAnswer: 1,
+            },
+          ],
         },
-      },
-      quiz: {
-        ar: [
-          {
-            question: 'ما هو الحاجز الأولي في التحكم بالبئر؟',
-            options: ['مانع الانفجار BOP', 'سائل الحفر', 'أنابيب الكيسنق', 'رأس البئر'],
-            correctAnswer: 1,
-          },
-          {
-            question: 'كيف تُحسب كثافة طين القتل (Kill Mud Weight)؟',
-            options: [
-              'KMW = OMW - (SIDPP / 0.052 × TVD)',
-              'KMW = OMW × SIDPP',
-              'KMW = OMW + (SIDPP / 0.052 × TVD)',
-              'KMW = SIDPP / TVD'
-            ],
-            correctAnswer: 2,
-          },
-          {
-            question: 'ما الفرق الرئيسي بين طريقة الحفار و Wait & Weight؟',
-            options: [
-              'طريقة الحفار تستخدم دورة واحدة',
-              'Wait & Weight أبطأ',
-              'طريقة الحفار تستخدم دورتين',
-              'لا يوجد فرق'
-            ],
-            correctAnswer: 2,
-          },
-          {
-            question: 'ماذا يمثل SIDPP؟',
-            options: [
-              'ضغط المضخات',
-              'الضغط الزائد من التكوين',
-              'ضغط الكيسنق',
-              'ضغط السطح'
-            ],
-            correctAnswer: 1,
-          },
-          {
-            question: 'ما هو أول إجراء عند اكتشاف ركلة أثناء الحفر؟',
-            options: [
-              'زيادة سرعة الحفر',
-              'تقليل كثافة الطين',
-              'رفع Kelly وإيقاف المضخات',
-              'الاستمرار بالحفر'
-            ],
-            correctAnswer: 2,
-          },
-          {
-            question: 'أي من التالي مؤشر إيجابي للركلة؟',
-            options: [
-              'انخفاض في معدل التدفق',
-              'انخفاض في حجم الحوض',
-              'زيادة في حجم حوض الطين',
-              'انخفاض في ROP'
-            ],
-            correctAnswer: 2,
-          },
-          {
-            question: 'في حالة Shallow Gas Kick، ما الجهاز المستخدم؟',
-            options: [
-              'BOP فقط',
-              'Diverter',
-              'Choke manifold',
-              'Mud pump'
-            ],
-            correctAnswer: 1,
-          },
-          {
-            question: 'ما سبب خطورة ركلة الغاز؟',
-            options: [
-              'الغاز ثقيل جداً',
-              'الغاز يتمدد عند الصعود',
-              'الغاز لا يتحرك',
-              'الغاز يزيد كثافة الطين'
-            ],
-            correctAnswer: 1,
-          },
-          {
-            question: 'ما هو ICP في عمليات القتل؟',
-            options: [
-              'SIDPP فقط',
-              'SIDPP + SPR',
-              'SICP فقط',
-              'SPR فقط'
-            ],
-            correctAnswer: 1,
-          },
-          {
-            question: 'ما معنى Underground Blowout؟',
-            options: [
-              'انفجار على السطح',
-              'تدفق بين طبقات تحت الأرض',
-              'انسداد في الأنبوب',
-              'توقف الضخ'
-            ],
-            correctAnswer: 1,
-          },
-        ],
-        en: [
-          {
-            question: 'What is the primary barrier in well control?',
-            options: ['BOP', 'Drilling fluid', 'Casing', 'Wellhead'],
-            correctAnswer: 1,
-          },
-          {
-            question: 'How is Kill Mud Weight calculated?',
-            options: [
-              'KMW = OMW - (SIDPP / 0.052 × TVD)',
-              'KMW = OMW × SIDPP',
-              'KMW = OMW + (SIDPP / 0.052 × TVD)',
-              'KMW = SIDPP / TVD'
-            ],
-            correctAnswer: 2,
-          },
-          {
-            question: 'What is the main difference between Driller\'s Method and Wait & Weight?',
-            options: [
-              'Driller\'s Method uses one cycle',
-              'Wait & Weight is slower',
-              'Driller\'s Method uses two cycles',
-              'There is no difference'
-            ],
-            correctAnswer: 2,
-          },
-          {
-            question: 'What does SIDPP represent?',
-            options: [
-              'Pump pressure',
-              'Excess formation pressure',
-              'Casing pressure',
-              'Surface pressure'
-            ],
-            correctAnswer: 1,
-          },
-          {
-            question: 'What is the first action when a kick is detected while drilling?',
-            options: [
-              'Increase drilling speed',
-              'Reduce mud weight',
-              'Raise Kelly and stop pumps',
-              'Continue drilling'
-            ],
-            correctAnswer: 2,
-          },
-          {
-            question: 'Which is a positive kick indicator?',
-            options: [
-              'Decrease in flow rate',
-              'Decrease in pit volume',
-              'Increase in pit volume',
-              'Decrease in ROP'
-            ],
-            correctAnswer: 2,
-          },
-          {
-            question: 'In a Shallow Gas Kick, what device is used?',
-            options: [
-              'BOP only',
-              'Diverter',
-              'Choke manifold',
-              'Mud pump'
-            ],
-            correctAnswer: 1,
-          },
-          {
-            question: 'Why is a gas kick dangerous?',
-            options: [
-              'Gas is very heavy',
-              'Gas expands as it rises',
-              'Gas doesn\'t move',
-              'Gas increases mud weight'
-            ],
-            correctAnswer: 1,
-          },
-          {
-            question: 'What is ICP in kill operations?',
-            options: [
-              'SIDPP only',
-              'SIDPP + SPR',
-              'SICP only',
-              'SPR only'
-            ],
-            correctAnswer: 1,
-          },
-          {
-            question: 'What is an Underground Blowout?',
-            options: [
-              'Surface blowout',
-              'Flow between underground layers',
-              'Pipe blockage',
-              'Pump failure'
-            ],
-            correctAnswer: 1,
-          },
-        ],
       },
     },
     {
       day: 7,
       type: 'project',
-      content: {
-        ar: {
-          title: 'مشروع: تحليل حالة ركلة',
-          explanation: 'طبق ما تعلمته في تحليل حالة ركلة افتراضية',
-          keyTerms: [],
-        },
-        en: {
-          title: 'Project: Kick Analysis',
-          explanation: 'Apply what you learned in analyzing a hypothetical kick scenario',
-          keyTerms: [],
-        },
-      },
       project: {
         ar: {
-          title: 'تحليل حالة ركلة وحساب معلمات القتل',
-          description: 'أنت مهندس حفر في موقع وحدثت ركلة. استخدم البيانات المعطاة لحساب معلمات القتل واختيار الطريقة المناسبة.',
-          instructions: [
-            'بيانات البئر: TVD = 12,000 ft، كثافة الطين الحالية = 10.5 ppg',
-            'بعد الإغلاق: SIDPP = 520 psi، SICP = 680 psi، Pit Gain = 25 bbls',
-            'احسب كثافة طين القتل (Kill Mud Weight)',
-            'احسب ICP إذا كان SPR = 650 psi',
-            'احسب FCP',
-            'اختر طريقة القتل المناسبة وبرر اختيارك',
-            'حدد نوع السائل الداخل (غاز أم سائل) بناءً على الفرق بين SIDPP و SICP'
+          title: 'مشروع: تحليل سيناريو تحكم بالبئر',
+          description: 'قم بتحليل سيناريو ركلة غاز في بئر HPHT. حدد: نوع الركلة، الطريقة المناسبة للقتل، والإجراءات الوقائية.',
+          requirements: [
+            'تحديد علامات الركلة وكيفية اكتشافها',
+            'اختيار طريقة القتل المناسبة مع التبرير',
+            'وصف الإجراءات خطوة بخطوة',
+            'ذكر المخاطر المحتملة وكيفية تجنبها',
           ],
-          submissionType: 'text',
         },
         en: {
-          title: 'Kick Analysis and Kill Parameters Calculation',
-          description: 'You are a drilling engineer on site and a kick occurred. Use the given data to calculate kill parameters and select the appropriate method.',
-          instructions: [
-            'Well Data: TVD = 12,000 ft, Current mud weight = 10.5 ppg',
-            'After shut-in: SIDPP = 520 psi, SICP = 680 psi, Pit Gain = 25 bbls',
-            'Calculate Kill Mud Weight',
-            'Calculate ICP if SPR = 650 psi',
-            'Calculate FCP',
-            'Select the appropriate kill method and justify your choice',
-            'Determine the influx type (gas or liquid) based on SIDPP and SICP difference'
+          title: 'Project: Well Control Scenario Analysis',
+          description: 'Analyze a gas kick scenario in an HPHT well. Identify: kick type, appropriate kill method, and preventive measures.',
+          requirements: [
+            'Identify kick indicators and how to detect them',
+            'Select appropriate kill method with justification',
+            'Describe step-by-step procedures',
+            'Mention potential risks and how to avoid them',
           ],
-          submissionType: 'text',
         },
       },
     },
