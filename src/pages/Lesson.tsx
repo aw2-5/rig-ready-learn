@@ -18,7 +18,9 @@ import { DayQuiz } from '@/components/lesson/DayQuiz';
 import { DayProject } from '@/components/lesson/DayProject';
 import { LessonCompletionCard } from '@/components/LessonCompletionCard';
 import { LevelCompletionModal } from '@/components/LevelCompletionModal';
+import { ThemeToggle } from '@/components/ThemeToggle';
 import { ArrowLeft, ArrowRight, Globe, Home, BookOpen } from 'lucide-react';
+
 export default function Lesson() {
   const {
     id
@@ -166,9 +168,12 @@ export default function Lesson() {
                 {content.title}
               </h1>
             </div>
-            <Button variant="ghost" size="sm" onClick={() => setLanguage(language === 'en' ? 'ar' : 'en')}>
-              <Globe className="w-4 h-4" />
-            </Button>
+            <div className="flex items-center gap-1">
+              <ThemeToggle />
+              <Button variant="ghost" size="sm" onClick={() => setLanguage(language === 'en' ? 'ar' : 'en')}>
+                <Globe className="w-4 h-4" />
+              </Button>
+            </div>
           </div>
         </div>
       </header>

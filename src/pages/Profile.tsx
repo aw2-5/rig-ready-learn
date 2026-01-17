@@ -7,6 +7,7 @@ import { useLevelProgress } from '@/hooks/useLevelProgress';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
+import { ThemeToggle } from '@/components/ThemeToggle';
 import { 
   ArrowLeft, 
   User, 
@@ -224,7 +225,7 @@ export default function Profile() {
             {txt.back}
           </Button>
           <h1 className="text-xl font-bold">{txt.profile}</h1>
-          <div className="w-20" />
+          <ThemeToggle />
         </div>
       </header>
 
