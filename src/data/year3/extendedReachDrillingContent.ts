@@ -12,12 +12,12 @@ export const extendedReachDrillingLesson: WeeklyLesson = {
           explanation: `<section>
 <h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 ما هو الحفر الممتد المدى؟</h2>
 <p style="margin-bottom: 1rem; line-height: 1.8;">
-الحفر الممتد المدى (Extended Reach Drilling - ERD) هو تقنية حفر موجه تهدف للوصول إلى أهداف بعيدة أفقياً من موقع الحفارة. يُعرّف عادةً بأنه الحفر حيث نسبة الإزاحة الأفقية إلى العمق الرأسي الحقيقي (HD/TVD) تتجاوز 2:1.
+الحفر الممتد المدى (Extended Reach Drilling - ERD) هو تقنية حفر موجه متقدمة تهدف للوصول إلى أهداف بعيدة أفقياً من موقع الحفارة. يُعرّف عادةً بأنه الحفر حيث نسبة الإزاحة الأفقية إلى العمق الرأسي الحقيقي (HD/TVD) تتجاوز 2:1. هذه التقنية تمثل قمة التحديات الهندسية في صناعة الحفر وتتطلب تخطيطاً دقيقاً ومعدات متخصصة.
 </p>
 
 <div style="background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%); color: white; padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem;">
 <h3 style="font-size: 1.25rem; margin-bottom: 1rem;">💡 لماذا نحتاج ERD؟</h3>
-<p style="line-height: 1.8;">في كثير من الحالات، لا يمكننا وضع الحفارة فوق الهدف مباشرة. قد يكون الهدف تحت البحر، أو تحت مناطق محمية بيئياً، أو تحت مدن ومنشآت. ERD يسمح لنا بالوصول لهذه الأهداف من موقع بعيد.</p>
+<p style="line-height: 1.8;">في كثير من الحالات، لا يمكننا وضع الحفارة فوق الهدف مباشرة. قد يكون الهدف تحت البحر، أو تحت مناطق محمية بيئياً، أو تحت مدن ومنشآت. ERD يسمح لنا بالوصول لهذه الأهداف من موقع بعيد مع توفير كبير في التكاليف وحماية البيئة.</p>
 </div>
 
 <h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 تصنيف آبار ERD</h3>
@@ -28,6 +28,7 @@ export const extendedReachDrillingLesson: WeeklyLesson = {
 <th style="padding: 12px; border: 1px solid #cbd5e1; text-align: right;">التصنيف</th>
 <th style="padding: 12px; border: 1px solid #cbd5e1; text-align: right;">نسبة HD/TVD</th>
 <th style="padding: 12px; border: 1px solid #cbd5e1; text-align: right;">مثال</th>
+<th style="padding: 12px; border: 1px solid #cbd5e1; text-align: right;">الصعوبة</th>
 </tr>
 </thead>
 <tbody>
@@ -35,16 +36,25 @@ export const extendedReachDrillingLesson: WeeklyLesson = {
 <td style="padding: 12px; border: 1px solid #cbd5e1;">موجه عادي</td>
 <td style="padding: 12px; border: 1px solid #cbd5e1;">< 2:1</td>
 <td style="padding: 12px; border: 1px solid #cbd5e1;">HD=3000m, TVD=2000m</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">عادية</td>
 </tr>
 <tr style="background: #f1f5f9;">
 <td style="padding: 12px; border: 1px solid #cbd5e1;"><strong>ERD</strong></td>
 <td style="padding: 12px; border: 1px solid #cbd5e1;">2:1 - 3:1</td>
 <td style="padding: 12px; border: 1px solid #cbd5e1;">HD=6000m, TVD=2500m</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">عالية</td>
 </tr>
 <tr>
 <td style="padding: 12px; border: 1px solid #cbd5e1;"><strong>Ultra-ERD</strong></td>
 <td style="padding: 12px; border: 1px solid #cbd5e1;">> 3:1</td>
 <td style="padding: 12px; border: 1px solid #cbd5e1;">HD=12000m, TVD=3000m</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">استثنائية</td>
+</tr>
+<tr style="background: #f1f5f9;">
+<td style="padding: 12px; border: 1px solid #cbd5e1;"><strong>Extreme-ERD</strong></td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">> 4:1</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">HD=15000m, TVD=3500m</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">أرقام قياسية</td>
 </tr>
 </tbody>
 </table>
@@ -53,29 +63,34 @@ export const extendedReachDrillingLesson: WeeklyLesson = {
 <h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 الأرقام القياسية العالمية</h3>
 <div style="background: #f0fdf4; padding: 1.5rem; border-radius: 12px; margin: 1rem 0; border: 2px solid #059669;">
 <ul style="line-height: 2.2; padding-right: 1.5rem;">
-<li><strong>أطول بئر ERD:</strong> حقل Sakhalin في روسيا - إزاحة أفقية تجاوزت 15 كم!</li>
-<li><strong>أعلى نسبة HD/TVD:</strong> تجاوزت 6:1 في بعض الآبار</li>
-<li><strong>الطول الكلي (MD):</strong> تجاوز 40,000 قدم في بعض الآبار</li>
+<li><strong>أطول بئر ERD:</strong> حقل Sakhalin في روسيا - إزاحة أفقية تجاوزت 15 كم! (Odoptu OP-11)</li>
+<li><strong>أعلى نسبة HD/TVD:</strong> تجاوزت 6:1 في بعض آبار Wytch Farm في المملكة المتحدة</li>
+<li><strong>الطول الكلي (MD):</strong> تجاوز 40,000 قدم (12+ كم) في بعض الآبار</li>
+<li><strong>أسرع حفر ERD:</strong> بعض الآبار حُفرت بمعدل 1000 قدم/يوم</li>
 </ul>
+<div style="background: #dcfce7; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+<p style="font-weight: bold; color: #059669;">📊 إحصائية مهمة:</p>
+<p style="line-height: 1.8;">أكثر من 90% من آبار ERD الناجحة تمت بتخطيط دقيق قبل الحفر يشمل نمذجة T&D وتحليل استقرارية البئر</p>
+</div>
 </div>
 
 <h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 تطبيقات ERD</h3>
 <div style="background: #dbeafe; padding: 1.5rem; border-radius: 12px; margin: 1rem 0; border: 2px solid #2563eb;">
 <div style="background: #fff; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
 <p style="font-weight: bold; color: #1e40af;">1️⃣ الحفر من الشاطئ للأهداف البحرية</p>
-<p style="line-height: 1.8;">الوصول لمكامن تحت البحر من منصة برية - يوفر تكلفة المنصات البحرية الضخمة</p>
+<p style="line-height: 1.8;">الوصول لمكامن تحت البحر من منصة برية - يوفر تكلفة المنصات البحرية الضخمة التي قد تصل لمليار دولار. مثال: حقل Wytch Farm في المملكة المتحدة وصل لأهداف تبعد 10 كم تحت البحر من الشاطئ.</p>
 </div>
 <div style="background: #fff; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
 <p style="font-weight: bold; color: #1e40af;">2️⃣ تقليل عدد المنصات</p>
-<p style="line-height: 1.8;">منصة واحدة يمكنها الوصول لعدة مكامن متباعدة بدلاً من عدة منصات</p>
+<p style="line-height: 1.8;">منصة واحدة يمكنها الوصول لعدة مكامن متباعدة بدلاً من عدة منصات. في بعض الحقول، خفض عدد المنصات من 4 إلى 1 باستخدام ERD.</p>
 </div>
 <div style="background: #fff; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
 <p style="font-weight: bold; color: #1e40af;">3️⃣ المناطق المحمية</p>
-<p style="line-height: 1.8;">الوصول لأهداف تحت محميات طبيعية أو مناطق سكنية دون التأثير عليها</p>
+<p style="line-height: 1.8;">الوصول لأهداف تحت محميات طبيعية أو مناطق سكنية دون التأثير عليها. استُخدم في الحفر تحت مطارات وحدائق وطنية.</p>
 </div>
 <div style="background: #fff; padding: 1rem; border-radius: 8px;">
-<p style="font-weight: bold; color: #1e40af;">4️⃣ تطوير الحقول الهامشية</p>
-<p style="line-height: 1.8;">مكامن صغيرة لا تبرر تكلفة منصة مستقلة يمكن الوصول إليها من منصة موجودة</p>
+<p style="font-weight: bold; color: #1e40af;">4️⃣ تطوير الحقول الهامشية والناضجة</p>
+<p style="line-height: 1.8;">مكامن صغيرة أو متبقية لا تبرر تكلفة منصة مستقلة يمكن الوصول إليها من منصة موجودة، مما يطيل عمر الحقل الإنتاجي.</p>
 </div>
 </div>
 
@@ -87,6 +102,7 @@ export const extendedReachDrillingLesson: WeeklyLesson = {
 <th style="padding: 12px; border: 1px solid #fca5a5; text-align: right;">التحدي</th>
 <th style="padding: 12px; border: 1px solid #fca5a5; text-align: right;">السبب</th>
 <th style="padding: 12px; border: 1px solid #fca5a5; text-align: right;">التأثير</th>
+<th style="padding: 12px; border: 1px solid #fca5a5; text-align: right;">الحل</th>
 </tr>
 </thead>
 <tbody>
@@ -94,34 +110,55 @@ export const extendedReachDrillingLesson: WeeklyLesson = {
 <td style="padding: 12px; border: 1px solid #ddd;"><strong>العزم والسحب</strong></td>
 <td style="padding: 12px; border: 1px solid #ddd;">الاحتكاك الكبير على طول المسار</td>
 <td style="padding: 12px; border: 1px solid #ddd;">صعوبة الدوران والرفع</td>
+<td style="padding: 12px; border: 1px solid #ddd;">مواد تزليق، تصميم مسار</td>
 </tr>
 <tr>
 <td style="padding: 12px; border: 1px solid #ddd;"><strong>تنظيف الحفرة</strong></td>
 <td style="padding: 12px; border: 1px solid #ddd;">القطع تترسب في الأقسام الأفقية</td>
 <td style="padding: 12px; border: 1px solid #ddd;">انسداد وانحشار</td>
+<td style="padding: 12px; border: 1px solid #ddd;">دوران عالي، تدفق عالي</td>
 </tr>
 <tr style="background: #fff;">
 <td style="padding: 12px; border: 1px solid #ddd;"><strong>ECD العالي</strong></td>
 <td style="padding: 12px; border: 1px solid #ddd;">فقدان الضغط الكبير في الطول</td>
 <td style="padding: 12px; border: 1px solid #ddd;">كسر التكوين أو فقدان طين</td>
+<td style="padding: 12px; border: 1px solid #ddd;">تحسين الريولوجي، MPD</td>
 </tr>
 <tr>
 <td style="padding: 12px; border: 1px solid #ddd;"><strong>إنزال التغليف</strong></td>
 <td style="padding: 12px; border: 1px solid #ddd;">الاحتكاك يمنع الوصول للقاع</td>
 <td style="padding: 12px; border: 1px solid #ddd;">عدم اكتمال التغليف</td>
+<td style="padding: 12px; border: 1px solid #ddd;">تعويم، دوران أثناء الإنزال</td>
+</tr>
+<tr style="background: #fff;">
+<td style="padding: 12px; border: 1px solid #ddd;"><strong>الاستقرارية</strong></td>
+<td style="padding: 12px; border: 1px solid #ddd;">التعرض الطويل للجدار</td>
+<td style="padding: 12px; border: 1px solid #ddd;">انهيار أو تضخم</td>
+<td style="padding: 12px; border: 1px solid #ddd;">طين مناسب، تقليل وقت التعرض</td>
 </tr>
 </tbody>
 </table>
+</div>
+
+<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 متطلبات الحفارة لـ ERD</h3>
+<div style="background: #fef3c7; padding: 1.5rem; border-radius: 12px; margin: 1rem 0; border: 2px solid #f59e0b;">
+<ul style="line-height: 2.2; padding-right: 1.5rem;">
+<li><strong>Top Drive:</strong> بعزم عالي (60,000-100,000 ft-lbs) للتغلب على العزم المتراكم</li>
+<li><strong>المضخات:</strong> قدرة ضخ عالية (1000+ gpm) لتنظيف الحفرة</li>
+<li><strong>الرافعة:</strong> سعة عالية (1+ مليون رطل) للتعامل مع السحب</li>
+<li><strong>سلسلة الحفر:</strong> Aluminum أو High-Strength Steel لتقليل الوزن</li>
+<li><strong>أنظمة القياس:</strong> MWD/LWD متقدمة للتوجيه الدقيق</li>
+</ul>
 </div>
 
 <div style="background: linear-gradient(135deg, #7c3aed15, #7c3aed10); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-right: 4px solid #7c3aed;">
 <h3 style="color: #7c3aed; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">💡 ملخص اليوم</h3>
 <ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2;">
 <li>ERD عندما تتجاوز نسبة HD/TVD نسبة 2:1</li>
-<li>يُستخدم للوصول لأهداف بعيدة من موقع واحد</li>
-<li>يوفر تكاليف المنصات ويحمي البيئة</li>
-<li>التحديات الرئيسية: العزم، السحب، تنظيف الحفرة، ECD</li>
+<li>يُستخدم للوصول لأهداف بعيدة من موقع واحد ويوفر مليارات الدولارات</li>
+<li>التحديات الخمسة: العزم، السحب، تنظيف الحفرة، ECD، الاستقرارية</li>
 <li>الأرقام القياسية تجاوزت 15 كم إزاحة أفقية</li>
+<li>يتطلب معدات متخصصة وتخطيط دقيق قبل الحفر</li>
 </ul>
 </div>
 </section>`,
