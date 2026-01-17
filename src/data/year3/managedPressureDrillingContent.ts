@@ -12,36 +12,76 @@ export const managedPressureDrillingLesson: WeeklyLesson = {
           explanation: `<section>
 <h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">🔷 ما هو الحفر بالضغط المُدار؟</h2>
 <p style="margin-bottom: 1rem; line-height: 1.8;">
-الحفر بالضغط المُدار (MPD) هو تقنية متقدمة للحفر في الظروف الصعبة حيث نافذة الطين ضيقة جداً. يعتمد على التحكم الدقيق بالضغط في الوقت الحقيقي.
+الحفر بالضغط المُدار (MPD) هو تقنية متقدمة للحفر في الظروف الصعبة حيث نافذة الطين ضيقة جداً. يعتمد على التحكم الدقيق بالضغط في الوقت الحقيقي باستخدام أنظمة آلية متطورة.
 </p>
 
 <div style="background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%); color: white; padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem;">
 <h3 style="font-size: 1.25rem; margin-bottom: 1rem;">💡 لماذا نحتاج MPD؟</h3>
-<p style="line-height: 1.8;">في بعض الآبار، الفرق بين ضغط المسام وضغط الكسر صغير جداً (أحياناً أقل من 0.5 ppg). الطريقة التقليدية لا تعمل هنا - نحتاج تحكماً دقيقاً بالضغط.</p>
+<p style="line-height: 1.8;">في بعض الآبار، الفرق بين ضغط المسام (Pore Pressure) وضغط الكسر (Fracture Pressure) صغير جداً (أحياناً أقل من 0.5 ppg). الطريقة التقليدية لا تعمل هنا - نحتاج تحكماً دقيقاً بالضغط. في الحفر التقليدي، عند إيقاف المضخات للوصلات، ينخفض ECD فجأة مما قد يسبب ركلة. وعند بدء الضخ، يرتفع ECD مما قد يسبب كسر التكوين.</p>
+</div>
+
+<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 الفرق بين MPD والحفر التقليدي</h3>
+<div style="background: #f8fafc; padding: 1.5rem; border-radius: 12px; margin: 1rem 0; border: 2px solid #64748b;">
+<table style="width: 100%; border-collapse: collapse;">
+<thead>
+<tr style="background: #e2e8f0;">
+<th style="padding: 12px; border: 1px solid #cbd5e1; text-align: right;">الجانب</th>
+<th style="padding: 12px; border: 1px solid #cbd5e1; text-align: right;">الحفر التقليدي</th>
+<th style="padding: 12px; border: 1px solid #cbd5e1; text-align: right;">MPD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">حالة البئر</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">مفتوح للغلاف الجوي</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">مغلق بـ RCD</td>
+</tr>
+<tr style="background: #f1f5f9;">
+<td style="padding: 12px; border: 1px solid #cbd5e1;">التحكم بالضغط</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">وزن الطين فقط</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">وزن الطين + SBP</td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">عند إيقاف الضخ</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">BHP ينخفض</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">BHP يبقى ثابتاً</td>
+</tr>
+<tr style="background: #f1f5f9;">
+<td style="padding: 12px; border: 1px solid #cbd5e1;">اكتشاف التدفق</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">متأخر نسبياً</td>
+<td style="padding: 12px; border: 1px solid #cbd5e1;">مبكر جداً ودقيق</td>
+</tr>
+</tbody>
+</table>
 </div>
 
 <h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 المكونات الرئيسية لنظام MPD</h3>
 <div style="background: #e8f4f8; padding: 1.5rem; border-radius: 12px; margin: 1rem 0;">
 <ul style="line-height: 2.2; padding-right: 1.5rem;">
-<li><strong>RCD (Rotating Control Device):</strong> يغلق البئر حول سلسلة الحفر مع السماح بالدوران</li>
-<li><strong>نظام الخنق الآلي:</strong> يتحكم بالضغط الخلفي تلقائياً</li>
-<li><strong>مستشعرات الضغط:</strong> قياسات لحظية في عدة نقاط</li>
-<li><strong>نظام التحكم:</strong> برنامج يدير كل المتغيرات</li>
+<li><strong>RCD (Rotating Control Device):</strong> يغلق البئر حول سلسلة الحفر مع السماح بالدوران. يتحمل ضغوطاً تصل إلى 5000 psi حسب النوع. يحتوي على عنصر مطاطي قابل للتبديل (Bearing Assembly)</li>
+<li><strong>نظام الخنق الآلي (Automated Choke):</strong> يتحكم بالضغط الخلفي تلقائياً بدقة عالية (± 10-25 psi). يستجيب في أقل من ثانية واحدة لتغيرات الضغط</li>
+<li><strong>مستشعرات الضغط (Pressure Sensors):</strong> قياسات لحظية في عدة نقاط: السطح، الـ Choke manifold، وأحياناً في القاع (PWD)</li>
+<li><strong>نظام التحكم (Control System):</strong> برنامج يدير كل المتغيرات ويحسب SBP المطلوب لكل معدل ضخ</li>
+<li><strong>نظام قياس التدفق (Flow Measurement):</strong> Coriolis meters لقياس التدفق الداخل والخارج بدقة عالية للكشف المبكر عن الركلات</li>
 </ul>
 </div>
 
 <h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem;">📌 مفهوم SBP (Surface Back Pressure)</h3>
 <div style="background: #f0fdf4; padding: 1.5rem; border-radius: 12px; margin: 1rem 0; border: 2px solid #059669;">
 <p style="line-height: 1.8; margin-bottom: 1rem;">
-SBP هو الضغط الإضافي المطبق على السطح للتحكم بضغط القاع. هذا هو جوهر MPD!
+SBP هو الضغط الإضافي المطبق على السطح للتحكم بضغط القاع. هذا هو جوهر MPD! يُطبق من خلال الـ Choke ويتم التحكم به آلياً.
 </p>
 <div style="background: #fff; padding: 1rem; border-radius: 8px;">
 <p style="font-weight: bold; margin-bottom: 0.5rem;">📌 كيف يعمل؟</p>
 <ul style="padding-right: 1.5rem; line-height: 2;">
-<li><strong>أثناء الضخ:</strong> ECD مرتفع → SBP منخفض أو صفر</li>
-<li><strong>عند إيقاف الضخ:</strong> ECD ينخفض → نزيد SBP للتعويض</li>
-<li><strong>النتيجة:</strong> BHP ثابت طوال الوقت!</li>
+<li><strong>أثناء الضخ:</strong> ECD مرتفع → SBP منخفض أو صفر (الاحتكاك يوفر الضغط المطلوب)</li>
+<li><strong>عند إيقاف الضخ:</strong> ECD ينخفض → نزيد SBP للتعويض (نحافظ على نفس BHP)</li>
+<li><strong>النتيجة:</strong> BHP ثابت طوال الوقت سواء كنا نضخ أو متوقفين!</li>
 </ul>
+</div>
+<div style="background: #ecfdf5; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+<p style="font-weight: bold; color: #059669;">📊 مثال عملي:</p>
+<p style="line-height: 1.8;">إذا كان BHP المطلوب = 5000 psi وأثناء الضخ ECD يساهم بـ 200 psi فوق الطين الساكن، فعند إيقاف الضخ نحتاج SBP = 200 psi للحفاظ على نفس الـ BHP</p>
 </div>
 </div>
 
@@ -52,27 +92,47 @@ SBP هو الضغط الإضافي المطبق على السطح للتحكم �
 <tr style="background: #fef3c7;">
 <th style="padding: 12px; border: 1px solid #f59e0b; text-align: right;">الحالة</th>
 <th style="padding: 12px; border: 1px solid #f59e0b; text-align: right;">السبب</th>
+<th style="padding: 12px; border: 1px solid #f59e0b; text-align: right;">الفائدة</th>
 </tr>
 </thead>
 <tbody>
 <tr style="background: #fff;">
 <td style="padding: 12px; border: 1px solid #ddd;">نافذة طين ضيقة جداً</td>
 <td style="padding: 12px; border: 1px solid #ddd;">التحكم التقليدي غير كافي</td>
+<td style="padding: 12px; border: 1px solid #ddd;">تجنب الركلات وفقدان الطين</td>
 </tr>
 <tr>
 <td style="padding: 12px; border: 1px solid #ddd;">آبار HPHT</td>
 <td style="padding: 12px; border: 1px solid #ddd;">ضغوط ودرجات حرارة عالية</td>
+<td style="padding: 12px; border: 1px solid #ddd;">سلامة أعلى وتحكم دقيق</td>
 </tr>
 <tr style="background: #fff;">
 <td style="padding: 12px; border: 1px solid #ddd;">تكوينات مستنزفة</td>
 <td style="padding: 12px; border: 1px solid #ddd;">ضغط منخفض يسبب فقدان طين</td>
+<td style="padding: 12px; border: 1px solid #ddd;">تقليل فقدان الطين بشكل كبير</td>
 </tr>
 <tr>
 <td style="padding: 12px; border: 1px solid #ddd;">طبقات متعددة الضغوط</td>
 <td style="padding: 12px; border: 1px solid #ddd;">لا يوجد وزن طين واحد يناسب الكل</td>
+<td style="padding: 12px; border: 1px solid #ddd;">حفر عدة مناطق بوزن طين واحد</td>
+</tr>
+<tr style="background: #fff;">
+<td style="padding: 12px; border: 1px solid #ddd;">حفر Salt أو Shale متضخم</td>
+<td style="padding: 12px; border: 1px solid #ddd;">التفاعل مع التكوين</td>
+<td style="padding: 12px; border: 1px solid #ddd;">تقليل مشاكل الاستقرارية</td>
 </tr>
 </tbody>
 </table>
+</div>
+
+<div style="background: #fee2e2; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #dc2626;">
+<h3 style="color: #dc2626; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.75rem;">⚠️ قيود MPD</h3>
+<ul style="list-style-type: disc; padding-right: 1.5rem; line-height: 2;">
+<li>تكلفة أعلى من الحفر التقليدي (معدات وأفراد متخصصين)</li>
+<li>يتطلب طاقم مدرب ومتخصص في MPD</li>
+<li>ليس كل أنواع الحفارات مجهزة لـ MPD</li>
+<li>في حالة فشل النظام الآلي، يجب الانتقال للتحكم اليدوي بسرعة</li>
+</ul>
 </div>
 
 <div style="background: linear-gradient(135deg, #7c3aed15, #7c3aed10); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-right: 4px solid #7c3aed;">
@@ -81,7 +141,8 @@ SBP هو الضغط الإضافي المطبق على السطح للتحكم �
 <li>MPD للآبار ذات النوافذ الضيقة والظروف الصعبة</li>
 <li>RCD يسمح بالحفر مع البئر مغلق</li>
 <li>SBP يعوض فقدان ECD عند إيقاف المضخات</li>
-<li>الهدف: الحفاظ على BHP ثابت</li>
+<li>الهدف: الحفاظ على BHP ثابت في كل الأوقات</li>
+<li>يتطلب معدات متخصصة وطاقم مدرب</li>
 </ul>
 </div>
 </section>`,
@@ -91,6 +152,7 @@ SBP هو الضغط الإضافي المطبق على السطح للتحكم �
             { term: 'SBP', definition: 'الضغط السطحي الخلفي - يُضاف للتعويض عن فقدان الاحتكاك' },
             { term: 'Narrow Window', definition: 'نافذة طين ضيقة - فرق صغير بين ضغط المسام وضغط الكسر' },
             { term: 'Constant BHP', definition: 'الحفاظ على ضغط القاع ثابتاً رغم تغير ظروف الضخ' },
+            { term: 'Automated Choke', definition: 'نظام الخنق الآلي - يتحكم بالضغط تلقائياً بدقة عالية' },
           ],
           practiceQuestion: {
             question: 'ما هو الغرض الرئيسي من SBP في نظام MPD؟',
