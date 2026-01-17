@@ -23,7 +23,7 @@ export interface Lesson {
 export const lessonsYear3: Lesson[] = [
   {
     id: 'well-control-advanced',
-    titleKey: 'التحكم المتقدم بالبئر',
+    titleKey: 'Advanced Well Control',
     icon: '🛡️',
     year: 3,
     content: {
@@ -34,7 +34,7 @@ export const lessonsYear3: Lesson[] = [
   },
   {
     id: 'managed-pressure-drilling',
-    titleKey: 'الحفر بالضغط المُدار',
+    titleKey: 'Managed Pressure Drilling (MPD)',
     icon: '🎯',
     year: 3,
     content: {
@@ -45,7 +45,7 @@ export const lessonsYear3: Lesson[] = [
   },
   {
     id: 'underbalanced-drilling',
-    titleKey: 'الحفر تحت التوازن',
+    titleKey: 'Underbalanced Drilling (UBD)',
     icon: '⚖️',
     year: 3,
     content: {
@@ -56,7 +56,7 @@ export const lessonsYear3: Lesson[] = [
   },
   {
     id: 'extended-reach-drilling',
-    titleKey: 'الحفر الممتد المدى',
+    titleKey: 'Extended Reach Drilling (ERD)',
     icon: '📏',
     year: 3,
     content: {
@@ -67,7 +67,7 @@ export const lessonsYear3: Lesson[] = [
   },
   {
     id: 'horizontal-drilling',
-    titleKey: 'الحفر الأفقي',
+    titleKey: 'Horizontal Drilling',
     icon: '↔️',
     year: 3,
     content: {
@@ -78,7 +78,7 @@ export const lessonsYear3: Lesson[] = [
   },
   {
     id: 'multilateral-wells',
-    titleKey: 'الآبار متعددة الفروع',
+    titleKey: 'Multilateral Wells',
     icon: '🌿',
     year: 3,
     content: {
@@ -89,7 +89,7 @@ export const lessonsYear3: Lesson[] = [
   },
   {
     id: 'coiled-tubing-drilling',
-    titleKey: 'الحفر بالأنابيب الملفوفة',
+    titleKey: 'Coiled Tubing Drilling',
     icon: '🔄',
     year: 3,
     content: {
@@ -100,7 +100,7 @@ export const lessonsYear3: Lesson[] = [
   },
   {
     id: 'fishing-operations',
-    titleKey: 'عمليات الصيد',
+    titleKey: 'Fishing Operations',
     icon: '🎣',
     year: 3,
     content: {
@@ -111,7 +111,7 @@ export const lessonsYear3: Lesson[] = [
   },
   {
     id: 'stuck-pipe-prevention',
-    titleKey: 'منع انحشار الأنابيب',
+    titleKey: 'Stuck Pipe Prevention',
     icon: '🚫',
     year: 3,
     content: {
@@ -122,7 +122,7 @@ export const lessonsYear3: Lesson[] = [
   },
   {
     id: 'wellbore-stability',
-    titleKey: 'استقرار جدار البئر',
+    titleKey: 'Wellbore Stability',
     icon: '🏔️',
     year: 3,
     content: {
@@ -133,7 +133,7 @@ export const lessonsYear3: Lesson[] = [
   },
   {
     id: 'drilling-optimization',
-    titleKey: 'تحسين أداء الحفر',
+    titleKey: 'Drilling Optimization',
     icon: '📈',
     year: 3,
     content: {
@@ -144,7 +144,7 @@ export const lessonsYear3: Lesson[] = [
   },
   {
     id: 'rop-optimization',
-    titleKey: 'تحسين معدل الاختراق',
+    titleKey: 'ROP Optimization',
     icon: '⚡',
     year: 3,
     content: {
@@ -155,7 +155,7 @@ export const lessonsYear3: Lesson[] = [
   },
   {
     id: 'mwd-lwd',
-    titleKey: 'القياس والتسجيل أثناء الحفر',
+    titleKey: 'MWD & LWD Systems',
     icon: '📡',
     year: 3,
     content: {
@@ -166,7 +166,7 @@ export const lessonsYear3: Lesson[] = [
   },
   {
     id: 'rotary-steerable-systems',
-    titleKey: 'أنظمة التوجيه الدوارة',
+    titleKey: 'Rotary Steerable Systems (RSS)',
     icon: '🧭',
     year: 3,
     content: {
@@ -177,7 +177,7 @@ export const lessonsYear3: Lesson[] = [
   },
   {
     id: 'drilling-automation',
-    titleKey: 'أتمتة الحفر',
+    titleKey: 'Drilling Automation',
     icon: '🤖',
     year: 3,
     content: {
@@ -188,7 +188,7 @@ export const lessonsYear3: Lesson[] = [
   },
   {
     id: 'hpht-drilling',
-    titleKey: 'الحفر في الضغط والحرارة العالية',
+    titleKey: 'HPHT Drilling',
     icon: '🔥',
     year: 3,
     content: {
@@ -199,7 +199,7 @@ export const lessonsYear3: Lesson[] = [
   },
   {
     id: 'deepwater-drilling',
-    titleKey: 'الحفر في المياه العميقة',
+    titleKey: 'Deepwater Drilling',
     icon: '🌊',
     year: 3,
     content: {
@@ -210,7 +210,7 @@ export const lessonsYear3: Lesson[] = [
   },
   {
     id: 'offshore-drilling-systems',
-    titleKey: 'أنظمة الحفر البحري',
+    titleKey: 'Offshore Drilling Systems',
     icon: '🚢',
     year: 3,
     content: {
@@ -221,7 +221,7 @@ export const lessonsYear3: Lesson[] = [
   },
   {
     id: 'well-integrity',
-    titleKey: 'سلامة البئر',
+    titleKey: 'Well Integrity Management',
     icon: '🔒',
     year: 3,
     content: {
@@ -232,7 +232,7 @@ export const lessonsYear3: Lesson[] = [
   },
   {
     id: 'drilling-hse',
-    titleKey: 'السلامة والصحة والبيئة',
+    titleKey: 'HSE in Drilling',
     icon: '⛑️',
     year: 3,
     content: {
