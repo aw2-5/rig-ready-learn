@@ -12,6 +12,7 @@ import { useLevelProgress } from '@/hooks/useLevelProgress';
 import { LevelCompletionModal } from '@/components/LevelCompletionModal';
 import { UpgradeAccountModal } from '@/components/UpgradeAccountModal';
 import { LevelTest } from '@/components/LevelTest';
+import { ThemeToggle } from '@/components/ThemeToggle';
 import { sendLevelCompletionEmail } from '@/lib/emailNotifications';
 import { 
   BookOpen, 
@@ -244,6 +245,7 @@ export default function Home() {
               </div>
             </div>
             <div className="flex items-center gap-2">
+              <ThemeToggle />
               <Button
                 variant="ghost"
                 size="icon"
