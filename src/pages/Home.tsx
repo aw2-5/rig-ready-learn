@@ -13,6 +13,8 @@ import { LevelCompletionModal } from '@/components/LevelCompletionModal';
 import { UpgradeAccountModal } from '@/components/UpgradeAccountModal';
 import { LevelTest } from '@/components/LevelTest';
 import { ThemeToggle } from '@/components/ThemeToggle';
+import { SearchModal } from '@/components/SearchModal';
+import { AIAssistant } from '@/components/AIAssistant';
 import { sendLevelCompletionEmail } from '@/lib/emailNotifications';
 import { 
   BookOpen, 
@@ -29,7 +31,9 @@ import {
   Sparkles,
   Trophy,
   User,
-  Zap
+  Zap,
+  Search,
+  BarChart3
 } from 'lucide-react';
 import { toast } from 'sonner';
 
@@ -57,6 +61,7 @@ export default function Home() {
   const [showLevel3CompleteModal, setShowLevel3CompleteModal] = useState(false);
   const [showUpgradeModal, setShowUpgradeModal] = useState(false);
   const [showLevelTest, setShowLevelTest] = useState<1 | 2 | 3 | null>(null);
+  const [showSearch, setShowSearch] = useState(false);
   
   // Track if email was sent to prevent duplicate sends
   const emailSentRef = useRef<{ [key: number]: boolean }>({});
@@ -244,7 +249,21 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1">
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => setShowSearch(true)}
+              >
+                <Search className="w-5 h-5" />
+              </Button>
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => navigate('/dashboard')}
+              >
+                <BarChart3 className="w-5 h-5" />
+              </Button>
               <ThemeToggle />
               <Button
                 variant="ghost"
@@ -526,6 +545,12 @@ export default function Home() {
         isOpen={showUpgradeModal}
         onClose={() => setShowUpgradeModal(false)}
       />
+
+      {/* Search Modal */}
+      <SearchModal open={showSearch} onOpenChange={setShowSearch} />
+
+      {/* AI Assistant */}
+      <AIAssistant />
     </div>
   );
 }
