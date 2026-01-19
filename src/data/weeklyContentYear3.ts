@@ -6,7 +6,7 @@ import { extendedReachDrillingLesson } from './year3/extendedReachDrillingConten
 import { horizontalDrillingLesson } from './year3/horizontalDrillingContent';
 import { multilateralWellsLesson } from './year3/multilateralWellsContent';
 import { coiledTubingDrillingLesson } from './year3/coiledTubingDrillingContent';
-
+import { fishingOperationsLesson } from './year3/fishingOperationsContent';
 // Helper function to create placeholder weekly content for Year 3 lessons
 const createPlaceholderLesson = (lessonId: string, titleAr: string, titleEn: string): WeeklyLesson => ({
   lessonId,
@@ -274,7 +274,7 @@ export const weeklyContentYear3: WeeklyLesson[] = [
   coiledTubingDrillingLesson,
   
   // Lesson 8-20: Placeholders
-  createPlaceholderLesson('fishing-operations', 'عمليات الصيد', 'Fishing Operations'),
+  fishingOperationsLesson,
   createPlaceholderLesson('stuck-pipe-prevention', 'منع انحشار الأنابيب', 'Stuck Pipe Prevention & Remediation'),
   createPlaceholderLesson('wellbore-stability', 'استقرار جدار البئر', 'Wellbore Stability'),
   createPlaceholderLesson('drilling-optimization', 'تحسين أداء الحفر', 'Drilling Optimization'),
