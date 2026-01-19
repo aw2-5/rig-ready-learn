@@ -13,6 +13,7 @@ import Home from "./pages/Home";
 import Lesson from "./pages/Lesson";
 import Profile from "./pages/Profile";
 import Dashboard from "./pages/Dashboard";
+import Install from "./pages/Install";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -61,6 +62,7 @@ const App = () => (
                     </ProtectedRoute>
                   } 
                 />
+                <Route path="/install" element={<Install />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </BrowserRouter>
