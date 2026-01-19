@@ -55,9 +55,7 @@ export function showNotification(title: string, body: string, icon?: string): vo
     icon: icon || '/favicon.png',
     badge: '/favicon.png',
     tag: 'study-reminder',
-    renotify: true,
-    requireInteraction: false,
-    vibrate: [200, 100, 200]
+    requireInteraction: false
   };
 
   try {
