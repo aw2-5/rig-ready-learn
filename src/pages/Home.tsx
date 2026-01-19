@@ -33,7 +33,8 @@ import {
   User,
   Zap,
   Search,
-  BarChart3
+  BarChart3,
+  Download
 } from 'lucide-react';
 import { toast } from 'sonner';
 
@@ -263,6 +264,14 @@ export default function Home() {
                 onClick={() => navigate('/dashboard')}
               >
                 <BarChart3 className="w-5 h-5" />
+              </Button>
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => navigate('/install')}
+                title={language === 'ar' ? 'تثبيت التطبيق' : 'Install App'}
+              >
+                <Download className="w-5 h-5" />
               </Button>
               <ThemeToggle />
               <Button
