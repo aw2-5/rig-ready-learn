@@ -9,6 +9,7 @@ import { coiledTubingDrillingLesson } from './year3/coiledTubingDrillingContent'
 import { fishingOperationsLesson } from './year3/fishingOperationsContent';
 import { stuckPipePreventionLesson } from './year3/stuckPipePreventionContent';
 import { wellboreStabilityLesson } from './year3/wellboreStabilityContent';
+import { drillingOptimizationLesson } from './year3/drillingOptimizationContent';
 // Helper function to create placeholder weekly content for Year 3 lessons
 const createPlaceholderLesson = (lessonId: string, titleAr: string, titleEn: string): WeeklyLesson => ({
   lessonId,
@@ -279,7 +280,7 @@ export const weeklyContentYear3: WeeklyLesson[] = [
   fishingOperationsLesson,
   stuckPipePreventionLesson,
   wellboreStabilityLesson,
-  createPlaceholderLesson('drilling-optimization', 'تحسين أداء الحفر', 'Drilling Optimization'),
+  drillingOptimizationLesson,
   createPlaceholderLesson('rop-optimization', 'تحسين معدل الاختراق', 'Rate of Penetration (ROP) Optimization'),
   createPlaceholderLesson('mwd-lwd', 'القياس والتسجيل أثناء الحفر', 'MWD & LWD Systems'),
   createPlaceholderLesson('rotary-steerable-systems', 'أنظمة التوجيه الدوارة', 'Rotary Steerable Systems (RSS)'),
