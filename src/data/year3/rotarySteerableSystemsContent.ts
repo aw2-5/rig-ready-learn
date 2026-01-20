@@ -1040,194 +1040,514 @@ Operating RSS requires deep understanding of the tool, drilling parameters, and 
         },
       },
     },
-    // Day 5: Weekly Review
+    // Day 5: RSS Maintenance and Economic Analysis
     {
       day: 5,
       type: 'learning',
       content: {
         ar: {
-          title: 'مراجعة أسبوعية - أنظمة التوجيه الدوارة',
+          title: 'صيانة RSS والتحليل الاقتصادي - اليوم الخامس',
           explanation: `<section>
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1.5rem;">🔷 ملخص شامل: أنظمة التوجيه الدوارة (RSS)</h2>
-
-<p style="margin-bottom: 1.5rem; line-height: 1.8; font-size: 1.1rem;">
-هذا الأسبوع تعلمنا عن تقنية <strong>Rotary Steerable Systems (RSS)</strong> التي غيرت مفهوم الحفر الموجه. فيما يلي ملخص للنقاط الأساسية.
-</p>
+<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1.5rem;">🔷 صيانة أنظمة RSS (RSS Maintenance)</h2>
 
 <div style="background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%); color: white; padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem;">
-<h3 style="font-size: 1.2rem; margin-bottom: 1rem;">📌 المفهوم الأساسي</h3>
+<h3 style="color: #f4a261; margin-bottom: 1rem;">📌 أهمية الصيانة الوقائية</h3>
 <p style="line-height: 1.8;">
-RSS تتيح التوجيه أثناء <strong>الدوران المستمر</strong> لعمود الحفر، مما يلغي الحاجة للـ Sliding ويحسن ROP وجودة البئر وتنظيف الحفرة.
+أنظمة RSS استثمار مكلف، وصيانتها السليمة تضمن أداءً موثوقاً وعمراً تشغيلياً طويلاً. الصيانة الوقائية تقلل وقت التوقف غير المخطط وتتجنب التكاليف الكارثية لفشل الأداة أثناء الحفر.
 </p>
 </div>
 
-<h3 style="color: #d97706; font-size: 1.3rem; font-weight: bold; margin-top: 2rem; margin-bottom: 1rem;">📊 مقارنة الأنظمة الرئيسية</h3>
+<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem 0;">🔧 عمليات Redress الميدانية</h3>
 
-<table style="width: 100%; border-collapse: collapse; margin-bottom: 2rem; font-size: 0.95rem;">
+<div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
+<p style="margin-bottom: 1rem;">Redress هو إعادة تأهيل الأداة بعد كل رحلة حفر:</p>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-top: 1rem;">
+<div style="background: #e8f5e9; padding: 1.25rem; border-radius: 10px;">
+<h4 style="color: #27ae60; margin-bottom: 0.75rem;">✅ فحوصات ما بعد الرحلة</h4>
+<ul style="margin: 0; padding-right: 1.25rem; line-height: 1.8;">
+<li>فحص بصري للتآكل والأضرار</li>
+<li>قياس أبعاد الـ Pads والـ Stabilizers</li>
+<li>اختبار الإلكترونيات والحساسات</li>
+<li>فحص الـ Seals والـ Bearings</li>
+<li>تحميل واختبار البرنامج</li>
+</ul>
+</div>
+<div style="background: #fff3e0; padding: 1.25rem; border-radius: 10px;">
+<h4 style="color: #f39c12; margin-bottom: 0.75rem;">⚙️ جدول الاستبدال</h4>
+<ul style="margin: 0; padding-right: 1.25rem; line-height: 1.8;">
+<li><strong>Pads:</strong> كل 50-100 ساعة حسب التآكل</li>
+<li><strong>Bearings:</strong> كل 200-300 ساعة</li>
+<li><strong>Seals:</strong> كل رحلة أو حسب الفحص</li>
+<li><strong>Electronics:</strong> عند ظهور أعطال</li>
+<li><strong>Batteries:</strong> حسب ساعات التشغيل</li>
+</ul>
+</div>
+</div>
+</div>
+
+<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem 0;">🔍 تحليل الأعطال (Failure Analysis)</h3>
+
+<div style="background: #fef2f2; padding: 1.5rem; border-radius: 12px; border-left: 4px solid #dc2626; margin-bottom: 2rem;">
+<h4 style="color: #991b1b; margin-bottom: 1rem;">أنواع الأعطال الشائعة</h4>
+
+<div style="overflow-x: auto;">
+<table style="width: 100%; border-collapse: collapse; font-size: 0.95rem;">
+<thead>
+<tr style="background: #991b1b; color: white;">
+<th style="padding: 1rem; text-align: center; border: 1px solid #7f1d1d;">نوع العطل</th>
+<th style="padding: 1rem; text-align: right; border: 1px solid #7f1d1d;">الأسباب الشائعة</th>
+<th style="padding: 1rem; text-align: right; border: 1px solid #7f1d1d;">الوقاية</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: #fef2f2;">
+<td style="padding: 0.75rem; border: 1px solid #fecaca; text-align: center; font-weight: bold;">كهربائي</td>
+<td style="padding: 0.75rem; border: 1px solid #fecaca;">ارتفاع الحرارة، تسرب السوائل، الاهتزازات</td>
+<td style="padding: 0.75rem; border: 1px solid #fecaca;">الحفاظ على Flow Rate، فحص Seals</td>
+</tr>
+<tr style="background: #fff;">
+<td style="padding: 0.75rem; border: 1px solid #fecaca; text-align: center; font-weight: bold;">ميكانيكي</td>
+<td style="padding: 0.75rem; border: 1px solid #fecaca;">تآكل Pads، كسر Bearings، Washout</td>
+<td style="padding: 0.75rem; border: 1px solid #fecaca;">Redress منتظم، تجنب Vibrations</td>
+</tr>
+<tr style="background: #fef2f2;">
+<td style="padding: 0.75rem; border: 1px solid #fecaca; text-align: center; font-weight: bold;">هيدروليكي</td>
+<td style="padding: 0.75rem; border: 1px solid #fecaca;">انسداد Nozzles، تلف Seals، تسرب</td>
+<td style="padding: 0.75rem; border: 1px solid #fecaca;">ترشيح الطين، صيانة Seals</td>
+</tr>
+<tr style="background: #fff;">
+<td style="padding: 0.75rem; border: 1px solid #fecaca; text-align: center; font-weight: bold;">اتصالات</td>
+<td style="padding: 0.75rem; border: 1px solid #fecaca;">فشل Downlink، تشويش الإشارة</td>
+<td style="padding: 0.75rem; border: 1px solid #fecaca;">اختبار الاتصال قبل RIH</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<h4 style="color: #2c3e50; margin: 1.5rem 0 1rem 0;">Root Cause Analysis (RCA)</h4>
+
+<div style="background: #e3f2fd; padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
+<p style="margin-bottom: 1rem;">عند حدوث عطل، يجب إجراء تحليل السبب الجذري:</p>
+<ol style="margin: 0; padding-right: 1.25rem; line-height: 2;">
+<li><strong>جمع البيانات:</strong> سجلات الحفر، بيانات الأداة، ظروف التشغيل</li>
+<li><strong>تحديد التسلسل:</strong> ما الذي حدث قبل العطل مباشرة؟</li>
+<li><strong>تحليل السبب:</strong> لماذا حدث العطل (5 Whys)</li>
+<li><strong>التوصيات:</strong> إجراءات تصحيحية ووقائية</li>
+<li><strong>التوثيق:</strong> تسجيل للرجوع المستقبلي</li>
+</ol>
+</div>
+
+<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem 0;">💰 التحليل الاقتصادي (Economic Analysis)</h3>
+
+<div style="background: linear-gradient(135deg, #059669 0%, #10b981 100%); color: white; padding: 1.5rem; border-radius: 12px; margin-bottom: 1.5rem;">
+<h4 style="margin-bottom: 1rem;">RSS vs Mud Motor: مقارنة التكاليف</h4>
+<p style="line-height: 1.8;">
+قرار استخدام RSS أو Mud Motor يعتمد على التحليل الاقتصادي الشامل، وليس فقط على تكلفة الأداة اليومية.
+</p>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+<div style="background: #f0f9ff; padding: 1.5rem; border-radius: 12px; border-left: 4px solid #3498db;">
+<h4 style="color: #3498db; margin-bottom: 1rem;">💵 التكاليف المباشرة</h4>
+<ul style="margin: 0; padding-right: 1.25rem; line-height: 1.8;">
+<li><strong>RSS Daily Rate:</strong> $15,000-40,000/day</li>
+<li><strong>Mud Motor Rate:</strong> $3,000-8,000/day</li>
+<li><strong>Redress Cost:</strong> $5,000-15,000 per run</li>
+<li><strong>LWD/MWD:</strong> تكلفة إضافية مماثلة</li>
+</ul>
+</div>
+<div style="background: #ecfdf5; padding: 1.5rem; border-radius: 12px; border-left: 4px solid #27ae60;">
+<h4 style="color: #27ae60; margin-bottom: 1rem;">📈 القيمة المضافة بـ RSS</h4>
+<ul style="margin: 0; padding-right: 1.25rem; line-height: 1.8;">
+<li><strong>ROP أعلى:</strong> 20-40% زيادة = أيام أقل</li>
+<li><strong>Hole Quality:</strong> تقليل Reaming و Washouts</li>
+<li><strong>Casing Running:</strong> أسهل وأسرع</li>
+<li><strong>Completion:</strong> أداء إنتاجي أفضل</li>
+</ul>
+</div>
+</div>
+
+<h4 style="color: #2c3e50; margin: 1.5rem 0 1rem 0;">Break-Even Analysis</h4>
+
+<div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
+<p style="margin-bottom: 1rem;">حساب النقطة التي يصبح فيها RSS مجدياً اقتصادياً:</p>
+
+<div style="background: #fff3e0; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+<p style="font-family: monospace; margin: 0;">
+<strong>توفير RSS = </strong>(Days Saved × Rig Rate) - (RSS Cost Premium)<br>
+<strong>Break-Even عندما:</strong> Days Saved × Rig Rate = RSS Cost Premium
+</p>
+</div>
+
+<p style="margin-bottom: 0.5rem;"><strong>مثال:</strong></p>
+<ul style="margin: 0; padding-right: 1.25rem; line-height: 1.8;">
+<li>Rig Rate: $100,000/day</li>
+<li>RSS Premium: $30,000/day (فوق Mud Motor)</li>
+<li>RSS توفر 3 أيام في قسم 5,000 ft</li>
+<li>التوفير = (3 × $100,000) - (5 × $30,000) = $150,000</li>
+<li><strong>النتيجة:</strong> RSS مجدي اقتصادياً في هذا السيناريو</li>
+</ul>
+</div>
+
+<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem 0;">📊 معايير اختيار RSS</h3>
+
+<div style="background: #f3e5f5; padding: 1.5rem; border-radius: 12px; margin-bottom: 1.5rem;">
+<h4 style="color: #8e24aa; margin-bottom: 1rem;">متى نختار RSS؟</h4>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+<div style="background: white; padding: 1rem; border-radius: 8px; border: 1px solid #e1bee7;">
+<h5 style="color: #27ae60; margin-bottom: 0.5rem;">✅ RSS مفضل</h5>
+<ul style="margin: 0; padding-right: 1rem; font-size: 0.9rem;">
+<li>ERD Wells (MD/TVD > 2)</li>
+<li>Horizontal wells > 3,000 ft</li>
+<li>High Rig Rate (> $80,000/day)</li>
+<li>جودة البئر أولوية</li>
+<li>تكوينات متغيرة</li>
+</ul>
+</div>
+<div style="background: white; padding: 1rem; border-radius: 8px; border: 1px solid #e1bee7;">
+<h5 style="color: #f39c12; margin-bottom: 0.5rem;">⚠️ Mud Motor قد يكون أفضل</h5>
+<ul style="margin: 0; padding-right: 1rem; font-size: 0.9rem;">
+<li>آبار رأسية أو J-Type بسيطة</li>
+<li>Rig Rate منخفض</li>
+<li>أقسام قصيرة (< 2,000 ft)</li>
+<li>تكوينات مستقرة صلبة</li>
+<li>ميزانية محدودة جداً</li>
+</ul>
+</div>
+</div>
+</div>
+
+<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem 0;">🚀 مقارنة موردي RSS</h3>
+
+<div style="overflow-x: auto; margin-bottom: 1.5rem;">
+<table style="width: 100%; border-collapse: collapse; font-size: 0.95rem;">
 <thead>
 <tr style="background: #1e3a5f; color: white;">
-<th style="padding: 1rem; text-align: center; border: 1px solid #334155;">الخاصية</th>
-<th style="padding: 1rem; text-align: center; border: 1px solid #334155;">Push-the-Bit</th>
-<th style="padding: 1rem; text-align: center; border: 1px solid #334155;">Point-the-Bit</th>
+<th style="padding: 1rem; text-align: center; border: 1px solid #334155;">المورد</th>
+<th style="padding: 1rem; text-align: center; border: 1px solid #334155;">النظام</th>
+<th style="padding: 1rem; text-align: center; border: 1px solid #334155;">النوع</th>
+<th style="padding: 1rem; text-align: center; border: 1px solid #334155;">الميزة الرئيسية</th>
 </tr>
 </thead>
 <tbody>
 <tr style="background: #f8fafc;">
-<td style="padding: 0.75rem; border: 1px solid #e2e8f0; font-weight: bold;">آلية التوجيه</td>
-<td style="padding: 0.75rem; border: 1px solid #e2e8f0;">دفع جانبي للأداة</td>
-<td style="padding: 0.75rem; border: 1px solid #e2e8f0;">إمالة محور الـ Bit</td>
+<td style="padding: 0.75rem; border: 1px solid #e2e8f0;">SLB</td>
+<td style="padding: 0.75rem; border: 1px solid #e2e8f0;">PowerDrive</td>
+<td style="padding: 0.75rem; border: 1px solid #e2e8f0;">Push & Point</td>
+<td style="padding: 0.75rem; border: 1px solid #e2e8f0;">تكامل مع LWD</td>
 </tr>
 <tr>
-<td style="padding: 0.75rem; border: 1px solid #e2e8f0; font-weight: bold;">تأثير التكوين</td>
-<td style="padding: 0.75rem; border: 1px solid #e2e8f0;">عالي (يحتاج Fulcrum)</td>
-<td style="padding: 0.75rem; border: 1px solid #e2e8f0;">منخفض</td>
+<td style="padding: 0.75rem; border: 1px solid #e2e8f0;">Halliburton</td>
+<td style="padding: 0.75rem; border: 1px solid #e2e8f0;">Geo-Pilot</td>
+<td style="padding: 0.75rem; border: 1px solid #e2e8f0;">Point-the-Bit</td>
+<td style="padding: 0.75rem; border: 1px solid #e2e8f0;">DLS عالي</td>
 </tr>
 <tr style="background: #f8fafc;">
-<td style="padding: 0.75rem; border: 1px solid #e2e8f0; font-weight: bold;">DLS القصوى</td>
-<td style="padding: 0.75rem; border: 1px solid #e2e8f0;">3-10°/100ft</td>
-<td style="padding: 0.75rem; border: 1px solid #e2e8f0;">8-18°/100ft</td>
+<td style="padding: 0.75rem; border: 1px solid #e2e8f0;">Baker Hughes</td>
+<td style="padding: 0.75rem; border: 1px solid #e2e8f0;">AutoTrak</td>
+<td style="padding: 0.75rem; border: 1px solid #e2e8f0;">Push-the-Bit</td>
+<td style="padding: 0.75rem; border: 1px solid #e2e8f0;">موثوقية عالية</td>
 </tr>
 <tr>
-<td style="padding: 0.75rem; border: 1px solid #e2e8f0; font-weight: bold;">التعقيد الميكانيكي</td>
-<td style="padding: 0.75rem; border: 1px solid #e2e8f0;">أقل</td>
-<td style="padding: 0.75rem; border: 1px solid #e2e8f0;">أعلى</td>
-</tr>
-<tr style="background: #f8fafc;">
-<td style="padding: 0.75rem; border: 1px solid #e2e8f0; font-weight: bold;">التكلفة</td>
-<td style="padding: 0.75rem; border: 1px solid #e2e8f0;">أقل نسبياً</td>
-<td style="padding: 0.75rem; border: 1px solid #e2e8f0;">أعلى</td>
-</tr>
-<tr>
-<td style="padding: 0.75rem; border: 1px solid #e2e8f0; font-weight: bold;">التكوينات الناعمة</td>
-<td style="padding: 0.75rem; border: 1px solid #e2e8f0;">أداء ضعيف</td>
-<td style="padding: 0.75rem; border: 1px solid #e2e8f0;">أداء ممتاز</td>
+<td style="padding: 0.75rem; border: 1px solid #e2e8f0;">NOV</td>
+<td style="padding: 0.75rem; border: 1px solid #e2e8f0;">Vector</td>
+<td style="padding: 0.75rem; border: 1px solid #e2e8f0;">Hybrid</td>
+<td style="padding: 0.75rem; border: 1px solid #e2e8f0;">تعدد الأحجام</td>
 </tr>
 </tbody>
 </table>
+</div>
 
-<h3 style="color: #d97706; font-size: 1.3rem; font-weight: bold; margin-top: 2rem; margin-bottom: 1rem;">🔧 النقاط التشغيلية الحرجة</h3>
+<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem 0;">🔮 مستقبل تقنية RSS</h3>
 
-<div style="background: #ecfdf5; padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
-<ul style="padding-left: 1.5rem; line-height: 2;">
-<li><strong>Flow Rate:</strong> حرج لتشغيل Turbine وتبريد الإلكترونيات</li>
-<li><strong>Downlink:</strong> التحكم عبر تغيير Flow Rate أو RPM أو أنماط الدوران</li>
-<li><strong>Steering Ratio:</strong> ابدأ منخفضاً وزد تدريجياً</li>
-<li><strong>Auto-Hold:</strong> استخدمه في الأقسام المستقيمة</li>
-<li><strong>Vibration Monitoring:</strong> أساسي لتجنب أعطال الحساسات</li>
+<div style="background: #e0f2f1; padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
+<ul style="margin: 0; padding-right: 1.25rem; line-height: 2;">
+<li><strong>At-Bit RSS:</strong> الحساسات والتوجيه عند الـ Bit مباشرة</li>
+<li><strong>Closed-Loop Geosteering:</strong> توجيه تلقائي بناءً على بيانات LWD</li>
+<li><strong>AI Integration:</strong> تحسين المعاملات بالذكاء الاصطناعي</li>
+<li><strong>Extended Temperature:</strong> تشغيل في درجات حرارة أعلى (> 175°C)</li>
+<li><strong>Smaller Sizes:</strong> أنظمة لأقطار أصغر (< 4")</li>
 </ul>
 </div>
 
-<h3 style="color: #d97706; font-size: 1.3rem; font-weight: bold; margin-top: 2rem; margin-bottom: 1rem;">⚠️ المشاكل الشائعة</h3>
-
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 2rem;">
-<div style="background: #fef2f2; padding: 1rem; border-radius: 8px;">
-<h4 style="color: #991b1b; margin-bottom: 0.5rem;">No Steering Response</h4>
-<p style="font-size: 0.9rem;">تحقق من Flow Rate والاتصال</p>
-</div>
-<div style="background: #fef3c7; padding: 1rem; border-radius: 8px;">
-<h4 style="color: #92400e; margin-bottom: 0.5rem;">Erratic Steering</h4>
-<p style="font-size: 0.9rem;">قلل RPM وعدّل WOB</p>
-</div>
-<div style="background: #f0f9ff; padding: 1rem; border-radius: 8px;">
-<h4 style="color: #0369a1; margin-bottom: 0.5rem;">Tool Failure</h4>
-<p style="font-size: 0.9rem;">POOH للفحص والاستبدال</p>
-</div>
-<div style="background: #f0fdf4; padding: 1rem; border-radius: 8px;">
-<h4 style="color: #047857; margin-bottom: 0.5rem;">Pad Wear</h4>
-<p style="font-size: 0.9rem;">مراقبة DLS وفحص دوري</p>
-</div>
-</div>
-
-<h3 style="color: #d97706; font-size: 1.3rem; font-weight: bold; margin-top: 2rem; margin-bottom: 1rem;">🎯 متى نختار كل نظام؟</h3>
-
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem;">
-<div style="background: #f0f9ff; padding: 1.5rem; border-radius: 10px; border-left: 4px solid #0369a1;">
-<h4 style="color: #0369a1; font-size: 1.1rem; margin-bottom: 0.75rem;">✅ Push-the-Bit</h4>
-<ul style="font-size: 0.95rem; line-height: 1.7; padding-left: 1.25rem;">
-<li>تكوينات متوسطة إلى صلبة</li>
-<li>ميزانية محدودة</li>
-<li>DLS متوسط مقبول</li>
-<li>ERD Wells</li>
-</ul>
-</div>
-<div style="background: #fef3c7; padding: 1.5rem; border-radius: 10px; border-left: 4px solid #d97706;">
-<h4 style="color: #d97706; font-size: 1.1rem; margin-bottom: 0.75rem;">✅ Point-the-Bit</h4>
-<ul style="font-size: 0.95rem; line-height: 1.7; padding-left: 1.25rem;">
-<li>تكوينات ناعمة أو متغيرة</li>
-<li>DLS عالي مطلوب</li>
-<li>Geosteering دقيق</li>
-<li>جودة بئر أولوية</li>
-</ul>
-</div>
-</div>
-
-<div style="background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%); color: white; padding: 1.5rem; border-radius: 12px; margin-top: 2rem;">
-<h3 style="font-size: 1.2rem; margin-bottom: 1rem;">💡 رسالة أساسية</h3>
-<p style="line-height: 1.8;">
-أنظمة RSS ليست بديلاً كاملاً لمحركات الطين في جميع الحالات، لكنها الخيار المفضل للآبار المعقدة، ERD، والتطبيقات التي تتطلب جودة بئر عالية و ROP مستمر. اختيار النظام يعتمد على التكوين والميزانية ومتطلبات المسار.
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1.5rem; border-radius: 12px; margin-top: 2rem;">
+<h4 style="color: #ffd700; margin-bottom: 1rem;">💡 نصيحة للمهندس</h4>
+<p style="margin: 0; line-height: 1.8;">
+لا تنظر فقط للتكلفة اليومية عند اختيار RSS أو Mud Motor. احسب التكلفة الإجمالية للقسم بما فيها الوقت المتوقع، جودة البئر، ومخاطر المشاكل. في كثير من الحالات، RSS "الأغلى" يوفر المال في المحصلة النهائية.
 </p>
 </div>
 </section>`,
-          keyTerms: [],
+          keyTerms: [
+            { term: 'Redress', definition: 'إعادة تأهيل وصيانة أداة RSS بعد كل رحلة حفر' },
+            { term: 'Root Cause Analysis (RCA)', definition: 'منهجية تحليل لتحديد السبب الجذري للأعطال' },
+            { term: 'Break-Even Point', definition: 'النقطة التي تتساوى فيها تكلفة RSS مع التوفير المحقق' },
+            { term: 'At-Bit RSS', definition: 'تقنية مستقبلية تضع الحساسات والتوجيه عند البت مباشرة' },
+          ],
+          practiceQuestion: {
+            question: 'عند مقارنة RSS بـ Mud Motor اقتصادياً، ما هو العامل الأهم في تحديد الجدوى؟',
+            options: [
+              'تكلفة الأداة اليومية فقط',
+              'إجمالي الأيام الموفرة مضروباً في Rig Rate',
+              'سعر البترول الحالي',
+              'عدد الوصلات في الرحلة'
+            ],
+            correctAnswer: 1,
+          },
         },
         en: {
-          title: 'Weekly Review - Rotary Steerable Systems',
+          title: 'RSS Maintenance and Economic Analysis - Day 5',
           explanation: `<section>
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1.5rem;">🔷 Comprehensive Summary: Rotary Steerable Systems (RSS)</h2>
-
-<p style="margin-bottom: 1.5rem; line-height: 1.8; font-size: 1.1rem;">
-This week we learned about <strong>Rotary Steerable Systems (RSS)</strong> technology that revolutionized directional drilling. Here's a summary of the key points.
-</p>
+<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1.5rem;">🔷 RSS Maintenance</h2>
 
 <div style="background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%); color: white; padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem;">
-<h3 style="font-size: 1.2rem; margin-bottom: 1rem;">📌 Core Concept</h3>
+<h3 style="color: #f4a261; margin-bottom: 1rem;">📌 Importance of Preventive Maintenance</h3>
 <p style="line-height: 1.8;">
-RSS enables steering during <strong>continuous rotation</strong> of the drillstring, eliminating Sliding and improving ROP, hole quality, and hole cleaning.
+RSS systems are expensive investments, and proper maintenance ensures reliable performance and extended operational life. Preventive maintenance reduces unplanned downtime and avoids catastrophic costs of tool failure during drilling.
 </p>
 </div>
 
-<h3 style="color: #d97706; font-size: 1.3rem; font-weight: bold; margin-top: 2rem; margin-bottom: 1rem;">📊 Main Systems Comparison</h3>
+<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem 0;">🔧 Field Redress Operations</h3>
 
-<table style="width: 100%; border-collapse: collapse; margin-bottom: 2rem; font-size: 0.95rem;">
+<div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
+<p style="margin-bottom: 1rem;">Redress is tool rehabilitation after each drilling run:</p>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-top: 1rem;">
+<div style="background: #e8f5e9; padding: 1.25rem; border-radius: 10px;">
+<h4 style="color: #27ae60; margin-bottom: 0.75rem;">✅ Post-Run Inspections</h4>
+<ul style="margin: 0; padding-left: 1.25rem; line-height: 1.8;">
+<li>Visual inspection for wear and damage</li>
+<li>Measure Pads and Stabilizers dimensions</li>
+<li>Test electronics and sensors</li>
+<li>Inspect Seals and Bearings</li>
+<li>Download and test software</li>
+</ul>
+</div>
+<div style="background: #fff3e0; padding: 1.25rem; border-radius: 10px;">
+<h4 style="color: #f39c12; margin-bottom: 0.75rem;">⚙️ Replacement Schedule</h4>
+<ul style="margin: 0; padding-left: 1.25rem; line-height: 1.8;">
+<li><strong>Pads:</strong> Every 50-100 hours based on wear</li>
+<li><strong>Bearings:</strong> Every 200-300 hours</li>
+<li><strong>Seals:</strong> Every run or as inspected</li>
+<li><strong>Electronics:</strong> When faults appear</li>
+<li><strong>Batteries:</strong> Based on operating hours</li>
+</ul>
+</div>
+</div>
+</div>
+
+<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem 0;">🔍 Failure Analysis</h3>
+
+<div style="background: #fef2f2; padding: 1.5rem; border-radius: 12px; border-left: 4px solid #dc2626; margin-bottom: 2rem;">
+<h4 style="color: #991b1b; margin-bottom: 1rem;">Common Failure Types</h4>
+
+<div style="overflow-x: auto;">
+<table style="width: 100%; border-collapse: collapse; font-size: 0.95rem;">
+<thead>
+<tr style="background: #991b1b; color: white;">
+<th style="padding: 1rem; text-align: center; border: 1px solid #7f1d1d;">Failure Type</th>
+<th style="padding: 1rem; text-align: left; border: 1px solid #7f1d1d;">Common Causes</th>
+<th style="padding: 1rem; text-align: left; border: 1px solid #7f1d1d;">Prevention</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: #fef2f2;">
+<td style="padding: 0.75rem; border: 1px solid #fecaca; text-align: center; font-weight: bold;">Electrical</td>
+<td style="padding: 0.75rem; border: 1px solid #fecaca;">Overheating, fluid ingress, vibrations</td>
+<td style="padding: 0.75rem; border: 1px solid #fecaca;">Maintain Flow Rate, check Seals</td>
+</tr>
+<tr style="background: #fff;">
+<td style="padding: 0.75rem; border: 1px solid #fecaca; text-align: center; font-weight: bold;">Mechanical</td>
+<td style="padding: 0.75rem; border: 1px solid #fecaca;">Pad wear, Bearing failure, Washout</td>
+<td style="padding: 0.75rem; border: 1px solid #fecaca;">Regular Redress, avoid Vibrations</td>
+</tr>
+<tr style="background: #fef2f2;">
+<td style="padding: 0.75rem; border: 1px solid #fecaca; text-align: center; font-weight: bold;">Hydraulic</td>
+<td style="padding: 0.75rem; border: 1px solid #fecaca;">Nozzle plugging, Seal damage, leaks</td>
+<td style="padding: 0.75rem; border: 1px solid #fecaca;">Mud filtration, Seal maintenance</td>
+</tr>
+<tr style="background: #fff;">
+<td style="padding: 0.75rem; border: 1px solid #fecaca; text-align: center; font-weight: bold;">Communication</td>
+<td style="padding: 0.75rem; border: 1px solid #fecaca;">Downlink failure, signal interference</td>
+<td style="padding: 0.75rem; border: 1px solid #fecaca;">Test communication before RIH</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<h4 style="color: #2c3e50; margin: 1.5rem 0 1rem 0;">Root Cause Analysis (RCA)</h4>
+
+<div style="background: #e3f2fd; padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
+<p style="margin-bottom: 1rem;">When failure occurs, root cause analysis must be performed:</p>
+<ol style="margin: 0; padding-left: 1.25rem; line-height: 2;">
+<li><strong>Data Collection:</strong> Drilling logs, tool data, operating conditions</li>
+<li><strong>Sequence Identification:</strong> What happened immediately before failure?</li>
+<li><strong>Cause Analysis:</strong> Why did failure occur (5 Whys)</li>
+<li><strong>Recommendations:</strong> Corrective and preventive actions</li>
+<li><strong>Documentation:</strong> Record for future reference</li>
+</ol>
+</div>
+
+<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem 0;">💰 Economic Analysis</h3>
+
+<div style="background: linear-gradient(135deg, #059669 0%, #10b981 100%); color: white; padding: 1.5rem; border-radius: 12px; margin-bottom: 1.5rem;">
+<h4 style="margin-bottom: 1rem;">RSS vs Mud Motor: Cost Comparison</h4>
+<p style="line-height: 1.8;">
+The decision to use RSS or Mud Motor depends on comprehensive economic analysis, not just daily tool cost.
+</p>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+<div style="background: #f0f9ff; padding: 1.5rem; border-radius: 12px; border-left: 4px solid #3498db;">
+<h4 style="color: #3498db; margin-bottom: 1rem;">💵 Direct Costs</h4>
+<ul style="margin: 0; padding-left: 1.25rem; line-height: 1.8;">
+<li><strong>RSS Daily Rate:</strong> $15,000-40,000/day</li>
+<li><strong>Mud Motor Rate:</strong> $3,000-8,000/day</li>
+<li><strong>Redress Cost:</strong> $5,000-15,000 per run</li>
+<li><strong>LWD/MWD:</strong> Similar additional cost</li>
+</ul>
+</div>
+<div style="background: #ecfdf5; padding: 1.5rem; border-radius: 12px; border-left: 4px solid #27ae60;">
+<h4 style="color: #27ae60; margin-bottom: 1rem;">📈 RSS Value Added</h4>
+<ul style="margin: 0; padding-left: 1.25rem; line-height: 1.8;">
+<li><strong>Higher ROP:</strong> 20-40% increase = fewer days</li>
+<li><strong>Hole Quality:</strong> Reduced Reaming & Washouts</li>
+<li><strong>Casing Running:</strong> Easier and faster</li>
+<li><strong>Completion:</strong> Better production performance</li>
+</ul>
+</div>
+</div>
+
+<h4 style="color: #2c3e50; margin: 1.5rem 0 1rem 0;">Break-Even Analysis</h4>
+
+<div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
+<p style="margin-bottom: 1rem;">Calculating the point where RSS becomes economically viable:</p>
+
+<div style="background: #fff3e0; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+<p style="font-family: monospace; margin: 0;">
+<strong>RSS Savings = </strong>(Days Saved × Rig Rate) - (RSS Cost Premium)<br>
+<strong>Break-Even when:</strong> Days Saved × Rig Rate = RSS Cost Premium
+</p>
+</div>
+
+<p style="margin-bottom: 0.5rem;"><strong>Example:</strong></p>
+<ul style="margin: 0; padding-left: 1.25rem; line-height: 1.8;">
+<li>Rig Rate: $100,000/day</li>
+<li>RSS Premium: $30,000/day (over Mud Motor)</li>
+<li>RSS saves 3 days in 5,000 ft section</li>
+<li>Savings = (3 × $100,000) - (5 × $30,000) = $150,000</li>
+<li><strong>Result:</strong> RSS is economically viable in this scenario</li>
+</ul>
+</div>
+
+<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem 0;">📊 RSS Selection Criteria</h3>
+
+<div style="background: #f3e5f5; padding: 1.5rem; border-radius: 12px; margin-bottom: 1.5rem;">
+<h4 style="color: #8e24aa; margin-bottom: 1rem;">When to Choose RSS?</h4>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+<div style="background: white; padding: 1rem; border-radius: 8px; border: 1px solid #e1bee7;">
+<h5 style="color: #27ae60; margin-bottom: 0.5rem;">✅ RSS Preferred</h5>
+<ul style="margin: 0; padding-left: 1rem; font-size: 0.9rem;">
+<li>ERD Wells (MD/TVD > 2)</li>
+<li>Horizontal wells > 3,000 ft</li>
+<li>High Rig Rate (> $80,000/day)</li>
+<li>Hole quality is priority</li>
+<li>Variable formations</li>
+</ul>
+</div>
+<div style="background: white; padding: 1rem; border-radius: 8px; border: 1px solid #e1bee7;">
+<h5 style="color: #f39c12; margin-bottom: 0.5rem;">⚠️ Mud Motor May Be Better</h5>
+<ul style="margin: 0; padding-left: 1rem; font-size: 0.9rem;">
+<li>Vertical or simple J-Type wells</li>
+<li>Low Rig Rate</li>
+<li>Short sections (< 2,000 ft)</li>
+<li>Stable hard formations</li>
+<li>Very limited budget</li>
+</ul>
+</div>
+</div>
+</div>
+
+<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem 0;">🚀 RSS Vendor Comparison</h3>
+
+<div style="overflow-x: auto; margin-bottom: 1.5rem;">
+<table style="width: 100%; border-collapse: collapse; font-size: 0.95rem;">
 <thead>
 <tr style="background: #1e3a5f; color: white;">
-<th style="padding: 1rem; text-align: center; border: 1px solid #334155;">Property</th>
-<th style="padding: 1rem; text-align: center; border: 1px solid #334155;">Push-the-Bit</th>
-<th style="padding: 1rem; text-align: center; border: 1px solid #334155;">Point-the-Bit</th>
+<th style="padding: 1rem; text-align: center; border: 1px solid #334155;">Vendor</th>
+<th style="padding: 1rem; text-align: center; border: 1px solid #334155;">System</th>
+<th style="padding: 1rem; text-align: center; border: 1px solid #334155;">Type</th>
+<th style="padding: 1rem; text-align: center; border: 1px solid #334155;">Key Advantage</th>
 </tr>
 </thead>
 <tbody>
 <tr style="background: #f8fafc;">
-<td style="padding: 0.75rem; border: 1px solid #e2e8f0; font-weight: bold;">Steering Mechanism</td>
-<td style="padding: 0.75rem; border: 1px solid #e2e8f0;">Lateral tool push</td>
-<td style="padding: 0.75rem; border: 1px solid #e2e8f0;">Bit axis tilting</td>
+<td style="padding: 0.75rem; border: 1px solid #e2e8f0;">SLB</td>
+<td style="padding: 0.75rem; border: 1px solid #e2e8f0;">PowerDrive</td>
+<td style="padding: 0.75rem; border: 1px solid #e2e8f0;">Push & Point</td>
+<td style="padding: 0.75rem; border: 1px solid #e2e8f0;">LWD Integration</td>
 </tr>
 <tr>
-<td style="padding: 0.75rem; border: 1px solid #e2e8f0; font-weight: bold;">Formation Effect</td>
-<td style="padding: 0.75rem; border: 1px solid #e2e8f0;">High (needs Fulcrum)</td>
-<td style="padding: 0.75rem; border: 1px solid #e2e8f0;">Low</td>
+<td style="padding: 0.75rem; border: 1px solid #e2e8f0;">Halliburton</td>
+<td style="padding: 0.75rem; border: 1px solid #e2e8f0;">Geo-Pilot</td>
+<td style="padding: 0.75rem; border: 1px solid #e2e8f0;">Point-the-Bit</td>
+<td style="padding: 0.75rem; border: 1px solid #e2e8f0;">High DLS</td>
 </tr>
 <tr style="background: #f8fafc;">
-<td style="padding: 0.75rem; border: 1px solid #e2e8f0; font-weight: bold;">Max DLS</td>
-<td style="padding: 0.75rem; border: 1px solid #e2e8f0;">3-10°/100ft</td>
-<td style="padding: 0.75rem; border: 1px solid #e2e8f0;">8-18°/100ft</td>
+<td style="padding: 0.75rem; border: 1px solid #e2e8f0;">Baker Hughes</td>
+<td style="padding: 0.75rem; border: 1px solid #e2e8f0;">AutoTrak</td>
+<td style="padding: 0.75rem; border: 1px solid #e2e8f0;">Push-the-Bit</td>
+<td style="padding: 0.75rem; border: 1px solid #e2e8f0;">High Reliability</td>
 </tr>
 <tr>
-<td style="padding: 0.75rem; border: 1px solid #e2e8f0; font-weight: bold;">Soft Formations</td>
-<td style="padding: 0.75rem; border: 1px solid #e2e8f0;">Poor performance</td>
-<td style="padding: 0.75rem; border: 1px solid #e2e8f0;">Excellent performance</td>
+<td style="padding: 0.75rem; border: 1px solid #e2e8f0;">NOV</td>
+<td style="padding: 0.75rem; border: 1px solid #e2e8f0;">Vector</td>
+<td style="padding: 0.75rem; border: 1px solid #e2e8f0;">Hybrid</td>
+<td style="padding: 0.75rem; border: 1px solid #e2e8f0;">Size Variety</td>
 </tr>
 </tbody>
 </table>
+</div>
 
-<div style="background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%); color: white; padding: 1.5rem; border-radius: 12px; margin-top: 2rem;">
-<h3 style="font-size: 1.2rem; margin-bottom: 1rem;">💡 Key Message</h3>
-<p style="line-height: 1.8;">
-RSS is not a complete replacement for mud motors in all cases, but it's the preferred choice for complex wells, ERD, and applications requiring high hole quality and sustained ROP. System selection depends on formation, budget, and trajectory requirements.
+<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem 0;">🔮 Future of RSS Technology</h3>
+
+<div style="background: #e0f2f1; padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
+<ul style="margin: 0; padding-left: 1.25rem; line-height: 2;">
+<li><strong>At-Bit RSS:</strong> Sensors and steering at the Bit itself</li>
+<li><strong>Closed-Loop Geosteering:</strong> Automatic steering based on LWD data</li>
+<li><strong>AI Integration:</strong> Parameter optimization with AI</li>
+<li><strong>Extended Temperature:</strong> Operation at higher temperatures (> 175°C)</li>
+<li><strong>Smaller Sizes:</strong> Systems for smaller diameters (< 4")</li>
+</ul>
+</div>
+
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1.5rem; border-radius: 12px; margin-top: 2rem;">
+<h4 style="color: #ffd700; margin-bottom: 1rem;">💡 Engineer's Tip</h4>
+<p style="margin: 0; line-height: 1.8;">
+Don't just look at daily cost when choosing RSS or Mud Motor. Calculate total section cost including expected time, hole quality, and problem risks. In many cases, the "more expensive" RSS saves money in the final outcome.
 </p>
 </div>
 </section>`,
-          keyTerms: [],
+          keyTerms: [
+            { term: 'Redress', definition: 'RSS tool rehabilitation and maintenance after each drilling run' },
+            { term: 'Root Cause Analysis (RCA)', definition: 'Analysis methodology to determine the root cause of failures' },
+            { term: 'Break-Even Point', definition: 'Point where RSS cost equals the savings achieved' },
+            { term: 'At-Bit RSS', definition: 'Future technology placing sensors and steering at the bit itself' },
+          ],
+          practiceQuestion: {
+            question: 'When comparing RSS to Mud Motor economically, what is the most important factor in determining viability?',
+            options: [
+              'Daily tool cost only',
+              'Total days saved multiplied by Rig Rate',
+              'Current oil price',
+              'Number of connections per run'
+            ],
+            correctAnswer: 1,
+          },
         },
       },
     },
