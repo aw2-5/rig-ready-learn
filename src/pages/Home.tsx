@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, lazy, Suspense } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useAuth } from '@/contexts/AuthContext';
@@ -9,13 +9,16 @@ import { lessons } from '@/data/lessons';
 import { lessonsYear2 } from '@/data/lessonsYear2';
 import { lessonsYear3 } from '@/data/lessonsYear3';
 import { useLevelProgress } from '@/hooks/useLevelProgress';
-import { LevelCompletionModal } from '@/components/LevelCompletionModal';
-import { UpgradeAccountModal } from '@/components/UpgradeAccountModal';
-import { LevelTest } from '@/components/LevelTest';
 import { ThemeToggle } from '@/components/ThemeToggle';
-import { SearchModal } from '@/components/SearchModal';
-import { AIAssistant } from '@/components/AIAssistant';
 import { sendLevelCompletionEmail } from '@/lib/emailNotifications';
+import { Onboarding } from '@/components/Onboarding';
+
+// Lazy load heavy components for code splitting
+const LevelCompletionModal = lazy(() => import('@/components/LevelCompletionModal').then(m => ({ default: m.LevelCompletionModal })));
+const UpgradeAccountModal = lazy(() => import('@/components/UpgradeAccountModal').then(m => ({ default: m.UpgradeAccountModal })));
+const LevelTest = lazy(() => import('@/components/LevelTest').then(m => ({ default: m.LevelTest })));
+const SearchModal = lazy(() => import('@/components/SearchModal').then(m => ({ default: m.SearchModal })));
+const AIAssistant = lazy(() => import('@/components/AIAssistant').then(m => ({ default: m.AIAssistant })));
 import { 
   BookOpen, 
   GraduationCap, 
@@ -57,6 +60,9 @@ export default function Home() {
   } = useLevelProgress();
   const navigate = useNavigate();
   const [selectedYear, setSelectedYear] = useState(1);
+  const [showOnboarding, setShowOnboarding] = useState(() => {
+    return !localStorage.getItem('onboarding-complete');
+  });
   const [showLevel1CompleteModal, setShowLevel1CompleteModal] = useState(false);
   const [showLevel2CompleteModal, setShowLevel2CompleteModal] = useState(false);
   const [showLevel3CompleteModal, setShowLevel3CompleteModal] = useState(false);
@@ -204,6 +210,11 @@ export default function Home() {
     return language === 'ar' ? 'المستوى الثالث' : 'Level 3';
   };
 
+  // Show onboarding for new users
+  if (showOnboarding) {
+    return <Onboarding onComplete={() => setShowOnboarding(false)} />;
+  }
+
   // Show level test if active
   if (showLevelTest) {
     return (
@@ -223,11 +234,13 @@ export default function Home() {
           </div>
         </header>
         <main className="container max-w-lg mx-auto px-4 py-6">
-          <LevelTest
-            level={showLevelTest}
-            onComplete={handleLevelTestComplete}
-            onCancel={() => setShowLevelTest(null)}
-          />
+          <Suspense fallback={<div className="flex items-center justify-center p-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div></div>}>
+            <LevelTest
+              level={showLevelTest}
+              onComplete={handleLevelTestComplete}
+              onCancel={() => setShowLevelTest(null)}
+            />
+          </Suspense>
         </main>
       </div>
     );
@@ -522,44 +535,47 @@ export default function Home() {
         </Card>
       </main>
 
-      {/* Level 1 Completion Modal */}
-      <LevelCompletionModal
-        isOpen={showLevel1CompleteModal}
-        onClose={() => setShowLevel1CompleteModal(false)}
-        level={1}
-        averageScore={level1AverageScore}
-        onGoToNextLevel={handleGoToLevel2}
-      />
+      {/* Lazy loaded modals with Suspense */}
+      <Suspense fallback={null}>
+        {/* Level 1 Completion Modal */}
+        <LevelCompletionModal
+          isOpen={showLevel1CompleteModal}
+          onClose={() => setShowLevel1CompleteModal(false)}
+          level={1}
+          averageScore={level1AverageScore}
+          onGoToNextLevel={handleGoToLevel2}
+        />
 
-      {/* Level 2 Completion Modal */}
-      <LevelCompletionModal
-        isOpen={showLevel2CompleteModal}
-        onClose={() => setShowLevel2CompleteModal(false)}
-        level={2}
-        averageScore={level2AverageScore}
-        onGoToNextLevel={handleGoToLevel3}
-      />
+        {/* Level 2 Completion Modal */}
+        <LevelCompletionModal
+          isOpen={showLevel2CompleteModal}
+          onClose={() => setShowLevel2CompleteModal(false)}
+          level={2}
+          averageScore={level2AverageScore}
+          onGoToNextLevel={handleGoToLevel3}
+        />
 
-      {/* Level 3 Completion Modal */}
-      <LevelCompletionModal
-        isOpen={showLevel3CompleteModal}
-        onClose={() => setShowLevel3CompleteModal(false)}
-        level={3}
-        averageScore={level3AverageScore}
-        onGoToNextLevel={() => setShowLevel3CompleteModal(false)}
-      />
+        {/* Level 3 Completion Modal */}
+        <LevelCompletionModal
+          isOpen={showLevel3CompleteModal}
+          onClose={() => setShowLevel3CompleteModal(false)}
+          level={3}
+          averageScore={level3AverageScore}
+          onGoToNextLevel={() => setShowLevel3CompleteModal(false)}
+        />
 
-      {/* Upgrade Account Modal */}
-      <UpgradeAccountModal
-        isOpen={showUpgradeModal}
-        onClose={() => setShowUpgradeModal(false)}
-      />
+        {/* Upgrade Account Modal */}
+        <UpgradeAccountModal
+          isOpen={showUpgradeModal}
+          onClose={() => setShowUpgradeModal(false)}
+        />
 
-      {/* Search Modal */}
-      <SearchModal open={showSearch} onOpenChange={setShowSearch} />
+        {/* Search Modal */}
+        <SearchModal open={showSearch} onOpenChange={setShowSearch} />
 
-      {/* AI Assistant */}
-      <AIAssistant />
+        {/* AI Assistant */}
+        <AIAssistant />
+      </Suspense>
     </div>
   );
 }
