@@ -1457,6 +1457,10 @@ Review technical terms and understand relationships between concepts. Tomorrow's
     {
       day: 6,
       type: 'quiz',
+      content: {
+        ar: { title: 'اختبار استقرار جدار البئر', explanation: 'اختبر معرفتك في استقرار جدار البئر', keyTerms: [] },
+        en: { title: 'Wellbore Stability Quiz', explanation: 'Test your knowledge on wellbore stability', keyTerms: [] },
+      },
       quiz: {
         en: [
           {
@@ -1637,32 +1641,36 @@ Review technical terms and understand relationships between concepts. Tomorrow's
     {
       day: 7,
       type: 'project',
+      content: {
+        ar: { title: 'مشروع: تحليل استقرار جدار البئر', explanation: 'طبق ما تعلمته', keyTerms: [] },
+        en: { title: 'Project: Wellbore Stability Case Analysis', explanation: 'Apply what you learned', keyTerms: [] },
+      },
       project: {
         en: {
           title: 'Wellbore Stability Case Study Analysis',
           description: 'You are a drilling engineer working on a new well in a challenging shale formation. Based on offset well data, the formation contains high smectite content (40%), and the previous well experienced severe stuck pipe due to wellbore instability.',
-          tasks: [
+          instructions: [
             'Analyze the potential instability mechanisms for this high-smectite shale formation',
             'Recommend a drilling fluid system with specific additives and explain your reasoning',
             'Identify at least 5 real-time monitoring parameters you would track and their warning thresholds',
             'Develop a contingency plan: What corrective actions would you take if you observe increasing torque and angular cavings?',
             'Explain how you would optimize the well trajectory to minimize stability issues'
           ],
-          submission: 'Submit a comprehensive technical report (minimum 500 words) addressing all tasks with specific recommendations and technical justifications.'
+          submissionType: 'text',
         },
         ar: {
           title: 'تحليل دراسة حالة استقرار جدار البئر',
           description: 'أنت مهندس حفر تعمل على بئر جديد في تكوين طيني صعب. بناءً على بيانات الآبار المجاورة، يحتوي التكوين على نسبة عالية من السمكتايت (40%)، وقد عانى البئر السابق من انحشار شديد للأنابيب بسبب عدم استقرار جدار البئر.',
-          tasks: [
+          instructions: [
             'حلل آليات عدم الاستقرار المحتملة لهذا التكوين الطيني عالي السمكتايت',
             'اقترح نظام سائل حفر مع إضافات محددة واشرح أسباب اختيارك',
             'حدد على الأقل 5 معاملات مراقبة آنية ستتبعها وعتبات التحذير الخاصة بها',
             'طور خطة طوارئ: ما الإجراءات التصحيحية التي ستتخذها إذا لاحظت زيادة في Torque وظهور فتات حاد؟',
             'اشرح كيف ستحسن مسار البئر لتقليل مشاكل الاستقرار'
           ],
-          submission: 'قدم تقريراً تقنياً شاملاً (500 كلمة على الأقل) يتناول جميع المهام مع توصيات محددة ومبررات تقنية.'
-        }
-      }
-    }
-  ]
+          submissionType: 'text',
+        },
+      },
+    },
+  ],
 };
