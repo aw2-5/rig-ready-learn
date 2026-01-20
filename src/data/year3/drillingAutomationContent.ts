@@ -1015,180 +1015,412 @@ Understand that AI is not a magic box - it depends on data quality and models. A
       },
     },
 
-    // ==================== Day 5: Weekly Review ====================
+    // ==================== Day 5: Safety Systems and Emergency Control ====================
     {
       day: 5,
       type: 'learning',
       content: {
         ar: {
-          title: 'أتمتة الحفر - اليوم الخامس: المراجعة الأسبوعية',
+          title: 'أتمتة الحفر - اليوم الخامس: أنظمة السلامة والتحكم الطارئ',
           explanation: `<section>
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1.5rem;">🔷 ملخص أسبوع أتمتة الحفر</h2>
+<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1.5rem;">🔷 أنظمة السلامة في الأتمتة (Safety Systems in Automation)</h2>
 
 <div style="background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%); color: white; padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem;">
+<h3 style="color: #f4a261; margin-bottom: 1rem;">📌 أهمية السلامة في الأنظمة المؤتمتة</h3>
 <p style="line-height: 1.8;">
-خلال هذا الأسبوع، استكشفنا عالم أتمتة الحفر من المفاهيم الأساسية إلى التطبيقات المتقدمة للذكاء الاصطناعي. فيما يلي ملخص للنقاط الرئيسية.
+مع زيادة مستوى الأتمتة، تزداد أهمية أنظمة السلامة. الأنظمة المؤتمتة يمكن أن تتخذ قرارات أسرع من البشر، لكنها أيضاً قد ترتكب أخطاء كارثية إذا لم تُصمم بطبقات حماية متعددة. فهم هذه الأنظمة ضروري لكل مهندس حفر يعمل مع التقنيات الحديثة.
 </p>
 </div>
 
-<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem 0;">📚 ملخص اليوم الأول: مقدمة في أتمتة الحفر</h3>
-<div style="background: #f8f9fa; padding: 1.25rem; border-radius: 10px; margin-bottom: 1.5rem;">
+<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem 0;">🛑 أنظمة الإغلاق الطارئ (Emergency Shutdown Systems - ESD)</h3>
+
+<div style="background: #fef2f2; padding: 1.5rem; border-radius: 12px; border-left: 4px solid #dc2626; margin-bottom: 2rem;">
+<h4 style="color: #991b1b; margin-bottom: 1rem;">مستويات الإغلاق الطارئ</h4>
+<p style="margin-bottom: 1rem;">أنظمة ESD مصممة بمستويات متدرجة حسب شدة الخطر:</p>
+
+<div style="overflow-x: auto;">
+<table style="width: 100%; border-collapse: collapse; font-size: 0.95rem;">
+<thead>
+<tr style="background: #991b1b; color: white;">
+<th style="padding: 1rem; text-align: center; border: 1px solid #7f1d1d;">المستوى</th>
+<th style="padding: 1rem; text-align: right; border: 1px solid #7f1d1d;">الوصف</th>
+<th style="padding: 1rem; text-align: right; border: 1px solid #7f1d1d;">الإجراءات</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: #fef2f2;">
+<td style="padding: 0.75rem; border: 1px solid #fecaca; text-align: center; font-weight: bold;">ESD Level 0</td>
+<td style="padding: 0.75rem; border: 1px solid #fecaca;">إغلاق كامل للموقع</td>
+<td style="padding: 0.75rem; border: 1px solid #fecaca;">إيقاف جميع العمليات، إخلاء الموقع</td>
+</tr>
+<tr style="background: #fff;">
+<td style="padding: 0.75rem; border: 1px solid #fecaca; text-align: center; font-weight: bold;">ESD Level 1</td>
+<td style="padding: 0.75rem; border: 1px solid #fecaca;">إغلاق العملية الرئيسية</td>
+<td style="padding: 0.75rem; border: 1px solid #fecaca;">إيقاف الحفر، تأمين البئر، إغلاق BOP</td>
+</tr>
+<tr style="background: #fef2f2;">
+<td style="padding: 0.75rem; border: 1px solid #fecaca; text-align: center; font-weight: bold;">ESD Level 2</td>
+<td style="padding: 0.75rem; border: 1px solid #fecaca;">إغلاق نظام فرعي</td>
+<td style="padding: 0.75rem; border: 1px solid #fecaca;">إيقاف الرافعة أو المضخات فقط</td>
+</tr>
+<tr style="background: #fff;">
+<td style="padding: 0.75rem; border: 1px solid #fecaca; text-align: center; font-weight: bold;">ESD Level 3</td>
+<td style="padding: 0.75rem; border: 1px solid #fecaca;">إغلاق معدة واحدة</td>
+<td style="padding: 0.75rem; border: 1px solid #fecaca;">إيقاف مكون محدد دون التأثير على الباقي</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem 0;">🔒 أنظمة القفل المتبادل (Interlocks)</h3>
+
+<div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
+<p style="margin-bottom: 1rem;">الـ Interlocks هي آليات تمنع تشغيل معدة أو عملية إلا عند تحقق شروط السلامة:</p>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-top: 1rem;">
+<div style="background: #e8f5e9; padding: 1.25rem; border-radius: 10px;">
+<h4 style="color: #27ae60; margin-bottom: 0.75rem;">✅ أمثلة على Interlocks في الحفر</h4>
+<ul style="margin: 0; padding-right: 1.25rem; line-height: 1.8;">
+<li>منع الدوران إذا كان Slips غير مُحكم</li>
+<li>منع السحب إذا كان Elevator غير مُغلق</li>
+<li>منع تشغيل المضخات بدون اتصال الـ Standpipe</li>
+<li>منع إنزال الـ BOP إذا كان الضغط مرتفعاً</li>
+</ul>
+</div>
+<div style="background: #fff3e0; padding: 1.25rem; border-radius: 10px;">
+<h4 style="color: #f39c12; margin-bottom: 0.75rem;">⚙️ أنواع Interlocks</h4>
+<ul style="margin: 0; padding-right: 1.25rem; line-height: 1.8;">
+<li><strong>Hardware Interlock:</strong> ميكانيكي أو كهربائي فيزيائي</li>
+<li><strong>Software Interlock:</strong> منطق برمجي في PLC</li>
+<li><strong>Permissive Interlock:</strong> يتطلب إجراء قبل التشغيل</li>
+<li><strong>Inhibit Interlock:</strong> يمنع الإجراء أثناء حالة معينة</li>
+</ul>
+</div>
+</div>
+</div>
+
+<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem 0;">🖥️ سلامة واجهة المستخدم (HMI Safety)</h3>
+
+<div style="background: #e3f2fd; padding: 1.5rem; border-radius: 12px; border-left: 4px solid #3498db; margin-bottom: 1.5rem;">
+<h4 style="color: #3498db; margin-bottom: 1rem;">تصميم واجهات آمنة</h4>
+<p style="margin-bottom: 1rem;">واجهة التحكم (HMI) يجب أن تُصمم لتقليل الأخطاء البشرية:</p>
+
 <ul style="margin: 0; padding-right: 1.25rem; line-height: 2;">
-<li>مستويات الأتمتة الخمسة (0-4) من اليدوي إلى المستقل تماماً</li>
-<li>تطور الأتمتة من AutoDriller الميكانيكي إلى AI/ML</li>
-<li>فوائد الأتمتة: تحسين الأداء، تعزيز السلامة، خفض التكاليف</li>
-<li>المكونات الأساسية: Sensors، Data Acquisition، Control Algorithms، HMI، Actuators</li>
+<li><strong>Alarm Management:</strong> تصنيف الإنذارات حسب الأولوية (High/Medium/Low) مع ألوان واضحة</li>
+<li><strong>Alarm Rationalization:</strong> تقليل الإنذارات الزائفة لتجنب Alarm Fatigue</li>
+<li><strong>Confirmation Dialogs:</strong> طلب تأكيد قبل العمليات الحرجة</li>
+<li><strong>Clear Status Indication:</strong> عرض واضح لحالة كل نظام</li>
+<li><strong>Error Prevention:</strong> تصميم يمنع الإدخالات الخاطئة</li>
 </ul>
 </div>
 
-<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem 0;">📚 ملخص اليوم الثاني: أنظمة AutoDriller</h3>
-<div style="background: #f8f9fa; padding: 1.25rem; border-radius: 10px; margin-bottom: 1.5rem;">
+<h4 style="color: #2c3e50; margin: 1.5rem 0 1rem 0;">إجراءات التجاوز (Override Procedures)</h4>
+
+<div style="background: #fff3e0; padding: 1.5rem; border-radius: 10px; border-left: 4px solid #f39c12; margin-bottom: 1.5rem;">
+<p style="margin-bottom: 1rem; color: #78350f;"><strong>⚠️ تحذير:</strong> تجاوز أنظمة السلامة يتطلب:</p>
+<ul style="margin: 0; padding-right: 1.25rem; line-height: 1.8; color: #78350f;">
+<li>موافقة مكتوبة من Toolpusher أو Company Man</li>
+<li>تقييم المخاطر الموثق (Risk Assessment)</li>
+<li>إجراءات بديلة للسلامة</li>
+<li>تسجيل سبب التجاوز ومدته</li>
+<li>إعادة تفعيل النظام فور انتهاء السبب</li>
+</ul>
+</div>
+
+<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem 0;">🔐 الأمن السيبراني (Cybersecurity)</h3>
+
+<div style="background: #f3e5f5; padding: 1.5rem; border-radius: 12px; margin-bottom: 1.5rem;">
+<h4 style="color: #8e24aa; margin-bottom: 1rem;">التهديدات السيبرانية لأنظمة الحفر</h4>
+<p style="margin-bottom: 1rem;">مع اتصال أنظمة الحفر بالشبكات، تزداد المخاطر السيبرانية:</p>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+<div style="background: white; padding: 1rem; border-radius: 8px; border: 1px solid #e1bee7;">
+<h5 style="color: #8e24aa; margin-bottom: 0.5rem;">🎯 أنواع التهديدات</h5>
+<ul style="margin: 0; padding-right: 1rem; font-size: 0.9rem;">
+<li>Ransomware - تشفير الأنظمة للفدية</li>
+<li>Data Theft - سرقة بيانات الآبار</li>
+<li>Control Manipulation - التلاعب بأوامر التحكم</li>
+<li>Denial of Service - تعطيل الاتصالات</li>
+</ul>
+</div>
+<div style="background: white; padding: 1rem; border-radius: 8px; border: 1px solid #e1bee7;">
+<h5 style="color: #8e24aa; margin-bottom: 0.5rem;">🛡️ طبقات الحماية</h5>
+<ul style="margin: 0; padding-right: 1rem; font-size: 0.9rem;">
+<li>Network Segmentation - فصل الشبكات</li>
+<li>Firewalls & IDS - جدران الحماية</li>
+<li>Access Control - التحكم بالصلاحيات</li>
+<li>Encryption - تشفير البيانات</li>
+</ul>
+</div>
+</div>
+</div>
+
+<h4 style="color: #2c3e50; margin: 1.5rem 0 1rem 0;">Defense in Depth - الحماية متعددة الطبقات</h4>
+
+<div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
+<ol style="margin: 0; padding-right: 1.25rem; line-height: 2;">
+<li><strong>Physical Layer:</strong> حماية فيزيائية للأجهزة ومنع الوصول غير المصرح</li>
+<li><strong>Network Layer:</strong> فصل شبكة التحكم (OT) عن الشبكة الإدارية (IT)</li>
+<li><strong>Application Layer:</strong> تحديث البرامج وإغلاق الثغرات</li>
+<li><strong>User Layer:</strong> تدريب المستخدمين وسياسات كلمات المرور</li>
+<li><strong>Monitoring Layer:</strong> مراقبة مستمرة واكتشاف الاختراقات</li>
+</ol>
+</div>
+
+<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem 0;">📊 دراسات حالة: دروس من الحوادث</h3>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+<div style="background: #fef2f2; padding: 1.5rem; border-radius: 12px;">
+<h4 style="color: #991b1b; margin-bottom: 1rem;">❌ فشل التجاوز غير الموثق</h4>
+<p style="line-height: 1.7; font-size: 0.95rem;">
+تم تجاوز Interlock على Iron Roughneck دون توثيق. لاحقاً، تسبب في إصابة عامل لأن النظام لم يوقف الدوران عند فتح الباب. <strong>الدرس:</strong> كل تجاوز يجب توثيقه ومراجعته.
+</p>
+</div>
+<div style="background: #e8f5e9; padding: 1.5rem; border-radius: 12px;">
+<h4 style="color: #27ae60; margin-bottom: 1rem;">✅ نجاح ESD في منع الكارثة</h4>
+<p style="line-height: 1.7; font-size: 0.95rem;">
+اكتشف النظام ارتفاعاً في Pit Volume وبدأ ESD Level 2 تلقائياً، مما أغلق BOP وأوقف Kick قبل تطوره. <strong>الدرس:</strong> أنظمة الحماية التلقائية تنقذ الأرواح.
+</p>
+</div>
+</div>
+
+<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem 0;">⚡ أنظمة Failsafe</h3>
+
+<div style="background: #e0f2f1; padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
+<p style="margin-bottom: 1rem;">مبدأ Failsafe يعني أن النظام يذهب لحالة آمنة عند الفشل:</p>
 <ul style="margin: 0; padding-right: 1.25rem; line-height: 2;">
-<li>أوضاع التشغيل: WOB Mode، Differential Pressure Mode، ROP Mode، Torque Mode</li>
-<li>تحكم PID: P للاستجابة الفورية، I للتراكمي، D للتنبؤي</li>
-<li>حدود الأمان: Max WOB، Max Torque، Max ROP، Hook Load Limits</li>
-<li>أنظمة متقدمة: Soft Torque، Slide Assist، Active Vibration Damping</li>
+<li><strong>BOP:</strong> يُغلق تلقائياً عند فقدان الضغط الهيدروليكي (Fail-Close)</li>
+<li><strong>AutoDriller:</strong> يوقف الحفر عند فقدان الإشارة (Fail-Stop)</li>
+<li><strong>Drawworks:</strong> يُفعّل الفرامل عند فقدان الطاقة (Fail-Brake)</li>
+<li><strong>Valves:</strong> صمامات Fail-Open أو Fail-Close حسب التطبيق</li>
 </ul>
-</div>
-
-<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem 0;">📚 ملخص اليوم الثالث: أتمتة الرحلة ومناولة الأنابيب</h3>
-<div style="background: #f8f9fa; padding: 1.25rem; border-radius: 10px; margin-bottom: 1.5rem;">
-<ul style="margin: 0; padding-right: 1.25rem; line-height: 2;">
-<li>Auto-Trip System: التحكم في سرعة الرحلة لتجنب Swab/Surge</li>
-<li>Swab Pressure: انخفاض الضغط عند السحب - خطر التدفق</li>
-<li>Surge Pressure: زيادة الضغط عند الإنزال - خطر الفقدان</li>
-<li>أنظمة المناولة: Iron Roughneck، Pipe Racker، Fingerboard، Catwalk</li>
-<li>مراقبة Overpull/Drag للكشف المبكر عن المشاكل</li>
-</ul>
-</div>
-
-<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem 0;">📚 ملخص اليوم الرابع: AI/ML والأتمتة المتقدمة</h3>
-<div style="background: #f8f9fa; padding: 1.25rem; border-radius: 10px; margin-bottom: 1.5rem;">
-<ul style="margin: 0; padding-right: 1.25rem; line-height: 2;">
-<li>تطبيقات ML: التنبؤ بالمشاكل، تحسين الأداء، التوجيه الذكي</li>
-<li>Digital Twin: نموذج افتراضي للتنبؤ والتحسين في الوقت الحقيقي</li>
-<li>RTOC: مراكز التحكم عن بعد لمراقبة عدة آبار</li>
-<li>تحديات: جودة البيانات، تأخر الاتصال، ثقة المُشغّل، الأمن السيبراني</li>
-<li>المستقبل: Autonomous Drilling، Self-Healing Systems</li>
-</ul>
-</div>
-
-<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem 0;">🎯 نقاط رئيسية للتذكر</h3>
-
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
-<div style="background: #e8f5e9; padding: 1.25rem; border-radius: 10px; border-left: 4px solid #27ae60;">
-<h4 style="color: #27ae60; margin-bottom: 0.75rem;">✅ افعل</h4>
-<ul style="margin: 0; padding-right: 1rem; font-size: 0.95rem;">
-<li>ابدأ بإعدادات محافظة وعدّل تدريجياً</li>
-<li>راقب استجابة النظام باستمرار</li>
-<li>تحقق من معايرة الحساسات دورياً</li>
-<li>افهم حدود كل نظام أتمتة</li>
-</ul>
-</div>
-<div style="background: #ffebee; padding: 1.25rem; border-radius: 10px; border-left: 4px solid #e74c3c;">
-<h4 style="color: #e74c3c; margin-bottom: 0.75rem;">❌ لا تفعل</h4>
-<ul style="margin: 0; padding-right: 1rem; font-size: 0.95rem;">
-<li>لا تثق بشكل أعمى في توصيات الآلة</li>
-<li>لا تتجاهل حدود الأمان</li>
-<li>لا تفعّل الأتمتة دون فهم النظام</li>
-<li>لا تهمل السياق الميداني</li>
-</ul>
-</div>
 </div>
 
 <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1.5rem; border-radius: 12px; margin-top: 2rem;">
-<h4 style="color: #ffd700; margin-bottom: 1rem;">💡 الرسالة الأساسية</h4>
+<h4 style="color: #ffd700; margin-bottom: 1rem;">💡 نصيحة للمهندس</h4>
 <p style="margin: 0; line-height: 1.8;">
-أتمتة الحفر هي أداة قوية لتحسين الكفاءة والسلامة، لكنها تتطلب مهندساً يفهم كيف تعمل هذه الأنظمة، ويعرف متى يتدخل يدوياً، ويمكنه تفسير البيانات والتوصيات بشكل نقدي. التوازن بين الأتمتة والخبرة البشرية هو مفتاح النجاح.
+لا تتعامل مع أنظمة السلامة كعائق للإنتاجية. كل Interlock وكل ESD موجود لسبب. قبل التفكير في تجاوز أي نظام سلامة، اسأل: "ما هو أسوأ ما يمكن أن يحدث إذا فشل هذا النظام؟" - الإجابة عادةً تجعل التجاوز غير مبرر.
 </p>
 </div>
 </section>`,
-          keyTerms: [],
+          keyTerms: [
+            { term: 'Emergency Shutdown (ESD)', definition: 'نظام إغلاق طارئ متدرج المستويات لحماية الموقع والأفراد' },
+            { term: 'Interlock', definition: 'آلية تمنع تشغيل معدة إلا عند تحقق شروط السلامة المحددة' },
+            { term: 'Failsafe', definition: 'مبدأ تصميم يجعل النظام يذهب لحالة آمنة تلقائياً عند الفشل' },
+            { term: 'Alarm Fatigue', definition: 'إرهاق المُشغّل من كثرة الإنذارات مما يقلل الاستجابة للإنذارات الحقيقية' },
+          ],
+          practiceQuestion: {
+            question: 'ما هو المبدأ الذي يضمن إغلاق BOP تلقائياً عند فقدان الضغط الهيدروليكي؟',
+            options: [
+              'Interlock System',
+              'Alarm Management',
+              'Failsafe Design (Fail-Close)',
+              'Defense in Depth'
+            ],
+            correctAnswer: 2,
+          },
         },
         en: {
-          title: 'Drilling Automation - Day 5: Weekly Review',
+          title: 'Drilling Automation - Day 5: Safety Systems and Emergency Control',
           explanation: `<section>
-<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1.5rem;">🔷 Drilling Automation Week Summary</h2>
+<h2 style="color: #1e3a5f; font-size: 1.5rem; font-weight: bold; margin-bottom: 1.5rem;">🔷 Safety Systems in Automation</h2>
 
 <div style="background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%); color: white; padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem;">
+<h3 style="color: #f4a261; margin-bottom: 1rem;">📌 Importance of Safety in Automated Systems</h3>
 <p style="line-height: 1.8;">
-This week, we explored the world of drilling automation from basic concepts to advanced AI applications. Here's a summary of the key points.
+As automation levels increase, safety systems become more critical. Automated systems can make decisions faster than humans, but they can also make catastrophic mistakes if not designed with multiple protection layers. Understanding these systems is essential for every drilling engineer working with modern technology.
 </p>
 </div>
 
-<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem 0;">📚 Day 1 Summary: Introduction to Drilling Automation</h3>
-<div style="background: #f8f9fa; padding: 1.25rem; border-radius: 10px; margin-bottom: 1.5rem;">
+<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem 0;">🛑 Emergency Shutdown Systems (ESD)</h3>
+
+<div style="background: #fef2f2; padding: 1.5rem; border-radius: 12px; border-left: 4px solid #dc2626; margin-bottom: 2rem;">
+<h4 style="color: #991b1b; margin-bottom: 1rem;">Emergency Shutdown Levels</h4>
+<p style="margin-bottom: 1rem;">ESD systems are designed with graduated levels based on hazard severity:</p>
+
+<div style="overflow-x: auto;">
+<table style="width: 100%; border-collapse: collapse; font-size: 0.95rem;">
+<thead>
+<tr style="background: #991b1b; color: white;">
+<th style="padding: 1rem; text-align: center; border: 1px solid #7f1d1d;">Level</th>
+<th style="padding: 1rem; text-align: left; border: 1px solid #7f1d1d;">Description</th>
+<th style="padding: 1rem; text-align: left; border: 1px solid #7f1d1d;">Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: #fef2f2;">
+<td style="padding: 0.75rem; border: 1px solid #fecaca; text-align: center; font-weight: bold;">ESD Level 0</td>
+<td style="padding: 0.75rem; border: 1px solid #fecaca;">Complete site shutdown</td>
+<td style="padding: 0.75rem; border: 1px solid #fecaca;">Stop all operations, evacuate site</td>
+</tr>
+<tr style="background: #fff;">
+<td style="padding: 0.75rem; border: 1px solid #fecaca; text-align: center; font-weight: bold;">ESD Level 1</td>
+<td style="padding: 0.75rem; border: 1px solid #fecaca;">Main process shutdown</td>
+<td style="padding: 0.75rem; border: 1px solid #fecaca;">Stop drilling, secure well, close BOP</td>
+</tr>
+<tr style="background: #fef2f2;">
+<td style="padding: 0.75rem; border: 1px solid #fecaca; text-align: center; font-weight: bold;">ESD Level 2</td>
+<td style="padding: 0.75rem; border: 1px solid #fecaca;">Subsystem shutdown</td>
+<td style="padding: 0.75rem; border: 1px solid #fecaca;">Stop hoisting or pumps only</td>
+</tr>
+<tr style="background: #fff;">
+<td style="padding: 0.75rem; border: 1px solid #fecaca; text-align: center; font-weight: bold;">ESD Level 3</td>
+<td style="padding: 0.75rem; border: 1px solid #fecaca;">Single equipment shutdown</td>
+<td style="padding: 0.75rem; border: 1px solid #fecaca;">Stop specific component without affecting others</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem 0;">🔒 Interlock Systems</h3>
+
+<div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
+<p style="margin-bottom: 1rem;">Interlocks are mechanisms that prevent equipment or process operation unless safety conditions are met:</p>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-top: 1rem;">
+<div style="background: #e8f5e9; padding: 1.25rem; border-radius: 10px;">
+<h4 style="color: #27ae60; margin-bottom: 0.75rem;">✅ Drilling Interlock Examples</h4>
+<ul style="margin: 0; padding-left: 1.25rem; line-height: 1.8;">
+<li>Prevent rotation if Slips not engaged</li>
+<li>Prevent pulling if Elevator not closed</li>
+<li>Prevent pump start without Standpipe connection</li>
+<li>Prevent BOP lowering if pressure is high</li>
+</ul>
+</div>
+<div style="background: #fff3e0; padding: 1.25rem; border-radius: 10px;">
+<h4 style="color: #f39c12; margin-bottom: 0.75rem;">⚙️ Types of Interlocks</h4>
+<ul style="margin: 0; padding-left: 1.25rem; line-height: 1.8;">
+<li><strong>Hardware Interlock:</strong> Physical mechanical or electrical</li>
+<li><strong>Software Interlock:</strong> PLC programmed logic</li>
+<li><strong>Permissive Interlock:</strong> Requires action before operation</li>
+<li><strong>Inhibit Interlock:</strong> Prevents action during certain state</li>
+</ul>
+</div>
+</div>
+</div>
+
+<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem 0;">🖥️ HMI Safety Design</h3>
+
+<div style="background: #e3f2fd; padding: 1.5rem; border-radius: 12px; border-left: 4px solid #3498db; margin-bottom: 1.5rem;">
+<h4 style="color: #3498db; margin-bottom: 1rem;">Designing Safe Interfaces</h4>
+<p style="margin-bottom: 1rem;">The control interface (HMI) must be designed to minimize human error:</p>
+
 <ul style="margin: 0; padding-left: 1.25rem; line-height: 2;">
-<li>Five automation levels (0-4) from manual to fully autonomous</li>
-<li>Evolution from mechanical AutoDriller to AI/ML</li>
-<li>Benefits: performance improvement, safety enhancement, cost reduction</li>
-<li>Core components: Sensors, Data Acquisition, Control Algorithms, HMI, Actuators</li>
+<li><strong>Alarm Management:</strong> Classify alarms by priority (High/Medium/Low) with clear colors</li>
+<li><strong>Alarm Rationalization:</strong> Reduce false alarms to prevent Alarm Fatigue</li>
+<li><strong>Confirmation Dialogs:</strong> Require confirmation before critical operations</li>
+<li><strong>Clear Status Indication:</strong> Obvious display of each system's status</li>
+<li><strong>Error Prevention:</strong> Design that prevents incorrect inputs</li>
 </ul>
 </div>
 
-<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem 0;">📚 Day 2 Summary: AutoDriller Systems</h3>
-<div style="background: #f8f9fa; padding: 1.25rem; border-radius: 10px; margin-bottom: 1.5rem;">
+<h4 style="color: #2c3e50; margin: 1.5rem 0 1rem 0;">Override Procedures</h4>
+
+<div style="background: #fff3e0; padding: 1.5rem; border-radius: 10px; border-left: 4px solid #f39c12; margin-bottom: 1.5rem;">
+<p style="margin-bottom: 1rem; color: #78350f;"><strong>⚠️ Warning:</strong> Overriding safety systems requires:</p>
+<ul style="margin: 0; padding-left: 1.25rem; line-height: 1.8; color: #78350f;">
+<li>Written approval from Toolpusher or Company Man</li>
+<li>Documented Risk Assessment</li>
+<li>Alternative safety measures in place</li>
+<li>Record of override reason and duration</li>
+<li>System reactivation as soon as reason is resolved</li>
+</ul>
+</div>
+
+<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem 0;">🔐 Cybersecurity</h3>
+
+<div style="background: #f3e5f5; padding: 1.5rem; border-radius: 12px; margin-bottom: 1.5rem;">
+<h4 style="color: #8e24aa; margin-bottom: 1rem;">Cyber Threats to Drilling Systems</h4>
+<p style="margin-bottom: 1rem;">With drilling systems connected to networks, cyber risks increase:</p>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+<div style="background: white; padding: 1rem; border-radius: 8px; border: 1px solid #e1bee7;">
+<h5 style="color: #8e24aa; margin-bottom: 0.5rem;">🎯 Threat Types</h5>
+<ul style="margin: 0; padding-left: 1rem; font-size: 0.9rem;">
+<li>Ransomware - System encryption for ransom</li>
+<li>Data Theft - Well data exfiltration</li>
+<li>Control Manipulation - Tampering with commands</li>
+<li>Denial of Service - Disrupting communications</li>
+</ul>
+</div>
+<div style="background: white; padding: 1rem; border-radius: 8px; border: 1px solid #e1bee7;">
+<h5 style="color: #8e24aa; margin-bottom: 0.5rem;">🛡️ Protection Layers</h5>
+<ul style="margin: 0; padding-left: 1rem; font-size: 0.9rem;">
+<li>Network Segmentation</li>
+<li>Firewalls & IDS</li>
+<li>Access Control</li>
+<li>Data Encryption</li>
+</ul>
+</div>
+</div>
+</div>
+
+<h4 style="color: #2c3e50; margin: 1.5rem 0 1rem 0;">Defense in Depth</h4>
+
+<div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
+<ol style="margin: 0; padding-left: 1.25rem; line-height: 2;">
+<li><strong>Physical Layer:</strong> Physical device protection and unauthorized access prevention</li>
+<li><strong>Network Layer:</strong> Separate control network (OT) from administrative network (IT)</li>
+<li><strong>Application Layer:</strong> Software updates and vulnerability patching</li>
+<li><strong>User Layer:</strong> User training and password policies</li>
+<li><strong>Monitoring Layer:</strong> Continuous monitoring and intrusion detection</li>
+</ol>
+</div>
+
+<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem 0;">📊 Case Studies: Lessons from Incidents</h3>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+<div style="background: #fef2f2; padding: 1.5rem; border-radius: 12px;">
+<h4 style="color: #991b1b; margin-bottom: 1rem;">❌ Undocumented Override Failure</h4>
+<p style="line-height: 1.7; font-size: 0.95rem;">
+An Iron Roughneck interlock was bypassed without documentation. Later, it caused a worker injury because the system didn't stop rotation when the door opened. <strong>Lesson:</strong> Every override must be documented and reviewed.
+</p>
+</div>
+<div style="background: #e8f5e9; padding: 1.5rem; border-radius: 12px;">
+<h4 style="color: #27ae60; margin-bottom: 1rem;">✅ ESD Success in Preventing Disaster</h4>
+<p style="line-height: 1.7; font-size: 0.95rem;">
+The system detected a Pit Volume increase and automatically initiated ESD Level 2, closing the BOP and stopping a kick before it developed. <strong>Lesson:</strong> Automatic protection systems save lives.
+</p>
+</div>
+</div>
+
+<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem 0;">⚡ Failsafe Systems</h3>
+
+<div style="background: #e0f2f1; padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
+<p style="margin-bottom: 1rem;">The Failsafe principle means the system goes to a safe state upon failure:</p>
 <ul style="margin: 0; padding-left: 1.25rem; line-height: 2;">
-<li>Operating modes: WOB, Differential Pressure, ROP, Torque</li>
-<li>PID control: P for immediate, I for cumulative, D for predictive</li>
-<li>Safety limits: Max WOB, Torque, ROP, Hook Load Limits</li>
-<li>Advanced systems: Soft Torque, Slide Assist, Active Vibration Damping</li>
+<li><strong>BOP:</strong> Closes automatically on hydraulic pressure loss (Fail-Close)</li>
+<li><strong>AutoDriller:</strong> Stops drilling on signal loss (Fail-Stop)</li>
+<li><strong>Drawworks:</strong> Engages brakes on power loss (Fail-Brake)</li>
+<li><strong>Valves:</strong> Fail-Open or Fail-Close depending on application</li>
 </ul>
-</div>
-
-<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem 0;">📚 Day 3 Summary: Tripping and Pipe Handling Automation</h3>
-<div style="background: #f8f9fa; padding: 1.25rem; border-radius: 10px; margin-bottom: 1.5rem;">
-<ul style="margin: 0; padding-left: 1.25rem; line-height: 2;">
-<li>Auto-Trip System: Trip speed control to avoid Swab/Surge</li>
-<li>Swab Pressure: Pressure decrease when pulling - influx risk</li>
-<li>Surge Pressure: Pressure increase when running - loss risk</li>
-<li>Handling systems: Iron Roughneck, Pipe Racker, Fingerboard, Catwalk</li>
-<li>Overpull/Drag monitoring for early problem detection</li>
-</ul>
-</div>
-
-<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem 0;">📚 Day 4 Summary: AI/ML and Advanced Automation</h3>
-<div style="background: #f8f9fa; padding: 1.25rem; border-radius: 10px; margin-bottom: 1.5rem;">
-<ul style="margin: 0; padding-left: 1.25rem; line-height: 2;">
-<li>ML applications: Problem prediction, performance optimization, intelligent steering</li>
-<li>Digital Twin: Virtual model for real-time prediction and optimization</li>
-<li>RTOC: Remote control centers for multi-well monitoring</li>
-<li>Challenges: Data quality, latency, operator trust, cybersecurity</li>
-<li>Future: Autonomous Drilling, Self-Healing Systems</li>
-</ul>
-</div>
-
-<h3 style="color: #e67e22; font-size: 1.25rem; font-weight: bold; margin: 1.5rem 0 1rem 0;">🎯 Key Points to Remember</h3>
-
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
-<div style="background: #e8f5e9; padding: 1.25rem; border-radius: 10px; border-left: 4px solid #27ae60;">
-<h4 style="color: #27ae60; margin-bottom: 0.75rem;">✅ Do</h4>
-<ul style="margin: 0; padding-left: 1rem; font-size: 0.95rem;">
-<li>Start with conservative settings and adjust gradually</li>
-<li>Monitor system response continuously</li>
-<li>Verify sensor calibration periodically</li>
-<li>Understand each automation system's limits</li>
-</ul>
-</div>
-<div style="background: #ffebee; padding: 1.25rem; border-radius: 10px; border-left: 4px solid #e74c3c;">
-<h4 style="color: #e74c3c; margin-bottom: 0.75rem;">❌ Don't</h4>
-<ul style="margin: 0; padding-left: 1rem; font-size: 0.95rem;">
-<li>Don't blindly trust machine recommendations</li>
-<li>Don't ignore safety limits</li>
-<li>Don't activate automation without understanding</li>
-<li>Don't neglect field context</li>
-</ul>
-</div>
 </div>
 
 <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1.5rem; border-radius: 12px; margin-top: 2rem;">
-<h4 style="color: #ffd700; margin-bottom: 1rem;">💡 Core Message</h4>
+<h4 style="color: #ffd700; margin-bottom: 1rem;">💡 Engineer's Tip</h4>
 <p style="margin: 0; line-height: 1.8;">
-Drilling automation is a powerful tool for improving efficiency and safety, but it requires an engineer who understands how these systems work, knows when to intervene manually, and can critically interpret data and recommendations. Balance between automation and human expertise is the key to success.
+Don't treat safety systems as obstacles to productivity. Every Interlock and every ESD exists for a reason. Before considering bypassing any safety system, ask: "What's the worst that could happen if this system fails?" - The answer usually makes the bypass unjustifiable.
 </p>
 </div>
 </section>`,
-          keyTerms: [],
+          keyTerms: [
+            { term: 'Emergency Shutdown (ESD)', definition: 'Multi-level emergency shutdown system for site and personnel protection' },
+            { term: 'Interlock', definition: 'Mechanism that prevents equipment operation unless specified safety conditions are met' },
+            { term: 'Failsafe', definition: 'Design principle that makes system automatically go to safe state upon failure' },
+            { term: 'Alarm Fatigue', definition: 'Operator exhaustion from excessive alarms reducing response to real alarms' },
+          ],
+          practiceQuestion: {
+            question: 'What principle ensures the BOP closes automatically when hydraulic pressure is lost?',
+            options: [
+              'Interlock System',
+              'Alarm Management',
+              'Failsafe Design (Fail-Close)',
+              'Defense in Depth'
+            ],
+            correctAnswer: 2,
+          },
         },
       },
     },
