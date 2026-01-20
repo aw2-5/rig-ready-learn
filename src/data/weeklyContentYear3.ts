@@ -11,6 +11,8 @@ import { stuckPipePreventionLesson } from './year3/stuckPipePreventionContent';
 import { wellboreStabilityLesson } from './year3/wellboreStabilityContent';
 import { drillingOptimizationLesson } from './year3/drillingOptimizationContent';
 import { mwdLwdSystemsLesson } from './year3/mwdLwdSystemsContent';
+import { rotarySteerableSystemsLesson } from './year3/rotarySteerableSystemsContent';
+
 // Helper function to create placeholder weekly content for Year 3 lessons
 const createPlaceholderLesson = (lessonId: string, titleAr: string, titleEn: string): WeeklyLesson => ({
   lessonId,
@@ -284,7 +286,7 @@ export const weeklyContentYear3: WeeklyLesson[] = [
   drillingOptimizationLesson,
   createPlaceholderLesson('rop-optimization', 'تحسين معدل الاختراق', 'Rate of Penetration (ROP) Optimization'),
   mwdLwdSystemsLesson,
-  createPlaceholderLesson('rotary-steerable-systems', 'أنظمة التوجيه الدوارة', 'Rotary Steerable Systems (RSS)'),
+  rotarySteerableSystemsLesson,
   createPlaceholderLesson('drilling-automation', 'أتمتة الحفر', 'Drilling Automation'),
   createPlaceholderLesson('hpht-drilling', 'الحفر في الضغط والحرارة العالية', 'HPHT Drilling'),
   createPlaceholderLesson('deepwater-drilling', 'الحفر في المياه العميقة', 'Deepwater Drilling'),
