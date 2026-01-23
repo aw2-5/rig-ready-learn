@@ -16,7 +16,7 @@ import { drillingAutomationLesson } from './year3/drillingAutomationContent';
 import { hphtDrillingLesson } from './year3/hphtDrillingContent';
 import { deepwaterDrillingLesson } from './year3/deepwaterDrillingContent';
 import { offshoreDrillingSystemsLesson } from './year3/offshoreDrillingSystemsContent';
-
+import { wellIntegrityLesson } from './year3/wellIntegrityContent';
 // Helper function to create placeholder weekly content for Year 3 lessons
 const createPlaceholderLesson = (lessonId: string, titleAr: string, titleEn: string): WeeklyLesson => ({
   lessonId,
@@ -295,7 +295,7 @@ export const weeklyContentYear3: WeeklyLesson[] = [
   hphtDrillingLesson,
   deepwaterDrillingLesson,
   offshoreDrillingSystemsLesson,
-  createPlaceholderLesson('well-integrity', 'سلامة البئر', 'Well Integrity Management'),
+  wellIntegrityLesson,
   createPlaceholderLesson('drilling-hse', 'السلامة والصحة والبيئة', 'HSE in Drilling Operations'),
 ];
 
