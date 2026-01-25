@@ -10,6 +10,7 @@ import { fishingOperationsLesson } from './year3/fishingOperationsContent';
 import { stuckPipePreventionLesson } from './year3/stuckPipePreventionContent';
 import { wellboreStabilityLesson } from './year3/wellboreStabilityContent';
 import { drillingOptimizationLesson } from './year3/drillingOptimizationContent';
+import { ropOptimizationLesson } from './year3/ropOptimizationContent';
 import { mwdLwdSystemsLesson } from './year3/mwdLwdSystemsContent';
 import { rotarySteerableSystemsLesson } from './year3/rotarySteerableSystemsContent';
 import { drillingAutomationLesson } from './year3/drillingAutomationContent';
@@ -290,7 +291,7 @@ export const weeklyContentYear3: WeeklyLesson[] = [
   stuckPipePreventionLesson,
   wellboreStabilityLesson,
   drillingOptimizationLesson,
-  createPlaceholderLesson('rop-optimization', 'تحسين معدل الاختراق', 'Rate of Penetration (ROP) Optimization'),
+  ropOptimizationLesson,
   mwdLwdSystemsLesson,
   rotarySteerableSystemsLesson,
   drillingAutomationLesson,
