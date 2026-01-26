@@ -6,6 +6,7 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { Card } from '@/components/ui/card';
 import { Bot, Send, X, Loader2, Sparkles, MessageCircle } from 'lucide-react';
 import { toast } from 'sonner';
+import { useAIUsageLimit } from '@/hooks/useAIUsageLimit';
 
 interface Message {
   role: 'user' | 'assistant';
@@ -14,13 +15,18 @@ interface Message {
 
 const CHAT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/ai-tutor`;
 
-export function AIAssistant() {
+interface AIAssistantProps {
+  showButton?: boolean;
+}
+
+export function AIAssistant({ showButton = true }: AIAssistantProps) {
   const { language, isRTL } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
+  const { usageCount, isLimitReached, incrementUsage, getRemainingUsage, dailyLimit } = useAIUsageLimit();
 
   useEffect(() => {
     if (scrollRef.current) {
@@ -29,10 +35,23 @@ export function AIAssistant() {
   }, [messages]);
 
   const streamChat = async (userMessage: string) => {
+    // Check daily limit before sending
+    if (isLimitReached) {
+      toast.error(
+        language === 'ar' 
+          ? 'لقد وصلت للحد اليومي. حاول غداً!' 
+          : 'Daily limit reached. Try again tomorrow!'
+      );
+      return;
+    }
+
     const newMessages: Message[] = [...messages, { role: 'user', content: userMessage }];
     setMessages(newMessages);
     setIsLoading(true);
     setInput('');
+
+    // Increment usage
+    incrementUsage();
 
     try {
       const resp = await fetch(CHAT_URL, {
@@ -141,14 +160,16 @@ export function AIAssistant() {
 
   return (
     <>
-      {/* Floating Button */}
-      <Button
-        onClick={() => setIsOpen(true)}
-        className={`fixed bottom-6 z-50 w-14 h-14 rounded-full shadow-lg gradient-accent hover:scale-105 transition-transform ${isRTL ? 'left-6' : 'right-6'}`}
-        size="icon"
-      >
-        <Bot className="w-6 h-6" />
-      </Button>
+      {/* Floating Button - only show if showButton is true */}
+      {showButton && (
+        <Button
+          onClick={() => setIsOpen(true)}
+          className={`fixed bottom-6 z-50 w-14 h-14 rounded-full shadow-lg gradient-accent hover:scale-105 transition-transform ${isRTL ? 'left-6' : 'right-6'}`}
+          size="icon"
+        >
+          <Bot className="w-6 h-6" />
+        </Button>
+      )}
 
       {/* Chat Window */}
       {isOpen && (
@@ -164,7 +185,9 @@ export function AIAssistant() {
                   {language === 'ar' ? 'مساعد الحفر الذكي' : 'AI Drilling Tutor'}
                 </h3>
                 <p className="text-xs opacity-80">
-                  {language === 'ar' ? 'اسأل أي سؤال' : 'Ask any question'}
+                  {language === 'ar' 
+                    ? `${getRemainingUsage()}/${dailyLimit} استخدامات متبقية` 
+                    : `${getRemainingUsage()}/${dailyLimit} uses remaining`}
                 </p>
               </div>
             </div>
@@ -213,23 +236,31 @@ export function AIAssistant() {
 
           {/* Input */}
           <form onSubmit={handleSubmit} className="p-4 border-t bg-background">
-            <div className="flex gap-2">
-              <Input
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                placeholder={placeholderText}
-                disabled={isLoading}
-                className="flex-1"
-                dir={isRTL ? 'rtl' : 'ltr'}
-              />
-              <Button type="submit" size="icon" disabled={isLoading || !input.trim()}>
-                {isLoading ? (
-                  <Loader2 className="w-4 h-4 animate-spin" />
-                ) : (
-                  <Send className={`w-4 h-4 ${isRTL ? 'rotate-180' : ''}`} />
-                )}
-              </Button>
-            </div>
+            {isLimitReached ? (
+              <div className="text-center text-sm text-muted-foreground py-2">
+                {language === 'ar' 
+                  ? '🔒 وصلت للحد اليومي. عد غداً!' 
+                  : '🔒 Daily limit reached. Come back tomorrow!'}
+              </div>
+            ) : (
+              <div className="flex gap-2">
+                <Input
+                  value={input}
+                  onChange={(e) => setInput(e.target.value)}
+                  placeholder={placeholderText}
+                  disabled={isLoading}
+                  className="flex-1"
+                  dir={isRTL ? 'rtl' : 'ltr'}
+                />
+                <Button type="submit" size="icon" disabled={isLoading || !input.trim()}>
+                  {isLoading ? (
+                    <Loader2 className="w-4 h-4 animate-spin" />
+                  ) : (
+                    <Send className={`w-4 h-4 ${isRTL ? 'rotate-180' : ''}`} />
+                  )}
+                </Button>
+              </div>
+            )}
           </form>
         </Card>
       )}

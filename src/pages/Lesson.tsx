@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, lazy, Suspense } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { lessons } from '@/data/lessons';
@@ -19,7 +19,10 @@ import { DayProject } from '@/components/lesson/DayProject';
 import { LessonCompletionCard } from '@/components/LessonCompletionCard';
 import { LevelCompletionModal } from '@/components/LevelCompletionModal';
 import { ThemeToggle } from '@/components/ThemeToggle';
-import { ArrowLeft, ArrowRight, Globe, Home, BookOpen } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Globe, Home, BookOpen, Bot } from 'lucide-react';
+
+// Lazy load AI Assistant
+const AIAssistant = lazy(() => import('@/components/AIAssistant').then(m => ({ default: m.AIAssistant })));
 
 export default function Lesson() {
   const {
@@ -195,5 +198,10 @@ export default function Lesson() {
 
       {/* Level Completion Modal */}
       <LevelCompletionModal isOpen={showLevelCompleteModal} onClose={() => setShowLevelCompleteModal(false)} level={1} averageScore={level1AverageScore} onGoToNextLevel={handleGoToLevel2} />
+
+      {/* AI Assistant */}
+      <Suspense fallback={null}>
+        <AIAssistant />
+      </Suspense>
     </div>;
 }
