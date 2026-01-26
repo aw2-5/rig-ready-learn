@@ -70,7 +70,7 @@ export function showNotification(title: string, body: string, icon?: string): vo
   }
 }
 
-export function scheduleStudyReminder(language: 'en' | 'ar' = 'en'): void {
+export function scheduleStudyReminder(language: 'en' | 'ar' = 'en', userLevel: number = 1): void {
   const settings = getNotificationSettings();
   if (!settings.enabled) return;
 
@@ -89,29 +89,50 @@ export function scheduleStudyReminder(language: 'en' | 'ar' = 'en'): void {
   if (now >= reminderTime) {
     localStorage.setItem(LAST_REMINDER_KEY, today);
     
-    const titles = {
-      en: '📚 Time to Study!',
-      ar: '📚 حان وقت الدراسة!'
-    };
-
-    const bodies = {
-      en: "Don't break your learning streak! Open Drilla-Z and continue your drilling engineering journey.",
-      ar: 'لا تقطع سلسلة تعلمك! افتح Drilla-Z وتابع رحلتك في هندسة الحفر.'
-    };
-
-    showNotification(titles[language], bodies[language]);
+    // Send daily question based on user level
+    import('./dailyQuestions').then(({ getQuestionForNotification }) => {
+      const { title, body } = getQuestionForNotification(userLevel, language);
+      showNotification(title, body);
+    });
   }
 }
 
 // Check and show reminder on app load
-export function initializeNotifications(language: 'en' | 'ar' = 'en'): void {
+export function initializeNotifications(language: 'en' | 'ar' = 'en', userLevel: number = 1): void {
   if (isNotificationEnabled()) {
-    scheduleStudyReminder(language);
+    scheduleStudyReminder(language, userLevel);
     
     // Set up interval to check every hour
     setInterval(() => {
-      scheduleStudyReminder(language);
+      scheduleStudyReminder(language, userLevel);
     }, 60 * 60 * 1000); // Check every hour
+  }
+}
+
+// Schedule study reminder with daily question
+export function scheduleStudyReminderWithQuestion(language: 'en' | 'ar', userLevel: number): void {
+  const settings = getNotificationSettings();
+  if (!settings.enabled) return;
+
+  const now = new Date();
+  const today = now.toDateString();
+  const questionReminderKey = 'last-question-reminder';
+  const lastReminder = localStorage.getItem(questionReminderKey);
+
+  if (lastReminder === today) return;
+
+  const [hours, minutes] = settings.time.split(':').map(Number);
+  const reminderTime = new Date();
+  reminderTime.setHours(hours, minutes, 0, 0);
+
+  if (now >= reminderTime) {
+    localStorage.setItem(questionReminderKey, today);
+    
+    // Import dynamically to avoid circular dependency
+    import('./dailyQuestions').then(({ getQuestionForNotification }) => {
+      const { title, body } = getQuestionForNotification(userLevel, language);
+      showNotification(title, body);
+    });
   }
 }
 
