@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, lazy, Suspense } from 'react';
+import { useState, useEffect, useRef, useMemo, lazy, Suspense } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useAuth } from '@/contexts/AuthContext';
@@ -12,6 +12,10 @@ import { useLevelProgress } from '@/hooks/useLevelProgress';
 import { ThemeToggle } from '@/components/ThemeToggle';
 import { sendLevelCompletionEmail } from '@/lib/emailNotifications';
 import { Onboarding } from '@/components/Onboarding';
+import { DailyStreak } from '@/components/DailyStreak';
+import { DailyChallenges } from '@/components/DailyChallenges';
+import { SpeedQuiz } from '@/components/SpeedQuiz';
+import { weeklyContent } from '@/data/weeklyContent';
 
 // Lazy load heavy components for code splitting
 const LevelCompletionModal = lazy(() => import('@/components/LevelCompletionModal').then(m => ({ default: m.LevelCompletionModal })));
@@ -69,6 +73,7 @@ export default function Home() {
   const [showUpgradeModal, setShowUpgradeModal] = useState(false);
   const [showLevelTest, setShowLevelTest] = useState<1 | 2 | 3 | null>(null);
   const [showSearch, setShowSearch] = useState(false);
+  const [showSpeedQuiz, setShowSpeedQuiz] = useState(false);
   
   // Track if email was sent to prevent duplicate sends
   const emailSentRef = useRef<{ [key: number]: boolean }>({});
@@ -203,6 +208,37 @@ export default function Home() {
   const currentLessons = selectedYear === 1 ? lessons : selectedYear === 2 ? lessonsYear2 : lessonsYear3;
   const currentProgress = selectedYear === 1 ? level1Progress : selectedYear === 2 ? level2Progress : level3Progress;
   const isCurrentLevelComplete = selectedYear === 1 ? isLevel1Complete : selectedYear === 2 ? isLevel2Complete : isLevel3Complete;
+
+  // Generate Speed Quiz questions from current level lessons
+  const speedQuizQuestions = useMemo(() => {
+    const questions: Array<{ question: string; options: string[]; correctAnswer: number }> = [];
+    
+    // Get questions from weeklyContent for Level 1
+    if (selectedYear === 1) {
+      weeklyContent.forEach((lessonContent) => {
+        lessonContent.days.forEach((day) => {
+          // Get practice questions from days 1-5
+          if (day.type === 'learning' && day.content) {
+            const content = day.content[language as 'ar' | 'en'];
+            if (content?.practiceQuestion) {
+              questions.push(content.practiceQuestion);
+            }
+          }
+          // Get quiz questions from day 6
+          if (day.type === 'quiz' && day.quiz) {
+            const quizQuestions = day.quiz[language as 'ar' | 'en'];
+            if (quizQuestions) {
+              questions.push(...quizQuestions.slice(0, 3)); // Take first 3 from each quiz
+            }
+          }
+        });
+      });
+    }
+    
+    // Shuffle and take 10 random questions
+    const shuffled = [...questions].sort(() => Math.random() - 0.5);
+    return shuffled.slice(0, 10);
+  }, [selectedYear, language]);
 
   const getYearLabel = () => {
     if (selectedYear === 1) return t('firstYear');
@@ -347,6 +383,41 @@ export default function Home() {
             </div>
           </CardContent>
         </Card>
+
+        {/* Daily Streak */}
+        <DailyStreak />
+
+        {/* Daily Challenges */}
+        <DailyChallenges />
+
+        {/* Speed Quiz Button */}
+        {speedQuizQuestions.length > 0 && (
+          <Card 
+            variant="interactive" 
+            className="animate-fade-in cursor-pointer bg-gradient-to-r from-primary/10 to-accent/10 border-accent/30"
+            onClick={() => setShowSpeedQuiz(true)}
+          >
+            <CardContent className="p-4">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent to-primary flex items-center justify-center">
+                  <Zap className="w-5 h-5 text-white" />
+                </div>
+                <div className="flex-1">
+                  <p className="text-sm font-bold text-foreground">
+                    {language === 'ar' ? '⚡ اختبار السرعة' : '⚡ Speed Quiz'}
+                  </p>
+                  <p className="text-xs text-muted-foreground">
+                    {language === 'ar' 
+                      ? 'اختبر سرعتك واحصل على نقاط إضافية!' 
+                      : 'Test your speed and earn bonus points!'
+                    }
+                  </p>
+                </div>
+                <ChevronRight className={`w-5 h-5 text-accent ${isRTL ? 'rotate-180' : ''}`} />
+              </div>
+            </CardContent>
+          </Card>
+        )}
 
         {/* Guest Upgrade Banner */}
         {isGuest && (
@@ -576,6 +647,14 @@ export default function Home() {
         {/* AI Assistant */}
         <AIAssistant />
       </Suspense>
+
+      {/* Speed Quiz Modal */}
+      <SpeedQuiz
+        isOpen={showSpeedQuiz}
+        onClose={() => setShowSpeedQuiz(false)}
+        questions={speedQuizQuestions}
+        level={selectedYear}
+      />
     </div>
   );
 }

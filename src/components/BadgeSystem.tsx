@@ -1,7 +1,8 @@
 import { useMemo } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useLevelProgress } from '@/hooks/useLevelProgress';
-import { useProgress } from '@/hooks/useProgress';
+import { useDailyStreak } from '@/hooks/useDailyStreak';
+import { useDailyChallenge } from '@/hooks/useDailyChallenge';
 import { 
   Trophy, 
   Star, 
@@ -47,6 +48,10 @@ export function BadgeSystem() {
     level3LessonIds,
     isLessonComplete,
   } = useLevelProgress();
+  
+  // Daily streak and challenge data
+  const { currentStreak, longestStreak } = useDailyStreak();
+  const { streakDays: challengeStreak, totalXP } = useDailyChallenge();
 
   const badges = useMemo((): BadgeInfo[] => {
     // Count completed lessons
@@ -166,13 +171,76 @@ export function BadgeSystem() {
         earned: hasPerfectLevel1 && hasPerfectLevel2 && hasPerfectLevel3,
         color: 'text-pink-500',
       },
+      // Streak Badges
+      {
+        id: 'flame-starter',
+        nameEn: 'Flame Starter',
+        nameAr: 'شرارة البداية',
+        descriptionEn: '3 day study streak',
+        descriptionAr: 'سلسلة دراسة 3 أيام',
+        icon: Flame,
+        earned: longestStreak >= 3,
+        progress: Math.min(longestStreak, 3),
+        maxProgress: 3,
+        color: 'text-orange-500',
+      },
+      {
+        id: 'week-warrior',
+        nameEn: 'Week Warrior',
+        nameAr: 'محارب الأسبوع',
+        descriptionEn: '7 day study streak',
+        descriptionAr: 'سلسلة دراسة 7 أيام',
+        icon: Star,
+        earned: longestStreak >= 7,
+        progress: Math.min(longestStreak, 7),
+        maxProgress: 7,
+        color: 'text-blue-500',
+      },
+      {
+        id: 'monthly-master',
+        nameEn: 'Monthly Master',
+        nameAr: 'سيد الشهر',
+        descriptionEn: '30 day study streak',
+        descriptionAr: 'سلسلة دراسة 30 يوم',
+        icon: Crown,
+        earned: longestStreak >= 30,
+        progress: Math.min(longestStreak, 30),
+        maxProgress: 30,
+        color: 'text-purple-500',
+      },
+      // Challenge Badge
+      {
+        id: 'challenge-champion',
+        nameEn: 'Challenge Champion',
+        nameAr: 'بطل التحديات',
+        descriptionEn: 'Complete 7 daily challenges in a row',
+        descriptionAr: 'أكمل 7 تحديات يومية متتالية',
+        icon: Target,
+        earned: challengeStreak >= 7,
+        progress: Math.min(challengeStreak, 7),
+        maxProgress: 7,
+        color: 'text-emerald-500',
+      },
+      // XP Badge
+      {
+        id: 'xp-collector',
+        nameEn: 'XP Collector',
+        nameAr: 'جامع النقاط',
+        descriptionEn: 'Earn 500 total XP',
+        descriptionAr: 'اجمع 500 نقطة XP',
+        icon: Zap,
+        earned: totalXP >= 500,
+        progress: Math.min(totalXP, 500),
+        maxProgress: 500,
+        color: 'text-yellow-400',
+      },
     ];
   }, [
     level1Progress, level2Progress, level3Progress,
     isLevel1Complete, isLevel2Complete, isLevel3Complete,
     level1AverageScore, level2AverageScore, level3AverageScore,
     level1LessonIds, level2LessonIds, level3LessonIds,
-    isLessonComplete
+    isLessonComplete, longestStreak, challengeStreak, totalXP
   ]);
 
   const earnedCount = badges.filter(b => b.earned).length;

@@ -9,6 +9,8 @@ import { weeklyContentYear2 } from '@/data/weeklyContentYear2';
 import { weeklyContentYear3 } from '@/data/weeklyContentYear3';
 import { useProgress } from '@/hooks/useProgress';
 import { useLevelProgress } from '@/hooks/useLevelProgress';
+import { useDailyStreak } from '@/hooks/useDailyStreak';
+import { useDailyChallenge } from '@/hooks/useDailyChallenge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { DaySelector } from '@/components/lesson/DaySelector';
@@ -49,6 +51,11 @@ export default function Lesson() {
     isLessonComplete,
     level1LessonIds
   } = useLevelProgress();
+  
+  // Streak and challenge hooks
+  const { recordStudy } = useDailyStreak();
+  const { recordLessonComplete, recordQuizScore, recordCorrectAnswer } = useDailyChallenge();
+  
   const [selectedDay, setSelectedDay] = useState(1);
   const [showLevelCompleteModal, setShowLevelCompleteModal] = useState(false);
 
@@ -94,6 +101,8 @@ export default function Lesson() {
   const handleCompleteDay = () => {
     if (id) {
       markDayComplete(id, selectedDay);
+      recordStudy(); // Record streak
+      recordLessonComplete(); // Record challenge progress
       if (selectedDay < 7) {
         setSelectedDay(selectedDay + 1);
       }
@@ -102,6 +111,9 @@ export default function Lesson() {
   const handleCompleteQuiz = (score: number) => {
     if (id) {
       markDayComplete(id, selectedDay, score);
+      recordStudy(); // Record streak
+      recordLessonComplete(); // Record challenge progress
+      recordQuizScore(score); // Record quiz score for challenges
       if (selectedDay < 7) {
         setSelectedDay(selectedDay + 1);
       }
@@ -110,6 +122,8 @@ export default function Lesson() {
   const handleCompleteProject = () => {
     if (id) {
       markDayComplete(id, 7);
+      recordStudy(); // Record streak
+      recordLessonComplete(); // Record challenge progress
       // Check if this completes Level 1
       if (isLevel1Lesson && isLastLessonInLevel) {
         // Small delay to let state update
