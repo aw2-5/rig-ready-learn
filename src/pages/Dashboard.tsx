@@ -2,6 +2,8 @@ import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useAuth } from '@/contexts/AuthContext';
 import { useLevelProgress } from '@/hooks/useLevelProgress';
+import { useDailyStreak } from '@/hooks/useDailyStreak';
+import { useDailyChallenge } from '@/hooks/useDailyChallenge';
 import { BadgeSystem } from '@/components/BadgeSystem';
 import { ThemeToggle } from '@/components/ThemeToggle';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -15,7 +17,8 @@ import {
   BookOpen,
   Clock,
   Trophy,
-  Zap
+  Zap,
+  Flame
 } from 'lucide-react';
 
 export default function Dashboard() {
@@ -34,6 +37,10 @@ export default function Dashboard() {
     level3LessonIds,
     isLessonComplete,
   } = useLevelProgress();
+  
+  // Streak and Challenge data
+  const { currentStreak, longestStreak } = useDailyStreak();
+  const { totalXP, streakDays: challengeStreak } = useDailyChallenge();
 
   // Calculate stats
   const level1Completed = level1LessonIds.filter(id => isLessonComplete(id)).length;
@@ -67,6 +74,10 @@ export default function Dashboard() {
       back: 'Back',
       noScore: 'N/A',
       quizScore: 'Quiz Score',
+      streak: 'Day Streak',
+      best: 'Best',
+      totalXP: 'Total XP',
+      challenges: 'Challenge Streak',
     },
     ar: {
       title: 'لوحة التحكم',
@@ -81,6 +92,10 @@ export default function Dashboard() {
       back: 'رجوع',
       noScore: 'غير متاح',
       quizScore: 'درجة الاختبار',
+      streak: 'سلسلة الأيام',
+      best: 'الأفضل',
+      totalXP: 'مجموع النقاط',
+      challenges: 'سلسلة التحديات',
     },
   };
 
@@ -189,6 +204,34 @@ export default function Dashboard() {
                   <Progress value={(totalCompleted / totalLessons) * 100} className="h-2" />
                 </div>
               </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Streak & XP Stats */}
+        <div className="grid grid-cols-3 gap-3">
+          <Card variant="gradient">
+            <CardContent className="p-3 text-center">
+              <Flame className="w-5 h-5 text-orange-500 mx-auto mb-1" />
+              <p className="text-xs text-muted-foreground">{t.streak}</p>
+              <p className="text-xl font-bold text-foreground">{currentStreak}</p>
+              <p className="text-[10px] text-muted-foreground">{t.best}: {longestStreak}</p>
+            </CardContent>
+          </Card>
+          
+          <Card variant="gradient">
+            <CardContent className="p-3 text-center">
+              <Zap className="w-5 h-5 text-accent mx-auto mb-1" />
+              <p className="text-xs text-muted-foreground">{t.totalXP}</p>
+              <p className="text-xl font-bold text-foreground">{totalXP}</p>
+            </CardContent>
+          </Card>
+          
+          <Card variant="gradient">
+            <CardContent className="p-3 text-center">
+              <Target className="w-5 h-5 text-emerald-500 mx-auto mb-1" />
+              <p className="text-xs text-muted-foreground">{t.challenges}</p>
+              <p className="text-xl font-bold text-foreground">{challengeStreak}</p>
             </CardContent>
           </Card>
         </div>
