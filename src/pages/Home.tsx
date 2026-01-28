@@ -16,6 +16,8 @@ import { DailyStreak } from '@/components/DailyStreak';
 import { DailyChallenges } from '@/components/DailyChallenges';
 import { SpeedQuiz } from '@/components/SpeedQuiz';
 import { weeklyContent } from '@/data/weeklyContent';
+import { weeklyContentYear2 } from '@/data/weeklyContentYear2';
+import { weeklyContentYear3 } from '@/data/weeklyContentYear3';
 
 // Lazy load heavy components for code splitting
 const LevelCompletionModal = lazy(() => import('@/components/LevelCompletionModal').then(m => ({ default: m.LevelCompletionModal })));
@@ -213,27 +215,31 @@ export default function Home() {
   const speedQuizQuestions = useMemo(() => {
     const questions: Array<{ question: string; options: string[]; correctAnswer: number }> = [];
     
-    // Get questions from weeklyContent for Level 1
-    if (selectedYear === 1) {
-      weeklyContent.forEach((lessonContent) => {
-        lessonContent.days.forEach((day) => {
-          // Get practice questions from days 1-5
-          if (day.type === 'learning' && day.content) {
-            const content = day.content[language as 'ar' | 'en'];
-            if (content?.practiceQuestion) {
-              questions.push(content.practiceQuestion);
-            }
+    // Select content source based on level
+    const contentSource = 
+      selectedYear === 1 ? weeklyContent :
+      selectedYear === 2 ? weeklyContentYear2 :
+      weeklyContentYear3;
+    
+    // Get questions from the selected level's content
+    contentSource.forEach((lessonContent) => {
+      lessonContent.days.forEach((day) => {
+        // Get practice questions from days 1-5
+        if (day.type === 'learning' && day.content) {
+          const content = day.content[language as 'ar' | 'en'];
+          if (content?.practiceQuestion) {
+            questions.push(content.practiceQuestion);
           }
-          // Get quiz questions from day 6
-          if (day.type === 'quiz' && day.quiz) {
-            const quizQuestions = day.quiz[language as 'ar' | 'en'];
-            if (quizQuestions) {
-              questions.push(...quizQuestions.slice(0, 3)); // Take first 3 from each quiz
-            }
+        }
+        // Get quiz questions from day 6
+        if (day.type === 'quiz' && day.quiz) {
+          const quizQuestions = day.quiz[language as 'ar' | 'en'];
+          if (quizQuestions) {
+            questions.push(...quizQuestions.slice(0, 3)); // Take first 3 from each quiz
           }
-        });
+        }
       });
-    }
+    });
     
     // Shuffle and take 10 random questions
     const shuffled = [...questions].sort(() => Math.random() - 0.5);

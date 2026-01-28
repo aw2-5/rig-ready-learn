@@ -7,6 +7,8 @@ import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
 import { Dialog, DialogContent } from '@/components/ui/dialog';
 import { Zap, Clock, Trophy, Flame, X, CheckCircle, XCircle } from 'lucide-react';
+import { playCorrectSound, playWrongSound, playAchievementSound } from '@/lib/sounds';
+import { correctAnswerConfetti, bigCelebration, speedBonusConfetti } from '@/lib/confetti';
 
 interface QuizQuestion {
   question: string;
@@ -147,6 +149,16 @@ export function SpeedQuiz({ isOpen, onClose, questions, level }: SpeedQuizProps)
     setIsCorrect(correct);
 
     if (correct) {
+      // Play sound and show confetti
+      playCorrectSound();
+      
+      // Speed bonus confetti for fast answers
+      if (timeUsed <= 5) {
+        speedBonusConfetti();
+      } else {
+        correctAnswerConfetti();
+      }
+      
       // Calculate points based on speed
       const speedBonus = Math.max(0, TIME_PER_QUESTION - timeUsed) * 2;
       const points = (BASE_POINTS + speedBonus) * multiplier;
@@ -163,6 +175,7 @@ export function SpeedQuiz({ isOpen, onClose, questions, level }: SpeedQuizProps)
       // Record for challenges
       recordCorrectAnswer();
     } else {
+      playWrongSound();
       setStreak(0);
       setMultiplier(1);
     }
@@ -170,8 +183,10 @@ export function SpeedQuiz({ isOpen, onClose, questions, level }: SpeedQuizProps)
 
   const handleNext = useCallback(() => {
     if (currentIndex >= questions.length - 1) {
-      // Quiz finished
+      // Quiz finished - celebration!
       setIsFinished(true);
+      playAchievementSound();
+      bigCelebration();
       recordStudy();
       
       // Calculate and record quiz score
