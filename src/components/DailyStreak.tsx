@@ -1,12 +1,28 @@
+import { useEffect, useRef } from 'react';
 import { useDailyStreak } from '@/hooks/useDailyStreak';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Card, CardContent } from '@/components/ui/card';
 import { Flame, Trophy, Crown, Star } from 'lucide-react';
+import { playStreakSound } from '@/lib/sounds';
+import { streakBadgeConfetti } from '@/lib/confetti';
 
 export function DailyStreak() {
   const { language } = useLanguage();
   const { currentStreak, longestStreak, studiedToday, getStreakBadge } = useDailyStreak();
   const badge = getStreakBadge();
+  
+  // Track previous badge to detect new achievements
+  const prevBadgeRef = useRef(badge?.name);
+  
+  // Celebrate when earning a new badge
+  useEffect(() => {
+    if (badge && badge.name !== prevBadgeRef.current && currentStreak > 0) {
+      // New badge earned!
+      playStreakSound();
+      streakBadgeConfetti();
+      prevBadgeRef.current = badge.name;
+    }
+  }, [badge, currentStreak]);
 
   const text = {
     en: {

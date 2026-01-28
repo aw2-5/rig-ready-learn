@@ -1,8 +1,11 @@
+import { useEffect, useRef } from 'react';
 import { useDailyChallenge } from '@/hooks/useDailyChallenge';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Card, CardContent } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
 import { Target, CheckCircle, Zap, Trophy } from 'lucide-react';
+import { playAchievementSound } from '@/lib/sounds';
+import { challengeCompleteConfetti } from '@/lib/confetti';
 
 export function DailyChallenges() {
   const { language } = useLanguage();
@@ -31,12 +34,24 @@ export function DailyChallenges() {
 
   const t = text[language as 'en' | 'ar'] || text.en;
 
+  // Track if celebration was shown to prevent duplicates
+  const celebrationShownRef = useRef(false);
+
   if (!challenge || !progress) {
     return null;
   }
 
   const progressPercent = Math.min((progress.current / challenge.goal) * 100, 100);
   const isCompleted = progress.completed;
+
+  // Trigger celebration when challenge is completed
+  useEffect(() => {
+    if (isCompleted && !celebrationShownRef.current) {
+      celebrationShownRef.current = true;
+      playAchievementSound();
+      challengeCompleteConfetti();
+    }
+  }, [isCompleted]);
 
   return (
     <Card variant={isCompleted ? 'accent' : 'default'} className="overflow-hidden">
