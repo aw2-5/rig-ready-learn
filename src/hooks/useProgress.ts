@@ -255,7 +255,8 @@ export function useProgress() {
     });
     
     return totalDays > 0 ? Math.round((totalCompleted / totalDays) * 100) : 0;
-  }, [progress]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [JSON.stringify(progress)]);
 
   const resetLessonProgress = useCallback(async (lessonId: string) => {
     const newProgress = { ...progress };
