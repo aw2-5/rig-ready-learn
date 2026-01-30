@@ -37,14 +37,9 @@ export function DailyChallenges() {
   // Track if celebration was shown to prevent duplicates
   const celebrationShownRef = useRef(false);
 
-  if (!challenge || !progress) {
-    return null;
-  }
+  const isCompleted = progress?.completed ?? false;
 
-  const progressPercent = Math.min((progress.current / challenge.goal) * 100, 100);
-  const isCompleted = progress.completed;
-
-  // Trigger celebration when challenge is completed
+  // Trigger celebration when challenge is completed - MUST be before any early returns
   useEffect(() => {
     if (isCompleted && !celebrationShownRef.current) {
       celebrationShownRef.current = true;
@@ -52,6 +47,12 @@ export function DailyChallenges() {
       challengeCompleteConfetti();
     }
   }, [isCompleted]);
+
+  if (!challenge || !progress) {
+    return null;
+  }
+
+  const progressPercent = Math.min((progress.current / challenge.goal) * 100, 100);
 
   return (
     <Card variant={isCompleted ? 'accent' : 'default'} className="overflow-hidden">
