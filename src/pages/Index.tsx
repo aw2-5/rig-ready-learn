@@ -4,15 +4,18 @@ import { useAuth } from '@/contexts/AuthContext';
 
 const Index = () => {
   const navigate = useNavigate();
-  const { isAuthenticated } = useAuth();
+  const { isAuthenticated, isLoading } = useAuth();
 
   useEffect(() => {
+    // Wait for auth to finish loading before redirecting
+    if (isLoading) return;
+    
     if (isAuthenticated) {
-      navigate('/home');
+      navigate('/home', { replace: true });
     } else {
-      navigate('/auth');
+      navigate('/auth', { replace: true });
     }
-  }, [isAuthenticated, navigate]);
+  }, [isAuthenticated, isLoading, navigate]);
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-background">
