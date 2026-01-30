@@ -52,34 +52,39 @@ export function useProgress() {
     localStorage.setItem(key, JSON.stringify(newProgress));
   }, [getStorageKey]);
 
-  // Fetch progress from cloud
-  const fetchCloudProgress = useCallback(async (): Promise<LessonProgress> => {
-    if (!user) return {};
+  // Fetch progress from cloud (returns null if offline/error)
+  const fetchCloudProgress = useCallback(async (): Promise<LessonProgress | null> => {
+    if (!user) return null;
 
-    const { data, error } = await supabase
-      .from('user_progress')
-      .select('*')
-      .eq('user_id', user.id);
+    try {
+      const { data, error } = await supabase
+        .from('user_progress')
+        .select('*')
+        .eq('user_id', user.id);
 
-    if (error) {
-      console.error('Failed to fetch cloud progress:', error);
-      return {};
-    }
-
-    // Convert to LessonProgress format
-    const cloudProgress: LessonProgress = {};
-    data?.forEach((item) => {
-      if (!cloudProgress[item.lesson_id]) {
-        cloudProgress[item.lesson_id] = {};
+      if (error) {
+        console.error('Failed to fetch cloud progress:', error);
+        return null; // Return null to indicate failure (offline/error)
       }
-      cloudProgress[item.lesson_id][item.day_number] = {
-        completed: item.completed,
-        score: item.score ?? undefined,
-        submittedAt: item.submitted_at,
-      };
-    });
 
-    return cloudProgress;
+      // Convert to LessonProgress format
+      const cloudProgress: LessonProgress = {};
+      data?.forEach((item) => {
+        if (!cloudProgress[item.lesson_id]) {
+          cloudProgress[item.lesson_id] = {};
+        }
+        cloudProgress[item.lesson_id][item.day_number] = {
+          completed: item.completed,
+          score: item.score ?? undefined,
+          submittedAt: item.submitted_at,
+        };
+      });
+
+      return cloudProgress;
+    } catch (err) {
+      console.error('Network error fetching progress:', err);
+      return null; // Offline or network error
+    }
   }, [user]);
 
   // Merge local and cloud progress (take most recent)
@@ -155,8 +160,20 @@ export function useProgress() {
   useEffect(() => {
     const initProgress = async () => {
       if (user && !isGuest) {
-        // Logged in user: load cloud progress first, then check for guest data to migrate
+        // Always load local progress first (for offline support)
+        const localProgress = loadLocalProgress();
+        
+        // Try to fetch cloud progress
         const cloudProgress = await fetchCloudProgress();
+        
+        if (cloudProgress === null) {
+          // Offline or error - use local progress
+          console.log('Offline mode: using local progress');
+          setProgress(localProgress);
+          return;
+        }
+        
+        // Online: check for guest data to migrate
         const guestProgress = localStorage.getItem(GUEST_STORAGE_KEY);
         
         if (guestProgress && Object.keys(cloudProgress).length === 0) {
@@ -175,9 +192,15 @@ export function useProgress() {
             saveLocalProgress(cloudProgress);
           }
         } else {
-          // Use cloud progress for logged-in users
-          setProgress(cloudProgress);
-          saveLocalProgress(cloudProgress);
+          // Merge cloud with local (in case there are offline changes)
+          const merged = mergeProgress(localProgress, cloudProgress);
+          setProgress(merged);
+          saveLocalProgress(merged);
+          
+          // Sync any local changes that weren't in cloud
+          if (Object.keys(localProgress).length > 0) {
+            await syncToCloud(merged);
+          }
         }
       } else {
         // Guest: use guest storage only
