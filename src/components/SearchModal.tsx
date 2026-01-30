@@ -44,78 +44,147 @@ export function SearchModal({ open, onOpenChange }: SearchModalProps) {
     if (!query.trim() || query.length < 2) return [];
 
     const normalizedQuery = query.toLowerCase().trim();
+    const queryWords = normalizedQuery.split(/\s+/).filter(w => w.length > 0);
     const results: SearchResult[] = [];
 
+    // Helper to check if text contains all query words (for better matching)
+    const containsAllWords = (text: string) => {
+      const lowerText = text.toLowerCase();
+      return queryWords.every(word => lowerText.includes(word));
+    };
+
+    // Helper to check if text contains any query word
+    const containsAnyWord = (text: string) => {
+      const lowerText = text.toLowerCase();
+      return queryWords.some(word => lowerText.includes(word));
+    };
+
     allLessons.forEach(lesson => {
-      const lang = language as 'en' | 'ar';
-      const title = lesson.content[lang]?.title || '';
-      const definition = lesson.content[lang]?.definition || '';
-      const explanation = lesson.content[lang]?.explanation || '';
-      const summary = lesson.content[lang]?.summary || '';
+      // Search in both languages for better results
+      const enContent = lesson.content.en;
+      const arContent = lesson.content.ar;
+      const currentLangContent = lesson.content[language as 'en' | 'ar'];
+      
+      // Combine all searchable text
+      const allText = [
+        enContent?.title || '',
+        enContent?.definition || '',
+        enContent?.explanation || '',
+        enContent?.summary || '',
+        arContent?.title || '',
+        arContent?.definition || '',
+        arContent?.explanation || '',
+        arContent?.summary || '',
+      ].join(' ');
 
-      // Match in title
-      if (title.toLowerCase().includes(normalizedQuery)) {
-        results.push({
-          lessonId: lesson.id,
-          lessonTitle: title,
-          level: lesson.level,
-          matchType: 'title',
-          matchText: title,
-          icon: lesson.icon,
-        });
-        return;
+      const title = currentLangContent?.title || enContent?.title || '';
+      const definition = currentLangContent?.definition || '';
+      const explanation = currentLangContent?.explanation || '';
+      const summary = currentLangContent?.summary || '';
+
+      // Check for exact phrase match first
+      if (allText.toLowerCase().includes(normalizedQuery)) {
+        // Match in title
+        if (title.toLowerCase().includes(normalizedQuery) || 
+            enContent?.title?.toLowerCase().includes(normalizedQuery) ||
+            arContent?.title?.toLowerCase().includes(normalizedQuery)) {
+          results.push({
+            lessonId: lesson.id,
+            lessonTitle: title,
+            level: lesson.level,
+            matchType: 'title',
+            matchText: title,
+            icon: lesson.icon,
+          });
+          return;
+        }
+
+        // Match in definition
+        const defToSearch = definition.toLowerCase().includes(normalizedQuery) ? definition : 
+                           (enContent?.definition?.toLowerCase().includes(normalizedQuery) ? enContent.definition : arContent?.definition || '');
+        if (defToSearch && defToSearch.toLowerCase().includes(normalizedQuery)) {
+          const matchIndex = defToSearch.toLowerCase().indexOf(normalizedQuery);
+          const start = Math.max(0, matchIndex - 30);
+          const end = Math.min(defToSearch.length, matchIndex + query.length + 50);
+          const excerpt = (start > 0 ? '...' : '') + defToSearch.slice(start, end) + (end < defToSearch.length ? '...' : '');
+          
+          results.push({
+            lessonId: lesson.id,
+            lessonTitle: title,
+            level: lesson.level,
+            matchType: 'content',
+            matchText: excerpt,
+            icon: lesson.icon,
+          });
+          return;
+        }
+
+        // Match in explanation
+        const expToSearch = explanation.toLowerCase().includes(normalizedQuery) ? explanation :
+                           (enContent?.explanation?.toLowerCase().includes(normalizedQuery) ? enContent.explanation : arContent?.explanation || '');
+        if (expToSearch && expToSearch.toLowerCase().includes(normalizedQuery)) {
+          const matchIndex = expToSearch.toLowerCase().indexOf(normalizedQuery);
+          const start = Math.max(0, matchIndex - 30);
+          const end = Math.min(expToSearch.length, matchIndex + query.length + 50);
+          const excerpt = (start > 0 ? '...' : '') + expToSearch.slice(start, end) + (end < expToSearch.length ? '...' : '');
+          
+          results.push({
+            lessonId: lesson.id,
+            lessonTitle: title,
+            level: lesson.level,
+            matchType: 'content',
+            matchText: excerpt,
+            icon: lesson.icon,
+          });
+          return;
+        }
+
+        // Match in summary
+        if (summary.toLowerCase().includes(normalizedQuery)) {
+          results.push({
+            lessonId: lesson.id,
+            lessonTitle: title,
+            level: lesson.level,
+            matchType: 'content',
+            matchText: summary.slice(0, 100) + '...',
+            icon: lesson.icon,
+          });
+          return;
+        }
       }
 
-      // Match in definition
-      if (definition.toLowerCase().includes(normalizedQuery)) {
-        const matchIndex = definition.toLowerCase().indexOf(normalizedQuery);
-        const start = Math.max(0, matchIndex - 30);
-        const end = Math.min(definition.length, matchIndex + query.length + 50);
-        const excerpt = (start > 0 ? '...' : '') + definition.slice(start, end) + (end < definition.length ? '...' : '');
-        
+      // Fallback: check if all words match anywhere
+      if (containsAllWords(allText)) {
         results.push({
           lessonId: lesson.id,
           lessonTitle: title,
           level: lesson.level,
           matchType: 'content',
-          matchText: excerpt,
+          matchText: (definition || summary).slice(0, 100) + '...',
           icon: lesson.icon,
         });
         return;
       }
 
-      // Match in explanation
-      if (explanation.toLowerCase().includes(normalizedQuery)) {
-        const matchIndex = explanation.toLowerCase().indexOf(normalizedQuery);
-        const start = Math.max(0, matchIndex - 30);
-        const end = Math.min(explanation.length, matchIndex + query.length + 50);
-        const excerpt = (start > 0 ? '...' : '') + explanation.slice(start, end) + (end < explanation.length ? '...' : '');
-        
+      // Last resort: partial word matching
+      if (queryWords.length === 1 && containsAnyWord(allText)) {
         results.push({
           lessonId: lesson.id,
           lessonTitle: title,
           level: lesson.level,
           matchType: 'content',
-          matchText: excerpt,
-          icon: lesson.icon,
-        });
-        return;
-      }
-
-      // Match in summary
-      if (summary.toLowerCase().includes(normalizedQuery)) {
-        results.push({
-          lessonId: lesson.id,
-          lessonTitle: title,
-          level: lesson.level,
-          matchType: 'content',
-          matchText: summary.slice(0, 100) + '...',
+          matchText: (definition || summary).slice(0, 100) + '...',
           icon: lesson.icon,
         });
       }
     });
 
-    return results.slice(0, 20);
+    // Remove duplicates
+    const uniqueResults = results.filter((result, index, self) =>
+      index === self.findIndex(r => r.lessonId === result.lessonId)
+    );
+
+    return uniqueResults.slice(0, 20);
   }, [query, allLessons, language]);
 
   const handleResultClick = (lessonId: string) => {
