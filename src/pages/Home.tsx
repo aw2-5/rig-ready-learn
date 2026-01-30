@@ -65,7 +65,11 @@ export default function Home() {
     isLessonComplete,
   } = useLevelProgress();
   const navigate = useNavigate();
-  const [selectedYear, setSelectedYear] = useState(1);
+  const [selectedYear, setSelectedYear] = useState(() => {
+    // Restore saved level from localStorage
+    const saved = localStorage.getItem('petrolearn-selected-level');
+    return saved ? parseInt(saved, 10) : 1;
+  });
   const [showOnboarding, setShowOnboarding] = useState(() => {
     return !localStorage.getItem('onboarding-complete');
   });
@@ -171,6 +175,8 @@ export default function Home() {
       return;
     }
     setSelectedYear(year);
+    // Save selected level to localStorage
+    localStorage.setItem('petrolearn-selected-level', String(year));
   };
 
   const handleGoToLevel2 = () => {
