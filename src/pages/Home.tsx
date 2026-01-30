@@ -311,50 +311,52 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="flex items-center gap-1">
+            <div className="flex items-center gap-0.5">
               <Button
                 variant="ghost"
                 size="icon"
+                className="h-9 w-9"
                 onClick={() => setShowSearch(true)}
+                title={language === 'ar' ? 'بحث' : 'Search'}
               >
-                <Search className="w-5 h-5" />
+                <Search className="w-4 h-4" />
               </Button>
               <Button
                 variant="ghost"
                 size="icon"
+                className="h-9 w-9"
                 onClick={() => navigate('/dashboard')}
+                title={language === 'ar' ? 'الإحصائيات' : 'Dashboard'}
               >
-                <BarChart3 className="w-5 h-5" />
+                <BarChart3 className="w-4 h-4" />
               </Button>
               <Button
                 variant="ghost"
                 size="icon"
-                onClick={() => navigate('/install')}
-                title={language === 'ar' ? 'تثبيت التطبيق' : 'Install App'}
+                className="h-9 w-9"
+                onClick={() => navigate('/profile')}
+                title={language === 'ar' ? 'الملف الشخصي' : 'Profile'}
               >
-                <Download className="w-5 h-5" />
+                <User className="w-4 h-4" />
               </Button>
               <ThemeToggle />
               <Button
                 variant="ghost"
                 size="icon"
-                onClick={() => navigate('/profile')}
-              >
-                <User className="w-5 h-5" />
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon"
+                className="h-9 w-9"
                 onClick={() => setLanguage(language === 'en' ? 'ar' : 'en')}
+                title={language === 'ar' ? 'English' : 'العربية'}
               >
-                <Globe className="w-5 h-5" />
+                <Globe className="w-4 h-4" />
               </Button>
               <Button
                 variant="ghost"
                 size="icon"
+                className="h-9 w-9 text-destructive hover:text-destructive hover:bg-destructive/10"
                 onClick={handleLogout}
+                title={language === 'ar' ? 'تسجيل خروج' : 'Logout'}
               >
-                <LogOut className="w-5 h-5" />
+                <LogOut className="w-4 h-4" />
               </Button>
             </div>
           </div>

@@ -13,7 +13,7 @@ const translations: Record<Language, Record<string, string>> = {
   en: {
     // Auth
     'welcome': 'Welcome to',
-    'appName': 'PetroLearn',
+    'appName': 'Drill A_Z',
     'appTagline': 'Your gateway to Petroleum Engineering',
     'selectLanguage': 'Select your language',
     'continueAsGuest': 'Continue as Guest',
@@ -108,7 +108,7 @@ const translations: Record<Language, Record<string, string>> = {
   ar: {
     // Auth
     'welcome': 'مرحباً بك في',
-    'appName': 'بترو ليرن',
+    'appName': 'Drill A to Z',
     'appTagline': 'بوابتك إلى هندسة النفط',
     'selectLanguage': 'اختر لغتك',
     'continueAsGuest': 'المتابعة كضيف',
