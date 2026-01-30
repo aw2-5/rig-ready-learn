@@ -69,10 +69,16 @@ export default function Lesson() {
   const isLevel1Lesson = lessons.some(l => l.id === id);
   const isLevel2Lesson = lessonsYear2.some(l => l.id === id);
   const isLevel3Lesson = lessonsYear3.some(l => l.id === id);
+  const currentLevel = isLevel1Lesson ? 1 : isLevel2Lesson ? 2 : 3;
   const currentLevelLessons = isLevel1Lesson ? lessons : isLevel2Lesson ? lessonsYear2 : lessonsYear3;
   const currentLessonIndex = currentLevelLessons.findIndex(l => l.id === id);
   const nextLesson = currentLevelLessons[currentLessonIndex + 1];
   const isLastLessonInLevel = currentLessonIndex === currentLevelLessons.length - 1;
+
+  // Save current level to localStorage so Home page can restore it
+  useEffect(() => {
+    localStorage.setItem('petrolearn-selected-level', String(currentLevel));
+  }, [currentLevel]);
   useEffect(() => {
     if (id) {
       const firstIncomplete = [1, 2, 3, 4, 5, 6, 7].find(day => !isDayComplete(id, day));
