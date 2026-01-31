@@ -333,6 +333,13 @@ export default function Home() {
               >
                 <User className="w-5 h-5" />
               </Button>
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => navigate('/install')}
+              >
+                <Download className="w-5 h-5" />
+              </Button>
               <ThemeToggle />
               <Button
                 variant="ghost"
