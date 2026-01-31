@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 
 const AI_USAGE_KEY = 'ai-daily-usage';
-const DAILY_LIMIT = 5;
+const DAILY_LIMIT = 10;
 
 interface AIUsageData {
   count: number;

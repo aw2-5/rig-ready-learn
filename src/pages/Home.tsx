@@ -311,52 +311,42 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="flex items-center gap-0.5">
+            <div className="flex items-center gap-2">
               <Button
                 variant="ghost"
                 size="icon"
-                className="h-9 w-9"
                 onClick={() => setShowSearch(true)}
-                title={language === 'ar' ? 'بحث' : 'Search'}
               >
-                <Search className="w-4 h-4" />
+                <Search className="w-5 h-5" />
               </Button>
               <Button
                 variant="ghost"
                 size="icon"
-                className="h-9 w-9"
                 onClick={() => navigate('/dashboard')}
-                title={language === 'ar' ? 'الإحصائيات' : 'Dashboard'}
               >
-                <BarChart3 className="w-4 h-4" />
+                <BarChart3 className="w-5 h-5" />
               </Button>
               <Button
                 variant="ghost"
                 size="icon"
-                className="h-9 w-9"
                 onClick={() => navigate('/profile')}
-                title={language === 'ar' ? 'الملف الشخصي' : 'Profile'}
               >
-                <User className="w-4 h-4" />
+                <User className="w-5 h-5" />
               </Button>
               <ThemeToggle />
               <Button
                 variant="ghost"
                 size="icon"
-                className="h-9 w-9"
                 onClick={() => setLanguage(language === 'en' ? 'ar' : 'en')}
-                title={language === 'ar' ? 'English' : 'العربية'}
               >
-                <Globe className="w-4 h-4" />
+                <Globe className="w-5 h-5" />
               </Button>
               <Button
                 variant="ghost"
                 size="icon"
-                className="h-9 w-9 text-destructive hover:text-destructive hover:bg-destructive/10"
                 onClick={handleLogout}
-                title={language === 'ar' ? 'تسجيل خروج' : 'Logout'}
               >
-                <LogOut className="w-4 h-4" />
+                <LogOut className="w-5 h-5" />
               </Button>
             </div>
           </div>
