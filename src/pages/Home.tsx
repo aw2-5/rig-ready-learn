@@ -43,7 +43,8 @@ import {
   Zap,
   Search,
   BarChart3,
-  Download
+  Download,
+  Info
 } from 'lucide-react';
 import { toast } from 'sonner';
 
@@ -332,6 +333,13 @@ export default function Home() {
                 onClick={() => navigate('/profile')}
               >
                 <User className="w-5 h-5" />
+              </Button>
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => navigate('/about')}
+              >
+                <Info className="w-5 h-5" />
               </Button>
               <Button
                 variant="ghost"

@@ -14,6 +14,7 @@ import Lesson from "./pages/Lesson";
 import Profile from "./pages/Profile";
 import Dashboard from "./pages/Dashboard";
 import Install from "./pages/Install";
+import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -63,6 +64,7 @@ const App = () => (
                   } 
                 />
                 <Route path="/install" element={<Install />} />
+                <Route path="/about" element={<About />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </BrowserRouter>
