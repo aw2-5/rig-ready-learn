@@ -2,22 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://drilla-z.lovable.app/</loc>
+    <loc>https://drilla-z.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://drilla-z.lovable.app/about</loc>
+    <loc>https://drilla-z.com/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://drilla-z.lovable.app/auth</loc>
+    <loc>https://drilla-z.com/auth</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://drilla-z.lovable.app/install</loc>
+    <loc>https://drilla-z.com/install</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

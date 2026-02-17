@@ -27,8 +27,8 @@ export function SEOHead({
   title, 
   description, 
   keywords,
-  image = 'https://drilla-z.lovable.app/favicon.png',
-  url = 'https://drilla-z.lovable.app',
+  image = 'https://drilla-z.com/favicon.png',
+  url = 'https://drilla-z.com',
   type = 'website'
 }: SEOHeadProps) {
   const { language } = useLanguage();
