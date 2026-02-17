@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://drilla-z.lovable.app/sitemap.xml
+Sitemap: https://drilla-z.com/sitemap.xml
