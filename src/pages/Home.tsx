@@ -155,26 +155,30 @@ export default function Home() {
   };
 
   const handleLessonClick = (lessonId: string) => {
+    // Check if the level is locked
+    const isLevel2Lesson = lessonsYear2.some(l => l.id === lessonId);
+    const isLevel3Lesson = lessonsYear3.some(l => l.id === lessonId);
+    
+    if (isLevel2Lesson && !isLevel2Unlocked) {
+      toast.error(
+        language === 'ar' 
+          ? 'أكمل 80% من المستوى الأول لفتح هذا الدرس' 
+          : 'Complete 80% of Level 1 to unlock this lesson'
+      );
+      return;
+    }
+    if (isLevel3Lesson && !isLevel3Unlocked) {
+      toast.error(
+        language === 'ar' 
+          ? 'أكمل 80% من المستوى الثاني لفتح هذا الدرس' 
+          : 'Complete 80% of Level 2 to unlock this lesson'
+      );
+      return;
+    }
     navigate(`/lesson/${lessonId}`);
   };
 
   const handleYearSelect = (year: number) => {
-    if (year === 2 && !isLevel2Unlocked) {
-      toast.error(
-        language === 'ar' 
-          ? 'أكمل 80% من المستوى الأول لفتح المستوى الثاني' 
-          : 'Complete 80% of Level 1 to unlock Level 2'
-      );
-      return;
-    }
-    if (year === 3 && !isLevel3Unlocked) {
-      toast.error(
-        language === 'ar' 
-          ? 'أكمل 80% من المستوى الثاني لفتح المستوى الثالث' 
-          : 'Complete 80% of Level 2 to unlock Level 3'
-      );
-      return;
-    }
     setSelectedYear(year);
     // Save selected level to localStorage
     localStorage.setItem('petrolearn-selected-level', String(year));
@@ -499,6 +503,48 @@ export default function Home() {
         </div>
 
         {/* Level Status Message */}
+        {selectedYear === 2 && !isLevel2Unlocked && (
+          <Card variant="accent" className="animate-fade-in">
+            <CardContent className="p-4 flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center">
+                <Lock className="w-5 h-5 text-accent" />
+              </div>
+              <div className="flex-1">
+                <p className="text-sm font-medium text-foreground">
+                  {language === 'ar' ? 'أكمل 80% من المستوى الأول لفتح هذا المستوى' : 'Complete 80% of Level 1 to unlock'}
+                </p>
+                <p className="text-xs text-muted-foreground">
+                  {language === 'ar' 
+                    ? `المستوى الأول: ${level1Progress}% مكتمل`
+                    : `Level 1: ${level1Progress}% complete`
+                  }
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        )}
+
+        {selectedYear === 3 && !isLevel3Unlocked && (
+          <Card variant="accent" className="animate-fade-in">
+            <CardContent className="p-4 flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center">
+                <Lock className="w-5 h-5 text-accent" />
+              </div>
+              <div className="flex-1">
+                <p className="text-sm font-medium text-foreground">
+                  {language === 'ar' ? 'أكمل 80% من المستوى الثاني لفتح هذا المستوى' : 'Complete 80% of Level 2 to unlock'}
+                </p>
+                <p className="text-xs text-muted-foreground">
+                  {language === 'ar' 
+                    ? `المستوى الثاني: ${level2Progress}% مكتمل`
+                    : `Level 2: ${level2Progress}% complete`
+                  }
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        )}
+
         {!isLevel2Unlocked && selectedYear === 1 && (
           <Card variant="accent" className="animate-fade-in">
             <CardContent className="p-4 flex items-center gap-3">
@@ -520,7 +566,7 @@ export default function Home() {
           </Card>
         )}
 
-        {!isLevel3Unlocked && selectedYear === 2 && (
+        {!isLevel3Unlocked && selectedYear === 2 && isLevel2Unlocked && (
           <Card variant="accent" className="animate-fade-in">
             <CardContent className="p-4 flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center">
@@ -578,19 +624,22 @@ export default function Home() {
           <div className="grid gap-3">
             {currentLessons.map((lesson, index) => {
               const lessonComplete = isLessonComplete(lesson.id);
+              const isLocked = (selectedYear === 2 && !isLevel2Unlocked) || (selectedYear === 3 && !isLevel3Unlocked);
               return (
                 <Card 
                   key={lesson.id}
                   variant="interactive"
-                  className="animate-slide-up"
+                  className={`animate-slide-up ${isLocked ? 'opacity-60 cursor-not-allowed' : ''}`}
                   style={{ animationDelay: `${0.15 + index * 0.05}s` }}
                   onClick={() => handleLessonClick(lesson.id)}
                 >
                   <CardContent className="p-4">
                     <div className="flex items-center gap-4">
-                      <div className={`w-12 h-12 rounded-xl flex items-center justify-center text-2xl relative ${lessonComplete ? 'bg-accent/20' : 'bg-secondary'}`}>
+                      <div className={`w-12 h-12 rounded-xl flex items-center justify-center text-2xl relative ${isLocked ? 'bg-muted' : lessonComplete ? 'bg-accent/20' : 'bg-secondary'}`}>
                         {lesson.icon}
-                        {lessonComplete && (
+                        {isLocked ? (
+                          <Lock className="absolute -bottom-1 -right-1 w-5 h-5 text-muted-foreground bg-card rounded-full" />
+                        ) : lessonComplete && (
                           <CheckCircle className="absolute -bottom-1 -right-1 w-5 h-5 text-accent bg-card rounded-full" />
                         )}
                       </div>
@@ -599,13 +648,19 @@ export default function Home() {
                           {t(lesson.titleKey)}
                         </h4>
                         <p className="text-sm text-muted-foreground">
-                          {lessonComplete 
+                          {isLocked
+                            ? (language === 'ar' ? '🔒 مقفول' : '🔒 Locked')
+                            : lessonComplete 
                             ? (language === 'ar' ? '✓ مكتمل' : '✓ Completed')
                             : `7 ${t('day')}s • ${t('quiz')} • ${t('project')}`
                           }
                         </p>
                       </div>
-                      <ChevronRight className={`w-5 h-5 text-muted-foreground ${isRTL ? 'rotate-180' : ''}`} />
+                      {isLocked ? (
+                        <Lock className={`w-5 h-5 text-muted-foreground`} />
+                      ) : (
+                        <ChevronRight className={`w-5 h-5 text-muted-foreground ${isRTL ? 'rotate-180' : ''}`} />
+                      )}
                     </div>
                   </CardContent>
                 </Card>
