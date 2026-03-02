@@ -15,6 +15,7 @@ import Profile from "./pages/Profile";
 import Dashboard from "./pages/Dashboard";
 import Install from "./pages/Install";
 import About from "./pages/About";
+import AdminProgress from "./pages/AdminProgress";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -65,6 +66,14 @@ const App = () => (
                 />
                 <Route path="/install" element={<Install />} />
                 <Route path="/about" element={<About />} />
+                <Route 
+                  path="/admin-progress" 
+                  element={
+                    <ProtectedRoute>
+                      <AdminProgress />
+                    </ProtectedRoute>
+                  } 
+                />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </BrowserRouter>
