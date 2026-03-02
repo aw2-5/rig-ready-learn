@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { supabase } from '@/integrations/supabase/client';
 import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useAuth } from '@/contexts/AuthContext';
@@ -20,6 +21,8 @@ export default function Auth() {
   const [fullName, setFullName] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [forgotMode, setForgotMode] = useState(false);
+  const [resetEmail, setResetEmail] = useState('');
 
   const handleLanguageSelect = (lang: 'en' | 'ar') => {
     setLanguage(lang);
@@ -95,6 +98,28 @@ export default function Auth() {
       } else {
         toast.success(language === 'ar' ? 'تم إنشاء الحساب بنجاح!' : 'Account created successfully!');
         navigate('/home');
+      }
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handleForgotPassword = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!resetEmail || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(resetEmail)) {
+      toast.error(language === 'ar' ? 'يرجى إدخال بريد إلكتروني صحيح' : 'Please enter a valid email');
+      return;
+    }
+    setIsLoading(true);
+    try {
+      const { error } = await supabase.auth.resetPasswordForEmail(resetEmail, {
+        redirectTo: `${window.location.origin}/reset-password`,
+      });
+      if (error) {
+        toast.error(error.message);
+      } else {
+        toast.success(language === 'ar' ? 'تم إرسال رابط إعادة التعيين إلى بريدك الإلكتروني' : 'Reset link sent to your email');
+        setForgotMode(false);
       }
     } finally {
       setIsLoading(false);
@@ -222,7 +247,42 @@ export default function Auth() {
                 >
                   {isLoading ? '...' : t('login')}
                 </Button>
+                <Button
+                  type="button"
+                  variant="link"
+                  size="sm"
+                  className="w-full text-muted-foreground"
+                  onClick={() => setForgotMode(true)}
+                >
+                  {language === 'ar' ? 'نسيت كلمة المرور؟' : 'Forgot password?'}
+                </Button>
               </form>
+
+              {forgotMode && (
+                <div className="mt-4 p-4 rounded-lg border border-border bg-secondary/50 space-y-3">
+                  <p className="text-sm text-foreground font-medium">
+                    {language === 'ar' ? 'أدخل بريدك الإلكتروني لإرسال رابط إعادة التعيين:' : 'Enter your email to receive a reset link:'}
+                  </p>
+                  <form onSubmit={handleForgotPassword} className="space-y-3">
+                    <Input
+                      type="email"
+                      value={resetEmail}
+                      onChange={(e) => setResetEmail(e.target.value)}
+                      placeholder="your@email.com"
+                      dir="ltr"
+                      className="h-10"
+                    />
+                    <div className="flex gap-2">
+                      <Button type="submit" variant="accent" size="sm" className="flex-1" disabled={isLoading}>
+                        {isLoading ? '...' : (language === 'ar' ? 'إرسال الرابط' : 'Send Link')}
+                      </Button>
+                      <Button type="button" variant="ghost" size="sm" onClick={() => setForgotMode(false)}>
+                        {language === 'ar' ? 'إلغاء' : 'Cancel'}
+                      </Button>
+                    </div>
+                  </form>
+                </div>
+              )}
 
               <div className="relative my-6">
                 <div className="absolute inset-0 flex items-center">
