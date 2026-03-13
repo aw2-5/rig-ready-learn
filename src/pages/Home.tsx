@@ -327,6 +327,26 @@ export default function Home() {
               >
                 <Search className="w-5 h-5" />
               </Button>
+              {isAdminEmail(user?.email) && (
+                <>
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    onClick={() => navigate('/admin-progress')}
+                    title={language === 'ar' ? 'تقدم الطلاب' : 'Student Progress'}
+                  >
+                    <Shield className="w-5 h-5 text-destructive" />
+                  </Button>
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    onClick={() => navigate('/admin-content')}
+                    title={language === 'ar' ? 'إدارة المحتوى' : 'Content Management'}
+                  >
+                    <Edit className="w-5 h-5 text-destructive" />
+                  </Button>
+                </>
+              )}
               <Button
                 variant="ghost"
                 size="icon"
