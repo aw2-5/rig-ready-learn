@@ -44,8 +44,11 @@ import {
   Search,
   BarChart3,
   Download,
-  Info
+  Info,
+  Shield,
+  Edit
 } from 'lucide-react';
+import { isAdminEmail } from '@/lib/adminConfig';
 import { toast } from 'sonner';
 
 export default function Home() {
