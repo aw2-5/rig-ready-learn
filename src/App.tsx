@@ -16,6 +16,7 @@ import Dashboard from "./pages/Dashboard";
 import Install from "./pages/Install";
 import About from "./pages/About";
 import AdminProgress from "./pages/AdminProgress";
+import AdminContent from "./pages/AdminContent";
 import ResetPassword from "./pages/ResetPassword";
 import NotFound from "./pages/NotFound";
 
