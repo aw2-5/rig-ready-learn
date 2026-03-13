@@ -17,6 +17,7 @@ import Install from "./pages/Install";
 import About from "./pages/About";
 import AdminProgress from "./pages/AdminProgress";
 import AdminContent from "./pages/AdminContent";
+import AdminLessonEditor from "./pages/AdminLessonEditor";
 import ResetPassword from "./pages/ResetPassword";
 import NotFound from "./pages/NotFound";
 
