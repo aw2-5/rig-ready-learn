@@ -42,7 +42,7 @@ export function SpeedQuiz({ isOpen, onClose, questions, level }: SpeedQuizProps)
   const [isFinished, setIsFinished] = useState(false);
   const [totalCorrect, setTotalCorrect] = useState(0);
   
-  const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const startTimeRef = useRef<number>(0);
 
   const text = {

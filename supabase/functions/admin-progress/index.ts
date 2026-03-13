@@ -43,7 +43,7 @@ Deno.serve(async (req) => {
     }
 
     const userEmail = claimsData.claims.email;
-    if (userEmail?.toLowerCase() !== ADMIN_EMAIL.toLowerCase()) {
+    if (!ADMIN_EMAILS.some(e => e.toLowerCase() === userEmail?.toLowerCase())) {
       return new Response(JSON.stringify({ error: "Forbidden" }), {
         status: 403,
         headers: { ...corsHeaders, "Content-Type": "application/json" },
