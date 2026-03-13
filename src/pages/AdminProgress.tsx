@@ -12,7 +12,7 @@ import { lessons } from '@/data/lessons';
 import { lessonsYear2 } from '@/data/lessonsYear2';
 import { lessonsYear3 } from '@/data/lessonsYear3';
 
-const ADMIN_EMAIL = 'awsalnoimy25@gmail.com';
+import { isAdminEmail } from '@/lib/adminConfig';
 const ALL_LESSONS = [...lessons, ...lessonsYear2, ...lessonsYear3];
 const TOTAL_DAYS_PER_LESSON = 7;
 const TOTAL_POSSIBLE_DAYS = ALL_LESSONS.length * TOTAL_DAYS_PER_LESSON;
@@ -41,7 +41,7 @@ export default function AdminProgress() {
   const [error, setError] = useState<string | null>(null);
   const [expandedUser, setExpandedUser] = useState<string | null>(null);
 
-  const isAdmin = user?.email?.toLowerCase() === ADMIN_EMAIL.toLowerCase();
+  const isAdmin = isAdminEmail(user?.email);
 
   useEffect(() => {
     if (!isAdmin) return;

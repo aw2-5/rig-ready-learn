@@ -44,8 +44,11 @@ import {
   Search,
   BarChart3,
   Download,
-  Info
+  Info,
+  Shield,
+  Edit
 } from 'lucide-react';
+import { isAdminEmail } from '@/lib/adminConfig';
 import { toast } from 'sonner';
 
 export default function Home() {
@@ -324,6 +327,26 @@ export default function Home() {
               >
                 <Search className="w-5 h-5" />
               </Button>
+              {isAdminEmail(user?.email) && (
+                <>
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    onClick={() => navigate('/admin-progress')}
+                    title={language === 'ar' ? 'تقدم الطلاب' : 'Student Progress'}
+                  >
+                    <Shield className="w-5 h-5 text-destructive" />
+                  </Button>
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    onClick={() => navigate('/admin-content')}
+                    title={language === 'ar' ? 'إدارة المحتوى' : 'Content Management'}
+                  >
+                    <Edit className="w-5 h-5 text-destructive" />
+                  </Button>
+                </>
+              )}
               <Button
                 variant="ghost"
                 size="icon"
