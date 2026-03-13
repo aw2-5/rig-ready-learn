@@ -59,11 +59,10 @@ export default function Lesson() {
   const [selectedDay, setSelectedDay] = useState(1);
   const [showLevelCompleteModal, setShowLevelCompleteModal] = useState(false);
 
-  // Find lesson in all levels
-  const allLessons = [...lessons, ...lessonsYear2, ...lessonsYear3];
-  const allWeeklyContent = [...weeklyContent, ...weeklyContentYear2, ...weeklyContentYear3];
-  const lesson = allLessons.find(l => l.id === id);
-  const weeklyLesson = allWeeklyContent.find(w => w.lessonId === id);
+  // Load content from CMS (DB) with hardcoded fallback
+  const { lesson, weeklyLesson, loading: cmsLoading } = useCmsLesson(id);
+
+  // Determine which level this lesson belongs to (use hardcoded arrays for level info)
 
   // Determine which level this lesson belongs to
   const isLevel1Lesson = lessons.some(l => l.id === id);
