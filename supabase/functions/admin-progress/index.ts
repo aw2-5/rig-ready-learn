@@ -6,7 +6,11 @@ const corsHeaders = {
     "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
 };
 
-const ADMIN_EMAIL = "awsalnoimy25@gmail.com";
+const ADMIN_EMAILS = [
+  "awsalnoimy25@gmail.com",
+  "aws.23pm57@student.uomosul.edu.iq",
+];
+
 
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") {
