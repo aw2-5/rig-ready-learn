@@ -14,6 +14,195 @@ export type Database = {
   }
   public: {
     Tables: {
+      cms_daily_content: {
+        Row: {
+          day_number: number
+          explanation_ar: string | null
+          explanation_en: string | null
+          id: string
+          key_terms_ar: Json | null
+          key_terms_en: Json | null
+          lesson_id: string
+          practice_question_ar: Json | null
+          practice_question_en: Json | null
+          title_ar: string | null
+          title_en: string | null
+          type: string
+        }
+        Insert: {
+          day_number: number
+          explanation_ar?: string | null
+          explanation_en?: string | null
+          id?: string
+          key_terms_ar?: Json | null
+          key_terms_en?: Json | null
+          lesson_id: string
+          practice_question_ar?: Json | null
+          practice_question_en?: Json | null
+          title_ar?: string | null
+          title_en?: string | null
+          type?: string
+        }
+        Update: {
+          day_number?: number
+          explanation_ar?: string | null
+          explanation_en?: string | null
+          id?: string
+          key_terms_ar?: Json | null
+          key_terms_en?: Json | null
+          lesson_id?: string
+          practice_question_ar?: Json | null
+          practice_question_en?: Json | null
+          title_ar?: string | null
+          title_en?: string | null
+          type?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "cms_daily_content_lesson_id_fkey"
+            columns: ["lesson_id"]
+            isOneToOne: false
+            referencedRelation: "cms_lessons"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      cms_lessons: {
+        Row: {
+          created_at: string | null
+          definition_ar: string | null
+          definition_en: string | null
+          explanation_ar: string | null
+          explanation_en: string | null
+          icon: string | null
+          id: string
+          level: number
+          sort_order: number
+          summary_ar: string | null
+          summary_en: string | null
+          title_ar: string
+          title_en: string
+          updated_at: string | null
+        }
+        Insert: {
+          created_at?: string | null
+          definition_ar?: string | null
+          definition_en?: string | null
+          explanation_ar?: string | null
+          explanation_en?: string | null
+          icon?: string | null
+          id: string
+          level?: number
+          sort_order?: number
+          summary_ar?: string | null
+          summary_en?: string | null
+          title_ar?: string
+          title_en?: string
+          updated_at?: string | null
+        }
+        Update: {
+          created_at?: string | null
+          definition_ar?: string | null
+          definition_en?: string | null
+          explanation_ar?: string | null
+          explanation_en?: string | null
+          icon?: string | null
+          id?: string
+          level?: number
+          sort_order?: number
+          summary_ar?: string | null
+          summary_en?: string | null
+          title_ar?: string
+          title_en?: string
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
+      cms_projects: {
+        Row: {
+          description_ar: string | null
+          description_en: string | null
+          id: string
+          instructions_ar: Json | null
+          instructions_en: Json | null
+          lesson_id: string
+          submission_type: string | null
+          title_ar: string | null
+          title_en: string | null
+        }
+        Insert: {
+          description_ar?: string | null
+          description_en?: string | null
+          id?: string
+          instructions_ar?: Json | null
+          instructions_en?: Json | null
+          lesson_id: string
+          submission_type?: string | null
+          title_ar?: string | null
+          title_en?: string | null
+        }
+        Update: {
+          description_ar?: string | null
+          description_en?: string | null
+          id?: string
+          instructions_ar?: Json | null
+          instructions_en?: Json | null
+          lesson_id?: string
+          submission_type?: string | null
+          title_ar?: string | null
+          title_en?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "cms_projects_lesson_id_fkey"
+            columns: ["lesson_id"]
+            isOneToOne: false
+            referencedRelation: "cms_lessons"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      cms_quiz_questions: {
+        Row: {
+          correct_answer: number
+          id: string
+          lesson_id: string
+          options_ar: Json
+          options_en: Json
+          question_ar: string
+          question_en: string
+          sort_order: number | null
+        }
+        Insert: {
+          correct_answer?: number
+          id?: string
+          lesson_id: string
+          options_ar?: Json
+          options_en?: Json
+          question_ar?: string
+          question_en?: string
+          sort_order?: number | null
+        }
+        Update: {
+          correct_answer?: number
+          id?: string
+          lesson_id?: string
+          options_ar?: Json
+          options_en?: Json
+          question_ar?: string
+          question_en?: string
+          sort_order?: number | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "cms_quiz_questions_lesson_id_fkey"
+            columns: ["lesson_id"]
+            isOneToOne: false
+            referencedRelation: "cms_lessons"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       profiles: {
         Row: {
           created_at: string
@@ -125,7 +314,7 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      is_admin: { Args: never; Returns: boolean }
     }
     Enums: {
       [_ in never]: never
