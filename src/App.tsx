@@ -86,6 +86,14 @@ const App = () => (
                     </ProtectedRoute>
                   } 
                 />
+                <Route 
+                  path="/admin-content/:id" 
+                  element={
+                    <ProtectedRoute>
+                      <AdminLessonEditor />
+                    </ProtectedRoute>
+                  } 
+                />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </BrowserRouter>
