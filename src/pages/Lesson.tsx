@@ -8,8 +8,6 @@ import { useCmsLesson } from '@/hooks/useCmsContent';
 import { useProgress } from '@/hooks/useProgress';
 import { useLevelProgress } from '@/hooks/useLevelProgress';
 import { useDailyStreak } from '@/hooks/useDailyStreak';
-import { useLevelProgress } from '@/hooks/useLevelProgress';
-import { useDailyStreak } from '@/hooks/useDailyStreak';
 import { useDailyChallenge } from '@/hooks/useDailyChallenge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
