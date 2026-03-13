@@ -4,9 +4,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { lessons } from '@/data/lessons';
 import { lessonsYear2 } from '@/data/lessonsYear2';
 import { lessonsYear3 } from '@/data/lessonsYear3';
-import { weeklyContent } from '@/data/weeklyContent';
-import { weeklyContentYear2 } from '@/data/weeklyContentYear2';
-import { weeklyContentYear3 } from '@/data/weeklyContentYear3';
+import { useCmsLesson } from '@/hooks/useCmsContent';
 import { useProgress } from '@/hooks/useProgress';
 import { useLevelProgress } from '@/hooks/useLevelProgress';
 import { useDailyStreak } from '@/hooks/useDailyStreak';
@@ -59,11 +57,10 @@ export default function Lesson() {
   const [selectedDay, setSelectedDay] = useState(1);
   const [showLevelCompleteModal, setShowLevelCompleteModal] = useState(false);
 
-  // Find lesson in all levels
-  const allLessons = [...lessons, ...lessonsYear2, ...lessonsYear3];
-  const allWeeklyContent = [...weeklyContent, ...weeklyContentYear2, ...weeklyContentYear3];
-  const lesson = allLessons.find(l => l.id === id);
-  const weeklyLesson = allWeeklyContent.find(w => w.lessonId === id);
+  // Load content from CMS (DB) with hardcoded fallback
+  const { lesson, weeklyLesson, loading: cmsLoading } = useCmsLesson(id);
+
+  // Determine which level this lesson belongs to (use hardcoded arrays for level info)
 
   // Determine which level this lesson belongs to
   const isLevel1Lesson = lessons.some(l => l.id === id);
@@ -87,6 +84,11 @@ export default function Lesson() {
       }
     }
   }, [id]);
+  if (cmsLoading) {
+    return <div className="min-h-screen bg-background flex items-center justify-center">
+      <div className="w-8 h-8 border-4 border-primary border-t-transparent rounded-full animate-spin" />
+    </div>;
+  }
   if (!lesson || !weeklyLesson) {
     return <div className="min-h-screen bg-background flex items-center justify-center">
         <Card variant="default" className="max-w-md mx-4">
