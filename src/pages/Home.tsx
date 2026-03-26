@@ -432,10 +432,10 @@ export default function Home() {
         </Card>
 
         {/* Daily Streak */}
-        <DailyStreak />
+        <SafeComponent><DailyStreak /></SafeComponent>
 
         {/* Daily Challenges */}
-        <DailyChallenges />
+        <SafeComponent><DailyChallenges /></SafeComponent>
 
         {/* Speed Quiz Button */}
         {speedQuizQuestions.length > 0 && (
