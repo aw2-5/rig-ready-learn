@@ -15,6 +15,7 @@ import { Onboarding } from '@/components/Onboarding';
 import { DailyStreak } from '@/components/DailyStreak';
 import { DailyChallenges } from '@/components/DailyChallenges';
 import { SpeedQuiz } from '@/components/SpeedQuiz';
+import { SafeComponent } from '@/components/ErrorBoundary';
 import { weeklyContent } from '@/data/weeklyContent';
 import { weeklyContentYear2 } from '@/data/weeklyContentYear2';
 import { weeklyContentYear3 } from '@/data/weeklyContentYear3';
