@@ -20,10 +20,12 @@ import AdminContent from "./pages/AdminContent";
 import AdminLessonEditor from "./pages/AdminLessonEditor";
 import ResetPassword from "./pages/ResetPassword";
 import NotFound from "./pages/NotFound";
+import { ErrorBoundary } from "@/components/ErrorBoundary";
 
 const queryClient = new QueryClient();
 
 const App = () => (
+  <ErrorBoundary>
   <QueryClientProvider client={queryClient}>
     <ThemeProvider>
       <LanguageProvider>
