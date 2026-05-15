@@ -142,6 +142,11 @@ export default function Auth() {
 
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
+      <SEOHead
+        title="Sign in or create an account"
+        description="Sign in to Drilla-Z or create a free account to start learning drilling and petroleum engineering in Arabic and English."
+        url="https://drillaz.com/auth"
+      />
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center opacity-20"
