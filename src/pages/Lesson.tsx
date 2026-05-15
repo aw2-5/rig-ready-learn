@@ -1,4 +1,5 @@
 import { useState, useEffect, lazy, Suspense } from 'react';
+import { SEOHead } from '@/components/SEOHead';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { lessons } from '@/data/lessons';
@@ -181,6 +182,12 @@ export default function Lesson() {
     return <DayContent dayContent={currentDayContent} onComplete={handleCompleteDay} isComplete={dayComplete} />;
   };
   return <div className="min-h-screen bg-background" dir={isRTL ? 'rtl' : 'ltr'}>
+      <SEOHead
+        title={content.title}
+        description={`${content.title} — bilingual drilling engineering lesson on Drilla-Z with theory days, a quiz, and a project.`}
+        url={`https://drillaz.com/lesson/${id}`}
+        type="article"
+      />
       <header className="sticky top-0 z-50 glass-header">
         <div className="container max-w-lg mx-auto px-4 py-4">
           <div className="flex items-center justify-between">

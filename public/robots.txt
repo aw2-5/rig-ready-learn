@@ -12,5 +12,8 @@ Allow: /
 
 User-agent: *
 Allow: /
+Disallow: /admin-progress
+Disallow: /admin-content
+Disallow: /reset-password
 
-Sitemap: https://drilla-z.com/sitemap.xml
+Sitemap: https://drillaz.com/sitemap.xml

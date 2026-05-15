@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useMemo, lazy, Suspense } from 'react';
+import { SEOHead } from '@/components/SEOHead';
 import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useAuth } from '@/contexts/AuthContext';
@@ -305,6 +306,11 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Your drilling engineering home"
+        description="Browse 3 levels and 39+ bilingual drilling engineering lessons, daily challenges, streaks, and a speed quiz on Drilla-Z."
+        url="https://drillaz.com/home"
+      />
       {/* Header */}
       <header className="sticky top-0 z-50 glass-header">
         <div className="container max-w-lg mx-auto px-4 py-4">

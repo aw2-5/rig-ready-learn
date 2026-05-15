@@ -1,4 +1,6 @@
 import { useNavigate } from 'react-router-dom';
+import { SEOHead } from '@/components/SEOHead';
+import { Helmet } from 'react-helmet-async';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -148,6 +150,22 @@ export default function About() {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title={content.title}
+        description={content.subtitle}
+        url="https://drillaz.com/about"
+      />
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: content.sections.map((s) => ({
+            "@type": "Question",
+            name: s.title,
+            acceptedAnswer: { "@type": "Answer", text: s.description },
+          })),
+        })}</script>
+      </Helmet>
       {/* Header */}
       <header className="sticky top-0 z-50 glass-header">
         <div className="container max-w-lg mx-auto px-4 py-4">

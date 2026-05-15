@@ -1,0 +1,24 @@
+# Drilla-Z
+
+> Bilingual (Arabic + English) drilling and petroleum engineering learning platform with structured lessons, quizzes, and projects across 3 progressive levels.
+
+Drilla-Z teaches drilling engineering from foundations to professional level using a 7-day weekly study cycle: theory days, a comprehensive quiz, and an applied mini project. Includes an integrated AI tutor, daily challenges, streaks, and offline access.
+
+## Pages
+
+- [Home](/home): Personalized dashboard with lessons, daily challenges, streaks, and speed quiz.
+- [About](/about): Overview of the platform, curriculum structure, and features.
+- [Sign In / Sign Up](/auth): Account creation and login.
+- [Install](/install): Install Drilla-Z as a Progressive Web App for offline study.
+- [Dashboard](/dashboard): Track learning progress and achievements.
+- [Profile](/profile): Manage account, language, and notification preferences.
+
+## Curriculum
+
+- Level 1 — Foundations (6 lessons): Introduction to Petroleum Engineering, Basics of Drilling, Types of Wells, Drilling Rig Overview, Units & Measurements, Basic Terminology.
+- Level 2 — Advanced (13 lessons): Hoisting, Rotary Systems, Drill String & BHA, Drill Bits, BOP, Drilling Fluids, Hydraulics, Hole Cleaning, Pressure & ECD, Kick Detection, Casing & Cementing, Drilling Problems, Directional Drilling.
+- Level 3 — Professional (20 lessons): MPD, HPHT, ERD, Multilateral Wells, Coiled Tubing, Deepwater, Automation, Well Integrity, and more.
+
+## Optional
+
+- [Reset Password](/reset-password): Password recovery flow.
