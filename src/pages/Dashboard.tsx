@@ -131,6 +131,11 @@ export default function Dashboard() {
 
   return (
     <div className="min-h-screen bg-background" dir={isRTL ? 'rtl' : 'ltr'}>
+      <SEOHead
+        title="Learning dashboard"
+        description="Track your drilling engineering progress, XP, streaks, and badges across all 3 levels on Drilla-Z."
+        url="https://drillaz.com/dashboard"
+      />
       {/* Header */}
       <header className="sticky top-0 z-50 glass-header">
         <div className="container max-w-lg mx-auto px-4 py-4">
