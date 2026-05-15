@@ -1,4 +1,6 @@
 import { useNavigate } from 'react-router-dom';
+import { SEOHead } from '@/components/SEOHead';
+import { Helmet } from 'react-helmet-async';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
