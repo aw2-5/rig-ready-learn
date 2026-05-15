@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import { SEOHead } from '@/components/SEOHead';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useAuth } from '@/contexts/AuthContext';
 import { useLevelProgress } from '@/hooks/useLevelProgress';
