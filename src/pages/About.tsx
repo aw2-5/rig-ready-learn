@@ -29,6 +29,11 @@ const aboutContent = {
   en: {
     title: 'About Drill A to Z',
     subtitle: 'Your Complete Drilling Engineering Learning Platform',
+    creator: {
+      title: 'About the Creator',
+      description: 'Meet Aws Ali, the developer behind Drill A to Z.',
+      cta: 'View Creator Profile',
+    },
     sections: [
       {
         icon: 'BookOpen',
