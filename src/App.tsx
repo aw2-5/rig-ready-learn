@@ -15,6 +15,7 @@ import Profile from "./pages/Profile";
 import Dashboard from "./pages/Dashboard";
 import Install from "./pages/Install";
 import About from "./pages/About";
+import CreatorInfo from "./pages/CreatorInfo";
 import AdminProgress from "./pages/AdminProgress";
 import AdminContent from "./pages/AdminContent";
 import AdminLessonEditor from "./pages/AdminLessonEditor";
