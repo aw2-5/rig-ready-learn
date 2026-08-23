@@ -18,6 +18,10 @@ import {
   WifiOff,
   Search,
   Droplets,
+  Linkedin,
+  Instagram,
+  Send,
+  MessageCircle,
 } from 'lucide-react';
 
 const aboutContent = {
