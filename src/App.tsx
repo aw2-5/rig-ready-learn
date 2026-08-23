@@ -73,6 +73,7 @@ const App = () => (
                 />
                 <Route path="/install" element={<Install />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/creator-info" element={<CreatorInfo />} />
                 <Route 
                   path="/admin-progress" 
                   element={
