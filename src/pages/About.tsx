@@ -97,6 +97,11 @@ const aboutContent = {
   ar: {
     title: 'حول Drill A to Z',
     subtitle: 'منصتك الشاملة لتعلم هندسة الحفر',
+    creator: {
+      title: 'معلومات المنشئ',
+      description: 'تعرّف على أوس علي، مطور تطبيق Drill A to Z.',
+      cta: 'عرض الملف الشخصي',
+    },
     sections: [
       {
         icon: 'BookOpen',
