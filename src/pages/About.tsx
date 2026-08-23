@@ -78,6 +78,15 @@ const aboutContent = {
           'Powerful multi-language search across all lessons, terms, and content. Quickly find any topic or terminology in both Arabic and English.',
       },
     ],
+    social: {
+      title: 'Connect With Us',
+      links: [
+        { name: 'LinkedIn', handle: 'Aws Ali', url: 'https://www.linkedin.com/in/aws-ali-05606a322?utm_source=share_via&utm_content=profile&utm_medium=member_ios', icon: 'Linkedin' },
+        { name: 'Instagram', handle: '@aw2_5', url: 'https://www.instagram.com/aw2_5?igsi=cWhhb2UxMXZxc3Z5&utm_source=qr', icon: 'Instagram' },
+        { name: 'Telegram', handle: '@aw2_5', url: 'https://t.me/aw2_5', icon: 'Send' },
+        { name: 'WhatsApp', handle: '+964 773 165 6845', url: 'https://wa.me/9647731656845', icon: 'MessageCircle' },
+      ],
+    },
   },
   ar: {
     title: 'حول Drill A to Z',
