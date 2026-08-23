@@ -162,6 +162,10 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Trophy,
   WifiOff,
   Search,
+  Linkedin,
+  Instagram,
+  Send,
+  MessageCircle,
 };
 
 export default function About() {
