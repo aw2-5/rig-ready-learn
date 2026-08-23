@@ -230,33 +230,6 @@ export default function About() {
           <p className="text-sm text-muted-foreground">{content.subtitle}</p>
         </div>
 
-        {/* Feature Cards */}
-        {content.sections.map((section, index) => {
-          const Icon = iconMap[section.icon] || BookOpen;
-          return (
-            <Card
-              key={index}
-              variant="glass"
-              className="animate-fade-in"
-              style={{ animationDelay: `${index * 80}ms` }}
-            >
-              <CardContent className="p-5">
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl gradient-accent flex items-center justify-center shrink-0 mt-0.5">
-                    <Icon className="w-5 h-5 text-accent-foreground" />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <h3 className="font-bold text-foreground mb-2">{section.title}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-line">
-                      {section.description}
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          );
-        })}
-
         {/* Social Links */}
         <div className="space-y-3 animate-fade-in">
           <h2 className="text-lg font-bold text-foreground text-center">
@@ -289,6 +262,33 @@ export default function About() {
             })}
           </div>
         </div>
+
+        {/* Feature Cards */}
+        {content.sections.map((section, index) => {
+          const Icon = iconMap[section.icon] || BookOpen;
+          return (
+            <Card
+              key={index}
+              variant="glass"
+              className="animate-fade-in"
+              style={{ animationDelay: `${index * 80}ms` }}
+            >
+              <CardContent className="p-5">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-xl gradient-accent flex items-center justify-center shrink-0 mt-0.5">
+                    <Icon className="w-5 h-5 text-accent-foreground" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="font-bold text-foreground mb-2">{section.title}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-line">
+                      {section.description}
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          );
+        })}
 
         {/* Footer */}
         <div className="text-center py-4">
