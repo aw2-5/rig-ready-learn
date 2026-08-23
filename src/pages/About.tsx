@@ -290,39 +290,6 @@ export default function About() {
           );
         })}
 
-        {/* Social Links */}
-        <div className="space-y-3 animate-fade-in">
-          <h2 className="text-lg font-bold text-foreground text-center">
-            {content.social.title}
-          </h2>
-          <div className="grid grid-cols-2 gap-3">
-            {content.social.links.map((link, index) => {
-              const Icon = iconMap[link.icon] || Globe;
-              return (
-                <a
-                  key={index}
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group"
-                >
-                  <Card variant="glass" className="h-full transition-all hover:scale-[1.02] hover:shadow-glow">
-                    <CardContent className="p-4 flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-xl gradient-accent flex items-center justify-center shrink-0">
-                        <Icon className="w-5 h-5 text-accent-foreground" />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <h3 className="font-bold text-foreground text-sm truncate">{link.name}</h3>
-                        <p className="text-xs text-muted-foreground truncate">{link.handle}</p>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </a>
-              );
-            })}
-          </div>
-        </div>
-
         {/* Footer */}
         <div className="text-center py-4">
           <p className="text-xs text-muted-foreground">
