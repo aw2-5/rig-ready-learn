@@ -301,6 +301,25 @@ export default function About() {
           );
         })}
 
+        {/* Creator Info Link */}
+        <button
+          onClick={() => navigate('/creator-info')}
+          className="group block w-full text-start animate-fade-in"
+        >
+          <Card variant="glass" className="transition-all hover:scale-[1.01] hover:shadow-glow">
+            <CardContent className="p-4 flex items-center gap-4">
+              <div className="w-10 h-10 rounded-xl gradient-accent flex items-center justify-center shrink-0">
+                <User className="w-5 h-5 text-accent-foreground" />
+              </div>
+              <div className="flex-1 min-w-0">
+                <h3 className="font-bold text-foreground">{content.creator.title}</h3>
+                <p className="text-sm text-muted-foreground">{content.creator.description}</p>
+              </div>
+              <ArrowRight className={`w-5 h-5 text-muted-foreground shrink-0 ${isRTL ? 'rotate-180' : ''}`} />
+            </CardContent>
+          </Card>
+        </button>
+
         {/* Footer */}
         <div className="text-center py-4">
           <p className="text-xs text-muted-foreground">
