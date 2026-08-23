@@ -22,6 +22,7 @@ import {
   Instagram,
   Send,
   MessageCircle,
+  User,
 } from 'lucide-react';
 
 const aboutContent = {
