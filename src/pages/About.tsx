@@ -22,12 +22,18 @@ import {
   Instagram,
   Send,
   MessageCircle,
+  User,
 } from 'lucide-react';
 
 const aboutContent = {
   en: {
     title: 'About Drill A to Z',
     subtitle: 'Your Complete Drilling Engineering Learning Platform',
+    creator: {
+      title: 'About the Creator',
+      description: 'Meet Aws Ali, the developer behind Drill A to Z.',
+      cta: 'View Creator Profile',
+    },
     sections: [
       {
         icon: 'BookOpen',
@@ -91,6 +97,11 @@ const aboutContent = {
   ar: {
     title: 'حول Drill A to Z',
     subtitle: 'منصتك الشاملة لتعلم هندسة الحفر',
+    creator: {
+      title: 'معلومات المنشئ',
+      description: 'تعرّف على أوس علي، مطور تطبيق Drill A to Z.',
+      cta: 'عرض الملف الشخصي',
+    },
     sections: [
       {
         icon: 'BookOpen',
@@ -289,6 +300,25 @@ export default function About() {
             </Card>
           );
         })}
+
+        {/* Creator Info Link */}
+        <button
+          onClick={() => navigate('/creator-info')}
+          className="group block w-full text-start animate-fade-in"
+        >
+          <Card variant="glass" className="transition-all hover:scale-[1.01] hover:shadow-glow">
+            <CardContent className="p-4 flex items-center gap-4">
+              <div className="w-10 h-10 rounded-xl gradient-accent flex items-center justify-center shrink-0">
+                <User className="w-5 h-5 text-accent-foreground" />
+              </div>
+              <div className="flex-1 min-w-0">
+                <h3 className="font-bold text-foreground">{content.creator.title}</h3>
+                <p className="text-sm text-muted-foreground">{content.creator.description}</p>
+              </div>
+              <ArrowRight className={`w-5 h-5 text-muted-foreground shrink-0 ${isRTL ? 'rotate-180' : ''}`} />
+            </CardContent>
+          </Card>
+        </button>
 
         {/* Footer */}
         <div className="text-center py-4">
